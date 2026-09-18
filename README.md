@@ -26,7 +26,7 @@ supplier operating data or company name appears here: the method is public, the 
 
 | Path | What it holds |
 |---|---|
-| `docs/` | the static page (`index.html`) and its exported dataset (`data/demo_data.js`, `data/demo_data.json`) |
+| `docs/` | the static pages: `index.html` (STAR narrative, capabilities, per-station demo with click-to-provenance) and `presentation.html` (a four-minute walkthrough with an offline basemap; see `PRESENTATION_README.md`), both reading the exported dataset `data/demo_data.js` |
 | `scripts/` | one script per stage, the readiness aggregator, the orchestrator, the regression harness, the web export |
 | `data/miami/2026-09-14/` | station master, study window, per-stage immutable packages `<stage>/pkg-<sha12>/` and their pointers `<stage>_current.json`, the readiness view, the data README (Chinese, detailed) |
 | `raw/miami/…/` | the acquired sources with URLs, hashes and retrieval times (TIGER/Line, ACS, LODES, GTFS, DTPW reports, county / city / USDA layers, OpenStreetMap) |
