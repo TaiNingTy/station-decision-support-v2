@@ -1,0 +1,21 @@
+{
+  "file": "ai/miami/examples/EXAMPLE_format_only_not_a_model_output.json",
+  "station_id": "MIA-MM-12",
+  "verdict": "PASS",
+  "publishable": false,
+  "execution_mode": "example_not_a_model_output",
+  "review_status": "unreviewed",
+  "hard_failures": [],
+  "warnings": [],
+  "counts": {
+    "site_statements": 5,
+    "gaps": 3,
+    "questions": 2
+  },
+  "checked_against": {
+    "kit_version": "ai-kit-v2.0",
+    "kb_version": "kb-v2.0",
+    "rule_pack_version": "rules-v2.0",
+    "rules_package": "pkg-c5b8f121b33d"
+  }
+}

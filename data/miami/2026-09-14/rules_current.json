@@ -1,0 +1,11 @@
+{
+  "stage": "rules",
+  "schema_version": "miami-package-pointer/1.0",
+  "package_id": "pkg-c5b8f121b33d",
+  "package_dir": "rules/pkg-c5b8f121b33d",
+  "manifest": "rules/pkg-c5b8f121b33d/manifest.json",
+  "manifest_sha256": "723b1e3223417fae534ee4cb2fb9f499e14b3629409842f4560bc4f8d42870d9",
+  "built_on": "2026-09-15",
+  "previous_package_dir": "rules/pkg-5aeabc052cdc",
+  "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+}

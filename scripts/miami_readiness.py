@@ -57,6 +57,7 @@ STAGES = [
     {"stage": "input_package", "kind": "package", "pointer": "input_package_current.json", "manifest_name": "manifest.json", "required_for_ai": True},
     {"stage": "scenarios", "kind": "package", "pointer": "scenarios_current.json", "manifest_name": "manifest.json"},
     {"stage": "config", "kind": "package", "pointer": "config_current.json", "manifest_name": "manifest.json"},   # step 6: PRT berths/modules per scenario
+    {"stage": "rules", "kind": "package", "pointer": "rules_current.json", "manifest_name": "manifest.json"},     # step 9a: versioned rule results (citable rule_result_id) for the AI layer
 ]
 CONFIG_INPUT_FIELDS = ["platform_constructible_space", "vehicle_parameters", "service_baseline"]
 # Compatibility mapping for the spatial_join manifest schema 2.0 (`upstream` block) -> ROOT-relative files.
@@ -235,6 +236,8 @@ def derive_layers(stages, inv, ip_cfg):
                               "model outputs for internal links; GTFS counts are not ridership"},
         "configuration": {"status": st("config"), "stage": "config", "package_dir": pk("config"),
                           "meaning": "berths, platform module and footprint per station per scenario under PRT semantics; assumption-backed, not a design"},
+        "rules": {"status": st("rules"), "stage": "rules", "package_dir": pk("rules"),
+                  "meaning": "deterministic results of the versioned rule pack (arithmetic identities, project conventions, data-quality and scope flags) with citable ids; not legal or agency standards"},
         "engineering": {"platform_constructible_space": cfg.get("platform_constructible_space", {}).get("acquisition_status", "not_acquired"),
                         "vehicle_parameters": cfg.get("vehicle_parameters", {}).get("acquisition_status", "not_approved"),
                         "source": "input_package manifest config_inputs"},

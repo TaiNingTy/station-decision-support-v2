@@ -1,0 +1,41 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "conservation_all_scenarios": {
+    "low": true,
+    "medium": true,
+    "high": true
+  },
+  "monotonic_low_le_medium_le_high": true,
+  "low_adoption_not_above_observed_transit_share": true,
+  "single_peak_parameter": true,
+  "links_used": 4299,
+  "links_reconcile_with_od_summary": true,
+  "coverage_weighting": {
+    "whole_block_links_JT01": 9706,
+    "coverage_weighted_links_JT01": 8814.611013,
+    "links_touching_partially_covered_blocks": 852,
+    "persons_in_those_links_whole_block": 1511
+  },
+  "every_station_present": true,
+  "no_nan": true,
+  "assumption_ids": [
+    "A01_attendance_rate",
+    "A02_non_commute_trips_per_commute_trip",
+    "A03_prt_adoption_share_of_all_mode_trips",
+    "A04_station_allocation_rule",
+    "A05_direction_and_return",
+    "A06_non_commute_pattern",
+    "A07_departure_window_equals_station_window"
+  ],
+  "peak_window": "8:00 a.m. to 8:59 a.m.",
+  "totals_am_peak": {
+    "low": 144.94,
+    "medium": 579.76,
+    "high": 1449.39
+  },
+  "observed_reference_present": true,
+  "observed_reference_rank_correlation_in_range": true,
+  "scope_statement": "PASS means the chain is arithmetically consistent and conserves trips. The results are uncalibrated model outputs built on the listed assumptions; they exclude every trip with one end outside the network and all hub transfer inflow."
+}

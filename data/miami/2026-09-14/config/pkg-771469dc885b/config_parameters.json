@@ -1,0 +1,106 @@
+{
+  "schema_version": "miami-config-parameters/1.0",
+  "platform_modules": {
+    "acquisition_status": "acquired",
+    "provenance_class": "observed",
+    "data_nature": "design_specification",
+    "source_file": "config/station_platform_modules_v1.json",
+    "modules": [
+      {
+        "module_id": "M1_double_sided_6_berth",
+        "layout": "through guideway in the middle; angled berths on both sides",
+        "berths": 6,
+        "width_ft_in": "50'3\"",
+        "length_ft_in": "77'-10\"",
+        "area_ft2_as_drawn": 3908,
+        "area_m2_derived_from_ft2": 363.06,
+        "metric_drawing_as_provided": {
+          "width_m": 15.29,
+          "length_m": 23.84,
+          "area_m2": 364.51
+        }
+      },
+      {
+        "module_id": "M2_single_sided_7_berth",
+        "layout": "through guideway along one edge; angled berths in one row",
+        "berths": 7,
+        "width_ft_in": "32'-3\"",
+        "length_ft_in": "132'-7\"",
+        "area_ft2_as_drawn": 4271,
+        "area_m2_derived_from_ft2": 396.79,
+        "metric_drawing_as_provided": {
+          "width_m": 9.8,
+          "length_m": 40.6,
+          "area_m2": 397.88
+        }
+      }
+    ],
+    "vehicle_fit_statement": "owner statement 2026-09-17: vehicles fit entirely within the berths as drawn, so vehicle dimensions are not needed for platform geometry",
+    "vehicle_capacity_pax_max": 6
+  },
+  "operations_assumptions": {
+    "C01_average_party_size_pax_per_vehicle_trip": {
+      "value": 1.3,
+      "unit": "persons per vehicle trip",
+      "statement": "average occupancy of a PRT vehicle trip in the commute peak; commuters mostly travel alone",
+      "reference": "vehicle occupancy for commuting is typically 1.1-1.5; the maximum capacity (6) is never used as the load",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C02_berth_cycle_s": {
+      "value": 45,
+      "unit": "seconds",
+      "statement": "one berth cycle = vehicle entry, alighting, boarding, exit",
+      "reference": "order of magnitude for offline PRT berths; not measured",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C03_berth_utilization_max": {
+      "value": 0.8,
+      "unit": "ratio",
+      "statement": "design margin: a berth is sized for at most 80 % of its theoretical cycle throughput",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C04_within_hour_peaking_factor": {
+      "value": 1.25,
+      "unit": "ratio",
+      "statement": "peak-15-minute flow x 4 divided by the hourly flow; applied to berth sizing ONLY, never to the demand chain (it is not a second peak-hour share)",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C05_min_guideway_headway_s": {
+      "value": 3.0,
+      "unit": "seconds",
+      "statement": "minimum operating headway between vehicles on the guideway; lane throughput = 3600 / headway",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C06_site_footprint_available": {
+      "value": true,
+      "statement": "the selected module's footprint is assumed to be constructible at every station; the per-station constructible space has NOT been acquired, so this assumption stands in for it",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "C07_no_separate_staging_berths": {
+      "value": true,
+      "statement": "the drawings show no staging berths; empty vehicles are assumed to be supplied from the guideway as needed",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    }
+  },
+  "derived_constants": {
+    "usable_berth_cycles_per_berth_hour": 64.0,
+    "lane_vehicles_per_hour": 1200.0
+  },
+  "chain": "person trips -> vehicle trips (C01) -> berth cycles = max(arrivals, departures) -> × C04 -> ÷ (3600/C02 × C03) -> berths -> module -> footprint -> site fit (C06)",
+  "not_in_chain": [
+    "vehicle maximum capacity as a load",
+    "V1.1 passengers-per-hour-per-berth convention",
+    "a second demand peak factor"
+  ],
+  "built_on": "2026-09-15",
+  "config_sha256": "e167506d831816216389db2d25d0a4053ebd436fa1cb47c9e98518e20403fb21",
+  "scenarios_package": "pkg-fdba95e9ca3e",
+  "input_package": "pkg-3cab1da11f1b"
+}

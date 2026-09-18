@@ -1,0 +1,1617 @@
+{
+  "brief_id": "MIA-MM-07",
+  "station_id": "MIA-MM-07",
+  "name": "College North",
+  "generated_on": "2026-09-18",
+  "kit_version": "ai-kit-v2.0",
+  "kb_version": "kb-v2.0",
+  "prompt_version": "prompt-v2.0",
+  "rule_pack_version": "rules-v2.0",
+  "packages": {
+    "spatial_join": "pkg-e4f5e3782ecb",
+    "demography": "pkg-cfd8a52fe1de",
+    "jobs": "pkg-ed5912a9790d",
+    "service_baseline": "pkg-4c24a50788c9",
+    "ridership_reference": "pkg-e46a5fb5511c",
+    "poi": "pkg-57ffb187de23",
+    "input_package": "pkg-3cab1da11f1b",
+    "scenarios": "pkg-fdba95e9ca3e",
+    "config": "pkg-771469dc885b",
+    "rules": "pkg-c5b8f121b33d"
+  },
+  "instructions_for_the_model": "Use only these facts and the knowledge base kb-v2.0. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.",
+  "facts": [
+    {
+      "fact_id": "MIA-MM-07.F001",
+      "group": "identity",
+      "label": "GTFS stop ids mapped to this station",
+      "value": [
+        "811",
+        "838"
+      ],
+      "provenance_class": "observed",
+      "source": {
+        "package": "input_package",
+        "file": "stations/<station>.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-3cab1da11f1b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F002",
+      "group": "identity",
+      "label": "existing asset and study role",
+      "value": "metromover_station → candidate_conversion_site",
+      "provenance_class": "observed",
+      "source": {
+        "package": "input_package",
+        "file": "stations/<station>.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-3cab1da11f1b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F003",
+      "group": "identity",
+      "label": "external connections on the official map",
+      "value": "none",
+      "provenance_class": "observed",
+      "source": {
+        "package": "input_package",
+        "file": "stations/<station>.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-3cab1da11f1b"
+      },
+      "semantics": "transfer inflow from these connections is excluded from the scenarios"
+    },
+    {
+      "fact_id": "MIA-MM-07.F004",
+      "group": "identity",
+      "label": "zoning at the reference point",
+      "value": [
+        "CI"
+      ],
+      "provenance_class": "observed",
+      "source": {
+        "package": "spatial_join",
+        "file": "station_zoning_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<FID>",
+        "package_id": "pkg-e4f5e3782ecb"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F005",
+      "group": "identity",
+      "label": "geometry role",
+      "value": "GTFS reference point; not an entrance, not a platform centroid",
+      "provenance_class": "observed",
+      "source": {
+        "package": "input_package",
+        "file": "stations/<station>.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-3cab1da11f1b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F006",
+      "group": "bands_cum",
+      "label": "half-mile disc: land area",
+      "value": 476.21,
+      "unit": "acres",
+      "provenance_class": "derived",
+      "source": {
+        "package": "spatial_join",
+        "file": "station_zoning_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<FID>",
+        "package_id": "pkg-e4f5e3782ecb"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F007",
+      "group": "bands_cum",
+      "label": "half-mile disc: zoned share of area",
+      "value": 0.931,
+      "provenance_class": "observed",
+      "source": {
+        "package": "spatial_join",
+        "file": "station_zoning_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<FID>",
+        "package_id": "pkg-e4f5e3782ecb"
+      },
+      "semantics": "statutory zoning; not land use or demand (KB_V2_01 §DS-03)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F008",
+      "group": "bands_cum",
+      "label": "half-mile disc: largest zoning transects by share of area",
+      "value": [
+        [
+          "Urban Core Zone",
+          0.666
+        ],
+        [
+          "Civic Space Zone",
+          0.135
+        ],
+        [
+          "Civic Institution Zone",
+          0.129
+        ]
+      ],
+      "provenance_class": "observed",
+      "source": {
+        "package": "spatial_join",
+        "file": "station_zoning_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<FID>",
+        "package_id": "pkg-e4f5e3782ecb"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F009",
+      "group": "bands_cum",
+      "label": "half-mile disc: population (ACS 2020–2024 period estimate)",
+      "value": 15315,
+      "unit": "persons",
+      "provenance_class": "derived",
+      "moe_90": 1034.89,
+      "cv": 0.0411,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "period": "2020-2024",
+      "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F010",
+      "group": "bands_cum",
+      "label": "half-mile disc: households",
+      "value": 8294,
+      "unit": "households",
+      "provenance_class": "derived",
+      "moe_90": 499.46,
+      "cv": 0.0366,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "period": "2020-2024",
+      "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F011",
+      "group": "bands_cum",
+      "label": "half-mile disc: workers 16+",
+      "value": 10118,
+      "unit": "workers",
+      "provenance_class": "derived",
+      "moe_90": 745.1,
+      "cv": 0.0448,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "period": "2020-2024",
+      "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F012",
+      "group": "bands_cum",
+      "label": "half-mile disc: zero-vehicle household share",
+      "value": 22.0,
+      "unit": "percent",
+      "provenance_class": "derived",
+      "moe_90": 3.4,
+      "cv": 0.0941,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "moe_unit": "percentage points"
+    },
+    {
+      "fact_id": "MIA-MM-07.F013",
+      "group": "bands_cum",
+      "label": "half-mile disc: public-transportation commute share (reference only)",
+      "value": 10.5,
+      "unit": "percent",
+      "provenance_class": "derived",
+      "moe_90": 2.5,
+      "cv": 0.1448,
+      "reliability": "medium",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "moe_unit": "percentage points"
+    },
+    {
+      "fact_id": "MIA-MM-07.F014",
+      "group": "bands_cum",
+      "label": "half-mile disc: worked-from-home share",
+      "value": 27.5,
+      "unit": "percent",
+      "provenance_class": "derived",
+      "moe_90": 4.1,
+      "cv": 0.0914,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "moe_unit": "percentage points"
+    },
+    {
+      "fact_id": "MIA-MM-07.F015",
+      "group": "bands_cum",
+      "label": "half-mile disc: households below $35,000 share (project convention, not a demand indicator)",
+      "value": 21.4,
+      "unit": "percent",
+      "provenance_class": "derived",
+      "moe_90": 3.4,
+      "cv": 0.0976,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "moe_unit": "percentage points"
+    },
+    {
+      "fact_id": "MIA-MM-07.F016",
+      "group": "bands_cum",
+      "label": "half-mile disc: population 65+ share",
+      "value": 7.2,
+      "unit": "percent",
+      "provenance_class": "derived",
+      "moe_90": 1.5,
+      "cv": 0.1288,
+      "reliability": "medium",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "moe_unit": "percentage points"
+    },
+    {
+      "fact_id": "MIA-MM-07.F017",
+      "group": "bands_cum",
+      "label": "half-mile disc: median household income estimate (bracket interpolation; sensitivity range, not a confidence interval)",
+      "value": {
+        "value_usd": 86143,
+        "range_usd": [
+          75000,
+          100000
+        ],
+        "open_ended": false
+      },
+      "provenance_class": "derived",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F018",
+      "group": "bands_cum",
+      "label": "half-mile disc: population density",
+      "value": 20582.7,
+      "unit": "persons per sq mi",
+      "provenance_class": "derived",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      },
+      "semantics": "never persons per hour (KB_V2_01 §DS-09)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F019",
+      "group": "bands_cum",
+      "label": "half-mile disc: all jobs located here (LODES 2023, C000 JT00)",
+      "value": 74759,
+      "unit": "jobs",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      },
+      "semantics": "jobs, not trips (KB_V2_01 §DS-05)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F020",
+      "group": "bands_cum",
+      "label": "half-mile disc: primary jobs located here (JT01)",
+      "value": 69806,
+      "unit": "jobs",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F021",
+      "group": "bands_cum",
+      "label": "half-mile disc: primary jobs held by residents (≈ resident workers)",
+      "value": 6167,
+      "unit": "jobs",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F022",
+      "group": "bands_cum",
+      "label": "half-mile disc: jobs-to-resident-workers ratio (JT01)",
+      "value": 11.32,
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      },
+      "semantics": "explains activity and direction; never hourly flows"
+    },
+    {
+      "fact_id": "MIA-MM-07.F023",
+      "group": "bands_cum",
+      "label": "half-mile disc: jobs per acre of land",
+      "value": 156.988,
+      "unit": "jobs per acre",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F024",
+      "group": "bands_b1",
+      "label": "inner band (0–1/8 mi): population",
+      "value": 1267,
+      "unit": "persons",
+      "provenance_class": "derived",
+      "moe_90": 114.05,
+      "cv": 0.0547,
+      "reliability": "high",
+      "value_status": "value",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F025",
+      "group": "bands_b1",
+      "label": "inner band (0–1/8 mi): all jobs located here",
+      "value": 6741,
+      "unit": "jobs",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F026",
+      "group": "facilities",
+      "label": "half-mile disc: school facilities listed",
+      "value": 4,
+      "unit": "facilities",
+      "provenance_class": "observed",
+      "value_status": "value",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F027",
+      "group": "facilities",
+      "label": "nearest school by straight line",
+      "value": {
+        "name": "School For Advanced Studies Wolfson",
+        "distance_ft": 994.7,
+        "within_half_mile": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "straight line from the reference point; not a walking distance"
+    },
+    {
+      "fact_id": "MIA-MM-07.F028",
+      "group": "facilities",
+      "label": "half-mile disc: clinic facilities listed",
+      "value": 1,
+      "unit": "facilities",
+      "provenance_class": "observed",
+      "value_status": "value",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F029",
+      "group": "facilities",
+      "label": "nearest clinic by straight line",
+      "value": {
+        "name": "JHS - Downtown Medical Center",
+        "distance_ft": 1988.0,
+        "within_half_mile": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "straight line from the reference point; not a walking distance"
+    },
+    {
+      "fact_id": "MIA-MM-07.F030",
+      "group": "facilities",
+      "label": "half-mile disc: grocery facilities listed",
+      "value": 4,
+      "unit": "facilities",
+      "provenance_class": "observed",
+      "value_status": "value",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F031",
+      "group": "facilities",
+      "label": "nearest grocery by straight line",
+      "value": {
+        "name": "Publix Super Markets Inc.1614 1614",
+        "distance_ft": 1852.7,
+        "within_half_mile": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "straight line from the reference point; not a walking distance"
+    },
+    {
+      "fact_id": "MIA-MM-07.F032",
+      "group": "facilities",
+      "label": "half-mile disc: park facilities listed",
+      "value": 4,
+      "unit": "facilities",
+      "provenance_class": "observed",
+      "value_status": "value",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F033",
+      "group": "facilities",
+      "label": "nearest park by straight line",
+      "value": {
+        "name": "FIRST STREET METROMOVER STATION DOG SPOT",
+        "distance_ft": 1233.6,
+        "within_half_mile": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "poi",
+        "file": "poi_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<poi_id>",
+        "package_id": "pkg-57ffb187de23"
+      },
+      "semantics": "straight line from the reference point; not a walking distance"
+    },
+    {
+      "fact_id": "MIA-MM-07.F034",
+      "group": "service",
+      "label": "current timetable: scheduled departures per hour, 7–9 a.m. (all routes)",
+      "value": 48.0,
+      "unit": "departures per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "service_baseline",
+        "file": "station_service_baseline.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-4c24a50788c9"
+      },
+      "semantics": "scheduled, not operated; not capacity; not ridership (KB_V2_01 §DS-06)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F035",
+      "group": "service",
+      "label": "current timetable: implied AM-peak headway",
+      "value": 1.25,
+      "unit": "minutes",
+      "provenance_class": "derived",
+      "source": {
+        "package": "service_baseline",
+        "file": "station_service_baseline.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-4c24a50788c9"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F036",
+      "group": "service",
+      "label": "current timetable: weekday scheduled departures and span",
+      "value": {
+        "departures": 794,
+        "first": "05:32",
+        "last": "22:10"
+      },
+      "provenance_class": "derived",
+      "source": {
+        "package": "service_baseline",
+        "file": "station_service_baseline.json",
+        "evidence_id_pattern": "station record",
+        "package_id": "pkg-4c24a50788c9"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F037",
+      "group": "observed",
+      "label": "observed boardings of the current Metromover: average weekday, 10-month mean (2025-10 to 2026-07)",
+      "value": 1063.2,
+      "unit": "boardings per weekday",
+      "provenance_class": "observed",
+      "source": {
+        "package": "ridership_reference",
+        "file": "station_ridership_reference.json",
+        "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
+        "package_id": "pkg-e46a5fb5511c"
+      },
+      "semantics": "entries of the current system; not trips, not OD, not hourly, not demand for a new system; reference, never calibration (KB_V2_01 §DS-07)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F038",
+      "group": "observed",
+      "label": "observed boardings: share of system average weekday boardings",
+      "value": 0.0419,
+      "provenance_class": "derived",
+      "source": {
+        "package": "ridership_reference",
+        "file": "station_ridership_reference.json",
+        "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
+        "package_id": "pkg-e46a5fb5511c"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F039",
+      "group": "observed",
+      "label": "observed boardings: report station name and mapping basis",
+      "value": {
+        "report_station_name": "College North",
+        "mapping_basis": "same_name",
+        "mapping_confirmed_by_owner": false
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "ridership_reference",
+        "file": "station_ridership_reference.json",
+        "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
+        "package_id": "pkg-e46a5fb5511c"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F040",
+      "group": "observed",
+      "label": "observed boardings: system average weekday, 10-month mean",
+      "value": 25401.8,
+      "unit": "boardings per weekday",
+      "provenance_class": "observed",
+      "source": {
+        "package": "ridership_reference",
+        "file": "station_ridership_reference.json",
+        "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
+        "package_id": "pkg-e46a5fb5511c"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F041",
+      "group": "links",
+      "label": "job-link potential, home side (Σ primary links × land share; not trips, non-exclusive)",
+      "value": 6117,
+      "unit": "links",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      },
+      "semantics": "Σ S000 × (share of the end block's land inside the station's half-mile disc); NON-exclusive across stations, not an allocation, not trips; station-to-station allocation with conservation checks is an analysis-layer task"
+    },
+    {
+      "fact_id": "MIA-MM-07.F042",
+      "group": "links",
+      "label": "job-link potential, workplace side (Σ primary links × land share; not trips, non-exclusive)",
+      "value": 69806,
+      "unit": "links",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F043",
+      "group": "network",
+      "label": "network half-mile union: population (deduplicated)",
+      "value": 76357,
+      "unit": "persons",
+      "provenance_class": "derived",
+      "source": {
+        "package": "demography",
+        "file": "demography_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BG<block group>",
+        "package_id": "pkg-cfd8a52fe1de"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F044",
+      "group": "network",
+      "label": "network half-mile union: all jobs (deduplicated)",
+      "value": 180847,
+      "unit": "jobs",
+      "provenance_class": "derived",
+      "source": {
+        "package": "jobs",
+        "file": "jobs_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|BLK<block>",
+        "package_id": "pkg-ed5912a9790d"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F045",
+      "group": "network",
+      "label": "network half-mile union: area",
+      "value": 3.57,
+      "unit": "sq mi",
+      "provenance_class": "derived",
+      "source": {
+        "package": "spatial_join",
+        "file": "station_zoning_evidence.json",
+        "evidence_id_pattern": "<station>|<band>|<FID>",
+        "package_id": "pkg-e4f5e3782ecb"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F046",
+      "group": "scenario_low",
+      "label": "low scenario: assumptions A01 attendance / A02 non-commute per commute / A03 adoption",
+      "value": {
+        "A01": 0.85,
+        "A02": 0.5,
+        "A03": 0.05
+      },
+      "provenance_class": "assumption",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F047",
+      "group": "scenario_low",
+      "label": "low scenario: network AM-peak PRT person trips",
+      "value": 144.94,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F048",
+      "group": "scenario_low",
+      "label": "low scenario: this station's AM-peak boardings",
+      "value": 2.96,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F049",
+      "group": "scenario_low",
+      "label": "low scenario: this station's AM-peak alightings",
+      "value": 4.7,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F050",
+      "group": "scenario_low",
+      "label": "low scenario: this station's share of network AM boardings",
+      "value": 0.0204,
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F051",
+      "group": "config_low",
+      "label": "low scenario: vehicle departures / arrivals per hour (person trips ÷ C01)",
+      "value": {
+        "departures": 2.28,
+        "arrivals": 3.62
+      },
+      "unit": "vehicle trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F052",
+      "group": "config_low",
+      "label": "low scenario: empty vehicles required in / leaving per hour",
+      "value": {
+        "required_in": 0.0,
+        "leaving": 1.34
+      },
+      "unit": "vehicles per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "no staging berths drawn (C07)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F053",
+      "group": "config_low",
+      "label": "low scenario: berth cycles → design cycles (× C04) → berths required",
+      "value": {
+        "berth_cycles": 3.62,
+        "design_cycles": 4.52,
+        "usable_cycles_per_berth_hour": 64.0,
+        "berths_required": 1
+      },
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "KB_V2_02 §CM-04"
+    },
+    {
+      "fact_id": "MIA-MM-07.F054",
+      "group": "config_low",
+      "label": "low scenario: platform module and footprint",
+      "value": {
+        "module": "M1_double_sided_6_berth",
+        "berths_provided": 6,
+        "footprint_ft2": 3908,
+        "fits_single_module": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F055",
+      "group": "config_low",
+      "label": "low scenario: site fit status",
+      "value": "assumed_sufficient",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F056",
+      "group": "config_low",
+      "label": "low scenario: network vehicle trips ÷ one lane's throughput at minimum headway",
+      "value": 0.093,
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F057",
+      "group": "scenario_medium",
+      "label": "medium scenario: assumptions A01 attendance / A02 non-commute per commute / A03 adoption",
+      "value": {
+        "A01": 0.85,
+        "A02": 1.0,
+        "A03": 0.15
+      },
+      "provenance_class": "assumption",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F058",
+      "group": "scenario_medium",
+      "label": "medium scenario: network AM-peak PRT person trips",
+      "value": 579.76,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F059",
+      "group": "scenario_medium",
+      "label": "medium scenario: this station's AM-peak boardings",
+      "value": 11.86,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F060",
+      "group": "scenario_medium",
+      "label": "medium scenario: this station's AM-peak alightings",
+      "value": 18.79,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F061",
+      "group": "scenario_medium",
+      "label": "medium scenario: this station's share of network AM boardings",
+      "value": 0.0204,
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F062",
+      "group": "config_medium",
+      "label": "medium scenario: vehicle departures / arrivals per hour (person trips ÷ C01)",
+      "value": {
+        "departures": 9.12,
+        "arrivals": 14.45
+      },
+      "unit": "vehicle trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F063",
+      "group": "config_medium",
+      "label": "medium scenario: empty vehicles required in / leaving per hour",
+      "value": {
+        "required_in": 0.0,
+        "leaving": 5.33
+      },
+      "unit": "vehicles per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "no staging berths drawn (C07)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F064",
+      "group": "config_medium",
+      "label": "medium scenario: berth cycles → design cycles (× C04) → berths required",
+      "value": {
+        "berth_cycles": 14.45,
+        "design_cycles": 18.07,
+        "usable_cycles_per_berth_hour": 64.0,
+        "berths_required": 1
+      },
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "KB_V2_02 §CM-04"
+    },
+    {
+      "fact_id": "MIA-MM-07.F065",
+      "group": "config_medium",
+      "label": "medium scenario: platform module and footprint",
+      "value": {
+        "module": "M1_double_sided_6_berth",
+        "berths_provided": 6,
+        "footprint_ft2": 3908,
+        "fits_single_module": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F066",
+      "group": "config_medium",
+      "label": "medium scenario: site fit status",
+      "value": "assumed_sufficient",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F067",
+      "group": "config_medium",
+      "label": "medium scenario: network vehicle trips ÷ one lane's throughput at minimum headway",
+      "value": 0.372,
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F068",
+      "group": "scenario_high",
+      "label": "high scenario: assumptions A01 attendance / A02 non-commute per commute / A03 adoption",
+      "value": {
+        "A01": 0.85,
+        "A02": 1.5,
+        "A03": 0.3
+      },
+      "provenance_class": "assumption",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F069",
+      "group": "scenario_high",
+      "label": "high scenario: network AM-peak PRT person trips",
+      "value": 1449.39,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      },
+      "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F070",
+      "group": "scenario_high",
+      "label": "high scenario: this station's AM-peak boardings",
+      "value": 29.64,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F071",
+      "group": "scenario_high",
+      "label": "high scenario: this station's AM-peak alightings",
+      "value": 46.97,
+      "unit": "person trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F072",
+      "group": "scenario_high",
+      "label": "high scenario: this station's share of network AM boardings",
+      "value": 0.0204,
+      "provenance_class": "derived",
+      "source": {
+        "package": "scenarios",
+        "file": "scenario_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
+        "package_id": "pkg-fdba95e9ca3e"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F073",
+      "group": "config_high",
+      "label": "high scenario: vehicle departures / arrivals per hour (person trips ÷ C01)",
+      "value": {
+        "departures": 22.8,
+        "arrivals": 36.13
+      },
+      "unit": "vehicle trips per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F074",
+      "group": "config_high",
+      "label": "high scenario: empty vehicles required in / leaving per hour",
+      "value": {
+        "required_in": 0.0,
+        "leaving": 13.33
+      },
+      "unit": "vehicles per hour",
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "no staging berths drawn (C07)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F075",
+      "group": "config_high",
+      "label": "high scenario: berth cycles → design cycles (× C04) → berths required",
+      "value": {
+        "berth_cycles": 36.13,
+        "design_cycles": 45.16,
+        "usable_cycles_per_berth_hour": 64.0,
+        "berths_required": 1
+      },
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "KB_V2_02 §CM-04"
+    },
+    {
+      "fact_id": "MIA-MM-07.F076",
+      "group": "config_high",
+      "label": "high scenario: platform module and footprint",
+      "value": {
+        "module": "M1_double_sided_6_berth",
+        "berths_provided": 6,
+        "footprint_ft2": 3908,
+        "fits_single_module": true
+      },
+      "provenance_class": "observed",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F077",
+      "group": "config_high",
+      "label": "high scenario: site fit status",
+      "value": "assumed_sufficient",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F078",
+      "group": "config_high",
+      "label": "high scenario: network vehicle trips ÷ one lane's throughput at minimum headway",
+      "value": 0.929,
+      "provenance_class": "derived",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      },
+      "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
+    },
+    {
+      "fact_id": "MIA-MM-07.F079",
+      "group": "assumptions",
+      "label": "C01_average_party_size_pax_per_vehicle_trip: average occupancy of a PRT vehicle trip in the commute peak; commuters mostly travel alone",
+      "value": 1.3,
+      "unit": "persons per vehicle trip",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F080",
+      "group": "assumptions",
+      "label": "C02_berth_cycle_s: one berth cycle = vehicle entry, alighting, boarding, exit",
+      "value": 45,
+      "unit": "seconds",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F081",
+      "group": "assumptions",
+      "label": "C03_berth_utilization_max: design margin: a berth is sized for at most 80 % of its theoretical cycle throughput",
+      "value": 0.8,
+      "unit": "ratio",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F082",
+      "group": "assumptions",
+      "label": "C04_within_hour_peaking_factor: peak-15-minute flow x 4 divided by the hourly flow; applied to berth sizing ONLY, never to the demand chain (it is not a second peak-hour share)",
+      "value": 1.25,
+      "unit": "ratio",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    },
+    {
+      "fact_id": "MIA-MM-07.F083",
+      "group": "assumptions",
+      "label": "C05_min_guideway_headway_s: minimum operating headway between vehicles on the guideway; lane throughput = 3600 / headway",
+      "value": 3.0,
+      "unit": "seconds",
+      "provenance_class": "assumption",
+      "source": {
+        "package": "config",
+        "file": "station_config_results.json",
+        "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
+        "package_id": "pkg-771469dc885b"
+      }
+    }
+  ],
+  "rule_results": {
+    "station": [
+      {
+        "rule_result_id": "MIA-MM-07|low|RC-03",
+        "rule_id": "RC-03",
+        "rule_name": "berth_arithmetic",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "published berth arithmetic reproduces"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|low|RC-04",
+        "rule_id": "RC-04",
+        "rule_name": "single_module_fit",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "requirement fits one drawn module"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|low|RC-10",
+        "rule_id": "RC-10",
+        "rule_name": "empty_vehicle_imbalance",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "departures and arrivals are within the balance convention"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|medium|RC-03",
+        "rule_id": "RC-03",
+        "rule_name": "berth_arithmetic",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "published berth arithmetic reproduces"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|medium|RC-04",
+        "rule_id": "RC-04",
+        "rule_name": "single_module_fit",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "requirement fits one drawn module"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|medium|RC-10",
+        "rule_id": "RC-10",
+        "rule_name": "empty_vehicle_imbalance",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "departures and arrivals are within the balance convention"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|high|RC-03",
+        "rule_id": "RC-03",
+        "rule_name": "berth_arithmetic",
+        "scenario": "high",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "published berth arithmetic reproduces"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|high|RC-04",
+        "rule_id": "RC-04",
+        "rule_name": "single_module_fit",
+        "scenario": "high",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "requirement fits one drawn module"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|high|RC-10",
+        "rule_id": "RC-10",
+        "rule_name": "empty_vehicle_imbalance",
+        "scenario": "high",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "departures and arrivals are within the balance convention"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-07",
+        "rule_id": "RC-07",
+        "rule_name": "site_space_unknown",
+        "scenario": null,
+        "status": "warning",
+        "basis": "scope_limitation",
+        "message": "constructible platform space not acquired; site fit is assumed (C06) and must be confirmed by the owner"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-08",
+        "rule_id": "RC-08",
+        "rule_name": "population_estimate_reliability",
+        "scenario": null,
+        "status": "pass",
+        "basis": "data_quality",
+        "message": "half-mile population estimate has high reliability (CV <= 0.12)"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-09",
+        "rule_id": "RC-09",
+        "rule_name": "observed_reference_mapping",
+        "scenario": null,
+        "status": "pass",
+        "basis": "data_quality",
+        "message": "same-name match with the published report (owner confirmation still pending, as for every station)"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-11",
+        "rule_id": "RC-11",
+        "rule_name": "scenario_share_vs_observed_share",
+        "scenario": null,
+        "status": "pass",
+        "basis": "scope_limitation",
+        "message": "scenario share is within 5 points of the observed share"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-12",
+        "rule_id": "RC-12",
+        "rule_name": "regional_inflow_excluded",
+        "scenario": null,
+        "status": "pass",
+        "basis": "scope_limitation",
+        "message": "no external connection on the official map; the exclusion of regional inflow still applies network-wide"
+      },
+      {
+        "rule_result_id": "MIA-MM-07|-|RC-13",
+        "rule_id": "RC-13",
+        "rule_name": "catchment_is_euclidean",
+        "scenario": null,
+        "status": "info",
+        "basis": "scope_limitation",
+        "message": "bands are straight-line distances from a reference point that is not an entrance; no walk catchment is validated and the walk model is not built"
+      }
+    ],
+    "network": [
+      {
+        "rule_result_id": "NET|low|RC-01",
+        "rule_id": "RC-01",
+        "rule_name": "person_trip_conservation",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "boardings and alightings both sum to the network AM-peak trips"
+      },
+      {
+        "rule_result_id": "NET|low|RC-02",
+        "rule_id": "RC-02",
+        "rule_name": "vehicle_trip_conservation",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "vehicle departures equal arrivals within tolerance"
+      },
+      {
+        "rule_result_id": "NET|low|RC-05",
+        "rule_id": "RC-05",
+        "rule_name": "guideway_network_ratio",
+        "scenario": "low",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "network vehicle trips are below 80 % of one lane's throughput (network-level ratio only)"
+      },
+      {
+        "rule_result_id": "NET|medium|RC-01",
+        "rule_id": "RC-01",
+        "rule_name": "person_trip_conservation",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "boardings and alightings both sum to the network AM-peak trips"
+      },
+      {
+        "rule_result_id": "NET|medium|RC-02",
+        "rule_id": "RC-02",
+        "rule_name": "vehicle_trip_conservation",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "vehicle departures equal arrivals within tolerance"
+      },
+      {
+        "rule_result_id": "NET|medium|RC-05",
+        "rule_id": "RC-05",
+        "rule_name": "guideway_network_ratio",
+        "scenario": "medium",
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "network vehicle trips are below 80 % of one lane's throughput (network-level ratio only)"
+      },
+      {
+        "rule_result_id": "NET|high|RC-01",
+        "rule_id": "RC-01",
+        "rule_name": "person_trip_conservation",
+        "scenario": "high",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "boardings and alightings both sum to the network AM-peak trips"
+      },
+      {
+        "rule_result_id": "NET|high|RC-02",
+        "rule_id": "RC-02",
+        "rule_name": "vehicle_trip_conservation",
+        "scenario": "high",
+        "status": "pass",
+        "basis": "arithmetic_identity",
+        "message": "vehicle departures equal arrivals within tolerance"
+      },
+      {
+        "rule_result_id": "NET|high|RC-05",
+        "rule_id": "RC-05",
+        "rule_name": "guideway_network_ratio",
+        "scenario": "high",
+        "status": "warning",
+        "basis": "project_convention",
+        "message": "network vehicle trips are at or above 80 % of one lane's throughput; a line model is required before any capacity claim"
+      },
+      {
+        "rule_result_id": "NET|-|RC-06",
+        "rule_id": "RC-06",
+        "rule_name": "low_adoption_not_above_observed_transit_share",
+        "scenario": null,
+        "status": "pass",
+        "basis": "project_convention",
+        "message": "low adoption stays at or below the observed public-transportation commute share"
+      }
+    ],
+    "station_summary": {
+      "counts": {
+        "pass": 13,
+        "info": 1,
+        "warning": 1,
+        "critical": 0
+      },
+      "overall": "warning",
+      "usable_as_computed": true
+    },
+    "severity_semantics": {
+      "pass": "the check holds",
+      "info": "a limitation the reader must carry into any interpretation; the result stays usable",
+      "warning": "the result may be used only with the stated caveat and the named owner confirmation",
+      "critical": "the result is invalid or infeasible as computed; the AI layer must not present it as a usable configuration"
+    }
+  },
+  "not_available": [
+    "origin-destination and hourly ridership (no calibration; peak-hour share is a census proxy)",
+    "station entrances, crossings, vertical circulation (bands are straight-line)",
+    "constructible platform space (site fit assumed, C06)",
+    "supplier vehicle operating data (generic assumptions C01–C05)",
+    "network walk model (not built)",
+    "role classification (to be proposed here, confirmed by people)",
+    "engineering validation (not performed)"
+  ],
+  "forbidden": [
+    "numbers not in this brief",
+    "external standards or codes",
+    "density or facility counts as passengers per hour",
+    "scaling scenarios to observed boardings",
+    "zoning or income as exclusion",
+    "averaging medians",
+    "job links as trips",
+    "calling assumptions observations",
+    "calling results designs, forecasts or proofs"
+  ]
+}

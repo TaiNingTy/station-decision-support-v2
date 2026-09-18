@@ -1,0 +1,5764 @@
+{
+  "schema_version": "miami-station-poi-profile/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "6ccf190666501a7c03ed1ce9e229445f56cced78ac2dccaef34eaa6d57fa5b8a",
+  "demography_package": "pkg-cfd8a52fe1de",
+  "provenance_class": "observed",
+  "data_nature": "administrative_record",
+  "is_service_level_score": false,
+  "distance_type": "straight_line",
+  "distance_origin": "GTFS station reference point (not an entrance)",
+  "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+  "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+  "attribution": [
+    "Miami-Dade County GIS (MD_Emaps)",
+    "City of Miami GIS (Park_Boundary_Base_Layer)",
+    "USDA FNS SNAP retailer location data",
+    "© OpenStreetMap contributors (ODbL), cross-check only"
+  ],
+  "config": {
+    "categories": [
+      "school",
+      "clinic",
+      "grocery",
+      "park"
+    ],
+    "rules": {
+      "school": "county public schools with ENROLLMNT > 0 (School Board offices, garage, telecom complex, adult/technical college and zero-enrollment program sites excluded; virtual schools with enrollment stay because the source does not flag them) + charter + private",
+      "park": "City of Miami Park_Boundary_Base_Layer polygons + county park boundaries not overlapping a city polygon by more than 50 %",
+      "clinic": "county health-facility layers (FQHC, free-standing, JHS primary care, mental health, school-based); duplicates within 50 m with matching names dropped",
+      "grocery": "USDA SNAP retailers with Store_Type in ['Grocery Store', 'Super Store', 'Supermarket']; OSM cross-check only"
+    },
+    "distance": {
+      "type": "straight_line",
+      "origin": "GTFS reference point",
+      "unit_display": "ft / mi",
+      "search_extent": "study window"
+    },
+    "bands": {
+      "radii_ft": [
+        660,
+        1320,
+        2640
+      ],
+      "source": "demography package analysis_targets_26917.json"
+    },
+    "duplicate_distance_m": 50.0
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "PROJ-reported accuracy of the datum operation selected in THIS environment; not the precision of the source geometries or of the model"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "network": {
+    "unique_facilities_in_network_half_mile_union": {
+      "school": 22,
+      "clinic": 3,
+      "grocery": 14,
+      "park": 24
+    },
+    "facilities_in_window": {
+      "school": 37,
+      "clinic": 8,
+      "grocery": 19,
+      "park": 38
+    },
+    "grocery_crosscheck_osm": {
+      "elements": 11,
+      "names": [
+        "Aldi",
+        "Carribean Life",
+        "Plantabaja",
+        "Presidente Supermarket",
+        "Price Choice",
+        "Publix",
+        "Whole Foods Market"
+      ],
+      "osm_data_timestamp": "2026-06-01T08:52:28Z",
+      "note": "OpenStreetMap supermarkets/grocery in the window (Overpass mirror, data lags); not merged, a plausibility check for the SNAP-based list"
+    },
+    "note": "per-station counts are non-exclusive across stations; the network count is a set of unique facilities inside the union"
+  },
+  "stations": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:202265"
+            ],
+            "park": [
+              "park_city:126"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:19",
+              "school_public:52",
+              "school_public:401"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:116468"
+            ],
+            "park": [
+              "park_city:34",
+              "park_city:104"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 6,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 8,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:21",
+              "school_charter:124",
+              "school_charter:152",
+              "school_private:446",
+              "school_private:788",
+              "school_private:899"
+            ],
+            "clinic": [
+              "clinic_free_standing:2"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:36642",
+              "grocery_snap_all_types:85109",
+              "grocery_snap_all_types:108261",
+              "grocery_snap_all_types:196931"
+            ],
+            "park": [
+              "park_city:20",
+              "park_city:22",
+              "park_city:34",
+              "park_city:89",
+              "park_city:104",
+              "park_city:117",
+              "park_city:124",
+              "park_city:143"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 9,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 6,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 9,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:19",
+            "school_public:21",
+            "school_public:52",
+            "school_public:401",
+            "school_charter:124",
+            "school_charter:152",
+            "school_private:446",
+            "school_private:788",
+            "school_private:899"
+          ],
+          "clinic": [
+            "clinic_free_standing:2"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:36642",
+            "grocery_snap_all_types:85109",
+            "grocery_snap_all_types:108261",
+            "grocery_snap_all_types:116468",
+            "grocery_snap_all_types:196931",
+            "grocery_snap_all_types:202265"
+          ],
+          "park": [
+            "park_city:20",
+            "park_city:22",
+            "park_city:34",
+            "park_city:89",
+            "park_city:104",
+            "park_city:117",
+            "park_city:124",
+            "park_city:126",
+            "park_city:143"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:52",
+          "name": "Chapman Partnership Early Childhood Center North",
+          "distance_ft": 707.1,
+          "distance_m": 215.53,
+          "display_mi": 0.134,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_free_standing:2",
+          "name": "Miami Rescue Mision Health Clinic",
+          "distance_ft": 2588.1,
+          "distance_m": 788.86,
+          "display_mi": 0.49,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:202265",
+          "name": "Planta Baja Market And Cafe",
+          "distance_ft": 197.1,
+          "distance_m": 60.07,
+          "display_mi": 0.037,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:126",
+          "name": "UNNAMED - FAA Parcel",
+          "distance_ft": 531.5,
+          "distance_m": 161.99,
+          "display_mi": 0.101,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:401"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:116468"
+            ],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:19",
+              "school_private:446"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20",
+              "park_city:117"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:52",
+              "school_charter:124"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:36642",
+              "grocery_snap_all_types:85109",
+              "grocery_snap_all_types:202265"
+            ],
+            "park": [
+              "park_city:20",
+              "park_city:22",
+              "park_city:104",
+              "park_city:117",
+              "park_city:126"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:19",
+            "school_public:52",
+            "school_public:401",
+            "school_charter:124",
+            "school_private:446"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:36642",
+            "grocery_snap_all_types:85109",
+            "grocery_snap_all_types:116468",
+            "grocery_snap_all_types:202265"
+          ],
+          "park": [
+            "park_city:20",
+            "park_city:22",
+            "park_city:104",
+            "park_city:117",
+            "park_city:126"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:401",
+          "name": "iPrep Academy",
+          "distance_ft": 510.9,
+          "distance_m": 155.74,
+          "display_mi": 0.097,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_free_standing:2",
+          "name": "Miami Rescue Mision Health Clinic",
+          "distance_ft": 3625.7,
+          "distance_m": 1105.1,
+          "display_mi": 0.687,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:116468",
+          "name": "Plantabaja Supermarket",
+          "distance_ft": 656.4,
+          "distance_m": 200.06,
+          "display_mi": 0.124,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:117",
+          "name": "Margaret Pace Park",
+          "distance_ft": 967.2,
+          "distance_m": 294.81,
+          "display_mi": 0.183,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:116468"
+            ],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:19",
+              "school_public:401",
+              "school_private:446"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:85109",
+              "grocery_snap_all_types:202265"
+            ],
+            "park": [
+              "park_city:20",
+              "park_city:117",
+              "park_city:126"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:19",
+            "school_public:401",
+            "school_private:446"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:85109",
+            "grocery_snap_all_types:116468",
+            "grocery_snap_all_types:202265"
+          ],
+          "park": [
+            "park_city:20",
+            "park_city:117",
+            "park_city:126"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:401",
+          "name": "iPrep Academy",
+          "distance_ft": 1494.7,
+          "distance_m": 455.57,
+          "display_mi": 0.283,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_free_standing:2",
+          "name": "Miami Rescue Mision Health Clinic",
+          "distance_ft": 4568.1,
+          "distance_m": 1392.37,
+          "display_mi": 0.865,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:116468",
+          "name": "Plantabaja Supermarket",
+          "distance_ft": 1135.6,
+          "distance_m": 346.14,
+          "display_mi": 0.215,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:20",
+          "name": "Maurice A. Ferré Park",
+          "distance_ft": 19.2,
+          "distance_m": 5.85,
+          "display_mi": 0.004,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:19",
+              "school_public:52",
+              "school_public:401",
+              "school_private:446"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:116468",
+              "grocery_snap_all_types:202265"
+            ],
+            "park": [
+              "park_city:20",
+              "park_city:126"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:19",
+            "school_public:52",
+            "school_public:401",
+            "school_private:446"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:116468",
+            "grocery_snap_all_types:202265"
+          ],
+          "park": [
+            "park_city:20",
+            "park_city:126"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:19",
+          "name": "Miami-Dade Online Academy",
+          "distance_ft": 1786.7,
+          "distance_m": 544.58,
+          "display_mi": 0.338,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 3930.2,
+          "distance_m": 1197.93,
+          "display_mi": 0.744,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:116468",
+          "name": "Plantabaja Supermarket",
+          "distance_ft": 1392.7,
+          "distance_m": 424.51,
+          "display_mi": 0.264,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:20",
+          "name": "Maurice A. Ferré Park",
+          "distance_ft": 587.9,
+          "distance_m": 179.19,
+          "display_mi": 0.111,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:116468",
+              "grocery_snap_all_types:158006"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:116468",
+            "grocery_snap_all_types:158006"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_county:43"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 2368.9,
+          "distance_m": 722.03,
+          "display_mi": 0.449,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 3240.9,
+          "distance_m": 987.82,
+          "display_mi": 0.614,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:116468",
+          "name": "Plantabaja Supermarket",
+          "distance_ft": 2237.6,
+          "distance_m": 682.01,
+          "display_mi": 0.424,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:20",
+          "name": "Maurice A. Ferré Park",
+          "distance_ft": 462.5,
+          "distance_m": 140.97,
+          "display_mi": 0.088,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:16",
+              "park_city:20"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:143153",
+              "grocery_snap_all_types:158006"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:143153",
+            "grocery_snap_all_types:158006"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_county:43"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 1743.4,
+          "distance_m": 531.4,
+          "display_mi": 0.33,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2748.6,
+          "distance_m": 837.79,
+          "display_mi": 0.521,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:143153",
+          "name": "Indian Prem",
+          "distance_ft": 2286.1,
+          "distance_m": 696.79,
+          "display_mi": 0.433,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:20",
+          "name": "Maurice A. Ferré Park",
+          "distance_ft": 709.4,
+          "distance_m": 216.22,
+          "display_mi": 0.134,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_county:43"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:276",
+              "school_charter:3"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:143153",
+              "grocery_snap_all_types:158006",
+              "grocery_snap_all_types:234800",
+              "grocery_snap_all_types:237084"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_city:42",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:276",
+            "school_public:341",
+            "school_charter:3"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:143153",
+            "grocery_snap_all_types:158006",
+            "grocery_snap_all_types:234800",
+            "grocery_snap_all_types:237084"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_city:42",
+            "park_county:43"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 994.7,
+          "distance_m": 303.2,
+          "display_mi": 0.188,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 1988.0,
+          "distance_m": 605.96,
+          "display_mi": 0.377,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:158006",
+          "name": "Publix Super Markets Inc.1614 1614",
+          "distance_ft": 1852.7,
+          "distance_m": 564.71,
+          "display_mi": 0.351,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_county:43",
+          "name": "FIRST STREET METROMOVER STATION DOG SPOT",
+          "distance_ft": 1233.6,
+          "distance_m": 376.01,
+          "display_mi": 0.234,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:276",
+              "school_public:341"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:158006",
+              "grocery_snap_all_types:234800",
+              "grocery_snap_all_types:237084"
+            ],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_charter:3",
+              "school_private:590"
+            ],
+            "clinic": [
+              "clinic_fqhc:3"
+            ],
+            "grocery": [],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_city:42",
+              "park_city:62",
+              "park_city:127",
+              "park_city:143",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:276",
+            "school_public:341",
+            "school_charter:3",
+            "school_private:590"
+          ],
+          "clinic": [
+            "clinic_fqhc:3",
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:158006",
+            "grocery_snap_all_types:234800",
+            "grocery_snap_all_types:237084"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_city:42",
+            "park_city:62",
+            "park_city:127",
+            "park_city:143",
+            "park_county:43"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:276",
+          "name": "Law Enforcement Officers Memorial Senior High",
+          "distance_ft": 1096.3,
+          "distance_m": 334.16,
+          "display_mi": 0.208,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 1289.4,
+          "distance_m": 393.0,
+          "display_mi": 0.244,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:158006",
+          "name": "Publix Super Markets Inc.1614 1614",
+          "distance_ft": 883.1,
+          "distance_m": 269.17,
+          "display_mi": 0.167,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:42",
+          "name": "Paul S. Walker Urbanscape",
+          "distance_ft": 1761.6,
+          "distance_m": 536.94,
+          "display_mi": 0.334,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:276",
+              "school_public:341",
+              "school_charter:3"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:42"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [
+              "clinic_fqhc:3"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:143153",
+              "grocery_snap_all_types:158006",
+              "grocery_snap_all_types:234800",
+              "grocery_snap_all_types:237084"
+            ],
+            "park": [
+              "park_city:47",
+              "park_city:62",
+              "park_city:100",
+              "park_city:110",
+              "park_city:127",
+              "park_county:43",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 8,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:276",
+            "school_public:341",
+            "school_charter:3"
+          ],
+          "clinic": [
+            "clinic_fqhc:3",
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:143153",
+            "grocery_snap_all_types:158006",
+            "grocery_snap_all_types:234800",
+            "grocery_snap_all_types:237084"
+          ],
+          "park": [
+            "park_city:42",
+            "park_city:47",
+            "park_city:62",
+            "park_city:100",
+            "park_city:110",
+            "park_city:127",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:276",
+          "name": "Law Enforcement Officers Memorial Senior High",
+          "distance_ft": 864.0,
+          "distance_m": 263.36,
+          "display_mi": 0.164,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 269.1,
+          "distance_m": 82.02,
+          "display_mi": 0.051,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:158006",
+          "name": "Publix Super Markets Inc.1614 1614",
+          "distance_ft": 1651.4,
+          "distance_m": 503.36,
+          "display_mi": 0.313,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:42",
+          "name": "Paul S. Walker Urbanscape",
+          "distance_ft": 833.2,
+          "distance_m": 253.96,
+          "display_mi": 0.158,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_county:43"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:16",
+              "park_county:43"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:126551"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_city:42",
+              "park_city:47"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_city:42",
+            "park_city:47",
+            "park_county:43"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 1167.9,
+          "distance_m": 355.98,
+          "display_mi": 0.221,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2392.0,
+          "distance_m": 729.1,
+          "display_mi": 0.453,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:143153",
+          "name": "Indian Prem",
+          "distance_ft": 1191.6,
+          "distance_m": 363.2,
+          "display_mi": 0.226,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_county:43",
+          "name": "FIRST STREET METROMOVER STATION DOG SPOT",
+          "distance_ft": 528.5,
+          "distance_m": 161.08,
+          "display_mi": 0.1,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_county:43"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:16"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:126551"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:20",
+              "park_city:42",
+              "park_city:47",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 6,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:20",
+            "park_city:42",
+            "park_city:47",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 1130.8,
+          "distance_m": 344.67,
+          "display_mi": 0.214,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2295.5,
+          "distance_m": 699.66,
+          "display_mi": 0.435,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:143153",
+          "name": "Indian Prem",
+          "distance_ft": 563.6,
+          "distance_m": 171.79,
+          "display_mi": 0.107,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_county:43",
+          "name": "FIRST STREET METROMOVER STATION DOG SPOT",
+          "distance_ft": 0.0,
+          "distance_m": 0.0,
+          "display_mi": 0.0,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "inside the park polygon"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:16"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:126551",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:16",
+              "park_county:43"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 6,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341",
+              "school_private:751"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:16",
+              "park_city:24",
+              "park_city:42",
+              "park_city:47",
+              "park_county:43",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 6,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341",
+            "school_private:751"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:751",
+          "name": "Key Point  Christian Academy",
+          "distance_ft": 2100.6,
+          "distance_m": 640.25,
+          "display_mi": 0.398,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 3247.8,
+          "distance_m": 989.94,
+          "display_mi": 0.615,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:126551",
+          "name": "Whole Foods Market 10191",
+          "distance_ft": 705.3,
+          "distance_m": 214.98,
+          "display_mi": 0.134,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:16",
+          "name": "Bayfront Park",
+          "distance_ft": 126.2,
+          "distance_m": 38.47,
+          "display_mi": 0.024,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:47"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:126551",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:42",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341",
+              "school_private:69",
+              "school_private:154",
+              "school_private:215",
+              "school_private:711",
+              "school_private:751"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [],
+            "park": [
+              "park_city:14",
+              "park_city:16",
+              "park_city:24",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:711",
+            "school_private:751"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:751",
+          "name": "Key Point  Christian Academy",
+          "distance_ft": 1646.8,
+          "distance_m": 501.94,
+          "display_mi": 0.312,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2232.4,
+          "distance_m": 680.42,
+          "display_mi": 0.423,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:126551",
+          "name": "Whole Foods Market 10191",
+          "distance_ft": 793.6,
+          "distance_m": 241.88,
+          "display_mi": 0.15,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:47",
+          "name": "Fort Dallas Park",
+          "distance_ft": 312.6,
+          "distance_m": 95.27,
+          "display_mi": 0.059,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:42"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [],
+            "park": [
+              "park_city:47"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:276",
+              "school_charter:3",
+              "school_private:69",
+              "school_private:215",
+              "school_private:751"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:126551",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:16",
+              "park_city:24",
+              "park_city:62",
+              "park_city:100",
+              "park_city:110",
+              "park_county:43",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 9,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:276",
+            "school_public:341",
+            "school_charter:3",
+            "school_private:69",
+            "school_private:215",
+            "school_private:751"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_city:62",
+            "park_city:100",
+            "park_city:110",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:171",
+          "name": "School For Advanced Studies Wolfson",
+          "distance_ft": 1094.5,
+          "distance_m": 333.61,
+          "display_mi": 0.207,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 1319.4,
+          "distance_m": 402.16,
+          "display_mi": 0.25,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:143153",
+          "name": "Indian Prem",
+          "distance_ft": 1587.8,
+          "distance_m": 483.97,
+          "display_mi": 0.301,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:42",
+          "name": "Paul S. Walker Urbanscape",
+          "distance_ft": 315.8,
+          "distance_m": 96.26,
+          "display_mi": 0.06,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:47"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:42",
+              "park_city:47",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 6,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:276",
+              "school_public:341",
+              "school_private:69",
+              "school_private:154",
+              "school_private:215",
+              "school_private:751"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:14541",
+              "grocery_snap_all_types:91796",
+              "grocery_snap_all_types:126551",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:14",
+              "park_city:16",
+              "park_city:24",
+              "park_city:62",
+              "park_city:100",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 9,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:276",
+            "school_public:341",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:751"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:91796",
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_city:62",
+            "park_city:100",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:215",
+          "name": "KLA Schools of Brickell",
+          "distance_ft": 1552.3,
+          "distance_m": 473.14,
+          "display_mi": 0.294,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 1677.0,
+          "distance_m": 511.14,
+          "display_mi": 0.318,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:126551",
+          "name": "Whole Foods Market 10191",
+          "distance_ft": 1496.0,
+          "distance_m": 455.97,
+          "display_mi": 0.283,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:47",
+          "name": "Fort Dallas Park",
+          "distance_ft": 516.9,
+          "distance_m": 157.54,
+          "display_mi": 0.098,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:47",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:126551"
+            ],
+            "park": [
+              "park_city:24",
+              "park_city:42",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:171",
+              "school_public:341",
+              "school_private:69",
+              "school_private:154",
+              "school_private:215",
+              "school_private:711",
+              "school_private:751"
+            ],
+            "clinic": [
+              "clinic_jhs_primary_care:5"
+            ],
+            "grocery": [
+              "grocery_snap_all_types:14541",
+              "grocery_snap_all_types:91796",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:14",
+              "park_city:16",
+              "park_city:24",
+              "park_city:100",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 1,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 8,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:171",
+            "school_public:341",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:711",
+            "school_private:751"
+          ],
+          "clinic": [
+            "clinic_jhs_primary_care:5"
+          ],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:91796",
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_city:100",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:215",
+          "name": "KLA Schools of Brickell",
+          "distance_ft": 1408.3,
+          "distance_m": 429.25,
+          "display_mi": 0.267,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2148.8,
+          "distance_m": 654.95,
+          "display_mi": 0.407,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:126551",
+          "name": "Whole Foods Market 10191",
+          "distance_ft": 1217.3,
+          "distance_m": 371.03,
+          "display_mi": 0.231,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:47",
+          "name": "Fort Dallas Park",
+          "distance_ft": 48.1,
+          "distance_m": 14.65,
+          "display_mi": 0.009,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:47",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:69",
+              "school_private:215",
+              "school_private:751"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:24",
+              "park_city:47"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 7,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:154",
+              "school_private:711"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:14541",
+              "grocery_snap_all_types:91796",
+              "grocery_snap_all_types:126551",
+              "grocery_snap_all_types:143153"
+            ],
+            "park": [
+              "park_city:14",
+              "park_city:16",
+              "park_city:24",
+              "park_city:42",
+              "park_city:87",
+              "park_city:100",
+              "park_county:43"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 9,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:711",
+            "school_private:751"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:91796",
+            "grocery_snap_all_types:126551",
+            "grocery_snap_all_types:143153"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:16",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_city:87",
+            "park_city:100",
+            "park_county:43",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:69",
+          "name": "KLA Elementary",
+          "distance_ft": 1044.4,
+          "distance_m": 318.33,
+          "display_mi": 0.198,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 2759.4,
+          "distance_m": 841.05,
+          "display_mi": 0.523,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:126551",
+          "name": "Whole Foods Market 10191",
+          "distance_ft": 1455.7,
+          "distance_m": 443.7,
+          "display_mi": 0.276,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_county:159",
+          "name": "FIFTH STREET METROMOVER STATION PLAYGROUND",
+          "distance_ft": 0.0,
+          "distance_m": 0.0,
+          "display_mi": 0.0,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "inside the park polygon"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:154"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:69",
+              "school_private:215",
+              "school_private:711",
+              "school_private:751"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:91796"
+            ],
+            "park": [
+              "park_city:14",
+              "park_city:24",
+              "park_county:159"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:296",
+              "school_private:923"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:14541",
+              "grocery_snap_all_types:25248",
+              "grocery_snap_all_types:126551"
+            ],
+            "park": [
+              "park_city:24",
+              "park_city:42",
+              "park_city:47",
+              "park_city:87",
+              "park_city:100"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:296",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:711",
+            "school_private:751",
+            "school_private:923"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:25248",
+            "grocery_snap_all_types:91796",
+            "grocery_snap_all_types:126551"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:24",
+            "park_city:42",
+            "park_city:47",
+            "park_city:87",
+            "park_city:100",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:154",
+          "name": "Brickell Heights Elementary",
+          "distance_ft": 654.7,
+          "distance_m": 199.57,
+          "display_mi": 0.124,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 3500.4,
+          "distance_m": 1066.93,
+          "display_mi": 0.663,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:91796",
+          "name": "PUBLIX 1009",
+          "distance_ft": 1215.7,
+          "distance_m": 370.53,
+          "display_mi": 0.23,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_county:159",
+          "name": "FIFTH STREET METROMOVER STATION PLAYGROUND",
+          "distance_ft": 742.5,
+          "distance_m": 226.3,
+          "display_mi": 0.141,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:711"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:14"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:296",
+              "school_private:154",
+              "school_private:923"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:91796"
+            ],
+            "park": [
+              "park_city:87"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 5,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:69",
+              "school_private:215",
+              "school_private:751"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:14541",
+              "grocery_snap_all_types:25248"
+            ],
+            "park": [
+              "park_city:24",
+              "park_city:47",
+              "park_city:85",
+              "park_city:87",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 7,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 6,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:296",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:711",
+            "school_private:751",
+            "school_private:923"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:25248",
+            "grocery_snap_all_types:91796"
+          ],
+          "park": [
+            "park_city:14",
+            "park_city:24",
+            "park_city:47",
+            "park_city:85",
+            "park_city:87",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:711",
+          "name": "WorldEd International School",
+          "distance_ft": 503.3,
+          "distance_m": 153.39,
+          "display_mi": 0.095,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_jhs_primary_care:5",
+          "name": "JHS - Downtown Medical Center",
+          "distance_ft": 4412.4,
+          "distance_m": 1344.91,
+          "display_mi": 0.836,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:91796",
+          "name": "PUBLIX 1009",
+          "distance_ft": 966.9,
+          "distance_m": 294.72,
+          "display_mi": 0.183,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:14",
+          "name": "Allen Morris Brickell Plaza",
+          "distance_ft": 112.1,
+          "distance_m": 34.18,
+          "display_mi": 0.021,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:296"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:87"
+            ]
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:154"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:25248",
+              "grocery_snap_all_types:91796"
+            ],
+            "park": [
+              "park_city:14",
+              "park_city:85"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 6,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 6,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:69",
+              "school_private:215",
+              "school_private:229",
+              "school_private:711",
+              "school_private:751",
+              "school_private:923"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:14541"
+            ],
+            "park": [
+              "park_city:4",
+              "park_city:24",
+              "park_city:85",
+              "park_city:91",
+              "park_city:100",
+              "park_county:159"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 8,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 3,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 8,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:296",
+            "school_private:69",
+            "school_private:154",
+            "school_private:215",
+            "school_private:229",
+            "school_private:711",
+            "school_private:751",
+            "school_private:923"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:14541",
+            "grocery_snap_all_types:25248",
+            "grocery_snap_all_types:91796"
+          ],
+          "park": [
+            "park_city:4",
+            "park_city:14",
+            "park_city:24",
+            "park_city:85",
+            "park_city:87",
+            "park_city:91",
+            "park_city:100",
+            "park_county:159"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_public:296",
+          "name": "Southside Preparatory Academy",
+          "distance_ft": 388.8,
+          "distance_m": 118.51,
+          "display_mi": 0.074,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_school_based:148",
+          "name": "Comprehensive Examination of Vision and Ocular Health",
+          "distance_ft": 4308.7,
+          "distance_m": 1313.3,
+          "display_mi": 0.816,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:25248",
+          "name": "PUBLIX 581",
+          "distance_ft": 662.2,
+          "distance_m": 201.84,
+          "display_mi": 0.125,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:87",
+          "name": "Southside Park",
+          "distance_ft": 145.4,
+          "distance_m": 44.31,
+          "display_mi": 0.028,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "provenance_class": "observed",
+      "data_nature": "administrative_record",
+      "is_service_level_score": false,
+      "distance_type": "straight_line",
+      "distance_origin": "GTFS station reference point (not an entrance)",
+      "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+      "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+      "attribution": [
+        "Miami-Dade County GIS (MD_Emaps)",
+        "City of Miami GIS (Park_Boundary_Base_Layer)",
+        "USDA FNS SNAP retailer location data",
+        "© OpenStreetMap contributors (ODbL), cross-check only"
+      ],
+      "bands": [
+        {
+          "band_id": "b1",
+          "band": "0-1/8 mi",
+          "outer_ft": 660,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:923"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": []
+          }
+        },
+        {
+          "band_id": "b2",
+          "band": "1/8-1/4 mi",
+          "outer_ft": 1320,
+          "counts": {
+            "school": {
+              "count": 1,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_public:296"
+            ],
+            "clinic": [],
+            "grocery": [],
+            "park": [
+              "park_city:85",
+              "park_city:87"
+            ]
+          }
+        },
+        {
+          "band_id": "b3",
+          "band": "1/4-1/2 mi",
+          "outer_ft": 2640,
+          "counts": {
+            "school": {
+              "count": 3,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "clinic": {
+              "count": 0,
+              "value_status": "not_found_in_source_within_window",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "grocery": {
+              "count": 2,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            },
+            "park": {
+              "count": 4,
+              "value_status": "value",
+              "unit": "facilities",
+              "provenance_class": "observed",
+              "data_nature": "administrative_record"
+            }
+          },
+          "poi_ids": {
+            "school": [
+              "school_private:154",
+              "school_private:229",
+              "school_private:711"
+            ],
+            "clinic": [],
+            "grocery": [
+              "grocery_snap_all_types:25248",
+              "grocery_snap_all_types:91796"
+            ],
+            "park": [
+              "park_city:4",
+              "park_city:14",
+              "park_city:85",
+              "park_city:87"
+            ]
+          }
+        }
+      ],
+      "cumulative_0_to_half_mile": {
+        "band_id": "cum",
+        "band": "0-1/2 mi cumulative",
+        "outer_ft": 2640,
+        "counts": {
+          "school": {
+            "count": 5,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "clinic": {
+            "count": 0,
+            "value_status": "not_found_in_source_within_window",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "grocery": {
+            "count": 2,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          },
+          "park": {
+            "count": 4,
+            "value_status": "value",
+            "unit": "facilities",
+            "provenance_class": "observed",
+            "data_nature": "administrative_record"
+          }
+        },
+        "poi_ids": {
+          "school": [
+            "school_public:296",
+            "school_private:154",
+            "school_private:229",
+            "school_private:711",
+            "school_private:923"
+          ],
+          "clinic": [],
+          "grocery": [
+            "grocery_snap_all_types:25248",
+            "grocery_snap_all_types:91796"
+          ],
+          "park": [
+            "park_city:4",
+            "park_city:14",
+            "park_city:85",
+            "park_city:87"
+          ]
+        }
+      },
+      "nearest_by_category": {
+        "school": {
+          "poi_id": "school_private:923",
+          "name": "Kingsbury Academy",
+          "distance_ft": 395.6,
+          "distance_m": 120.57,
+          "display_mi": 0.075,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "clinic": {
+          "poi_id": "clinic_school_based:148",
+          "name": "Comprehensive Examination of Vision and Ocular Health",
+          "distance_ft": 5389.9,
+          "distance_m": 1642.85,
+          "display_mi": 1.021,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": false,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "grocery": {
+          "poi_id": "grocery_snap_all_types:25248",
+          "name": "PUBLIX 581",
+          "distance_ft": 1347.9,
+          "distance_m": 410.84,
+          "display_mi": 0.255,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        },
+        "park": {
+          "poi_id": "park_city:85",
+          "name": "Simpson Park",
+          "distance_ft": 803.1,
+          "distance_m": 244.77,
+          "display_mi": 0.152,
+          "value_status": "value",
+          "distance_type": "straight_line",
+          "within_half_mile": true,
+          "note": "straight line from the reference point; not a walking distance"
+        }
+      }
+    }
+  ]
+}

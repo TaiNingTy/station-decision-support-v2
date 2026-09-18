@@ -1,0 +1,36 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "conservation_all_scenarios": {
+    "low": true,
+    "medium": true,
+    "high": true
+  },
+  "berths_are_nonnegative_integers": true,
+  "monotonic_berths_low_le_medium_le_high": true,
+  "every_station_present": true,
+  "party_size_within_vehicle_capacity": true,
+  "module_selection_valid": true,
+  "no_nan": true,
+  "berths_total_by_scenario": {
+    "low": 21,
+    "medium": 21,
+    "high": 36
+  },
+  "stations_exceeding_single_module": {
+    "low": [],
+    "medium": [],
+    "high": []
+  },
+  "assumption_ids": [
+    "C01_average_party_size_pax_per_vehicle_trip",
+    "C02_berth_cycle_s",
+    "C03_berth_utilization_max",
+    "C04_within_hour_peaking_factor",
+    "C05_min_guideway_headway_s",
+    "C06_site_footprint_available",
+    "C07_no_separate_staging_berths"
+  ],
+  "scope_statement": "PASS means the configuration arithmetic is consistent with its inputs. Berth counts and footprints are model outputs on assumed PRT operating values and an assumed site fit; they are not a design and not a capacity proof."
+}

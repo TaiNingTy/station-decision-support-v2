@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from miami_v2_common import *   # noqa: E402,F401,F403
 
 OUT_DIR = ROOT / "docs/data"
-HARNESS = ROOT / "reviews/2026-09-17_step7b_poi/regression_results.json"
+HARNESS = ROOT / "reviews/2026-09-18_step9_ai_layer_prep/regression_results.json"   # the latest full run; earlier runs stay in their own review folders
 BAND_KEYS = ["b1", "b2", "b3", "cum"]
 CATS = ["school", "clinic", "grocery", "park"]
 SCEN = ["low", "medium", "high"]
@@ -29,8 +29,12 @@ def pkg(stage, manifest_name="manifest.json"):
 
 ids, dirs, manifests = {}, {}, {}
 for stage, mname in (("spatial_join", "spatial_join_manifest.json"), ("demography", "manifest.json"), ("jobs", "manifest.json"), ("service_baseline", "manifest.json"),
-                     ("ridership_reference", "manifest.json"), ("poi", "manifest.json"), ("input_package", "manifest.json"), ("scenarios", "manifest.json"), ("config", "manifest.json")):
+                     ("ridership_reference", "manifest.json"), ("poi", "manifest.json"), ("input_package", "manifest.json"), ("scenarios", "manifest.json"), ("config", "manifest.json"),
+                     ("rules", "manifest.json")):
     ids[stage], dirs[stage], manifests[stage] = pkg(stage, mname)
+rules_doc = load(dirs["rules"] / "rule_results.json"); rules_by = {b["station_id"]: b for b in rules_doc["stations"]}
+def rule_items(rows): return [{"id": r["rule_result_id"], "rule_id": r["rule_id"], "name": r["rule_name"], "scenario": r["scenario"], "status": r["status"], "basis": r["basis"], "message": r["message"]} for r in rows if r["status"] != "pass"]
+kit_path = ROOT / "ai/miami/kit_manifest.json"; kit = load(kit_path) if kit_path.exists() else None
 
 fwd, inv, _ = projection()
 readiness = load(DATA / "gis_data_readiness.json")
@@ -107,6 +111,7 @@ for f in stations_master:
                            "footprint_ft2": cf_st[sname][pid]["module"]["footprint_ft2"], "fits_single_module": cf_st[sname][pid]["module"]["fits_single_module"],
                            "site_fit": cf_st[sname][pid]["site_fit"]["status"]} for sname in SCEN},
         "od_link_potential": {"home_side_JT01": s["od_link_potential"]["home_side"]["JT01"], "work_side_JT01": s["od_link_potential"]["work_side"]["JT01"]},
+        "rules": {"version": rules_doc["rule_pack_version"], "summary": rules_by[pid]["summary"], "by_scenario": rules_by[pid]["by_scenario"], "items": rule_items(rules_by[pid]["results"])},
         "ai_analysis_status": s.get("ai_analysis_status"), "optional_layers": {k: v.get("status") for k, v in s["optional_layers"].items()}})
 missing_scen = [(st["id"], k) for st in stations for k in SCEN if st["scenarios"][k] is None]
 if missing_scen: raise SystemExit(f"HALT: scenario rows missing for {missing_scen[:3]}")
@@ -138,7 +143,9 @@ network = {"union_sq_mi": sj["network"]["display"]["union"]["sq_mi"], "union_acr
            "poi_unique": load(dirs["poi"] / "station_poi_profile.json")["network"]["unique_facilities_in_network_half_mile_union"],
            "poi_in_window": load(dirs["poi"] / "station_poi_profile.json")["network"]["facilities_in_window"],
            "observed_system_avg_weekday_boardings": rr_doc["system"], "scenario_totals": {s: sc["scenarios"][s]["totals"] for s in SCEN},
-           "config_network": {s: cf["scenarios"][s]["network"] for s in SCEN}}
+           "config_network": {s: cf["scenarios"][s]["network"] for s in SCEN},
+           "rules": {"version": rules_doc["rule_pack_version"], "summary": rules_doc["network"]["summary"], "items": rule_items(rules_doc["network"]["results"]),
+                     "all": [{"id": r["rule_result_id"], "status": r["status"], "scenario": r["scenario"], "rule_id": r["rule_id"]} for r in rules_doc["network"]["results"]]}}
 if network["jobs_all_dedup"] is None:   # jobs network block layout differs; copy whatever the package exposes
     network["jobs_network_block"] = {k: v for k, v in netj.items() if k not in ("source_units",)}
 
@@ -168,13 +175,17 @@ provenance = {
     "scenarios": {"provenance_class": "derived", "data_nature": "model_output", "source": "scenario chain over the input package (parameters P01/P02/P05 derived from LODES + ACS; A01–A07 assumptions)",
                   "semantics": "uncalibrated low / medium / high AM-peak person trips for links inside the network; excludes regional inflow and hub transfers; not a forecast", "package": ids["scenarios"]},
     "config": {"provenance_class": "derived", "data_nature": "model_output", "source": "PRT configuration chain (C01–C07 assumptions; platform modules from owner drawings)",
-               "semantics": "berths, module and footprint per station per scenario; site fit assumed (C06); not an engineering design, not a capacity proof", "package": ids["config"]}}
+               "semantics": "berths, module and footprint per station per scenario; site fit assumed (C06); not an engineering design, not a capacity proof", "package": ids["config"]},
+    "rules": {"provenance_class": "derived", "data_nature": "model_output", "source": f"rule pack {rules_doc['rule_pack_version']} (config/rules_v2.json) evaluated over the packages",
+              "semantics": "arithmetic identities, project conventions, data-quality flags and scope limitations written for this study; not statutes, agency standards or supplier specifications", "package": ids["rules"]}}
+ai_layer = {"status": "NOT_RUN", "note": "no model output exists yet", "kit": ({"kit_version": kit["kit_version"], "kb_version": kit["kb_version"], "prompt_version": kit["prompt_version"], "rule_pack_version": kit["rule_pack_version"],
+                                                                         "briefs": len(kit["briefs"]), "facts_per_brief": kit["briefs"][0]["facts"] if kit["briefs"] else None} if kit else None)}
 
 demo = {"schema_version": "miami-web-demo-data/1.0", "generated_on": "2026-09-17", "case": "Miami Metromover · 21 stations · full-line conversion study (demonstration)",
         "units": "computed in EPSG:26917 metres; displayed in feet, miles, acres and square miles",
         "packages": ids, "readiness": {"snapshot_date": readiness.get("snapshot_date"), "stages": {k: v["status"] for k, v in readiness["stages"].items()},
                                        "layers": {k: v.get("status") for k, v in readiness["layers"].items()}, "flags": {k: v for k, v in readiness["readiness_flags"].items() if k != "definitions"}},
-        "harness": harness, "provenance": provenance, "bands": {"radii_ft": [660, 1320, 2640], "labels": ["0–⅛ mi", "⅛–¼ mi", "¼–½ mi", "0–½ mi cumulative"]},
+        "harness": harness, "provenance": provenance, "ai_layer": ai_layer, "bands": {"radii_ft": [660, 1320, 2640], "labels": ["0–⅛ mi", "⅛–¼ mi", "¼–½ mi", "0–½ mi cumulative"]},
         "stations": stations, "network": network,
         "scenario_chain": {s: {"assumption_values": sc["scenarios"][s]["assumption_values"], "chain": sc["scenarios"][s]["chain"], "totals": sc["scenarios"][s]["totals"]} for s in SCEN},
         "scenario_parameters": sc_params, "scenario_meta": {k: sc[k] for k in ("is_observed_ridership", "is_calibrated", "calibration_note", "purpose", "excludes", "assumption_parameter_ids")},

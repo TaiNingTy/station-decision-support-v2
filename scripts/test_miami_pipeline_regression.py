@@ -90,7 +90,7 @@ def save(p, o, indent=2): Path(p).write_text(json.dumps(o, ensure_ascii=False, i
 def sha_obj(o): return hashlib.sha256(json.dumps(o, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 CFG = ["platform_constructible_space", "vehicle_parameters", "service_baseline"]
-STAGE_ORDER = ["station_master", "spatial_join", "demography", "jobs", "service_baseline", "ridership_reference", "poi", "walk_model", "input_package", "scenarios", "config"]
+STAGE_ORDER = ["station_master", "spatial_join", "demography", "jobs", "service_baseline", "ridership_reference", "poi", "walk_model", "input_package", "scenarios", "config", "rules"]
 FOUR = CFG + ["scenario_results"]
 TWO = ["platform_constructible_space", "vehicle_parameters"]   # missing before step 6; now assumed (see THREE)
 THREE = ["platform_constructible_space", "vehicle_parameters", "scenario_results"]   # assumption-backed config inputs since step 6
@@ -341,7 +341,7 @@ def main():
                                                    and r["layers"]["pois"]["status"] == "DONE" and r["layers"]["walk_network"]["status"] == "NOT_RUN",
                   "upstream_inventory_nested_and_verified": r["upstream_inventory"]["verified_against_build_manifest"] is True and "status" not in r["upstream_inventory"],
                   "station_master_DONE": st["station_master"] == "DONE", "spatial_join_DONE": st["spatial_join"] == "DONE",
-                  "built_stages_DONE": all(st[s] == "DONE" for s in ("demography", "jobs", "service_baseline", "input_package", "scenarios", "config")),
+                  "built_stages_DONE": all(st[s] == "DONE" for s in ("demography", "jobs", "service_baseline", "input_package", "scenarios", "config", "rules")),
                   "unbuilt_layers_NOT_RUN": all(st[s] == "NOT_RUN" for s in ("walk_model",)), "poi_DONE": st["poi"] == "DONE",
                   "ai_flag_true": fl["ready_for_ai_interpretation"] is True,
                   "ai_required_not_done_empty": fl["ai_required_not_done"] == [],
@@ -584,6 +584,29 @@ def main():
         if ident is not None: checks["byte_identical_to_published_package"] = ident
         return checks, {"berths_total": v["berths_total_by_scenario"], "lane_ratio_high": res["scenarios"]["high"]["network"]["network_vehicle_trips_over_lane_throughput"]}
     record("config_stage", s_config)
+
+    # ---------------- step 9a (2026-09-18): versioned rule pack -> citable rule results ----------------
+    def s_rules():
+        c = baseline; rd = c.readiness(); st = {k: v["status"] for k, v in rd["stages"].items()}
+        d = c.data / load(c.data / "rules_current.json")["package_dir"]; v = load(d / "rules_validation.json"); res = load(d / "rule_results.json"); m = load(d / "manifest.json")
+        pack = load(c.root / "config/rules_v2.json"); ids = [r["rule_result_id"] for b in res["stations"] for r in b["results"]] + [r["rule_result_id"] for r in res["network"]["results"]]
+        by = {r["rule_result_id"]: r for b in res["stations"] for r in b["results"]}
+        gov = by.get("MIA-MM-09|-|RC-12"); renamed = [pid for pid in ("MIA-MM-02", "MIA-MM-05", "MIA-MM-18") if by.get(f"{pid}|-|RC-09", {}).get("status") == "warning"]
+        checks = {"rules_DONE": st["rules"] == "DONE", "validation_PASS": v["validation_status"] == "PASS",
+                  "pack_version_matches_config": res["rule_pack_version"] == pack["version"] and m["config_sha256"] == sha(c.root / "config/rules_v2.json"),
+                  "ids_unique": len(ids) == len(set(ids)), "every_station_present": len(res["stations"]) == 21,
+                  "no_critical_results": v["critical_results"] == [], "arithmetic_identities_pass": all(r["status"] == "pass" for r in by.values() if r["rule_id"] == "RC-03"),
+                  "site_space_warning_everywhere": all(by[f"{b['station_id']}|-|RC-07"]["status"] == "warning" for b in res["stations"]),
+                  "renamed_stations_flagged": renamed == ["MIA-MM-02", "MIA-MM-05", "MIA-MM-18"],
+                  "government_center_inflow_note": gov is not None and gov["status"] == "info" and "Metrorail" in " ".join(gov["values"]["external_connections_on_map"]),
+                  "high_scenario_lane_ratio_warning": next(r["status"] for r in res["network"]["results"] if r["rule_result_id"] == "NET|high|RC-05") == "warning",
+                  "not_a_standard": res["is_legal_or_agency_standard"] is False,
+                  "consumes_three_packages": sorted(p["stage"] for p in m["consumed_packages"]) == ["config", "input_package", "scenarios"],
+                  "layers_rules_DONE": rd["layers"]["rules"]["status"] == "DONE"}
+        ident = package_identical(c, "rules")
+        if ident is not None: checks["byte_identical_to_published_package"] = ident
+        return checks, {"network": res["network"]["summary"], "stations_overall": v["summary"]["stations_overall"]}
+    record("rules_stage", s_rules)
 
     # ---------------- step 7a (2026-09-17): observed ridership reference ----------------
     def s_ridership_reference():

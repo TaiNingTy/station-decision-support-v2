@@ -1,0 +1,190 @@
+{
+  "schema_version": "miami-scenario-parameters/1.0",
+  "built_on": "2026-09-15",
+  "observed_or_derived_shared_by_all_scenarios": [
+    {
+      "id": "P01_internal_commute_links_JT01_coverage_weighted",
+      "value": 8814.611013,
+      "unit": "primary jobs (persons) with residence and workplace inside the network's half-mile union, counted for the covered fraction of each block",
+      "whole_block_upper_bound": 9706,
+      "coverage_rule": "each both_in link counts for cov_h × cov_w, where cov is the share of the block's LAND inside the network half-mile union; a block that only touches a disc does not bring all of its links (the whole-block count above is the upper bound)",
+      "provenance_class": "derived",
+      "data_nature": "administrative_modeled",
+      "depends_on_assumptions": [
+        "areal_interpolation_land_share (the same convention as the demography and jobs layers)"
+      ],
+      "source": "jobs package pkg-ed5912a9790d od_summary.both_in_coverage_weighted_S000.JT01 (block cov in block_values.json)",
+      "note": "LODES 2023 job links, not trips; JT00 (all jobs) whole-block count would be 10231"
+    },
+    {
+      "id": "P02_work_from_home_share",
+      "value": 0.272576,
+      "moe_90": 0.020902,
+      "provenance_class": "derived",
+      "data_nature": "survey_estimate",
+      "source": "demography network dedup R02 = B08301_021 / B08301_001 (ACS 2020-2024)",
+      "note": "residence-based; applied to the residents' end of every link"
+    },
+    {
+      "id": "P05_peak_hour_share",
+      "value": 0.354581,
+      "window": "8:00 a.m. to 8:59 a.m.",
+      "bins": [
+        "009",
+        "010"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "survey_estimate",
+      "depends_on_assumptions": [
+        "A07_departure_window_equals_station_window"
+      ],
+      "source": "demography network dedup departure_time_bins (B08302) — the 60-minute window with the most departures, over workers not working from home",
+      "alternative_source_not_acquired": "Metromover hourly ridership report (observed) — would REPLACE this parameter, never multiply it",
+      "candidates": [
+        {
+          "window": "5:00 a.m. to 5:59 a.m.",
+          "bins": [
+            "003",
+            "004"
+          ],
+          "workers": 863.5
+        },
+        {
+          "window": "5:30 a.m. to 6:29 a.m.",
+          "bins": [
+            "004",
+            "005"
+          ],
+          "workers": 1820.97
+        },
+        {
+          "window": "6:00 a.m. to 6:59 a.m.",
+          "bins": [
+            "005",
+            "006"
+          ],
+          "workers": 2590.7
+        },
+        {
+          "window": "6:30 a.m. to 7:29 a.m.",
+          "bins": [
+            "006",
+            "007"
+          ],
+          "workers": 5074.72
+        },
+        {
+          "window": "7:00 a.m. to 7:59 a.m.",
+          "bins": [
+            "007",
+            "008"
+          ],
+          "workers": 6898.79
+        },
+        {
+          "window": "7:30 a.m. to 8:29 a.m.",
+          "bins": [
+            "008",
+            "009"
+          ],
+          "workers": 10043.789999999999
+        },
+        {
+          "window": "8:00 a.m. to 8:59 a.m.",
+          "bins": [
+            "009",
+            "010"
+          ],
+          "workers": 13227.31
+        },
+        {
+          "window": "9:00 a.m. to 9:59 a.m.",
+          "bins": [
+            "011"
+          ],
+          "workers": 7100.9
+        },
+        {
+          "window": "10:00 a.m. to 10:59 a.m.",
+          "bins": [
+            "012"
+          ],
+          "workers": 2442.02
+        },
+        {
+          "window": "11:00 a.m. to 11:59 a.m.",
+          "bins": [
+            "013"
+          ],
+          "workers": 621.28
+        }
+      ]
+    },
+    {
+      "id": "P06_reference_public_transportation_commute_share",
+      "value": 0.060787,
+      "provenance_class": "observed",
+      "data_nature": "survey_estimate",
+      "source": "demography network dedup R01 = B08301_010 / B08301_001",
+      "role": "reference bound for the LOW adoption assumption; NOT part of the multiplication chain"
+    }
+  ],
+  "assumptions": {
+    "A01_attendance_rate": {
+      "value": 0.85,
+      "statement": "85 % of primary-job holders who do not work from home make a commute trip on a typical weekday",
+      "reference": "leave/absence and shift patterns are not observed locally; a single value for all scenarios",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A02_non_commute_trips_per_commute_trip": {
+      "low": 0.5,
+      "medium": 1.0,
+      "high": 1.5,
+      "statement": "non-commute trips inside the network per commute trip",
+      "reference": "NHTS national purpose shares show work trips are a minority of person trips; the corridor-relevant fraction and the Miami transfer coefficient are NOT observed — the whole ratio is an assumption",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A03_prt_adoption_share_of_all_mode_trips": {
+      "low": 0.05,
+      "medium": 0.15,
+      "high": 0.3,
+      "statement": "share of ALL-MODE trips that would use the PRT service",
+      "reference_bound": "low must not exceed the observed network public-transportation commute share (R01, ACS)",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A04_station_allocation_rule": {
+      "statement": "each block-to-block link is split among the candidate stations at each end in proportion to the block's land share inside each station's half-mile disc, normalised to 1 (conservation by construction)",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A05_direction_and_return": {
+      "statement": "AM peak: home -> work; PM peak mirrors the AM peak (boardings <-> alightings); returns equal outbound trips",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A06_non_commute_pattern": {
+      "statement": "non-commute trips follow the commute OD pattern and the same station allocation",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    },
+    "A07_departure_window_equals_station_window": {
+      "statement": "the ACS departure-from-home hour is treated as the station arrival hour; B08302 has no return-trip distribution",
+      "provenance_class": "assumption",
+      "data_nature": "assumption"
+    }
+  },
+  "scenario_rule": "low / medium / high change ONLY A02 and A03; A01, A04-A07 and every observed/derived parameter are shared",
+  "chain": "internal job links -> weekday commute trips -> all-purpose trips -> peak-hour trips -> PRT trips -> station boardings/alightings",
+  "not_in_chain": [
+    "current public-transportation share (reference bound only)",
+    "a second peak factor (would double-count with P05)",
+    "hub transfer inflow"
+  ],
+  "config_sha256": "bfd85b0cb988919e24db4364eb3e84c866fea71f5428c466ef8a4ea0287cd37d",
+  "input_package": "pkg-3cab1da11f1b",
+  "jobs_package": "pkg-ed5912a9790d",
+  "service_baseline_package": "pkg-4c24a50788c9"
+}

@@ -1,0 +1,202 @@
+{
+  "kit_version": "ai-kit-v2.0",
+  "generated_on": "2026-09-18",
+  "kb_version": "kb-v2.0",
+  "prompt_version": "prompt-v2.0",
+  "rule_pack_version": "rules-v2.0",
+  "packages": {
+    "spatial_join": "pkg-e4f5e3782ecb",
+    "demography": "pkg-cfd8a52fe1de",
+    "jobs": "pkg-ed5912a9790d",
+    "service_baseline": "pkg-4c24a50788c9",
+    "ridership_reference": "pkg-e46a5fb5511c",
+    "poi": "pkg-57ffb187de23",
+    "input_package": "pkg-3cab1da11f1b",
+    "scenarios": "pkg-fdba95e9ca3e",
+    "config": "pkg-771469dc885b",
+    "rules": "pkg-c5b8f121b33d"
+  },
+  "kb_manifest_sha256": "d1ab878c9b7983d6d412693cf8959e86ec12f57f615d96d195a54a104ac784f8",
+  "agent_prompt_sha256": "2abad393cd2b94c7ed7077c0c30bf9d8498e57d847125cb5dd539839cc4cc951",
+  "output_schema_sha256": "552cb6a15356ebadade86f110a83b7148043ac7a0b23d4909383e5ef2d8ee0a8",
+  "briefs": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-01.json",
+      "md": "ai/miami/briefs/MIA-MM-01.md",
+      "sha256_json": "33a45fc6366885beef3a3072e022419f31bbba5e2ba977f4697805ae1aaf2c51"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-02.json",
+      "md": "ai/miami/briefs/MIA-MM-02.md",
+      "sha256_json": "2a53ded1545d526f3f2b7b03e4f9f8528d1e57d984c89532b39bc18da946df97"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-03.json",
+      "md": "ai/miami/briefs/MIA-MM-03.md",
+      "sha256_json": "d9e363909d3e0187e59eb4c8de6b119c4038d6ebc428bf6fd9381a67ea870b06"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-04.json",
+      "md": "ai/miami/briefs/MIA-MM-04.md",
+      "sha256_json": "371176d1e620a843c2c2d4b71664419bb66dfae79e9dd65275185c561d3a1803"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-05.json",
+      "md": "ai/miami/briefs/MIA-MM-05.md",
+      "sha256_json": "c1f6a19a34bb01bc9ef0b78b18d1b8b0464624b66101bd804d22b6f60b3b1bff"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-06.json",
+      "md": "ai/miami/briefs/MIA-MM-06.md",
+      "sha256_json": "538c2c42c4857d8346dba45fc356e18a0a2593d7eceed1ff8c48c849c26afcf9"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-07.json",
+      "md": "ai/miami/briefs/MIA-MM-07.md",
+      "sha256_json": "72e8407c08683ccba7d0a22f94e3fbc7e8fb2ff5d55d725d3c0228360a2a0c4d"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-08.json",
+      "md": "ai/miami/briefs/MIA-MM-08.md",
+      "sha256_json": "69a7d77fdc3c5240338b5976be67d68f6fbb7ea9297ac22ec08bf42736644828"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-09.json",
+      "md": "ai/miami/briefs/MIA-MM-09.md",
+      "sha256_json": "b1f8c06e19d64e5567ac5047c70b0273c1b263a95b969146d69b99d1805b4f1f"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-10.json",
+      "md": "ai/miami/briefs/MIA-MM-10.md",
+      "sha256_json": "ae066b2caccb7318735ab0f69f6bc3164abeac339f2dddb960a9e97ed7ce5b38"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-11.json",
+      "md": "ai/miami/briefs/MIA-MM-11.md",
+      "sha256_json": "07e8f333c618c9d88a025cc710a5037c3d54ac9bf6a3d6fe2ff4c3501f855f98"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-12.json",
+      "md": "ai/miami/briefs/MIA-MM-12.md",
+      "sha256_json": "e4b3dd4e7a8da152966e60c82527377e305537a6bbd6a8148b427fd5fb175591"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-13.json",
+      "md": "ai/miami/briefs/MIA-MM-13.md",
+      "sha256_json": "aea3286e358bee4bf5092b4132494f657f3cbae6be7adfd5105350b3fb139f59"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-14.json",
+      "md": "ai/miami/briefs/MIA-MM-14.md",
+      "sha256_json": "ef43bbbdb4a9deb1b627f7cf8a59ffbbff643eae9fe97d260e9491f50523aa65"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-15.json",
+      "md": "ai/miami/briefs/MIA-MM-15.md",
+      "sha256_json": "1777193811e8578dc52c6f6e687112d4600d3f248df4928fdc3c91e2e8aa6940"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-16.json",
+      "md": "ai/miami/briefs/MIA-MM-16.md",
+      "sha256_json": "d3746af44ac60287fd0d72aa84c71e72982b0bd0ad02cc149cd565a1178d8a89"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-17.json",
+      "md": "ai/miami/briefs/MIA-MM-17.md",
+      "sha256_json": "e8b97acc5898672eab2fbfba7302576f042c95fae6e5776d8781593432322655"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-18.json",
+      "md": "ai/miami/briefs/MIA-MM-18.md",
+      "sha256_json": "5c0bf9f89e46ffccd5b09dfb615a2009e4d7e848723d5a12859b52fb5d06b9fd"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-19.json",
+      "md": "ai/miami/briefs/MIA-MM-19.md",
+      "sha256_json": "525e6fe522e188db9b65ba3859ed847efc284bfc539faa5081e1e5cff3b7d134"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-20.json",
+      "md": "ai/miami/briefs/MIA-MM-20.md",
+      "sha256_json": "481562e50fdf1a81a5161ea5a66edcd862001f0f3e4d083cece827df08df9464"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "facts": 83,
+      "json": "ai/miami/briefs/MIA-MM-21.json",
+      "md": "ai/miami/briefs/MIA-MM-21.md",
+      "sha256_json": "596f9d7147a8a2c8107c22670564efb6e4c3f1ab79c4e5dc194da82e737d5030"
+    }
+  ],
+  "runs_dir": "ai/miami/runs/<station_id>/<YYYYMMDD-HHMM>.json",
+  "checker": "scripts/check_miami_ai_output.py",
+  "representative_stations_first": [
+    "MIA-MM-09",
+    "MIA-MM-12",
+    "MIA-MM-21",
+    "MIA-MM-01",
+    "MIA-MM-02"
+  ],
+  "ai_status": "NOT_RUN: no model output exists yet; briefs and knowledge base prepared"
+}

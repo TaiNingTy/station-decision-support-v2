@@ -1,0 +1,309 @@
+{
+  "schema_version": "miami-od-summary/1.0",
+  "built_on": "2026-09-15",
+  "source": "LEHD LODES 8",
+  "year": 2023,
+  "lodes_version": 8,
+  "segment": "S000",
+  "provenance_class": "observed",
+  "data_nature": "administrative_modeled",
+  "moe_status": "not_applicable",
+  "is_ridership": false,
+  "has_time_of_day": false,
+  "is_allocation_weight": false,
+  "c000_definition": "publisher definition: Total number of jobs (WAC by workplace block, RAC by residence block); JT01 primary jobs ≈ persons, JT00 all jobs counts multiple jobs per person",
+  "areal_interpolation": {
+    "method": "land_area_share",
+    "land_geometry_method": "tiger_areawater_erased (from the demography package)",
+    "weight_proxy": "land_area",
+    "note": "block values are spread evenly over the block's LAND; an assumption"
+  },
+  "candidate_blocks": 510,
+  "links_kept": 156291,
+  "od_rows_scanned": {
+    "main_JT00": 8416045,
+    "main_JT01": 7890371,
+    "aux_JT00": 126924,
+    "aux_JT01": 116051
+  },
+  "link_categories": {
+    "both_in": "residence and workplace both in candidate blocks",
+    "home_in_work_elsewhere_in_state": "residence in a candidate block, workplace elsewhere in Florida (main file)",
+    "work_in_home_elsewhere_in_state": "workplace in a candidate block, residence elsewhere in Florida (main file)",
+    "work_in_home_out_of_state": "workplace in a candidate block, residence outside Florida (aux file)"
+  },
+  "totals_S000_by_category": {
+    "both_in": {
+      "JT00": 10231,
+      "JT01": 9706
+    },
+    "home_in_work_elsewhere_in_state": {
+      "JT00": 26855,
+      "JT01": 25219
+    },
+    "work_in_home_elsewhere_in_state": {
+      "JT00": 178464,
+      "JT01": 167924
+    },
+    "work_in_home_out_of_state": {
+      "JT00": 379,
+      "JT01": 342
+    }
+  },
+  "both_in_coverage_weighted_S000": {
+    "JT00": 9264.343757,
+    "JT01": 8814.611013
+  },
+  "coverage_rule": "totals_S000_by_category.both_in counts WHOLE blocks that merely touch a station's half-mile disc (upper bound); both_in_coverage_weighted_S000 counts each link for cov_h × cov_w, cov = share of the block's land inside the network half-mile union (the same land-share convention as the demography and jobs profiles). Blocks' cov values are in block_values.json",
+  "reconciliation": {
+    "wac_C000_in_candidate_blocks": {
+      "JT00": 189074,
+      "JT01": 177972
+    },
+    "od_S000_work_in_candidate_blocks_main_plus_aux": {
+      "JT00": 189074,
+      "JT01": 177972
+    },
+    "identity_holds": {
+      "JT00": true,
+      "JT01": true
+    },
+    "rac_C000_in_candidate_blocks": {
+      "JT00": 37509,
+      "JT01": 35314
+    },
+    "od_S000_home_in_candidate_blocks_main_only": {
+      "JT00": 37086,
+      "JT01": 34925
+    },
+    "resident_jobs_out_of_state_not_in_florida_files": {
+      "JT00": 423,
+      "JT01": 389
+    },
+    "note": "WAC = OD(main)+OD(aux) at the workplace is an exact identity of the LODES files; RAC exceeds OD(main) at the residence by the residents' out-of-state jobs, which live in other states' aux files (declared gap)"
+  },
+  "per_station_share_weighted_link_potential": {
+    "MIA-MM-01": {
+      "home_side": {
+        "JT00": 7420.49,
+        "JT01": 6925.2
+      },
+      "work_side": {
+        "JT00": 48476.45,
+        "JT01": 46499.8
+      }
+    },
+    "MIA-MM-02": {
+      "home_side": {
+        "JT00": 6067.83,
+        "JT01": 5731.15
+      },
+      "work_side": {
+        "JT00": 49380.58,
+        "JT01": 47258.24
+      }
+    },
+    "MIA-MM-03": {
+      "home_side": {
+        "JT00": 4885.6,
+        "JT01": 4609.27
+      },
+      "work_side": {
+        "JT00": 49669.24,
+        "JT01": 46852.75
+      }
+    },
+    "MIA-MM-04": {
+      "home_side": {
+        "JT00": 6204.4,
+        "JT01": 5802.34
+      },
+      "work_side": {
+        "JT00": 55748.47,
+        "JT01": 51369.18
+      }
+    },
+    "MIA-MM-05": {
+      "home_side": {
+        "JT00": 6658.24,
+        "JT01": 6249.5
+      },
+      "work_side": {
+        "JT00": 34849.82,
+        "JT01": 30774.71
+      }
+    },
+    "MIA-MM-06": {
+      "home_side": {
+        "JT00": 6143.23,
+        "JT01": 5765.36
+      },
+      "work_side": {
+        "JT00": 50933.23,
+        "JT01": 46303.93
+      }
+    },
+    "MIA-MM-07": {
+      "home_side": {
+        "JT00": 6516.84,
+        "JT01": 6117.39
+      },
+      "work_side": {
+        "JT00": 74758.75,
+        "JT01": 69805.52
+      }
+    },
+    "MIA-MM-08": {
+      "home_side": {
+        "JT00": 6689.64,
+        "JT01": 6213.42
+      },
+      "work_side": {
+        "JT00": 64450.92,
+        "JT01": 60185.06
+      }
+    },
+    "MIA-MM-09": {
+      "home_side": {
+        "JT00": 6704.21,
+        "JT01": 6261.38
+      },
+      "work_side": {
+        "JT00": 73720.35,
+        "JT01": 69301.71
+      }
+    },
+    "MIA-MM-10": {
+      "home_side": {
+        "JT00": 6744.6,
+        "JT01": 6349.11
+      },
+      "work_side": {
+        "JT00": 80567.03,
+        "JT01": 75467.23
+      }
+    },
+    "MIA-MM-11": {
+      "home_side": {
+        "JT00": 7196.98,
+        "JT01": 6787.63
+      },
+      "work_side": {
+        "JT00": 82988.44,
+        "JT01": 77910.85
+      }
+    },
+    "MIA-MM-12": {
+      "home_side": {
+        "JT00": 8219.7,
+        "JT01": 7813.63
+      },
+      "work_side": {
+        "JT00": 55031.2,
+        "JT01": 51433.86
+      }
+    },
+    "MIA-MM-13": {
+      "home_side": {
+        "JT00": 11344.34,
+        "JT01": 10734.91
+      },
+      "work_side": {
+        "JT00": 98293.48,
+        "JT01": 93430.68
+      }
+    },
+    "MIA-MM-14": {
+      "home_side": {
+        "JT00": 9141.35,
+        "JT01": 8617.47
+      },
+      "work_side": {
+        "JT00": 94279.47,
+        "JT01": 88671.78
+      }
+    },
+    "MIA-MM-15": {
+      "home_side": {
+        "JT00": 10595.82,
+        "JT01": 10004.18
+      },
+      "work_side": {
+        "JT00": 98181.32,
+        "JT01": 93348.6
+      }
+    },
+    "MIA-MM-16": {
+      "home_side": {
+        "JT00": 11714.16,
+        "JT01": 11103.11
+      },
+      "work_side": {
+        "JT00": 98126.69,
+        "JT01": 93615.76
+      }
+    },
+    "MIA-MM-17": {
+      "home_side": {
+        "JT00": 14244.71,
+        "JT01": 13545.03
+      },
+      "work_side": {
+        "JT00": 73063.39,
+        "JT01": 69480.44
+      }
+    },
+    "MIA-MM-18": {
+      "home_side": {
+        "JT00": 16100.81,
+        "JT01": 15315.11
+      },
+      "work_side": {
+        "JT00": 55590.75,
+        "JT01": 52778.59
+      }
+    },
+    "MIA-MM-19": {
+      "home_side": {
+        "JT00": 15321.38,
+        "JT01": 14576.21
+      },
+      "work_side": {
+        "JT00": 41699.83,
+        "JT01": 39191.99
+      }
+    },
+    "MIA-MM-20": {
+      "home_side": {
+        "JT00": 14497.45,
+        "JT01": 13766.9
+      },
+      "work_side": {
+        "JT00": 35061.72,
+        "JT01": 32819.26
+      }
+    },
+    "MIA-MM-21": {
+      "home_side": {
+        "JT00": 12559.11,
+        "JT01": 11932.99
+      },
+      "work_side": {
+        "JT00": 29952.63,
+        "JT01": 28071.4
+      }
+    }
+  },
+  "per_station_note": "Σ S000 × (share of the end block's land inside the station's half-mile disc); NON-exclusive across stations, not an allocation, not trips; station-to-station allocation with conservation checks is an analysis-layer task",
+  "columns": [
+    "h_geocode",
+    "w_geocode",
+    "file_part",
+    "link_category",
+    "S000_JT00",
+    "S000_JT01",
+    "h_candidate_stations",
+    "w_candidate_stations"
+  ],
+  "candidate_format": "station_id:share_of_block_land_inside_that_station_half_mile_disc, '|'-separated"
+}

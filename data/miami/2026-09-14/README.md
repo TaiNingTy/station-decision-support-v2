@@ -215,6 +215,12 @@
 
 就绪状态因此变为：`ready_for_ai_interpretation: true`；`config_inputs_complete: true`；`config_inputs_all_observed: false`；假设支撑项为站台可建设空间、车辆参数、情景结果。
 
+## 规则层与 AI 解读准备（V2 第 9 步，2026-09-18 追加）
+
+**规则层**（阶段 `rules`，`scripts/build_miami_rules.py`，规则包 [`config/rules_v2.json`](../../../config/rules_v2.json) 版本 rules-v2.0）：13 条规则按站、按情景评估已发布的输入包、情景包与配置包，每条结果带可引用的 `rule_result_id`（如 `MIA-MM-09|-|RC-12`、`NET|high|RC-05`）。规则分四类：算术恒等式（守恒、泊位公式复算）、项目约定（单模块容量、轨道网络比值 0.8 / 1.0、低档采用率不高于观测公交分担率、空车不平衡）、数据质量（人口估计可靠性、改名站对应）、范围限制（可建设空间假设、枢纽流入排除、欧氏环带）。当前 325 条结果：无 critical；全网高情景轨道比值 0.93 为 warning；21 站都带"可建设空间为假设"的 warning；三个改名站、Government Center 的枢纽流入各按规则标出。**规则包是本研究的约定与恒等式，不是法规、行业标准或供应商规格。**
+
+**AI 解读准备**（`scripts/build_miami_ai_kit.py`，套件 ai-kit-v2.0）：知识库 `kb/v2/`（四份英文文档，kb-v2.0：数据语义、情景与 PRT 配置方法、解读指引、未决事项与责任归属）、智能体提示词 `kb/v2/AGENT_PROMPT_v2.md`（prompt-v2.0）、每站摘要 `ai/miami/briefs/`（83 条带 `fact_id` 的事实 + 全部规则结果 + 未取得项与禁止事项）、输出规范 `config/ai_output_schema_v2.json`、校验脚本 `scripts/check_miami_ai_output.py`（引用的每个 fact_id / rule_result_id / KB 章节都核对存在，必引 RC-03 与 RC-07，禁止措辞与摘要外数字给软提示）。操作说明见 [`ai/README.md`](../../../ai/README.md)。**尚无任何模型输出**；就绪视图与网页的 AI 状态仍为 NOT_RUN。
+
 ## 文件与复算
 
 - [21 站实体 GeoJSON](station_master.geojson)：地图和后续站点输入的稳定主表。

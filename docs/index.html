@@ -474,11 +474,21 @@ footer.site ul{margin:8px 0 0;padding-left:18px}
         <div class="flag"><b>assumption-backed inputs</b><span class="small">${esc((f.config_assumption_backed_inputs||[]).join(', ')||'none')}</span></div>
         <div class="flag"><b>AI interpretation for this station</b><span class="status no">${esc(s.ai_analysis_status||'NOT_RUN')}</span></div>
       </div>
+      ${ruleBlock(s)}
       <h4 style="margin-top:14px">Pipeline stages at export</h4>
       <p class="small" style="margin-top:6px">${Object.entries(st).map(([k,v])=>`<span class="status ${v==='DONE'?'ok':(v==='NOT_RUN'?'no':'warn')}" style="margin:2px 4px 2px 0">${esc(k)} · ${esc(v)}</span>`).join('')}</p>
       <h4 style="margin-top:14px">What the AI layer is allowed to do here</h4>
       <p class="small" style="margin-top:6px">Site facts must cite an evidence id from the layer evidence files; normative judgements must cite a rule id and knowledge-base version; option comparisons must cite calculation ids. Forbidden: treating density as persons per hour, using coverage shares as allocation weights, averaging medians, reading job links as trips, inferring willingness to pay from income, excluding zoning codes wholesale.</p>
-      <div class="callout">The V2 AI run has not happened yet, so this page shows no AI output for Miami. The V1.1 repository holds the real agent traces and the rule-gate proof; wiring the same agents onto these packages is the next step, and it will be labelled as a batch run with its own records, never as a live call.</div>`;
+      <div class="callout">${D.ai_layer && D.ai_layer.kit ? `The V2 AI run has not happened yet, so this page shows no AI output for Miami. What exists: a versioned knowledge base (${esc(D.ai_layer.kit.kb_version)}), an agent prompt (${esc(D.ai_layer.kit.prompt_version)}), the rule pack (${esc(D.ai_layer.kit.rule_pack_version)}) and one brief per station with ${D.ai_layer.kit.facts_per_brief} citable facts each (${esc(D.ai_layer.kit.kit_version)}), plus a checker that rejects any output citing an id that does not exist. Outputs will be batch runs with their own run records and a human review status, never live calls.` : `The V2 AI run has not happened yet, so this page shows no AI output for Miami. The V1.1 repository holds the real agent traces and the rule-gate proof; wiring the same agents onto these packages is the next step, and it will be labelled as a batch run with its own records, never as a live call.`}</div>`;
+  }
+  function ruleBlock(s){
+    const R = s.rules; if(!R) return '';
+    const k = state.scen; const badge = st=>`<span class="status ${st==='pass'?'ok':(st==='critical'?'no':(st==='warning'?'warn':''))}">${esc(st)}</span>`;
+    const items = R.items.filter(r=>!r.scenario || r.scenario===k); const net = ((D.network.rules||{}).items||[]).filter(r=>!r.scenario || r.scenario===k);
+    const c = R.summary.counts;
+    return `<h4 style="margin-top:14px">Deterministic rule checks (rule pack ${esc(R.version)})</h4>
+      <p class="small muted" style="margin-top:6px">Arithmetic identities, project conventions, data-quality flags and scope limitations evaluated over the packages, each with a citable id for the AI layer. They are not statutes or agency standards. This station: ${badge(R.summary.overall)} · ${c.pass} pass · ${c.info} info · ${c.warning} warning · ${c.critical} critical across all scenarios; listed below are the non-pass results for the ${esc(k)} scenario and the station-level ones, then the network-level ones.</p>
+      <div class="tbl"><table><thead><tr><th>result id</th><th>status</th><th>what it says</th></tr></thead><tbody>${[...items, ...net].map(r=>`<tr><td class="mono small">${esc(r.id)}</td><td>${badge(r.status)}</td><td class="small">${esc(r.message)}</td></tr>`).join('') || '<tr><td colspan="3" class="small muted">every check passes</td></tr>'}</tbody></table></div>`;
   }
   function render(){
     const s = byId[state.station]; reg.length = 0; pop.hidden = true;
@@ -503,12 +513,13 @@ footer.site ul{margin:8px 0 0;padding-left:18px}
     ['Platform modules', 'acquired (design specification)', 'ok', 'two modules from the owner\'s drawings; imperial as drawn, metric kept', 'confirmed berth counts (read from drawings, flagged)'],
     ['Constructible site space', 'assumed (C06)', 'warn', 'every station assumed able to take the selected module', 'surveyed or structural information'],
     ['Vehicle operating parameters', 'assumed (C01–C05)', 'warn', 'generic PRT order-of-magnitude values', 'the supplier\'s operating data'],
-    ['AI interpretation (V2)', 'NOT_RUN', 'no', 'designed: evidence-cited site facts, rule-cited judgements, calculation-cited comparisons', 'run on these packages yet'],
+    ['Rule layer (rule pack)', L.rules||'—', 'ok', 'thirteen versioned checks per station and scenario with citable result ids: arithmetic identities, project conventions, data-quality and scope flags', 'a statute, an agency standard or a supplier specification'],
+    ['AI interpretation (V2)', 'NOT_RUN', 'no', D.ai_layer && D.ai_layer.kit ? 'prepared: knowledge base, agent prompt, one brief per station with citable facts, output schema and checker' : 'designed: evidence-cited site facts, rule-cited judgements, calculation-cited comparisons', 'run on these packages yet; no model output exists'],
     ['Engineering validation', 'NOT_PERFORMED', 'no', '—', 'performed by anyone; nothing here is a design']
   ];
   $('#ledger-table tbody').innerHTML = rows.map(r=>`<tr><td>${esc(r[0])}</td><td><span class="status ${r[2]}">${esc(r[1])}</span></td><td>${esc(r[3])}</td><td>${esc(r[4])}</td></tr>`).join('');
   // ---------- packages / footer ----------
-  const names = {spatial_join:['Zoning bands','City of Miami Miami 21 zoning (CC-BY-4.0)'], demography:['Residents','ACS 2020–2024 5-year, TIGER/Line 2024 + 2020 blocks'], jobs:['Jobs and links','LEHD LODES 8, Florida 2023'], service_baseline:['Timetable','Miami-Dade Transit GTFS'], ridership_reference:['Observed boardings','Miami-Dade DTPW Ridership Technical Reports'], poi:['Facilities','Miami-Dade County GIS, City of Miami, USDA SNAP; OSM cross-check'], input_package:['Station input packages','assembled from the layers above'], scenarios:['Scenario chain','derived from the packages + assumptions A01–A07'], config:['PRT configuration','owner drawings + assumptions C01–C07']};
+  const names = {spatial_join:['Zoning bands','City of Miami Miami 21 zoning (CC-BY-4.0)'], demography:['Residents','ACS 2020–2024 5-year, TIGER/Line 2024 + 2020 blocks'], jobs:['Jobs and links','LEHD LODES 8, Florida 2023'], service_baseline:['Timetable','Miami-Dade Transit GTFS'], ridership_reference:['Observed boardings','Miami-Dade DTPW Ridership Technical Reports'], poi:['Facilities','Miami-Dade County GIS, City of Miami, USDA SNAP; OSM cross-check'], input_package:['Station input packages','assembled from the layers above'], scenarios:['Scenario chain','derived from the packages + assumptions A01–A07'], config:['PRT configuration','owner drawings + assumptions C01–C07'], rules:['Rule results','rule pack rules-v2.0 evaluated over the packages']};
   $('#packages tbody').innerHTML = Object.entries(D.packages).map(([k,v])=>`<tr><td>${esc(names[k]?.[0]||k)}</td><td>${esc(names[k]?.[1]||'')}</td><td class="mono">${esc(v)}</td></tr>`).join('');
   $('#attribution').textContent = 'Attribution: ' + D.attribution.join(' · ') + '.';
   $('#foot').textContent = `Dataset exported ${D.generated_on} from the packages above (readiness snapshot ${D.readiness.snapshot_date||D.generated_on}). ${D.units}. Statuses and numbers on this page are copied from the pipeline, not typed; if the pipeline changes, this page is regenerated.`;

@@ -31,7 +31,9 @@ supplier operating data or company name appears here: the method is public, the 
 | `scripts/` | one script per stage, the readiness aggregator, the orchestrator, the regression harness, the web export |
 | `data/miami/2026-09-14/` | station master, study window, per-stage immutable packages `<stage>/pkg-<sha12>/` and their pointers `<stage>_current.json`, the readiness view, the data README (Chinese, detailed) |
 | `raw/miami/…/` | the acquired sources with URLs, hashes and retrieval times (TIGER/Line, ACS, LODES, GTFS, DTPW reports, county / city / USDA layers, OpenStreetMap) |
-| `config/` | station registry, platform modules (from owner drawings, imperial as drawn), generic PRT operating assumptions |
+| `config/` | station registry, platform modules (from owner drawings, imperial as drawn), generic PRT operating assumptions, the rule pack `rules_v2.json`, the AI output schema |
+| `kb/v2/` | the V2 knowledge base (four documents, kb-v2.0) and the agent prompt the AI layer is allowed to cite; `manifest.json` carries their hashes |
+| `ai/` | the AI interpretation kit: one brief per station with citable fact ids (`ai/miami/briefs/`), the kit manifest, a hand-written format example, and the run folder (empty until real runs exist); `ai/README.md` explains the Coze procedure (Chinese) |
 | `reviews/` | one folder per build step: what was checked, what failed, regression results |
 | `V2_站点输入包字段契约.md`, `V2_数据语义与客流转换规则.md` | the field contract and the data-semantics rules written before the code |
 | `NOTES_数据接入底稿_2026-09-14.md`, `B1-B6_…`, `V2_面试Demo静态优先架构.md` | earlier working notes (Chinese) |
@@ -44,7 +46,7 @@ the tree (see the data README); the nine current packages are the ones the point
 
 ```
 station_master → spatial_join → demography → jobs → service_baseline → ridership_reference → poi
-             → input_package → scenarios → config → readiness --check        (walk_model: written, paused)
+             → input_package → scenarios → config → rules → readiness --check        (walk_model: written, paused)
 ```
 
 Rebuild everything, in order, with one interpreter:
@@ -72,8 +74,9 @@ with `python3 -m http.server 8765 --directory docs`.
 | Station input packages, scenario chain, PRT configuration, readiness | built; scenario results and site space are assumption-backed and labelled |
 | Regression harness | 26 scenarios / 272 checks, all passing |
 | Web page | built and exported from the packages; English |
+| Rule layer (rule pack rules-v2.0) | built: 13 checks per station and scenario, 325 citable results, no critical result; every station carries the site-space warning |
 | Network walk model | fetched and written, build paused (performance); readiness shows NOT_RUN |
-| AI interpretation on V2 inputs, V2 knowledge base and rule pack | not started |
+| AI interpretation on V2 inputs | prepared, not run: knowledge base kb-v2.0, agent prompt, 21 briefs with 83 citable facts each, output schema and checker; no model output exists yet |
 | Melbourne and Singapore cases | not started |
 | Owner confirmations (berth counts read from drawings, three renamed stations, constructible site space) | pending |
 

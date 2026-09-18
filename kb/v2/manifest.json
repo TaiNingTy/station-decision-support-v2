@@ -1,0 +1,95 @@
+{
+  "kb_version": "kb-v2.0",
+  "issued_on": "2026-09-18",
+  "language": "en",
+  "documents": [
+    {
+      "file": "KB_V2_01_data_semantics.md",
+      "doc_id": "KB_V2_01",
+      "title": "KB_V2_01 · Data semantics of the station input package",
+      "sections": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05",
+        "DS-06",
+        "DS-07",
+        "DS-08",
+        "DS-09",
+        "DS-10",
+        "DS-11",
+        "DS-12"
+      ],
+      "sha256": "84993ca857ee66d58329d7cd655726baf09a7f29d5b36f5066b49910c4616bed"
+    },
+    {
+      "file": "KB_V2_02_prt_configuration_method.md",
+      "doc_id": "KB_V2_02",
+      "title": "KB_V2_02 · Scenario chain and PRT configuration method",
+      "sections": [
+        "CM-01",
+        "CM-02",
+        "CM-03",
+        "CM-04",
+        "CM-05",
+        "CM-06",
+        "CM-07",
+        "CM-08",
+        "CM-09"
+      ],
+      "sha256": "db120e7b281a083cae746e80d263da71bf2edf187ec569c432f9533ec897258a"
+    },
+    {
+      "file": "KB_V2_03_interpretation_guidance.md",
+      "doc_id": "KB_V2_03",
+      "title": "KB_V2_03 · Interpretation guidance for a station brief",
+      "sections": [
+        "IG-01",
+        "IG-02",
+        "IG-03",
+        "IG-04",
+        "IG-05",
+        "IG-06",
+        "IG-07",
+        "IG-08",
+        "IG-09",
+        "IG-10"
+      ],
+      "sha256": "f2029e1e87516e78584a0360d593dc5f13b11a90d21e0033a65cf7d02fc61766"
+    },
+    {
+      "file": "KB_V2_04_open_items_and_ownership.md",
+      "doc_id": "KB_V2_04",
+      "title": "KB_V2_04 · Open items, assumptions and decision ownership",
+      "sections": [
+        "OI-01",
+        "OI-02",
+        "OI-03",
+        "OI-04",
+        "OI-05",
+        "OI-06",
+        "OI-07",
+        "OI-08",
+        "OI-09",
+        "OI-10"
+      ],
+      "sha256": "e7ea0b013406320a5cb835179aa89df56bc04b86fb9752b09ad8079beb08d11d"
+    }
+  ],
+  "agent_prompt": {
+    "file": "AGENT_PROMPT_v2.md",
+    "version": "prompt-v2.0",
+    "sha256": "2abad393cd2b94c7ed7077c0c30bf9d8498e57d847125cb5dd539839cc4cc951"
+  },
+  "output_schema": {
+    "file": "config/ai_output_schema_v2.json",
+    "sha256": "552cb6a15356ebadade86f110a83b7148043ac7a0b23d4909383e5ef2d8ee0a8"
+  },
+  "rule_pack": {
+    "file": "config/rules_v2.json",
+    "version": "rules-v2.0",
+    "sha256": "4b6e9eeb439c14647bed6f8e1559bc94a0c647f64cbdd2d29daf1e24eb22f37d"
+  },
+  "usage": "upload the four KB documents as the knowledge base of a NEW Coze bot/workflow (never the V1.1 one); paste the agent prompt as the system prompt; the model cites 'KB_V2_0n §XX-nn (kb-v2.0)'; retrieval must be auto-called and citation restricted to these documents"
+}

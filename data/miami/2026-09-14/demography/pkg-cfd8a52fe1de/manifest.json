@@ -1,0 +1,884 @@
+{
+  "stage": "demography",
+  "schema_version": "miami-demography-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "name": "raw_source_manifest",
+      "path": "raw/miami/2026-09-15/source_manifest.json",
+      "sha256": "c9479cae1b5b885350d26d113b9677ac46f780008b7a7f77d1d3b0404f2d3237"
+    },
+    {
+      "name": "tiger/tl_2024_12_bg.zip",
+      "path": "raw/miami/2026-09-15/tiger/tl_2024_12_bg.zip",
+      "sha256": "03a78cf865279746441b11b2929c816902cd17c2df645979b2b490b13518dcd8"
+    },
+    {
+      "name": "tiger/tl_2020_12086_tabblock20.zip",
+      "path": "raw/miami/2026-09-15/tiger/tl_2020_12086_tabblock20.zip",
+      "sha256": "d62c1005392655cd9b1f9759565eece8bc8825e4de58bd6d39f22da4962f9d90"
+    },
+    {
+      "name": "tiger/tl_2024_12086_areawater.zip",
+      "path": "raw/miami/2026-09-15/tiger/tl_2024_12086_areawater.zip",
+      "sha256": "1384cb633dd305e7212c0e6485361473d23f3963138982bea15758ed31edee0a"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B01003.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B01003.json",
+      "sha256": "f9e0400098c15a8f893889efebc3560fc7d2e0848ee118b0ffe104e273511731"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B01001.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B01001.json",
+      "sha256": "8ffa667b642a314bde0c6db783cdb23f2fa0187f7ead5e89d157ec3cc685c921"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B25003.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B25003.json",
+      "sha256": "ff6cb76afdf0fde0a41aa87a1c4bad4de58c46a144c58b672968e64502396139"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B25001.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B25001.json",
+      "sha256": "9ac515826d0dc98fb5af1521017874b3f00474104386d58041d1b454c890d4f9"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B08301.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B08301.json",
+      "sha256": "3a2c634e402ce5c14cb42f57bece3517d4974630755d3462a368aad3dcc92b1f"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B08302.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B08302.json",
+      "sha256": "346e570ac8444827c834022a66f1e98d6601d51f26a122b907f5d64da66099d2"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B25044.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B25044.json",
+      "sha256": "95d4319203560ef80bc6f819b487c42fa887e1d15acd732f5e7e5b00d726bbd4"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B19001.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B19001.json",
+      "sha256": "136dbb366beffbf75b5292bdffb68cf4516a453b206993e58e74def248c7ecd5"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B19013.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B19013.json",
+      "sha256": "306ffbaa97b41d911f7489c396e1d0174b5ec10a6b126ae6a39192804e83c146"
+    },
+    {
+      "name": "acs/acs5_2024_bg_12086_B17017.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_bg_12086_B17017.json",
+      "sha256": "ae4475e8e6151b60a23983941db997904b407d7b4d986da3fc904c86f6481eb6"
+    },
+    {
+      "name": "acs/acs5_2024_tract_12086_B18101.json",
+      "path": "raw/miami/2026-09-15/acs/acs5_2024_tract_12086_B18101.json",
+      "sha256": "5a72527cc53cd4713bb2c9fab65ddb6e805dac44638747d3d549596f2a79277d"
+    },
+    {
+      "name": "acs/groups/B01003.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B01003.json",
+      "sha256": "f692fa121bf007948893c312945d86abc83c6bae6420540ccf4c66891467b904"
+    },
+    {
+      "name": "acs/groups/B01001.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B01001.json",
+      "sha256": "0f0422e346fdd3369363f040127fe61a3e35a47215755bcd300615bbfc7abcc6"
+    },
+    {
+      "name": "acs/groups/B25003.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B25003.json",
+      "sha256": "75bc8b9150800dd2f40336814062a5795b6cf4ab14f00b38e9a053887422133b"
+    },
+    {
+      "name": "acs/groups/B25001.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B25001.json",
+      "sha256": "bfeebb2c75b316d28717030ba1faf74a6f3d6bf84628488eb12ab8ad3687f1c2"
+    },
+    {
+      "name": "acs/groups/B08301.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B08301.json",
+      "sha256": "819fd7fda8a71e38ed860416b6defe5590d7f3ff8487a46fc880b95fe73b0735"
+    },
+    {
+      "name": "acs/groups/B08302.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B08302.json",
+      "sha256": "07f98c33db0f05bdcd93e30f53357e870b87ec994a1555b58d5d736909558807"
+    },
+    {
+      "name": "acs/groups/B25044.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B25044.json",
+      "sha256": "e0ad5eb3791890dae703af57bb23567023c42c1d69516f65d6a01b4fe201a164"
+    },
+    {
+      "name": "acs/groups/B19001.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B19001.json",
+      "sha256": "6278e8d350cb70c6556ed59cb121540c5e912eeea4ce1c546d55724c22466e99"
+    },
+    {
+      "name": "acs/groups/B19013.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B19013.json",
+      "sha256": "304b5d72b144edcddf9d76bdb3d3928d2240d2a1c3071770666a313df32bfae9"
+    },
+    {
+      "name": "acs/groups/B17017.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B17017.json",
+      "sha256": "b24152dd2edc14c192fe49fedebf4f143cdee6b92a94d5a501eb47ab8fbb598a"
+    },
+    {
+      "name": "acs/groups/B18101.json",
+      "path": "raw/miami/2026-09-15/acs/groups/B18101.json",
+      "sha256": "e79961e48723c1552ba12a40401c102c9cc17ede041522a0ab97776848a1490c"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "spatial_join",
+      "package_id": "pkg-e4f5e3782ecb",
+      "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
+    }
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_demography.py",
+      "sha256": "c75bff487e7d346c1736a441156ddc5ba0d1ce0e9f6a017e1a455db7913b3145"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "ea3f2360c1383fbb0de8b682587889bbdf7049a114acba1cc97ec17df272a24b"
+    },
+    {
+      "path": "vendor/shapefile.py",
+      "sha256": "211b44002f628ea9ad697b365a413fbac73e801f2b2337b391ca91c29eeffec5"
+    }
+  ],
+  "config_sha256": "31db730f885cb2e0ff48ea1285294fb83f5633e037d7a0fdbba6879e6d601509",
+  "config": {
+    "bands": {
+      "radii_ft": [
+        660,
+        1320,
+        2640
+      ],
+      "quad_segs": 64,
+      "foot_m": 0.3048,
+      "source": "spatial_join package config"
+    },
+    "scope_rule": "all blocks of every 2020 tract that has a block intersecting the network half-mile union (tract-complete); block groups inside those tracts",
+    "default_geography": "block_group",
+    "indicator_geography_exceptions": {
+      "D13": "tract",
+      "D13_den": "tract"
+    },
+    "geography_exception_reason": "B18101 (disability) is not published at block-group level; tract estimates are apportioned by tract land share",
+    "land_geometry_method": "tiger_areawater_erased",
+    "weight_proxy": "land_area",
+    "low_income_threshold_usd": 35000,
+    "reliability_cv_thresholds": {
+      "high_max": 0.12,
+      "medium_max": 0.4
+    },
+    "moe_confidence": "90 percent (z=1.645)",
+    "indicators": {
+      "D01": {
+        "name": "population_total",
+        "variables": [
+          "B01003_001"
+        ],
+        "unit": "persons",
+        "table": "B01003",
+        "universe": "Total population"
+      },
+      "D02": {
+        "name": "households",
+        "variables": [
+          "B25003_001"
+        ],
+        "unit": "households",
+        "table": "B25003",
+        "universe": "Occupied housing units"
+      },
+      "D03": {
+        "name": "housing_units",
+        "variables": [
+          "B25001_001"
+        ],
+        "unit": "housing_units",
+        "table": "B25001",
+        "universe": "Housing units"
+      },
+      "D04": {
+        "name": "population_under_18",
+        "variables": [
+          "B01001_003",
+          "B01001_004",
+          "B01001_005",
+          "B01001_006",
+          "B01001_027",
+          "B01001_028",
+          "B01001_029",
+          "B01001_030"
+        ],
+        "unit": "persons",
+        "table": "B01001",
+        "universe": "Total population"
+      },
+      "D05": {
+        "name": "population_65_plus",
+        "variables": [
+          "B01001_020",
+          "B01001_021",
+          "B01001_022",
+          "B01001_023",
+          "B01001_024",
+          "B01001_025",
+          "B01001_044",
+          "B01001_045",
+          "B01001_046",
+          "B01001_047",
+          "B01001_048",
+          "B01001_049"
+        ],
+        "unit": "persons",
+        "table": "B01001",
+        "universe": "Total population"
+      },
+      "D06": {
+        "name": "workers_16_plus",
+        "variables": [
+          "B08301_001"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D08_total": {
+        "name": "workers_not_working_from_home",
+        "variables": [
+          "B08302_001"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D09": {
+        "name": "zero_vehicle_households",
+        "variables": [
+          "B25044_003",
+          "B25044_010"
+        ],
+        "unit": "households",
+        "table": "B25044",
+        "universe": "Occupied housing units"
+      },
+      "D09_den": {
+        "name": "occupied_housing_units_B25044",
+        "variables": [
+          "B25044_001"
+        ],
+        "unit": "households",
+        "table": "B25044",
+        "universe": "Occupied housing units"
+      },
+      "D10_low": {
+        "name": "households_income_below_35000",
+        "variables": [
+          "B19001_002",
+          "B19001_003",
+          "B19001_004",
+          "B19001_005",
+          "B19001_006",
+          "B19001_007"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_den": {
+        "name": "households_B19001",
+        "variables": [
+          "B19001_001"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D12": {
+        "name": "households_below_poverty",
+        "variables": [
+          "B17017_002"
+        ],
+        "unit": "households",
+        "table": "B17017",
+        "universe": "Households"
+      },
+      "D12_den": {
+        "name": "households_B17017",
+        "variables": [
+          "B17017_001"
+        ],
+        "unit": "households",
+        "table": "B17017",
+        "universe": "Households"
+      },
+      "D13": {
+        "name": "population_with_disability",
+        "variables": [
+          "B18101_004",
+          "B18101_007",
+          "B18101_010",
+          "B18101_013",
+          "B18101_016",
+          "B18101_019",
+          "B18101_023",
+          "B18101_026",
+          "B18101_029",
+          "B18101_032",
+          "B18101_035",
+          "B18101_038"
+        ],
+        "unit": "persons",
+        "table": "B18101",
+        "universe": "Civilian noninstitutionalized population"
+      },
+      "D13_den": {
+        "name": "civilian_noninstitutionalized_population",
+        "variables": [
+          "B18101_001"
+        ],
+        "unit": "persons",
+        "table": "B18101",
+        "universe": "Civilian noninstitutionalized population"
+      },
+      "D07_car_truck_van": {
+        "name": "commute_car_truck_van",
+        "variables": [
+          "B08301_002"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_drove_alone": {
+        "name": "commute_drove_alone",
+        "variables": [
+          "B08301_003"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_carpooled": {
+        "name": "commute_carpooled",
+        "variables": [
+          "B08301_004"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_public_transportation": {
+        "name": "commute_public_transportation",
+        "variables": [
+          "B08301_010"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_taxi_or_ride_hailing": {
+        "name": "commute_taxi_or_ride_hailing",
+        "variables": [
+          "B08301_016"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_motorcycle": {
+        "name": "commute_motorcycle",
+        "variables": [
+          "B08301_017"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_bicycle": {
+        "name": "commute_bicycle",
+        "variables": [
+          "B08301_018"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_walked": {
+        "name": "commute_walked",
+        "variables": [
+          "B08301_019"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_other_means": {
+        "name": "commute_other_means",
+        "variables": [
+          "B08301_020"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D07_worked_from_home": {
+        "name": "commute_worked_from_home",
+        "variables": [
+          "B08301_021"
+        ],
+        "unit": "workers",
+        "table": "B08301",
+        "universe": "Workers 16 years and over"
+      },
+      "D08_002": {
+        "name": "departure_002",
+        "variables": [
+          "B08302_002"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_003": {
+        "name": "departure_003",
+        "variables": [
+          "B08302_003"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_004": {
+        "name": "departure_004",
+        "variables": [
+          "B08302_004"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_005": {
+        "name": "departure_005",
+        "variables": [
+          "B08302_005"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_006": {
+        "name": "departure_006",
+        "variables": [
+          "B08302_006"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_007": {
+        "name": "departure_007",
+        "variables": [
+          "B08302_007"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_008": {
+        "name": "departure_008",
+        "variables": [
+          "B08302_008"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_009": {
+        "name": "departure_009",
+        "variables": [
+          "B08302_009"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_010": {
+        "name": "departure_010",
+        "variables": [
+          "B08302_010"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_011": {
+        "name": "departure_011",
+        "variables": [
+          "B08302_011"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_012": {
+        "name": "departure_012",
+        "variables": [
+          "B08302_012"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_013": {
+        "name": "departure_013",
+        "variables": [
+          "B08302_013"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_014": {
+        "name": "departure_014",
+        "variables": [
+          "B08302_014"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D08_015": {
+        "name": "departure_015",
+        "variables": [
+          "B08302_015"
+        ],
+        "unit": "workers",
+        "table": "B08302",
+        "universe": "Workers 16 years and over who did not work from home"
+      },
+      "D10_002": {
+        "name": "households_income_0_10000",
+        "variables": [
+          "B19001_002"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_003": {
+        "name": "households_income_10000_15000",
+        "variables": [
+          "B19001_003"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_004": {
+        "name": "households_income_15000_20000",
+        "variables": [
+          "B19001_004"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_005": {
+        "name": "households_income_20000_25000",
+        "variables": [
+          "B19001_005"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_006": {
+        "name": "households_income_25000_30000",
+        "variables": [
+          "B19001_006"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_007": {
+        "name": "households_income_30000_35000",
+        "variables": [
+          "B19001_007"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_008": {
+        "name": "households_income_35000_40000",
+        "variables": [
+          "B19001_008"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_009": {
+        "name": "households_income_40000_45000",
+        "variables": [
+          "B19001_009"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_010": {
+        "name": "households_income_45000_50000",
+        "variables": [
+          "B19001_010"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_011": {
+        "name": "households_income_50000_60000",
+        "variables": [
+          "B19001_011"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_012": {
+        "name": "households_income_60000_75000",
+        "variables": [
+          "B19001_012"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_013": {
+        "name": "households_income_75000_100000",
+        "variables": [
+          "B19001_013"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_014": {
+        "name": "households_income_100000_125000",
+        "variables": [
+          "B19001_014"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_015": {
+        "name": "households_income_125000_150000",
+        "variables": [
+          "B19001_015"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_016": {
+        "name": "households_income_150000_200000",
+        "variables": [
+          "B19001_016"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      },
+      "D10_017": {
+        "name": "households_income_200000_plus",
+        "variables": [
+          "B19001_017"
+        ],
+        "unit": "households",
+        "table": "B19001",
+        "universe": "Households"
+      }
+    },
+    "median": {
+      "D11": {
+        "variable": "B19013_001",
+        "aggregation": "not_aggregatable; per block group only"
+      },
+      "R08": "bracket interpolation over B19001"
+    },
+    "income_brackets": [
+      {
+        "code": "002",
+        "lower_usd": 0,
+        "upper_usd": 10000
+      },
+      {
+        "code": "003",
+        "lower_usd": 10000,
+        "upper_usd": 15000
+      },
+      {
+        "code": "004",
+        "lower_usd": 15000,
+        "upper_usd": 20000
+      },
+      {
+        "code": "005",
+        "lower_usd": 20000,
+        "upper_usd": 25000
+      },
+      {
+        "code": "006",
+        "lower_usd": 25000,
+        "upper_usd": 30000
+      },
+      {
+        "code": "007",
+        "lower_usd": 30000,
+        "upper_usd": 35000
+      },
+      {
+        "code": "008",
+        "lower_usd": 35000,
+        "upper_usd": 40000
+      },
+      {
+        "code": "009",
+        "lower_usd": 40000,
+        "upper_usd": 45000
+      },
+      {
+        "code": "010",
+        "lower_usd": 45000,
+        "upper_usd": 50000
+      },
+      {
+        "code": "011",
+        "lower_usd": 50000,
+        "upper_usd": 60000
+      },
+      {
+        "code": "012",
+        "lower_usd": 60000,
+        "upper_usd": 75000
+      },
+      {
+        "code": "013",
+        "lower_usd": 75000,
+        "upper_usd": 100000
+      },
+      {
+        "code": "014",
+        "lower_usd": 100000,
+        "upper_usd": 125000
+      },
+      {
+        "code": "015",
+        "lower_usd": 125000,
+        "upper_usd": 150000
+      },
+      {
+        "code": "016",
+        "lower_usd": 150000,
+        "upper_usd": 200000
+      },
+      {
+        "code": "017",
+        "lower_usd": 200000,
+        "upper_usd": null
+      }
+    ],
+    "acs": {
+      "dataset": "acs/acs5",
+      "vintage": 2024,
+      "period": "2020-2024",
+      "geography": "block group",
+      "state": "12",
+      "county": "086"
+    }
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "PROJ-reported accuracy of the datum operation selected in THIS environment; not the precision of the source geometries or of the model"
+  },
+  "method_summary": "ACS 2020-2024 block-group estimates apportioned to imperial station bands by land-area share (water erased); RSS MOE excluding interpolation; ratios via Census approximation; medians from brackets; network dedup on the union",
+  "contract": "V2_站点输入包字段契约.md §2, §3, §6, §7",
+  "publish_policy": "content-addressed immutable package dir demography/pkg-<id>; readers resolve demography_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_demography_profile.json",
+      "sha256": "c5cb02f8182bd345f14daa54aaa4479d7b8aedf8c3f10233efe849bb933adf20"
+    },
+    {
+      "file": "demography_evidence.json",
+      "sha256": "a8a493b91254dca5f2a88284dd7dfd4c1141ea80ed8860a280e6e6b44eae821f"
+    },
+    {
+      "file": "block_group_values.json",
+      "sha256": "fd2bbba335e1aa919234324af2f7a039d991cfac51d4551da4efe624dc64802a"
+    },
+    {
+      "file": "block_land_geometry.json",
+      "sha256": "9bb4460cebe6b08b3f461ec69fa2437caa02929f176052263ed85257e30b0e66"
+    },
+    {
+      "file": "analysis_targets_26917.json",
+      "sha256": "3df3d48e89467616d4b39b1ef11fa3863acfda26f97b0df5614b40619590739b"
+    },
+    {
+      "file": "land_geometry_report.json",
+      "sha256": "55c57da9b3fad573984bbde8259727330a4b744f733a44dbd35fc5cd9bbfc2ab"
+    },
+    {
+      "file": "demography_validation.json",
+      "sha256": "e2ef1d4fa13ea60d2f9c42092835ec9c4b9837e1fca7f66d15946e437a519223"
+    }
+  ],
+  "package_id": "pkg-cfd8a52fe1de",
+  "package_dir": "demography/pkg-cfd8a52fe1de"
+}

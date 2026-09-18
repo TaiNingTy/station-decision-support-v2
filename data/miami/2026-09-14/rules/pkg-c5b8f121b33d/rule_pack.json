@@ -1,0 +1,143 @@
+{
+  "rule_pack_id": "miami-rules-v2",
+  "version": "rules-v2.0",
+  "issued_on": "2026-09-18",
+  "scope_statement": "Deterministic checks over the published packages for the Miami demonstration. They are arithmetic identities, project conventions, data-quality flags and scope limitations written for this study. None of them is a statute, an agency standard or a supplier specification, and none is a substitute for engineering validation.",
+  "severity_semantics": {
+    "pass": "the check holds",
+    "info": "a limitation the reader must carry into any interpretation; the result stays usable",
+    "warning": "the result may be used only with the stated caveat and the named owner confirmation",
+    "critical": "the result is invalid or infeasible as computed; the AI layer must not present it as a usable configuration"
+  },
+  "citation_format": "rule_result_id = <station_id or NET>|<scenario or ->|<rule_id>; cite it together with the rule pack version",
+  "rules": [
+    {
+      "rule_id": "RC-01",
+      "name": "person_trip_conservation",
+      "scope": "network_x_scenario",
+      "basis": "arithmetic_identity",
+      "severity_if_triggered": "critical",
+      "statement": "The station boardings of a scenario sum to the network AM-peak PRT person trips, and so do the alightings; nothing is created or lost in the allocation.",
+      "source": "scenarios package conservation_check"
+    },
+    {
+      "rule_id": "RC-02",
+      "name": "vehicle_trip_conservation",
+      "scope": "network_x_scenario",
+      "basis": "arithmetic_identity",
+      "severity_if_triggered": "critical",
+      "statement": "Vehicle departures equal vehicle arrivals network-wide within the rounding tolerance the configuration package states.",
+      "source": "config package conservation_check"
+    },
+    {
+      "rule_id": "RC-03",
+      "name": "berth_arithmetic",
+      "scope": "station_x_scenario",
+      "basis": "arithmetic_identity",
+      "severity_if_triggered": "critical",
+      "statement": "berth cycles = max(vehicle departures, vehicle arrivals); design cycles = berth cycles x C04; berths required = ceil(design cycles / usable cycles per berth-hour). The published numbers must reproduce.",
+      "parameters": {
+        "tolerance_cycles": 0.02
+      }
+    },
+    {
+      "rule_id": "RC-04",
+      "name": "single_module_fit",
+      "scope": "station_x_scenario",
+      "basis": "project_convention",
+      "severity_if_triggered": "warning",
+      "statement": "A station whose berth requirement exceeds the largest drawn module (7 berths) needs more than one module or a different layout; the single-module footprint must not be presented as sufficient.",
+      "parameters": {
+        "largest_module_berths": 7
+      }
+    },
+    {
+      "rule_id": "RC-05",
+      "name": "guideway_network_ratio",
+      "scope": "network_x_scenario",
+      "basis": "project_convention",
+      "severity_if_triggered": "warning",
+      "statement": "Network vehicle trips per hour divided by one lane's throughput at the minimum headway (3600 / C05). At or above 1.0 the scenario is infeasible on a single lane (critical); at or above 0.8 it is close enough that a line model is required before any capacity claim (warning). This is a network-level ratio only; it does not say which link carries which trips.",
+      "parameters": {
+        "warning_at": 0.8,
+        "critical_at": 1.0
+      }
+    },
+    {
+      "rule_id": "RC-06",
+      "name": "low_adoption_not_above_observed_transit_share",
+      "scope": "network",
+      "basis": "project_convention",
+      "severity_if_triggered": "warning",
+      "statement": "The low scenario's PRT adoption share (A03) must not exceed the observed public-transportation commute share of the network's residents (ACS B08301, deduplicated network value), so the low case cannot outrun today's behaviour.",
+      "source": "rules doc 规则 5"
+    },
+    {
+      "rule_id": "RC-07",
+      "name": "site_space_unknown",
+      "scope": "station",
+      "basis": "scope_limitation",
+      "severity_if_triggered": "warning",
+      "statement": "While constructible platform space is assumed (C06) rather than acquired, every module recommendation carries the caveat 'site fit not verified' and the owner must confirm the space before the configuration is used."
+    },
+    {
+      "rule_id": "RC-08",
+      "name": "population_estimate_reliability",
+      "scope": "station",
+      "basis": "data_quality",
+      "severity_if_triggered": "warning",
+      "statement": "The half-mile cumulative population estimate carries its coefficient of variation: reliability 'low' (CV > 0.40) triggers a warning, 'medium' (0.12-0.40) an info note, 'high' passes. Small-area ACS estimates are period estimates with sampling error; the apportionment error is not included.",
+      "parameters": {
+        "cv_medium_max": 0.4,
+        "cv_high_max": 0.12
+      }
+    },
+    {
+      "rule_id": "RC-09",
+      "name": "observed_reference_mapping",
+      "scope": "station",
+      "basis": "data_quality",
+      "severity_if_triggered": "warning",
+      "statement": "A station whose published-boardings row was matched by location because the report uses a different (older) name is flagged until the owner confirms the mapping; same-name matches pass with the confirmation still pending."
+    },
+    {
+      "rule_id": "RC-10",
+      "name": "empty_vehicle_imbalance",
+      "scope": "station_x_scenario",
+      "basis": "project_convention",
+      "severity_if_triggered": "info",
+      "statement": "When |vehicle departures - vehicle arrivals| exceeds half of the larger flow, the station depends on empty-vehicle supply or removal by the guideway (no staging berths are drawn, C07); the berth count alone does not describe its operation.",
+      "parameters": {
+        "imbalance_share_at": 0.5
+      }
+    },
+    {
+      "rule_id": "RC-11",
+      "name": "scenario_share_vs_observed_share",
+      "scope": "station",
+      "basis": "scope_limitation",
+      "severity_if_triggered": "info",
+      "statement": "When the station's share of scenario boardings differs from its share of observed system boardings by more than 5 percentage points, the difference is reported as a shape difference of an uncalibrated model against a reference, never as an error to be corrected by scaling.",
+      "parameters": {
+        "difference_at": 0.05
+      }
+    },
+    {
+      "rule_id": "RC-12",
+      "name": "regional_inflow_excluded",
+      "scope": "station",
+      "basis": "scope_limitation",
+      "severity_if_triggered": "info",
+      "statement": "At a station with external connections on the official map (Metrorail, Tri-Rail, bus terminals), the scenario boardings exclude transfer inflow by design and understate the station's activity."
+    },
+    {
+      "rule_id": "RC-13",
+      "name": "catchment_is_euclidean",
+      "scope": "station",
+      "basis": "scope_limitation",
+      "severity_if_triggered": "info",
+      "statement": "The bands are straight-line distances from a GTFS reference point that is not an entrance; no walk catchment has been validated (walk model not built). Any statement about who can reach the station on foot is a model assumption."
+    }
+  ],
+  "sha256_of_config_file": "4b6e9eeb439c14647bed6f8e1559bc94a0c647f64cbdd2d29daf1e24eb22f37d"
+}

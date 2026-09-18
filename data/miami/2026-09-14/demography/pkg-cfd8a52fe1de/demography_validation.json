@@ -1,0 +1,43 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "bands_match_spatial_join_package": {
+    "max_band_area_deviation_m2": 0.0,
+    "max_cum_area_deviation_m2": 0.0,
+    "net_area_deviation_m2": 0.0,
+    "pass": true
+  },
+  "shares_in_unit_interval": true,
+  "band_shares_add_up_to_cum": {
+    "max_deviation": 0.0,
+    "pass": true
+  },
+  "every_target_has_land": true,
+  "every_station_cum_has_population": true,
+  "network_dedup_not_above_sum": true,
+  "network_dedup_not_below_max_station": true,
+  "acs_rows_for_every_scope_block_group": true,
+  "acs_rows_for_every_scope_tract": true,
+  "tract_level_indicators": {
+    "ids": [
+      "D13",
+      "D13_den"
+    ],
+    "reason": "B18101 not published at block-group level"
+  },
+  "land_geometry_all_valid_after_repair": true,
+  "land_polygons_repaired": 0,
+  "median_estimates_in_range": true,
+  "no_nan": true,
+  "scope": {
+    "tracts": 39,
+    "block_groups": 83,
+    "blocks": 844,
+    "blocks_with_water_erased": 44
+  },
+  "stations": 21,
+  "profiles_bands": 63,
+  "evidence_rows": 2151,
+  "scope_statement": "PASS means geometry, share and input-integrity checks listed here passed. It is not a statement about the accuracy of ACS estimates for small areas, not a walk-catchment result, not ridership and not an acceptance of the whole V2 input package."
+}

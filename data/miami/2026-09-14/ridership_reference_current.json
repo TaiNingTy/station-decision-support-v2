@@ -1,11 +1,11 @@
 {
   "stage": "ridership_reference",
   "schema_version": "miami-package-pointer/1.0",
-  "package_id": "pkg-5d8a337e0686",
-  "package_dir": "ridership_reference/pkg-5d8a337e0686",
-  "manifest": "ridership_reference/pkg-5d8a337e0686/manifest.json",
-  "manifest_sha256": "ca1bd6ad79212258c93e2cdc51ddf439c1e6cdccf1635988f14ae613f6436e9e",
+  "package_id": "pkg-e46a5fb5511c",
+  "package_dir": "ridership_reference/pkg-e46a5fb5511c",
+  "manifest": "ridership_reference/pkg-e46a5fb5511c/manifest.json",
+  "manifest_sha256": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c",
   "built_on": "2026-09-15",
-  "previous_package_dir": null,
+  "previous_package_dir": "ridership_reference/pkg-5d8a337e0686",
   "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
 }

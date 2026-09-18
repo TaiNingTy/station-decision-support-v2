@@ -1,0 +1,34 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "rule_pack_version": "rules-v2.0",
+  "rules_in_pack": 13,
+  "results": 325,
+  "stations": 21,
+  "ids_unique": true,
+  "every_station_has_every_station_rule": true,
+  "network_rules_per_scenario": true,
+  "every_rule_id_in_pack": true,
+  "statuses_valid": true,
+  "critical_results": [],
+  "summary": {
+    "network": {
+      "counts": {
+        "pass": 9,
+        "info": 0,
+        "warning": 1,
+        "critical": 0
+      },
+      "overall": "warning",
+      "usable_as_computed": true
+    },
+    "stations_overall": {
+      "pass": 0,
+      "info": 0,
+      "warning": 21,
+      "critical": 0
+    }
+  },
+  "scope_statement": "PASS means the rule pack was evaluated completely and consistently over the packages; it says nothing about the rules being legally or technically sufficient. A critical result is reported, not hidden, and does not fail this stage."
+}
