@@ -1,0 +1,7657 @@
+{
+  "schema_version": "miami-poi-features/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "6ccf190666501a7c03ed1ce9e229445f56cced78ac2dccaef34eaa6d57fa5b8a",
+  "demography_package": "pkg-64aa5fc6dcb8",
+  "provenance_class": "observed",
+  "data_nature": "administrative_record",
+  "is_service_level_score": false,
+  "distance_type": "straight_line",
+  "distance_origin": "GTFS station reference point (not an entrance)",
+  "search_extent": "study window only (raw/miami/2026-09-14 study_bbox_wgs84)",
+  "categories_note": "school / clinic / grocery / park are product-analysis categories; not a verified local standard, not a completeness claim",
+  "attribution": [
+    "Miami-Dade County GIS (MD_Emaps)",
+    "City of Miami GIS (Park_Boundary_Base_Layer)",
+    "USDA FNS SNAP retailer location data",
+    "© OpenStreetMap contributors (ODbL), cross-check only"
+  ],
+  "sources": {
+    "school_public": {
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Public Schools @ SchoolSite)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/25"
+    },
+    "school_charter": {
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Charter Schools)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/23"
+    },
+    "school_private": {
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Private Schools)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/24"
+    },
+    "park_city": {
+      "category": "park",
+      "publisher": "City of Miami (Park_Boundary_Base_Layer)",
+      "terms": "City of Miami open GIS service (same publisher as the M21 zoning layer, CC-BY-4.0 there)",
+      "service_url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Park_Boundary_Base_Layer/FeatureServer/0"
+    },
+    "park_county": {
+      "category": "park",
+      "publisher": "Miami-Dade County (MD_Emaps: County Park Boundaries)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/2"
+    },
+    "clinic_fqhc": {
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Federally Qualified Health Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/40"
+    },
+    "clinic_free_standing": {
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Free Standing Clinics)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/41"
+    },
+    "clinic_jhs_primary_care": {
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Jackson Health System Primary Care Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/43"
+    },
+    "clinic_mental_health": {
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Community Mental Health Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/44"
+    },
+    "clinic_school_based": {
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: School-Based Health Clinics)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/45"
+    },
+    "grocery_snap_all_types": {
+      "category": "grocery",
+      "publisher": "USDA Food and Nutrition Service, SNAP retailer location data (ArcGIS)",
+      "terms": "U.S. federal public data; all store types kept raw, grocery filter applied downstream",
+      "service_url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/snap_retailer_location_data/FeatureServer/0"
+    },
+    "osm_grocery_crosscheck": {
+      "category": "grocery",
+      "publisher": "OpenStreetMap contributors via Overpass mirror overpass.kumi.systems",
+      "terms": "ODbL 1.0 — attribution '© OpenStreetMap contributors' required; cross-check only, not merged",
+      "service_url": "https://overpass.kumi.systems/api/interpreter",
+      "osm_data_timestamp": "2026-06-01T08:52:28Z"
+    }
+  },
+  "features": [
+    {
+      "poi_id": "school_public:19",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Miami-Dade Online Academy",
+      "geometry_type": "Point",
+      "lon": -80.190444,
+      "lat": 25.789773,
+      "attributes": {
+        "grades": "K-12",
+        "enrollment": 317
+      }
+    },
+    {
+      "poi_id": "school_public:21",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Phillis Wheatley Elementary",
+      "geometry_type": "Point",
+      "lon": -80.198172,
+      "lat": 25.793538,
+      "attributes": {
+        "grades": "PK-5",
+        "enrollment": 147
+      }
+    },
+    {
+      "poi_id": "school_public:52",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Chapman Partnership Early Childhood Center North",
+      "geometry_type": "Point",
+      "lon": -80.195204,
+      "lat": 25.789934,
+      "attributes": {
+        "grades": "PK",
+        "enrollment": 44
+      }
+    },
+    {
+      "poi_id": "school_public:171",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "School For Advanced Studies Wolfson",
+      "geometry_type": "Point",
+      "lon": -80.193209,
+      "lat": 25.776384,
+      "attributes": {
+        "grades": "11-12",
+        "enrollment": 134
+      }
+    },
+    {
+      "poi_id": "school_public:233",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Paul Laurence Dunbar K-8 Center",
+      "geometry_type": "Point",
+      "lon": -80.203414,
+      "lat": 25.796429,
+      "attributes": {
+        "grades": "PK-8",
+        "enrollment": 359
+      }
+    },
+    {
+      "poi_id": "school_public:276",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Law Enforcement Officers Memorial Senior High",
+      "geometry_type": "Point",
+      "lon": -80.198207,
+      "lat": 25.777275,
+      "attributes": {
+        "grades": "9-12",
+        "enrollment": 272
+      }
+    },
+    {
+      "poi_id": "school_public:280",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Frederick Douglass Elementary",
+      "geometry_type": "Point",
+      "lon": -80.20082,
+      "lat": 25.785326,
+      "attributes": {
+        "grades": "PK-5",
+        "enrollment": 171
+      }
+    },
+    {
+      "poi_id": "school_public:296",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Southside Preparatory Academy",
+      "geometry_type": "Point",
+      "lon": -80.194448,
+      "lat": 25.761888,
+      "attributes": {
+        "grades": "PK-8",
+        "enrollment": 883
+      }
+    },
+    {
+      "poi_id": "school_public:341",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "New World School of the Arts",
+      "geometry_type": "Point",
+      "lon": -80.193209,
+      "lat": 25.776384,
+      "attributes": {
+        "grades": "9-12",
+        "enrollment": 446
+      }
+    },
+    {
+      "poi_id": "school_public:345",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Ada Merritt K-8 Center",
+      "geometry_type": "Point",
+      "lon": -80.204832,
+      "lat": 25.770558,
+      "attributes": {
+        "grades": "K-8",
+        "enrollment": 770
+      }
+    },
+    {
+      "poi_id": "school_public:392",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "Booker T. Washington Senior High",
+      "geometry_type": "Point",
+      "lon": -80.205116,
+      "lat": 25.786507,
+      "attributes": {
+        "grades": "9-12",
+        "enrollment": 941
+      }
+    },
+    {
+      "poi_id": "school_public:401",
+      "category": "school",
+      "subtype": "public",
+      "source_layer": "school_public",
+      "name": "iPrep Academy",
+      "geometry_type": "Point",
+      "lon": -80.189511,
+      "lat": 25.789776,
+      "attributes": {
+        "grades": "PK-12",
+        "enrollment": 774
+      }
+    },
+    {
+      "poi_id": "school_charter:3",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "Downtown Miami Charter School ",
+      "geometry_type": "Point",
+      "lon": -80.199312,
+      "lat": 25.777333,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:27",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "Theodore R & Thelma A Gibson Charter",
+      "geometry_type": "Point",
+      "lon": -80.201944,
+      "lat": 25.791442,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:69",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "Miami Children's Museum Charter School",
+      "geometry_type": "Point",
+      "lon": -80.176532,
+      "lat": 25.78471,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:123",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "Mater Academy East Charter School",
+      "geometry_type": "Point",
+      "lon": -80.201954,
+      "lat": 25.769766,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:124",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "BridgePrep Academy of Greater Miami  ",
+      "geometry_type": "Point",
+      "lon": -80.191617,
+      "lat": 25.795015,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:152",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "ASPIRA Arts DECO Charter",
+      "geometry_type": "Point",
+      "lon": -80.19386,
+      "lat": 25.794943,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_charter:159",
+      "category": "school",
+      "subtype": "charter",
+      "source_layer": "school_charter",
+      "name": "Miami Arts Charter School",
+      "geometry_type": "Point",
+      "lon": -80.196895,
+      "lat": 25.799329,
+      "attributes": {
+        "grades": null
+      }
+    },
+    {
+      "poi_id": "school_private:69",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "KLA Elementary",
+      "geometry_type": "Point",
+      "lon": -80.19495,
+      "lat": 25.767656,
+      "attributes": {
+        "grade_level": "KG-05"
+      }
+    },
+    {
+      "poi_id": "school_private:76",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Lincoln-Marti Schools - 8th Ave",
+      "geometry_type": "Point",
+      "lon": -80.207696,
+      "lat": 25.776108,
+      "attributes": {
+        "grade_level": "05-K"
+      }
+    },
+    {
+      "poi_id": "school_private:154",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Brickell Heights Elementary",
+      "geometry_type": "Point",
+      "lon": -80.19355,
+      "lat": 25.765634,
+      "attributes": {
+        "grade_level": "KG-01"
+      }
+    },
+    {
+      "poi_id": "school_private:170",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Lincoln-Marti Community Agency 80",
+      "geometry_type": "Point",
+      "lon": -80.208612,
+      "lat": 25.765842,
+      "attributes": {
+        "grade_level": "PK-02"
+      }
+    },
+    {
+      "poi_id": "school_private:215",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "KLA Schools of Brickell",
+      "geometry_type": "Point",
+      "lon": -80.195293,
+      "lat": 25.768069,
+      "attributes": {
+        "grade_level": "NS-PK"
+      }
+    },
+    {
+      "poi_id": "school_private:229",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "La Prima Casa Montessori - Brickell Campus",
+      "geometry_type": "Point",
+      "lon": -80.196447,
+      "lat": 25.756377,
+      "attributes": {
+        "grade_level": " "
+      }
+    },
+    {
+      "poi_id": "school_private:364",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Global Connection Preschool",
+      "geometry_type": "Point",
+      "lon": -80.20652,
+      "lat": 25.756099,
+      "attributes": {
+        "grade_level": "PK-04"
+      }
+    },
+    {
+      "poi_id": "school_private:446",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "The Learning World Academy in Downtown",
+      "geometry_type": "Point",
+      "lon": -80.185747,
+      "lat": 25.790069,
+      "attributes": {
+        "grade_level": "PK-01"
+      }
+    },
+    {
+      "poi_id": "school_private:542",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Gordon Schools of Beth David Congregation",
+      "geometry_type": "Point",
+      "lon": -80.208023,
+      "lat": 25.754432,
+      "attributes": {
+        "grade_level": "PK-05"
+      }
+    },
+    {
+      "poi_id": "school_private:590",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "RJW The Academy of Arts Sciences",
+      "geometry_type": "Point",
+      "lon": -80.20202,
+      "lat": 25.782328,
+      "attributes": {
+        "grade_level": "KG-11"
+      }
+    },
+    {
+      "poi_id": "school_private:697",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Care Elementary School",
+      "geometry_type": "Point",
+      "lon": -80.196625,
+      "lat": 25.796084,
+      "attributes": {
+        "grade_level": "KG-06"
+      }
+    },
+    {
+      "poi_id": "school_private:711",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "WorldEd International School",
+      "geometry_type": "Point",
+      "lon": -80.191456,
+      "lat": 25.764975,
+      "attributes": {
+        "grade_level": "KG-12"
+      }
+    },
+    {
+      "poi_id": "school_private:741",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "MIA Piccolo Montessori School",
+      "geometry_type": "Point",
+      "lon": -80.191113,
+      "lat": 25.799116,
+      "attributes": {
+        "grade_level": "PK-KG"
+      }
+    },
+    {
+      "poi_id": "school_private:751",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Key Point  Christian Academy",
+      "geometry_type": "Point",
+      "lon": -80.189499,
+      "lat": 25.767664,
+      "attributes": {
+        "grade_level": "PK-08"
+      }
+    },
+    {
+      "poi_id": "school_private:788",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Centner Academy - Middle and High Schools",
+      "geometry_type": "Point",
+      "lon": -80.193889,
+      "lat": 25.794889,
+      "attributes": {
+        "grade_level": "06-08"
+      }
+    },
+    {
+      "poi_id": "school_private:854",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Eximia School",
+      "geometry_type": "Point",
+      "lon": -80.188608,
+      "lat": 25.799004,
+      "attributes": {
+        "grade_level": "06-12"
+      }
+    },
+    {
+      "poi_id": "school_private:899",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Centner Academy - Elementary School ",
+      "geometry_type": "Point",
+      "lon": -80.193889,
+      "lat": 25.794889,
+      "attributes": {
+        "grade_level": "01-05"
+      }
+    },
+    {
+      "poi_id": "school_private:923",
+      "category": "school",
+      "subtype": "private",
+      "source_layer": "school_private",
+      "name": "Kingsbury Academy",
+      "geometry_type": "Point",
+      "lon": -80.191747,
+      "lat": 25.760743,
+      "attributes": {
+        "grade_level": "KG-12"
+      }
+    },
+    {
+      "poi_id": "park_city:4",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "1814 Brickell",
+      "geometry_type": "Polygon",
+      "lon": -80.196719,
+      "lat": 25.755788,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 1
+      },
+      "area_acres": 0.84,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1963083953378,
+              25.7557615538653
+            ],
+            [
+              -80.1968045672804,
+              25.7554204435049
+            ],
+            [
+              -80.1971283281311,
+              25.7558058332096
+            ],
+            [
+              -80.1968790457344,
+              25.7559771719166
+            ],
+            [
+              -80.1968882410897,
+              25.7559881167562
+            ],
+            [
+              -80.196641929243,
+              25.7561585823128
+            ],
+            [
+              -80.1963083953378,
+              25.7557615538653
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:12",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Alice C. Wainwright Park",
+      "geometry_type": "Polygon",
+      "lon": -80.204719,
+      "lat": 25.748392,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 4
+      },
+      "area_acres": 18.127,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.202974632169,
+              25.7486346637845
+            ],
+            [
+              -80.2025504027348,
+              25.7481546411678
+            ],
+            [
+              -80.2025664642043,
+              25.7481512764672
+            ],
+            [
+              -80.2026314622357,
+              25.7482074426053
+            ],
+            [
+              -80.2027743068935,
+              25.7481415058776
+            ],
+            [
+              -80.2036746490751,
+              25.7477481817047
+            ],
+            [
+              -80.2036771345939,
+              25.7477455297569
+            ],
+            [
+              -80.2046858545752,
+              25.7473286322357
+            ],
+            [
+              -80.2057226726529,
+              25.7469397376658
+            ],
+            [
+              -80.2057342984429,
+              25.7469330952489
+            ],
+            [
+              -80.2057497077312,
+              25.7469241987752
+            ],
+            [
+              -80.2067840950659,
+              25.7482174235901
+            ],
+            [
+              -80.206594299561,
+              25.7483478694798
+            ],
+            [
+              -80.2063572360804,
+              25.7485108022228
+            ],
+            [
+              -80.2061169278018,
+              25.7486759626804
+            ],
+            [
+              -80.2058770524229,
+              25.7488408245023
+            ],
+            [
+              -80.2057689562192,
+              25.7489151201275
+            ],
+            [
+              -80.2056324273787,
+              25.7490075835613
+            ],
+            [
+              -80.2053986031634,
+              25.7491659378388
+            ],
+            [
+              -80.2051500442176,
+              25.7493342731911
+            ],
+            [
+              -80.2048972303306,
+              25.7495054905153
+            ],
+            [
+              -80.2046568731324,
+              25.7496682651926
+            ],
+            [
+              -80.2044144517125,
+              25.7498324399314
+            ],
+            [
+              -80.2042528447264,
+              25.7499418865553
+            ],
+            [
+              -80.2042251157267,
+              25.7499580712648
+            ],
+            [
+              -80.2041951408447,
+              25.7499705554486
+            ],
+            [
+              -80.2041635257523,
+              25.749979090575
+            ],
+            [
+              -80.2041308955267,
+              25.7499835076524
+            ],
+            [
+              -80.2040920217127,
+              25.7499833060145
+            ],
+            [
+              -80.2040537220468,
+              25.7499772664272
+            ],
+            [
+              -80.2040170618872,
+              25.7499655599006
+            ],
+            [
+              -80.2039830527744,
+              25.7499485060892
+            ],
+            [
+              -80.2039526364408,
+              25.7499265795235
+            ],
+            [
+              -80.2039266600321,
+              25.7499003887127
+            ],
+            [
+              -80.202974632169,
+              25.7486346637845
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:14",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Allen Morris Brickell Plaza",
+      "geometry_type": "MultiPolygon",
+      "lon": -80.192712,
+      "lat": 25.764619,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 6
+      },
+      "area_acres": 0.267,
+      "geometry_wgs84": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -80.1925602492268,
+                25.7646998967036
+              ],
+              [
+                -80.1925952986153,
+                25.7645626561741
+              ],
+              [
+                -80.1928244590422,
+                25.7645640787831
+              ],
+              [
+                -80.1928323381858,
+                25.764833060164
+              ],
+              [
+                -80.1927895399359,
+                25.7648334619025
+              ],
+              [
+                -80.1925255059025,
+                25.7648359411005
+              ],
+              [
+                -80.1925602492268,
+                25.7646998967036
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -80.192631086497,
+                25.7644109863364
+              ],
+              [
+                -80.1926565079199,
+                25.7643119593741
+              ],
+              [
+                -80.1928946757625,
+                25.7643134634159
+              ],
+              [
+                -80.1928944307258,
+                25.7644111677307
+              ],
+              [
+                -80.192631086497,
+                25.7644109863364
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:16",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Bayfront Park",
+      "geometry_type": "Polygon",
+      "lon": -80.186158,
+      "lat": 25.775342,
+      "attributes": {
+        "management_agency": "Bayfront Park Trust",
+        "park_id": 10
+      },
+      "area_acres": 29.437,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1874512449083,
+              25.7779377596952
+            ],
+            [
+              -80.1846107865755,
+              25.7768508945575
+            ],
+            [
+              -80.1847723669387,
+              25.7765383281266
+            ],
+            [
+              -80.1845354368624,
+              25.7764470434648
+            ],
+            [
+              -80.1848346849412,
+              25.7758558334923
+            ],
+            [
+              -80.1848561256138,
+              25.775793306173
+            ],
+            [
+              -80.184973771056,
+              25.7755582149796
+            ],
+            [
+              -80.1850460091999,
+              25.7754090190793
+            ],
+            [
+              -80.1850604902702,
+              25.7753741938496
+            ],
+            [
+              -80.1850728236244,
+              25.7753487549694
+            ],
+            [
+              -80.1850810536815,
+              25.7753219914889
+            ],
+            [
+              -80.1850850152663,
+              25.7752944413652
+            ],
+            [
+              -80.1850755561637,
+              25.775179768244
+            ],
+            [
+              -80.1850660150984,
+              25.7750641071639
+            ],
+            [
+              -80.1850613444197,
+              25.7748983348263
+            ],
+            [
+              -80.1850612575469,
+              25.7748338518156
+            ],
+            [
+              -80.1850659680742,
+              25.7747815994834
+            ],
+            [
+              -80.1850647380266,
+              25.7747291848031
+            ],
+            [
+              -80.1850575795823,
+              25.7746771611667
+            ],
+            [
+              -80.1850452907613,
+              25.7746528950372
+            ],
+            [
+              -80.1850363656372,
+              25.7746274517352
+            ],
+            [
+              -80.1850309391824,
+              25.7746012120324
+            ],
+            [
+              -80.1850269333963,
+              25.7745317695822
+            ],
+            [
+              -80.1850194257506,
+              25.7744500206627
+            ],
+            [
+              -80.1850174089595,
+              25.7743680100357
+            ],
+            [
+              -80.1850208899241,
+              25.7742860392247
+            ],
+            [
+              -80.1850298565987,
+              25.7742044105489
+            ],
+            [
+              -80.185034811602,
+              25.7741865622401
+            ],
+            [
+              -80.1850421167222,
+              25.7741693887342
+            ],
+            [
+              -80.1850516635594,
+              25.7741531430681
+            ],
+            [
+              -80.1850558248368,
+              25.7741437842395
+            ],
+            [
+              -80.185058718662,
+              25.7741340410056
+            ],
+            [
+              -80.1850603031951,
+              25.7741240548479
+            ],
+            [
+              -80.1851228681923,
+              25.7740006926623
+            ],
+            [
+              -80.1851396302383,
+              25.7739637905552
+            ],
+            [
+              -80.1851597622131,
+              25.7739282964925
+            ],
+            [
+              -80.1851707184988,
+              25.7739130958532
+            ],
+            [
+              -80.1851791532422,
+              25.7738966300227
+            ],
+            [
+              -80.1851848916595,
+              25.7738792383211
+            ],
+            [
+              -80.1852041236108,
+              25.7738213787914
+            ],
+            [
+              -80.1852162959839,
+              25.7737619695997
+            ],
+            [
+              -80.1852212664111,
+              25.7737017140169
+            ],
+            [
+              -80.1852189751927,
+              25.7736413266076
+            ],
+            [
+              -80.1852094493573,
+              25.7735815224212
+            ],
+            [
+              -80.1851928017143,
+              25.7735230097647
+            ],
+            [
+              -80.1851692299176,
+              25.773466481172
+            ],
+            [
+              -80.1851189242743,
+              25.7733719457767
+            ],
+            [
+              -80.1850883942688,
+              25.7733339249363
+            ],
+            [
+              -80.185063058828,
+              25.7732928939605
+            ],
+            [
+              -80.1850432758744,
+              25.7732494316489
+            ],
+            [
+              -80.1850293253257,
+              25.7732041524701
+            ],
+            [
+              -80.1850214041915,
+              25.773157694799
+            ],
+            [
+              -80.1850182384284,
+              25.7730902085677
+            ],
+            [
+              -80.1850108843296,
+              25.772786350153
+            ],
+            [
+              -80.1850786097277,
+              25.7727835286293
+            ],
+            [
+              -80.1869227963912,
+              25.7727244295317
+            ],
+            [
+              -80.186953663376,
+              25.7734341051061
+            ],
+            [
+              -80.1869666113133,
+              25.7735928243725
+            ],
+            [
+              -80.1869840713377,
+              25.7737494945558
+            ],
+            [
+              -80.1870223452019,
+              25.7739844143326
+            ],
+            [
+              -80.1872082920249,
+              25.7750390693857
+            ],
+            [
+              -80.187252925929,
+              25.7753003521673
+            ],
+            [
+              -80.1873642763868,
+              25.7762461432778
+            ],
+            [
+              -80.1873890854249,
+              25.7764788023964
+            ],
+            [
+              -80.1873971551505,
+              25.7766885914843
+            ],
+            [
+              -80.187393953536,
+              25.7767687053605
+            ],
+            [
+              -80.187396340627,
+              25.7768488423226
+            ],
+            [
+              -80.1874043086364,
+              25.7769286836918
+            ],
+            [
+              -80.187417824854,
+              25.7770079106498
+            ],
+            [
+              -80.1874368366129,
+              25.7770862069741
+            ],
+            [
+              -80.187461266286,
+              25.7771632617179
+            ],
+            [
+              -80.1874797209347,
+              25.7771933868727
+            ],
+            [
+              -80.18750251068,
+              25.777220970904
+            ],
+            [
+              -80.1875292172678,
+              25.7772455068935
+            ],
+            [
+              -80.1875593472989,
+              25.7772665425652
+            ],
+            [
+              -80.1875923461252,
+              25.7772836893891
+            ],
+            [
+              -80.1876220805036,
+              25.7772997311906
+            ],
+            [
+              -80.187648500312,
+              25.7773199779755
+            ],
+            [
+              -80.187670888504,
+              25.7773438796397
+            ],
+            [
+              -80.1876886343925,
+              25.7773707855766
+            ],
+            [
+              -80.187701258425,
+              25.7773999664782
+            ],
+            [
+              -80.1878795698786,
+              25.7779360096367
+            ],
+            [
+              -80.1874512449083,
+              25.7779377596952
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:20",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Maurice A. Ferré Park",
+      "geometry_type": "Polygon",
+      "lon": -80.187211,
+      "lat": 25.784342,
+      "attributes": {
+        "management_agency": "Bayfront Park Trust",
+        "park_id": 73
+      },
+      "area_acres": 28.669,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1856181936115,
+              25.7841838256309
+            ],
+            [
+              -80.1856067396218,
+              25.7839065123413
+            ],
+            [
+              -80.1853232066567,
+              25.7837845567755
+            ],
+            [
+              -80.1853089356254,
+              25.7833228140278
+            ],
+            [
+              -80.1853080066623,
+              25.7831904156616
+            ],
+            [
+              -80.1853651722022,
+              25.7831211298879
+            ],
+            [
+              -80.1889201424189,
+              25.7830028855378
+            ],
+            [
+              -80.1888970537702,
+              25.7824152617794
+            ],
+            [
+              -80.1887771889119,
+              25.782391904498
+            ],
+            [
+              -80.1887745042297,
+              25.7822533700014
+            ],
+            [
+              -80.1878629038583,
+              25.7822850038516
+            ],
+            [
+              -80.1878585407597,
+              25.7821932514706
+            ],
+            [
+              -80.1859229178156,
+              25.7822524374772
+            ],
+            [
+              -80.1856676931017,
+              25.7822311942036
+            ],
+            [
+              -80.1852785875255,
+              25.7822437126597
+            ],
+            [
+              -80.1852769764521,
+              25.7821863511915
+            ],
+            [
+              -80.1878783255484,
+              25.7821176279118
+            ],
+            [
+              -80.1886957018418,
+              25.782096024106
+            ],
+            [
+              -80.1892382626393,
+              25.7820816817028
+            ],
+            [
+              -80.1892368217758,
+              25.7825775291863
+            ],
+            [
+              -80.1892356274603,
+              25.782988269999
+            ],
+            [
+              -80.1890449467606,
+              25.7829930031385
+            ],
+            [
+              -80.189049827112,
+              25.7832382726866
+            ],
+            [
+              -80.1890526108989,
+              25.783402156792
+            ],
+            [
+              -80.1885970315316,
+              25.7834155808242
+            ],
+            [
+              -80.1886133571759,
+              25.7838963708867
+            ],
+            [
+              -80.1886204915117,
+              25.7839372843937
+            ],
+            [
+              -80.1886306561912,
+              25.7839587907141
+            ],
+            [
+              -80.1886444297317,
+              25.7839785822709
+            ],
+            [
+              -80.188661468525,
+              25.7839961670089
+            ],
+            [
+              -80.1886813498271,
+              25.7840111074928
+            ],
+            [
+              -80.18870357966,
+              25.7840230317838
+            ],
+            [
+              -80.1887276027204,
+              25.7840316425207
+            ],
+            [
+              -80.1887528232484,
+              25.784036726966
+            ],
+            [
+              -80.1887786120002,
+              25.7840381579475
+            ],
+            [
+              -80.188804329142,
+              25.7840358994018
+            ],
+            [
+              -80.1888293342136,
+              25.7840300073326
+            ],
+            [
+              -80.1890085209129,
+              25.7839726754013
+            ],
+            [
+              -80.1890231095691,
+              25.7839632202474
+            ],
+            [
+              -80.1890358007402,
+              25.7839517398036
+            ],
+            [
+              -80.1890462553584,
+              25.7839385399836
+            ],
+            [
+              -80.1890541938613,
+              25.7839239730674
+            ],
+            [
+              -80.1890594042167,
+              25.7839084305257
+            ],
+            [
+              -80.1890557204262,
+              25.7842149628827
+            ],
+            [
+              -80.1890516148409,
+              25.7843238770026
+            ],
+            [
+              -80.1890401419211,
+              25.7844755157192
+            ],
+            [
+              -80.1890224629211,
+              25.7846266649004
+            ],
+            [
+              -80.1889986001723,
+              25.7847771161561
+            ],
+            [
+              -80.188968588961,
+              25.7849266620706
+            ],
+            [
+              -80.1889324695468,
+              25.7850750970605
+            ],
+            [
+              -80.1888902901598,
+              25.7852222164886
+            ],
+            [
+              -80.1888421109824,
+              25.7853678175891
+            ],
+            [
+              -80.1887879981681,
+              25.7855116994342
+            ],
+            [
+              -80.187104594382,
+              25.7861984641326
+            ],
+            [
+              -80.1864791437381,
+              25.7864538498021
+            ],
+            [
+              -80.1860956741606,
+              25.7864620419143
+            ],
+            [
+              -80.1869549368725,
+              25.786129082503
+            ],
+            [
+              -80.186621609554,
+              25.7854943285973
+            ],
+            [
+              -80.1855662867851,
+              25.7859015894748
+            ],
+            [
+              -80.1858594435041,
+              25.7865332558635
+            ],
+            [
+              -80.1857895997004,
+              25.7865629267288
+            ],
+            [
+              -80.1857419222377,
+              25.7864710546822
+            ],
+            [
+              -80.1854750077624,
+              25.7864753021409
+            ],
+            [
+              -80.1854721939801,
+              25.7864338792381
+            ],
+            [
+              -80.1854630646202,
+              25.7864341142592
+            ],
+            [
+              -80.1854049988489,
+              25.7857655871481
+            ],
+            [
+              -80.1853869359338,
+              25.7855379159139
+            ],
+            [
+              -80.1856612996428,
+              25.7854118230611
+            ],
+            [
+              -80.1856509657971,
+              25.7850709128248
+            ],
+            [
+              -80.1853603764852,
+              25.7849464337117
+            ],
+            [
+              -80.1853544332721,
+              25.7849206072742
+            ],
+            [
+              -80.1853277798383,
+              25.7843121204185
+            ],
+            [
+              -80.1856181936115,
+              25.7841838256309
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:22",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Biscayne Park",
+      "geometry_type": "Polygon",
+      "lon": -80.192934,
+      "lat": 25.794238,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 15
+      },
+      "area_acres": 5.871,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.190857798618,
+              25.7939030065227
+            ],
+            [
+              -80.193846429904,
+              25.7938264856423
+            ],
+            [
+              -80.1941768799376,
+              25.7938180194932
+            ],
+            [
+              -80.19428507663,
+              25.7938152493398
+            ],
+            [
+              -80.1942946329105,
+              25.7942199764321
+            ],
+            [
+              -80.1943062835735,
+              25.7946044271954
+            ],
+            [
+              -80.1941842380618,
+              25.7946075611126
+            ],
+            [
+              -80.1941554190495,
+              25.7946083004711
+            ],
+            [
+              -80.1916460375766,
+              25.7946727308572
+            ],
+            [
+              -80.1916211462571,
+              25.7939307192622
+            ],
+            [
+              -80.1908586292301,
+              25.7939533806694
+            ],
+            [
+              -80.190857798618,
+              25.7939030065227
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:24",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Brickell Park",
+      "geometry_type": "Polygon",
+      "lon": -80.189054,
+      "lat": 25.768004,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 17
+      },
+      "area_acres": 2.266,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1892565218146,
+              25.768268048109
+            ],
+            [
+              -80.1892460821499,
+              25.7682684024659
+            ],
+            [
+              -80.189185151345,
+              25.7682792522874
+            ],
+            [
+              -80.1891514932979,
+              25.7683007644865
+            ],
+            [
+              -80.1891211885144,
+              25.7682979544949
+            ],
+            [
+              -80.1890010090119,
+              25.7682333411376
+            ],
+            [
+              -80.1881364485308,
+              25.7680336370895
+            ],
+            [
+              -80.188109555273,
+              25.7680815026412
+            ],
+            [
+              -80.1880769674628,
+              25.7680747775418
+            ],
+            [
+              -80.1881212606619,
+              25.7679516648552
+            ],
+            [
+              -80.1881817418741,
+              25.7676018696527
+            ],
+            [
+              -80.1900644668368,
+              25.7679906641441
+            ],
+            [
+              -80.189989452975,
+              25.7682716587555
+            ],
+            [
+              -80.1899871790933,
+              25.7682825284525
+            ],
+            [
+              -80.1899828890109,
+              25.7682928877628
+            ],
+            [
+              -80.1899767084183,
+              25.7683024304845
+            ],
+            [
+              -80.1899688186448,
+              25.768310877805
+            ],
+            [
+              -80.1899594506536,
+              25.768317981878
+            ],
+            [
+              -80.1899488820081,
+              25.7683235321252
+            ],
+            [
+              -80.1899374218399,
+              25.7683273668873
+            ],
+            [
+              -80.1899254058643,
+              25.768329373396
+            ],
+            [
+              -80.1897826771566,
+              25.7683212069695
+            ],
+            [
+              -80.1895742817658,
+              25.7683310482126
+            ],
+            [
+              -80.1892565218146,
+              25.768268048109
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:34",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Dorsey Park",
+      "geometry_type": "Polygon",
+      "lon": -80.196106,
+      "lat": 25.792253,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 34
+      },
+      "area_acres": 2.861,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1957739084969,
+              25.7917042694263
+            ],
+            [
+              -80.1965559319268,
+              25.7916831556091
+            ],
+            [
+              -80.1965796598704,
+              25.7928110599982
+            ],
+            [
+              -80.1958024970868,
+              25.7928353789046
+            ],
+            [
+              -80.1957417511758,
+              25.7928372797753
+            ],
+            [
+              -80.1957243657429,
+              25.7927915231831
+            ],
+            [
+              -80.1957035407063,
+              25.7927250335987
+            ],
+            [
+              -80.1956874045899,
+              25.7926671676646
+            ],
+            [
+              -80.1956781966704,
+              25.792624301435
+            ],
+            [
+              -80.1956689748584,
+              25.792583494971
+            ],
+            [
+              -80.1956599142927,
+              25.7925471638249
+            ],
+            [
+              -80.1956554393955,
+              25.792506383611
+            ],
+            [
+              -80.1956437348294,
+              25.7924678010798
+            ],
+            [
+              -80.1956371106319,
+              25.7924077545908
+            ],
+            [
+              -80.1956340468293,
+              25.7923834907118
+            ],
+            [
+              -80.1956315397182,
+              25.7923609521642
+            ],
+            [
+              -80.195624846663,
+              25.7923377080646
+            ],
+            [
+              -80.19562473228,
+              25.7923326426732
+            ],
+            [
+              -80.1956210762768,
+              25.7921709545537
+            ],
+            [
+              -80.1956172510994,
+              25.7920018303818
+            ],
+            [
+              -80.1956133958854,
+              25.7918313953948
+            ],
+            [
+              -80.1956122048834,
+              25.7917787192835
+            ],
+            [
+              -80.1956973734487,
+              25.7917063357276
+            ],
+            [
+              -80.1957739084969,
+              25.7917042694263
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:42",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Paul S. Walker Urbanscape",
+      "geometry_type": "Polygon",
+      "lon": -80.194539,
+      "lat": 25.773855,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 87
+      },
+      "area_acres": 0.088,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1944804415418,
+              25.7736972299399
+            ],
+            [
+              -80.1945808482006,
+              25.7736941317684
+            ],
+            [
+              -80.1945967642296,
+              25.7740138031898
+            ],
+            [
+              -80.1944963211647,
+              25.7740161998065
+            ],
+            [
+              -80.1944804415418,
+              25.7736972299399
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:47",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Fort Dallas Park",
+      "geometry_type": "Polygon",
+      "lon": -80.192184,
+      "lat": 25.770886,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 45
+      },
+      "area_acres": 0.463,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1919663938295,
+              25.7707228550228
+            ],
+            [
+              -80.1920048026452,
+              25.7707207204788
+            ],
+            [
+              -80.1920630224234,
+              25.7707205445355
+            ],
+            [
+              -80.1921210255766,
+              25.770715995831
+            ],
+            [
+              -80.1921784121328,
+              25.7707071055433
+            ],
+            [
+              -80.1922347859065,
+              25.7706939346594
+            ],
+            [
+              -80.1924221082482,
+              25.7706612241516
+            ],
+            [
+              -80.1924276412191,
+              25.7709912665291
+            ],
+            [
+              -80.1923454703903,
+              25.7710118386736
+            ],
+            [
+              -80.1921839748476,
+              25.7710647538344
+            ],
+            [
+              -80.1920638679662,
+              25.771103589781
+            ],
+            [
+              -80.1919663602969,
+              25.771190321162
+            ],
+            [
+              -80.1919663938295,
+              25.7707228550228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:50",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Henry Reeves Park",
+      "geometry_type": "Polygon",
+      "lon": -80.203958,
+      "lat": 25.783006,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 50
+      },
+      "area_acres": 3.74,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2046850651828,
+              25.7830199039415
+            ],
+            [
+              -80.2050024689211,
+              25.7830110307897
+            ],
+            [
+              -80.2050104409867,
+              25.7832447732975
+            ],
+            [
+              -80.2046930396106,
+              25.7832536473707
+            ],
+            [
+              -80.2046977277642,
+              25.7833911430628
+            ],
+            [
+              -80.2032302465712,
+              25.7834321607685
+            ],
+            [
+              -80.2032159895828,
+              25.7834315438037
+            ],
+            [
+              -80.2032020162336,
+              25.7834289136755
+            ],
+            [
+              -80.2031886700849,
+              25.783424330938
+            ],
+            [
+              -80.2031762833639,
+              25.7834179111449
+            ],
+            [
+              -80.2031651611077,
+              25.7834098103204
+            ],
+            [
+              -80.2031555791157,
+              25.7834002330718
+            ],
+            [
+              -80.2031477751033,
+              25.7833894135852
+            ],
+            [
+              -80.2031419406961,
+              25.7833776200948
+            ],
+            [
+              -80.2031382185051,
+              25.7833651449382
+            ],
+            [
+              -80.2031367061697,
+              25.7833522964541
+            ],
+            [
+              -80.2031116936627,
+              25.7826117884866
+            ],
+            [
+              -80.2046692294202,
+              25.7825595359821
+            ],
+            [
+              -80.2046850651828,
+              25.7830199039415
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:51",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Riverside Park",
+      "geometry_type": "Polygon",
+      "lon": -80.206765,
+      "lat": 25.770348,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 95
+      },
+      "area_acres": 3.401,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2065126487109,
+              25.7699439949968
+            ],
+            [
+              -80.207504770096,
+              25.7699147100633
+            ],
+            [
+              -80.2075316064073,
+              25.7707340945654
+            ],
+            [
+              -80.2065252922996,
+              25.7707681873295
+            ],
+            [
+              -80.2060264658605,
+              25.7707811503642
+            ],
+            [
+              -80.2059994316413,
+              25.7699565076492
+            ],
+            [
+              -80.2065126487109,
+              25.7699439949968
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:62",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Lummus Park",
+      "geometry_type": "Polygon",
+      "lon": -80.201276,
+      "lat": 25.776314,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 68
+      },
+      "area_acres": 5.053,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2017035276782,
+              25.775706931426
+            ],
+            [
+              -80.2017180205761,
+              25.7757067184753
+            ],
+            [
+              -80.201732362656,
+              25.7757086331471
+            ],
+            [
+              -80.2017461734472,
+              25.7757126219029
+            ],
+            [
+              -80.2017590877583,
+              25.7757185825454
+            ],
+            [
+              -80.2017707676946,
+              25.7757263561599
+            ],
+            [
+              -80.2017809065852,
+              25.7757357361628
+            ],
+            [
+              -80.2017892358948,
+              25.7757464782682
+            ],
+            [
+              -80.2025624901299,
+              25.7764228156545
+            ],
+            [
+              -80.2025719387568,
+              25.7764362970778
+            ],
+            [
+              -80.2025789420448,
+              25.7764509475726
+            ],
+            [
+              -80.2025833298996,
+              25.7764664114652
+            ],
+            [
+              -80.2025849922402,
+              25.7764823036231
+            ],
+            [
+              -80.2025838887751,
+              25.7764982383937
+            ],
+            [
+              -80.2025800470686,
+              25.7765138205668
+            ],
+            [
+              -80.2025735634176,
+              25.7765286634325
+            ],
+            [
+              -80.2025645927435,
+              25.7765424094871
+            ],
+            [
+              -80.202333841997,
+              25.7766907681582
+            ],
+            [
+              -80.2002033793434,
+              25.7767615930371
+            ],
+            [
+              -80.2001571427034,
+              25.775933179396
+            ],
+            [
+              -80.2013560419052,
+              25.7758915015408
+            ],
+            [
+              -80.2016629048418,
+              25.7757199892653
+            ],
+            [
+              -80.2016756033605,
+              25.7757136528189
+            ],
+            [
+              -80.201689263847,
+              25.7757092641539
+            ],
+            [
+              -80.2017035276782,
+              25.775706931426
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:71",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Teachers Island (S.I. #1)",
+      "geometry_type": "Polygon",
+      "lon": -80.177025,
+      "lat": 25.798348,
+      "attributes": {
+        "management_agency": "Miami-Dade County D.E.R.M.",
+        "park_id": 109
+      },
+      "area_acres": 2.436,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1766110500801,
+              25.7981052606026
+            ],
+            [
+              -80.1767872606957,
+              25.7980321456487
+            ],
+            [
+              -80.1770062630139,
+              25.7979788762949
+            ],
+            [
+              -80.1771267372889,
+              25.7979173107492
+            ],
+            [
+              -80.1772258551605,
+              25.7978401475229
+            ],
+            [
+              -80.1774369010314,
+              25.7977011985646
+            ],
+            [
+              -80.1776522885055,
+              25.7975660568243
+            ],
+            [
+              -80.1777553960427,
+              25.7975160863006
+            ],
+            [
+              -80.1778239659979,
+              25.7975164739837
+            ],
+            [
+              -80.1778924573283,
+              25.7975557227678
+            ],
+            [
+              -80.1779085730026,
+              25.7975876257908
+            ],
+            [
+              -80.1779261904491,
+              25.7976221152557
+            ],
+            [
+              -80.1779130062353,
+              25.7976609032059
+            ],
+            [
+              -80.1778232995318,
+              25.7977506714003
+            ],
+            [
+              -80.1778007296112,
+              25.7977732417081
+            ],
+            [
+              -80.1776802042166,
+              25.7978698861234
+            ],
+            [
+              -80.1775633987587,
+              25.798005413948
+            ],
+            [
+              -80.177399620761,
+              25.7981485849481
+            ],
+            [
+              -80.1772137336486,
+              25.7983578333464
+            ],
+            [
+              -80.1770833941646,
+              25.7986100403874
+            ],
+            [
+              -80.1769746787382,
+              25.7988391563632
+            ],
+            [
+              -80.1768528579346,
+              25.7990953658611
+            ],
+            [
+              -80.1768090690837,
+              25.799219784053
+            ],
+            [
+              -80.176765362092,
+              25.7993323392323
+            ],
+            [
+              -80.1767563576827,
+              25.7993984909251
+            ],
+            [
+              -80.1767387254119,
+              25.7994762857278
+            ],
+            [
+              -80.1767253245738,
+              25.7995461964135
+            ],
+            [
+              -80.1766733377855,
+              25.7996198422182
+            ],
+            [
+              -80.1766128834446,
+              25.7996819187012
+            ],
+            [
+              -80.1765667963916,
+              25.7996990246191
+            ],
+            [
+              -80.1765614636247,
+              25.79970105877
+            ],
+            [
+              -80.1765282713435,
+              25.7997008708109
+            ],
+            [
+              -80.1765185357122,
+              25.7997008156791
+            ],
+            [
+              -80.1765158620368,
+              25.7996935089752
+            ],
+            [
+              -80.1765142482486,
+              25.7996890976387
+            ],
+            [
+              -80.1765488965941,
+              25.7996504331904
+            ],
+            [
+              -80.1765578770497,
+              25.7996427456715
+            ],
+            [
+              -80.1766308688591,
+              25.7995807392978
+            ],
+            [
+              -80.1766439440548,
+              25.7995302589123
+            ],
+            [
+              -80.1766587969002,
+              25.7992500573993
+            ],
+            [
+              -80.1766724402723,
+              25.7991448989124
+            ],
+            [
+              -80.1766733811643,
+              25.7990087168176
+            ],
+            [
+              -80.1766485441573,
+              25.7988644779925
+            ],
+            [
+              -80.1766070154522,
+              25.798689193866
+            ],
+            [
+              -80.1765562680235,
+              25.7985836707782
+            ],
+            [
+              -80.1765099411897,
+              25.7984706067374
+            ],
+            [
+              -80.1764716228426,
+              25.7984079700541
+            ],
+            [
+              -80.1764597872295,
+              25.7983614754951
+            ],
+            [
+              -80.1764509134993,
+              25.7983261742562
+            ],
+            [
+              -80.1764513971234,
+              25.7982561922384
+            ],
+            [
+              -80.1764634924384,
+              25.798237689722
+            ],
+            [
+              -80.1765076441845,
+              25.7981707053502
+            ],
+            [
+              -80.1766110500801,
+              25.7981052606026
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:75",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Pine Heights Mini Park",
+      "geometry_type": "Polygon",
+      "lon": -80.209179,
+      "lat": 25.78968,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 90
+      },
+      "area_acres": 0.317,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2093712411022,
+              25.7894743635854
+            ],
+            [
+              -80.2093826751033,
+              25.7894740935584
+            ],
+            [
+              -80.2093893824356,
+              25.7898016756652
+            ],
+            [
+              -80.2093763069194,
+              25.7898019954421
+            ],
+            [
+              -80.2088994838932,
+              25.7898137234617
+            ],
+            [
+              -80.2088961913515,
+              25.7897260157849
+            ],
+            [
+              -80.2088970350556,
+              25.7897111112983
+            ],
+            [
+              -80.2089006841364,
+              25.7896965578553
+            ],
+            [
+              -80.208907036046,
+              25.7896827836567
+            ],
+            [
+              -80.2089158956338,
+              25.7896701983467
+            ],
+            [
+              -80.2089270071829,
+              25.7896591733289
+            ],
+            [
+              -80.208940037515,
+              25.78965003355
+            ],
+            [
+              -80.2089546079485,
+              25.7896430495506
+            ],
+            [
+              -80.2089702804064,
+              25.7896384274601
+            ],
+            [
+              -80.208986598342,
+              25.7896363019983
+            ],
+            [
+              -80.2090314882923,
+              25.789630806154
+            ],
+            [
+              -80.2090749029792,
+              25.7896190911369
+            ],
+            [
+              -80.209115788656,
+              25.7896014355536
+            ],
+            [
+              -80.209153167366,
+              25.7895782664587
+            ],
+            [
+              -80.2091861350567,
+              25.7895501430962
+            ],
+            [
+              -80.2092167323449,
+              25.7895244837117
+            ],
+            [
+              -80.2092514825385,
+              25.7895036056696
+            ],
+            [
+              -80.2092894857234,
+              25.789488046568
+            ],
+            [
+              -80.2093297540969,
+              25.7894782162543
+            ],
+            [
+              -80.2093712411022,
+              25.7894743635854
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:77",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Rainbow Village Park",
+      "geometry_type": "Polygon",
+      "lon": -80.202051,
+      "lat": 25.796919,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 92
+      },
+      "area_acres": 1.524,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2024384885632,
+              25.7966360129214
+            ],
+            [
+              -80.2024317384279,
+              25.7965128943503
+            ],
+            [
+              -80.2024479723367,
+              25.7965313784555
+            ],
+            [
+              -80.202466906485,
+              25.7965476189402
+            ],
+            [
+              -80.2024881690778,
+              25.7965612987401
+            ],
+            [
+              -80.2025097489632,
+              25.7965715204248
+            ],
+            [
+              -80.2025326198676,
+              25.7965790963014
+            ],
+            [
+              -80.202556390803,
+              25.7965838951467
+            ],
+            [
+              -80.2025769950814,
+              25.7971478033323
+            ],
+            [
+              -80.2019769200958,
+              25.7971749787918
+            ],
+            [
+              -80.2019738762617,
+              25.7972155767563
+            ],
+            [
+              -80.2015448493699,
+              25.7972321702481
+            ],
+            [
+              -80.2015234880874,
+              25.7966908980831
+            ],
+            [
+              -80.2019612636003,
+              25.7966646383226
+            ],
+            [
+              -80.2024384885632,
+              25.7966360129214
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:85",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Simpson Park",
+      "geometry_type": "Polygon",
+      "lon": -80.195958,
+      "lat": 25.758656,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 103
+      },
+      "area_acres": 7.906,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1944778594698,
+              25.7586199952752
+            ],
+            [
+              -80.1952890327564,
+              25.7580602523586
+            ],
+            [
+              -80.1954047890445,
+              25.7579800515118
+            ],
+            [
+              -80.195415533744,
+              25.7579726080475
+            ],
+            [
+              -80.1954672513332,
+              25.7579367742263
+            ],
+            [
+              -80.1955069288352,
+              25.7579830170221
+            ],
+            [
+              -80.1955152336393,
+              25.7579926960195
+            ],
+            [
+              -80.1957430856957,
+              25.7582582452172
+            ],
+            [
+              -80.1961027384265,
+              25.7580163782766
+            ],
+            [
+              -80.1960936713923,
+              25.758005313142
+            ],
+            [
+              -80.196466680873,
+              25.7577491858016
+            ],
+            [
+              -80.1965870637629,
+              25.757666525427
+            ],
+            [
+              -80.197305400847,
+              25.7585184188484
+            ],
+            [
+              -80.1972353239626,
+              25.7585650218318
+            ],
+            [
+              -80.1972329823369,
+              25.7585666761189
+            ],
+            [
+              -80.1972306436833,
+              25.7585683331302
+            ],
+            [
+              -80.1972283050234,
+              25.7585699910442
+            ],
+            [
+              -80.1972259673664,
+              25.7585716480609
+            ],
+            [
+              -80.1972236287125,
+              25.7585733050722
+            ],
+            [
+              -80.1972212930306,
+              25.7585749648077
+            ],
+            [
+              -80.1972189573304,
+              25.7585766272511
+            ],
+            [
+              -80.197216622633,
+              25.7585782887973
+            ],
+            [
+              -80.1972142899109,
+              25.7585799530623
+            ],
+            [
+              -80.1972119571826,
+              25.7585816182298
+            ],
+            [
+              -80.197209625451,
+              25.7585832834029
+            ],
+            [
+              -80.1972072957068,
+              25.7585849494895
+            ],
+            [
+              -80.1972049659503,
+              25.7585866173813
+            ],
+            [
+              -80.1972026371724,
+              25.7585882879865
+            ],
+            [
+              -80.1972003103818,
+              25.7585899595052
+            ],
+            [
+              -80.197197984594,
+              25.7585916301267
+            ],
+            [
+              -80.1971956607997,
+              25.7585933007592
+            ],
+            [
+              -80.1971933349935,
+              25.7585949740885
+            ],
+            [
+              -80.1971910111565,
+              25.7585966510393
+            ],
+            [
+              -80.1971886903097,
+              25.7585983280065
+            ],
+            [
+              -80.1971863674755,
+              25.75860000406
+            ],
+            [
+              -80.1971840466164,
+              25.7586016828324
+            ],
+            [
+              -80.1971817297383,
+              25.7586033625293
+            ],
+            [
+              -80.1971794128601,
+              25.7586050422262
+            ],
+            [
+              -80.1971770949729,
+              25.7586067237228
+            ],
+            [
+              -80.1971747780581,
+              25.7586084088353
+            ],
+            [
+              -80.1971724631368,
+              25.7586100939588
+            ],
+            [
+              -80.1971701492182,
+              25.7586117781851
+            ],
+            [
+              -80.1971678352935,
+              25.758613463314
+            ],
+            [
+              -80.1971655233441,
+              25.7586151511617
+            ],
+            [
+              -80.1971632123792,
+              25.7586168408201
+            ],
+            [
+              -80.1971609043984,
+              25.7586185313976
+            ],
+            [
+              -80.1971585924305,
+              25.7586202219531
+            ],
+            [
+              -80.1971562844375,
+              25.7586219143357
+            ],
+            [
+              -80.1971539794286,
+              25.7586236076374
+            ],
+            [
+              -80.1971516734229,
+              25.7586253009336
+            ],
+            [
+              -80.1971493683956,
+              25.7586269969431
+            ],
+            [
+              -80.1971470633683,
+              25.7586286929525
+            ],
+            [
+              -80.1971447613191,
+              25.7586303907837
+            ],
+            [
+              -80.1971424592637,
+              25.7586320895174
+            ],
+            [
+              -80.1971401591835,
+              25.7586337909699
+            ],
+            [
+              -80.1971378601001,
+              25.7586354924279
+            ],
+            [
+              -80.1971355610165,
+              25.7586371938859
+            ],
+            [
+              -80.1971332619147,
+              25.7586388980516
+            ],
+            [
+              -80.1971309658032,
+              25.7586406022339
+            ],
+            [
+              -80.1971286696733,
+              25.7586423091239
+            ],
+            [
+              -80.1971263765397,
+              25.7586440151278
+            ],
+            [
+              -80.1971240833939,
+              25.7586457229369
+            ],
+            [
+              -80.1971217902359,
+              25.7586474325512
+            ],
+            [
+              -80.1971194970596,
+              25.7586491448732
+            ],
+            [
+              -80.1971172068917,
+              25.7586508545039
+            ],
+            [
+              -80.1971149196958,
+              25.758652566859
+            ],
+            [
+              -80.1971126294914,
+              25.7586542819053
+            ],
+            [
+              -80.1971103422711,
+              25.7586559978707
+            ],
+            [
+              -80.1971080550568,
+              25.7586577129334
+            ],
+            [
+              -80.1971057708145,
+              25.7586594307205
+            ],
+            [
+              -80.1971034865722,
+              25.7586611485075
+            ],
+            [
+              -80.1971012023176,
+              25.7586628680997
+            ],
+            [
+              -80.1970989210533,
+              25.7586645877084
+            ],
+            [
+              -80.1970966397646,
+              25.7586663109275
+            ],
+            [
+              -80.1970943584758,
+              25.7586680341466
+            ],
+            [
+              -80.197092081174,
+              25.7586697573876
+            ],
+            [
+              -80.1970898028693,
+              25.7586714815257
+            ],
+            [
+              -80.1970875245524,
+              25.7586732074691
+            ],
+            [
+              -80.1970852492075,
+              25.7586749361367
+            ],
+            [
+              -80.1970829738564,
+              25.7586766657069
+            ],
+            [
+              -80.1970807025045,
+              25.7586783934938
+            ],
+            [
+              -80.1970784271472,
+              25.7586801239666
+            ],
+            [
+              -80.1970761547741,
+              25.7586818553584
+            ],
+            [
+              -80.1970738863636,
+              25.7586835903826
+            ],
+            [
+              -80.1970716169624,
+              25.7586853244987
+            ],
+            [
+              -80.1970693475612,
+              25.7586870586148
+            ],
+            [
+              -80.1970670791323,
+              25.7586887963468
+            ],
+            [
+              -80.1970648126969,
+              25.7586905340897
+            ],
+            [
+              -80.1970625462675,
+              25.75869227093
+            ],
+            [
+              -80.1970602838069,
+              25.7586940105001
+            ],
+            [
+              -80.1970580203433,
+              25.7586957509673
+            ],
+            [
+              -80.1970557578644,
+              25.7586974932452
+            ],
+            [
+              -80.1970534973727,
+              25.7586992364367
+            ],
+            [
+              -80.1970512348693,
+              25.758700982325
+            ],
+            [
+              -80.1970489773679,
+              25.7587027255328
+            ],
+            [
+              -80.1970467168396,
+              25.7587044741399
+            ],
+            [
+              -80.1970444603226,
+              25.7587062191584
+            ],
+            [
+              -80.1970422067534,
+              25.7587079705118
+            ],
+            [
+              -80.1970399492152,
+              25.7587097191352
+            ],
+            [
+              -80.1970376956518,
+              25.7587114695859
+            ],
+            [
+              -80.1970354440759,
+              25.7587132209501
+            ],
+            [
+              -80.1970331934784,
+              25.7587149750276
+            ],
+            [
+              -80.1970309428808,
+              25.7587167291051
+            ],
+            [
+              -80.1970286912743,
+              25.7587184849823
+            ],
+            [
+              -80.1970264436487,
+              25.7587202417841
+            ],
+            [
+              -80.197024196023,
+              25.7587219985858
+            ],
+            [
+              -80.1970219473883,
+              25.7587237571873
+            ],
+            [
+              -80.1970197027285,
+              25.7587255176159
+            ],
+            [
+              -80.1970174580747,
+              25.7587272771419
+            ],
+            [
+              -80.1970152154021,
+              25.7587290384841
+            ],
+            [
+              -80.197012973702,
+              25.7587308034422
+            ],
+            [
+              -80.1970107320139,
+              25.758732566595
+            ],
+            [
+              -80.1970084932858,
+              25.7587343342774
+            ],
+            [
+              -80.1970062545757,
+              25.7587360992519
+            ],
+            [
+              -80.1970040148506,
+              25.7587378669287
+            ],
+            [
+              -80.1970017791125,
+              25.7587396346275
+            ],
+            [
+              -80.1969995433561,
+              25.7587414050341
+            ],
+            [
+              -80.1969973075936,
+              25.7587431763433
+            ],
+            [
+              -80.1969950748091,
+              25.7587449494742
+            ],
+            [
+              -80.1969928420245,
+              25.758746722605
+            ],
+            [
+              -80.1969906092399,
+              25.7587484957358
+            ],
+            [
+              -80.1969883794273,
+              25.7587502715909
+            ],
+            [
+              -80.1969861496146,
+              25.758752047446
+            ],
+            [
+              -80.1969839227679,
+              25.758753826928
+            ],
+            [
+              -80.1969816959453,
+              25.7587556027995
+            ],
+            [
+              -80.1969794690863,
+              25.7587573840867
+            ],
+            [
+              -80.1969772422211,
+              25.7587591662765
+            ],
+            [
+              -80.1969750183522,
+              25.7587609475801
+            ],
+            [
+              -80.1969727974735,
+              25.7587627289001
+            ],
+            [
+              -80.1969705735863,
+              25.7587645129115
+            ],
+            [
+              -80.1969683526832,
+              25.758766297842
+            ],
+            [
+              -80.1969661347581,
+              25.7587680845941
+            ],
+            [
+              -80.1969639138367,
+              25.7587698722324
+            ],
+            [
+              -80.1969616958933,
+              25.7587716616923
+            ],
+            [
+              -80.1969594809401,
+              25.7587734511687
+            ],
+            [
+              -80.1969572669775,
+              25.7587752415532
+            ],
+            [
+              -80.196955052006,
+              25.7587770337374
+            ],
+            [
+              -80.1969528370283,
+              25.7587788268242
+            ],
+            [
+              -80.1969506250469,
+              25.7587806190248
+            ],
+            [
+              -80.1969484140379,
+              25.7587824148414
+            ],
+            [
+              -80.1969462050042,
+              25.7587842133767
+            ],
+            [
+              -80.1969439959946,
+              25.7587860083016
+            ],
+            [
+              -80.1969417869607,
+              25.7587878068369
+            ],
+            [
+              -80.1969395819017,
+              25.7587896071994
+            ],
+            [
+              -80.1969373758397,
+              25.7587914084589
+            ],
+            [
+              -80.1969351697777,
+              25.7587932097185
+            ],
+            [
+              -80.1969329676905,
+              25.7587950128053
+            ],
+            [
+              -80.1969307646004,
+              25.758796816789
+            ],
+            [
+              -80.1969285625069,
+              25.7587986207784
+            ],
+            [
+              -80.1969263623948,
+              25.7588004265838
+            ],
+            [
+              -80.1969241622766,
+              25.7588022332919
+            ],
+            [
+              -80.1969219661271,
+              25.7588040427298
+            ],
+            [
+              -80.1969197689808,
+              25.7588058521622
+            ],
+            [
+              -80.1969175728372,
+              25.7588076606974
+            ],
+            [
+              -80.1969153786628,
+              25.758809472854
+            ],
+            [
+              -80.1969131854851,
+              25.7588112850161
+            ],
+            [
+              -80.1969109912924,
+              25.7588130998805
+            ],
+            [
+              -80.1969088010926,
+              25.7588149138643
+            ],
+            [
+              -80.1969066108807,
+              25.7588167296532
+            ],
+            [
+              -80.1969044196599,
+              25.7588185472419
+            ],
+            [
+              -80.1969022324259,
+              25.7588203648525
+            ],
+            [
+              -80.196900044177,
+              25.7588221851655
+            ],
+            [
+              -80.196897859915,
+              25.7588240055004
+            ],
+            [
+              -80.196895675659,
+              25.7588258249327
+            ],
+            [
+              -80.1968934913725,
+              25.758827648878
+            ],
+            [
+              -80.1968913090856,
+              25.7588294719316
+            ],
+            [
+              -80.1968891277954,
+              25.7588312949908
+            ],
+            [
+              -80.1968869464869,
+              25.7588331207577
+            ],
+            [
+              -80.1968847671537,
+              25.7588349492434
+            ],
+            [
+              -80.1968825888354,
+              25.7588367750268
+            ],
+            [
+              -80.1968804104987,
+              25.758838603518
+            ],
+            [
+              -80.1968782351341,
+              25.7588404347335
+            ],
+            [
+              -80.1968760597694,
+              25.758842265949
+            ],
+            [
+              -80.1968738874009,
+              25.7588440962784
+            ],
+            [
+              -80.1968717139993,
+              25.7588459320178
+            ],
+            [
+              -80.1968695416064,
+              25.7588477659576
+            ],
+            [
+              -80.1968673722038,
+              25.7588495999138
+            ],
+            [
+              -80.1968652027828,
+              25.7588514365778
+            ],
+            [
+              -80.1968630333558,
+              25.7588532741444
+            ],
+            [
+              -80.196860866925,
+              25.7588551108248
+            ],
+            [
+              -80.1968587004759,
+              25.7588569502131
+            ],
+            [
+              -80.1968565340086,
+              25.7588587923092
+            ],
+            [
+              -80.1968543705435,
+              25.7588606326165
+            ],
+            [
+              -80.1968522100384,
+              25.7588624774534
+            ],
+            [
+              -80.196850046555,
+              25.7588643204685
+            ],
+            [
+              -80.1968478860558,
+              25.7588661644027
+            ],
+            [
+              -80.1968457255444,
+              25.758868010142
+            ],
+            [
+              -80.196843568005,
+              25.7588698586057
+            ],
+            [
+              -80.1968414104715,
+              25.7588717061668
+            ],
+            [
+              -80.1968392559223,
+              25.7588735546469
+            ],
+            [
+              -80.1968370993672,
+              25.7588754049213
+            ],
+            [
+              -80.1968349477898,
+              25.7588772561257
+            ],
+            [
+              -80.19683279321,
+              25.7588791091188
+            ],
+            [
+              -80.1968306416143,
+              25.758880963031
+            ],
+            [
+              -80.1968284900246,
+              25.7588828160406
+            ],
+            [
+              -80.1968263424036,
+              25.7588846717799
+            ],
+            [
+              -80.1968241937737,
+              25.758886529319
+            ],
+            [
+              -80.1968220451376,
+              25.7588883877607
+            ],
+            [
+              -80.1968198994856,
+              25.7588902471214
+            ],
+            [
+              -80.1968177548365,
+              25.758892105585
+            ],
+            [
+              -80.1968156121565,
+              25.7588939676701
+            ],
+            [
+              -80.1968134694764,
+              25.7588958297551
+            ],
+            [
+              -80.196811327793,
+              25.7588976918455
+            ],
+            [
+              -80.1968091880909,
+              25.7588995557522
+            ],
+            [
+              -80.1968070493855,
+              25.7589014196643
+            ],
+            [
+              -80.1968049096529,
+              25.758903288084
+            ],
+            [
+              -80.1968027729166,
+              25.7589051556176
+            ],
+            [
+              -80.1968006371831,
+              25.758907022254
+            ],
+            [
+              -80.1967985034187,
+              25.7589088925118
+            ],
+            [
+              -80.1967963676607,
+              25.7589107627586
+            ],
+            [
+              -80.1967942368865,
+              25.7589126330329
+            ],
+            [
+              -80.1967921041004,
+              25.758914506004
+            ],
+            [
+              -80.1967899733078,
+              25.758916378986
+            ],
+            [
+              -80.196787846484,
+              25.7589182546979
+            ],
+            [
+              -80.1967857156731,
+              25.7589201303877
+            ],
+            [
+              -80.1967835918454,
+              25.7589220052134
+            ],
+            [
+              -80.1967814650032,
+              25.7589238836331
+            ],
+            [
+              -80.1967793401544,
+              25.7589257620636
+            ],
+            [
+              -80.1967772162841,
+              25.7589276432075
+            ],
+            [
+              -80.1967750953978,
+              25.7589295252706
+            ],
+            [
+              -80.1967729735209,
+              25.7589314064254
+            ],
+            [
+              -80.1967708526224,
+              25.7589332902936
+            ],
+            [
+              -80.1967687347142,
+              25.7589351741782
+            ],
+            [
+              -80.196766615809,
+              25.7589370580574
+            ],
+            [
+              -80.1967645008788,
+              25.7589389437636
+            ],
+            [
+              -80.196762382946,
+              25.7589408312587
+            ],
+            [
+              -80.1967602709816,
+              25.7589427205919
+            ],
+            [
+              -80.1967581560268,
+              25.7589446099086
+            ],
+            [
+              -80.1967560430594,
+              25.7589465001389
+            ],
+            [
+              -80.1967539340669,
+              25.7589483921963
+            ],
+            [
+              -80.1967518250743,
+              25.7589502842538
+            ],
+            [
+              -80.1967497160815,
+              25.7589521763112
+            ],
+            [
+              -80.1967476070705,
+              25.7589540710764
+            ],
+            [
+              -80.1967455010437,
+              25.7589559667608
+            ],
+            [
+              -80.1967433950046,
+              25.7589578642503
+            ],
+            [
+              -80.1967412919558,
+              25.7589597617563
+            ],
+            [
+              -80.1967391889008,
+              25.7589616601649
+            ],
+            [
+              -80.1967370888239,
+              25.7589635603951
+            ],
+            [
+              -80.1967349857566,
+              25.7589654606089
+            ],
+            [
+              -80.1967328886637,
+              25.7589673617582
+            ],
+            [
+              -80.1967307885684,
+              25.7589692646963
+            ],
+            [
+              -80.1967286914389,
+              25.7589711712613
+            ],
+            [
+              -80.196726597324,
+              25.7589730742323
+            ],
+            [
+              -80.1967245001944,
+              25.7589749807972
+            ],
+            [
+              -80.1967224060612,
+              25.7589768864759
+            ],
+            [
+              -80.1967203148999,
+              25.758978794879
+            ],
+            [
+              -80.1967182237385,
+              25.7589807032821
+            ],
+            [
+              -80.1967161335496,
+              25.7589826153011
+            ],
+            [
+              -80.196714045354,
+              25.7589845273311
+            ],
+            [
+              -80.1967119571585,
+              25.758986439361
+            ],
+            [
+              -80.1967098689689,
+              25.7589883504883
+            ],
+            [
+              -80.196707784742,
+              25.758990265248
+            ],
+            [
+              -80.1967056995061,
+              25.7589921818075
+            ],
+            [
+              -80.1967036142823,
+              25.7589940965616
+            ],
+            [
+              -80.1967015320305,
+              25.7589960140402
+            ],
+            [
+              -80.1966994537536,
+              25.7589979333458
+            ],
+            [
+              -80.1966973714834,
+              25.7589998535321
+            ],
+            [
+              -80.1966952922035,
+              25.7590017737349
+            ],
+            [
+              -80.1966932169105,
+              25.7590036939596
+            ],
+            [
+              -80.1966911406086,
+              25.7590056159841
+            ],
+            [
+              -80.196689065279,
+              25.7590075416244
+            ],
+            [
+              -80.1966869889709,
+              25.7590094645514
+            ],
+            [
+              -80.1966849156347,
+              25.7590113902027
+            ],
+            [
+              -80.1966828462734,
+              25.7590133176812
+            ],
+            [
+              -80.1966807759274,
+              25.759015243349
+            ],
+            [
+              -80.1966787065477,
+              25.7590171735353
+            ],
+            [
+              -80.1966766361772,
+              25.7590191028135
+            ],
+            [
+              -80.1966745697816,
+              25.7590210339188
+            ],
+            [
+              -80.1966725033859,
+              25.7590229650242
+            ],
+            [
+              -80.1966704389654,
+              25.7590248988483
+            ],
+            [
+              -80.1966683755417,
+              25.7590268326779
+            ],
+            [
+              -80.1966663141114,
+              25.7590287665186
+            ],
+            [
+              -80.1966642536595,
+              25.7590307030725
+            ],
+            [
+              -80.1966621932137,
+              25.7590326387238
+            ],
+            [
+              -80.1966601317407,
+              25.7590345788826
+            ],
+            [
+              -80.1966580742607,
+              25.7590365181608
+            ],
+            [
+              -80.1966560197709,
+              25.7590384574555
+            ],
+            [
+              -80.1966539642904,
+              25.7590403958419
+            ],
+            [
+              -80.1966519097762,
+              25.759042338747
+            ],
+            [
+              -80.1966498552497,
+              25.7590442834573
+            ],
+            [
+              -80.1966478037318,
+              25.7590462254762
+            ],
+            [
+              -80.1966457551858,
+              25.7590481702194
+            ],
+            [
+              -80.1966437026344,
+              25.7590501176485
+            ],
+            [
+              -80.1966416540883,
+              25.7590520623916
+            ],
+            [
+              -80.1966396084899,
+              25.7590540134696
+            ],
+            [
+              -80.1966375629157,
+              25.759055960937
+            ],
+            [
+              -80.1966355173232,
+              25.7590579111123
+            ],
+            [
+              -80.1966334747209,
+              25.7590598613041
+            ],
+            [
+              -80.1966314320943,
+              25.7590618151063
+            ],
+            [
+              -80.1966293894736,
+              25.7590637680058
+            ],
+            [
+              -80.1966273498432,
+              25.7590657209218
+            ],
+            [
+              -80.1966253101945,
+              25.7590676765457
+            ],
+            [
+              -80.196623273536,
+              25.759069632186
+            ],
+            [
+              -80.1966212368714,
+              25.7590715887289
+            ],
+            [
+              -80.1966192001884,
+              25.7590735479796
+            ],
+            [
+              -80.1966171665018,
+              25.7590755063442
+            ],
+            [
+              -80.1966151327968,
+              25.7590774674166
+            ],
+            [
+              -80.196613102076,
+              25.7590794294081
+            ],
+            [
+              -80.1966110713613,
+              25.7590813904969
+            ],
+            [
+              -80.1966090406221,
+              25.7590833551962
+            ],
+            [
+              -80.1966070128792,
+              25.7590853190094
+            ],
+            [
+              -80.196604986127,
+              25.7590872837306
+            ],
+            [
+              -80.196602961356,
+              25.759089250268
+            ],
+            [
+              -80.196600936579,
+              25.759091217708
+            ],
+            [
+              -80.1965989118079,
+              25.7590931842455
+            ],
+            [
+              -80.1965968900027,
+              25.7590951544098
+            ],
+            [
+              -80.1965948692003,
+              25.759097123677
+            ],
+            [
+              -80.1965928473768,
+              25.7590990965491
+            ],
+            [
+              -80.1965908285678,
+              25.7591010658272
+            ],
+            [
+              -80.1965888137093,
+              25.759103040543
+            ],
+            [
+              -80.1965867948698,
+              25.7591050143342
+            ],
+            [
+              -80.1965847790145,
+              25.7591069890444
+            ],
+            [
+              -80.19658276714,
+              25.7591089646793
+            ],
+            [
+              -80.1965807542565,
+              25.7591109421138
+            ],
+            [
+              -80.1965787423637,
+              25.7591129204564
+            ],
+            [
+              -80.1965767324461,
+              25.7591149015179
+            ],
+            [
+              -80.1965747235434,
+              25.759116879877
+            ],
+            [
+              -80.1965727136257,
+              25.7591188609384
+            ],
+            [
+              -80.1965707076828,
+              25.759120843827
+            ],
+            [
+              -80.196568700737,
+              25.7591228276127
+            ],
+            [
+              -80.1965666977781,
+              25.7591248114204
+            ],
+            [
+              -80.1965646938225,
+              25.7591267952225
+            ],
+            [
+              -80.1965626938416,
+              25.7591287808519
+            ],
+            [
+              -80.1965606898433,
+              25.7591307709723
+            ],
+            [
+              -80.1965586928526,
+              25.7591327566181
+            ],
+            [
+              -80.1965566928473,
+              25.7591347458578
+            ],
+            [
+              -80.1965546948172,
+              25.7591367378164
+            ],
+            [
+              -80.1965527007923,
+              25.7591387270891
+            ],
+            [
+              -80.1965507067491,
+              25.7591407190696
+            ],
+            [
+              -80.1965487116908,
+              25.7591427137525
+            ],
+            [
+              -80.1965467176475,
+              25.7591447057329
+            ],
+            [
+              -80.1965447265579,
+              25.7591467031456
+            ],
+            [
+              -80.1965427384768,
+              25.7591486978669
+            ],
+            [
+              -80.1965407493806,
+              25.7591506952904
+            ],
+            [
+              -80.1965387612811,
+              25.7591526927195
+            ],
+            [
+              -80.1965367731634,
+              25.7591546928564
+            ],
+            [
+              -80.1965347910443,
+              25.7591566903184
+            ],
+            [
+              -80.1965328058924,
+              25.7591586940822
+            ],
+            [
+              -80.196530823755,
+              25.759160694252
+            ],
+            [
+              -80.1965288406025,
+              25.7591626971242
+            ],
+            [
+              -80.1965268614188,
+              25.7591647027261
+            ],
+            [
+              -80.1965248822532,
+              25.7591667056202
+            ],
+            [
+              -80.1965229030694,
+              25.7591687112221
+            ],
+            [
+              -80.1965209268576,
+              25.7591707195484
+            ],
+            [
+              -80.1965189506578,
+              25.7591727260693
+            ],
+            [
+              -80.196516977436,
+              25.759174734412
+            ],
+            [
+              -80.1965150041961,
+              25.7591767454625
+            ],
+            [
+              -80.196513030956,
+              25.759178756513
+            ],
+            [
+              -80.1965110607001,
+              25.7591807684826
+            ],
+            [
+              -80.1965090914469,
+              25.759182779555
+            ],
+            [
+              -80.196507124169,
+              25.7591847933463
+            ],
+            [
+              -80.1965051568849,
+              25.7591868080401
+            ],
+            [
+              -80.1965031895886,
+              25.7591888245392
+            ],
+            [
+              -80.1965012252826,
+              25.7591908410548
+            ],
+            [
+              -80.1964992609704,
+              25.7591928584729
+            ],
+            [
+              -80.1964973006512,
+              25.7591948750104
+            ],
+            [
+              -80.1964953393109,
+              25.7591968951528
+            ],
+            [
+              -80.1964933779584,
+              25.7591989171004
+            ],
+            [
+              -80.1964914196083,
+              25.7592009372593
+            ],
+            [
+              -80.196489465233,
+              25.7592029592454
+            ],
+            [
+              -80.1964875068463,
+              25.7592049848199
+            ],
+            [
+              -80.1964855514801,
+              25.7592070058979
+            ],
+            [
+              -80.1964836000645,
+              25.7592090324135
+            ],
+            [
+              -80.196481647646,
+              25.7592110598262
+            ],
+            [
+              -80.1964796952396,
+              25.7592130854336
+            ],
+            [
+              -80.1964777467898,
+              25.7592151155761
+            ],
+            [
+              -80.1964757973553,
+              25.7592171439078
+            ],
+            [
+              -80.1964738489053,
+              25.7592191740503
+            ],
+            [
+              -80.1964719024427,
+              25.7592212051063
+            ],
+            [
+              -80.1964699559801,
+              25.7592232361623
+            ],
+            [
+              -80.1964680134923,
+              25.7592252690456
+            ],
+            [
+              -80.1964660709983,
+              25.7592273028314
+            ],
+            [
+              -80.1964641304796,
+              25.759229339336
+            ],
+            [
+              -80.1964621909697,
+              25.7592313740409
+            ],
+            [
+              -80.1964602504448,
+              25.7592334114482
+            ],
+            [
+              -80.1964583138947,
+              25.7592354506826
+            ],
+            [
+              -80.1964563763721,
+              25.759237486301
+            ],
+            [
+              -80.1964544427878,
+              25.7592395291623
+            ],
+            [
+              -80.19645250924,
+              25.7592415666079
+            ],
+            [
+              -80.1964505746588,
+              25.7592436094637
+            ],
+            [
+              -80.1964486440707,
+              25.7592456514389
+            ],
+            [
+              -80.1964467134643,
+              25.7592476961219
+            ],
+            [
+              -80.1964447828579,
+              25.7592497408048
+            ],
+            [
+              -80.196442854257,
+              25.7592517836935
+            ],
+            [
+              -80.1964409296067,
+              25.7592538320199
+            ],
+            [
+              -80.1964390049624,
+              25.7592558794437
+            ],
+            [
+              -80.196437080318,
+              25.7592579268674
+            ],
+            [
+              -80.1964351586456,
+              25.7592599770155
+            ],
+            [
+              -80.1964332359764,
+              25.759262027158
+            ],
+            [
+              -80.1964313142856,
+              25.7592640800138
+            ],
+            [
+              -80.1964293956094,
+              25.7592661292757
+            ],
+            [
+              -80.1964274769028,
+              25.7592681830506
+            ],
+            [
+              -80.1964255611742,
+              25.7592702386472
+            ],
+            [
+              -80.1964236454637,
+              25.759272291536
+            ],
+            [
+              -80.1964217327131,
+              25.7592743489543
+            ],
+            [
+              -80.1964198169782,
+              25.7592764054535
+            ],
+            [
+              -80.1964179072117,
+              25.7592784637909
+            ],
+            [
+              -80.1964159974451,
+              25.7592805221282
+            ],
+            [
+              -80.1964140876724,
+              25.7592825813682
+            ],
+            [
+              -80.1964121778874,
+              25.7592846424134
+            ],
+            [
+              -80.1964102710927,
+              25.759286703475
+            ],
+            [
+              -80.1964083672699,
+              25.759288767261
+            ],
+            [
+              -80.1964064604569,
+              25.7592908310304
+            ],
+            [
+              -80.196404560621,
+              25.7592928948384
+            ],
+            [
+              -80.196402656792,
+              25.7592949595269
+            ],
+            [
+              -80.196400755941,
+              25.7592970260371
+            ],
+            [
+              -80.1963988580803,
+              25.7592990925639
+            ],
+            [
+              -80.1963969602013,
+              25.7593011617984
+            ],
+            [
+              -80.1963950633129,
+              25.7593032319411
+            ],
+            [
+              -80.196393168424,
+              25.7593053011921
+            ],
+            [
+              -80.1963912735351,
+              25.759307370443
+            ],
+            [
+              -80.1963893786218,
+              25.7593094433044
+            ],
+            [
+              -80.1963874877015,
+              25.7593115152852
+            ],
+            [
+              -80.1963855987565,
+              25.7593135899849
+            ],
+            [
+              -80.1963837078179,
+              25.7593156646735
+            ],
+            [
+              -80.196381564778,
+              25.7593180223058
+            ],
+            [
+              -80.1964958518741,
+              25.7594086421612
+            ],
+            [
+              -80.1964355312372,
+              25.7594748798227
+            ],
+            [
+              -80.1963764960439,
+              25.7595420597011
+            ],
+            [
+              -80.1963187633676,
+              25.7596101629364
+            ],
+            [
+              -80.1962623493091,
+              25.7596791670529
+            ],
+            [
+              -80.1962234396314,
+              25.7597285412319
+            ],
+            [
+              -80.1944816211581,
+              25.7587117661627
+            ],
+            [
+              -80.1944737672913,
+              25.7587063194308
+            ],
+            [
+              -80.1944669692362,
+              25.758699807995
+            ],
+            [
+              -80.1944614082847,
+              25.7586923980441
+            ],
+            [
+              -80.1944572186981,
+              25.7586842825859
+            ],
+            [
+              -80.1944545117394,
+              25.758675665333
+            ],
+            [
+              -80.1944533566918,
+              25.7586667669159
+            ],
+            [
+              -80.1944537809199,
+              25.758657815857
+            ],
+            [
+              -80.1944557758932,
+              25.7586490422855
+            ],
+            [
+              -80.1944592872848,
+              25.7586406679529
+            ],
+            [
+              -80.1944642279302,
+              25.7586329063056
+            ],
+            [
+              -80.1944704728914,
+              25.7586259552355
+            ],
+            [
+              -80.1944778594698,
+              25.7586199952752
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:87",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Southside Park",
+      "geometry_type": "Polygon",
+      "lon": -80.196157,
+      "lat": 25.762995,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 106
+      },
+      "area_acres": 1.829,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1957218750875,
+              25.7633526021777
+            ],
+            [
+              -80.1956998421313,
+              25.7625480037923
+            ],
+            [
+              -80.1962967707703,
+              25.7625331457537
+            ],
+            [
+              -80.1963082888892,
+              25.7629343740147
+            ],
+            [
+              -80.1964568876743,
+              25.762930308328
+            ],
+            [
+              -80.1966113159914,
+              25.7629260823985
+            ],
+            [
+              -80.1967651540799,
+              25.762921871101
+            ],
+            [
+              -80.1967736547553,
+              25.7633292631403
+            ],
+            [
+              -80.1966219081999,
+              25.7633326293638
+            ],
+            [
+              -80.1964677588955,
+              25.7633360516695
+            ],
+            [
+              -80.1957218750875,
+              25.7633526021777
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:88",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Spring Garden Point Park",
+      "geometry_type": "Polygon",
+      "lon": -80.207612,
+      "lat": 25.779393,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 107
+      },
+      "area_acres": 1.417,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2077464227885,
+              25.7796775226275
+            ],
+            [
+              -80.2077507716886,
+              25.7798247434722
+            ],
+            [
+              -80.2073143457247,
+              25.7798458109868
+            ],
+            [
+              -80.2073113810013,
+              25.7796929136849
+            ],
+            [
+              -80.207296304613,
+              25.7788790101008
+            ],
+            [
+              -80.2073408510957,
+              25.7788941420231
+            ],
+            [
+              -80.2073652902204,
+              25.7789131134957
+            ],
+            [
+              -80.2073929227377,
+              25.7789161660493
+            ],
+            [
+              -80.2074197003029,
+              25.778923052917
+            ],
+            [
+              -80.207436193221,
+              25.7789299343067
+            ],
+            [
+              -80.2074478021092,
+              25.7789353006188
+            ],
+            [
+              -80.20746815742,
+              25.7789475611825
+            ],
+            [
+              -80.207488671434,
+              25.7789645958286
+            ],
+            [
+              -80.2075060342823,
+              25.7789842959885
+            ],
+            [
+              -80.2076258823902,
+              25.7790176192798
+            ],
+            [
+              -80.2081047939323,
+              25.779235609153
+            ],
+            [
+              -80.2078960826953,
+              25.7796403502867
+            ],
+            [
+              -80.2078961044896,
+              25.7796754987483
+            ],
+            [
+              -80.2077464227885,
+              25.7796775226275
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:89",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Theodore Gibson Park",
+      "geometry_type": "Polygon",
+      "lon": -80.201071,
+      "lat": 25.786927,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 110
+      },
+      "area_acres": 10.468,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2005688714703,
+              25.7868603453689
+            ],
+            [
+              -80.2005152121783,
+              25.7868621509366
+            ],
+            [
+              -80.2005097867435,
+              25.7867245510129
+            ],
+            [
+              -80.2004684594868,
+              25.7867259513519
+            ],
+            [
+              -80.2004128734512,
+              25.78672917609
+            ],
+            [
+              -80.2001997322728,
+              25.7867371085024
+            ],
+            [
+              -80.1999441465819,
+              25.7867459291636
+            ],
+            [
+              -80.1999406255991,
+              25.7866850793494
+            ],
+            [
+              -80.1999362881106,
+              25.7866041618543
+            ],
+            [
+              -80.1999329387269,
+              25.7865416620368
+            ],
+            [
+              -80.1999290852538,
+              25.7864697412016
+            ],
+            [
+              -80.1999257172102,
+              25.7864069027867
+            ],
+            [
+              -80.1999219086241,
+              25.7863358713068
+            ],
+            [
+              -80.1999181684814,
+              25.7862660813457
+            ],
+            [
+              -80.1999143811343,
+              25.7861954516602
+            ],
+            [
+              -80.1999106135075,
+              25.7861251524523
+            ],
+            [
+              -80.1999071490653,
+              25.7860604865416
+            ],
+            [
+              -80.1999033761472,
+              25.7859900853038
+            ],
+            [
+              -80.1999001266805,
+              25.7859294888157
+            ],
+            [
+              -80.2001473106127,
+              25.7859208314186
+            ],
+            [
+              -80.2001927720869,
+              25.7859222782863
+            ],
+            [
+              -80.2016479822153,
+              25.7858782610746
+            ],
+            [
+              -80.2021679999408,
+              25.7868066947184
+            ],
+            [
+              -80.2021905865314,
+              25.7873809724156
+            ],
+            [
+              -80.2021925428285,
+              25.787430572913
+            ],
+            [
+              -80.202111369207,
+              25.7875177343579
+            ],
+            [
+              -80.2019540971555,
+              25.7876866004466
+            ],
+            [
+              -80.2019553406373,
+              25.7879229669685
+            ],
+            [
+              -80.2018221559417,
+              25.7879271719193
+            ],
+            [
+              -80.2016985867301,
+              25.7879310720683
+            ],
+            [
+              -80.2013816451254,
+              25.7879428116273
+            ],
+            [
+              -80.2012320652376,
+              25.7879466967511
+            ],
+            [
+              -80.2010828832149,
+              25.787950573977
+            ],
+            [
+              -80.200935181047,
+              25.7879544131436
+            ],
+            [
+              -80.2007787033956,
+              25.7879584810587
+            ],
+            [
+              -80.2006166164443,
+              25.787962690386
+            ],
+            [
+              -80.2004665977454,
+              25.7879665876552
+            ],
+            [
+              -80.2003157563387,
+              25.7879705064235
+            ],
+            [
+              -80.2001543973205,
+              25.7879746984759
+            ],
+            [
+              -80.200003901929,
+              25.7879786088938
+            ],
+            [
+              -80.199992756955,
+              25.7877020931918
+            ],
+            [
+              -80.1999819971584,
+              25.7874351928138
+            ],
+            [
+              -80.2001308834271,
+              25.7874317609885
+            ],
+            [
+              -80.2002922604896,
+              25.787428039328
+            ],
+            [
+              -80.2004431222079,
+              25.7874245575653
+            ],
+            [
+              -80.2005931582261,
+              25.7874210981879
+            ],
+            [
+              -80.2005688714703,
+              25.7868603453689
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:90",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Town Park",
+      "geometry_type": "Polygon",
+      "lon": -80.20315,
+      "lat": 25.791252,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 111
+      },
+      "area_acres": 0.84,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.202894905483,
+              25.7909204622328
+            ],
+            [
+              -80.203274844032,
+              25.7909066987607
+            ],
+            [
+              -80.2034969580139,
+              25.7915409080515
+            ],
+            [
+              -80.2029161466901,
+              25.7915539478013
+            ],
+            [
+              -80.202904848527,
+              25.7912170054348
+            ],
+            [
+              -80.202894905483,
+              25.7909204622328
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:91",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Triangle Park",
+      "geometry_type": "Polygon",
+      "lon": -80.201026,
+      "lat": 25.763055,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 112
+      },
+      "area_acres": 0.707,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2007303924284,
+              25.7632524588059
+            ],
+            [
+              -80.2007114622396,
+              25.762684169446
+            ],
+            [
+              -80.2016356327049,
+              25.7632283701585
+            ],
+            [
+              -80.2007303924284,
+              25.7632524588059
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:96",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Williams Park",
+      "geometry_type": "Polygon",
+      "lon": -80.202268,
+      "lat": 25.792282,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 144
+      },
+      "area_acres": 4.914,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2014719921397,
+              25.7917421296945
+            ],
+            [
+              -80.203017514695,
+              25.7917191970524
+            ],
+            [
+              -80.2030318470837,
+              25.7917201674029
+            ],
+            [
+              -80.2030457838092,
+              25.7917233488801
+            ],
+            [
+              -80.2030589107151,
+              25.7917286480472
+            ],
+            [
+              -80.2030708389995,
+              25.7917359075186
+            ],
+            [
+              -80.2030812151485,
+              25.7917449114297
+            ],
+            [
+              -80.2030897298554,
+              25.79175539361
+            ],
+            [
+              -80.2030961329399,
+              25.7917670430803
+            ],
+            [
+              -80.2031002332819,
+              25.7917795139818
+            ],
+            [
+              -80.2031019097102,
+              25.7917924373699
+            ],
+            [
+              -80.2031277706851,
+              25.792776246454
+            ],
+            [
+              -80.2025118733536,
+              25.7927804511819
+            ],
+            [
+              -80.2023489311297,
+              25.7927815633491
+            ],
+            [
+              -80.2020440920124,
+              25.792783643538
+            ],
+            [
+              -80.2016573631891,
+              25.7927862538972
+            ],
+            [
+              -80.2016564218002,
+              25.7934027525221
+            ],
+            [
+              -80.2016066064241,
+              25.7934029051236
+            ],
+            [
+              -80.2015978153903,
+              25.7929382734079
+            ],
+            [
+              -80.2014596149385,
+              25.7929391755781
+            ],
+            [
+              -80.2014538856032,
+              25.7927849987668
+            ],
+            [
+              -80.2014644898781,
+              25.7921742624173
+            ],
+            [
+              -80.2014719921397,
+              25.7917421296945
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:100",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Jose Marti Park",
+      "geometry_type": "MultiPolygon",
+      "lon": -80.200209,
+      "lat": 25.770285,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 55
+      },
+      "area_acres": 5.71,
+      "geometry_wgs84": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -80.1992532043101,
+                25.7686414321946
+              ],
+              [
+                -80.1992404111192,
+                25.7682322024836
+              ],
+              [
+                -80.1993834707792,
+                25.768230081164
+              ],
+              [
+                -80.1995277277909,
+                25.7682279437227
+              ],
+              [
+                -80.1996875036817,
+                25.7682255764486
+              ],
+              [
+                -80.1998418859315,
+                25.7682232912752
+              ],
+              [
+                -80.1998477330968,
+                25.7683498824084
+              ],
+              [
+                -80.1997949163545,
+                25.768635797592
+              ],
+              [
+                -80.1996981493337,
+                25.7686338853697
+              ],
+              [
+                -80.1997097667753,
+                25.7687025823666
+              ],
+              [
+                -80.1997136526482,
+                25.7687719914657
+              ],
+              [
+                -80.1997097688448,
+                25.7688414011683
+              ],
+              [
+                -80.1996981530177,
+                25.7689101003911
+              ],
+              [
+                -80.1996789304999,
+                25.7689773848503
+              ],
+              [
+                -80.1996522923207,
+                25.7690425650649
+              ],
+              [
+                -80.1995604219752,
+                25.7690459547682
+              ],
+              [
+                -80.1994079658451,
+                25.7690517741701
+              ],
+              [
+                -80.1992662049912,
+                25.7690571846823
+              ],
+              [
+                -80.1992532043101,
+                25.7686414321946
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -80.1994298709269,
+                25.7696127400226
+              ],
+              [
+                -80.1992802686619,
+                25.7696165521335
+              ],
+              [
+                -80.1992756196899,
+                25.7694677732072
+              ],
+              [
+                -80.199267411005,
+                25.769205178323
+              ],
+              [
+                -80.1994352923027,
+                25.7692069052392
+              ],
+              [
+                -80.1995662791249,
+                25.7692105457731
+              ],
+              [
+                -80.1995670785907,
+                25.7692725217106
+              ],
+              [
+                -80.1994446607637,
+                25.7694721702246
+              ],
+              [
+                -80.1994314339476,
+                25.7694943324818
+              ],
+              [
+                -80.1994298709269,
+                25.7696127400226
+              ]
+            ]
+          ],
+          [
+            [
+              [
+                -80.1997797741765,
+                25.7704320170429
+              ],
+              [
+                -80.1998797664617,
+                25.770193115954
+              ],
+              [
+                -80.2000495256772,
+                25.7699846818458
+              ],
+              [
+                -80.2001864698805,
+                25.7695925563212
+              ],
+              [
+                -80.2003459758529,
+                25.7695852204852
+              ],
+              [
+                -80.2004903474072,
+                25.7695785821278
+              ],
+              [
+                -80.2005033124927,
+                25.7699703869912
+              ],
+              [
+                -80.2005047008414,
+                25.7701217449129
+              ],
+              [
+                -80.2005174534424,
+                25.7701213898194
+              ],
+              [
+                -80.2006676832146,
+                25.77011849428
+              ],
+              [
+                -80.2008185411043,
+                25.7701155866895
+              ],
+              [
+                -80.2008336773898,
+                25.7705377731499
+              ],
+              [
+                -80.2008377706255,
+                25.7706519350113
+              ],
+              [
+                -80.2008568440207,
+                25.7710964060572
+              ],
+              [
+                -80.200859024567,
+                25.7712082854334
+              ],
+              [
+                -80.2008616229184,
+                25.7713415825079
+              ],
+              [
+                -80.2008643028208,
+                25.7714790764544
+              ],
+              [
+                -80.2008681632617,
+                25.7720450483465
+              ],
+              [
+                -80.2005144111467,
+                25.7720587383922
+              ],
+              [
+                -80.2004779600084,
+                25.7720412234791
+              ],
+              [
+                -80.2004649690283,
+                25.7717755758387
+              ],
+              [
+                -80.2002791506395,
+                25.7715586559835
+              ],
+              [
+                -80.2002620197607,
+                25.7712496149738
+              ],
+              [
+                -80.2001902657438,
+                25.7712511315594
+              ],
+              [
+                -80.2001875585593,
+                25.7711828121492
+              ],
+              [
+                -80.2000368697072,
+                25.7709980867522
+              ],
+              [
+                -80.2001264502086,
+                25.770934095521
+              ],
+              [
+                -80.2001225055799,
+                25.770822850037
+              ],
+              [
+                -80.2001224566015,
+                25.7706641997539
+              ],
+              [
+                -80.200084716486,
+                25.7706281678931
+              ],
+              [
+                -80.1998609937474,
+                25.7706360133037
+              ],
+              [
+                -80.1998567111478,
+                25.7705667302186
+              ],
+              [
+                -80.1998043624942,
+                25.7705280490226
+              ],
+              [
+                -80.1998355126154,
+                25.7705030453452
+              ],
+              [
+                -80.1997797741765,
+                25.7704320170429
+              ]
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:104",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "City Cemetery",
+      "geometry_type": "Polygon",
+      "lon": -80.192746,
+      "lat": 25.79338,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 21
+      },
+      "area_acres": 9.792,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.19428507663,
+              25.7938152493398
+            ],
+            [
+              -80.190857798618,
+              25.7939030065227
+            ],
+            [
+              -80.1908422721435,
+              25.792962218054
+            ],
+            [
+              -80.1924017299319,
+              25.7929215305624
+            ],
+            [
+              -80.1926917890524,
+              25.7929125844017
+            ],
+            [
+              -80.1927640894985,
+              25.792912108324
+            ],
+            [
+              -80.1928390943243,
+              25.7929101154256
+            ],
+            [
+              -80.1929179148889,
+              25.7929081346358
+            ],
+            [
+              -80.1929756414087,
+              25.792906571128
+            ],
+            [
+              -80.1929969159951,
+              25.792905995939
+            ],
+            [
+              -80.1931348065113,
+              25.7929023966632
+            ],
+            [
+              -80.1932917216645,
+              25.792898300712
+            ],
+            [
+              -80.1934344269152,
+              25.7928945762118
+            ],
+            [
+              -80.1935978860502,
+              25.7928903086106
+            ],
+            [
+              -80.1937538178952,
+              25.7928862373983
+            ],
+            [
+              -80.193903537818,
+              25.7928823301729
+            ],
+            [
+              -80.1940673709048,
+              25.7928780523815
+            ],
+            [
+              -80.1942316487573,
+              25.7928737633295
+            ],
+            [
+              -80.1943941604702,
+              25.7928695193707
+            ],
+            [
+              -80.1946563288701,
+              25.7928626741264
+            ],
+            [
+              -80.1946789330357,
+              25.7937368829192
+            ],
+            [
+              -80.1942856135619,
+              25.7937358175014
+            ],
+            [
+              -80.19428507663,
+              25.7938152493398
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:105",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Highland Circle Mini Park",
+      "geometry_type": "Polygon",
+      "lon": -80.208904,
+      "lat": 25.786607,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 51
+      },
+      "area_acres": 0.254,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2087561402151,
+              25.786454169582
+            ],
+            [
+              -80.2090454946561,
+              25.7864421384013
+            ],
+            [
+              -80.2090559082822,
+              25.786757517094
+            ],
+            [
+              -80.2087594037341,
+              25.7867706954732
+            ],
+            [
+              -80.2087561402151,
+              25.786454169582
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:110",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "UNNAMED - Little Havana Recreation Facility",
+      "geometry_type": "Polygon",
+      "lon": -80.201739,
+      "lat": 25.773987,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 138
+      },
+      "area_acres": 0.355,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2014942252238,
+              25.7740174445341
+            ],
+            [
+              -80.2014029154755,
+              25.7738249721196
+            ],
+            [
+              -80.2014284602086,
+              25.7738245806415
+            ],
+            [
+              -80.2014930343967,
+              25.7738235936494
+            ],
+            [
+              -80.2015523383228,
+              25.7738226869325
+            ],
+            [
+              -80.2016635622155,
+              25.7738209872711
+            ],
+            [
+              -80.2016683239998,
+              25.7738209141028
+            ],
+            [
+              -80.2016752005739,
+              25.7738204950861
+            ],
+            [
+              -80.201682925065,
+              25.7738186554344
+            ],
+            [
+              -80.2016901819422,
+              25.7738156325491
+            ],
+            [
+              -80.2016967512687,
+              25.773811518197
+            ],
+            [
+              -80.2017024338248,
+              25.7738064367536
+            ],
+            [
+              -80.2017070601044,
+              25.7738005416426
+            ],
+            [
+              -80.2017104893599,
+              25.7737940090117
+            ],
+            [
+              -80.2017126175715,
+              25.7737870386789
+            ],
+            [
+              -80.2017133815314,
+              25.7737798397127
+            ],
+            [
+              -80.2017127578528,
+              25.7737726295236
+            ],
+            [
+              -80.201710765012,
+              25.7737656266547
+            ],
+            [
+              -80.2019536775388,
+              25.774021084226
+            ],
+            [
+              -80.2020928686462,
+              25.774190745286
+            ],
+            [
+              -80.2018996814153,
+              25.7742068813872
+            ],
+            [
+              -80.2017160524136,
+              25.7740558914367
+            ],
+            [
+              -80.2014942252238,
+              25.7740174445341
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:117",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Margaret Pace Park",
+      "geometry_type": "Polygon",
+      "lon": -80.186051,
+      "lat": 25.794136,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 71
+      },
+      "area_acres": 10.286,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1865924023589,
+              25.7922833116914
+            ],
+            [
+              -80.1866569010238,
+              25.7922089314134
+            ],
+            [
+              -80.1867256086656,
+              25.7921377050189
+            ],
+            [
+              -80.1867983354888,
+              25.7920698300232
+            ],
+            [
+              -80.1868748838152,
+              25.792005490358
+            ],
+            [
+              -80.1869550440532,
+              25.7919448626671
+            ],
+            [
+              -80.1869577002003,
+              25.7920188395083
+            ],
+            [
+              -80.1868060921069,
+              25.7921288189461
+            ],
+            [
+              -80.1866501215896,
+              25.7922997268635
+            ],
+            [
+              -80.1865460309397,
+              25.7924392897004
+            ],
+            [
+              -80.186496679723,
+              25.7925757502395
+            ],
+            [
+              -80.1864711159006,
+              25.7926449702497
+            ],
+            [
+              -80.1864580355854,
+              25.7926874352218
+            ],
+            [
+              -80.1864097052388,
+              25.7928443364549
+            ],
+            [
+              -80.1863961841635,
+              25.792920108427
+            ],
+            [
+              -80.186384279467,
+              25.7929954227704
+            ],
+            [
+              -80.1863738522321,
+              25.7930710576926
+            ],
+            [
+              -80.1863649388118,
+              25.7931468003728
+            ],
+            [
+              -80.1863575277181,
+              25.793222727472
+            ],
+            [
+              -80.1863516264627,
+              25.7932987614048
+            ],
+            [
+              -80.1863472348884,
+              25.7933749256395
+            ],
+            [
+              -80.1863443651054,
+              25.7934510532543
+            ],
+            [
+              -80.1863430063267,
+              25.793527264241
+            ],
+            [
+              -80.186343166704,
+              25.7936035333712
+            ],
+            [
+              -80.1863448414041,
+              25.7936796927257
+            ],
+            [
+              -80.1863480208598,
+              25.7937556835789
+            ],
+            [
+              -80.1863536927119,
+              25.7938339124962
+            ],
+            [
+              -80.1863615659066,
+              25.7939120291624
+            ],
+            [
+              -80.1863716281271,
+              25.793989939633
+            ],
+            [
+              -80.1863838777164,
+              25.7940675951556
+            ],
+            [
+              -80.1863983020805,
+              25.7941449424029
+            ],
+            [
+              -80.1864148965836,
+              25.7942219308004
+            ],
+            [
+              -80.1864336475726,
+              25.7942985160413
+            ],
+            [
+              -80.1864545414812,
+              25.7943746411822
+            ],
+            [
+              -80.1864775696354,
+              25.7944502628467
+            ],
+            [
+              -80.1865027144493,
+              25.7945253285821
+            ],
+            [
+              -80.1865299592849,
+              25.7945997931619
+            ],
+            [
+              -80.186559568829,
+              25.7946743206081
+            ],
+            [
+              -80.1865839136086,
+              25.7947449245853
+            ],
+            [
+              -80.1865909239737,
+              25.7947610254876
+            ],
+            [
+              -80.1866126363683,
+              25.7948108953867
+            ],
+            [
+              -80.1866466149699,
+              25.7948748023384
+            ],
+            [
+              -80.1866856495555,
+              25.7949362724288
+            ],
+            [
+              -80.1867295507465,
+              25.7949950040137
+            ],
+            [
+              -80.1867780774699,
+              25.7950506725933
+            ],
+            [
+              -80.1868309665247,
+              25.7951029815262
+            ],
+            [
+              -80.1868879406572,
+              25.7951516476316
+            ],
+            [
+              -80.1869486885087,
+              25.7951964173259
+            ],
+            [
+              -80.1870142648056,
+              25.7952379048842
+            ],
+            [
+              -80.1870978256194,
+              25.7952700638919
+            ],
+            [
+              -80.1869881464277,
+              25.7952717290818
+            ],
+            [
+              -80.1869785013825,
+              25.7955575099428
+            ],
+            [
+              -80.1869700787393,
+              25.795807184542
+            ],
+            [
+              -80.1866836516203,
+              25.7958119222947
+            ],
+            [
+              -80.1866783029721,
+              25.7958049365888
+            ],
+            [
+              -80.1866717938046,
+              25.7957988118358
+            ],
+            [
+              -80.1866642905713,
+              25.7957937033191
+            ],
+            [
+              -80.1866559838153,
+              25.7957897429878
+            ],
+            [
+              -80.186647086237,
+              25.7957870304198
+            ],
+            [
+              -80.1866378256955,
+              25.7957856354906
+            ],
+            [
+              -80.1866065344561,
+              25.795785514643
+            ],
+            [
+              -80.1865754658285,
+              25.7957821418958
+            ],
+            [
+              -80.1865450303038,
+              25.795775563775
+            ],
+            [
+              -80.1865026571521,
+              25.7957684485946
+            ],
+            [
+              -80.1864893293914,
+              25.7957680824885
+            ],
+            [
+              -80.1864762278483,
+              25.7957658356286
+            ],
+            [
+              -80.1864636752025,
+              25.7957617639789
+            ],
+            [
+              -80.1863893162773,
+              25.7957530048415
+            ],
+            [
+              -80.186314432188,
+              25.7957494600246
+            ],
+            [
+              -80.1862394694922,
+              25.7957511491761
+            ],
+            [
+              -80.1861648729509,
+              25.7957580630502
+            ],
+            [
+              -80.1861343898138,
+              25.7957645946143
+            ],
+            [
+              -80.1861031678427,
+              25.7957668886253
+            ],
+            [
+              -80.18607192033,
+              25.7957648922083
+            ],
+            [
+              -80.1860282326634,
+              25.7957648390602
+            ],
+            [
+              -80.1860141240196,
+              25.7957650796316
+            ],
+            [
+              -80.1860002050559,
+              25.7957671843256
+            ],
+            [
+              -80.1859867742206,
+              25.7957711069722
+            ],
+            [
+              -80.1859741222445,
+              25.7957767634476
+            ],
+            [
+              -80.1859489688143,
+              25.7957848701349
+            ],
+            [
+              -80.1859226995746,
+              25.7957891884835
+            ],
+            [
+              -80.1858960052854,
+              25.7957896068208
+            ],
+            [
+              -80.1858695859932,
+              25.7957861137205
+            ],
+            [
+              -80.1858322262534,
+              25.7957813426011
+            ],
+            [
+              -80.185794517875,
+              25.7957825053229
+            ],
+            [
+              -80.1857904622154,
+              25.7957827164026
+            ],
+            [
+              -80.1857864183985,
+              25.7957823615892
+            ],
+            [
+              -80.1857824830717,
+              25.7957814513529
+            ],
+            [
+              -80.1857787468324,
+              25.7957800060592
+            ],
+            [
+              -80.1857753001791,
+              25.7957780605152
+            ],
+            [
+              -80.1857722225747,
+              25.7957756593957
+            ],
+            [
+              -80.1857695874073,
+              25.7957728608808
+            ],
+            [
+              -80.185743682253,
+              25.7957495737958
+            ],
+            [
+              -80.1857343622359,
+              25.7957383513651
+            ],
+            [
+              -80.1857232667084,
+              25.7957285406607
+            ],
+            [
+              -80.1857106533466,
+              25.7957203714947
+            ],
+            [
+              -80.1857049273243,
+              25.7957178418116
+            ],
+            [
+              -80.1856997202476,
+              25.7957145161918
+            ],
+            [
+              -80.1856951671313,
+              25.7957104811429
+            ],
+            [
+              -80.185691383929,
+              25.7957058402159
+            ],
+            [
+              -80.1856884685481,
+              25.7957007113029
+            ],
+            [
+              -80.1856837211073,
+              25.7956896552847
+            ],
+            [
+              -80.1856774286966,
+              25.79567925045
+            ],
+            [
+              -80.1856702736799,
+              25.7956706135826
+            ],
+            [
+              -80.1856644941855,
+              25.7956611711325
+            ],
+            [
+              -80.185607493601,
+              25.7955618406714
+            ],
+            [
+              -80.185603133304,
+              25.7955529360195
+            ],
+            [
+              -80.1856001011622,
+              25.7955435910923
+            ],
+            [
+              -80.1855984499188,
+              25.7955339668563
+            ],
+            [
+              -80.1855873505813,
+              25.7954745214008
+            ],
+            [
+              -80.1855939214671,
+              25.7954446074868
+            ],
+            [
+              -80.1855968760771,
+              25.7954142256093
+            ],
+            [
+              -80.1855961790689,
+              25.7953837330185
+            ],
+            [
+              -80.1855911033087,
+              25.7953206258587
+            ],
+            [
+              -80.1855832114933,
+              25.7952352301282
+            ],
+            [
+              -80.1855745662031,
+              25.7951492037404
+            ],
+            [
+              -80.1855509758072,
+              25.7950435721239
+            ],
+            [
+              -80.1855409990221,
+              25.7949962726406
+            ],
+            [
+              -80.1855339570658,
+              25.7949626348985
+            ],
+            [
+              -80.1855295808797,
+              25.7949286275574
+            ],
+            [
+              -80.185512198302,
+              25.7947976320315
+            ],
+            [
+              -80.1854925672728,
+              25.7946619734751
+            ],
+            [
+              -80.1854668535948,
+              25.7945119332821
+            ],
+            [
+              -80.1854533762754,
+              25.7944272563551
+            ],
+            [
+              -80.1854397770247,
+              25.7943217601042
+            ],
+            [
+              -80.1854297685791,
+              25.7942128692505
+            ],
+            [
+              -80.1854314294958,
+              25.7941783252438
+            ],
+            [
+              -80.1854134434778,
+              25.7940167491654
+            ],
+            [
+              -80.1854150221105,
+              25.7938461587103
+            ],
+            [
+              -80.1854174837604,
+              25.7937754203512
+            ],
+            [
+              -80.1854273829561,
+              25.7936297913429
+            ],
+            [
+              -80.1854265156521,
+              25.7934670871425
+            ],
+            [
+              -80.1854227201136,
+              25.7933100441858
+            ],
+            [
+              -80.1854208029115,
+              25.7932202869033
+            ],
+            [
+              -80.1854210833174,
+              25.7932180652551
+            ],
+            [
+              -80.185421004862,
+              25.7932158307652
+            ],
+            [
+              -80.1854205682216,
+              25.7932136303752
+            ],
+            [
+              -80.185419784043,
+              25.7932115110822
+            ],
+            [
+              -80.1854186689797,
+              25.7932095163064
+            ],
+            [
+              -80.1854153552696,
+              25.7932072420333
+            ],
+            [
+              -80.1854124783265,
+              25.7932045233963
+            ],
+            [
+              -80.1854101094624,
+              25.7932014302985
+            ],
+            [
+              -80.185408307994,
+              25.7931980370893
+            ],
+            [
+              -80.185407117199,
+              25.7931944306651
+            ],
+            [
+              -80.1854065683844,
+              25.793190698758
+            ],
+            [
+              -80.185406673864,
+              25.7931869362149
+            ],
+            [
+              -80.1854074320114,
+              25.7931832350966
+            ],
+            [
+              -80.1854088232537,
+              25.7931796873635
+            ],
+            [
+              -80.1854108140778,
+              25.7931763821898
+            ],
+            [
+              -80.1854131210965,
+              25.7931740807248
+            ],
+            [
+              -80.1854150123345,
+              25.7931714871815
+            ],
+            [
+              -80.1854164415145,
+              25.7931686617781
+            ],
+            [
+              -80.1854173772658,
+              25.7931656720374
+            ],
+            [
+              -80.1854175403505,
+              25.7931644227852
+            ],
+            [
+              -80.1854179274921,
+              25.7931632154069
+            ],
+            [
+              -80.1854185294951,
+              25.7931620823464
+            ],
+            [
+              -80.1854193282092,
+              25.7931610532894
+            ],
+            [
+              -80.1854241402516,
+              25.7931495074073
+            ],
+            [
+              -80.1854270234677,
+              25.7931374470456
+            ],
+            [
+              -80.1854279152559,
+              25.7931251327186
+            ],
+            [
+              -80.1854267958258,
+              25.7931128342068
+            ],
+            [
+              -80.1854236902785,
+              25.7931008179318
+            ],
+            [
+              -80.1854186539976,
+              25.7930900256638
+            ],
+            [
+              -80.1854116900838,
+              25.7930801496176
+            ],
+            [
+              -80.1854029970369,
+              25.7930714698226
+            ],
+            [
+              -80.1854018587332,
+              25.7930692284941
+            ],
+            [
+              -80.1854011261658,
+              25.7930668522357
+            ],
+            [
+              -80.1854008178715,
+              25.7930644007259
+            ],
+            [
+              -80.1854009423979,
+              25.7930619362954
+            ],
+            [
+              -80.1854014953375,
+              25.7930595202992
+            ],
+            [
+              -80.1854022961444,
+              25.7930564341222
+            ],
+            [
+              -80.1854025141881,
+              25.7930532706642
+            ],
+            [
+              -80.1854021428817,
+              25.7930501183478
+            ],
+            [
+              -80.1854011935729,
+              25.793047067501
+            ],
+            [
+              -80.1853996935992,
+              25.7930442031259
+            ],
+            [
+              -80.1853976842811,
+              25.7930416066921
+            ],
+            [
+              -80.1853952229412,
+              25.7930393525375
+            ],
+            [
+              -80.1853942036148,
+              25.793038522712
+            ],
+            [
+              -80.1853933547662,
+              25.7930375503205
+            ],
+            [
+              -80.1853926981514,
+              25.7930364616616
+            ],
+            [
+              -80.1853922544986,
+              25.7930352875414
+            ],
+            [
+              -80.1853920365286,
+              25.7930340632344
+            ],
+            [
+              -80.1853920489922,
+              25.7930328230677
+            ],
+            [
+              -80.1853922936431,
+              25.7930316022543
+            ],
+            [
+              -80.1853927622581,
+              25.7930304368542
+            ],
+            [
+              -80.1853934406565,
+              25.7930293592831
+            ],
+            [
+              -80.1853943106696,
+              25.7930284019346
+            ],
+            [
+              -80.1853953471986,
+              25.7930275899421
+            ],
+            [
+              -80.1853965191625,
+              25.7930269484058
+            ],
+            [
+              -80.1854088198895,
+              25.7930182291315
+            ],
+            [
+              -80.185419475692,
+              25.793006408176
+            ],
+            [
+              -80.185427928404,
+              25.7929932073714
+            ],
+            [
+              -80.1854339613676,
+              25.7929789612891
+            ],
+            [
+              -80.1854374245603,
+              25.7929640292453
+            ],
+            [
+              -80.1854382286562,
+              25.7929487889489
+            ],
+            [
+              -80.1854363550636,
+              25.7929336266285
+            ],
+            [
+              -80.1854339497488,
+              25.7929269678726
+            ],
+            [
+              -80.1854304108239,
+              25.7929207369408
+            ],
+            [
+              -80.1854258289435,
+              25.7929150914013
+            ],
+            [
+              -80.185420318802,
+              25.7929101727093
+            ],
+            [
+              -80.185414018143,
+              25.7929061052986
+            ],
+            [
+              -80.185412522029,
+              25.7929053025903
+            ],
+            [
+              -80.1854111989109,
+              25.7929042806051
+            ],
+            [
+              -80.185410088473,
+              25.7929030684498
+            ],
+            [
+              -80.1854092243679,
+              25.792901702419
+            ],
+            [
+              -80.185408629256,
+              25.792900222356
+            ],
+            [
+              -80.1854083237731,
+              25.792898672606
+            ],
+            [
+              -80.1854083145899,
+              25.7928970983388
+            ],
+            [
+              -80.1854086033859,
+              25.7928955455986
+            ],
+            [
+              -80.1854091798761,
+              25.792894060363
+            ],
+            [
+              -80.1854100297997,
+              25.7928926867817
+            ],
+            [
+              -80.1854111259652,
+              25.7928914644189
+            ],
+            [
+              -80.1854124372177,
+              25.7928904292059
+            ],
+            [
+              -80.185422803395,
+              25.7928813019306
+            ],
+            [
+              -80.1854308017565,
+              25.7928590071233
+            ],
+            [
+              -80.1854394843799,
+              25.7928457191457
+            ],
+            [
+              -80.1854443935538,
+              25.7928265229728
+            ],
+            [
+              -80.1854562402711,
+              25.7928115755969
+            ],
+            [
+              -80.1854647177699,
+              25.7927769433875
+            ],
+            [
+              -80.1854684239202,
+              25.7927416300377
+            ],
+            [
+              -80.1854673022135,
+              25.7927061723062
+            ],
+            [
+              -80.1854603592625,
+              25.7926357414218
+            ],
+            [
+              -80.1854566581818,
+              25.7925651102518
+            ],
+            [
+              -80.1854605103602,
+              25.7924955856022
+            ],
+            [
+              -80.1854585435568,
+              25.792473928216
+            ],
+            [
+              -80.1854535678466,
+              25.792452670099
+            ],
+            [
+              -80.1854456626627,
+              25.7924321519936
+            ],
+            [
+              -80.1856584480751,
+              25.7923173164005
+            ],
+            [
+              -80.1862195159628,
+              25.7922974816186
+            ],
+            [
+              -80.1865924023589,
+              25.7922833116914
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:124",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Dorsey Memorial Library",
+      "geometry_type": "Polygon",
+      "lon": -80.196922,
+      "lat": 25.791384,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 33
+      },
+      "area_acres": 0.142,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.197110563776,
+              25.7914471996654
+            ],
+            [
+              -80.1967350847319,
+              25.7914587872052
+            ],
+            [
+              -80.1967320101184,
+              25.7913230498108
+            ],
+            [
+              -80.1971062915327,
+              25.7913075724661
+            ],
+            [
+              -80.197110563776,
+              25.7914471996654
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:126",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "UNNAMED - FAA Parcel",
+      "geometry_type": "Polygon",
+      "lon": -80.194146,
+      "lat": 25.790688,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 137
+      },
+      "area_acres": 0.117,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1942979527743,
+              25.79061506792
+            ],
+            [
+              -80.1943001724789,
+              25.790755032207
+            ],
+            [
+              -80.1939962310878,
+              25.7907605135023
+            ],
+            [
+              -80.1939887161247,
+              25.7906233848797
+            ],
+            [
+              -80.1942979527743,
+              25.79061506792
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:127",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Lummus Landing",
+      "geometry_type": "Polygon",
+      "lon": -80.202459,
+      "lat": 25.775958,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 67
+      },
+      "area_acres": 0.69,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2018877984597,
+              25.7755813201447
+            ],
+            [
+              -80.2020568526603,
+              25.77548119187
+            ],
+            [
+              -80.2023060753267,
+              25.7756888862912
+            ],
+            [
+              -80.2025745531528,
+              25.7759223184012
+            ],
+            [
+              -80.2026899361118,
+              25.7760235565525
+            ],
+            [
+              -80.202925088893,
+              25.7762606868281
+            ],
+            [
+              -80.2029673266475,
+              25.776305101158
+            ],
+            [
+              -80.2030408394366,
+              25.7763259497547
+            ],
+            [
+              -80.2028470360596,
+              25.7764549674166
+            ],
+            [
+              -80.2027809800193,
+              25.776371816172
+            ],
+            [
+              -80.2018877984597,
+              25.7755813201447
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:131",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "UNNAMED - 471 Brickell Hammock",
+      "geometry_type": "Polygon",
+      "lon": -80.208818,
+      "lat": 25.758391,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 124
+      },
+      "area_acres": 0.139,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2090173700764,
+              25.7583417876878
+            ],
+            [
+              -80.2087233942978,
+              25.7585340865834
+            ],
+            [
+              -80.2087057536565,
+              25.758547226318
+            ],
+            [
+              -80.2086174326927,
+              25.758440913655
+            ],
+            [
+              -80.208636013617,
+              25.7584302830044
+            ],
+            [
+              -80.208928937421,
+              25.758236515362
+            ],
+            [
+              -80.2090173700764,
+              25.7583417876878
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:132",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "UNNAMED - 2445 Brickell Hammock",
+      "geometry_type": "Polygon",
+      "lon": -80.208905,
+      "lat": 25.758502,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 121
+      },
+      "area_acres": 0.149,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2091063290657,
+              25.7584476811385
+            ],
+            [
+              -80.2088230309253,
+              25.7586524497314
+            ],
+            [
+              -80.2087985911201,
+              25.7586589739833
+            ],
+            [
+              -80.2087057536565,
+              25.758547226318
+            ],
+            [
+              -80.2087233942978,
+              25.7585340865834
+            ],
+            [
+              -80.2090173700764,
+              25.7583417876878
+            ],
+            [
+              -80.2091063290657,
+              25.7584476811385
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:142",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Range Park #1",
+      "geometry_type": "Polygon",
+      "lon": -80.200965,
+      "lat": 25.784355,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 93
+      },
+      "area_acres": 0.054,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.2010611440511,
+              25.7844463459907
+            ],
+            [
+              -80.2009214799627,
+              25.7844494666283
+            ],
+            [
+              -80.2009110093066,
+              25.7841690253013
+            ],
+            [
+              -80.2010611440511,
+              25.7844463459907
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_city:143",
+      "category": "park",
+      "subtype": "city",
+      "source_layer": "park_city",
+      "name": "Culmer Mini Park",
+      "geometry_type": "Polygon",
+      "lon": -80.199011,
+      "lat": 25.7843,
+      "attributes": {
+        "management_agency": "City of Miami Parks and Recreation Department",
+        "park_id": 25
+      },
+      "area_acres": 0.173,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1991004649599,
+              25.7844981394845
+            ],
+            [
+              -80.1989432702546,
+              25.7845033560492
+            ],
+            [
+              -80.1989212530217,
+              25.7841028356945
+            ],
+            [
+              -80.1990784141787,
+              25.7840970430684
+            ],
+            [
+              -80.1991004649599,
+              25.7844981394845
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_county:43",
+      "category": "park",
+      "subtype": "county",
+      "source_layer": "park_county",
+      "name": "FIRST STREET METROMOVER STATION DOG SPOT",
+      "geometry_type": "Polygon",
+      "lon": -80.189835,
+      "lat": 25.775699,
+      "attributes": {
+        "class": "SPECIAL ACTIVITY PARK",
+        "type": "REGIONAL"
+      },
+      "area_acres": 0.383,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1896403859772,
+              25.775386065592425
+            ],
+            [
+              -80.18968431098448,
+              25.775352004492508
+            ],
+            [
+              -80.18971813382693,
+              25.775390380095818
+            ],
+            [
+              -80.18974371280136,
+              25.775440285420203
+            ],
+            [
+              -80.18975814318492,
+              25.775493825681888
+            ],
+            [
+              -80.18976682858634,
+              25.775603862621118
+            ],
+            [
+              -80.1897716095308,
+              25.775729046931854
+            ],
+            [
+              -80.18977206058864,
+              25.7757408617294
+            ],
+            [
+              -80.18978437291621,
+              25.776063190655222
+            ],
+            [
+              -80.18975999922428,
+              25.776063953662046
+            ],
+            [
+              -80.18976417412414,
+              25.77613382934562
+            ],
+            [
+              -80.18996310939168,
+              25.776126677968275
+            ],
+            [
+              -80.18996056569496,
+              25.77606068799048
+            ],
+            [
+              -80.18995861191074,
+              25.776060758111818
+            ],
+            [
+              -80.18993627448512,
+              25.77606156206553
+            ],
+            [
+              -80.18992394338919,
+              25.775741707345023
+            ],
+            [
+              -80.18992324501032,
+              25.775723582504185
+            ],
+            [
+              -80.18991281828008,
+              25.775453094867764
+            ],
+            [
+              -80.18990719887253,
+              25.775307368383
+            ],
+            [
+              -80.18975826048587,
+              25.775313006295548
+            ],
+            [
+              -80.18960372058532,
+              25.775318855148562
+            ],
+            [
+              -80.18960631865824,
+              25.775386315370802
+            ],
+            [
+              -80.18961698569304,
+              25.775386238137177
+            ],
+            [
+              -80.1896403859772,
+              25.775386065592425
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_county:159",
+      "category": "park",
+      "subtype": "county",
+      "source_layer": "park_county",
+      "name": "FIFTH STREET METROMOVER STATION PLAYGROUND",
+      "geometry_type": "Polygon",
+      "lon": -80.192237,
+      "lat": 25.769385,
+      "attributes": {
+        "class": "SPECIAL ACTIVITY PARK",
+        "type": "REGIONAL"
+      },
+      "area_acres": 0.463,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.1923346184819,
+              25.768983910234155
+            ],
+            [
+              -80.19230584557803,
+              25.768984723940864
+            ],
+            [
+              -80.19230056850635,
+              25.768927050962176
+            ],
+            [
+              -80.19212583318905,
+              25.768932407419925
+            ],
+            [
+              -80.19217660272209,
+              25.769912752363297
+            ],
+            [
+              -80.1923256040085,
+              25.769894977311193
+            ],
+            [
+              -80.19230299517723,
+              25.76932355022323
+            ],
+            [
+              -80.19235110471207,
+              25.769340578124694
+            ],
+            [
+              -80.1923346184819,
+              25.768983910234155
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "park_county:260",
+      "category": "park",
+      "subtype": "county",
+      "source_layer": "park_county",
+      "name": "PASEO DE LAS AMERICAS",
+      "geometry_type": "Polygon",
+      "lon": -80.204151,
+      "lat": 25.7511,
+      "attributes": {
+        "class": "GREENWAY",
+        "type": "REGIONAL"
+      },
+      "area_acres": 0.838,
+      "geometry_wgs84": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.20426274499746,
+              25.75152712790751
+            ],
+            [
+              -80.2042862358044,
+              25.751507536393195
+            ],
+            [
+              -80.2044769401335,
+              25.751376714076653
+            ],
+            [
+              -80.20450536450149,
+              25.751341765460047
+            ],
+            [
+              -80.20451275068605,
+              25.751290745969317
+            ],
+            [
+              -80.20449563193253,
+              25.75121565799561
+            ],
+            [
+              -80.20445821891586,
+              25.75113530766077
+            ],
+            [
+              -80.20414840400103,
+              25.75079732645389
+            ],
+            [
+              -80.20408877049557,
+              25.75077896116444
+            ],
+            [
+              -80.20401045365922,
+              25.75075484356969
+            ],
+            [
+              -80.20368730549384,
+              25.750820150977255
+            ],
+            [
+              -80.20394865038598,
+              25.7511354985859
+            ],
+            [
+              -80.2041394637779,
+              25.75136639119465
+            ],
+            [
+              -80.20414493529127,
+              25.751373727839326
+            ],
+            [
+              -80.2041547741402,
+              25.751386151795938
+            ],
+            [
+              -80.20424101556853,
+              25.751500179746724
+            ],
+            [
+              -80.20426274499746,
+              25.75152712790751
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "poi_id": "clinic_fqhc:3",
+      "category": "clinic",
+      "subtype": "fqhc",
+      "source_layer": "clinic_fqhc",
+      "name": "Camillus Health Concern",
+      "geometry_type": "Point",
+      "lon": -80.200674,
+      "lat": 25.778408,
+      "attributes": {
+        "address": "336 NW 5th St"
+      }
+    },
+    {
+      "poi_id": "clinic_free_standing:2",
+      "category": "clinic",
+      "subtype": "free_standing",
+      "source_layer": "clinic_free_standing",
+      "name": "Miami Rescue Mision Health Clinic",
+      "geometry_type": "Point",
+      "lon": -80.196481,
+      "lat": 25.795827,
+      "attributes": {
+        "address": "2015 NW 1st St"
+      }
+    },
+    {
+      "poi_id": "clinic_free_standing:6",
+      "category": "clinic",
+      "subtype": "free_standing",
+      "source_layer": "clinic_free_standing",
+      "name": "Community Smiles Dental Clinic",
+      "geometry_type": "Point",
+      "lon": -80.208822,
+      "lat": 25.794733,
+      "attributes": {
+        "address": "750 NW 20th St"
+      }
+    },
+    {
+      "poi_id": "clinic_free_standing:15",
+      "category": "clinic",
+      "subtype": "free_standing",
+      "source_layer": "clinic_free_standing",
+      "name": "Mother Theresa Sister of Charity",
+      "geometry_type": "Point",
+      "lon": -80.207551,
+      "lat": 25.791695,
+      "attributes": {
+        "address": "724 NW 17th St"
+      }
+    },
+    {
+      "poi_id": "clinic_free_standing:17",
+      "category": "clinic",
+      "subtype": "free_standing",
+      "source_layer": "clinic_free_standing",
+      "name": "JMH - Jefferson Reaves Sr. Health Center",
+      "geometry_type": "Point",
+      "lon": -80.202756,
+      "lat": 25.784219,
+      "attributes": {
+        "address": "1009 NW 5th Ave"
+      }
+    },
+    {
+      "poi_id": "clinic_jhs_primary_care:5",
+      "category": "clinic",
+      "subtype": "jhs_primary_care",
+      "source_layer": "clinic_jhs_primary_care",
+      "name": "JHS - Downtown Medical Center",
+      "geometry_type": "Point",
+      "lon": -80.196823,
+      "lat": 25.77553,
+      "attributes": {
+        "address": "111 NW 1st St Suite 110"
+      }
+    },
+    {
+      "poi_id": "clinic_school_based:13",
+      "category": "clinic",
+      "subtype": "school_based",
+      "source_layer": "clinic_school_based",
+      "name": "Booker T. Washington Senior High School",
+      "geometry_type": "Point",
+      "lon": -80.204806,
+      "lat": 25.786547,
+      "attributes": {
+        "address": "1200 NW 6th Ave"
+      }
+    },
+    {
+      "poi_id": "clinic_school_based:148",
+      "category": "clinic",
+      "subtype": "school_based",
+      "source_layer": "clinic_school_based",
+      "name": "Comprehensive Examination of Vision and Ocular Health",
+      "geometry_type": "Point",
+      "lon": -80.207055,
+      "lat": 25.767818,
+      "attributes": {
+        "address": "601 SW 8th Ave"
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:2816",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Asian-Mart",
+      "geometry_type": "Point",
+      "lon": -80.188927,
+      "lat": 25.798538,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1661105
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:14541",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "PUBLIX  0054",
+      "geometry_type": "Point",
+      "lon": -80.19928,
+      "lat": 25.767227,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 323260
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:25248",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "PUBLIX 581",
+      "geometry_type": "Point",
+      "lon": -80.196793,
+      "lat": 25.761482,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 369983
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:36642",
+      "category": "grocery",
+      "subtype": "Super Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "PRICE CHOICE FOOD MARKET #5",
+      "geometry_type": "Point",
+      "lon": -80.190735,
+      "lat": 25.794312,
+      "attributes": {
+        "store_type": "Super Store",
+        "record_id": 576601
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:48893",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "MERCADO ORIENTAL",
+      "geometry_type": "Point",
+      "lon": -80.207588,
+      "lat": 25.771706,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 781123
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:85109",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Publix 1397",
+      "geometry_type": "Point",
+      "lon": -80.189468,
+      "lat": 25.792955,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 1047776
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:91796",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "PUBLIX 1009",
+      "geometry_type": "Point",
+      "lon": -80.195244,
+      "lat": 25.7651,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 897030
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:108261",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Aleens Market",
+      "geometry_type": "Point",
+      "lon": -80.19931,
+      "lat": 25.791809,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1209142
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:116468",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Plantabaja Supermarket",
+      "geometry_type": "Point",
+      "lon": -80.189743,
+      "lat": 25.78858,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1662337
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:126551",
+      "category": "grocery",
+      "subtype": "Super Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Whole Foods Market 10191",
+      "geometry_type": "Point",
+      "lon": -80.188965,
+      "lat": 25.771851,
+      "attributes": {
+        "store_type": "Super Store",
+        "record_id": 1181312
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:143153",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Indian Prem",
+      "geometry_type": "Point",
+      "lon": -80.188896,
+      "lat": 25.774437,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1426604
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:151050",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Tropical Supermarket Corp. 19",
+      "geometry_type": "Point",
+      "lon": -80.202484,
+      "lat": 25.766052,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 1329710
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:158006",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Publix Super Markets Inc.1614 1614",
+      "geometry_type": "Point",
+      "lon": -80.197533,
+      "lat": 25.780218,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 1450529
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:196931",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "VSMD Food Corporation/ Price Choice Food Market",
+      "geometry_type": "Point",
+      "lon": -80.200012,
+      "lat": 25.78931,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 1261678
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:202265",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Planta Baja Market And Cafe",
+      "geometry_type": "Point",
+      "lon": -80.193733,
+      "lat": 25.78948,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1555944
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:205044",
+      "category": "grocery",
+      "subtype": "Grocery Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Guerrero Market 1",
+      "geometry_type": "Point",
+      "lon": -80.207901,
+      "lat": 25.771013,
+      "attributes": {
+        "store_type": "Grocery Store",
+        "record_id": 1302625
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:234800",
+      "category": "grocery",
+      "subtype": "Super Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Target Store T3383",
+      "geometry_type": "Point",
+      "lon": -80.199127,
+      "lat": 25.779829,
+      "attributes": {
+        "store_type": "Super Store",
+        "record_id": 1617374
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:237084",
+      "category": "grocery",
+      "subtype": "Supermarket",
+      "source_layer": "grocery_snap_all_types",
+      "name": "ALDI 77055",
+      "geometry_type": "Point",
+      "lon": -80.199005,
+      "lat": 25.779833,
+      "attributes": {
+        "store_type": "Supermarket",
+        "record_id": 1621684
+      }
+    },
+    {
+      "poi_id": "grocery_snap_all_types:246584",
+      "category": "grocery",
+      "subtype": "Super Store",
+      "source_layer": "grocery_snap_all_types",
+      "name": "Portofino Fresh Market",
+      "geometry_type": "Point",
+      "lon": -80.191124,
+      "lat": 25.798252,
+      "attributes": {
+        "store_type": "Super Store",
+        "record_id": 1679656
+      }
+    }
+  ],
+  "excluded_records": [
+    {
+      "layer": "school_public",
+      "name": "School Board Adm - Main Building",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "Anna Brenner Meyers Telecommunication Complex",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "School Board Adm - Annex",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "School Board Adm -Garage",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "Lindsey Hopkins Technical College",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "Chapman House",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES '0'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "K-12 Distance Learning",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES 'K-12'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "school_public",
+      "name": "Primary Learning Center",
+      "reason": "ENROLLMNT is 0 in the county file (GRADES 'PK-4'): administrative, adult/technical or program site, not a school with enrolled students"
+    },
+    {
+      "layer": "clinic_free_standing",
+      "name": "Camillus Health Services",
+      "reason": "duplicate of 'Camillus Health Concern' (clinic_fqhc) within 50 m"
+    },
+    {
+      "layer": "clinic_jhs_primary_care",
+      "name": "JHS - Jefferson Reaves Sr Health Center",
+      "reason": "duplicate of 'JMH - Jefferson Reaves Sr. Health Center' (clinic_free_standing) within 50 m"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Las Americas Mini Market 1",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "CVS Pharmacy 5147",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Walgreens 3239",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "DELI VIEW",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Arahy Bakery Company",
+      "reason": "SNAP store type 'Specialty Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "O & M SUPERMARKET",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Walgreens 3943",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "EL NINO DISCOUNT",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "L & R GROCERY",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "CVS Pharmacy 4613",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "CVS PHARMACY 402",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Plantabaja Market",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "CVS 10132",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Farm Store",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Walgreens 15994",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "5th Avenue Food Market",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "CVS 10632",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Dollar General 22793",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Asian-mart",
+      "reason": "SNAP store type 'Other' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "7-eleven #35022B",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "7-Eleven Store 37013A",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "7-eleven 35002C",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "7-eleven 36662A",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Black Eagle Family Food Market 2",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "Su Hogar Mini Market ",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    },
+    {
+      "layer": "grocery_snap_all_types",
+      "name": "7-eleven Store #34566b 34566B",
+      "reason": "SNAP store type 'Convenience Store' is not in the grocery definition"
+    }
+  ]
+}

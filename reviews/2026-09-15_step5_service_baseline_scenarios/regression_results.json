@@ -1,0 +1,625 @@
+{
+  "passed": true,
+  "scenarios": {
+    "baseline_full_rebuild": {
+      "passed": true,
+      "checks": {
+        "ordered_rebuild_exit_0": true,
+        "status_DONE": true,
+        "ready_for_downstream_true": true,
+        "no_manifest_mismatch": true,
+        "readiness_not_listed_in_any_manifest": true,
+        "gis_inventory_listed_upstream": true,
+        "no_extra_package_created": true,
+        "check_mode_exit_0": true,
+        "no_staging_left": true,
+        "byte_identical_to_this_trees_published_package": true
+      },
+      "details": {
+        "status": "DONE",
+        "mismatches": [],
+        "package": "spatial_join/pkg-437415f5bbb8",
+        "stdout_tail": "miami_service_baseline.py ===\n[service_baseline] OK\n\n=== [input_package] scripts/build_miami_input_package.py ===\n[input_package] OK\n\n=== [scenarios] scripts/build_miami_scenarios.py ===\n[scenarios] OK\n\n=== [readiness_check] scripts/miami_readiness.py --check ===\n[readiness_check] OK\n\nall stages OK\n",
+        "stderr_tail": ""
+      },
+      "seconds": 13.8
+    },
+    "unchanged_rerun": {
+      "passed": true,
+      "checks": {
+        "exit_0": true,
+        "every_data_file_byte_identical": true,
+        "no_new_package": true,
+        "package_reported_reused": true
+      },
+      "details": {
+        "stdout_tail": "miami_service_baseline.py ===\n[service_baseline] OK\n\n=== [input_package] scripts/build_miami_input_package.py ===\n[input_package] OK\n\n=== [scenarios] scripts/build_miami_scenarios.py ===\n[scenarios] OK\n\n=== [readiness_check] scripts/miami_readiness.py --check ===\n[readiness_check] OK\n\nall stages OK\n"
+      },
+      "seconds": 14.2
+    },
+    "station_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_station_master_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "previous_packages_kept_plus_one_new": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "station_master_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-437415f5bbb8",
+          "pkg-461a5480cf7f"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-461a5480cf7f (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.8
+    },
+    "window_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_study_window_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "previous_packages_kept_plus_one_new": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "study_window_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-4018a4ca7fa3",
+          "pkg-437415f5bbb8"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-4018a4ca7fa3 (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1494.9 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.8
+    },
+    "zoning_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_zoning_raw_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "previous_packages_kept_plus_one_new": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "zoning_raw_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-437415f5bbb8",
+          "pkg-75e67ff2c20b"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-75e67ff2c20b (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.8
+    },
+    "publish_failure_rename": {
+      "passed": true,
+      "checks": {
+        "exit_nonzero": true,
+        "injected_error_reported": true,
+        "pointer_unchanged": true,
+        "previously_published_files_unchanged": true,
+        "current_package_verifies": true,
+        "readiness_DONE_on_old_package": true,
+        "no_staging_left": true,
+        "no_pointer_tmp_left": true,
+        "failure_log_written": true,
+        "no_new_package_dir": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — publish interrupted: injected failure: package dir rename; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T235343.json\n",
+        "stderr_tail": "",
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-437415f5bbb8"
+        ],
+        "failed_logs": [
+          "spatial_join_failed_20260915T235343.json"
+        ]
+      },
+      "seconds": 0.8
+    },
+    "publish_failure_pointer": {
+      "passed": true,
+      "checks": {
+        "exit_nonzero": true,
+        "injected_error_reported": true,
+        "pointer_unchanged": true,
+        "previously_published_files_unchanged": true,
+        "current_package_verifies": true,
+        "readiness_DONE_on_old_package": true,
+        "no_staging_left": true,
+        "no_pointer_tmp_left": true,
+        "failure_log_written": true,
+        "new_package_complete_but_not_current": true,
+        "plain_rerun_recovers_exit_0": true,
+        "DONE_after_recovery": true,
+        "pointer_now_on_new_package": true,
+        "recovery_reused_complete_package": true,
+        "previous_recorded": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — publish interrupted: injected failure: pointer switch; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T235344.json\n",
+        "stderr_tail": "",
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-437415f5bbb8",
+          "pkg-b55a7d7db3f0"
+        ],
+        "failed_logs": [
+          "spatial_join_failed_20260915T235344.json"
+        ]
+      },
+      "seconds": 1.5
+    },
+    "validation_failure": {
+      "passed": true,
+      "checks": {
+        "exit_1": true,
+        "every_data_file_unchanged": true,
+        "pointer_unchanged": true,
+        "no_new_package": true,
+        "no_staging_left": true,
+        "failure_log_written": true,
+        "readiness_still_DONE": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — geometry/input validation failed; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T235345.json\n"
+      },
+      "seconds": 0.9
+    },
+    "lock_mismatch": {
+      "passed": true,
+      "checks": {
+        "exit_1": true,
+        "mismatch_reported": true,
+        "every_data_file_unchanged": true,
+        "no_new_package": true
+      },
+      "details": {
+        "stdout_tail": "HALT: dependency lock mismatch (edit requirements-gis.lock.txt deliberately to change): {'geos': {'locked': '3.12.0', 'actual': '3.13.1'}}\n"
+      },
+      "seconds": 0.4
+    },
+    "corrupt_package_detected": {
+      "passed": true,
+      "checks": {
+        "check_mode_exit_1": true,
+        "status_CORRUPT_PACKAGE": true,
+        "ready_false": true,
+        "problem_names_the_file": true,
+        "rerun_republishes_exit_0": true,
+        "DONE_after_rerun": true,
+        "corrupt_dir_quarantined": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "problems": [
+          "sha256 mismatch: station_overlap.json"
+        ],
+        "stdout_tail": " quarantined as pkg-437415f5bbb8.corrupt-20260915T235347 and republished\nstatus=PASS package=pkg-437415f5bbb8 (new) pointer_switched=False published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n"
+      },
+      "seconds": 1.0
+    },
+    "readiness_single_writer": {
+      "passed": true,
+      "checks": {
+        "readiness_not_listed_in_any_manifest": true,
+        "lineage_matches_build_manifest": true,
+        "lineage_matches_package_manifest": true,
+        "aggregator_rerun_byte_identical": true,
+        "stage_scripts_never_write_readiness": true
+      },
+      "details": {},
+      "seconds": 0.1
+    },
+    "readiness_flags_baseline": {
+      "passed": true,
+      "checks": {
+        "schema_2_1": true,
+        "stages_in_build_order": true,
+        "station_master_DONE": true,
+        "spatial_join_DONE": true,
+        "built_stages_DONE": true,
+        "unbuilt_layers_NOT_RUN": true,
+        "ai_flag_true": true,
+        "ai_required_not_done_empty": true,
+        "optional_missing_lists_two": true,
+        "config_complete_false": true,
+        "config_all_observed_false": true,
+        "config_missing_platform_and_vehicle": true,
+        "scenario_results_assumption_backed": true,
+        "flags_are_booleans": true,
+        "code_matches_current_true": true,
+        "legacy_zoning_block_kept": true,
+        "check_ai_exit_0": true,
+        "check_exit_0": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "DONE"
+        },
+        "flags": {
+          "ready_for_ai_interpretation": true,
+          "ai_missing_optional": [
+            "poi",
+            "walk_model"
+          ],
+          "config_inputs_complete": false,
+          "config_missing_inputs": [
+            "platform_constructible_space",
+            "vehicle_parameters"
+          ]
+        }
+      },
+      "seconds": 0.2
+    },
+    "future_layers_fixtures": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "real_layers_DONE": true,
+        "ai_true_without_optional_layers": true,
+        "optional_missing_both": true,
+        "config_still_incomplete": true,
+        "check_ai_exit_0": true,
+        "poi_leaves_only_walk_model_missing": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "DONE"
+        },
+        "stdout": "rue required_not_done=[] missing_optional=['poi', 'walk_model'] config_complete=False all_observed=False missing=['platform_constructible_space', 'vehicle_parameters'] assumed=['scenario_results']\nspatial_join: ready_for_downstream=True changed=[] problems=None package=spatial_join/pkg-437415f5bbb8\n"
+      },
+      "seconds": 0.5
+    },
+    "assumption_backed_inputs": {
+      "passed": true,
+      "checks": {
+        "complete_true": true,
+        "all_observed_false": true,
+        "assumed_lists_three": true,
+        "missing_empty": true,
+        "observed_variant_complete_true": true,
+        "observed_variant_all_observed_true": true,
+        "observed_variant_no_assumed": true
+      },
+      "details": {
+        "assumed_variant": {
+          "config_inputs_complete": true,
+          "config_inputs_all_observed": false,
+          "config_assumption_backed_inputs": [
+            "platform_constructible_space",
+            "vehicle_parameters",
+            "scenario_results"
+          ]
+        }
+      },
+      "seconds": 0.2
+    },
+    "stale_propagation": {
+      "passed": true,
+      "checks": {
+        "spatial_join_republished": true,
+        "spatial_join_DONE": true,
+        "direct_consumers_STALE": true,
+        "reason_names_spatial_join": true,
+        "propagates_to_scenarios": true,
+        "ai_flag_false_again": true,
+        "required_not_done_lists_three": true,
+        "config_incomplete_again": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "STALE",
+          "jobs": "STALE",
+          "service_baseline": "DONE",
+          "poi": "STALE",
+          "walk_model": "NOT_RUN",
+          "input_package": "STALE",
+          "scenarios": "STALE"
+        }
+      },
+      "seconds": 0.7
+    },
+    "raw_change_station_master": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "station_master_STALE": true,
+        "inputs_changed_names_registry": true,
+        "spatial_join_still_DONE_data_unchanged": true,
+        "ai_false_because_station_master": true,
+        "check_exit_0_spatial_join_only": true,
+        "upstream_rebuild_exit_0": true,
+        "station_master_DONE_after_rebuild": true,
+        "spatial_join_STALE_after_rebuild": true,
+        "both_DONE_after_downstream": true
+      },
+      "details": {
+        "before": {
+          "station_master": "STALE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "DONE"
+        },
+        "after_upstream": {
+          "station_master": "DONE",
+          "spatial_join": "STALE",
+          "demography": "STALE",
+          "jobs": "STALE",
+          "service_baseline": "STALE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "STALE",
+          "scenarios": "STALE"
+        },
+        "after_downstream": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "STALE",
+          "jobs": "STALE",
+          "service_baseline": "STALE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "STALE",
+          "scenarios": "STALE"
+        }
+      },
+      "seconds": 2.0
+    },
+    "code_change_informational": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "spatial_join_still_DONE": true,
+        "station_master_still_DONE": true,
+        "code_flags_false": true,
+        "ai_required_not_done_unaffected": true,
+        "rebuild_exit_0": true,
+        "new_package_after_code_change": true,
+        "code_flags_true_after_rebuild": true
+      },
+      "details": {
+        "stages_before_rebuild": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "DONE"
+        }
+      },
+      "seconds": 14.3
+    },
+    "demography_jobs_layers": {
+      "passed": true,
+      "checks": {
+        "demography_DONE": true,
+        "jobs_DONE": true,
+        "demography_validation_PASS": true,
+        "jobs_validation_PASS": true,
+        "demography_consumed_spatial_join": true,
+        "jobs_consumed_demography": true,
+        "lodes_wac_od_identity_holds": true,
+        "demography_net_dedup_not_above_sum": true,
+        "jobs_net_dedup_not_above_sum": true,
+        "disability_indicator_is_tract_level": true,
+        "no_manifest_mismatch": true,
+        "demography_byte_identical_to_published_package": true,
+        "jobs_byte_identical_to_published_package": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "DONE"
+        },
+        "od_links_kept": 156291,
+        "net_population": 76357
+      },
+      "seconds": 0.0
+    },
+    "raw_change_layers_stale": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "demography_STALE": true,
+        "reason_names_raw_file": true,
+        "jobs_STALE_by_propagation": true,
+        "spatial_join_still_DONE": true,
+        "ai_flag_false": true,
+        "demography_rebuild_halts_on_raw_hash_gate": true,
+        "pointer_unchanged_after_halt": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "STALE",
+          "jobs": "STALE",
+          "service_baseline": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "STALE",
+          "scenarios": "STALE"
+        },
+        "halt_message": "HALT: raw file acs/acs5_2024_bg_12086_B01003.json sha256 != raw source_manifest.json"
+      },
+      "seconds": 0.4
+    },
+    "input_package_build": {
+      "passed": true,
+      "checks": {
+        "input_package_DONE": true,
+        "validation_PASS": true,
+        "pins_equal_current_pointers": true,
+        "pins_cover_four_layers": true,
+        "21_station_files_listed": true,
+        "ai_flag_true": true,
+        "config_inputs_summary_present": true,
+        "config_missing_two": true,
+        "every_value_has_status": true,
+        "service_baseline_field_derived": true,
+        "byte_identical_to_published_package": true
+      },
+      "details": {
+        "package": "pkg-1e0b19e67475",
+        "pins": [
+          {
+            "stage": "spatial_join",
+            "package_id": "pkg-437415f5bbb8",
+            "package_dir": "spatial_join/pkg-437415f5bbb8",
+            "manifest_sha256": "55f6f7be8bd478d84e2f554a65f8817b774875d99280e857d7b24ec183b0f6a1"
+          },
+          {
+            "stage": "demography",
+            "package_id": "pkg-61df7ef6fef7",
+            "package_dir": "demography/pkg-61df7ef6fef7",
+            "manifest_sha256": "1fc23765dc275c289c74d3ed75538a2cfab02c5d1505017ab6130c8b30346768"
+          },
+          {
+            "stage": "jobs",
+            "package_id": "pkg-ca0da7c63688",
+            "package_dir": "jobs/pkg-ca0da7c63688",
+            "manifest_sha256": "30d3ff8b458c3ea89d3a8d52d9214b22ee3680d4d14344e32bb5be29915d81fa"
+          },
+          {
+            "stage": "service_baseline",
+            "package_id": "pkg-3d1c0ad0417a",
+            "package_dir": "service_baseline/pkg-3d1c0ad0417a",
+            "manifest_sha256": "9abfa2c7f0abd7684aa7fe9442614ffbede589a757eeba14bc9148594e3a752b"
+          }
+        ]
+      },
+      "seconds": 0.0
+    },
+    "service_baseline_and_scenarios": {
+      "passed": true,
+      "checks": {
+        "service_baseline_DONE": true,
+        "scenarios_DONE": true,
+        "service_validation_PASS": true,
+        "scenario_validation_PASS": true,
+        "conservation_all_scenarios": true,
+        "monotonic_low_medium_high": true,
+        "low_adoption_bounded_by_observed_transit_share": true,
+        "assumption_ids_in_manifest": true,
+        "every_shared_parameter_tagged": true,
+        "scenarios_consume_input_jobs_service": true,
+        "readiness_scenario_results_assumption_backed": true,
+        "readiness_missing_platform_vehicle": true,
+        "config_complete_false": true,
+        "service_baseline_byte_identical_to_published_package": true,
+        "scenarios_byte_identical_to_published_package": true
+      },
+      "details": {
+        "totals_am_peak": [
+          159.6,
+          638.39,
+          1595.97
+        ],
+        "peak_window": "8:00 a.m. to 8:59 a.m."
+      },
+      "seconds": 0.0
+    }
+  },
+  "interpreter": "/opt/anaconda3/bin/python3",
+  "copies_base": "/private/tmp/claude-501/-Users-supernt/ea51ad8f-a974-4159-9e7e-a9957e545431/scratchpad/regression_step5_scrub",
+  "run_at": "2026-09-15T23:54:05",
+  "scripts_under_test": {
+    "scripts/build_miami_station_master.py": "039809c59717e320fa0da7121bad7f1b4549997e75119847411bfb44522132dc",
+    "scripts/build_miami_station_zoning_profile.py": "d98e88effafc4b7157c2f7c014d84874f666dc8a6b4d11c468ee90bf355cbcde",
+    "scripts/build_miami_demography.py": "c75bff487e7d346c1736a441156ddc5ba0d1ce0e9f6a017e1a455db7913b3145",
+    "scripts/build_miami_jobs.py": "9ae26033b6ed61ad13599382e4cb29ac6cfa116beee6db984f8fcb142120d9cd",
+    "scripts/miami_v2_common.py": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62",
+    "scripts/miami_readiness.py": "dd7be613dd024ebe2532803c329f125028ca97e9eea088310fb647f394eaa19f",
+    "scripts/build_all_miami.py": "fa6e173dad5d4905dcb1d0db1955af3b202518459d3ab1a01e49d08fe0f8711a"
+  },
+  "method": "every scenario ran in an isolated copy under copies_base; the tree under test was only read"
+}

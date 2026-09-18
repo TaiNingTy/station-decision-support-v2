@@ -1,0 +1,406 @@
+{
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "reported_accuracy_ft": 13.12,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "reported_accuracy is the accuracy PROJ reports for the datum operation it selected in THIS environment; it is not the precision of GTFS reference points, of zoning boundaries, or of the model as a whole. Re-verify if the environment, projection or grid availability changes."
+  },
+  "quad_segs": 64,
+  "buffer_approximation": [
+    {
+      "station_id": "MIA-MM-01",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "buffer_area_over_true_circle": 0.9999
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "buffer_area_over_true_circle": 0.9999
+    }
+  ],
+  "band_checks": [
+    {
+      "station_id": "MIA-MM-01",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "max_pairwise_overlap_m2": 0.0,
+      "band_sum_minus_disc_m2": 0.0,
+      "pass": true
+    }
+  ],
+  "window_margins": [
+    {
+      "station_id": "MIA-MM-01",
+      "margin_m": 482.789755,
+      "margin_ft": 1583.96,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "margin_m": 473.925524,
+      "margin_ft": 1554.87,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "margin_m": 492.170554,
+      "margin_ft": 1614.73,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "margin_m": 778.545493,
+      "margin_ft": 2554.28,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "margin_m": 763.837105,
+      "margin_ft": 2506.03,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "margin_m": 756.241604,
+      "margin_ft": 2481.11,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "margin_m": 891.440162,
+      "margin_ft": 2924.67,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "margin_m": 564.954729,
+      "margin_ft": 1853.53,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "margin_m": 489.582082,
+      "margin_ft": 1606.24,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "margin_m": 690.901701,
+      "margin_ft": 2266.74,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "margin_m": 684.306765,
+      "margin_ft": 2245.1,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "margin_m": 431.039046,
+      "margin_ft": 1414.17,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "margin_m": 837.580367,
+      "margin_ft": 2747.97,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "margin_m": 741.40435,
+      "margin_ft": 2432.43,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "margin_m": 748.842573,
+      "margin_ft": 2456.83,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "margin_m": 844.120181,
+      "margin_ft": 2769.42,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "margin_m": 875.232998,
+      "margin_ft": 2871.5,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "margin_m": 888.00055,
+      "margin_ft": 2913.39,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "margin_m": 844.015561,
+      "margin_ft": 2769.08,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "margin_m": 573.161377,
+      "margin_ft": 1880.45,
+      "band_inside_window": true
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "margin_m": 455.65157,
+      "margin_ft": 1494.92,
+      "band_inside_window": true
+    }
+  ],
+  "invalid_geometry_repairs": [
+    {
+      "FID": 182,
+      "reason": "Ring Self-intersection[-80.2030650803168 25.7835021267856]",
+      "method": "shapely.make_valid + keep polygonal parts",
+      "input_type": "Polygon",
+      "make_valid_type": "Polygon",
+      "kept_type": "Polygon",
+      "dropped_parts": [],
+      "baseline_method": "shapely buffer(0) of the invalid input geometry — a diagnostic baseline, not the raw geometry's true area",
+      "input_area_deg2_diagnostic_only": 1.2584221344971906e-05,
+      "make_valid_area_deg2_diagnostic_only": 1.258422134497191e-05,
+      "projected_area_buffer0_baseline_m2": 139743.917371,
+      "projected_area_after_make_valid_m2": 139743.917371,
+      "projected_area_delta_vs_buffer0_baseline_m2": 0.0,
+      "valid_after_repair": true,
+      "valid_after_projection": true
+    },
+    {
+      "FID": 983,
+      "reason": "Ring Self-intersection[-80.2284555536493 25.7599682756348]",
+      "method": "shapely.make_valid + keep polygonal parts",
+      "input_type": "Polygon",
+      "make_valid_type": "Polygon",
+      "kept_type": "Polygon",
+      "dropped_parts": [],
+      "baseline_method": "shapely buffer(0) of the invalid input geometry — a diagnostic baseline, not the raw geometry's true area",
+      "input_area_deg2_diagnostic_only": 0.00026530809287442236,
+      "make_valid_area_deg2_diagnostic_only": 0.0002653080928744224,
+      "projected_area_buffer0_baseline_m2": 2946753.307982,
+      "projected_area_after_make_valid_m2": 2946753.307982,
+      "projected_area_delta_vs_buffer0_baseline_m2": 0.0,
+      "valid_after_repair": true,
+      "valid_after_projection": true
+    }
+  ],
+  "all_projected_geometries_valid": true,
+  "repair_policy": "validate first; make_valid only on invalid; keep polygonal parts; log FID, reason, type change, dropped parts, projected-area delta versus a buffer(0) diagnostic baseline (not the raw area), post-repair and post-projection validity",
+  "display_precision_note": "display values are rounded (ft 0.1, sq ft 1, acres 0.01); internal values keep 6 decimals for reproducibility only — that is numeric precision, not measurement accuracy"
+}

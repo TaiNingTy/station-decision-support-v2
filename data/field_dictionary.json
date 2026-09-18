@@ -1,0 +1,292 @@
+{
+  "purpose": "Verified CSV headers with focused semantics; not a complete producer data dictionary",
+  "datasets": [
+    {
+      "file": "raw/vista_trips_2024_2025.csv",
+      "rows": 19864,
+      "field_count": 65,
+      "fields": [
+        "tripid",
+        "hhid",
+        "persid",
+        "tripno",
+        "starthour",
+        "startime",
+        "arrhour",
+        "arrtime",
+        "origplace1",
+        "origplace2",
+        "origpurp1",
+        "origpurp2",
+        "origlga",
+        "destplace1",
+        "destplace2",
+        "destpurp1",
+        "destpurp2",
+        "destlga",
+        "triptime",
+        "travtime",
+        "cumdist",
+        "linkmode",
+        "trippurp",
+        "duration",
+        "mode1",
+        "mode2",
+        "mode3",
+        "mode4",
+        "mode5",
+        "mode6",
+        "mode7",
+        "mode8",
+        "mode9",
+        "time1",
+        "time2",
+        "time3",
+        "time4",
+        "time5",
+        "time6",
+        "time7",
+        "time8",
+        "time9",
+        "dist1",
+        "dist2",
+        "dist3",
+        "dist4",
+        "dist5",
+        "dist6",
+        "dist7",
+        "dist8",
+        "dist9",
+        "trippoststratweight",
+        "trippoststratweight_GROUP_1",
+        "trippoststratweight_GROUP_2",
+        "trippoststratweight_GROUP_3",
+        "trippoststratweight_GROUP_4",
+        "trippoststratweight_GROUP_5",
+        "trippoststratweight_GROUP_6",
+        "trippoststratweight_GROUP_7",
+        "trippoststratweight_GROUP_8",
+        "trippoststratweight_GROUP_9",
+        "trippoststratweight_GROUP_10",
+        "homesubregion_ASGS",
+        "homeregion_ASGS",
+        "dayType"
+      ],
+      "selected_definitions": {
+        "tripid": {
+          "meaning": "unique trip identifier",
+          "unit": "string"
+        },
+        "persid": {
+          "meaning": "anonymous survey person identifier; not a population count",
+          "unit": "string"
+        },
+        "origlga": {
+          "meaning": "origin Local Government Area name",
+          "unit": "string"
+        },
+        "destlga": {
+          "meaning": "destination Local Government Area name",
+          "unit": "string"
+        },
+        "startime": {
+          "meaning": "trip departure minute; preserves extended service-day values",
+          "unit": "minutes"
+        },
+        "starthour": {
+          "meaning": "departure hour; source contains 4 through 27",
+          "unit": "extended_hour"
+        },
+        "linkmode": {
+          "meaning": "main mode selected by longest-distance leg in VISTA 2021-26",
+          "unit": "category"
+        },
+        "trippurp": {
+          "meaning": "trip purpose; Work Related is broader than home-to-work commuting",
+          "unit": "category"
+        },
+        "dayType": {
+          "meaning": "Weekday or Weekend; filters require matching weight scale",
+          "unit": "category"
+        },
+        "trippoststratweight": {
+          "meaning": "expansion weight on an average-day basis",
+          "unit": "weight"
+        },
+        "homeregion_ASGS": {
+          "meaning": "survey participant home region; not necessarily trip origin",
+          "unit": "category"
+        }
+      }
+    },
+    {
+      "file": "raw/vista_journey_to_work_2024_2025.csv",
+      "rows": 1458,
+      "field_count": 124,
+      "fields": [
+        "hhid",
+        "persid",
+        "jtwid",
+        "dayType",
+        "start_loc",
+        "start_stopid",
+        "start_time",
+        "start_LGA",
+        "end_loc",
+        "end_stopid",
+        "end_time",
+        "end_LGA",
+        "mainmode_desc_01",
+        "mainmode_desc_02",
+        "mainmode_desc_03",
+        "mainmode_desc_04",
+        "mainmode_desc_05",
+        "mainmode_desc_06",
+        "mainmode_desc_07",
+        "mainmode_desc_08",
+        "mainmode_desc_09",
+        "mainmode_desc_10",
+        "mainmode_desc_11",
+        "mainmode_desc_12",
+        "mainmode_desc_13",
+        "mainmode_desc_14",
+        "mainmode_desc_15",
+        "destpurp1_desc_01",
+        "destpurp1_desc_02",
+        "destpurp1_desc_03",
+        "destpurp1_desc_04",
+        "destpurp1_desc_05",
+        "destpurp1_desc_06",
+        "destpurp1_desc_07",
+        "destpurp1_desc_08",
+        "destpurp1_desc_09",
+        "destpurp1_desc_10",
+        "destpurp1_desc_11",
+        "destpurp1_desc_12",
+        "destpurp1_desc_13",
+        "destpurp1_desc_14",
+        "destpurp1_desc_15",
+        "destplace1_desc_01",
+        "destplace1_desc_02",
+        "destplace1_desc_03",
+        "destplace1_desc_04",
+        "destplace1_desc_05",
+        "destplace1_desc_06",
+        "destplace1_desc_07",
+        "destplace1_desc_08",
+        "destplace1_desc_09",
+        "destplace1_desc_10",
+        "destplace1_desc_11",
+        "destplace1_desc_12",
+        "destplace1_desc_13",
+        "destplace1_desc_14",
+        "destplace1_desc_15",
+        "startime_01",
+        "startime_02",
+        "startime_03",
+        "startime_04",
+        "startime_05",
+        "startime_06",
+        "startime_07",
+        "startime_08",
+        "startime_09",
+        "startime_10",
+        "startime_11",
+        "startime_12",
+        "startime_13",
+        "startime_14",
+        "startime_15",
+        "arrtime_01",
+        "arrtime_02",
+        "arrtime_03",
+        "arrtime_04",
+        "arrtime_05",
+        "arrtime_06",
+        "arrtime_07",
+        "arrtime_08",
+        "arrtime_09",
+        "arrtime_10",
+        "arrtime_11",
+        "arrtime_12",
+        "arrtime_13",
+        "arrtime_14",
+        "arrtime_15",
+        "vistadist_01",
+        "vistadist_02",
+        "vistadist_03",
+        "vistadist_04",
+        "vistadist_05",
+        "vistadist_06",
+        "vistadist_07",
+        "vistadist_08",
+        "vistadist_09",
+        "vistadist_10",
+        "vistadist_11",
+        "vistadist_12",
+        "vistadist_13",
+        "vistadist_14",
+        "vistadist_15",
+        "travtime_01",
+        "travtime_02",
+        "travtime_03",
+        "travtime_04",
+        "travtime_05",
+        "travtime_06",
+        "travtime_07",
+        "travtime_08",
+        "travtime_09",
+        "travtime_10",
+        "travtime_11",
+        "travtime_12",
+        "travtime_13",
+        "travtime_14",
+        "travtime_15",
+        "main_journey_mode",
+        "journey_travel_time",
+        "journey_distance",
+        "journey_elapsed_time",
+        "journey_weight",
+        "homesubregion_ASGS",
+        "homeregion_ASGS"
+      ],
+      "selected_definitions": {
+        "persid": {
+          "meaning": "anonymous survey person identifier; not a population count",
+          "unit": "string"
+        },
+        "dayType": {
+          "meaning": "Weekday or Weekend; filters require matching weight scale",
+          "unit": "category"
+        },
+        "homeregion_ASGS": {
+          "meaning": "survey participant home region; not necessarily trip origin",
+          "unit": "category"
+        },
+        "jtwid": {
+          "meaning": "unique home-to-work journey identifier",
+          "unit": "string"
+        },
+        "start_LGA": {
+          "meaning": "journey origin Local Government Area name",
+          "unit": "string"
+        },
+        "end_LGA": {
+          "meaning": "journey destination Local Government Area name",
+          "unit": "string"
+        },
+        "start_time": {
+          "meaning": "journey departure minute; preserves extended day",
+          "unit": "minutes"
+        },
+        "journey_weight": {
+          "meaning": "average-day journey expansion weight; actual CSV uses singular name",
+          "unit": "weight"
+        },
+        "main_journey_mode": {
+          "meaning": "longest-distance main mode of complete journey",
+          "unit": "category"
+        }
+      }
+    }
+  ]
+}

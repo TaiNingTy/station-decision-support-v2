@@ -1,0 +1,392 @@
+{
+  "ADRIENNE ARSHT CENTER METROMOVER STATION": [
+    {
+      "stop_id": "796",
+      "stop_lat": "25.789456",
+      "stop_lon": "-80.187998",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "BAYFRONT PARK METROMOVER STATION": [
+    {
+      "stop_id": "808",
+      "stop_lat": "25.773099",
+      "stop_lon": "-80.187323",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "823",
+      "stop_lat": "25.773099",
+      "stop_lon": "-80.187323",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "841",
+      "stop_lat": "25.773099",
+      "stop_lon": "-80.187323",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "BISCAYNE BD@E FLAGLER ST": [
+    {
+      "stop_id": "832",
+      "stop_lat": "25.773099",
+      "stop_lon": "-80.187323",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "BRICKELL CITY CENTRE METROMOVER STATION": [
+    {
+      "stop_id": "804",
+      "stop_lat": "25.766888",
+      "stop_lon": "-80.192121",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "818",
+      "stop_lat": "25.766888",
+      "stop_lon": "-80.192121",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "BRICKELL METROMOVER STATION": [
+    {
+      "stop_id": "802",
+      "stop_lat": "25.762664",
+      "stop_lon": "-80.195261",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "820",
+      "stop_lat": "25.762664",
+      "stop_lon": "-80.195261",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "COLLEGE / BAYSIDE METROMOVER STATION": [
+    {
+      "stop_id": "825",
+      "stop_lat": "25.777584",
+      "stop_lon": "-80.189915",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "COLLEGE BAYSIDE METROMOVER STATION": [
+    {
+      "stop_id": "810",
+      "stop_lat": "25.777584",
+      "stop_lon": "-80.189915",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "839",
+      "stop_lat": "25.777584",
+      "stop_lon": "-80.189915",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "COLLEGE NORTH METROMOVER STATION": [
+    {
+      "stop_id": "811",
+      "stop_lat": "25.778926",
+      "stop_lon": "-80.192085",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "838",
+      "stop_lat": "25.778926",
+      "stop_lon": "-80.192085",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "ELEVENTH STREET METROMOVER STATION": [
+    {
+      "stop_id": "798",
+      "stop_lat": "25.784866",
+      "stop_lon": "-80.19079",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "828",
+      "stop_lat": "25.784866",
+      "stop_lon": "-80.19079",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "FIFTH STREET METROMOVER STATION": [
+    {
+      "stop_id": "805",
+      "stop_lat": "25.769165",
+      "stop_lon": "-80.192248",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "817",
+      "stop_lat": "25.769165",
+      "stop_lon": "-80.192248",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "FINANCIAL DISTRICT METROMOVER STATION": [
+    {
+      "stop_id": "801",
+      "stop_lat": "25.760381",
+      "stop_lon": "-80.192881",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "821",
+      "stop_lat": "25.760381",
+      "stop_lon": "-80.192881",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "FIRST STREET METROMOVER STATION": [
+    {
+      "stop_id": "809",
+      "stop_lat": "25.775726",
+      "stop_lon": "-80.189849",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "824",
+      "stop_lat": "25.775726",
+      "stop_lon": "-80.189849",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "840",
+      "stop_lat": "25.775726",
+      "stop_lon": "-80.189849",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "FREEDOM TOWER METROMOVER STATION": [
+    {
+      "stop_id": "800",
+      "stop_lat": "25.780544",
+      "stop_lon": "-80.190567",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "826",
+      "stop_lat": "25.780544",
+      "stop_lon": "-80.190567",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "GOVERNMENT CENTER METROMOVER STATION": [
+    {
+      "stop_id": "813",
+      "stop_lat": "25.775864",
+      "stop_lon": "-80.196093",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "KNIGHT CENTER METROMOVER STATION": [
+    {
+      "stop_id": "807",
+      "stop_lat": "25.771865",
+      "stop_lon": "-80.191377",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "822",
+      "stop_lat": "25.771865",
+      "stop_lon": "-80.191377",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "833",
+      "stop_lat": "25.771865",
+      "stop_lon": "-80.191377",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "MIAMI AVENUE METROMOVER STATION": [
+    {
+      "stop_id": "834",
+      "stop_lat": "25.773391",
+      "stop_lon": "-80.193582",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "MIAMI WORLDCENTER STATION": [
+    {
+      "stop_id": "799",
+      "stop_lat": "25.782476",
+      "stop_lon": "-80.190643",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "827",
+      "stop_lat": "25.782476",
+      "stop_lon": "-80.190643",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "MUSEUM PARK METROMOVER STATION": [
+    {
+      "stop_id": "797",
+      "stop_lat": "25.785918",
+      "stop_lon": "-80.187934",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "829",
+      "stop_lat": "25.785918",
+      "stop_lon": "-80.187934",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "RIVERWALK METROMOVER STATION": [
+    {
+      "stop_id": "806",
+      "stop_lat": "25.771051",
+      "stop_lon": "-80.192558",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "816",
+      "stop_lat": "25.771051",
+      "stop_lon": "-80.192558",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "SCHOOL BOARD METROMOVER STATION": [
+    {
+      "stop_id": "795",
+      "stop_lat": "25.789376",
+      "stop_lon": "-80.193145",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "831",
+      "stop_lat": "25.789376",
+      "stop_lon": "-80.193145",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "TENTH STREET PROMANADE METROMOVER STATION": [
+    {
+      "stop_id": "803",
+      "stop_lat": "25.764016",
+      "stop_lon": "-80.19256",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "819",
+      "stop_lat": "25.764016",
+      "stop_lon": "-80.19256",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "THIRD STREET METROMOVER STATION": [
+    {
+      "stop_id": "815",
+      "stop_lat": "25.772024",
+      "stop_lon": "-80.193508",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ],
+  "WILKIE D FERGUSON METROMOVER STATION": [
+    {
+      "stop_id": "812",
+      "stop_lat": "25.778815",
+      "stop_lon": "-80.195341",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    },
+    {
+      "stop_id": "837",
+      "stop_lat": "25.778815",
+      "stop_lon": "-80.195341",
+      "location_type": "",
+      "parent_station": "",
+      "active_on_selected_service_date": true
+    }
+  ]
+}

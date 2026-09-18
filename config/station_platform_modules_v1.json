@@ -1,0 +1,53 @@
+{
+  "schema_version": "miami-platform-modules/1.0",
+  "provided_on": "2026-09-17",
+  "provided_by": "project owner, as two dimensioned isometric drawings (one in feet-inches, one in metres)",
+  "provenance_class": "observed",
+  "data_nature": "design_specification",
+  "acquisition_status": "acquired",
+  "canonical_units": "imperial as drawn (feet-inches); metric derived exactly with 0.3048 m per ft; the metric drawing's own values are kept verbatim under metric_drawing_as_provided and differ from the exact conversion by up to about 0.6 %",
+  "vehicle_fit_statement": "owner statement 2026-09-17: vehicles fit entirely within the berths as drawn, so vehicle dimensions are not needed for platform geometry",
+  "vehicle_capacity_pax_max": 6,
+  "vehicle_capacity_note": "PRT vehicle, 4-6 passengers maximum per owner statement; the maximum is NOT the average load — see the operations assumptions",
+  "reading_of_drawings_to_confirm": "berth counts and layout types were read from the drawings by the assistant: M1 shows three vehicles on each side of a through guideway, M2 shows seven vehicles in one row beside the guideway",
+  "modules": [
+    {
+      "module_id": "M1_double_sided_6_berth",
+      "layout": "through guideway in the middle; angled berths on both sides",
+      "berths": 6,
+      "berths_per_side": [3, 3],
+      "width_ft_in": "50'3\"",
+      "length_ft_in": "77'-10\"",
+      "width_ft": 50.25,
+      "length_ft": 77.8333,
+      "area_ft2_as_drawn": 3908,
+      "width_m_derived": 15.316,
+      "length_m_derived": 23.724,
+      "area_m2_derived_from_ft2": 363.06,
+      "metric_drawing_as_provided": {"width_m": 15.29, "length_m": 23.84, "area_m2": 364.51}
+    },
+    {
+      "module_id": "M2_single_sided_7_berth",
+      "layout": "through guideway along one edge; angled berths in one row",
+      "berths": 7,
+      "berths_per_side": [7, 0],
+      "width_ft_in": "32'-3\"",
+      "length_ft_in": "132'-7\"",
+      "width_ft": 32.25,
+      "length_ft": 132.5833,
+      "area_ft2_as_drawn": 4271,
+      "width_m_derived": 9.830,
+      "length_m_derived": 40.411,
+      "area_m2_derived_from_ft2": 396.79,
+      "metric_drawing_as_provided": {"width_m": 9.80, "length_m": 40.6, "area_m2": 397.88}
+    }
+  ],
+  "not_specified_in_drawings": [
+    "staging or empty-vehicle berths",
+    "berth cycle time (dwell + entry + exit)",
+    "berth entry/exit geometry and switch clearances",
+    "minimum guideway headway",
+    "vertical circulation, entrances, accessibility",
+    "whether modules can be combined at one station"
+  ]
+}

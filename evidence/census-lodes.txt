@@ -1,0 +1,236 @@
+LEHD Data Products for Workforce Analytics | U.S. Census Bureau
+An official website of the United States government
+Skip to main content
+end of header
+Longitudinal Employer-Household Dynamics
+Skip top of page navigation
+Main
+Applications
+Data
+Workshops/Webinars
+Training
+Upcoming Data
+Research
+State Partners
+LED in Action
+Alert
+Applications
+J2J Explorer
+LED Extraction Tool
+OnTheMap
+OnTheMap for Emergency Management
+PSEO Explorer
+QWI Explorer
+VEO Explorer
+Useful Links
+Center for Economic Studies
+J2J Data
+LODES Data
+PSEO Data
+QWI Data
+VEO Data
+LED Workshop
+Contact Information
+Email us:
+General
+LODES/OnTheMap
+QWI/QWI Explorer
+J2J/J2J Explorer
+PSEO/PSEO Explorer
+or
+Census Call Center:
+301-763-INFO (4636)
+or
+800-923-8282
+Further contact information
+Partner With Us
+Subscribe for
+LEHD Updates
+Data
+LEHD makes available several data products that may be used to research and characterize workforce dynamics for specific groups. These data products include online applications, public-use data, and restricted-use microdata. The Quarterly Workforce Indicators (QWI), LEHD Origin-Destination Employment Statistics (LODES), Job-to-Job Flows (J2J), and Post-Secondary Employment Outcomes (PSEO) are available online for public use. Confidential microdata are available to qualified researchers with approved projects through restricted access use in
+Federal Statistical Research Data Centers (FSRDCs)
+. Examples of how to access and visualize public-use LEHD data products using open source programming languages can be found here:
+lehd.ces.census.gov/data/lehd-code-samples
+.
+Note: The data released by LEHD are based on tabulated and modeled administrative data, which are subject to error. Because the estimates are not derived from a probability-based sample, no sampling error measures are applicable. However, the data are subject to nonsampling errors, which can be attributed to many sources: misreported data, late reporters whose records are missing and imputed, and geographic/industry edits and imputations. The accuracy of the data is impacted by the joint effects of these nonsampling errors. While no direct measurement of these joint effects has been obtained, precautionary steps are taken in all phases of collection and processing to minimize the impact of nonsampling errors.
+J2J Help
+Learn more about J2J by choosing one of the links below.
+J2J 101
+(1.01 MB)
+Job-to-Job Flows: Quick Start Guide
+(325 KB)
+Job-to-Job Flows: New Statistics on Worker Reallocation and Job Turnover
+(740 KB)
+Job-to-Job Flows: Data Dictionary and Schema
+Job-to-Job Flow Variable Relatedness
+(622 KB)
+Job-to-Job Flow Data Notices
+(454 KB)
+Job-to-Job Flows (J2J)
+Job-to-Job Flows (J2J) is a set of statistics on job mobility in the United States. J2J include statistics on: (1) the job-to-job transition rate, (2) hires and separations to and from employment, (3) earnings changes due to job change, and (4) characteristics of origin and destination jobs for job-to-job transitions. These statistics are available at the national, state, and metropolitan area levels and by worker and firm characteristics.
+To browse J2J data files, go to:
+lehd.ces.census.gov/data/j2j/
+. J2J data can also be accessed via
+Job-to-Job Flows Explorer
+. This analysis and visualization tool allows for the construction of tables, maps, and charts to compare, aggregate and analyze flows by worker and firm characteristics. A research release of NAICS subsector J2J tabulations can be found at
+lehd.ces.census.gov/data/j2j_subsector_research.html
+.
+top
+LODES Help
+Learn more about LODES by choosing one of the links below.
+OnTheMap Data Notices
+LODES Tech Doc
+(588 KB)
+LODES Data/Tech Doc Archive
+LODES Code Samples
+Design Comparison Of LODES And ACS Commuting Data Products
+Quality Evaluation of QWI and LODES
+(451 KB)
+LEHD Origin-Destination Employment Statistics (LODES)
+LEHD Origin-Destination Employment Statistics (LODES) used by
+OnTheMap
+are available for download below. Version 8 of LODES was enumerated by 2020 census blocks. Previous versions of LODES were enumerated with 2010 census blocks (LODES7) or 2000 census blocks (LODES5).
+Data files are state-based and organized into three types: Origin-Destination (OD), Residence Area Characteristics (RAC), and Workplace Area Characteristics (WAC), all at census block geographic detail. Data is available for most states for the years (2002-2023).
+To browse LODES data files, go to
+lehd.ces.census.gov/data/lodes/
+.
+top
+Post-Secondary Employment Outcomes (PSEO) (Experimental)
+Post-Secondary Employment Outcomes (PSEO) is a new set of statistics on the earnings and employment outcomes of graduates of select post-secondary institutions in the United States, and is constructed using LEHD data. Earnings Outcomes reports earnings by institution, degree field, degree level and graduation cohort for 1, 5 and 10 years after graduation. Employment Flows tabulations provide the destination industry and geography of employment for graduates of an institution by degree level, degree field, and graduation cohort, for one, five, and 10 years after graduation. A limited number of institutions are available as part of the pilot release, but future updates will include additional post-secondary institutions.
+Data coverage details and data files can be found here:
+lehd.ces.census.gov/data/pseo_experimental.html
+. Methodology and data source information can be found here:
+lehd.ces.census.gov/data/pseo_documentation.html
+.
+To browse PSEO data files, go to:
+lehd.ces.census.gov/data/pseo/
+.
+PSEO data can also be accessed via the
+PSEO Explorer
+visualization tool. This interactive tool allows for comparisons of employment outcomes through dynamic grouped bar charts and employment flows through Sankey diagrams.
+top
+QWI Help
+Learn more about QWI by choosing one of the links below.
+QWI 101
+(1.06 MB)
+QWI Data Notices
+(631 KB)
+QWI Data Schema for Most Recent Release
+The LEHD Infrastructure Files and the Creation of the Quarterly Workforce Indicators
+(252 KB)
+Confidentiality Protection in the Census Bureau's Quarterly Workforce Indicators
+(252 KB)
+QWI Weighting Adjustment
+(929 KB)
+Quality Evaluation of QWI and LODES
+(451 KB)
+Quarterly Workforce Indicators (QWI)
+The Quarterly Workforce Indicators (QWI) are a set of economic indicators including employment, job creation, earnings, and other measures of employment flows. The QWI are reported based on detailed firm characteristics (geography, industry, age, size) and worker demographics information (sex, age, education, race, ethnicity) and are available tabulated to national*, state, metropolitan/micropolitan areas, county, and Workforce Investment Board (WIB) areas.
+*Note: National QWIs are currently released as Beta and can be accessed at
+lehd.ces.census.gov/data/qwi_national.html
+.
+QWI data can be accessed through the following tools:
+Comparisons and Rankings with
+QWI Explorer
+Custom queries with the
+LED Extraction Tool
+Mobile and web queries through the
+Census API
+Direct data download using the tool below
+To browse QWI data files, go to
+lehd.ces.census.gov/data/qwi/
+.
+top
+Veteran Employment Outcomes (VEO) (Experimental)
+Veteran Employment Outcomes (VEO) are experimental statistics on veterans' labor market outcomes one, five, and 10 years after discharge, by military occupation, rank, demographics (age, sex, race, ethnicity, education), industry and geography of employment. These statistics are generated by linking veteran records provided by the Department of Defense to national administrative data on jobs at the U.S. Census Bureau. Coverage of the data includes veterans honorably discharged between 2002 and 2021 from the Air Force, Army, Coast Guard, Marine Corps, and Navy (about 2.8 million veterans).
+Documentation and CSV files are available for download here:
+lehd.ces.census.gov/data/veo_experimental.html
+To browse VEO data files, go to:
+lehd.ces.census.gov/data/veo/
+.
+VEO data can also be accessed via the
+VEO Explorer
+visualization tool. This interactive tool allows for comparisons of veterans outcomes via an easy-to-use line and bar chart interface.
+top
+Restricted-Use Microdata
+In addition to public-use data products, LEHD microdata are available for research use in approved projects. Researchers interested in using restricted-use LEHD data must submit a proposal to conduct research at a secure
+Federal Statistical Research Data Center (FSRDC)
+. LEHD data available in the FSRDCs includes job-level quarterly earnings history data, person-level demographic data, establishment-level firm characteristics, and establishment-level Quarterly Workforce Indicators. Detailed information about restricted-use LEHD data, including available states and years, is on the
+CES LEHD Data page
+. Additional details are also available in the
+LEHD Snapshot documentation
+.
+top
+LEHD Data Citations
+{File Name} refers to the specific raw data file that was accessed.
+{Vintage} (e.g. R2017Q2) can be found in the "version" text file that is distributed with each data series.
+{Date} refers to the day, month, and year in which the data were accessed.
+Job-to-Job Flows (J2J)
+U.S. Census Bureau, "{File Name}," Job-to-Job Flows, {Vintage},
+https://lehd.ces.census.gov/data/j2j
+, accessed on {Date}.
+Example:
+U.S. Census Bureau, "j2j_al_d_f_gs_n_oslp_u," Job-to-Job Flows, R2025Q1,
+https://lehd.ces.census.gov/data/j2j
+, accessed on May 12, 2025.
+LEHD Origin-Destination Employment Statistics (LODES)
+U.S. Census Bureau, "{File Name}," LEHD Origin-Destination Employment Statistics, {Vintage},
+https://lehd.ces.census.gov/data/lodes
+, accessed on {Date}.
+Example:
+U.S. Census Bureau, "al_od_main_JT00_2022," LEHD Origin-Destination Employment Statistics, 8.3,
+https://lehd.ces.census.gov/data/lodes
+, accessed on May 12, 2025.
+Post-Secondary Employment Outcomes (PSEO)
+U.S. Census Bureau, "{File Name}," Post-Secondary Employment Outcomes [Experimental], {Vintage},
+https://lehd.ces.census.gov/data/pseo
+, accessed on {Date}.
+Example:
+U.S. Census Bureau, "pseo_al," Post-Secondary Employment Outcomes [Experimental], R2024Q4,
+https://lehd.ces.census.gov/data/pseo
+, accessed on May 12, 2025.
+Quarterly Workforce Indicators (QWI)
+U.S. Census Bureau, "{File Name}," Quarterly Workforce Indicators, {Vintage},
+https://lehd.ces.census.gov/data/qwi
+, accessed on {Date}.
+Example:
+U.S. Census Bureau, "qwi_al_se_fs_gw_ns_op_u," Quarterly Workforce Indicators, R2025Q2,
+https://lehd.ces.census.gov/data/qwi
+, accessed on May 12, 2025.
+Veteran Employment Outcomes (VEO)
+U.S. Census Bureau, "{File Name}," Veteran Employment Outcomes [Experimental], {Vintage},
+https://lehd.ces.census.gov/data/veo
+, accessed on {Date}.
+Example:
+U.S. Census Bureau, "veoa," Veteran Employment Outcomes [Experimental], R2024Q4,
+https://lehd.ces.census.gov/data/veo
+, accessed on May 12, 2025.
+top
+*
+All CSV files are compressed using a
+GZip
+algorithm, which appends a ".gz" to the end of the filename. Most commonly used compression/extraction software packages can decompress these files (see
+http://en.wikipedia.org/wiki/Zip_(file_format)
+).
+CONNECT WITH US
+Information Quality
+Data Linkage Infrastructure
+Data Protection and Privacy Policy
+Accessibility
+FOIA
+Inspector General
+No FEAR Act
+U.S. Department of Commerce
+USA.gov
+Measuring America's People, Places, and Economy
+✕
+Is this page helpful?
+Yes
+No
+✕
+NO THANKS
+255 characters maximum
+255 characters maximum reached
+✕
+Thank you for your feedback.
+Comments or suggestions?

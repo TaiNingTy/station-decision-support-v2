@@ -1,0 +1,7 @@
+# pip-installable companion of requirements-gis.lock.txt.
+# The lock file is a RUNTIME version gate parsed by scripts/build_miami_station_zoning_profile.py — not a pip file.
+# GEOS / PROJ ship inside these wheels; the exact library versions (GEOS 3.13.1, PROJ 9.8.1) are verified at runtime
+# against the lock, and the script halts on any mismatch instead of producing results under an unlocked environment.
+#   python3 -m pip install -r requirements-gis.txt
+shapely==2.1.2
+pyproj==3.8.0

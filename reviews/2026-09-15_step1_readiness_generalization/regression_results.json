@@ -1,0 +1,473 @@
+{
+  "passed": true,
+  "scenarios": {
+    "baseline_full_rebuild": {
+      "passed": true,
+      "checks": {
+        "ordered_rebuild_exit_0": true,
+        "status_DONE": true,
+        "ready_for_downstream_true": true,
+        "no_manifest_mismatch": true,
+        "readiness_not_listed_in_any_manifest": true,
+        "gis_inventory_listed_upstream": true,
+        "exactly_one_package": true,
+        "check_mode_exit_0": true,
+        "no_staging_left": true,
+        "byte_identical_to_this_trees_published_package": true
+      },
+      "details": {
+        "status": "DONE",
+        "mismatches": [],
+        "package": "spatial_join/pkg-113ee767a2ca",
+        "stdout_tail": "r: /opt/anaconda3/bin/python3\n\n=== [station_master] scripts/build_miami_station_master.py ===\n[station_master] OK\n\n=== [spatial_join] scripts/build_miami_station_zoning_profile.py ===\n[spatial_join] OK\n\n=== [readiness_check] scripts/miami_readiness.py --check ===\n[readiness_check] OK\n\nall stages OK\n",
+        "stderr_tail": ""
+      },
+      "seconds": 1.7
+    },
+    "unchanged_rerun": {
+      "passed": true,
+      "checks": {
+        "exit_0": true,
+        "every_data_file_byte_identical": true,
+        "no_new_package": true,
+        "package_reported_reused": true
+      },
+      "details": {
+        "stdout_tail": "r: /opt/anaconda3/bin/python3\n\n=== [station_master] scripts/build_miami_station_master.py ===\n[station_master] OK\n\n=== [spatial_join] scripts/build_miami_station_zoning_profile.py ===\n[spatial_join] OK\n\n=== [readiness_check] scripts/miami_readiness.py --check ===\n[readiness_check] OK\n\nall stages OK\n"
+      },
+      "seconds": 1.5
+    },
+    "station_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_station_master_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "both_packages_kept": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "station_master_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-545a802b8c20"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-545a802b8c20 (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.5
+    },
+    "window_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_study_window_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "both_packages_kept": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "study_window_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-31a73934a934"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-31a73934a934 (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1494.9 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.6
+    },
+    "zoning_change": {
+      "passed": true,
+      "checks": {
+        "upstream_exit_0": true,
+        "STALE_after_upstream_only": true,
+        "ready_false_while_stale": true,
+        "changed_lists_exactly_zoning_raw_sha256": true,
+        "check_mode_exit_1_while_stale": true,
+        "old_package_still_verifies": true,
+        "pointer_untouched_by_upstream": true,
+        "downstream_exit_0": true,
+        "DONE_after_downstream": true,
+        "new_package_published": true,
+        "pointer_records_previous_package": true,
+        "both_packages_kept": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "stale_block": {
+          "freshness": "STALE_consumed_inputs_or_packages_changed_rerun_stage",
+          "consumed_inputs_changed": [
+            "zoning_raw_sha256"
+          ],
+          "ready_for_downstream": false
+        },
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-4c63c3df22b9"
+        ],
+        "r1_stderr_tail": "",
+        "r2_stdout_tail": "status=PASS package=pkg-4c63c3df22b9 (new) pointer_switched=True published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+        "r2_stderr_tail": ""
+      },
+      "seconds": 1.7
+    },
+    "publish_failure_rename": {
+      "passed": true,
+      "checks": {
+        "exit_nonzero": true,
+        "injected_error_reported": true,
+        "pointer_unchanged": true,
+        "previously_published_files_unchanged": true,
+        "current_package_verifies": true,
+        "readiness_DONE_on_old_package": true,
+        "no_staging_left": true,
+        "no_pointer_tmp_left": true,
+        "failure_log_written": true,
+        "no_new_package_dir": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — publish interrupted: injected failure: package dir rename; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T215421.json\n",
+        "stderr_tail": "",
+        "packages": [
+          "pkg-113ee767a2ca"
+        ],
+        "failed_logs": [
+          "spatial_join_failed_20260915T215421.json"
+        ]
+      },
+      "seconds": 0.7
+    },
+    "publish_failure_pointer": {
+      "passed": true,
+      "checks": {
+        "exit_nonzero": true,
+        "injected_error_reported": true,
+        "pointer_unchanged": true,
+        "previously_published_files_unchanged": true,
+        "current_package_verifies": true,
+        "readiness_DONE_on_old_package": true,
+        "no_staging_left": true,
+        "no_pointer_tmp_left": true,
+        "failure_log_written": true,
+        "new_package_complete_but_not_current": true,
+        "plain_rerun_recovers_exit_0": true,
+        "DONE_after_recovery": true,
+        "pointer_now_on_new_package": true,
+        "recovery_reused_complete_package": true,
+        "previous_recorded": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — publish interrupted: injected failure: pointer switch; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T215422.json\n",
+        "stderr_tail": "",
+        "packages": [
+          "pkg-113ee767a2ca",
+          "pkg-8b90fd63ccf0"
+        ],
+        "failed_logs": [
+          "spatial_join_failed_20260915T215422.json"
+        ]
+      },
+      "seconds": 1.4
+    },
+    "validation_failure": {
+      "passed": true,
+      "checks": {
+        "exit_1": true,
+        "every_data_file_unchanged": true,
+        "pointer_unchanged": true,
+        "no_new_package": true,
+        "no_staging_left": true,
+        "failure_log_written": true,
+        "readiness_still_DONE": true
+      },
+      "details": {
+        "stdout_tail": "status=FAIL — geometry/input validation failed; nothing switched; current package and pointer untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260915T215423.json\n"
+      },
+      "seconds": 0.7
+    },
+    "lock_mismatch": {
+      "passed": true,
+      "checks": {
+        "exit_1": true,
+        "mismatch_reported": true,
+        "every_data_file_unchanged": true,
+        "no_new_package": true
+      },
+      "details": {
+        "stdout_tail": "HALT: dependency lock mismatch (edit requirements-gis.lock.txt deliberately to change): {'geos': {'locked': '3.12.0', 'actual': '3.13.1'}}\n"
+      },
+      "seconds": 0.2
+    },
+    "corrupt_package_detected": {
+      "passed": true,
+      "checks": {
+        "check_mode_exit_1": true,
+        "status_CORRUPT_PACKAGE": true,
+        "ready_false": true,
+        "problem_names_the_file": true,
+        "rerun_republishes_exit_0": true,
+        "DONE_after_rerun": true,
+        "corrupt_dir_quarantined": true,
+        "no_manifest_mismatch": true
+      },
+      "details": {
+        "problems": [
+          "sha256 mismatch: station_overlap.json"
+        ],
+        "stdout_tail": " quarantined as pkg-113ee767a2ca.corrupt-20260915T215424 and republished\nstatus=PASS package=pkg-113ee767a2ca (new) pointer_switched=False published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n"
+      },
+      "seconds": 0.8
+    },
+    "readiness_single_writer": {
+      "passed": true,
+      "checks": {
+        "readiness_not_listed_in_any_manifest": true,
+        "lineage_matches_build_manifest": true,
+        "lineage_matches_package_manifest": true,
+        "aggregator_rerun_byte_identical": true,
+        "stage_scripts_never_write_readiness": true
+      },
+      "details": {},
+      "seconds": 0.0
+    },
+    "readiness_flags_baseline": {
+      "passed": true,
+      "checks": {
+        "schema_2_1": true,
+        "stages_in_build_order": true,
+        "station_master_DONE": true,
+        "spatial_join_DONE": true,
+        "unbuilt_layers_NOT_RUN": true,
+        "ai_flag_false": true,
+        "ai_required_not_done_lists_three": true,
+        "optional_missing_lists_two": true,
+        "config_complete_false": true,
+        "config_all_observed_false": true,
+        "config_missing_four": true,
+        "flags_are_booleans": true,
+        "code_matches_current_true": true,
+        "legacy_zoning_block_kept": true,
+        "check_ai_exit_1": true,
+        "check_exit_0": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "NOT_RUN",
+          "jobs": "NOT_RUN",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "NOT_RUN",
+          "scenarios": "NOT_RUN"
+        },
+        "flags": {
+          "ready_for_ai_interpretation": false,
+          "ai_missing_optional": [
+            "poi",
+            "walk_model"
+          ],
+          "config_inputs_complete": false,
+          "config_missing_inputs": [
+            "platform_constructible_space",
+            "vehicle_parameters",
+            "service_baseline",
+            "scenario_results"
+          ]
+        }
+      },
+      "seconds": 0.1
+    },
+    "future_layers_fixtures": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "fixture_layers_DONE": true,
+        "ai_true_without_optional_layers": true,
+        "optional_missing_both": true,
+        "config_still_incomplete": true,
+        "check_ai_exit_0": true,
+        "poi_leaves_only_walk_model_missing": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "DONE",
+          "jobs": "DONE",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "DONE",
+          "scenarios": "NOT_RUN"
+        },
+        "stdout": "[] missing_optional=['poi', 'walk_model'] config_complete=False all_observed=False missing=['platform_constructible_space', 'vehicle_parameters', 'service_baseline', 'scenario_results'] assumed=[]\nspatial_join: ready_for_downstream=True changed=[] problems=None package=spatial_join/pkg-113ee767a2ca\n"
+      },
+      "seconds": 0.1
+    },
+    "assumption_backed_inputs": {
+      "passed": true,
+      "checks": {
+        "complete_true": true,
+        "all_observed_false": true,
+        "assumed_lists_three": true,
+        "missing_empty": true,
+        "observed_variant_complete_true": true,
+        "observed_variant_all_observed_true": true,
+        "observed_variant_no_assumed": true
+      },
+      "details": {
+        "assumed_variant": {
+          "config_inputs_complete": true,
+          "config_inputs_all_observed": false,
+          "config_assumption_backed_inputs": [
+            "platform_constructible_space",
+            "vehicle_parameters",
+            "scenario_results"
+          ]
+        }
+      },
+      "seconds": 0.1
+    },
+    "stale_propagation": {
+      "passed": true,
+      "checks": {
+        "spatial_join_republished": true,
+        "spatial_join_DONE": true,
+        "direct_consumers_STALE": true,
+        "reason_names_spatial_join": true,
+        "propagates_to_scenarios": true,
+        "ai_flag_false_again": true,
+        "required_not_done_lists_three": true,
+        "config_incomplete_again": true
+      },
+      "details": {
+        "stages": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "STALE",
+          "jobs": "STALE",
+          "poi": "STALE",
+          "walk_model": "NOT_RUN",
+          "input_package": "STALE",
+          "scenarios": "STALE"
+        }
+      },
+      "seconds": 0.7
+    },
+    "raw_change_station_master": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "station_master_STALE": true,
+        "inputs_changed_names_registry": true,
+        "spatial_join_still_DONE_data_unchanged": true,
+        "ai_false_because_station_master": true,
+        "check_exit_0_spatial_join_only": true,
+        "upstream_rebuild_exit_0": true,
+        "station_master_DONE_after_rebuild": true,
+        "spatial_join_STALE_after_rebuild": true,
+        "both_DONE_after_downstream": true
+      },
+      "details": {
+        "before": {
+          "station_master": "STALE",
+          "spatial_join": "DONE",
+          "demography": "NOT_RUN",
+          "jobs": "NOT_RUN",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "NOT_RUN",
+          "scenarios": "NOT_RUN"
+        },
+        "after_upstream": {
+          "station_master": "DONE",
+          "spatial_join": "STALE",
+          "demography": "NOT_RUN",
+          "jobs": "NOT_RUN",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "NOT_RUN",
+          "scenarios": "NOT_RUN"
+        },
+        "after_downstream": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "NOT_RUN",
+          "jobs": "NOT_RUN",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "NOT_RUN",
+          "scenarios": "NOT_RUN"
+        }
+      },
+      "seconds": 1.6
+    },
+    "code_change_informational": {
+      "passed": true,
+      "checks": {
+        "aggregator_exit_0": true,
+        "spatial_join_still_DONE": true,
+        "station_master_still_DONE": true,
+        "code_flags_false": true,
+        "ai_required_not_done_unaffected": true,
+        "rebuild_exit_0": true,
+        "new_package_after_code_change": true,
+        "code_flags_true_after_rebuild": true
+      },
+      "details": {
+        "stages_before_rebuild": {
+          "station_master": "DONE",
+          "spatial_join": "DONE",
+          "demography": "NOT_RUN",
+          "jobs": "NOT_RUN",
+          "poi": "NOT_RUN",
+          "walk_model": "NOT_RUN",
+          "input_package": "NOT_RUN",
+          "scenarios": "NOT_RUN"
+        }
+      },
+      "seconds": 1.7
+    }
+  },
+  "interpreter": "/opt/anaconda3/bin/python3",
+  "copies_base": "/private/tmp/claude-501/-Users-supernt/ea51ad8f-a974-4159-9e7e-a9957e545431/scratchpad/regression_step1_final",
+  "run_at": "2026-09-15T21:54:28",
+  "scripts_under_test": {
+    "scripts/build_miami_station_master.py": "039809c59717e320fa0da7121bad7f1b4549997e75119847411bfb44522132dc",
+    "scripts/build_miami_station_zoning_profile.py": "d98e88effafc4b7157c2f7c014d84874f666dc8a6b4d11c468ee90bf355cbcde",
+    "scripts/miami_readiness.py": "91d85922cd4d0d17a64f1ac930a74f27012e33768d6a75e5b1bde379a0572ec0",
+    "scripts/build_all_miami.py": "54ab3940f01da91519d550b7bbdf0ac07b9d5a9b1777ccf9c555b9856dc7c6ff"
+  },
+  "method": "every scenario ran in an isolated copy under copies_base; the tree under test was only read"
+}

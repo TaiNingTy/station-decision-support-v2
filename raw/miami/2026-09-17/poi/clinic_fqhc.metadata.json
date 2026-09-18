@@ -1,0 +1,263 @@
+{
+ "currentVersion": 11.1,
+ "cimVersion": "3.1.0",
+ "id": 40,
+ "name": "Federally Qualified Health Centers (FQHCs) @ FederallyQualifiedHealthCenter",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPoint",
+ "sourceSpatialReference": {
+  "wkid": 102658,
+  "latestWkid": 2236,
+  "xyTolerance": 0.00204800000190735,
+  "zTolerance": 2,
+  "mTolerance": 2,
+  "falseX": -1.77912999990048E7,
+  "falseY": -4.16453999999997E7,
+  "xyUnits": 3906.2499963620203,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 35,
+  "name": "Health and Human Services"
+ },
+ "subLayers": [],
+ "minScale": 0,
+ "maxScale": 0,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriPMS",
+    "url": "f2c2e2f31370afc34527733703e3d464",
+    "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABAklEQVQ4jdWTsWoCQRCGv7m7FAbLgHJKQNL6GjY+QYpDK7tAGhsfIPgAPkAIcn0KSwvtLNKGFEGQQA7sBIsUd+7Kqblc8IR4aNAfFuafZT9mdncsDijreLCad43P5R6nha79lgxb0MKk8meY5p369I6n3HgbBiXgBuEBzQtCFU0jtv8B3G9id12bWiRX9i1ljHDzPZzPIki8kjmu/byKHc/f7vqAsv4PJuYjKli3FUpd+OlhgcogXEXeDL6AaTqYqW/B6ERe8wqU08H2lHVmMFFtHK8JUggv6idPCccbbFwWmO2GGQxR8YQOZ241dwnqI0xQQfRdfsO6dhsIVyqd7gMsAUGmPhzgN3v4AAAAAElFTkSuQmCC",
+    "contentType": "image/png",
+    "width": 14,
+    "height": 14,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [
+   {
+    "labelExpression": "[PROVIDER]",
+    "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+    "deconflictionStrategy": "dynamic",
+    "removeDuplicates": "none",
+    "stackLabel": false,
+    "useCodedValues": true,
+    "maxScale": 0,
+    "minScale": 0,
+    "name": "Default",
+    "priority": 48,
+    "symbol": {
+     "type": "esriTS",
+     "color": [
+      0,
+      77,
+      168,
+      255
+     ],
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "verticalAlignment": "bottom",
+     "horizontalAlignment": "center",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "kerning": true,
+     "haloColor": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "haloSize": 1,
+     "font": {
+      "family": "Verdana",
+      "size": 8,
+      "style": "normal",
+      "weight": "bold",
+      "decoration": "none"
+     }
+    }
+   }
+  ]
+ },
+ "defaultVisibility": false,
+ "extent": {
+  "xmin": 820395.687320698,
+  "ymin": 395026.12478550524,
+  "xmax": 941611.8750815876,
+  "ymax": 585844.6880352199,
+  "spatialReference": {
+   "wkid": 102658,
+   "latestWkid": 2236,
+   "xyTolerance": 3.70209105830001E-4,
+   "zTolerance": 1.9999999999999998E-5,
+   "mTolerance": 0.001,
+   "falseX": -17791300,
+   "falseY": -41645400,
+   "xyUnits": 1.372494229425764E8,
+   "falseZ": 0,
+   "zUnits": 400000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "PROVIDER",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "PROVIDER",
+   "type": "esriFieldTypeString",
+   "alias": "PROVIDER",
+   "length": 70,
+   "domain": null
+  },
+  {
+   "name": "ADDRESS",
+   "type": "esriFieldTypeString",
+   "alias": "ADDRESS",
+   "length": 30,
+   "domain": null
+  },
+  {
+   "name": "CITY",
+   "type": "esriFieldTypeString",
+   "alias": "CITY",
+   "length": 25,
+   "domain": null
+  },
+  {
+   "name": "ZIPCODE",
+   "type": "esriFieldTypeInteger",
+   "alias": "ZIPCODE",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "SHAPE",
+   "domain": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "length": 38,
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "SHAPE"
+ },
+ "indexes": [
+  {
+   "name": "R4947_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "UUID_4947",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "S4330_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 1000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasMetadata": false,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true
+}

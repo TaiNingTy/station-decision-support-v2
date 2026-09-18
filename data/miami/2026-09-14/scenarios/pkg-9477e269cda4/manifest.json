@@ -1,0 +1,139 @@
+{
+  "stage": "scenarios",
+  "schema_version": "miami-scenarios-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [],
+  "consumed_packages": [
+    {
+      "stage": "input_package",
+      "package_id": "pkg-432b88d981f8",
+      "package_dir": "input_package/pkg-432b88d981f8",
+      "manifest_sha256": "a0567e5cd1d24e9faab7c94d1cb20f27a9e3e7013e834811da4a4b69938ad700"
+    },
+    {
+      "stage": "jobs",
+      "package_id": "pkg-7fa6f53356c6",
+      "package_dir": "jobs/pkg-7fa6f53356c6",
+      "manifest_sha256": "4d2c237e1c56db104bfc55efc30ea620ecce64a9f763ad8c4b8cd2211d823781"
+    },
+    {
+      "stage": "service_baseline",
+      "package_id": "pkg-a69b1848d3b9",
+      "package_dir": "service_baseline/pkg-a69b1848d3b9",
+      "manifest_sha256": "5521635cd8c17ed78749cd3b2461dbb9838c72ffe2e632eab70bde10ecf41f03"
+    },
+    {
+      "stage": "ridership_reference",
+      "package_id": "pkg-5d8a337e0686",
+      "package_dir": "ridership_reference/pkg-5d8a337e0686",
+      "manifest_sha256": "ca1bd6ad79212258c93e2cdc51ddf439c1e6cdccf1635988f14ae613f6436e9e"
+    }
+  ],
+  "optional_layers_absent_at_build": [],
+  "code": [
+    {
+      "path": "scripts/build_miami_scenarios.py",
+      "sha256": "70faf7894f252e3d05c1037b9586f99034ad57d68906b5bb0eee614656be52b2"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "bfbb57caa87bcd34d17baf068d7a17e63007ff28361654eb6a19cb85e0e1ff99"
+    }
+  ],
+  "config_sha256": "bfd85b0cb988919e24db4364eb3e84c866fea71f5428c466ef8a4ea0287cd37d",
+  "config": {
+    "scenarios": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "assumptions": {
+      "A01_attendance_rate": {
+        "value": 0.85,
+        "statement": "85 % of primary-job holders who do not work from home make a commute trip on a typical weekday",
+        "reference": "leave/absence and shift patterns are not observed locally; a single value for all scenarios"
+      },
+      "A02_non_commute_trips_per_commute_trip": {
+        "low": 0.5,
+        "medium": 1.0,
+        "high": 1.5,
+        "statement": "non-commute trips inside the network per commute trip",
+        "reference": "NHTS national purpose shares show work trips are a minority of person trips; the corridor-relevant fraction and the Miami transfer coefficient are NOT observed — the whole ratio is an assumption"
+      },
+      "A03_prt_adoption_share_of_all_mode_trips": {
+        "low": 0.05,
+        "medium": 0.15,
+        "high": 0.3,
+        "statement": "share of ALL-MODE trips that would use the PRT service",
+        "reference_bound": "low must not exceed the observed network public-transportation commute share (R01, ACS)"
+      },
+      "A04_station_allocation_rule": {
+        "statement": "each block-to-block link is split among the candidate stations at each end in proportion to the block's land share inside each station's half-mile disc, normalised to 1 (conservation by construction)"
+      },
+      "A05_direction_and_return": {
+        "statement": "AM peak: home -> work; PM peak mirrors the AM peak (boardings <-> alightings); returns equal outbound trips"
+      },
+      "A06_non_commute_pattern": {
+        "statement": "non-commute trips follow the commute OD pattern and the same station allocation"
+      },
+      "A07_departure_window_equals_station_window": {
+        "statement": "the ACS departure-from-home hour is treated as the station arrival hour; B08302 has no return-trip distribution"
+      }
+    },
+    "chain": "internal job links -> weekday commute trips -> all-purpose trips -> peak-hour trips -> PRT trips -> station boardings/alightings",
+    "base": "all-mode commute trips (decision 2026-09-15)",
+    "hub_inflow": "kept as a field, not modeled",
+    "peak_parameter": "P05 from ACS B08302 (single parameter)",
+    "link_filter": "both_in, JT01 > 0"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "assumption_parameter_ids": [
+    "A01_attendance_rate",
+    "A02_non_commute_trips_per_commute_trip",
+    "A03_prt_adoption_share_of_all_mode_trips",
+    "A04_station_allocation_rule",
+    "A05_direction_and_return",
+    "A06_non_commute_pattern",
+    "A07_departure_window_equals_station_window"
+  ],
+  "method_summary": "internal LODES job links -> weekday commute trips (ACS WFH share, attendance assumption) -> all-purpose trips (assumption) -> peak hour (single ACS-derived share) -> PRT adoption (assumption, low bounded by observed transit share) -> station allocation with conservation; PM mirror",
+  "contract": "V2_站点输入包字段契约.md §9, §10; rules doc 规则 5",
+  "publish_policy": "content-addressed immutable package dir scenarios/pkg-<id>; readers resolve scenarios_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "scenario_results.json",
+      "sha256": "0b51b6927a379f58ba6479b3ad8e750e82cf9ea17a2a57431051983359f20ae3"
+    },
+    {
+      "file": "scenario_parameters.json",
+      "sha256": "936574bc5cfc0ad699822bc218ac272bb8a29a4aac208883ecec798862a583b2"
+    },
+    {
+      "file": "station_scenario_table.json",
+      "sha256": "e148b5904598017abfe20eadf5f548e440d3fb92dccf8b787727306eabf105bd"
+    },
+    {
+      "file": "scenario_validation.json",
+      "sha256": "202be571d954d7a098503811d0971b670cadc6ba7a9b23688e936dc751546518"
+    }
+  ],
+  "package_id": "pkg-9477e269cda4",
+  "package_dir": "scenarios/pkg-9477e269cda4"
+}

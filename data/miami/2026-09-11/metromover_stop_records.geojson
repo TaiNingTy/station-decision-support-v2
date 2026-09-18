@@ -1,0 +1,1640 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "795",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193145,
+          25.789376
+        ]
+      },
+      "properties": {
+        "stop_id": "795",
+        "stop_code": "SCHLBRDI",
+        "stop_name": "SCHOOL BOARD METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.789376",
+        "stop_lon": "-80.193145",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "796",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187998,
+          25.789456
+        ]
+      },
+      "properties": {
+        "stop_id": "796",
+        "stop_code": "OMNIMOVI",
+        "stop_name": "ADRIENNE ARSHT CENTER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.789456",
+        "stop_lon": "-80.187998",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 1192,
+        "selected_day_stop_events": 396,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "797",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187934,
+          25.785918
+        ]
+      },
+      "properties": {
+        "stop_id": "797",
+        "stop_code": "BCENPARI",
+        "stop_name": "MUSEUM PARK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.785918",
+        "stop_lon": "-80.187934",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "798",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19079,
+          25.784866
+        ]
+      },
+      "properties": {
+        "stop_id": "798",
+        "stop_code": "11STMOVI",
+        "stop_name": "ELEVENTH STREET METROMOVER STATION",
+        "stop_desc": "NE 2 AV & NE 11 ST",
+        "stop_lat": "25.784866",
+        "stop_lon": "-80.19079",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "799",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190643,
+          25.782476
+        ]
+      },
+      "properties": {
+        "stop_id": "799",
+        "stop_code": "WORLDCEN",
+        "stop_name": "MIAMI WORLDCENTER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.782476",
+        "stop_lon": "-80.190643",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "800",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190567,
+          25.780544
+        ]
+      },
+      "properties": {
+        "stop_id": "800",
+        "stop_code": "FRDMTOWI",
+        "stop_name": "FREEDOM TOWER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.780544",
+        "stop_lon": "-80.190567",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "801",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192881,
+          25.760381
+        ]
+      },
+      "properties": {
+        "stop_id": "801",
+        "stop_code": "FINCDISI",
+        "stop_name": "FINANCIAL DISTRICT METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.760381",
+        "stop_lon": "-80.192881",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "802",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195261,
+          25.762664
+        ]
+      },
+      "properties": {
+        "stop_id": "802",
+        "stop_code": "BRKLMOVI",
+        "stop_name": "BRICKELL METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.762664",
+        "stop_lon": "-80.195261",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "803",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19256,
+          25.764016
+        ]
+      },
+      "properties": {
+        "stop_id": "803",
+        "stop_code": "10STMOVI",
+        "stop_name": "TENTH STREET PROMANADE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.764016",
+        "stop_lon": "-80.19256",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "804",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192121,
+          25.766888
+        ]
+      },
+      "properties": {
+        "stop_id": "804",
+        "stop_code": "8STRMOVI",
+        "stop_name": "BRICKELL CITY CENTRE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.766888",
+        "stop_lon": "-80.192121",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "805",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192248,
+          25.769165
+        ]
+      },
+      "properties": {
+        "stop_id": "805",
+        "stop_code": "5STRMOVI",
+        "stop_name": "FIFTH STREET METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.769165",
+        "stop_lon": "-80.192248",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "806",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192558,
+          25.771051
+        ]
+      },
+      "properties": {
+        "stop_id": "806",
+        "stop_code": "RIVRWALI",
+        "stop_name": "RIVERWALK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.771051",
+        "stop_lon": "-80.192558",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "807",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.191377,
+          25.771865
+        ]
+      },
+      "properties": {
+        "stop_id": "807",
+        "stop_code": "KNGTCNTI",
+        "stop_name": "KNIGHT CENTER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.771865",
+        "stop_lon": "-80.191377",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "808",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187323,
+          25.773099
+        ]
+      },
+      "properties": {
+        "stop_id": "808",
+        "stop_code": "BAY-FRNI",
+        "stop_name": "BAYFRONT PARK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.773099",
+        "stop_lon": "-80.187323",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "809",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189849,
+          25.775726
+        ]
+      },
+      "properties": {
+        "stop_id": "809",
+        "stop_code": "1STRMOVI",
+        "stop_name": "FIRST STREET METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.775726",
+        "stop_lon": "-80.189849",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "810",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189915,
+          25.777584
+        ]
+      },
+      "properties": {
+        "stop_id": "810",
+        "stop_code": "BAY-SIDI",
+        "stop_name": "COLLEGE BAYSIDE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.777584",
+        "stop_lon": "-80.189915",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 597,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "811",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192085,
+          25.778926
+        ]
+      },
+      "properties": {
+        "stop_id": "811",
+        "stop_code": "COLLNORI",
+        "stop_name": "COLLEGE NORTH METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.778926",
+        "stop_lon": "-80.192085",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 1193,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "812",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195341,
+          25.778815
+        ]
+      },
+      "properties": {
+        "stop_id": "812",
+        "stop_code": "MIAARENI",
+        "stop_name": "WILKIE D FERGUSON METROMOVER STATION",
+        "stop_desc": "NW 1 AV & NW 5 ST",
+        "stop_lat": "25.778815",
+        "stop_lon": "-80.195341",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 1193,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "813",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.196093,
+          25.775864
+        ]
+      },
+      "properties": {
+        "stop_id": "813",
+        "stop_code": "GOVTCNTT",
+        "stop_name": "GOVERNMENT CENTER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.775864",
+        "stop_lon": "-80.196093",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 4261,
+        "selected_day_stop_events": 1588,
+        "route_ids": [
+          "14456",
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "815",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193508,
+          25.772024
+        ]
+      },
+      "properties": {
+        "stop_id": "815",
+        "stop_code": "3STRMOVO",
+        "stop_name": "THIRD STREET METROMOVER STATION",
+        "stop_desc": "SE 4 ST & S MIAMI AV",
+        "stop_lat": "25.772024",
+        "stop_lon": "-80.193508",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 1191,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "816",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192558,
+          25.771051
+        ]
+      },
+      "properties": {
+        "stop_id": "816",
+        "stop_code": "RIVRWALO",
+        "stop_name": "RIVERWALK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.771051",
+        "stop_lon": "-80.192558",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "817",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192248,
+          25.769165
+        ]
+      },
+      "properties": {
+        "stop_id": "817",
+        "stop_code": "5STRMOVO",
+        "stop_name": "FIFTH STREET METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.769165",
+        "stop_lon": "-80.192248",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "818",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192121,
+          25.766888
+        ]
+      },
+      "properties": {
+        "stop_id": "818",
+        "stop_code": "8STRMOVO",
+        "stop_name": "BRICKELL CITY CENTRE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.766888",
+        "stop_lon": "-80.192121",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "819",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19256,
+          25.764016
+        ]
+      },
+      "properties": {
+        "stop_id": "819",
+        "stop_code": "10STMOVO",
+        "stop_name": "TENTH STREET PROMANADE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.764016",
+        "stop_lon": "-80.19256",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "820",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195261,
+          25.762664
+        ]
+      },
+      "properties": {
+        "stop_id": "820",
+        "stop_code": "BRKLMOVO",
+        "stop_name": "BRICKELL METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.762664",
+        "stop_lon": "-80.195261",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "821",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192881,
+          25.760381
+        ]
+      },
+      "properties": {
+        "stop_id": "821",
+        "stop_code": "FINCDISO",
+        "stop_name": "FINANCIAL DISTRICT METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.760381",
+        "stop_lon": "-80.192881",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 595,
+        "selected_day_stop_events": 199,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "822",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.191377,
+          25.771865
+        ]
+      },
+      "properties": {
+        "stop_id": "822",
+        "stop_code": "KNGTCNTO",
+        "stop_name": "KNIGHT CENTER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.771865",
+        "stop_lon": "-80.191377",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "823",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187323,
+          25.773099
+        ]
+      },
+      "properties": {
+        "stop_id": "823",
+        "stop_code": "BAY-FRNO",
+        "stop_name": "BAYFRONT PARK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.773099",
+        "stop_lon": "-80.187323",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "824",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189849,
+          25.775726
+        ]
+      },
+      "properties": {
+        "stop_id": "824",
+        "stop_code": "1STRMOVO",
+        "stop_name": "FIRST STREET METROMOVER STATION",
+        "stop_desc": "SW 1 ST & S MIAMI AV",
+        "stop_lat": "25.775726",
+        "stop_lon": "-80.189849",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "825",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189915,
+          25.777584
+        ]
+      },
+      "properties": {
+        "stop_id": "825",
+        "stop_code": "BAY-SIDO",
+        "stop_name": "COLLEGE / BAYSIDE METROMOVER STATION",
+        "stop_desc": "NE 2 AV & NE 4 ST",
+        "stop_lat": "25.777584",
+        "stop_lon": "-80.189915",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "826",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190567,
+          25.780544
+        ]
+      },
+      "properties": {
+        "stop_id": "826",
+        "stop_code": "FRDMTOWO",
+        "stop_name": "FREEDOM TOWER METROMOVER STATION",
+        "stop_desc": "NE 2 AV & NE 7 ST",
+        "stop_lat": "25.780544",
+        "stop_lon": "-80.190567",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "827",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190643,
+          25.782476
+        ]
+      },
+      "properties": {
+        "stop_id": "827",
+        "stop_code": "WORLDCNT",
+        "stop_name": "MIAMI WORLDCENTER STATION",
+        "stop_desc": "NE 2 AV & NE 8 ST",
+        "stop_lat": "25.782476",
+        "stop_lon": "-80.190643",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "828",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19079,
+          25.784866
+        ]
+      },
+      "properties": {
+        "stop_id": "828",
+        "stop_code": "11STMOVO",
+        "stop_name": "ELEVENTH STREET METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.784866",
+        "stop_lon": "-80.19079",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "829",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187934,
+          25.785918
+        ]
+      },
+      "properties": {
+        "stop_id": "829",
+        "stop_code": "BCENPARO",
+        "stop_name": "MUSEUM PARK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.785918",
+        "stop_lon": "-80.187934",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "831",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193145,
+          25.789376
+        ]
+      },
+      "properties": {
+        "stop_id": "831",
+        "stop_code": "SCHLBRDO",
+        "stop_name": "SCHOOL BOARD METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.789376",
+        "stop_lon": "-80.193145",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 596,
+        "selected_day_stop_events": 198,
+        "route_ids": [
+          "14456"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "832",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187323,
+          25.773099
+        ]
+      },
+      "properties": {
+        "stop_id": "832",
+        "stop_code": "BAY-FRNE",
+        "stop_name": "BISCAYNE BD@E FLAGLER ST",
+        "stop_desc": "",
+        "stop_lat": "25.773099",
+        "stop_lon": "-80.187323",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 940,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "833",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.191377,
+          25.771865
+        ]
+      },
+      "properties": {
+        "stop_id": "833",
+        "stop_code": "KNGTCNTE",
+        "stop_name": "KNIGHT CENTER METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.771865",
+        "stop_lon": "-80.191377",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 940,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "834",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193582,
+          25.773391
+        ]
+      },
+      "properties": {
+        "stop_id": "834",
+        "stop_code": "MIA-AVEE",
+        "stop_name": "MIAMI AVENUE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.773391",
+        "stop_lon": "-80.193582",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 940,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "837",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195341,
+          25.778815
+        ]
+      },
+      "properties": {
+        "stop_id": "837",
+        "stop_code": "MIAARENW",
+        "stop_name": "WILKIE D FERGUSON METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.778815",
+        "stop_lon": "-80.195341",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 937,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "838",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192085,
+          25.778926
+        ]
+      },
+      "properties": {
+        "stop_id": "838",
+        "stop_code": "COLLNORW",
+        "stop_name": "COLLEGE NORTH METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.778926",
+        "stop_lon": "-80.192085",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 937,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "839",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189915,
+          25.777584
+        ]
+      },
+      "properties": {
+        "stop_id": "839",
+        "stop_code": "BAY-SIDW",
+        "stop_name": "COLLEGE BAYSIDE METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.777584",
+        "stop_lon": "-80.189915",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 937,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "840",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189849,
+          25.775726
+        ]
+      },
+      "properties": {
+        "stop_id": "840",
+        "stop_code": "1STRMOVW",
+        "stop_name": "FIRST STREET METROMOVER STATION",
+        "stop_desc": "NE 2 AV & NE 2 ST",
+        "stop_lat": "25.775726",
+        "stop_lon": "-80.189849",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 937,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "841",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187323,
+          25.773099
+        ]
+      },
+      "properties": {
+        "stop_id": "841",
+        "stop_code": "BAY-FRNW",
+        "stop_name": "BAYFRONT PARK METROMOVER STATION",
+        "stop_desc": "",
+        "stop_lat": "25.773099",
+        "stop_lon": "-80.187323",
+        "zone_id": "",
+        "stop_url": "",
+        "location_type": "",
+        "parent_station": "",
+        "stop_timezone": "",
+        "wheelchair_boarding": "2",
+        "all_feed_stop_events": 937,
+        "selected_day_stop_events": 397,
+        "route_ids": [
+          "14457"
+        ],
+        "service_ids": [
+          "11",
+          "12",
+          "13"
+        ],
+        "physical_station_id": null,
+        "mapping_status": "UNREVIEWED",
+        "geometry_role": "gtfs_stop_record"
+      }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "retrieved_on": "2026-09-17",
+  "acquisition_stage": "miami_osm_walk_network",
+  "study_bbox_wgs84": [
+    -80.209,
+    25.749,
+    -80.175,
+    25.801
+  ],
+  "margin_deg": 0.01,
+  "fetch_bbox_wgs84": [
+    -80.219,
+    25.739,
+    -80.165,
+    25.811
+  ],
+  "bbox_note": "study window expanded by the margin so the network is complete for 15-minute isochrones (which stay inside the window) and for nearest-facility searches inside it; `>` also returns way nodes that lie outside the fetch bbox",
+  "publisher": "OpenStreetMap contributors via Overpass mirror overpass.kumi.systems",
+  "terms": "ODbL 1.0 — attribution '© OpenStreetMap contributors' required",
+  "service_url": "https://overpass.kumi.systems/api/interpreter",
+  "query": "[out:json][timeout:180];(way[\"highway\"](25.739,-80.219,25.811,-80.165););out body;>;out skel qt;",
+  "osm_data_timestamp": "2026-05-31T22:37:44Z",
+  "overpass_generator": "Overpass API 0.7.62.11 87bfad18",
+  "files": {
+    "response": {
+      "file": "osm/walk_network_overpass.json",
+      "url": "https://overpass.kumi.systems/api/interpreter",
+      "bytes": 10896053,
+      "sha256": "592d45437fd1f8834dfe62b0d71ca489216c6626a0a267bb344b5ed6bcf66add",
+      "retrieved_at_utc": "2026-09-17T14:26:37Z"
+    }
+  },
+  "fetch_script": {
+    "path": "scripts/fetch_miami_osm_walk_network.py",
+    "sha256": "ee962409aa96e2c68460a20020582f9c7ead66a91ab5506f1142c920523d1479"
+  }
+}

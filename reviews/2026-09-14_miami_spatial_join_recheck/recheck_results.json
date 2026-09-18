@@ -1,0 +1,198 @@
+{
+  "published_manifest_mismatches": [
+    [
+      "build_manifest.json",
+      "gis_data_readiness.json"
+    ]
+  ],
+  "baseline": {
+    "exit_code": 0,
+    "stdout": "status=PASS published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+    "stderr": "",
+    "changed_existing_files": [],
+    "manifest_mismatches": [
+      [
+        "build_manifest.json",
+        "gis_data_readiness.json"
+      ]
+    ]
+  },
+  "validation_failure": {
+    "exit_code": 1,
+    "stdout": "status=FAIL — nothing published; previous outputs untouched; log: data/miami/2026-09-14/failed/spatial_join_failed_20260914T224708.json\n",
+    "stderr": "",
+    "changed_existing_files": [],
+    "new_files": [
+      "failed/spatial_join_failed_20260914T224708.json"
+    ],
+    "staging_left": false
+  },
+  "script_change": {
+    "exit_code": 0,
+    "stdout": "status=PASS published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+    "stderr": "",
+    "recorded_script_hash_matches": true,
+    "previous_manifest_archived": true
+  },
+  "upstream_unchanged": {
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY\",\n  \"input_stop_records\": 43,\n  \"physical_station_entities\": 21,\n  \"mapped_stop_records\": 43,\n  \"unmapped_stop_records\": 0,\n  \"duplicate_assignments\": 0,\n  \"source_name_anomaly_stop_ids\": [\n    \"832\"\n  ],\n  \"service_patterns\": 6,\n  \"zoning_polygons\": 235,\n  \"official_agency_confirmation\": false,\n  \"engineering_validation\": \"NOT_PERFORMED\",\n  \"ai_run\": \"NOT_PERFORMED\"\n}\n",
+    "stderr": "",
+    "status": "DONE",
+    "readiness": {
+      "stage_manifest": "spatial_join_manifest.json",
+      "built_on": "2026-09-14",
+      "build_status": "COMPLETED",
+      "geometry_validation_status": "PASS",
+      "ready_for_downstream": true,
+      "upstream_station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+      "freshness": "FRESH"
+    },
+    "station_hash_matches": true,
+    "window_hash_matches": true,
+    "zoning_hash_matches": true,
+    "spatial_outputs_owned_by_upstream": false
+  },
+  "station_change": {
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY\",\n  \"input_stop_records\": 43,\n  \"physical_station_entities\": 21,\n  \"mapped_stop_records\": 43,\n  \"unmapped_stop_records\": 0,\n  \"duplicate_assignments\": 0,\n  \"source_name_anomaly_stop_ids\": [\n    \"832\"\n  ],\n  \"service_patterns\": 6,\n  \"zoning_polygons\": 235,\n  \"official_agency_confirmation\": false,\n  \"engineering_validation\": \"NOT_PERFORMED\",\n  \"ai_run\": \"NOT_PERFORMED\"\n}\n",
+    "stderr": "",
+    "status": "STALE",
+    "readiness": {
+      "stage_manifest": "spatial_join_manifest.json",
+      "built_on": "2026-09-14",
+      "build_status": "COMPLETED",
+      "geometry_validation_status": "PASS",
+      "ready_for_downstream": false,
+      "upstream_station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+      "freshness": "STALE_upstream_station_master_changed_rerun_spatial_join"
+    },
+    "station_hash_matches": false,
+    "window_hash_matches": true,
+    "zoning_hash_matches": true,
+    "downstream_rebuild": {
+      "exit_code": 0,
+      "stdout": "status=PASS published=8 stations=21 polygons=235 band_profiles=63 evidence_rows=1553 min_margin_ft=1414.17 repairs=2 unassigned=89 multi_station=112 network_union_sqmi=3.57\n",
+      "stderr": ""
+    },
+    "after_rebuild": {
+      "status": "DONE",
+      "readiness": {
+        "stage_manifest": "spatial_join_manifest.json",
+        "built_on": "2026-09-14",
+        "build_status": "COMPLETED",
+        "geometry_validation_status": "PASS",
+        "ready_for_downstream": true,
+        "upstream_station_master_sha256": "78b315bcdbacb0022da9bb48024c548feeb17cf67c40b94963351b7b62585094",
+        "method": "imperial bands 1/8-1/4-1/2 mi; clip-to-band; union-based coverage; per original code",
+        "profile_file": "station_zoning_profile.json"
+      },
+      "station_hash_matches": true,
+      "window_hash_matches": true,
+      "zoning_hash_matches": true
+    }
+  },
+  "window_change": {
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY\",\n  \"input_stop_records\": 43,\n  \"physical_station_entities\": 21,\n  \"mapped_stop_records\": 43,\n  \"unmapped_stop_records\": 0,\n  \"duplicate_assignments\": 0,\n  \"source_name_anomaly_stop_ids\": [\n    \"832\"\n  ],\n  \"service_patterns\": 6,\n  \"zoning_polygons\": 235,\n  \"official_agency_confirmation\": false,\n  \"engineering_validation\": \"NOT_PERFORMED\",\n  \"ai_run\": \"NOT_PERFORMED\"\n}\n",
+    "stderr": "",
+    "status": "DONE",
+    "readiness": {
+      "stage_manifest": "spatial_join_manifest.json",
+      "built_on": "2026-09-14",
+      "build_status": "COMPLETED",
+      "geometry_validation_status": "PASS",
+      "ready_for_downstream": true,
+      "upstream_station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+      "freshness": "FRESH"
+    },
+    "station_hash_matches": true,
+    "window_hash_matches": false,
+    "zoning_hash_matches": true
+  },
+  "zoning_change": {
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY\",\n  \"input_stop_records\": 43,\n  \"physical_station_entities\": 21,\n  \"mapped_stop_records\": 43,\n  \"unmapped_stop_records\": 0,\n  \"duplicate_assignments\": 0,\n  \"source_name_anomaly_stop_ids\": [\n    \"832\"\n  ],\n  \"service_patterns\": 6,\n  \"zoning_polygons\": 235,\n  \"official_agency_confirmation\": false,\n  \"engineering_validation\": \"NOT_PERFORMED\",\n  \"ai_run\": \"NOT_PERFORMED\"\n}\n",
+    "stderr": "",
+    "status": "DONE",
+    "readiness": {
+      "stage_manifest": "spatial_join_manifest.json",
+      "built_on": "2026-09-14",
+      "build_status": "COMPLETED",
+      "geometry_validation_status": "PASS",
+      "ready_for_downstream": true,
+      "upstream_station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+      "freshness": "FRESH"
+    },
+    "station_hash_matches": true,
+    "window_hash_matches": true,
+    "zoning_hash_matches": false
+  },
+  "publish_io_failure": {
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/private/tmp/miami-spatial-recheck-20260914/publish_io_failure/scripts/build_miami_station_zoning_profile.py\", line 380, in <module>\n    if i == 1: raise OSError(\"Review fixture: simulated publication I/O failure\")\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: Review fixture: simulated publication I/O failure\n",
+    "changed_existing_files": [
+      "station_zoning_profile.json"
+    ],
+    "manifest_mismatches": [
+      [
+        "build_manifest.json",
+        "gis_data_readiness.json"
+      ],
+      [
+        "spatial_join_manifest.json",
+        "station_zoning_profile.json"
+      ],
+      [
+        "spatial_join_manifest.json",
+        "scripts/build_miami_station_zoning_profile.py"
+      ]
+    ],
+    "readiness": "DONE",
+    "staging_left": true
+  },
+  "lock_mismatch": {
+    "exit_code": 1,
+    "stdout": "HALT: dependency lock mismatch (edit requirements-gis.lock.txt deliberately to change): {'geos': {'locked': '0.0.0', 'actual': '3.13.1'}}\n",
+    "stderr": "",
+    "changed_existing_files": []
+  },
+  "new_artifact_validation": {
+    "evidence_rows": 1553,
+    "counts_by_band": {
+      "b1": 89,
+      "b2": 186,
+      "b3": 617,
+      "cum": 661
+    },
+    "unique_evidence_ids": 1553,
+    "expected_positive_intersection_rows": 1553,
+    "invalid_references": [],
+    "max_evidence_area_error_m2": 4.999747034162283e-07,
+    "network_union_area_m2_error": 3.1851232051849365e-07,
+    "all_bands_have_semantic_flags": true,
+    "missing_point_zoning_matches": [
+      "Freedom Tower",
+      "Brickell"
+    ]
+  },
+  "original_files_unchanged": true,
+  "review_method": {
+    "scope": "Read-only source review plus execution in isolated workspace copies; original scripts and data not modified.",
+    "validation_failure": "Used provided SPATIAL_JOIN_FORCE_FAIL=1 test hook.",
+    "script_change": "Added a comment to an isolated script to verify actual hash update and old-manifest archive.",
+    "station_change": "Changed a station display name in the copied registry, rebuilt upstream, then downstream.",
+    "window_change": "Changed bbox east boundary in copied source metadata and rebuilt upstream only.",
+    "zoning_change": "Changed FID64 zoning attributes consistently in both copied GeoJSON and Esri JSON, then rebuilt upstream only.",
+    "publish_io_failure": "Changed quad_segs in the isolated script and injected OSError before the second file replacement; tests partial publication, not geometry validation failure.",
+    "lock_mismatch": "Changed GEOS expected version in copied lock; verified no output changes.",
+    "evidence_validation": "Separately recomputed every positive source polygon intersection and the network union with the declared CRS and geometry settings."
+  },
+  "reviewed_source_hashes": {
+    "scripts/build_miami_station_zoning_profile.py": "4d61c0246abe75416778cab37acb0e49ba7da1e638aafc67b35b2a1e79372a10",
+    "scripts/build_miami_station_master.py": "03373a5f9f221a2fc042b3cfb566d1aa550684d145ce542f83a413c00cad6ef3",
+    "scripts/build_all_miami.py": "2d29b659d50997c97a217bac3fdbbdace86d52f368771b2d28d7817fff74ed85",
+    "requirements-gis.lock.txt": "61edd552366362be157db418eabdc752882f58ee757e413f05b5be32fca92378"
+  }
+}

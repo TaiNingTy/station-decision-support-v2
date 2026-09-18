@@ -1,0 +1,204 @@
+{
+  "source_url": "https://opendata.transport.vic.gov.au/dataset/victorian-integrated-survey-of-travel-and-activity-vista",
+  "source_period": "FY2024-2025",
+  "retrieved_on": "2026-09-11",
+  "status": "weighted_survey_estimate",
+  "license": "CC BY 4.0, State of Victoria / DTP",
+  "scope": "Trips made by surveyed Greater Melbourne residents; not all trips within a western corridor",
+  "timezone": "Australia/Melbourne",
+  "raw_trip_records": 19864,
+  "raw_journey_to_work_records": 1458,
+  "weekday_trip_sample_size": 12480,
+  "weekday_distinct_sample_persons": 3164,
+  "weekday_weight_scale": 1.4,
+  "estimated_all_purpose_trips_per_average_weekday": 16186719.004023975,
+  "hourly_profile": [
+    {
+      "service_day_hour": 4,
+      "sample_trips": 41,
+      "estimated_person_trips_in_hour_per_average_weekday": 61364.406981738,
+      "share_of_all_weekday_trips": 0.0037910343020400228
+    },
+    {
+      "service_day_hour": 5,
+      "sample_trips": 151,
+      "estimated_person_trips_in_hour_per_average_weekday": 210924.4801303752,
+      "share_of_all_weekday_trips": 0.013030712405518372
+    },
+    {
+      "service_day_hour": 6,
+      "sample_trips": 287,
+      "estimated_person_trips_in_hour_per_average_weekday": 370567.457073065,
+      "share_of_all_weekday_trips": 0.02289330265021237
+    },
+    {
+      "service_day_hour": 7,
+      "sample_trips": 724,
+      "estimated_person_trips_in_hour_per_average_weekday": 907130.4498109461,
+      "share_of_all_weekday_trips": 0.05604165053989236
+    },
+    {
+      "service_day_hour": 8,
+      "sample_trips": 1540,
+      "estimated_person_trips_in_hour_per_average_weekday": 1977312.0271100726,
+      "share_of_all_weekday_trips": 0.12215644360160438
+    },
+    {
+      "service_day_hour": 9,
+      "sample_trips": 667,
+      "estimated_person_trips_in_hour_per_average_weekday": 851937.6621662576,
+      "share_of_all_weekday_trips": 0.052631892970679744
+    },
+    {
+      "service_day_hour": 10,
+      "sample_trips": 628,
+      "estimated_person_trips_in_hour_per_average_weekday": 818817.0206347404,
+      "share_of_all_weekday_trips": 0.050585731452506506
+    },
+    {
+      "service_day_hour": 11,
+      "sample_trips": 669,
+      "estimated_person_trips_in_hour_per_average_weekday": 833272.953152234,
+      "share_of_all_weekday_trips": 0.05147880512073414
+    },
+    {
+      "service_day_hour": 12,
+      "sample_trips": 739,
+      "estimated_person_trips_in_hour_per_average_weekday": 912089.8529752309,
+      "share_of_all_weekday_trips": 0.05634803771835959
+    },
+    {
+      "service_day_hour": 13,
+      "sample_trips": 658,
+      "estimated_person_trips_in_hour_per_average_weekday": 850792.2922881088,
+      "share_of_all_weekday_trips": 0.0525611331163903
+    },
+    {
+      "service_day_hour": 14,
+      "sample_trips": 684,
+      "estimated_person_trips_in_hour_per_average_weekday": 977606.0458802833,
+      "share_of_all_weekday_trips": 0.06039556537907732
+    },
+    {
+      "service_day_hour": 15,
+      "sample_trips": 1465,
+      "estimated_person_trips_in_hour_per_average_weekday": 1938825.0248439773,
+      "share_of_all_weekday_trips": 0.11977875345596539
+    },
+    {
+      "service_day_hour": 16,
+      "sample_trips": 1072,
+      "estimated_person_trips_in_hour_per_average_weekday": 1352525.5071724674,
+      "share_of_all_weekday_trips": 0.0835577306825573
+    },
+    {
+      "service_day_hour": 17,
+      "sample_trips": 1015,
+      "estimated_person_trips_in_hour_per_average_weekday": 1299121.5103651483,
+      "share_of_all_weekday_trips": 0.08025848289836811
+    },
+    {
+      "service_day_hour": 18,
+      "sample_trips": 792,
+      "estimated_person_trips_in_hour_per_average_weekday": 1057182.5229698822,
+      "share_of_all_weekday_trips": 0.0653117239328779
+    },
+    {
+      "service_day_hour": 19,
+      "sample_trips": 545,
+      "estimated_person_trips_in_hour_per_average_weekday": 663641.3911203019,
+      "share_of_all_weekday_trips": 0.04099912965409003
+    },
+    {
+      "service_day_hour": 20,
+      "sample_trips": 321,
+      "estimated_person_trips_in_hour_per_average_weekday": 379769.54957063077,
+      "share_of_all_weekday_trips": 0.02346179911297781
+    },
+    {
+      "service_day_hour": 21,
+      "sample_trips": 247,
+      "estimated_person_trips_in_hour_per_average_weekday": 401448.4024271966,
+      "share_of_all_weekday_trips": 0.024801097883233633
+    },
+    {
+      "service_day_hour": 22,
+      "sample_trips": 127,
+      "estimated_person_trips_in_hour_per_average_weekday": 159677.25991025337,
+      "share_of_all_weekday_trips": 0.009864708213601412
+    },
+    {
+      "service_day_hour": 23,
+      "sample_trips": 56,
+      "estimated_person_trips_in_hour_per_average_weekday": 85997.1809829174,
+      "share_of_all_weekday_trips": 0.005312823491996045
+    },
+    {
+      "service_day_hour": 24,
+      "sample_trips": 31,
+      "estimated_person_trips_in_hour_per_average_weekday": 44146.2133294238,
+      "share_of_all_weekday_trips": 0.002727310785987523
+    },
+    {
+      "service_day_hour": 25,
+      "sample_trips": 8,
+      "estimated_person_trips_in_hour_per_average_weekday": 11289.214086954998,
+      "share_of_all_weekday_trips": 0.0006974368359732772
+    },
+    {
+      "service_day_hour": 26,
+      "sample_trips": 6,
+      "estimated_person_trips_in_hour_per_average_weekday": 10563.2916792032,
+      "share_of_all_weekday_trips": 0.0006525900447507116
+    },
+    {
+      "service_day_hour": 27,
+      "sample_trips": 7,
+      "estimated_person_trips_in_hour_per_average_weekday": 10717.2873625664,
+      "share_of_all_weekday_trips": 0.0006621037506057967
+    }
+  ],
+  "public_transport_main_mode_share": {
+    "value": 0.06525087761523553,
+    "replicate_estimates": [
+      0.06877740960822679,
+      0.0651838031950303,
+      0.06630284259647926,
+      0.06722124104076298,
+      0.063649802915776,
+      0.0649544814059727,
+      0.06473384929504036,
+      0.07104692757432142,
+      0.06373910110204611,
+      0.06711243645002159
+    ],
+    "interval_95": [
+      0.05087858724296441,
+      0.08332664885811991
+    ],
+    "method": "VISTA ten-group jackknife logit, t multiplier 2.26",
+    "definition": "Train, Tram or Public Bus as longest-distance main mode, divided by all weekday trips; excludes School Bus"
+  },
+  "commute_departure_share_0700_0900": {
+    "value": 0.4978767721296296,
+    "unit": "fraction",
+    "numerator": "home-to-work journeys departing 07:00 inclusive to 09:00 exclusive",
+    "denominator": "all sampled-day home-to-work journeys by Greater Melbourne residents on weekdays",
+    "sample_journeys": 1174,
+    "sample_journeys_in_peak": 602,
+    "estimated_journeys_per_average_weekday": 1592015.6263547326,
+    "estimated_peak_journeys_per_average_weekday": 792627.6012294247,
+    "interval_95": null,
+    "interval_unavailable_reason": "Journey table has one weight and no ten replicate columns; do not borrow unrelated trip weights",
+    "assumption": "07:00-09:00 is this demonstration's chosen window, not a universal peak definition"
+  },
+  "limitations": [
+    "Public OD geography is LGA; these records have no point or grid coordinates.",
+    "Do not scatter LGA survey totals into fine cells and label them observed demand.",
+    "Hours 24-27 are retained as extended service-day hours; no modulo-24 reassignment.",
+    "Trips, travel legs and journeys overlap conceptually; their totals must not be added.",
+    "Main mode is distance-based in 2021-26, unlike the earlier hierarchy-based series.",
+    "Survey sample rows are not population counts; weighted totals are not observed boardings.",
+    "This regional profile is not a local station forecast or a globally reusable default."
+  ]
+}

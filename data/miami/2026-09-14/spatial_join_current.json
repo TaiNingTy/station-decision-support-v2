@@ -1,0 +1,11 @@
+{
+  "stage": "spatial_join",
+  "schema_version": "miami-spatial-join-pointer/1.0",
+  "package_id": "pkg-e4f5e3782ecb",
+  "package_dir": "spatial_join/pkg-e4f5e3782ecb",
+  "manifest": "spatial_join/pkg-e4f5e3782ecb/spatial_join_manifest.json",
+  "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913",
+  "built_on": "2026-09-14",
+  "previous_package_dir": "spatial_join/pkg-437415f5bbb8",
+  "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+}

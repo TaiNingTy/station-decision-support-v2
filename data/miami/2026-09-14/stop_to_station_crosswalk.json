@@ -1,0 +1,694 @@
+{
+  "input_gtfs_sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5",
+  "registry_sha256": "01fe76f47c2742ebcf8424a4cbd0f097c52a9af431c333ce832294fc3eb44277",
+  "records": [
+    {
+      "gtfs_stop_id": "795",
+      "gtfs_stop_name": "SCHOOL BOARD METROMOVER STATION",
+      "physical_station_id": "MIA-MM-01",
+      "station_name": "School Board",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "831",
+      "gtfs_stop_name": "SCHOOL BOARD METROMOVER STATION",
+      "physical_station_id": "MIA-MM-01",
+      "station_name": "School Board",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "796",
+      "gtfs_stop_name": "ADRIENNE ARSHT CENTER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-02",
+      "station_name": "Adrienne Arsht Center",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "797",
+      "gtfs_stop_name": "MUSEUM PARK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-03",
+      "station_name": "Museum Park",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "829",
+      "gtfs_stop_name": "MUSEUM PARK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-03",
+      "station_name": "Museum Park",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "798",
+      "gtfs_stop_name": "ELEVENTH STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-04",
+      "station_name": "Eleventh Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "828",
+      "gtfs_stop_name": "ELEVENTH STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-04",
+      "station_name": "Eleventh Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "799",
+      "gtfs_stop_name": "MIAMI WORLDCENTER STATION",
+      "physical_station_id": "MIA-MM-05",
+      "station_name": "Miami Worldcenter",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "827",
+      "gtfs_stop_name": "MIAMI WORLDCENTER STATION",
+      "physical_station_id": "MIA-MM-05",
+      "station_name": "Miami Worldcenter",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "800",
+      "gtfs_stop_name": "FREEDOM TOWER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-06",
+      "station_name": "Freedom Tower",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "826",
+      "gtfs_stop_name": "FREEDOM TOWER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-06",
+      "station_name": "Freedom Tower",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "811",
+      "gtfs_stop_name": "COLLEGE NORTH METROMOVER STATION",
+      "physical_station_id": "MIA-MM-07",
+      "station_name": "College North",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "838",
+      "gtfs_stop_name": "COLLEGE NORTH METROMOVER STATION",
+      "physical_station_id": "MIA-MM-07",
+      "station_name": "College North",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "812",
+      "gtfs_stop_name": "WILKIE D FERGUSON METROMOVER STATION",
+      "physical_station_id": "MIA-MM-08",
+      "station_name": "Wilkie D. Ferguson, Jr.",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS omits punctuation and Jr.; official map supplies the display name.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "837",
+      "gtfs_stop_name": "WILKIE D FERGUSON METROMOVER STATION",
+      "physical_station_id": "MIA-MM-08",
+      "station_name": "Wilkie D. Ferguson, Jr.",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS omits punctuation and Jr.; official map supplies the display name.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "813",
+      "gtfs_stop_name": "GOVERNMENT CENTER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-09",
+      "station_name": "Government Center",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "810",
+      "gtfs_stop_name": "COLLEGE BAYSIDE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-10",
+      "station_name": "College Bayside",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS 825 uses COLLEGE / BAYSIDE; coordinates exactly match 810 and 839 and the official map contains one College Bayside station.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "825",
+      "gtfs_stop_name": "COLLEGE / BAYSIDE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-10",
+      "station_name": "College Bayside",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS 825 uses COLLEGE / BAYSIDE; coordinates exactly match 810 and 839 and the official map contains one College Bayside station.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "839",
+      "gtfs_stop_name": "COLLEGE BAYSIDE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-10",
+      "station_name": "College Bayside",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS 825 uses COLLEGE / BAYSIDE; coordinates exactly match 810 and 839 and the official map contains one College Bayside station.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "809",
+      "gtfs_stop_name": "FIRST STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-11",
+      "station_name": "First Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "824",
+      "gtfs_stop_name": "FIRST STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-11",
+      "station_name": "First Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "840",
+      "gtfs_stop_name": "FIRST STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-11",
+      "station_name": "First Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "808",
+      "gtfs_stop_name": "BAYFRONT PARK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-12",
+      "station_name": "Bayfront Park",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "823",
+      "gtfs_stop_name": "BAYFRONT PARK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-12",
+      "station_name": "Bayfront Park",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "832",
+      "gtfs_stop_name": "BISCAYNE BD@E FLAGLER ST",
+      "physical_station_id": "MIA-MM-12",
+      "station_name": "Bayfront Park",
+      "mapping_status": "SUPPORTED_WITH_SOURCE_NAME_ANOMALY",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": true,
+      "agency_mapping_confirmation": false,
+      "note": "832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "841",
+      "gtfs_stop_name": "BAYFRONT PARK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-12",
+      "station_name": "Bayfront Park",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "807",
+      "gtfs_stop_name": "KNIGHT CENTER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-13",
+      "station_name": "Knight Center",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "822",
+      "gtfs_stop_name": "KNIGHT CENTER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-13",
+      "station_name": "Knight Center",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "833",
+      "gtfs_stop_name": "KNIGHT CENTER METROMOVER STATION",
+      "physical_station_id": "MIA-MM-13",
+      "station_name": "Knight Center",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "834",
+      "gtfs_stop_name": "MIAMI AVENUE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-14",
+      "station_name": "Miami Avenue",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "815",
+      "gtfs_stop_name": "THIRD STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-15",
+      "station_name": "Third Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "806",
+      "gtfs_stop_name": "RIVERWALK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-16",
+      "station_name": "Riverwalk",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "816",
+      "gtfs_stop_name": "RIVERWALK METROMOVER STATION",
+      "physical_station_id": "MIA-MM-16",
+      "station_name": "Riverwalk",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "805",
+      "gtfs_stop_name": "FIFTH STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-17",
+      "station_name": "Fifth Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "817",
+      "gtfs_stop_name": "FIFTH STREET METROMOVER STATION",
+      "physical_station_id": "MIA-MM-17",
+      "station_name": "Fifth Street",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "804",
+      "gtfs_stop_name": "BRICKELL CITY CENTRE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-18",
+      "station_name": "Brickell City Centre",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "818",
+      "gtfs_stop_name": "BRICKELL CITY CENTRE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-18",
+      "station_name": "Brickell City Centre",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "803",
+      "gtfs_stop_name": "TENTH STREET PROMANADE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-19",
+      "station_name": "Tenth Street Promenade",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS spells PROMANADE; display name follows PROMENADE on the official map.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "819",
+      "gtfs_stop_name": "TENTH STREET PROMANADE METROMOVER STATION",
+      "physical_station_id": "MIA-MM-19",
+      "station_name": "Tenth Street Promenade",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": "GTFS spells PROMANADE; display name follows PROMENADE on the official map.",
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "802",
+      "gtfs_stop_name": "BRICKELL METROMOVER STATION",
+      "physical_station_id": "MIA-MM-20",
+      "station_name": "Brickell",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "820",
+      "gtfs_stop_name": "BRICKELL METROMOVER STATION",
+      "physical_station_id": "MIA-MM-20",
+      "station_name": "Brickell",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "801",
+      "gtfs_stop_name": "FINANCIAL DISTRICT METROMOVER STATION",
+      "physical_station_id": "MIA-MM-21",
+      "station_name": "Financial District",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    },
+    {
+      "gtfs_stop_id": "821",
+      "gtfs_stop_name": "FINANCIAL DISTRICT METROMOVER STATION",
+      "physical_station_id": "MIA-MM-21",
+      "station_name": "Financial District",
+      "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+      "evidence": [
+        "official_map_station",
+        "same_exact_feed_coordinates",
+        "ordered_service_patterns"
+      ],
+      "source_name_anomaly": false,
+      "agency_mapping_confirmation": false,
+      "note": null,
+      "registry_version": "miami-station-registry/1.0"
+    }
+  ]
+}

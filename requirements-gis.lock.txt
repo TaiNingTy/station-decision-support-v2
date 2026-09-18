@@ -1,0 +1,11 @@
+# GIS dependency lock — spatial-join stage (scripts/build_miami_station_zoning_profile.py enforces it and HALTS on mismatch).
+# This is a RUNTIME version gate parsed by the script (the geos= / proj= lines are library versions, not packages);
+# it is NOT a pip requirements file. Install the Python packages with:  python3 -m pip install -r requirements-gis.txt
+# Recorded from the environment that produced the published results. Change deliberately and record why:
+# results published under a different lock are a different build. Interpreter path/version is recorded per build
+# in spatial_join_manifest.json -> environment.
+shapely==2.1.2
+pyproj==3.8.0
+geos=3.13.1
+proj=9.8.1
+pyshp==3.1.6   # vendored as vendor/shapefile.py (pure Python); scripts check shapefile.__version__

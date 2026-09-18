@@ -1,0 +1,1282 @@
+{
+  "type": "FeatureCollection",
+  "schema_version": "miami-station-master/1.0",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "MIA-MM-01",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193145,
+          25.789376
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-01",
+        "name": "School Board",
+        "gtfs_stop_ids": [
+          "795",
+          "831"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-02",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187998,
+          25.789456
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-02",
+        "name": "Adrienne Arsht Center",
+        "gtfs_stop_ids": [
+          "796"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-03",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187934,
+          25.785918
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-03",
+        "name": "Museum Park",
+        "gtfs_stop_ids": [
+          "797",
+          "829"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-04",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19079,
+          25.784866
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-04",
+        "name": "Eleventh Street",
+        "gtfs_stop_ids": [
+          "798",
+          "828"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-05",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190643,
+          25.782476
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-05",
+        "name": "Miami Worldcenter",
+        "gtfs_stop_ids": [
+          "799",
+          "827"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-06",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.190567,
+          25.780544
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-06",
+        "name": "Freedom Tower",
+        "gtfs_stop_ids": [
+          "800",
+          "826"
+        ],
+        "loops": [
+          "Omni"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-07",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192085,
+          25.778926
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-07",
+        "name": "College North",
+        "gtfs_stop_ids": [
+          "811",
+          "838"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-08",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195341,
+          25.778815
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-08",
+        "name": "Wilkie D. Ferguson, Jr.",
+        "gtfs_stop_ids": [
+          "812",
+          "837"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "name_note": "GTFS omits punctuation and Jr.; official map supplies the display name.",
+        "external_connections_on_map": [
+          "Brightline"
+        ],
+        "connection_geometry_status": "WALKING_LINK_NOT_VERIFIED",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-09",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.196093,
+          25.775864
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-09",
+        "name": "Government Center",
+        "gtfs_stop_ids": [
+          "813"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "external_connections_on_map": [
+          "Metrorail",
+          "Tri-Rail"
+        ],
+        "connection_geometry_status": "WALKING_LINK_NOT_VERIFIED",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-10",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189915,
+          25.777584
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-10",
+        "name": "College Bayside",
+        "gtfs_stop_ids": [
+          "810",
+          "825",
+          "839"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "name_note": "GTFS 825 uses COLLEGE / BAYSIDE; coordinates exactly match 810 and 839 and the official map contains one College Bayside station.",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-11",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.189849,
+          25.775726
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-11",
+        "name": "First Street",
+        "gtfs_stop_ids": [
+          "809",
+          "824",
+          "840"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-12",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.187323,
+          25.773099
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-12",
+        "name": "Bayfront Park",
+        "gtfs_stop_ids": [
+          "808",
+          "823",
+          "832",
+          "841"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "name_note": "832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.",
+        "anomalous_stop_ids": [
+          "832"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_WITH_SOURCE_NAME_ANOMALY",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-13",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.191377,
+          25.771865
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-13",
+        "name": "Knight Center",
+        "gtfs_stop_ids": [
+          "807",
+          "822",
+          "833"
+        ],
+        "loops": [
+          "Omni",
+          "Inner",
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-14",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193582,
+          25.773391
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-14",
+        "name": "Miami Avenue",
+        "gtfs_stop_ids": [
+          "834"
+        ],
+        "loops": [
+          "Inner"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-15",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.193508,
+          25.772024
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-15",
+        "name": "Third Street",
+        "gtfs_stop_ids": [
+          "815"
+        ],
+        "loops": [
+          "Omni",
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192558,
+          25.771051
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-16",
+        "name": "Riverwalk",
+        "gtfs_stop_ids": [
+          "806",
+          "816"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-17",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192248,
+          25.769165
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-17",
+        "name": "Fifth Street",
+        "gtfs_stop_ids": [
+          "805",
+          "817"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-18",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192121,
+          25.766888
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-18",
+        "name": "Brickell City Centre",
+        "gtfs_stop_ids": [
+          "804",
+          "818"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "historical_name_on_map": "Eighth Street",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-19",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.19256,
+          25.764016
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-19",
+        "name": "Tenth Street Promenade",
+        "gtfs_stop_ids": [
+          "803",
+          "819"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "name_note": "GTFS spells PROMANADE; display name follows PROMENADE on the official map.",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-20",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.195261,
+          25.762664
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-20",
+        "name": "Brickell",
+        "gtfs_stop_ids": [
+          "802",
+          "820"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "external_connections_on_map": [
+          "Metrorail"
+        ],
+        "connection_geometry_status": "WALKING_LINK_NOT_VERIFIED",
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "MIA-MM-21",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.192881,
+          25.760381
+        ]
+      },
+      "properties": {
+        "station_id": "MIA-MM-21",
+        "name": "Financial District",
+        "gtfs_stop_ids": [
+          "801",
+          "821"
+        ],
+        "loops": [
+          "Brickell"
+        ],
+        "entity_id_namespace": "project_owned_not_agency_id",
+        "geometry_role": "gtfs_station_reference_point_not_entrance_or_platform_centroid",
+        "geometry_source": "GTFS snapshot 2026-09-11",
+        "classification": {
+          "existing_asset": "metromover_station",
+          "study_role": "candidate_conversion_site",
+          "demand_origin_or_destination": "TO_BE_EVALUATED",
+          "automatic_demand_exclusion": false
+        },
+        "mapping_status": "SUPPORTED_BY_MAP_AND_FEED",
+        "agency_mapping_confirmation": false,
+        "source_evidence": [
+          "official_metromover_map.pdf",
+          "GTFS 2026-09-11"
+        ],
+        "design_inputs": {
+          "boarding_demand_pax_per_hour": null,
+          "alighting_demand_pax_per_hour": null,
+          "platform_footprint_m2": null,
+          "platform_usable_length_m": null,
+          "platform_usable_width_m": null,
+          "guideway_structural_reuse_status": "NOT_ASSESSED",
+          "accessible_entrances": null,
+          "pedestrian_network_catchment": null,
+          "construction_feasibility_status": "NEEDS_REVIEW"
+        },
+        "configuration": {
+          "boarding_berths": null,
+          "staging_bays": null,
+          "platform_length_m": null,
+          "platform_width_m": null,
+          "layout_type": null,
+          "status": "NOT_CALCULATED"
+        },
+        "ai_analysis_status": "NOT_RUN",
+        "internal_length_unit": "m",
+        "display_length_unit": "ft"
+      }
+    }
+  ]
+}

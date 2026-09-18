@@ -1,0 +1,69 @@
+{
+  "retrieved_on": "2026-09-14",
+  "archived_on": "2026-09-14",
+  "study_bbox_wgs84": [
+    -80.209,
+    25.749,
+    -80.175,
+    25.801
+  ],
+  "bbox_purpose": "analyst-selected data extraction window around 21 station reference locations; not a 15-minute walking catchment or approved project boundary",
+  "sources": [
+    {
+      "source_id": "miami_dade_official_map",
+      "file": "official_metromover_map.pdf",
+      "url": "https://www.miamidade.gov/resources/transportation_publicworks/documents/metromover-map.pdf",
+      "bytes": 326346,
+      "sha256": "2a2ea868bfde574473ea45d1c6aab74f5962e8d1d91e8e1df5fa8492ced218de",
+      "license": "not_recorded"
+    },
+    {
+      "source_id": "miami_dade_official_system_page",
+      "file": "official_metromover_system.html",
+      "url": "https://www.miamidade.gov/global/transportation/metromover.page",
+      "bytes": 96010,
+      "sha256": "4cae071265e5b4206827fd405e55792c94abf9ca8b80096edcc2b4730aba6aa4",
+      "license": "not_recorded"
+    },
+    {
+      "source_id": "city_miami_zoning_layer",
+      "file": "zoning_layer_metadata.json",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer/0?f=pjson",
+      "bytes": 14259,
+      "sha256": "46953967737c3baca7c1e9770bb02038cb7eccc493ad68abcfb87c3cab1f391b",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "source_id": "city_miami_zoning_item",
+      "file": "zoning_item_metadata.json",
+      "url": "https://www.arcgis.com/sharing/rest/content/items/064c93f16768497d8662b6d58a240703?f=json",
+      "bytes": 2593,
+      "sha256": "db37bca58bf12cccd3d6945d68216b44c38444bda7334e33d80f08ea025158f7",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "source_id": "city_miami_zoning_ids",
+      "file": "zoning_query_ids.json",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+      "bytes": 971,
+      "sha256": "cfb0882e893d340eee512f73eb62b3852fca783ba0ea8d4ab5e3307ad7ea98a0",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "source_id": "city_miami_zoning_esri",
+      "file": "zoning_study_window.esri.json",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=FID+ASC&resultRecordCount=2000&f=json",
+      "bytes": 973653,
+      "sha256": "9ddde125da349ee47725b318103762d3f7054377cd870cb5ce66a4d558e2cd31",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "source_id": "city_miami_zoning_geojson",
+      "file": "zoning_study_window.geojson",
+      "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&orderByFields=FID+ASC&resultRecordCount=2000&f=geojson",
+      "bytes": 983171,
+      "sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2",
+      "license": "CC-BY-4.0"
+    }
+  ]
+}

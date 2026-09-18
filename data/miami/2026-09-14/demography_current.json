@@ -1,0 +1,11 @@
+{
+  "stage": "demography",
+  "schema_version": "miami-package-pointer/1.0",
+  "package_id": "pkg-64aa5fc6dcb8",
+  "package_dir": "demography/pkg-64aa5fc6dcb8",
+  "manifest": "demography/pkg-64aa5fc6dcb8/manifest.json",
+  "manifest_sha256": "fde1c6c3489e26729d4bd0e0cc18c45425123d10cb760b995da337b0ce05d557",
+  "built_on": "2026-09-15",
+  "previous_package_dir": "demography/pkg-90e396d41967",
+  "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+}

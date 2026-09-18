@@ -1,0 +1,353 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-01T08:52:28Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 4773221378,
+  "lat": 25.7722816,
+  "lon": -80.1895294,
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "299",
+    "addr:postcode": "33131",
+    "addr:state": "FL",
+    "addr:street": "Southeast 3rd Avenue",
+    "branch": "Downtown Miami",
+    "brand": "Whole Foods Market",
+    "brand:wikidata": "Q1809448",
+    "check_date": "2024-10-03",
+    "check_date:opening_hours": "2024-10-03",
+    "name": "Whole Foods Market",
+    "opening_hours": "Mo-Su 07:30-23:00",
+    "phone": "+1 305-995-0600",
+    "ref": "downtownmiami",
+    "shop": "supermarket",
+    "website": "https://www.wholefoodsmarket.com/stores/downtownmiami"
+  }
+},
+{
+  "type": "node",
+  "id": 6055472235,
+  "lat": 25.7658708,
+  "lon": -80.2031616,
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "500",
+    "addr:postcode": "33130",
+    "addr:state": "FL",
+    "addr:street": "Southwest 8th Street",
+    "email": "pres19@presidentesupermarkets.com",
+    "name": "Presidente Supermarket",
+    "opening_hours": "Mo-Sa 07:00-21:45; Su 07:00-20:45",
+    "phone": "+1-305-856-1314",
+    "shop": "supermarket",
+    "website": "https://presidentesupermarkets.com/supermarket-19/"
+  }
+},
+{
+  "type": "node",
+  "id": 7844732308,
+  "lat": 25.7784319,
+  "lon": -80.1870331,
+  "tags": {
+    "name": "Carribean Life",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "node",
+  "id": 11600360549,
+  "lat": 25.7799851,
+  "lon": -80.1977207,
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "601",
+    "addr:postcode": "33136",
+    "addr:state": "FL",
+    "addr:street": "Northwest 2nd Avenue",
+    "branch": "3 Miami Central",
+    "brand": "Publix",
+    "brand:wikidata": "Q672170",
+    "name": "Publix",
+    "opening_hours": "Mo-Su 07:00-07:00",
+    "phone": "+1 305-374-6806",
+    "ref": "1614",
+    "shop": "supermarket",
+    "website": "https://www.publix.com/locations/1614"
+  }
+},
+{
+  "type": "node",
+  "id": 13042935861,
+  "lat": 25.7804522,
+  "lon": -80.1988782,
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "249",
+    "addr:postcode": "33136",
+    "addr:state": "FL",
+    "addr:street": "Northwest 6th Street",
+    "addr:unit": "601",
+    "brand": "Aldi",
+    "brand:wikidata": "Q41171672",
+    "name": "Aldi",
+    "opening_hours": "Mo-Su 09:00-21:00",
+    "payment:american_express": "yes",
+    "payment:apple_pay": "yes",
+    "payment:cash": "yes",
+    "payment:contactless": "yes",
+    "payment:discover_card": "yes",
+    "payment:gift_card": "yes",
+    "payment:google_pay": "yes",
+    "payment:mastercard": "yes",
+    "payment:snap_ebt": "yes",
+    "payment:visa": "yes",
+    "shop": "supermarket",
+    "website": "https://stores.aldi.us/fl/miami/249-nw-6th-street"
+  }
+},
+{
+  "type": "node",
+  "id": 13884695747,
+  "lat": 25.7884515,
+  "lon": -80.1899262,
+  "tags": {
+    "check_date": "2026-05-26",
+    "level": "0",
+    "name": "Plantabaja",
+    "shop": "supermarket"
+  }
+},
+{
+  "type": "way",
+  "id": 319425175,
+  "center": {
+    "lat": 25.7676839,
+    "lon": -80.1994588
+  },
+  "nodes": [
+    3258473777,
+    3258473778,
+    3258473779,
+    3258473780,
+    3258473781,
+    3258473782,
+    3258473783,
+    3258473784,
+    5086505163,
+    3258473785,
+    3258473786,
+    3258473787,
+    3258473788,
+    5086505164,
+    3258473789,
+    3258473790,
+    3258473791,
+    3258473792,
+    3258473777
+  ],
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "311",
+    "addr:postcode": "33130-2917",
+    "addr:state": "FL",
+    "addr:street": "Southwest 7th Street",
+    "branch": "Miami River",
+    "brand": "Publix",
+    "brand:wikidata": "Q672170",
+    "building": "yes",
+    "check_date:opening_hours": "2025-09-12",
+    "name": "Publix",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "phone": "+1 305-860-9477",
+    "ref": "54",
+    "shop": "supermarket",
+    "website": "https://www.publix.com/locations/54"
+  }
+},
+{
+  "type": "way",
+  "id": 319426353,
+  "center": {
+    "lat": 25.7649231,
+    "lon": -80.1948914
+  },
+  "nodes": [
+    3258497166,
+    3258497167,
+    3258495658,
+    3258497168,
+    9533171925,
+    3258497166
+  ],
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "911",
+    "addr:postcode": "33130",
+    "addr:state": "FL",
+    "addr:street": "Southwest 1st Avenue",
+    "branch": "Mary Brickell Village",
+    "brand": "Publix",
+    "brand:wikidata": "Q672170",
+    "building:part": "retail",
+    "name": "Publix",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "phone": "+1 305-358-1575",
+    "ref": "1009",
+    "shop": "supermarket",
+    "website": "https://www.publix.com/locations/1009-mary-brickell-village"
+  }
+},
+{
+  "type": "way",
+  "id": 454144108,
+  "center": {
+    "lat": 25.7943614,
+    "lon": -80.1901872
+  },
+  "nodes": [
+    4507577879,
+    4507577878,
+    4507577889,
+    4507577890,
+    4507577879
+  ],
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "1851",
+    "addr:postcode": "33132",
+    "addr:street": "Northeast 2nd Avenue",
+    "building": "yes",
+    "height": "11.7",
+    "name": "Price Choice",
+    "ref:miaaddr": "489089",
+    "ref:miabldg": "15061",
+    "shop": "supermarket",
+    "source": "Bing",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 454144113,
+  "center": {
+    "lat": 25.7929436,
+    "lon": -80.1894655
+  },
+  "nodes": [
+    4507577834,
+    4507577833,
+    4507577832,
+    4507577831,
+    4507577830,
+    4507577829,
+    4507577828,
+    4507577827,
+    4507577825,
+    4507577826,
+    4507577823,
+    4507577824,
+    4507577820,
+    4507577819,
+    4507577815,
+    4507577814,
+    4507577812,
+    4507577811,
+    4507577810,
+    4507577809,
+    4507577808,
+    4507577805,
+    4507577804,
+    4507577801,
+    4507577800,
+    4507577803,
+    5834114428,
+    4507577802,
+    4507577843,
+    4507577849,
+    4507577852,
+    4507577854,
+    4507577853,
+    4507577851,
+    4507577850,
+    4507577848,
+    4507577847,
+    4507577846,
+    4507577845,
+    4507577844,
+    4507577842,
+    4507577841,
+    4507577840,
+    4507577837,
+    4507577836,
+    4507577835,
+    4507577834
+  ],
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "1776",
+    "addr:postcode": "33132",
+    "addr:state": "FL",
+    "addr:street": "Biscayne Boulevard",
+    "branch": "18Biscayne Shopping Center",
+    "brand": "Publix",
+    "brand:wikidata": "Q672170",
+    "building": "yes",
+    "height": "20.3",
+    "name": "Publix",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "parking": "multi-storey",
+    "phone": "+1 305-358-3433",
+    "ref": "1397",
+    "ref:miaaddr": "295032",
+    "ref:miabldg": "84824",
+    "shop": "supermarket",
+    "website": "https://www.publix.com/locations/1397",
+    "wheelchair": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 1357104615,
+  "center": {
+    "lat": 25.7611996,
+    "lon": -80.1967064
+  },
+  "nodes": [
+    2609102262,
+    12560504876,
+    12560504877,
+    2609102260,
+    2609102611,
+    6264223235,
+    4760807030,
+    2609102685,
+    2609102262
+  ],
+  "tags": {
+    "addr:city": "Miami",
+    "addr:housenumber": "134",
+    "addr:postcode": "33130-4211",
+    "addr:state": "FL",
+    "addr:street": "Southwest 13th Street",
+    "branch": "Brickell Village",
+    "brand": "Publix",
+    "brand:wikidata": "Q672170",
+    "building:part": "retail",
+    "name": "Publix",
+    "opening_hours": "Mo-Su 07:00-22:00",
+    "phone": "+1 305-860-2280",
+    "ref": "581",
+    "shop": "supermarket",
+    "website": "https://www.publix.com/locations/581"
+  }
+}
+
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "miami-station-registry/1.0",
+  "review_date": "2026-09-14",
+  "review_basis": "Analyst transcription of the publicly available Miami-Dade official Metromover map, visually inspected in full; cross-checked against GTFS coordinates and ordered stop patterns.",
+  "source_map": "../raw/miami/2026-09-14/official_metromover_map.pdf",
+  "source_map_url": "https://www.miamidade.gov/resources/transportation_publicworks/documents/metromover-map.pdf",
+  "source_map_publication_date": null,
+  "agency_confirmation": false,
+  "id_policy": "MIA-MM identifiers are project-owned stable entity IDs, not official agency station IDs. Explicit stop_id lists apply to the archived 2026-09-11 feed only.",
+  "stations": [
+    {"station_id":"MIA-MM-01","name":"School Board","gtfs_stop_ids":["795","831"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-02","name":"Adrienne Arsht Center","gtfs_stop_ids":["796"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-03","name":"Museum Park","gtfs_stop_ids":["797","829"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-04","name":"Eleventh Street","gtfs_stop_ids":["798","828"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-05","name":"Miami Worldcenter","gtfs_stop_ids":["799","827"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-06","name":"Freedom Tower","gtfs_stop_ids":["800","826"],"loops":["Omni"]},
+    {"station_id":"MIA-MM-07","name":"College North","gtfs_stop_ids":["811","838"],"loops":["Omni","Inner","Brickell"]},
+    {"station_id":"MIA-MM-08","name":"Wilkie D. Ferguson, Jr.","gtfs_stop_ids":["812","837"],"loops":["Omni","Inner","Brickell"],"name_note":"GTFS omits punctuation and Jr.; official map supplies the display name.","external_connections_on_map":["Brightline"],"connection_geometry_status":"WALKING_LINK_NOT_VERIFIED"},
+    {"station_id":"MIA-MM-09","name":"Government Center","gtfs_stop_ids":["813"],"loops":["Omni","Inner","Brickell"],"external_connections_on_map":["Metrorail","Tri-Rail"],"connection_geometry_status":"WALKING_LINK_NOT_VERIFIED"},
+    {"station_id":"MIA-MM-10","name":"College Bayside","gtfs_stop_ids":["810","825","839"],"loops":["Omni","Inner","Brickell"],"name_note":"GTFS 825 uses COLLEGE / BAYSIDE; coordinates exactly match 810 and 839 and the official map contains one College Bayside station."},
+    {"station_id":"MIA-MM-11","name":"First Street","gtfs_stop_ids":["809","824","840"],"loops":["Omni","Inner","Brickell"]},
+    {"station_id":"MIA-MM-12","name":"Bayfront Park","gtfs_stop_ids":["808","823","832","841"],"loops":["Omni","Inner","Brickell"],"name_note":"832 is named BISCAYNE BD@E FLAGLER ST. Its exact coordinates and Inner Loop continuation to Knight Center, Miami Avenue and Government Center support mapping to Bayfront Park. The agency's reason for this source label is unknown.","anomalous_stop_ids":["832"]},
+    {"station_id":"MIA-MM-13","name":"Knight Center","gtfs_stop_ids":["807","822","833"],"loops":["Omni","Inner","Brickell"]},
+    {"station_id":"MIA-MM-14","name":"Miami Avenue","gtfs_stop_ids":["834"],"loops":["Inner"]},
+    {"station_id":"MIA-MM-15","name":"Third Street","gtfs_stop_ids":["815"],"loops":["Omni","Brickell"]},
+    {"station_id":"MIA-MM-16","name":"Riverwalk","gtfs_stop_ids":["806","816"],"loops":["Brickell"]},
+    {"station_id":"MIA-MM-17","name":"Fifth Street","gtfs_stop_ids":["805","817"],"loops":["Brickell"]},
+    {"station_id":"MIA-MM-18","name":"Brickell City Centre","gtfs_stop_ids":["804","818"],"loops":["Brickell"],"historical_name_on_map":"Eighth Street"},
+    {"station_id":"MIA-MM-19","name":"Tenth Street Promenade","gtfs_stop_ids":["803","819"],"loops":["Brickell"],"name_note":"GTFS spells PROMANADE; display name follows PROMENADE on the official map."},
+    {"station_id":"MIA-MM-20","name":"Brickell","gtfs_stop_ids":["802","820"],"loops":["Brickell"],"external_connections_on_map":["Metrorail"],"connection_geometry_status":"WALKING_LINK_NOT_VERIFIED"},
+    {"station_id":"MIA-MM-21","name":"Financial District","gtfs_stop_ids":["801","821"],"loops":["Brickell"]}
+  ]
+}

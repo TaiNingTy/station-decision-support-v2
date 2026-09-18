@@ -1,0 +1,19 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "facilities_in_window": {
+    "school": 37,
+    "clinic": 8,
+    "grocery": 19,
+    "park": 38
+  },
+  "excluded_records": 36,
+  "point_categories_cum_equals_band_sum": true,
+  "park_cum_between_max_band_and_sum": true,
+  "nearest_consistent_with_counts": true,
+  "all_geometries_valid": true,
+  "every_station_present": true,
+  "evidence_rows": 647,
+  "scope_statement": "PASS means the source features were categorised by the recorded rules and counted consistently. Counts are facilities listed by the sources; absence means not found in these sources inside the window, not confirmed absence; distances are straight lines, not walking distances."
+}

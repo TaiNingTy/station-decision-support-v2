@@ -1,0 +1,78 @@
+{
+  "stage": "station_master",
+  "schema_version": "miami-station-master-manifest/1.1",
+  "built_on": "2026-09-14",
+  "inputs": [
+    {
+      "path": "raw/miami/2026-09-11/google_transit.zip",
+      "sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5"
+    },
+    {
+      "path": "data/miami/2026-09-11/metromover_stop_records.geojson",
+      "sha256": "ae7d2e0742cfed1f0ec5a76142501ad05a62e67a1d0929d4168390ec0c38dba2"
+    },
+    {
+      "path": "data/miami/2026-09-11/inventory.json",
+      "sha256": "a19ab91c336fb03e6402b47f2d5393c6ed9133b8b5565946c0b38500a3b0b696"
+    },
+    {
+      "path": "config/miami_station_registry_v1.json",
+      "sha256": "01fe76f47c2742ebcf8424a4cbd0f097c52a9af431c333ce832294fc3eb44277"
+    },
+    {
+      "path": "raw/miami/2026-09-14/official_metromover_map.pdf",
+      "sha256": "2a2ea868bfde574473ea45d1c6aab74f5962e8d1d91e8e1df5fa8492ced218de"
+    },
+    {
+      "path": "raw/miami/2026-09-14/source_manifest.json",
+      "sha256": "6e33f4999ed46a7f27f66f5af69da26cd3c63de403e133a8b6e66dedd3202006"
+    },
+    {
+      "path": "raw/miami/2026-09-14/zoning_study_window.geojson",
+      "sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2"
+    },
+    {
+      "path": "raw/miami/2026-09-14/zoning_study_window.esri.json",
+      "sha256": "9ddde125da349ee47725b318103762d3f7054377cd870cb5ce66a4d558e2cd31"
+    },
+    {
+      "path": "raw/miami/2026-09-14/zoning_query_ids.json",
+      "sha256": "cfb0882e893d340eee512f73eb62b3852fca783ba0ea8d4ab5e3307ad7ea98a0"
+    },
+    {
+      "path": "raw/miami/2026-09-14/zoning_item_metadata.json",
+      "sha256": "db37bca58bf12cccd3d6945d68216b44c38444bda7334e33d80f08ea025158f7"
+    },
+    {
+      "path": "scripts/build_miami_station_master.py",
+      "sha256": "cdb8685ebc82d6dbd54f183b90d4a409c423fc27514ca9b0cded8c71757d3aa0"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "file": "stop_to_station_crosswalk.json",
+      "sha256": "c5b5117bea1857f203f8af830f6a1500807e83d57266967db7cb51fa9f1a74f3"
+    },
+    {
+      "file": "service_patterns.json",
+      "sha256": "61feeb2f2370da67e6b442359c6cd3df7a8129ef5c856fe2408784367e2348ed"
+    },
+    {
+      "file": "study_window.geojson",
+      "sha256": "b9ec497124aeb49d46352856718aaa35cf17801298f03afc3c92b0f0ff905231"
+    },
+    {
+      "file": "gis_inventory.json",
+      "sha256": "0ba9db9d3a1cf0fa7ee226e556efaa77672d191096c5f0b3d4182cc8c5d20867"
+    },
+    {
+      "file": "validation.json",
+      "sha256": "8e537a551e7e1e77b6e34ae5c995a3713a320863b37a08a10a360cbd20e77ca9"
+    }
+  ],
+  "readiness_note": "gis_data_readiness.json is a DERIVED status view written only by scripts/miami_readiness.py; it is not an output of this stage and is not hash-listed here. Downstream freshness is decided there from the inputs the spatial-join stage actually consumed (station_master, study_window, raw zoning)."
+}

@@ -1,0 +1,14 @@
+.secrets/
+*.part
+.venv-gis/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/
+data/**/.staging/
+# page images of a third-party planning report (Chongqing); kept local until redistribution rights are confirmed
+evidence/chongqing-*.png
+# private research notes that name the employer; kept local only (see README)
+V2_AF对照与升级实施清单.md
+V2_三城案例与可视化设计底稿.md
+V2_需求分层公平性与面试叙事.md

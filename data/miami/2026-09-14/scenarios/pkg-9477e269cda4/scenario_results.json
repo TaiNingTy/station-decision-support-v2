@@ -1,0 +1,1580 @@
+{
+  "schema_version": "miami-scenario-results/1.1",
+  "built_on": "2026-09-15",
+  "config_sha256": "bfd85b0cb988919e24db4364eb3e84c866fea71f5428c466ef8a4ea0287cd37d",
+  "input_package": "pkg-432b88d981f8",
+  "jobs_package": "pkg-7fa6f53356c6",
+  "service_baseline_package": "pkg-a69b1848d3b9",
+  "provenance_class": "derived",
+  "data_nature": "model_output",
+  "is_observed_ridership": false,
+  "is_calibrated": false,
+  "calibration_note": "ridership_baseline not acquired; no calibration against Metromover counts",
+  "purpose": "interview demonstration of the calculation chain with explicit parameter provenance; not a forecast",
+  "excludes": [
+    "hub_transfer_inflow (not modeled in the Miami case)",
+    "links with one end outside the network's half-mile discs",
+    "the uncovered fraction of links in blocks that only partly lie inside the network union",
+    "Florida residents working out of state",
+    "visitors and non-resident non-work trips"
+  ],
+  "assumption_parameter_ids": [
+    "A01_attendance_rate",
+    "A02_non_commute_trips_per_commute_trip",
+    "A03_prt_adoption_share_of_all_mode_trips",
+    "A04_station_allocation_rule",
+    "A05_direction_and_return",
+    "A06_non_commute_pattern",
+    "A07_departure_window_equals_station_window"
+  ],
+  "scenarios": {
+    "low": {
+      "scenario_id": "low",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_observed_ridership": false,
+      "is_calibrated": false,
+      "calibration_note": "ridership_baseline not acquired; no calibration against Metromover counts",
+      "purpose": "interview demonstration of the calculation chain with explicit parameter provenance; not a forecast",
+      "excludes": [
+        "hub_transfer_inflow (not modeled in the Miami case)",
+        "links with one end outside the network's half-mile discs",
+        "the uncovered fraction of links in blocks that only partly lie inside the network union",
+        "Florida residents working out of state",
+        "visitors and non-resident non-work trips"
+      ],
+      "assumption_values": {
+        "A01_attendance_rate": 0.85,
+        "A02_non_commute_trips_per_commute_trip": 0.5,
+        "A03_prt_adoption_share_of_all_mode_trips": 0.05
+      },
+      "chain": [
+        {
+          "step": 1,
+          "name": "internal commute links, coverage-weighted (persons with primary job, both ends inside the network union)",
+          "value": 8814.611013,
+          "whole_block_upper_bound": 9706,
+          "parameter": "P01"
+        },
+        {
+          "step": 2,
+          "name": "weekday commute person trips, AM direction",
+          "value": 5450.17,
+          "formula": "P01 × (1 − P02) × A01",
+          "parameters": [
+            "P01",
+            "P02",
+            "A01_attendance_rate"
+          ]
+        },
+        {
+          "step": 3,
+          "name": "all-purpose trips inside the network, AM direction",
+          "value": 8175.25,
+          "formula": "step2 × (1 + A02)",
+          "parameters": [
+            "A02_non_commute_trips_per_commute_trip"
+          ]
+        },
+        {
+          "step": 4,
+          "name": "peak-hour trips, AM direction",
+          "value": 2898.79,
+          "formula": "step3 × P05",
+          "parameters": [
+            "P05_peak_hour_share"
+          ]
+        },
+        {
+          "step": 5,
+          "name": "PRT peak-hour trips, AM direction",
+          "value": 144.94,
+          "formula": "step4 × A03",
+          "parameters": [
+            "A03_prt_adoption_share_of_all_mode_trips"
+          ]
+        },
+        {
+          "step": 6,
+          "name": "station boardings / alightings (allocation)",
+          "value": 144.94,
+          "formula": "per-link split by A04; PM mirror by A05",
+          "parameters": [
+            "A04_station_allocation_rule",
+            "A05_direction_and_return",
+            "A06_non_commute_pattern"
+          ]
+        }
+      ],
+      "totals": {
+        "prt_am_peak_hour_trips": 144.94,
+        "prt_pm_peak_hour_trips_mirror": 144.94,
+        "prt_weekday_trips_both_directions": 817.52,
+        "unit": "person trips"
+      },
+      "conservation_check": {
+        "sum_boardings": 144.94,
+        "sum_alightings": 144.94,
+        "expected": 144.94,
+        "unallocated_trips": 0.0,
+        "tolerance": "1e-6 relative on unrounded values",
+        "pass": true
+      },
+      "per_station": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "am_peak_hour": {
+            "boardings": 9.28,
+            "alightings": 3.87,
+            "activity": 13.15
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.87,
+            "alightings": 9.28,
+            "activity": 13.15
+          },
+          "share_of_network_am_boardings": 0.064038,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "am_peak_hour": {
+            "boardings": 7.7,
+            "alightings": 5.36,
+            "activity": 13.06
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 5.36,
+            "alightings": 7.7,
+            "activity": 13.06
+          },
+          "share_of_network_am_boardings": 0.053116,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "am_peak_hour": {
+            "boardings": 3.63,
+            "alightings": 3.08,
+            "activity": 6.71
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.08,
+            "alightings": 3.63,
+            "activity": 6.71
+          },
+          "share_of_network_am_boardings": 0.025041,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "am_peak_hour": {
+            "boardings": 3.98,
+            "alightings": 3.11,
+            "activity": 7.09
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.11,
+            "alightings": 3.98,
+            "activity": 7.09
+          },
+          "share_of_network_am_boardings": 0.027454,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "am_peak_hour": {
+            "boardings": 3.41,
+            "alightings": 2.45,
+            "activity": 5.86
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 2.45,
+            "alightings": 3.41,
+            "activity": 5.86
+          },
+          "share_of_network_am_boardings": 0.02352,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "am_peak_hour": {
+            "boardings": 2.75,
+            "alightings": 3.51,
+            "activity": 6.26
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.51,
+            "alightings": 2.75,
+            "activity": 6.26
+          },
+          "share_of_network_am_boardings": 0.018975,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "am_peak_hour": {
+            "boardings": 2.96,
+            "alightings": 4.7,
+            "activity": 7.66
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 4.7,
+            "alightings": 2.96,
+            "activity": 7.66
+          },
+          "share_of_network_am_boardings": 0.020448,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "am_peak_hour": {
+            "boardings": 4.54,
+            "alightings": 3.32,
+            "activity": 7.86
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.32,
+            "alightings": 4.54,
+            "activity": 7.86
+          },
+          "share_of_network_am_boardings": 0.03129,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "am_peak_hour": {
+            "boardings": 4.52,
+            "alightings": 3.89,
+            "activity": 8.41
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 3.89,
+            "alightings": 4.52,
+            "activity": 8.41
+          },
+          "share_of_network_am_boardings": 0.031154,
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "am_peak_hour": {
+            "boardings": 3.11,
+            "alightings": 5.91,
+            "activity": 9.02
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 5.91,
+            "alightings": 3.11,
+            "activity": 9.02
+          },
+          "share_of_network_am_boardings": 0.021458,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "am_peak_hour": {
+            "boardings": 3.46,
+            "alightings": 6.17,
+            "activity": 9.63
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 6.17,
+            "alightings": 3.46,
+            "activity": 9.63
+          },
+          "share_of_network_am_boardings": 0.023844,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "am_peak_hour": {
+            "boardings": 5.57,
+            "alightings": 6.91,
+            "activity": 12.48
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 6.91,
+            "alightings": 5.57,
+            "activity": 12.48
+          },
+          "share_of_network_am_boardings": 0.038427,
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "am_peak_hour": {
+            "boardings": 6.44,
+            "alightings": 9.14,
+            "activity": 15.58
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 9.14,
+            "alightings": 6.44,
+            "activity": 15.58
+          },
+          "share_of_network_am_boardings": 0.044461,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "am_peak_hour": {
+            "boardings": 4.67,
+            "alightings": 7.15,
+            "activity": 11.81
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 7.15,
+            "alightings": 4.67,
+            "activity": 11.81
+          },
+          "share_of_network_am_boardings": 0.032204,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "am_peak_hour": {
+            "boardings": 5.59,
+            "alightings": 8.27,
+            "activity": 13.86
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 8.27,
+            "alightings": 5.59,
+            "activity": 13.86
+          },
+          "share_of_network_am_boardings": 0.03859,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "am_peak_hour": {
+            "boardings": 6.96,
+            "alightings": 9.49,
+            "activity": 16.45
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 9.49,
+            "alightings": 6.96,
+            "activity": 16.45
+          },
+          "share_of_network_am_boardings": 0.048043,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "am_peak_hour": {
+            "boardings": 10.42,
+            "alightings": 11.15,
+            "activity": 21.57
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 11.15,
+            "alightings": 10.42,
+            "activity": 21.57
+          },
+          "share_of_network_am_boardings": 0.071861,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "am_peak_hour": {
+            "boardings": 13.26,
+            "alightings": 12.74,
+            "activity": 26.0
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 12.74,
+            "alightings": 13.26,
+            "activity": 26.0
+          },
+          "share_of_network_am_boardings": 0.091494,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "am_peak_hour": {
+            "boardings": 13.68,
+            "alightings": 13.36,
+            "activity": 27.04
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 13.36,
+            "alightings": 13.68,
+            "activity": 27.04
+          },
+          "share_of_network_am_boardings": 0.094378,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "am_peak_hour": {
+            "boardings": 14.85,
+            "alightings": 10.99,
+            "activity": 25.84
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 10.99,
+            "alightings": 14.85,
+            "activity": 25.84
+          },
+          "share_of_network_am_boardings": 0.102461,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "am_peak_hour": {
+            "boardings": 14.17,
+            "alightings": 10.38,
+            "activity": 24.54
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 10.38,
+            "alightings": 14.17,
+            "activity": 24.54
+          },
+          "share_of_network_am_boardings": 0.097743,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        }
+      ]
+    },
+    "medium": {
+      "scenario_id": "medium",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_observed_ridership": false,
+      "is_calibrated": false,
+      "calibration_note": "ridership_baseline not acquired; no calibration against Metromover counts",
+      "purpose": "interview demonstration of the calculation chain with explicit parameter provenance; not a forecast",
+      "excludes": [
+        "hub_transfer_inflow (not modeled in the Miami case)",
+        "links with one end outside the network's half-mile discs",
+        "the uncovered fraction of links in blocks that only partly lie inside the network union",
+        "Florida residents working out of state",
+        "visitors and non-resident non-work trips"
+      ],
+      "assumption_values": {
+        "A01_attendance_rate": 0.85,
+        "A02_non_commute_trips_per_commute_trip": 1.0,
+        "A03_prt_adoption_share_of_all_mode_trips": 0.15
+      },
+      "chain": [
+        {
+          "step": 1,
+          "name": "internal commute links, coverage-weighted (persons with primary job, both ends inside the network union)",
+          "value": 8814.611013,
+          "whole_block_upper_bound": 9706,
+          "parameter": "P01"
+        },
+        {
+          "step": 2,
+          "name": "weekday commute person trips, AM direction",
+          "value": 5450.17,
+          "formula": "P01 × (1 − P02) × A01",
+          "parameters": [
+            "P01",
+            "P02",
+            "A01_attendance_rate"
+          ]
+        },
+        {
+          "step": 3,
+          "name": "all-purpose trips inside the network, AM direction",
+          "value": 10900.33,
+          "formula": "step2 × (1 + A02)",
+          "parameters": [
+            "A02_non_commute_trips_per_commute_trip"
+          ]
+        },
+        {
+          "step": 4,
+          "name": "peak-hour trips, AM direction",
+          "value": 3865.05,
+          "formula": "step3 × P05",
+          "parameters": [
+            "P05_peak_hour_share"
+          ]
+        },
+        {
+          "step": 5,
+          "name": "PRT peak-hour trips, AM direction",
+          "value": 579.76,
+          "formula": "step4 × A03",
+          "parameters": [
+            "A03_prt_adoption_share_of_all_mode_trips"
+          ]
+        },
+        {
+          "step": 6,
+          "name": "station boardings / alightings (allocation)",
+          "value": 579.76,
+          "formula": "per-link split by A04; PM mirror by A05",
+          "parameters": [
+            "A04_station_allocation_rule",
+            "A05_direction_and_return",
+            "A06_non_commute_pattern"
+          ]
+        }
+      ],
+      "totals": {
+        "prt_am_peak_hour_trips": 579.76,
+        "prt_pm_peak_hour_trips_mirror": 579.76,
+        "prt_weekday_trips_both_directions": 3270.1,
+        "unit": "person trips"
+      },
+      "conservation_check": {
+        "sum_boardings": 579.76,
+        "sum_alightings": 579.76,
+        "expected": 579.76,
+        "unallocated_trips": 0.0,
+        "tolerance": "1e-6 relative on unrounded values",
+        "pass": true
+      },
+      "per_station": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "am_peak_hour": {
+            "boardings": 37.13,
+            "alightings": 15.49,
+            "activity": 52.61
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 15.49,
+            "alightings": 37.13,
+            "activity": 52.61
+          },
+          "share_of_network_am_boardings": 0.064038,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "am_peak_hour": {
+            "boardings": 30.79,
+            "alightings": 21.45,
+            "activity": 52.25
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 21.45,
+            "alightings": 30.79,
+            "activity": 52.25
+          },
+          "share_of_network_am_boardings": 0.053116,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "am_peak_hour": {
+            "boardings": 14.52,
+            "alightings": 12.33,
+            "activity": 26.85
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 12.33,
+            "alightings": 14.52,
+            "activity": 26.85
+          },
+          "share_of_network_am_boardings": 0.025041,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "am_peak_hour": {
+            "boardings": 15.92,
+            "alightings": 12.43,
+            "activity": 28.35
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 12.43,
+            "alightings": 15.92,
+            "activity": 28.35
+          },
+          "share_of_network_am_boardings": 0.027454,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "am_peak_hour": {
+            "boardings": 13.64,
+            "alightings": 9.8,
+            "activity": 23.43
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 9.8,
+            "alightings": 13.64,
+            "activity": 23.43
+          },
+          "share_of_network_am_boardings": 0.02352,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "am_peak_hour": {
+            "boardings": 11.0,
+            "alightings": 14.04,
+            "activity": 25.04
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 14.04,
+            "alightings": 11.0,
+            "activity": 25.04
+          },
+          "share_of_network_am_boardings": 0.018975,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "am_peak_hour": {
+            "boardings": 11.86,
+            "alightings": 18.79,
+            "activity": 30.64
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 18.79,
+            "alightings": 11.86,
+            "activity": 30.64
+          },
+          "share_of_network_am_boardings": 0.020448,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "am_peak_hour": {
+            "boardings": 18.14,
+            "alightings": 13.29,
+            "activity": 31.43
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 13.29,
+            "alightings": 18.14,
+            "activity": 31.43
+          },
+          "share_of_network_am_boardings": 0.03129,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "am_peak_hour": {
+            "boardings": 18.06,
+            "alightings": 15.56,
+            "activity": 33.62
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 15.56,
+            "alightings": 18.06,
+            "activity": 33.62
+          },
+          "share_of_network_am_boardings": 0.031154,
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "am_peak_hour": {
+            "boardings": 12.44,
+            "alightings": 23.66,
+            "activity": 36.1
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 23.66,
+            "alightings": 12.44,
+            "activity": 36.1
+          },
+          "share_of_network_am_boardings": 0.021458,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "am_peak_hour": {
+            "boardings": 13.82,
+            "alightings": 24.68,
+            "activity": 38.51
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 24.68,
+            "alightings": 13.82,
+            "activity": 38.51
+          },
+          "share_of_network_am_boardings": 0.023844,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "am_peak_hour": {
+            "boardings": 22.28,
+            "alightings": 27.64,
+            "activity": 49.92
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 27.64,
+            "alightings": 22.28,
+            "activity": 49.92
+          },
+          "share_of_network_am_boardings": 0.038427,
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "am_peak_hour": {
+            "boardings": 25.78,
+            "alightings": 36.55,
+            "activity": 62.32
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 36.55,
+            "alightings": 25.78,
+            "activity": 62.32
+          },
+          "share_of_network_am_boardings": 0.044461,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "am_peak_hour": {
+            "boardings": 18.67,
+            "alightings": 28.58,
+            "activity": 47.25
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 28.58,
+            "alightings": 18.67,
+            "activity": 47.25
+          },
+          "share_of_network_am_boardings": 0.032204,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "am_peak_hour": {
+            "boardings": 22.37,
+            "alightings": 33.07,
+            "activity": 55.44
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 33.07,
+            "alightings": 22.37,
+            "activity": 55.44
+          },
+          "share_of_network_am_boardings": 0.03859,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "am_peak_hour": {
+            "boardings": 27.85,
+            "alightings": 37.95,
+            "activity": 65.8
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 37.95,
+            "alightings": 27.85,
+            "activity": 65.8
+          },
+          "share_of_network_am_boardings": 0.048043,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "am_peak_hour": {
+            "boardings": 41.66,
+            "alightings": 44.62,
+            "activity": 86.28
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 44.62,
+            "alightings": 41.66,
+            "activity": 86.28
+          },
+          "share_of_network_am_boardings": 0.071861,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "am_peak_hour": {
+            "boardings": 53.04,
+            "alightings": 50.94,
+            "activity": 103.99
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 50.94,
+            "alightings": 53.04,
+            "activity": 103.99
+          },
+          "share_of_network_am_boardings": 0.091494,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "am_peak_hour": {
+            "boardings": 54.72,
+            "alightings": 53.44,
+            "activity": 108.15
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 53.44,
+            "alightings": 54.72,
+            "activity": 108.15
+          },
+          "share_of_network_am_boardings": 0.094378,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "am_peak_hour": {
+            "boardings": 59.4,
+            "alightings": 43.96,
+            "activity": 103.36
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 43.96,
+            "alightings": 59.4,
+            "activity": 103.36
+          },
+          "share_of_network_am_boardings": 0.102461,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "am_peak_hour": {
+            "boardings": 56.67,
+            "alightings": 41.51,
+            "activity": 98.17
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 41.51,
+            "alightings": 56.67,
+            "activity": 98.17
+          },
+          "share_of_network_am_boardings": 0.097743,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        }
+      ]
+    },
+    "high": {
+      "scenario_id": "high",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_observed_ridership": false,
+      "is_calibrated": false,
+      "calibration_note": "ridership_baseline not acquired; no calibration against Metromover counts",
+      "purpose": "interview demonstration of the calculation chain with explicit parameter provenance; not a forecast",
+      "excludes": [
+        "hub_transfer_inflow (not modeled in the Miami case)",
+        "links with one end outside the network's half-mile discs",
+        "the uncovered fraction of links in blocks that only partly lie inside the network union",
+        "Florida residents working out of state",
+        "visitors and non-resident non-work trips"
+      ],
+      "assumption_values": {
+        "A01_attendance_rate": 0.85,
+        "A02_non_commute_trips_per_commute_trip": 1.5,
+        "A03_prt_adoption_share_of_all_mode_trips": 0.3
+      },
+      "chain": [
+        {
+          "step": 1,
+          "name": "internal commute links, coverage-weighted (persons with primary job, both ends inside the network union)",
+          "value": 8814.611013,
+          "whole_block_upper_bound": 9706,
+          "parameter": "P01"
+        },
+        {
+          "step": 2,
+          "name": "weekday commute person trips, AM direction",
+          "value": 5450.17,
+          "formula": "P01 × (1 − P02) × A01",
+          "parameters": [
+            "P01",
+            "P02",
+            "A01_attendance_rate"
+          ]
+        },
+        {
+          "step": 3,
+          "name": "all-purpose trips inside the network, AM direction",
+          "value": 13625.41,
+          "formula": "step2 × (1 + A02)",
+          "parameters": [
+            "A02_non_commute_trips_per_commute_trip"
+          ]
+        },
+        {
+          "step": 4,
+          "name": "peak-hour trips, AM direction",
+          "value": 4831.31,
+          "formula": "step3 × P05",
+          "parameters": [
+            "P05_peak_hour_share"
+          ]
+        },
+        {
+          "step": 5,
+          "name": "PRT peak-hour trips, AM direction",
+          "value": 1449.39,
+          "formula": "step4 × A03",
+          "parameters": [
+            "A03_prt_adoption_share_of_all_mode_trips"
+          ]
+        },
+        {
+          "step": 6,
+          "name": "station boardings / alightings (allocation)",
+          "value": 1449.39,
+          "formula": "per-link split by A04; PM mirror by A05",
+          "parameters": [
+            "A04_station_allocation_rule",
+            "A05_direction_and_return",
+            "A06_non_commute_pattern"
+          ]
+        }
+      ],
+      "totals": {
+        "prt_am_peak_hour_trips": 1449.39,
+        "prt_pm_peak_hour_trips_mirror": 1449.39,
+        "prt_weekday_trips_both_directions": 8175.25,
+        "unit": "person trips"
+      },
+      "conservation_check": {
+        "sum_boardings": 1449.39,
+        "sum_alightings": 1449.39,
+        "expected": 1449.39,
+        "unallocated_trips": 0.0,
+        "tolerance": "1e-6 relative on unrounded values",
+        "pass": true
+      },
+      "per_station": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "am_peak_hour": {
+            "boardings": 92.82,
+            "alightings": 38.71,
+            "activity": 131.53
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 38.71,
+            "alightings": 92.82,
+            "activity": 131.53
+          },
+          "share_of_network_am_boardings": 0.064038,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "am_peak_hour": {
+            "boardings": 76.99,
+            "alightings": 53.64,
+            "activity": 130.62
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 53.64,
+            "alightings": 76.99,
+            "activity": 130.62
+          },
+          "share_of_network_am_boardings": 0.053116,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "am_peak_hour": {
+            "boardings": 36.29,
+            "alightings": 30.82,
+            "activity": 67.12
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 30.82,
+            "alightings": 36.29,
+            "activity": 67.12
+          },
+          "share_of_network_am_boardings": 0.025041,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "am_peak_hour": {
+            "boardings": 39.79,
+            "alightings": 31.09,
+            "activity": 70.88
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 31.09,
+            "alightings": 39.79,
+            "activity": 70.88
+          },
+          "share_of_network_am_boardings": 0.027454,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "am_peak_hour": {
+            "boardings": 34.09,
+            "alightings": 24.49,
+            "activity": 58.58
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 24.49,
+            "alightings": 34.09,
+            "activity": 58.58
+          },
+          "share_of_network_am_boardings": 0.02352,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "am_peak_hour": {
+            "boardings": 27.5,
+            "alightings": 35.1,
+            "activity": 62.6
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 35.1,
+            "alightings": 27.5,
+            "activity": 62.6
+          },
+          "share_of_network_am_boardings": 0.018975,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "am_peak_hour": {
+            "boardings": 29.64,
+            "alightings": 46.97,
+            "activity": 76.61
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 46.97,
+            "alightings": 29.64,
+            "activity": 76.61
+          },
+          "share_of_network_am_boardings": 0.020448,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "am_peak_hour": {
+            "boardings": 45.35,
+            "alightings": 33.21,
+            "activity": 78.56
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 33.21,
+            "alightings": 45.35,
+            "activity": 78.56
+          },
+          "share_of_network_am_boardings": 0.03129,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "am_peak_hour": {
+            "boardings": 45.15,
+            "alightings": 38.9,
+            "activity": 84.05
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 38.9,
+            "alightings": 45.15,
+            "activity": 84.05
+          },
+          "share_of_network_am_boardings": 0.031154,
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "am_peak_hour": {
+            "boardings": 31.1,
+            "alightings": 59.14,
+            "activity": 90.24
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 59.14,
+            "alightings": 31.1,
+            "activity": 90.24
+          },
+          "share_of_network_am_boardings": 0.021458,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "am_peak_hour": {
+            "boardings": 34.56,
+            "alightings": 61.71,
+            "activity": 96.26
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 61.71,
+            "alightings": 34.56,
+            "activity": 96.26
+          },
+          "share_of_network_am_boardings": 0.023844,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "am_peak_hour": {
+            "boardings": 55.7,
+            "alightings": 69.11,
+            "activity": 124.81
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 69.11,
+            "alightings": 55.7,
+            "activity": 124.81
+          },
+          "share_of_network_am_boardings": 0.038427,
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "am_peak_hour": {
+            "boardings": 64.44,
+            "alightings": 91.37,
+            "activity": 155.81
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 91.37,
+            "alightings": 64.44,
+            "activity": 155.81
+          },
+          "share_of_network_am_boardings": 0.044461,
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "am_peak_hour": {
+            "boardings": 46.68,
+            "alightings": 71.45,
+            "activity": 118.13
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 71.45,
+            "alightings": 46.68,
+            "activity": 118.13
+          },
+          "share_of_network_am_boardings": 0.032204,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "am_peak_hour": {
+            "boardings": 55.93,
+            "alightings": 82.67,
+            "activity": 138.6
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 82.67,
+            "alightings": 55.93,
+            "activity": 138.6
+          },
+          "share_of_network_am_boardings": 0.03859,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "am_peak_hour": {
+            "boardings": 69.63,
+            "alightings": 94.87,
+            "activity": 164.51
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 94.87,
+            "alightings": 69.63,
+            "activity": 164.51
+          },
+          "share_of_network_am_boardings": 0.048043,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "am_peak_hour": {
+            "boardings": 104.15,
+            "alightings": 111.54,
+            "activity": 215.69
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 111.54,
+            "alightings": 104.15,
+            "activity": 215.69
+          },
+          "share_of_network_am_boardings": 0.071861,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "am_peak_hour": {
+            "boardings": 132.61,
+            "alightings": 127.35,
+            "activity": 259.96
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 127.35,
+            "alightings": 132.61,
+            "activity": 259.96
+          },
+          "share_of_network_am_boardings": 0.091494,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "am_peak_hour": {
+            "boardings": 136.79,
+            "alightings": 133.59,
+            "activity": 270.38
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 133.59,
+            "alightings": 136.79,
+            "activity": 270.38
+          },
+          "share_of_network_am_boardings": 0.094378,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "am_peak_hour": {
+            "boardings": 148.51,
+            "alightings": 109.9,
+            "activity": 258.41
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 109.9,
+            "alightings": 148.51,
+            "activity": 258.41
+          },
+          "share_of_network_am_boardings": 0.102461,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "am_peak_hour": {
+            "boardings": 141.67,
+            "alightings": 103.77,
+            "activity": 245.44
+          },
+          "pm_peak_hour_mirror": {
+            "boardings": 103.77,
+            "alightings": 141.67,
+            "activity": 245.44
+          },
+          "share_of_network_am_boardings": 0.097743,
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "scheduled Metromover departures per hour (GTFS, observed record); not capacity, not a comparison of adequacy"
+        }
+      ]
+    }
+  },
+  "observed_reference": {
+    "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target",
+    "source_package": {
+      "stage": "ridership_reference",
+      "package_id": "pkg-5d8a337e0686",
+      "package_dir": "ridership_reference/pkg-5d8a337e0686",
+      "manifest_sha256": "ca1bd6ad79212258c93e2cdc51ddf439c1e6cdccf1635988f14ae613f6436e9e"
+    },
+    "observed": {
+      "system_avg_weekday_boardings_10_month_mean": 25401.8,
+      "window": {
+        "from": "2025-10",
+        "to": "2026-07",
+        "months": 10
+      },
+      "unit": "boardings of the current Metromover per average weekday",
+      "station_avg_weekday_boardings": {
+        "MIA-MM-01": 1064.1,
+        "MIA-MM-02": 1581.2,
+        "MIA-MM-03": 297.2,
+        "MIA-MM-04": 372.3,
+        "MIA-MM-05": 492.9,
+        "MIA-MM-06": 767.2,
+        "MIA-MM-07": 1063.2,
+        "MIA-MM-08": 1576.9,
+        "MIA-MM-09": 5161.9,
+        "MIA-MM-10": 1517.3,
+        "MIA-MM-11": 1252.9,
+        "MIA-MM-12": 2386.6,
+        "MIA-MM-13": 552.2,
+        "MIA-MM-14": 307.7,
+        "MIA-MM-15": 478.4,
+        "MIA-MM-16": 592.1,
+        "MIA-MM-17": 527.5,
+        "MIA-MM-18": 1783.2,
+        "MIA-MM-19": 886.4,
+        "MIA-MM-20": 1773.9,
+        "MIA-MM-21": 966.8
+      },
+      "station_share_of_system": {
+        "MIA-MM-01": 0.041891,
+        "MIA-MM-02": 0.062247,
+        "MIA-MM-03": 0.0117,
+        "MIA-MM-04": 0.014656,
+        "MIA-MM-05": 0.019404,
+        "MIA-MM-06": 0.030202,
+        "MIA-MM-07": 0.041855,
+        "MIA-MM-08": 0.062078,
+        "MIA-MM-09": 0.203209,
+        "MIA-MM-10": 0.059732,
+        "MIA-MM-11": 0.049323,
+        "MIA-MM-12": 0.093954,
+        "MIA-MM-13": 0.021739,
+        "MIA-MM-14": 0.012113,
+        "MIA-MM-15": 0.018833,
+        "MIA-MM-16": 0.023309,
+        "MIA-MM-17": 0.020766,
+        "MIA-MM-18": 0.070199,
+        "MIA-MM-19": 0.034895,
+        "MIA-MM-20": 0.069833,
+        "MIA-MM-21": 0.03806
+      }
+    },
+    "scale": {
+      "low": {
+        "scenario_weekday_trips_both_directions": 817.52,
+        "observed_system_avg_weekday_boardings": 25401.8,
+        "ratio_scenario_over_observed": 0.032184
+      },
+      "medium": {
+        "scenario_weekday_trips_both_directions": 3270.1,
+        "observed_system_avg_weekday_boardings": 25401.8,
+        "ratio_scenario_over_observed": 0.128735
+      },
+      "high": {
+        "scenario_weekday_trips_both_directions": 8175.25,
+        "observed_system_avg_weekday_boardings": 25401.8,
+        "ratio_scenario_over_observed": 0.321837
+      }
+    },
+    "station_share_shape": {
+      "low": {
+        "spearman_rank_correlation_station_shares": 0.197403,
+        "max_abs_share_difference": 0.172055,
+        "largest_differences": [
+          {
+            "station_id": "MIA-MM-09",
+            "scenario_share": 0.031154,
+            "observed_share": 0.203209,
+            "difference": -0.172055
+          },
+          {
+            "station_id": "MIA-MM-21",
+            "scenario_share": 0.097743,
+            "observed_share": 0.03806,
+            "difference": 0.059683
+          },
+          {
+            "station_id": "MIA-MM-19",
+            "scenario_share": 0.094378,
+            "observed_share": 0.034895,
+            "difference": 0.059483
+          },
+          {
+            "station_id": "MIA-MM-12",
+            "scenario_share": 0.038427,
+            "observed_share": 0.093954,
+            "difference": -0.055527
+          },
+          {
+            "station_id": "MIA-MM-17",
+            "scenario_share": 0.071861,
+            "observed_share": 0.020766,
+            "difference": 0.051095
+          }
+        ]
+      },
+      "medium": {
+        "spearman_rank_correlation_station_shares": 0.197403,
+        "max_abs_share_difference": 0.172055,
+        "largest_differences": [
+          {
+            "station_id": "MIA-MM-09",
+            "scenario_share": 0.031154,
+            "observed_share": 0.203209,
+            "difference": -0.172055
+          },
+          {
+            "station_id": "MIA-MM-21",
+            "scenario_share": 0.097743,
+            "observed_share": 0.03806,
+            "difference": 0.059683
+          },
+          {
+            "station_id": "MIA-MM-19",
+            "scenario_share": 0.094378,
+            "observed_share": 0.034895,
+            "difference": 0.059483
+          },
+          {
+            "station_id": "MIA-MM-12",
+            "scenario_share": 0.038427,
+            "observed_share": 0.093954,
+            "difference": -0.055527
+          },
+          {
+            "station_id": "MIA-MM-17",
+            "scenario_share": 0.071861,
+            "observed_share": 0.020766,
+            "difference": 0.051095
+          }
+        ]
+      },
+      "high": {
+        "spearman_rank_correlation_station_shares": 0.197403,
+        "max_abs_share_difference": 0.172055,
+        "largest_differences": [
+          {
+            "station_id": "MIA-MM-09",
+            "scenario_share": 0.031154,
+            "observed_share": 0.203209,
+            "difference": -0.172055
+          },
+          {
+            "station_id": "MIA-MM-21",
+            "scenario_share": 0.097743,
+            "observed_share": 0.03806,
+            "difference": 0.059683
+          },
+          {
+            "station_id": "MIA-MM-19",
+            "scenario_share": 0.094378,
+            "observed_share": 0.034895,
+            "difference": 0.059483
+          },
+          {
+            "station_id": "MIA-MM-12",
+            "scenario_share": 0.038427,
+            "observed_share": 0.093954,
+            "difference": -0.055527
+          },
+          {
+            "station_id": "MIA-MM-17",
+            "scenario_share": 0.071861,
+            "observed_share": 0.020766,
+            "difference": 0.051095
+          }
+        ]
+      }
+    },
+    "reading": "the scale ratios are well below 1 because the scenarios cover internal links only (no regional inflow, no hub transfers, no visitors); the share comparison is unit-free and asks whether the allocation places trips at the stations where boardings are observed"
+  }
+}

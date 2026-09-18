@@ -1,0 +1,17 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "months": 10,
+  "stations": 21,
+  "all_21_stations_mapped_every_month": true,
+  "station_sums_match_published_totals_within_3": true,
+  "renamed_stations_flagged": [
+    "MIA-MM-02",
+    "MIA-MM-05",
+    "MIA-MM-18"
+  ],
+  "shares_sum_to_one": true,
+  "no_zero_station": true,
+  "scope_statement": "PASS means the published tables were read consistently and mapped one-to-one to the 21 stations. The values are boardings of the current Metromover, not trips, not OD, not peak-hour and not the demand of the scenarios."
+}

@@ -1,0 +1,31 @@
+interpreter: /opt/anaconda3/bin/python3
+copies under: /private/var/folders/yb/td4_x31x0kg3kxcx3l_fs2zr0000gn/T/miami-regression-_olyw5q9
+PASS  baseline_full_rebuild        16.4s  
+PASS  unchanged_rerun              16.3s  
+PASS  station_change                1.9s  
+PASS  window_change                 1.8s  
+PASS  zoning_change                 1.8s  
+PASS  publish_failure_rename        0.8s  
+PASS  publish_failure_pointer       1.5s  
+PASS  validation_failure            0.8s  
+PASS  lock_mismatch                 0.3s  
+PASS  corrupt_package_detected      1.0s  
+PASS  readiness_single_writer       0.1s  
+PASS  readiness_flags_baseline      0.2s  
+PASS  future_layers_fixtures        0.5s  
+PASS  assumption_backed_inputs      0.2s  
+PASS  stale_propagation             0.7s  
+PASS  raw_change_station_master     1.9s  
+PASS  code_change_informational    16.5s  
+PASS  demography_jobs_layers        0.0s  
+PASS  raw_change_layers_stale       0.4s  
+PASS  input_package_build           0.0s  
+PASS  service_baseline_and_scenarios    0.0s  
+PASS  optional_layer_added_marks_input_package_stale    0.7s  
+PASS  corrupt_optional_layer_isolated    0.3s  
+PASS  config_stage                  0.0s  
+PASS  ridership_reference_stage     0.0s  
+PASS  poi_stage                     0.0s  
+results -> reviews/2026-09-17_step8_web_demo/regression_results.json
+ALL PASS
+exit=0

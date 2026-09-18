@@ -1,0 +1,99 @@
+{
+  "stage": "service_baseline",
+  "schema_version": "miami-service-baseline-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "gtfs_archive",
+      "path": "raw/miami/2026-09-11/google_transit.zip",
+      "sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5"
+    },
+    {
+      "name": "gtfs_inventory",
+      "path": "data/miami/2026-09-11/inventory.json",
+      "sha256": "a19ab91c336fb03e6402b47f2d5393c6ed9133b8b5565946c0b38500a3b0b696"
+    },
+    {
+      "name": "stop_to_station_crosswalk",
+      "path": "data/miami/2026-09-14/stop_to_station_crosswalk.json",
+      "sha256": "c5b5117bea1857f203f8af830f6a1500807e83d57266967db7cb51fa9f1a74f3"
+    },
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    }
+  ],
+  "consumed_packages": [],
+  "code": [
+    {
+      "path": "scripts/build_miami_service_baseline.py",
+      "sha256": "949a63658806646b6739fae15e4dc1bfaeca3f5a4fea1f202218e7f8d1d3439c"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "bfbb57caa87bcd34d17baf068d7a17e63007ff28361654eb6a19cb85e0e1ff99"
+    }
+  ],
+  "config_sha256": "4343a8d3a111821bc98e76332a8b1a7a15427600a6010510773f3a1c90f149e4",
+  "config": {
+    "periods": {
+      "early": [
+        5,
+        7
+      ],
+      "am_peak": [
+        7,
+        9
+      ],
+      "midday": [
+        9,
+        16
+      ],
+      "pm_peak": [
+        16,
+        19
+      ],
+      "evening": [
+        19,
+        24
+      ]
+    },
+    "weekday_rule": "calendar service with all Monday-Friday flags, most trips",
+    "routes_rule": "route_long_name contains METROMOVER",
+    "headway_definition": "60 × hours in period ÷ scheduled departures at the station's stops in the period (per route and all routes)"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "method_summary": "GTFS weekday stop_times aggregated per station (via the stop-to-station crosswalk) into departures by hour/route and period headways",
+  "contract": "V2_站点输入包字段契约.md §8 (service_baseline)",
+  "publish_policy": "content-addressed immutable package dir service_baseline/pkg-<id>; readers resolve service_baseline_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_service_baseline.json",
+      "sha256": "caf9ed730917e98aca13b5f56e4b6c714418b78e65dbc325b04f6f0d7641f4c0"
+    },
+    {
+      "file": "service_baseline_validation.json",
+      "sha256": "2629eacbcfcc9728742266b75ea31108dd47b6e336b50e261bdcf656c7ad72d7"
+    }
+  ],
+  "package_id": "pkg-a69b1848d3b9",
+  "package_dir": "service_baseline/pkg-a69b1848d3b9"
+}

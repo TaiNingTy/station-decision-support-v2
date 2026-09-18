@@ -1,0 +1,389 @@
+{
+  "retrieved_on": "2026-09-17",
+  "acquisition_stage": "miami_poi",
+  "study_bbox_wgs84": [
+    -80.209,
+    25.749,
+    -80.175,
+    25.801
+  ],
+  "bbox_note": "the spatial-join extraction window; every station band lies inside it with margin, so POIs inside any band are inside the window; 'nearest facility' searches are limited to this window",
+  "category_sources": {
+    "school": [
+      "school_public",
+      "school_charter",
+      "school_private"
+    ],
+    "park": [
+      "park_city",
+      "park_county"
+    ],
+    "clinic": [
+      "clinic_fqhc",
+      "clinic_free_standing",
+      "clinic_jhs_primary_care",
+      "clinic_mental_health",
+      "clinic_school_based"
+    ],
+    "grocery": [
+      "grocery_snap_all_types (filtered to supermarket / super store / grocery store downstream)"
+    ],
+    "grocery_crosscheck": [
+      "osm_grocery_crosscheck"
+    ]
+  },
+  "fetch_script": {
+    "path": "scripts/fetch_miami_poi.py",
+    "sha256": "a9ac5ae9d542f92d6b6f1fd82acae5180b0318e7da78e6a475e00c6de625fb1b"
+  },
+  "sources": [
+    {
+      "layer_id": "school_public",
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Public Schools @ SchoolSite)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/25",
+      "files": {
+        "metadata": {
+          "file": "poi/school_public.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/25?f=pjson",
+          "bytes": 16561,
+          "sha256": "c8be67c600c18cb74b655cabc12888e2b505ff12a04ebd1e5987cba28be671ad",
+          "retrieved_at_utc": "2026-09-17T13:39:19Z"
+        },
+        "ids": {
+          "file": "poi/school_public.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/25/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 121,
+          "sha256": "30f58546b794c96d9691bf71128dd4dadfcdeaab510bf59b110afec52f630d36",
+          "retrieved_at_utc": "2026-09-17T13:39:20Z"
+        },
+        "geojson": {
+          "file": "poi/school_public.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/25/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 7672,
+          "sha256": "cc2dd5a78de3e61d47f3c57d7abfce0676ad5ef59b28a90c8117c622e1de9c9f",
+          "retrieved_at_utc": "2026-09-17T13:39:22Z"
+        }
+      }
+    },
+    {
+      "layer_id": "school_charter",
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Charter Schools)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/23",
+      "files": {
+        "metadata": {
+          "file": "poi/school_charter.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/23?f=pjson",
+          "bytes": 16666,
+          "sha256": "dfc9790191b4f4acb856deeb9932aa19dbc7d61e971da6304906fd4a5cc39720",
+          "retrieved_at_utc": "2026-09-17T13:39:23Z"
+        },
+        "ids": {
+          "file": "poi/school_charter.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/23/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 70,
+          "sha256": "5c73390494faaecf294b487d6dd8dedd865c7fd4ca1db3d1f6a4281b20a55966",
+          "retrieved_at_utc": "2026-09-17T13:39:24Z"
+        },
+        "geojson": {
+          "file": "poi/school_charter.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/23/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 3203,
+          "sha256": "7532687d1260ba394ecfdfae211fbf6dfd8f03b7251fc1da41bb470eb7efdd6c",
+          "retrieved_at_utc": "2026-09-17T13:39:25Z"
+        }
+      }
+    },
+    {
+      "layer_id": "school_private",
+      "category": "school",
+      "publisher": "Miami-Dade County (MD_Emaps: Private Schools)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/24",
+      "files": {
+        "metadata": {
+          "file": "poi/school_private.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/24?f=pjson",
+          "bytes": 14695,
+          "sha256": "44e3759e9e37dab6df36e97fc946e22cf474789babf18bb863b8d5265c2c1e07",
+          "retrieved_at_utc": "2026-09-17T13:39:26Z"
+        },
+        "ids": {
+          "file": "poi/school_private.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/24/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 116,
+          "sha256": "5b2090aa278225ba10fa638145d783048125df56c0cae41929f625e1c9b2f1a0",
+          "retrieved_at_utc": "2026-09-17T13:39:27Z"
+        },
+        "geojson": {
+          "file": "poi/school_private.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/24/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 8215,
+          "sha256": "7939efb58946e24f8cf4135792a4b4198df3415355f098e5a4f0f06720a55b11",
+          "retrieved_at_utc": "2026-09-17T13:39:29Z"
+        }
+      }
+    },
+    {
+      "layer_id": "park_city",
+      "category": "park",
+      "publisher": "City of Miami (Park_Boundary_Base_Layer)",
+      "terms": "City of Miami open GIS service (same publisher as the M21 zoning layer, CC-BY-4.0 there)",
+      "service_url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Park_Boundary_Base_Layer/FeatureServer/0",
+      "files": {
+        "metadata": {
+          "file": "poi/park_city.metadata.json",
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Park_Boundary_Base_Layer/FeatureServer/0?f=pjson",
+          "bytes": 13722,
+          "sha256": "d36154309016b0db1bf708e6241f3f6938823ae18a89a918ebaa066a4279b59f",
+          "retrieved_at_utc": "2026-09-17T13:39:30Z"
+        },
+        "ids": {
+          "file": "poi/park_city.ids.json",
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Park_Boundary_Base_Layer/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 157,
+          "sha256": "1617916943663bffe995521c15f8d90d8fbea02e3169397700bf924dfc1960ed",
+          "retrieved_at_utc": "2026-09-17T13:39:31Z"
+        },
+        "geojson": {
+          "file": "poi/park_city.geojson.json",
+          "url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/Park_Boundary_Base_Layer/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson&orderByFields=FID",
+          "bytes": 64734,
+          "sha256": "143ef5aa0c3a9e66654747ddda3f4e9b798a09284ac4787d034db61983c04e49",
+          "retrieved_at_utc": "2026-09-17T13:39:34Z"
+        }
+      }
+    },
+    {
+      "layer_id": "park_county",
+      "category": "park",
+      "publisher": "Miami-Dade County (MD_Emaps: County Park Boundaries)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/2",
+      "files": {
+        "metadata": {
+          "file": "poi/park_county.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/2?f=pjson",
+          "bytes": 5988,
+          "sha256": "d1ff161da7ced5ca1189da1bab99b57dd1d1fb2e8978086a4d6561449db2d901",
+          "retrieved_at_utc": "2026-09-17T13:39:35Z"
+        },
+        "ids": {
+          "file": "poi/park_county.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/2/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 57,
+          "sha256": "a0ab2af3e0ed60341cb2b7dc2d4f81b6de0b688de3ad0a2355d5a62749247f61",
+          "retrieved_at_utc": "2026-09-17T13:39:36Z"
+        },
+        "geojson": {
+          "file": "poi/park_county.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/2/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 3186,
+          "sha256": "c158969752355af134004cc5de4471ec28f5c1a6a08be4fe36ae0fc6c7077d51",
+          "retrieved_at_utc": "2026-09-17T13:39:37Z"
+        }
+      }
+    },
+    {
+      "layer_id": "clinic_fqhc",
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Federally Qualified Health Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/40",
+      "files": {
+        "metadata": {
+          "file": "poi/clinic_fqhc.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/40?f=pjson",
+          "bytes": 6355,
+          "sha256": "2475c78dfae5d151c88895f92dc37d1513f235cb4b17a1abb0371661359f0b0e",
+          "retrieved_at_utc": "2026-09-17T13:39:38Z"
+        },
+        "ids": {
+          "file": "poi/clinic_fqhc.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/40/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 48,
+          "sha256": "a7921b2f3b1ed45d2b602aad6eb37cf2cc26ef55edb56133391fbbe9cd18ead3",
+          "retrieved_at_utc": "2026-09-17T13:39:39Z"
+        },
+        "geojson": {
+          "file": "poi/clinic_fqhc.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/40/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 324,
+          "sha256": "0eb0c828230ec5f8455ac70a8815b10886d941f130158572a5fc5849b01ef48e",
+          "retrieved_at_utc": "2026-09-17T13:39:41Z"
+        }
+      }
+    },
+    {
+      "layer_id": "clinic_free_standing",
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Free Standing Clinics)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/41",
+      "files": {
+        "metadata": {
+          "file": "poi/clinic_free_standing.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/41?f=pjson",
+          "bytes": 6349,
+          "sha256": "e4fd89e517f8f4cc3aa42e076a25314fa503244bbdbd0253d22f906612d09ea8",
+          "retrieved_at_utc": "2026-09-17T13:39:42Z"
+        },
+        "ids": {
+          "file": "poi/clinic_free_standing.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/41/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 59,
+          "sha256": "67123004a8168aecec122e3a4c239730e4780358409e7f5d7e6f06b94d1a84f8",
+          "retrieved_at_utc": "2026-09-17T13:39:43Z"
+        },
+        "geojson": {
+          "file": "poi/clinic_free_standing.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/41/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 1513,
+          "sha256": "faea5092af989e846976d9159c59110fec0d2cd990da5ae5d6ed28a0e047d3e6",
+          "retrieved_at_utc": "2026-09-17T13:39:44Z"
+        }
+      }
+    },
+    {
+      "layer_id": "clinic_jhs_primary_care",
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Jackson Health System Primary Care Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/43",
+      "files": {
+        "metadata": {
+          "file": "poi/clinic_jhs_primary_care.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/43?f=pjson",
+          "bytes": 6399,
+          "sha256": "ed64436b9490cd5960961b06986116d1948615ca169b714845004733f3d744a2",
+          "retrieved_at_utc": "2026-09-17T13:39:45Z"
+        },
+        "ids": {
+          "file": "poi/clinic_jhs_primary_care.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/43/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 50,
+          "sha256": "4915cd398e2c153563e4710ddf3057bcdb10330900f03ea0b139365b4c54991b",
+          "retrieved_at_utc": "2026-09-17T13:39:46Z"
+        },
+        "geojson": {
+          "file": "poi/clinic_jhs_primary_care.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/43/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 641,
+          "sha256": "8b22f614f50c0c83e1ac07a03a41b3a89ee6f22c19efbd5dc252e4b99d25dd7c",
+          "retrieved_at_utc": "2026-09-17T13:39:47Z"
+        }
+      }
+    },
+    {
+      "layer_id": "clinic_mental_health",
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: Community Mental Health Centers)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/44",
+      "files": {
+        "metadata": {
+          "file": "poi/clinic_mental_health.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/44?f=pjson",
+          "bytes": 6368,
+          "sha256": "a2b780e0661b7bb4d763067612f6263b88e2889a16fb2e0fe0fb5f152001aa3c",
+          "retrieved_at_utc": "2026-09-17T13:39:48Z"
+        },
+        "ids": {
+          "file": "poi/clinic_mental_health.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/44/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 49,
+          "sha256": "667410564a013e24d2b824ed7ea5c2613b8f5a6ea02633399a491988c5e3a512",
+          "retrieved_at_utc": "2026-09-17T13:39:50Z"
+        },
+        "geojson": {
+          "file": "poi/clinic_mental_health.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/44/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 42,
+          "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c",
+          "retrieved_at_utc": "2026-09-17T13:39:51Z"
+        }
+      }
+    },
+    {
+      "layer_id": "clinic_school_based",
+      "category": "clinic",
+      "publisher": "Miami-Dade County (MD_Emaps: School-Based Health Clinics)",
+      "terms": "Miami-Dade County public GIS service",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/45",
+      "files": {
+        "metadata": {
+          "file": "poi/clinic_school_based.metadata.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/45?f=pjson",
+          "bytes": 6408,
+          "sha256": "063d361422be9ecd341651f30cadaf1e2955b0eec174918f04157c50a1af1f2e",
+          "retrieved_at_utc": "2026-09-17T13:39:52Z"
+        },
+        "ids": {
+          "file": "poi/clinic_school_based.ids.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/45/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 53,
+          "sha256": "e6a7da761255660a263746210706314ff09efa4ecfa227455f207fd3996f6fbd",
+          "retrieved_at_utc": "2026-09-17T13:39:53Z"
+        },
+        "geojson": {
+          "file": "poi/clinic_school_based.geojson.json",
+          "url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/45/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson",
+          "bytes": 661,
+          "sha256": "ce1f8892d9356458f55899f8d1ce1336295ba36070c38090c07e74d635f01e00",
+          "retrieved_at_utc": "2026-09-17T13:39:54Z"
+        }
+      }
+    },
+    {
+      "layer_id": "grocery_snap_all_types",
+      "category": "grocery",
+      "publisher": "USDA Food and Nutrition Service, SNAP retailer location data (ArcGIS)",
+      "terms": "U.S. federal public data; all store types kept raw, grocery filter applied downstream",
+      "service_url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/snap_retailer_location_data/FeatureServer/0",
+      "files": {
+        "metadata": {
+          "file": "poi/grocery_snap_all_types.metadata.json",
+          "url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/snap_retailer_location_data/FeatureServer/0?f=pjson",
+          "bytes": 16837,
+          "sha256": "4ba8111f236c4ddda7a1c142cb2cc5b17bf63448c310469e18f8cad941e0a568",
+          "retrieved_at_utc": "2026-09-17T13:39:55Z"
+        },
+        "ids": {
+          "file": "poi/grocery_snap_all_types.ids.json",
+          "url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/snap_retailer_location_data/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&returnIdsOnly=true&f=json",
+          "bytes": 341,
+          "sha256": "1e720c559fe701a8e7002fc64204331fcf2884209c3cc96f9435b5d6e831915a",
+          "retrieved_at_utc": "2026-09-17T13:39:56Z"
+        },
+        "geojson": {
+          "file": "poi/grocery_snap_all_types.geojson.json",
+          "url": "https://services1.arcgis.com/RLQu0rK7h4kbsBq5/arcgis/rest/services/snap_retailer_location_data/FeatureServer/0/query?where=1%3D1&geometry=-80.209%2C25.749%2C-80.175%2C25.801&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outFields=%2A&outSR=4326&returnGeometry=true&resultRecordCount=2000&f=geojson&orderByFields=ObjectId",
+          "bytes": 20226,
+          "sha256": "e0976389d08276131c22e27be8d51c7723df37c850da74402319174fc795c9e3",
+          "retrieved_at_utc": "2026-09-17T13:39:59Z"
+        }
+      }
+    },
+    {
+      "layer_id": "osm_grocery_crosscheck",
+      "category": "grocery",
+      "publisher": "OpenStreetMap contributors via Overpass mirror overpass.kumi.systems",
+      "terms": "ODbL 1.0 — attribution '© OpenStreetMap contributors' required; cross-check only, not merged",
+      "service_url": "https://overpass.kumi.systems/api/interpreter",
+      "query": "[out:json][timeout:60];(node[\"shop\"~\"^(supermarket|grocery|greengrocer)$\"](25.749,-80.209,25.801,-80.175);way[\"shop\"~\"^(supermarket|grocery|greengrocer)$\"](25.749,-80.209,25.801,-80.175);relation[\"shop\"~\"^(supermarket|grocery|greengrocer)$\"](25.749,-80.209,25.801,-80.175););out center;",
+      "osm_data_timestamp": "2026-06-01T08:52:28Z",
+      "files": {
+        "response": {
+          "file": "poi/osm_grocery_overpass.json",
+          "url": "https://overpass.kumi.systems/api/interpreter",
+          "bytes": 7703,
+          "sha256": "fe4215789d1d3bfe2b24b13f853d275e1a530ec82b58c72a5a8f7c4d1516f222",
+          "retrieved_at_utc": "2026-09-17T13:41:02Z"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "retrieved_on": "2026-09-11",
+  "files": [
+    {
+      "file": "raw/abs_west_melbourne_2021.html",
+      "bytes": 190162,
+      "sha256": "9bce425f3d75ab19818fbf7efc809d1df814134313028dd0f755bf4a3f0479ec"
+    },
+    {
+      "file": "raw/vista_explanatory_2026.pdf",
+      "bytes": 555218,
+      "sha256": "d5f6df10d2a73feb7fcedf92b08ba8036e58061739e2b9fbca315174bffa8b43"
+    },
+    {
+      "file": "raw/vista_journey_to_work_2024_2025.csv",
+      "bytes": 620777,
+      "sha256": "94201dd0ffbd5997452abeb40c4dfa1c50c31a4bae1eb3eba16c7da0ea926724"
+    },
+    {
+      "file": "raw/vista_trips_2024_2025.csv",
+      "bytes": 16280970,
+      "sha256": "19f852a7f2e1a53b19388836c0084f6a8d62d597ca8b76708170a3192b02c5f4"
+    }
+  ]
+}

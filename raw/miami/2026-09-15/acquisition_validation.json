@@ -1,0 +1,726 @@
+{
+  "status": "PASS",
+  "failed_checks": [],
+  "blocked_sources": [],
+  "checked_on": "2026-09-15",
+  "checks": {
+    "pyshp_version_matches_lock": {
+      "pass": true,
+      "detail": {
+        "lock": "3.1.6",
+        "actual": "3.1.6"
+      }
+    },
+    "every_acquired_source_present": {
+      "pass": true,
+      "detail": []
+    },
+    "every_sha256_matches_manifest": {
+      "pass": true
+    },
+    "tiger_bg": {
+      "state_features": 13388,
+      "county_086_block_groups": 1843,
+      "fields": [
+        "STATEFP",
+        "COUNTYFP",
+        "TRACTCE",
+        "BLKGRPCE",
+        "GEOID",
+        "GEOIDFQ",
+        "NAMELSAD",
+        "MTFCC",
+        "FUNCSTAT",
+        "ALAND",
+        "AWATER",
+        "INTPTLAT",
+        "INTPTLON"
+      ],
+      "crs_prj_head": "GEOGCS[\"GCS_North_American_1983\",DATUM[\"D_North_American_198",
+      "county_land_m2": 4920856951,
+      "county_water_m2": 1267455935
+    },
+    "tiger_bg_county_count_plausible": {
+      "pass": true,
+      "detail": 1843
+    },
+    "tiger_bg_geoid_12_digits": {
+      "pass": true
+    },
+    "tiger_blocks": {
+      "county_blocks": 31622,
+      "fields": [
+        "STATEFP20",
+        "COUNTYFP20",
+        "TRACTCE20",
+        "BLOCKCE20",
+        "GEOID20",
+        "NAME20",
+        "MTFCC20",
+        "UR20",
+        "UACE20",
+        "UATYPE20",
+        "FUNCSTAT20",
+        "ALAND20",
+        "AWATER20",
+        "INTPTLAT20",
+        "INTPTLON20"
+      ],
+      "crs_prj_head": "GEOGCS[\"GCS_North_American_1983\",DATUM[\"D_North_American_198",
+      "water_only_blocks_ALAND20_zero": 1075,
+      "county_land_m2": 4920728991,
+      "county_water_m2": 1267583864,
+      "features_not_in_county_086": 0
+    },
+    "tiger_blocks_all_in_county": {
+      "pass": true
+    },
+    "tiger_blocks_geoid_15_digits": {
+      "pass": true
+    },
+    "block_bg_prefixes_match_2024_bg_set": {
+      "pass": true,
+      "detail": {
+        "block_prefixes_without_2024_bg": [],
+        "bgs_without_blocks": []
+      }
+    },
+    "block_bg_geometry_nesting": {
+      "bgs_checked": 1843,
+      "max_symmetric_difference_share": 0.003782,
+      "bgs_over_0_5_percent": 0,
+      "examples": [],
+      "note": "2020 P.L. block geometry vs TIGER 2024 block-group geometry; boundary edits between vintages show up here"
+    },
+    "block_bg_nesting_within_1_percent_for_all_bgs": {
+      "pass": true,
+      "detail": 0.003782
+    },
+    "aland_consistency_blocks_vs_bg": {
+      "max_relative_diff": 0.03955,
+      "bgs_over_1_percent": 3
+    },
+    "tiger_areawater": {
+      "features": 2380,
+      "fields": [
+        "ANSICODE",
+        "HYDROID",
+        "FULLNAME",
+        "MTFCC",
+        "ALAND",
+        "AWATER",
+        "INTPTLAT",
+        "INTPTLON"
+      ],
+      "sum_AWATER_m2": 1267534103,
+      "county_AWATER20_from_blocks_m2": 1267583864
+    },
+    "areawater_has_features": {
+      "pass": true
+    },
+    "acs_B01003_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B01003_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B01003_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B01003_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B01001_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B01001_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B01001_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B01001_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B25003_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B25003_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B25003_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B25003_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B25001_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B25001_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B25001_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B25001_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B08301_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B08301_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B08301_labels_as_contract": {
+      "pass": true,
+      "detail": {
+        "B08301_003E": true,
+        "B08301_004E": true,
+        "B08301_010E": true,
+        "B08301_017E": true,
+        "B08301_018E": true,
+        "B08301_019E": true,
+        "B08301_021E": true
+      }
+    },
+    "acs_B08301_universe_as_contract": {
+      "pass": true,
+      "detail": "Workers 16 years and over"
+    },
+    "acs_B08301_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B08302_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B08302_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B08302_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B08302_universe_as_contract": {
+      "pass": true,
+      "detail": "Workers 16 years and over who did not work from home"
+    },
+    "acs_B08302_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B25044_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B25044_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B25044_labels_as_contract": {
+      "pass": true,
+      "detail": {
+        "B25044_003E": true,
+        "B25044_010E": true
+      }
+    },
+    "acs_B25044_universe_as_contract": {
+      "pass": true,
+      "detail": "Occupied housing units"
+    },
+    "acs_B25044_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B19001_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B19001_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B19001_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B19001_universe_as_contract": {
+      "pass": true,
+      "detail": "Households"
+    },
+    "acs_B19001_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B19013_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B19013_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B19013_labels_as_contract": {
+      "pass": true,
+      "detail": {}
+    },
+    "acs_B19013_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B17017_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B17017_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B17017_labels_as_contract": {
+      "pass": true,
+      "detail": {
+        "B17017_002E": true
+      }
+    },
+    "acs_B17017_published_at_block_group": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B18101_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs_B18101_geoids_match_tiger_bgs": {
+      "pass": true,
+      "detail": {
+        "only_in_acs": [],
+        "only_in_tiger": []
+      }
+    },
+    "acs_B18101_labels_as_contract": {
+      "pass": true,
+      "detail": {
+        "B18101_004E": true
+      }
+    },
+    "acs_B18101_universe_as_contract": {
+      "pass": true,
+      "detail": "Civilian noninstitutionalized population"
+    },
+    "acs_B18101_tract_geoids_match_bg_prefixes": {
+      "pass": true,
+      "detail": {
+        "only_tract": [],
+        "only_prefix": []
+      }
+    },
+    "acs_B18101_tract_has_estimates": {
+      "pass": true,
+      "detail": 0
+    },
+    "acs_B18101_tract_contract_variables_present": {
+      "pass": true,
+      "detail": []
+    },
+    "acs": {
+      "B01003": {
+        "rows": 1843,
+        "columns": 10,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Total population",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B01001": {
+        "rows": 1843,
+        "columns": 202,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Total population",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B25003": {
+        "rows": 1843,
+        "columns": 18,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Occupied housing units",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B25001": {
+        "rows": 1843,
+        "columns": 10,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Housing units",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B08301": {
+        "rows": 1843,
+        "columns": 90,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {
+          "B08301_003E": true,
+          "B08301_004E": true,
+          "B08301_010E": true,
+          "B08301_017E": true,
+          "B08301_018E": true,
+          "B08301_019E": true,
+          "B08301_021E": true
+        },
+        "universe": "Workers 16 years and over",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B08302": {
+        "rows": 1843,
+        "columns": 66,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Workers 16 years and over who did not work from home",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B25044": {
+        "rows": 1843,
+        "columns": 66,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {
+          "B25044_003E": true,
+          "B25044_010E": true
+        },
+        "universe": "Occupied housing units",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B19001": {
+        "rows": 1843,
+        "columns": 74,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {},
+        "universe": "Households",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B19013": {
+        "rows": 1843,
+        "columns": 10,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {
+          "-666666666": 215,
+          "-222222222": 215,
+          "-333333333": 33
+        },
+        "label_asserts": {},
+        "universe": "Households",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B17017": {
+        "rows": 1843,
+        "columns": 242,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {
+          "B17017_002E": true
+        },
+        "universe": "Households",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 0,
+        "published_at_block_group": true
+      },
+      "B18101": {
+        "rows": 1843,
+        "columns": 162,
+        "county_block_groups_in_response": 1843,
+        "contract_variables_missing": [],
+        "special_values": {},
+        "label_asserts": {
+          "B18101_004E": true
+        },
+        "universe": "Civilian noninstitutionalized population",
+        "geoid_set_equals_tiger_2024_county_bgs": true,
+        "rows_with_all_estimates_null": 1843,
+        "published_at_block_group": false
+      },
+      "B18101_tract": {
+        "rows": 707,
+        "tracts_equal_bg_prefixes": true,
+        "rows_with_all_estimates_null": 0,
+        "contract_variables_missing": [],
+        "geography": "tract",
+        "reason": "B18101 is not published at block-group level; D13/R06 use tract estimates apportioned by land share"
+      }
+    },
+    "lodes_fl_wac_S000_JT00_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "a2cbb885f4143ce6e54ef4a2067118d2a7132876e78fb7d77c3edbea5c7766b4",
+        "local_uncompressed": "a2cbb885f4143ce6e54ef4a2067118d2a7132876e78fb7d77c3edbea5c7766b4"
+      }
+    },
+    "lodes_fl_wac_S000_JT01_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "130ab42c5f806ed9954d9842a7d23e4a709fe60f0b3bd2d00903b0a0d2452d41",
+        "local_uncompressed": "130ab42c5f806ed9954d9842a7d23e4a709fe60f0b3bd2d00903b0a0d2452d41"
+      }
+    },
+    "lodes_fl_rac_S000_JT00_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "2c35aef08a009064f96f9197ab1ef4341472375223c883e3eda062f8acd4d11f",
+        "local_uncompressed": "2c35aef08a009064f96f9197ab1ef4341472375223c883e3eda062f8acd4d11f"
+      }
+    },
+    "lodes_fl_rac_S000_JT01_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "2ec27ad197696e54b14334ad9627b00475466eaa08a49597c31ecf654ce1751e",
+        "local_uncompressed": "2ec27ad197696e54b14334ad9627b00475466eaa08a49597c31ecf654ce1751e"
+      }
+    },
+    "lodes_fl_od_main_JT00_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "969b143ebf19f0c87b655dbf6c4b34906de1a08349013858e9d6b6fbf8f51241",
+        "local_uncompressed": "969b143ebf19f0c87b655dbf6c4b34906de1a08349013858e9d6b6fbf8f51241"
+      }
+    },
+    "lodes_fl_od_main_JT01_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "f3bf6fc4b1dce9f88e5867800033e279fe43e2de6d7b3dd03ddb4bb1518049c8",
+        "local_uncompressed": "f3bf6fc4b1dce9f88e5867800033e279fe43e2de6d7b3dd03ddb4bb1518049c8"
+      }
+    },
+    "lodes_fl_od_aux_JT00_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "130a3a2a684eeed2fe90829da2dc68b8e19ba3e115b80477273dcd8f68c286a8",
+        "local_uncompressed": "130a3a2a684eeed2fe90829da2dc68b8e19ba3e115b80477273dcd8f68c286a8"
+      }
+    },
+    "lodes_fl_od_aux_JT01_2023.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "c66fff1beb036f5818c133e2e49af1a4a39b50f11bf0a5ac1ce7af5a42769c5e",
+        "local_uncompressed": "c66fff1beb036f5818c133e2e49af1a4a39b50f11bf0a5ac1ce7af5a42769c5e"
+      }
+    },
+    "lodes_fl_xwalk.csv.gz_matches_publisher_sha256": {
+      "pass": true,
+      "detail": {
+        "publisher_uncompressed": "fe3c9d492ab836648cfb0f72b20fb5c15263cbb1f5b17e446b7373badbfd01b6",
+        "local_uncompressed": "fe3c9d492ab836648cfb0f72b20fb5c15263cbb1f5b17e446b7373badbfd01b6"
+      }
+    },
+    "lodes_xwalk_county_blocks_equal_tiger_2020_blocks": {
+      "pass": true,
+      "detail": {
+        "rows_state": 390066,
+        "county_blocks": 31622,
+        "in_tiger_not_in_xwalk": 0,
+        "in_xwalk_not_in_tiger": 0
+      }
+    },
+    "lodes_wac_equals_od_main_plus_aux_work_in_county": {
+      "pass": true,
+      "detail": {
+        "wac_C000_county": 1244071,
+        "od_main_S000_work_in_county": 1239144,
+        "od_aux_S000_work_in_county": 4927,
+        "note": "WAC jobs in the county should equal OD main (work in county) + OD aux (work in county, residence out of state)"
+      }
+    },
+    "lodes": {
+      "version_txt": "LEHD Origin-Destination Employment Statistics (LODES)\nFL (Florida)\nData Vintage: 20251202_1657\nRelease Format Version 8.4",
+      "official_checksums_listed": 2523,
+      "files": {
+        "fl_wac_S000_JT00_2023.csv.gz": {
+          "sha256_gz": "0ff003288940977f71e8cd04a077e819fc16e916171151f6b58042207cc6c0fe",
+          "sha256_uncompressed": "a2cbb885f4143ce6e54ef4a2067118d2a7132876e78fb7d77c3edbea5c7766b4",
+          "publisher_sha256_uncompressed": "a2cbb885f4143ce6e54ef4a2067118d2a7132876e78fb7d77c3edbea5c7766b4",
+          "publisher_verified": true,
+          "rows_state": 137473,
+          "rows_county": 16366,
+          "C000_county": 1244071
+        },
+        "fl_wac_S000_JT01_2023.csv.gz": {
+          "sha256_gz": "37886535fd1bdb6b9e6ad2aafabc6749dc7914dfb6b5fe2535033439ca840877",
+          "sha256_uncompressed": "130ab42c5f806ed9954d9842a7d23e4a709fe60f0b3bd2d00903b0a0d2452d41",
+          "publisher_sha256_uncompressed": "130ab42c5f806ed9954d9842a7d23e4a709fe60f0b3bd2d00903b0a0d2452d41",
+          "publisher_verified": true,
+          "rows_state": 137473,
+          "rows_county": 16366,
+          "C000_county": 1162699
+        },
+        "fl_rac_S000_JT00_2023.csv.gz": {
+          "sha256_gz": "9305d0c5941fb81834ec84f298e7b97dcf2b0c32bce82622574ea07428aabc83",
+          "sha256_uncompressed": "2c35aef08a009064f96f9197ab1ef4341472375223c883e3eda062f8acd4d11f",
+          "publisher_sha256_uncompressed": "2c35aef08a009064f96f9197ab1ef4341472375223c883e3eda062f8acd4d11f",
+          "publisher_verified": true,
+          "rows_state": 283679,
+          "rows_county": 25773,
+          "C000_county": 1171050
+        },
+        "fl_rac_S000_JT01_2023.csv.gz": {
+          "sha256_gz": "10da4153a1554c17c0a384996b1e2186c5d79c12d9c59725753ce4b4afa6cbea",
+          "sha256_uncompressed": "2ec27ad197696e54b14334ad9627b00475466eaa08a49597c31ecf654ce1751e",
+          "publisher_sha256_uncompressed": "2ec27ad197696e54b14334ad9627b00475466eaa08a49597c31ecf654ce1751e",
+          "publisher_verified": true,
+          "rows_state": 283679,
+          "rows_county": 25773,
+          "C000_county": 1093477
+        },
+        "fl_od_main_JT00_2023.csv.gz": {
+          "sha256_gz": "cad279a7fdd24629855d903759bd83aec4d08654c108a8edb2b291d0e59498ed",
+          "sha256_uncompressed": "969b143ebf19f0c87b655dbf6c4b34906de1a08349013858e9d6b6fbf8f51241",
+          "publisher_sha256_uncompressed": "969b143ebf19f0c87b655dbf6c4b34906de1a08349013858e9d6b6fbf8f51241",
+          "publisher_verified": true,
+          "rows_state": 8416045,
+          "S000_both_in_county": 906722,
+          "S000_home_in_county_only": 256024,
+          "S000_work_in_county_only": 332422
+        },
+        "fl_od_main_JT01_2023.csv.gz": {
+          "sha256_gz": "1bac401be519b38cd225fbf37705453c6ed68e9ea7440dfeda7a71e34daf8e3d",
+          "sha256_uncompressed": "f3bf6fc4b1dce9f88e5867800033e279fe43e2de6d7b3dd03ddb4bb1518049c8",
+          "publisher_sha256_uncompressed": "f3bf6fc4b1dce9f88e5867800033e279fe43e2de6d7b3dd03ddb4bb1518049c8",
+          "publisher_verified": true,
+          "rows_state": 7890371,
+          "S000_both_in_county": 848388,
+          "S000_home_in_county_only": 237776,
+          "S000_work_in_county_only": 309886
+        },
+        "fl_od_aux_JT00_2023.csv.gz": {
+          "sha256_gz": "4c1e9bd4081d6f923cea845512f30e0ba56ba01b8d5f7db24b93928f06363c55",
+          "sha256_uncompressed": "130a3a2a684eeed2fe90829da2dc68b8e19ba3e115b80477273dcd8f68c286a8",
+          "publisher_sha256_uncompressed": "130a3a2a684eeed2fe90829da2dc68b8e19ba3e115b80477273dcd8f68c286a8",
+          "publisher_verified": true,
+          "rows_state": 126924,
+          "S000_both_in_county": 0,
+          "S000_home_in_county_only": 0,
+          "S000_work_in_county_only": 4927
+        },
+        "fl_od_aux_JT01_2023.csv.gz": {
+          "sha256_gz": "3e46cfb6f127dc786772d94d26a6f56bef754eb28bec1b184cebe7cb197c9cbf",
+          "sha256_uncompressed": "c66fff1beb036f5818c133e2e49af1a4a39b50f11bf0a5ac1ce7af5a42769c5e",
+          "publisher_sha256_uncompressed": "c66fff1beb036f5818c133e2e49af1a4a39b50f11bf0a5ac1ce7af5a42769c5e",
+          "publisher_verified": true,
+          "rows_state": 116051,
+          "S000_both_in_county": 0,
+          "S000_home_in_county_only": 0,
+          "S000_work_in_county_only": 4425
+        },
+        "fl_xwalk.csv.gz": {
+          "sha256_gz": "3f60af25b0ed07b5fd04cba15c3e47fd3eb869039e7d918475ba842367cf29f4",
+          "sha256_uncompressed": "fe3c9d492ab836648cfb0f72b20fb5c15263cbb1f5b17e446b7373badbfd01b6",
+          "publisher_sha256_uncompressed": "fe3c9d492ab836648cfb0f72b20fb5c15263cbb1f5b17e446b7373badbfd01b6",
+          "publisher_verified": true
+        }
+      },
+      "xwalk": {
+        "rows_state": 390066,
+        "county_blocks": 31622,
+        "in_tiger_not_in_xwalk": 0,
+        "in_xwalk_not_in_tiger": 0
+      },
+      "reconciliation_JT00": {
+        "wac_C000_county": 1244071,
+        "od_main_S000_work_in_county": 1239144,
+        "od_aux_S000_work_in_county": 4927,
+        "note": "WAC jobs in the county should equal OD main (work in county) + OD aux (work in county, residence out of state)"
+      },
+      "rac_vs_od_home_in_county_JT00": {
+        "rac_C000_county": 1171050,
+        "od_main_S000_home_in_county": 1162746,
+        "note": "RAC counts residents' jobs incl. those held out of state, which are NOT in the Florida main/aux files (declared gap); RAC >= OD main home-in-county"
+      }
+    }
+  },
+  "scope": "acquisition integrity and contract-variable presence only; not an analysis result",
+  "partial_note": null
+}

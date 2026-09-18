@@ -1,0 +1,11 @@
+{
+  "stage": "jobs",
+  "schema_version": "miami-package-pointer/1.0",
+  "package_id": "pkg-7fa6f53356c6",
+  "package_dir": "jobs/pkg-7fa6f53356c6",
+  "manifest": "jobs/pkg-7fa6f53356c6/manifest.json",
+  "manifest_sha256": "4d2c237e1c56db104bfc55efc30ea620ecce64a9f763ad8c4b8cd2211d823781",
+  "built_on": "2026-09-15",
+  "previous_package_dir": "jobs/pkg-d5547273ac5c",
+  "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+}

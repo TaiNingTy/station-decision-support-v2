@@ -1,0 +1,30 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "geometry_from_demography_package": {
+    "package_id": "pkg-64aa5fc6dcb8",
+    "max_cum_land_area_deviation_m2": 0.0,
+    "pass": true
+  },
+  "shares_in_unit_interval": true,
+  "band_shares_add_up_to_cum": {
+    "max_deviation": 0.0,
+    "pass": true
+  },
+  "every_target_has_land": true,
+  "network_dedup_not_above_sum": true,
+  "od_identity_wac_equals_od_at_workplace": {
+    "JT00": true,
+    "JT01": true
+  },
+  "od_rows_kept_have_candidate_end": true,
+  "od_categories_partition_links": true,
+  "j09_finite_where_defined": true,
+  "no_nan": true,
+  "stations": 21,
+  "evidence_rows": 6457,
+  "candidate_blocks": 510,
+  "od_links_kept": 156291,
+  "scope_statement": "PASS means geometry, share, file-identity and input-integrity checks passed. LODES is modeled administrative data without sampling error; nothing here is ridership, a trip count or a station allocation."
+}

@@ -1,0 +1,349 @@
+{
+  "source_archive": "google_transit.zip",
+  "source_url": "https://www.miamidade.gov/transit/googletransit/current/google_transit.zip",
+  "source_download_date": "2026-09-11",
+  "archive_sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5",
+  "archive_bytes": 8419295,
+  "service_date": "2026-09-14",
+  "analysis_type": "schedule_and_geometry_inventory_not_observed_ridership",
+  "physical_station_mapping_status": "NOT_COMPLETED",
+  "files": {
+    "agency.txt": {
+      "row_count": 1,
+      "fields": [
+        "agency_id",
+        "agency_name",
+        "agency_url",
+        "agency_timezone",
+        "agency_lang",
+        "agency_phone",
+        "agency_fare_url"
+      ],
+      "uncompressed_bytes": 174
+    },
+    "calendar.txt": {
+      "row_count": 12,
+      "fields": [
+        "service_id",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday",
+        "start_date",
+        "end_date"
+      ],
+      "uncompressed_bytes": 515
+    },
+    "calendar_dates.txt": {
+      "row_count": 4,
+      "fields": [
+        "service_id",
+        "date",
+        "exception_type"
+      ],
+      "uncompressed_bytes": 88
+    },
+    "routes.txt": {
+      "row_count": 123,
+      "fields": [
+        "route_id",
+        "agency_id",
+        "route_short_name",
+        "route_long_name",
+        "route_desc",
+        "route_type",
+        "route_url",
+        "route_color",
+        "route_text_color"
+      ],
+      "uncompressed_bytes": 8127
+    },
+    "stops.txt": {
+      "row_count": 6973,
+      "fields": [
+        "stop_id",
+        "stop_code",
+        "stop_name",
+        "stop_desc",
+        "stop_lat",
+        "stop_lon",
+        "zone_id",
+        "stop_url",
+        "location_type",
+        "parent_station",
+        "stop_timezone",
+        "wheelchair_boarding"
+      ],
+      "uncompressed_bytes": 464383
+    },
+    "trips.txt": {
+      "row_count": 24285,
+      "fields": [
+        "route_id",
+        "service_id",
+        "trip_id",
+        "trip_headsign",
+        "trip_short_name",
+        "direction_id",
+        "block_id",
+        "shape_id",
+        "wheelchair_accessible",
+        "bikes_allowed"
+      ],
+      "uncompressed_bytes": 1555599
+    },
+    "stop_times.txt": {
+      "row_count": 969737,
+      "fields": [
+        "trip_id",
+        "arrival_time",
+        "departure_time",
+        "stop_id",
+        "stop_sequence",
+        "stop_headsign",
+        "pickup_type",
+        "drop_off_type",
+        "shape_dist_traveled",
+        "timepoint"
+      ],
+      "uncompressed_bytes": 47607094
+    },
+    "shapes.txt": {
+      "row_count": 100590,
+      "fields": [
+        "shape_id",
+        "shape_pt_lat",
+        "shape_pt_lon",
+        "shape_pt_sequence",
+        "shape_dist_traveled"
+      ],
+      "uncompressed_bytes": 4048455
+    }
+  },
+  "agencies": [
+    {
+      "agency_id": "DTPW305",
+      "agency_name": "Miami-Dade Transit",
+      "agency_url": "http://www.miamidade.gov/transit",
+      "agency_timezone": "America/New_York",
+      "agency_lang": "en",
+      "agency_phone": "",
+      "agency_fare_url": ""
+    }
+  ],
+  "calendar_ranges": [
+    {
+      "service_id": "1",
+      "monday": "1",
+      "tuesday": "1",
+      "wednesday": "1",
+      "thursday": "1",
+      "friday": "1",
+      "saturday": "0",
+      "sunday": "0",
+      "start_date": "20260720",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "2",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "1",
+      "sunday": "0",
+      "start_date": "20260720",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "3",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "0",
+      "sunday": "1",
+      "start_date": "20260720",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "6",
+      "monday": "1",
+      "tuesday": "1",
+      "wednesday": "1",
+      "thursday": "1",
+      "friday": "1",
+      "saturday": "0",
+      "sunday": "0",
+      "start_date": "20260803",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "7",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "1",
+      "sunday": "0",
+      "start_date": "20260803",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "8",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "0",
+      "sunday": "1",
+      "start_date": "20260803",
+      "end_date": "20261122"
+    },
+    {
+      "service_id": "11",
+      "monday": "1",
+      "tuesday": "1",
+      "wednesday": "1",
+      "thursday": "1",
+      "friday": "1",
+      "saturday": "0",
+      "sunday": "0",
+      "start_date": "20231113",
+      "end_date": "20261231"
+    },
+    {
+      "service_id": "12",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "1",
+      "sunday": "0",
+      "start_date": "20231113",
+      "end_date": "20261231"
+    },
+    {
+      "service_id": "13",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "0",
+      "sunday": "1",
+      "start_date": "20231113",
+      "end_date": "20261231"
+    },
+    {
+      "service_id": "18",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "0",
+      "sunday": "1",
+      "start_date": "20210101",
+      "end_date": "20271231"
+    },
+    {
+      "service_id": "19",
+      "monday": "0",
+      "tuesday": "0",
+      "wednesday": "0",
+      "thursday": "0",
+      "friday": "0",
+      "saturday": "1",
+      "sunday": "0",
+      "start_date": "20210101",
+      "end_date": "20271231"
+    },
+    {
+      "service_id": "21",
+      "monday": "1",
+      "tuesday": "1",
+      "wednesday": "1",
+      "thursday": "1",
+      "friday": "1",
+      "saturday": "0",
+      "sunday": "0",
+      "start_date": "20210101",
+      "end_date": "20271231"
+    }
+  ],
+  "selected_day_active_service_ids": [
+    "1",
+    "11",
+    "21",
+    "6"
+  ],
+  "metromover": {
+    "selection_method": "route_long_name contains METROMOVER, joined to trips and stop_times",
+    "routes": [
+      {
+        "route_id": "14457",
+        "agency_id": "DTPW305",
+        "route_short_name": "MMI",
+        "route_long_name": "METROMOVER INNER LOOP",
+        "route_desc": "",
+        "route_type": "0",
+        "route_url": "",
+        "route_color": "FF8000",
+        "route_text_color": "FFFFFF"
+      },
+      {
+        "route_id": "14456",
+        "agency_id": "DTPW305",
+        "route_short_name": "MMO",
+        "route_long_name": "METROMOVER OMNI/BRICKELL OUTER LOOP",
+        "route_desc": "",
+        "route_type": "0",
+        "route_url": "",
+        "route_color": "008000",
+        "route_text_color": "FFFFFF"
+      }
+    ],
+    "trip_records_all_calendar_patterns": 4261,
+    "trip_records_selected_service_date": 1588,
+    "stop_records_all_calendar_patterns": 43,
+    "stop_records_selected_service_date": 43,
+    "distinct_stop_name_strings": 23,
+    "shape_records_all_calendar_patterns": 6,
+    "shape_records_selected_service_date": 6,
+    "stop_events_all_calendar_patterns": 34419,
+    "stop_events_selected_service_date": 12307,
+    "location_type_counts": {
+      "blank": 43
+    },
+    "records_with_parent_station": 0,
+    "nonblank_arrival_and_departure_time_fields": 68838,
+    "time_fields_hour_24_or_above": 0,
+    "invalid_time_fields": 0,
+    "stop_records_with_invalid_coordinates": []
+  },
+  "integrity": {
+    "archive_crc": "PASS",
+    "duplicate_stop_id_rows": 0,
+    "duplicate_trip_id_rows": 0,
+    "unknown_stop_ids_referenced_by_stop_times": [],
+    "unknown_trip_ids_referenced_by_stop_times": [],
+    "missing_metromover_shape_ids": []
+  },
+  "limitations": [
+    "GTFS stop IDs and service shapes are not a physical asset inventory.",
+    "Published 21-station baseline has not yet been reconciled with these records.",
+    "Stop-event and trip counts are scheduled supply, not passenger counts or observed operations.",
+    "An active service calendar does not verify actual service on that date.",
+    "No platform footprint, surveyed guideway, structural feasibility, ridership, or berth capacity is supplied by this inventory.",
+    "Redistribution terms must be recorded before publishing bundled source data."
+  ]
+}

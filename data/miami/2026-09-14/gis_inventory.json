@@ -1,0 +1,150 @@
+{
+  "schema_version": "miami-gis-inventory/1.1",
+  "snapshot_date": "2026-09-14",
+  "role": "immutable output of the station_master stage; the current downstream status lives in gis_data_readiness.json (derived)",
+  "zoning": {
+    "feature_count": 235,
+    "full_query_result_verified": true,
+    "raw_geojson": "../../../raw/miami/2026-09-14/zoning_study_window.geojson",
+    "extraction": "Full zone polygons intersecting study rectangle; not clipped to rectangle or catchments",
+    "crs": "EPSG:4326",
+    "source_crs": "EPSG:3857",
+    "source_publisher": "CityMiamiFL",
+    "license": "CC-BY-4.0",
+    "original_zoning_codes": {
+      "CI": 24,
+      "CI-HD": 1,
+      "CS": 26,
+      "D1": 12,
+      "D2": 4,
+      "D3": 3,
+      "T1": 3,
+      "T3-O": 4,
+      "T3-R": 7,
+      "T4-L": 4,
+      "T4-O": 1,
+      "T4-R": 10,
+      "T5-L": 14,
+      "T5-O": 18,
+      "T5-R": 6,
+      "T6-12-O": 10,
+      "T6-24A-O": 3,
+      "T6-24A-R": 2,
+      "T6-24B-O": 8,
+      "T6-36A-L": 1,
+      "T6-36A-O": 5,
+      "T6-36B-L": 1,
+      "T6-36B-O": 9,
+      "T6-48A-O": 1,
+      "T6-48B-O": 3,
+      "T6-60A-O": 2,
+      "T6-8-L": 7,
+      "T6-8-O": 35,
+      "T6-8-R": 2,
+      "T6-80-O": 5,
+      "T6-8A-O": 3,
+      "T6-8B-O": 1
+    },
+    "original_transect_descriptions": {
+      "Civic Institution - Health District Zone": 1,
+      "Civic Institution Zone": 24,
+      "Civic Space Zone": 26,
+      "General Urban Zone": 15,
+      "Industrial District Zone": 4,
+      "Natural Zone": 3,
+      "Sub-Urban Zone": 11,
+      "Urban Center Zone": 38,
+      "Urban Core Zone": 98,
+      "Waterfront Industrial District Zone": 3,
+      "Work Place District Zone": 12
+    },
+    "use_code_crosswalk_status": "NOT_REVIEWED",
+    "area_policy": "Preserve source area fields; do not equate them with buildable area or compute areas from WGS84 degrees",
+    "automatic_industrial_exclusion": false
+  },
+  "demography": {
+    "status": "NOT_DOWNLOADED",
+    "preferred_source_family": "US Census ACS 5-year estimates with geography and margins of error",
+    "values": null
+  },
+  "jobs_and_commute": {
+    "status": "NOT_DOWNLOADED",
+    "preferred_source_family": "Census LEHD LODES and ACS with compatible geography, years and denominators",
+    "values": null
+  },
+  "pois": {
+    "status": "NOT_DOWNLOADED",
+    "required_analysis_categories": [
+      "school",
+      "clinic",
+      "grocery",
+      "park"
+    ],
+    "is_mandatory_local_standard": false
+  },
+  "walk_network": {
+    "status": "NOT_DOWNLOADED",
+    "target_time_minutes": 15,
+    "distance_proxy_m": 1200,
+    "note": "distance_proxy_m=1200 is an unexecuted walk-analysis concept (15-min target); it is NOT the imperial band parameter used by the spatial-join stage (660/1320/2640 ft)",
+    "proxy_is_validated_walk_catchment": false,
+    "needs": [
+      "entrances",
+      "legal crossings",
+      "barriers",
+      "vertical access",
+      "walk speed assumptions"
+    ]
+  },
+  "roads_and_guideways": {
+    "status": "NOT_DOWNLOADED",
+    "gtfs_shapes_replace_asset_survey": false,
+    "separate_fields_needed": [
+      "road_function",
+      "vertical_level",
+      "mode",
+      "truck_restriction",
+      "observed_truck_use",
+      "conversion_asset_role"
+    ]
+  },
+  "demand": {
+    "observed_station_boardings_status": "NOT_DOWNLOADED",
+    "observed_od_status": "NOT_DOWNLOADED",
+    "forecast_status": "NOT_RUN",
+    "gtfs_counts_are_ridership": false
+  },
+  "served_hubs": {
+    "status": "MAP_CONNECTION_CANDIDATES_ONLY",
+    "connections": [
+      {
+        "station_id": "MIA-MM-08",
+        "modes": [
+          "Brightline"
+        ],
+        "walk_link_and_demand_verified": false
+      },
+      {
+        "station_id": "MIA-MM-09",
+        "modes": [
+          "Metrorail",
+          "Tri-Rail"
+        ],
+        "walk_link_and_demand_verified": false
+      },
+      {
+        "station_id": "MIA-MM-20",
+        "modes": [
+          "Metrorail"
+        ],
+        "walk_link_and_demand_verified": false
+      }
+    ],
+    "airport_is_inside_metromover_network": false
+  },
+  "engineering": {
+    "platform_footprints": "NOT_ACQUIRED",
+    "structural_reuse": "NOT_ASSESSED",
+    "vehicle_parameters": "NOT_APPROVED"
+  }
+}

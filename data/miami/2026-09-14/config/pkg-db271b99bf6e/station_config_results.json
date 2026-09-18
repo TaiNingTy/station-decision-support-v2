@@ -1,0 +1,3207 @@
+{
+  "schema_version": "miami-station-config-results/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "e167506d831816216389db2d25d0a4053ebd436fa1cb47c9e98518e20403fb21",
+  "scenarios_package": "pkg-9477e269cda4",
+  "input_package": "pkg-432b88d981f8",
+  "provenance_class": "derived",
+  "data_nature": "model_output",
+  "is_engineering_design": false,
+  "is_capacity_proof": false,
+  "purpose": "demonstration of the configuration chain under PRT semantics with explicit parameter provenance; not a design and not a proof that a full-line replacement is adequate (regional inflow and hub transfers are excluded from the demand)",
+  "site_fit": "assumed (C06): per-station constructible space has not been acquired",
+  "assumption_parameter_ids": [
+    "C01_average_party_size_pax_per_vehicle_trip",
+    "C02_berth_cycle_s",
+    "C03_berth_utilization_max",
+    "C04_within_hour_peaking_factor",
+    "C05_min_guideway_headway_s",
+    "C06_site_footprint_available",
+    "C07_no_separate_staging_berths"
+  ],
+  "scenarios": {
+    "low": {
+      "scenario_id": "low",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_engineering_design": false,
+      "is_capacity_proof": false,
+      "purpose": "demonstration of the configuration chain under PRT semantics with explicit parameter provenance; not a design and not a proof that a full-line replacement is adequate (regional inflow and hub transfers are excluded from the demand)",
+      "site_fit": "assumed (C06): per-station constructible space has not been acquired",
+      "stations": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "person_trips_am_peak_hour": {
+            "boardings": 9.28,
+            "alightings": 3.87,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 7.14,
+            "arrivals": 2.98,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 4.16,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 7.14,
+            "design_cycles_per_hour_with_within_hour_peaking": 8.92,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 7.7,
+            "alightings": 5.36,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 5.92,
+            "arrivals": 4.12,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 1.8,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 5.92,
+            "design_cycles_per_hour_with_within_hour_peaking": 7.4,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 3.63,
+            "alightings": 3.08,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.79,
+            "arrivals": 2.37,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.42,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 2.79,
+            "design_cycles_per_hour_with_within_hour_peaking": 3.49,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 3.98,
+            "alightings": 3.11,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 3.06,
+            "arrivals": 2.39,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.67,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 3.06,
+            "design_cycles_per_hour_with_within_hour_peaking": 3.83,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "person_trips_am_peak_hour": {
+            "boardings": 3.41,
+            "alightings": 2.45,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.62,
+            "arrivals": 1.88,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.74,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 2.62,
+            "design_cycles_per_hour_with_within_hour_peaking": 3.28,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "person_trips_am_peak_hour": {
+            "boardings": 2.75,
+            "alightings": 3.51,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.12,
+            "arrivals": 2.7,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 0.58,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 2.7,
+            "design_cycles_per_hour_with_within_hour_peaking": 3.37,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "person_trips_am_peak_hour": {
+            "boardings": 2.96,
+            "alightings": 4.7,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.28,
+            "arrivals": 3.62,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 1.34,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 3.62,
+            "design_cycles_per_hour_with_within_hour_peaking": 4.52,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "person_trips_am_peak_hour": {
+            "boardings": 4.54,
+            "alightings": 3.32,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 3.49,
+            "arrivals": 2.55,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.94,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 3.49,
+            "design_cycles_per_hour_with_within_hour_peaking": 4.37,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 4.52,
+            "alightings": 3.89,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 3.48,
+            "arrivals": 2.99,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.48,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 3.48,
+            "design_cycles_per_hour_with_within_hour_peaking": 4.35,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "person_trips_am_peak_hour": {
+            "boardings": 3.11,
+            "alightings": 5.91,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.39,
+            "arrivals": 4.55,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.15,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 4.55,
+            "design_cycles_per_hour_with_within_hour_peaking": 5.68,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 3.46,
+            "alightings": 6.17,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 2.66,
+            "arrivals": 4.75,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.08,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 4.75,
+            "design_cycles_per_hour_with_within_hour_peaking": 5.93,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 5.57,
+            "alightings": 6.91,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 4.28,
+            "arrivals": 5.32,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 1.03,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 5.32,
+            "design_cycles_per_hour_with_within_hour_peaking": 6.64,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 6.44,
+            "alightings": 9.14,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 4.95,
+            "arrivals": 7.03,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.08,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 7.03,
+            "design_cycles_per_hour_with_within_hour_peaking": 8.79,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "person_trips_am_peak_hour": {
+            "boardings": 4.67,
+            "alightings": 7.15,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 3.59,
+            "arrivals": 5.5,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 1.91,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 5.5,
+            "design_cycles_per_hour_with_within_hour_peaking": 6.88,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 5.59,
+            "alightings": 8.27,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 4.3,
+            "arrivals": 6.36,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.06,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 6.36,
+            "design_cycles_per_hour_with_within_hour_peaking": 7.95,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "person_trips_am_peak_hour": {
+            "boardings": 6.96,
+            "alightings": 9.49,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 5.35,
+            "arrivals": 7.3,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 1.95,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 7.3,
+            "design_cycles_per_hour_with_within_hour_peaking": 9.12,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 10.42,
+            "alightings": 11.15,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 8.02,
+            "arrivals": 8.58,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 0.56,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 8.58,
+            "design_cycles_per_hour_with_within_hour_peaking": 10.72,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "person_trips_am_peak_hour": {
+            "boardings": 13.26,
+            "alightings": 12.74,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 10.2,
+            "arrivals": 9.8,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.4,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 10.2,
+            "design_cycles_per_hour_with_within_hour_peaking": 12.75,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "person_trips_am_peak_hour": {
+            "boardings": 13.68,
+            "alightings": 13.36,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 10.52,
+            "arrivals": 10.28,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.25,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 10.52,
+            "design_cycles_per_hour_with_within_hour_peaking": 13.15,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "person_trips_am_peak_hour": {
+            "boardings": 14.85,
+            "alightings": 10.99,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 11.42,
+            "arrivals": 8.45,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 2.97,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 11.42,
+            "design_cycles_per_hour_with_within_hour_peaking": 14.28,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "person_trips_am_peak_hour": {
+            "boardings": 14.17,
+            "alightings": 10.38,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 10.9,
+            "arrivals": 7.98,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 2.92,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 10.9,
+            "design_cycles_per_hour_with_within_hour_peaking": 13.62,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        }
+      ],
+      "network": {
+        "vehicle_trips_am_peak_hour": 111.48,
+        "vehicle_arrivals_am_peak_hour": 111.5,
+        "guideway_lane_throughput_vehicles_per_hour_at_min_headway": 1200.0,
+        "network_vehicle_trips_over_lane_throughput": 0.0929,
+        "headway_note": "network-level ratio only; which guideway link carries which trips needs a line model that does not exist here",
+        "berths_required_total": 21,
+        "modules": {
+          "M1_double_sided_6_berth": 21,
+          "M2_single_sided_7_berth": 0
+        },
+        "stations_exceeding_single_module": [],
+        "footprint_total_ft2": 82068
+      },
+      "conservation_check": {
+        "vehicle_departures": 111.48,
+        "vehicle_arrivals": 111.5,
+        "tolerance_vehicles": 0.16,
+        "tolerance_note": "the scenarios package publishes per-station person trips rounded to 0.01; 21 stations × 0.01 ÷ party size bounds the rounding gap",
+        "pass": true
+      }
+    },
+    "medium": {
+      "scenario_id": "medium",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_engineering_design": false,
+      "is_capacity_proof": false,
+      "purpose": "demonstration of the configuration chain under PRT semantics with explicit parameter provenance; not a design and not a proof that a full-line replacement is adequate (regional inflow and hub transfers are excluded from the demand)",
+      "site_fit": "assumed (C06): per-station constructible space has not been acquired",
+      "stations": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "person_trips_am_peak_hour": {
+            "boardings": 37.13,
+            "alightings": 15.49,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 28.56,
+            "arrivals": 11.92,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 16.65,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 28.56,
+            "design_cycles_per_hour_with_within_hour_peaking": 35.7,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 30.79,
+            "alightings": 21.45,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 23.68,
+            "arrivals": 16.5,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 7.18,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 23.68,
+            "design_cycles_per_hour_with_within_hour_peaking": 29.61,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 14.52,
+            "alightings": 12.33,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 11.17,
+            "arrivals": 9.48,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 1.68,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 11.17,
+            "design_cycles_per_hour_with_within_hour_peaking": 13.96,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 15.92,
+            "alightings": 12.43,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 12.25,
+            "arrivals": 9.56,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 2.68,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 12.25,
+            "design_cycles_per_hour_with_within_hour_peaking": 15.31,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "person_trips_am_peak_hour": {
+            "boardings": 13.64,
+            "alightings": 9.8,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 10.49,
+            "arrivals": 7.54,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 2.95,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 10.49,
+            "design_cycles_per_hour_with_within_hour_peaking": 13.12,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "person_trips_am_peak_hour": {
+            "boardings": 11.0,
+            "alightings": 14.04,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 8.46,
+            "arrivals": 10.8,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.34,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 10.8,
+            "design_cycles_per_hour_with_within_hour_peaking": 13.5,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "person_trips_am_peak_hour": {
+            "boardings": 11.86,
+            "alightings": 18.79,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 9.12,
+            "arrivals": 14.45,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 5.33,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 14.45,
+            "design_cycles_per_hour_with_within_hour_peaking": 18.07,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "person_trips_am_peak_hour": {
+            "boardings": 18.14,
+            "alightings": 13.29,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 13.95,
+            "arrivals": 10.22,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 3.73,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 13.95,
+            "design_cycles_per_hour_with_within_hour_peaking": 17.44,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 18.06,
+            "alightings": 15.56,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 13.89,
+            "arrivals": 11.97,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 1.92,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 13.89,
+            "design_cycles_per_hour_with_within_hour_peaking": 17.37,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "person_trips_am_peak_hour": {
+            "boardings": 12.44,
+            "alightings": 23.66,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 9.57,
+            "arrivals": 18.2,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 8.63,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 18.2,
+            "design_cycles_per_hour_with_within_hour_peaking": 22.75,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 13.82,
+            "alightings": 24.68,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 10.63,
+            "arrivals": 18.98,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 8.35,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 18.98,
+            "design_cycles_per_hour_with_within_hour_peaking": 23.73,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 22.28,
+            "alightings": 27.64,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 17.14,
+            "arrivals": 21.26,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 4.12,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 21.26,
+            "design_cycles_per_hour_with_within_hour_peaking": 26.58,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 25.78,
+            "alightings": 36.55,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 19.83,
+            "arrivals": 28.12,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 8.28,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 28.12,
+            "design_cycles_per_hour_with_within_hour_peaking": 35.14,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "person_trips_am_peak_hour": {
+            "boardings": 18.67,
+            "alightings": 28.58,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 14.36,
+            "arrivals": 21.98,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 7.62,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 21.98,
+            "design_cycles_per_hour_with_within_hour_peaking": 27.48,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 22.37,
+            "alightings": 33.07,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 17.21,
+            "arrivals": 25.44,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 8.23,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 25.44,
+            "design_cycles_per_hour_with_within_hour_peaking": 31.8,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "person_trips_am_peak_hour": {
+            "boardings": 27.85,
+            "alightings": 37.95,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 21.42,
+            "arrivals": 29.19,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 7.77,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 29.19,
+            "design_cycles_per_hour_with_within_hour_peaking": 36.49,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 41.66,
+            "alightings": 44.62,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 32.05,
+            "arrivals": 34.32,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 2.28,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 34.32,
+            "design_cycles_per_hour_with_within_hour_peaking": 42.9,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "person_trips_am_peak_hour": {
+            "boardings": 53.04,
+            "alightings": 50.94,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 40.8,
+            "arrivals": 39.18,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 1.62,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 40.8,
+            "design_cycles_per_hour_with_within_hour_peaking": 51.0,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "person_trips_am_peak_hour": {
+            "boardings": 54.72,
+            "alightings": 53.44,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 42.09,
+            "arrivals": 41.11,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.98,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 42.09,
+            "design_cycles_per_hour_with_within_hour_peaking": 52.62,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "person_trips_am_peak_hour": {
+            "boardings": 59.4,
+            "alightings": 43.96,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 45.69,
+            "arrivals": 33.82,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 11.88,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 45.69,
+            "design_cycles_per_hour_with_within_hour_peaking": 57.12,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "person_trips_am_peak_hour": {
+            "boardings": 56.67,
+            "alightings": 41.51,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 43.59,
+            "arrivals": 31.93,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 11.66,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 43.59,
+            "design_cycles_per_hour_with_within_hour_peaking": 54.49,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        }
+      ],
+      "network": {
+        "vehicle_trips_am_peak_hour": 445.95,
+        "vehicle_arrivals_am_peak_hour": 445.97,
+        "guideway_lane_throughput_vehicles_per_hour_at_min_headway": 1200.0,
+        "network_vehicle_trips_over_lane_throughput": 0.371625,
+        "headway_note": "network-level ratio only; which guideway link carries which trips needs a line model that does not exist here",
+        "berths_required_total": 21,
+        "modules": {
+          "M1_double_sided_6_berth": 21,
+          "M2_single_sided_7_berth": 0
+        },
+        "stations_exceeding_single_module": [],
+        "footprint_total_ft2": 82068
+      },
+      "conservation_check": {
+        "vehicle_departures": 445.95,
+        "vehicle_arrivals": 445.97,
+        "tolerance_vehicles": 0.16,
+        "tolerance_note": "the scenarios package publishes per-station person trips rounded to 0.01; 21 stations × 0.01 ÷ party size bounds the rounding gap",
+        "pass": true
+      }
+    },
+    "high": {
+      "scenario_id": "high",
+      "provenance_class": "derived",
+      "data_nature": "model_output",
+      "is_engineering_design": false,
+      "is_capacity_proof": false,
+      "purpose": "demonstration of the configuration chain under PRT semantics with explicit parameter provenance; not a design and not a proof that a full-line replacement is adequate (regional inflow and hub transfers are excluded from the demand)",
+      "site_fit": "assumed (C06): per-station constructible space has not been acquired",
+      "stations": [
+        {
+          "station_id": "MIA-MM-01",
+          "name": "School Board",
+          "person_trips_am_peak_hour": {
+            "boardings": 92.82,
+            "alightings": 38.71,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 71.4,
+            "arrivals": 29.78,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 41.62,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 71.4,
+            "design_cycles_per_hour_with_within_hour_peaking": 89.25,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-02",
+          "name": "Adrienne Arsht Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 76.99,
+            "alightings": 53.64,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 59.22,
+            "arrivals": 41.26,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 17.96,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 59.22,
+            "design_cycles_per_hour_with_within_hour_peaking": 74.03,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-03",
+          "name": "Museum Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 36.29,
+            "alightings": 30.82,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 27.92,
+            "arrivals": 23.71,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 4.21,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 27.92,
+            "design_cycles_per_hour_with_within_hour_peaking": 34.89,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-04",
+          "name": "Eleventh Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 39.79,
+            "alightings": 31.09,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 30.61,
+            "arrivals": 23.92,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 6.69,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 30.61,
+            "design_cycles_per_hour_with_within_hour_peaking": 38.26,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-05",
+          "name": "Miami Worldcenter",
+          "person_trips_am_peak_hour": {
+            "boardings": 34.09,
+            "alightings": 24.49,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 26.22,
+            "arrivals": 18.84,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 7.38,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 26.22,
+            "design_cycles_per_hour_with_within_hour_peaking": 32.78,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-06",
+          "name": "Freedom Tower",
+          "person_trips_am_peak_hour": {
+            "boardings": 27.5,
+            "alightings": 35.1,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 21.15,
+            "arrivals": 27.0,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 5.85,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 27.0,
+            "design_cycles_per_hour_with_within_hour_peaking": 33.75,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-07",
+          "name": "College North",
+          "person_trips_am_peak_hour": {
+            "boardings": 29.64,
+            "alightings": 46.97,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 22.8,
+            "arrivals": 36.13,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 13.33,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 36.13,
+            "design_cycles_per_hour_with_within_hour_peaking": 45.16,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-08",
+          "name": "Wilkie D. Ferguson, Jr.",
+          "person_trips_am_peak_hour": {
+            "boardings": 45.35,
+            "alightings": 33.21,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 34.88,
+            "arrivals": 25.55,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 9.34,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 34.88,
+            "design_cycles_per_hour_with_within_hour_peaking": 43.61,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-09",
+          "name": "Government Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 45.15,
+            "alightings": 38.9,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 34.73,
+            "arrivals": 29.92,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 4.81,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 34.73,
+            "design_cycles_per_hour_with_within_hour_peaking": 43.41,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 96.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-10",
+          "name": "College Bayside",
+          "person_trips_am_peak_hour": {
+            "boardings": 31.1,
+            "alightings": 59.14,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 23.92,
+            "arrivals": 45.49,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 21.57,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 45.49,
+            "design_cycles_per_hour_with_within_hour_peaking": 56.87,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-11",
+          "name": "First Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 34.56,
+            "alightings": 61.71,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 26.58,
+            "arrivals": 47.47,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 20.88,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 47.47,
+            "design_cycles_per_hour_with_within_hour_peaking": 59.34,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 1,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-12",
+          "name": "Bayfront Park",
+          "person_trips_am_peak_hour": {
+            "boardings": 55.7,
+            "alightings": 69.11,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 42.85,
+            "arrivals": 53.16,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 10.32,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 53.16,
+            "design_cycles_per_hour_with_within_hour_peaking": 66.45,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 72.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-13",
+          "name": "Knight Center",
+          "person_trips_am_peak_hour": {
+            "boardings": 64.44,
+            "alightings": 91.37,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 49.57,
+            "arrivals": 70.28,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 20.72,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 70.28,
+            "design_cycles_per_hour_with_within_hour_peaking": 87.86,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 48.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-14",
+          "name": "Miami Avenue",
+          "person_trips_am_peak_hour": {
+            "boardings": 46.68,
+            "alightings": 71.45,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 35.91,
+            "arrivals": 54.96,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 19.05,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 54.96,
+            "design_cycles_per_hour_with_within_hour_peaking": 68.7,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-15",
+          "name": "Third Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 55.93,
+            "alightings": 82.67,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 43.02,
+            "arrivals": 63.59,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 20.57,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 63.59,
+            "design_cycles_per_hour_with_within_hour_peaking": 79.49,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-16",
+          "name": "Riverwalk",
+          "person_trips_am_peak_hour": {
+            "boardings": 69.63,
+            "alightings": 94.87,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 53.56,
+            "arrivals": 72.98,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 19.42,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 72.98,
+            "design_cycles_per_hour_with_within_hour_peaking": 91.22,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-17",
+          "name": "Fifth Street",
+          "person_trips_am_peak_hour": {
+            "boardings": 104.15,
+            "alightings": 111.54,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 80.12,
+            "arrivals": 85.8,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 0.0,
+            "empty_vehicles_leaving": 5.68,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 85.8,
+            "design_cycles_per_hour_with_within_hour_peaking": 107.25,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-18",
+          "name": "Brickell City Centre",
+          "person_trips_am_peak_hour": {
+            "boardings": 132.61,
+            "alightings": 127.35,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 102.01,
+            "arrivals": 97.96,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 4.05,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 102.01,
+            "design_cycles_per_hour_with_within_hour_peaking": 127.51,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 2,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-19",
+          "name": "Tenth Street Promenade",
+          "person_trips_am_peak_hour": {
+            "boardings": 136.79,
+            "alightings": 133.59,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 105.22,
+            "arrivals": 102.76,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 2.46,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 105.22,
+            "design_cycles_per_hour_with_within_hour_peaking": 131.53,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 3,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-20",
+          "name": "Brickell",
+          "person_trips_am_peak_hour": {
+            "boardings": 148.51,
+            "alightings": 109.9,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 114.24,
+            "arrivals": 84.54,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 29.7,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 114.24,
+            "design_cycles_per_hour_with_within_hour_peaking": 142.8,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 3,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        },
+        {
+          "station_id": "MIA-MM-21",
+          "name": "Financial District",
+          "person_trips_am_peak_hour": {
+            "boardings": 141.67,
+            "alightings": 103.77,
+            "source": "scenarios package"
+          },
+          "vehicle_trips_am_peak_hour": {
+            "departures": 108.98,
+            "arrivals": 79.82,
+            "parameter": "C01_average_party_size_pax_per_vehicle_trip"
+          },
+          "empty_vehicle_balance_per_hour": {
+            "empty_vehicles_required_in": 29.15,
+            "empty_vehicles_leaving": 0.0,
+            "note": "departures above arrivals must be fed by empty vehicles from the guideway (C07: no staging berths drawn)"
+          },
+          "berths": {
+            "berth_cycles_per_hour": 108.98,
+            "design_cycles_per_hour_with_within_hour_peaking": 136.22,
+            "usable_cycles_per_berth_hour": 64.0,
+            "berths_required": 3,
+            "parameters": [
+              "C02_berth_cycle_s",
+              "C03_berth_utilization_max",
+              "C04_within_hour_peaking_factor"
+            ],
+            "pm_peak_note": "PM mirrors AM (scenario assumption A05): identical berth requirement"
+          },
+          "module": {
+            "module_id": "M1_double_sided_6_berth",
+            "layout": "through guideway in the middle; angled berths on both sides",
+            "modules_needed": 1,
+            "berths_provided": 6,
+            "footprint_ft2": 3908,
+            "footprint_m2": 363.06,
+            "width_ft_in": "50'3\"",
+            "length_ft_in": "77'-10\"",
+            "fits_single_module": true
+          },
+          "site_fit": {
+            "status": "assumed_sufficient",
+            "assumption_id": "C06_site_footprint_available",
+            "constructible_space_acquired": false
+          },
+          "reference_scheduled_departures_am_peak_per_hour": 24.0,
+          "reference_note": "current Metromover scheduled departures per hour (GTFS); a schedule reference, not a capacity comparison"
+        }
+      ],
+      "network": {
+        "vehicle_trips_am_peak_hour": 1114.91,
+        "vehicle_arrivals_am_peak_hour": 1114.92,
+        "guideway_lane_throughput_vehicles_per_hour_at_min_headway": 1200.0,
+        "network_vehicle_trips_over_lane_throughput": 0.929092,
+        "headway_note": "network-level ratio only; which guideway link carries which trips needs a line model that does not exist here",
+        "berths_required_total": 36,
+        "modules": {
+          "M1_double_sided_6_berth": 21,
+          "M2_single_sided_7_berth": 0
+        },
+        "stations_exceeding_single_module": [],
+        "footprint_total_ft2": 82068
+      },
+      "conservation_check": {
+        "vehicle_departures": 1114.91,
+        "vehicle_arrivals": 1114.92,
+        "tolerance_vehicles": 0.16,
+        "tolerance_note": "the scenarios package publishes per-station person trips rounded to 0.01; 21 stations × 0.01 ÷ party size bounds the rounding gap",
+        "pass": true
+      }
+    }
+  }
+}

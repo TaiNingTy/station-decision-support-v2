@@ -1,0 +1,309 @@
+{
+  "status": "PASS",
+  "failed_checks": [],
+  "checked_on": "2026-09-17",
+  "per_month": {
+    "2025-10": {
+      "page": 24,
+      "month_label": "Oct-25",
+      "stations": 21,
+      "total_avg_weekday": 25156,
+      "sum_stations_avg_weekday": 25156
+    },
+    "2025-11": {
+      "page": 24,
+      "month_label": "Nov-25",
+      "stations": 21,
+      "total_avg_weekday": 25476,
+      "sum_stations_avg_weekday": 25475
+    },
+    "2025-12": {
+      "page": 24,
+      "month_label": "Dec-25",
+      "stations": 21,
+      "total_avg_weekday": 26086,
+      "sum_stations_avg_weekday": 26086
+    },
+    "2026-01": {
+      "page": 24,
+      "month_label": "Jan-26",
+      "stations": 21,
+      "total_avg_weekday": 25214,
+      "sum_stations_avg_weekday": 25213
+    },
+    "2026-02": {
+      "page": 24,
+      "month_label": "Feb-26",
+      "stations": 21,
+      "total_avg_weekday": 25514,
+      "sum_stations_avg_weekday": 25515
+    },
+    "2026-03": {
+      "page": 24,
+      "month_label": "Mar-26",
+      "stations": 21,
+      "total_avg_weekday": 24503,
+      "sum_stations_avg_weekday": 24504
+    },
+    "2026-04": {
+      "page": 24,
+      "month_label": "Apr-26",
+      "stations": 21,
+      "total_avg_weekday": 24909,
+      "sum_stations_avg_weekday": 24910
+    },
+    "2026-05": {
+      "page": 24,
+      "month_label": "May-26",
+      "stations": 21,
+      "total_avg_weekday": 22683,
+      "sum_stations_avg_weekday": 22683
+    },
+    "2026-06": {
+      "page": 24,
+      "month_label": "Jun-26",
+      "stations": 21,
+      "total_avg_weekday": 29881,
+      "sum_stations_avg_weekday": 29883
+    },
+    "2026-07": {
+      "page": 24,
+      "month_label": "Jul-26",
+      "stations": 21,
+      "total_avg_weekday": 24596,
+      "sum_stations_avg_weekday": 24594
+    }
+  },
+  "station_names": [
+    "Bayfront Park",
+    "Brickell",
+    "College North",
+    "College/Bayside",
+    "Eighth Street",
+    "Eleventh Street",
+    "Fifth Street",
+    "Financial District",
+    "First Street",
+    "Freedom Tower",
+    "Government Center",
+    "Knight Center",
+    "Miami Avenue",
+    "Museum Park",
+    "Omni",
+    "Park West",
+    "Riverwalk",
+    "School Board",
+    "Tenth Street",
+    "Third Street",
+    "Wilkie D. Ferguson"
+  ],
+  "checks": {
+    "2025-10_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2025-10_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2025-10_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2025-10_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Oct-25",
+        "expected": "Oct-25"
+      }
+    },
+    "2025-11_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2025-11_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2025-11_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2025-11_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Nov-25",
+        "expected": "Nov-25"
+      }
+    },
+    "2025-11_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2025-12_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2025-12_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2025-12_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2025-12_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Dec-25",
+        "expected": "Dec-25"
+      }
+    },
+    "2025-12_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-01_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-01_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-01_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-01_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Jan-26",
+        "expected": "Jan-26"
+      }
+    },
+    "2026-01_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-02_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-02_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-02_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-02_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Feb-26",
+        "expected": "Feb-26"
+      }
+    },
+    "2026-02_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-03_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-03_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-03_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-03_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Mar-26",
+        "expected": "Mar-26"
+      }
+    },
+    "2026-03_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-04_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-04_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-04_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-04_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Apr-26",
+        "expected": "Apr-26"
+      }
+    },
+    "2026-04_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-05_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-05_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-05_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-05_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "May-26",
+        "expected": "May-26"
+      }
+    },
+    "2026-05_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-06_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-06_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-06_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-06_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Jun-26",
+        "expected": "Jun-26"
+      }
+    },
+    "2026-06_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    },
+    "2026-07_present_and_sha256_matches": {
+      "pass": true
+    },
+    "2026-07_21_stations_and_total": {
+      "pass": true,
+      "detail": 21
+    },
+    "2026-07_station_sum_matches_total_within_3": {
+      "pass": true
+    },
+    "2026-07_month_label_matches_filename": {
+      "pass": true,
+      "detail": {
+        "label": "Jul-26",
+        "expected": "Jul-26"
+      }
+    },
+    "2026-07_station_names_identical_to_first_report": {
+      "pass": true,
+      "detail": []
+    }
+  },
+  "scope": "acquisition integrity and table detection only; the values are DTPW-published boardings, not trips, not OD, not peak-hour"
+}

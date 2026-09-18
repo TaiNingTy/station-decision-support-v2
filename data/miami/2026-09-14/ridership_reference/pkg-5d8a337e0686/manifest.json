@@ -1,0 +1,218 @@
+{
+  "stage": "ridership_reference",
+  "schema_version": "miami-ridership-reference-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "raw_source_manifest",
+      "path": "raw/miami/2026-09-17/source_manifest.json",
+      "sha256": "0416bea115ed4223f38fb5e6dd5b062cf3c46791f53b24565dcbd1af38ceae3f"
+    },
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "name": "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+      "sha256": "3693f22957c8cf30ba3dbbf0f47837dfa7b80bea824e9f04e3f08e5c77ec4d6c"
+    },
+    {
+      "name": "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+      "sha256": "afb34907b59e70a1c61f709c0156918535fd3bc3583d88c0c18b6e6927da1c50"
+    },
+    {
+      "name": "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+      "sha256": "7734aab204f359cea90181b19b43ad43e51bde95a483349eba09dd294cf4b3c7"
+    },
+    {
+      "name": "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+      "sha256": "5f086e5e9d4e817e68df154dd9deae0e38b042fffaf5de34e12825a05cbbf0bd"
+    },
+    {
+      "name": "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+      "sha256": "14edcfcab87afd8a32922d0f0b2fabc0acbac2a7ed64fc7ab69b402c36c85223"
+    },
+    {
+      "name": "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+      "sha256": "6ac19612630c291d23e3ba61256964d5a2f8a873a7999d149c037325197ad538"
+    },
+    {
+      "name": "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+      "sha256": "5c385cfc205029d269f5b62c525d1aba888cf04baeacc7d50db110da773f80d3"
+    },
+    {
+      "name": "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+      "sha256": "72ce99cedb5aae8f2d5d1d0fed16bf1480d0d60f8b19214f3ee6a52e9f080f87"
+    },
+    {
+      "name": "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+      "sha256": "4a6f98e8d3f1989e384da458eaf1245145e43f3c69296790a8eb3ebb6303c9d8"
+    },
+    {
+      "name": "dtpw_rtr/2026-07-monthly-ridership-report.pdf",
+      "path": "raw/miami/2026-09-17/dtpw_rtr/2026-07-monthly-ridership-report.pdf",
+      "sha256": "063e949934ae9343a887cf582b89f2ab99384b07389faef087de488ea64b4cc6"
+    }
+  ],
+  "consumed_packages": [],
+  "code": [
+    {
+      "path": "scripts/build_miami_ridership_reference.py",
+      "sha256": "c8fc2569b4b363d9cf59e4e66f75b48cce0ab56f8a0b8788bad14afce4350948"
+    },
+    {
+      "path": "scripts/fetch_miami_ridership_reports.py",
+      "sha256": "af32abb5ab44153ddbe50e724318b85011c58c63d8f96cce68ba377d5290c2b4"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "bfbb57caa87bcd34d17baf068d7a17e63007ff28361654eb6a19cb85e0e1ff99"
+    }
+  ],
+  "config_sha256": "b68ec5b185dcbd83773c0f99814c951f28698a7f7dd2f1e40583f8659ccea94f",
+  "config": {
+    "window": [
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07"
+    ],
+    "crosswalk": {
+      "School Board": {
+        "station_master_name": "School Board",
+        "basis": "same_name"
+      },
+      "Omni": {
+        "station_master_name": "Adrienne Arsht Center",
+        "basis": "renamed_station_same_location"
+      },
+      "Museum Park": {
+        "station_master_name": "Museum Park",
+        "basis": "same_name"
+      },
+      "Eleventh Street": {
+        "station_master_name": "Eleventh Street",
+        "basis": "same_name"
+      },
+      "Park West": {
+        "station_master_name": "Miami Worldcenter",
+        "basis": "renamed_station_same_location"
+      },
+      "Freedom Tower": {
+        "station_master_name": "Freedom Tower",
+        "basis": "same_name"
+      },
+      "College North": {
+        "station_master_name": "College North",
+        "basis": "same_name"
+      },
+      "Wilkie D. Ferguson": {
+        "station_master_name": "Wilkie D. Ferguson, Jr.",
+        "basis": "same_name_punctuation"
+      },
+      "Government Center": {
+        "station_master_name": "Government Center",
+        "basis": "same_name"
+      },
+      "College/Bayside": {
+        "station_master_name": "College Bayside",
+        "basis": "same_name_punctuation"
+      },
+      "First Street": {
+        "station_master_name": "First Street",
+        "basis": "same_name"
+      },
+      "Bayfront Park": {
+        "station_master_name": "Bayfront Park",
+        "basis": "same_name"
+      },
+      "Knight Center": {
+        "station_master_name": "Knight Center",
+        "basis": "same_name"
+      },
+      "Miami Avenue": {
+        "station_master_name": "Miami Avenue",
+        "basis": "same_name"
+      },
+      "Third Street": {
+        "station_master_name": "Third Street",
+        "basis": "same_name"
+      },
+      "Riverwalk": {
+        "station_master_name": "Riverwalk",
+        "basis": "same_name"
+      },
+      "Fifth Street": {
+        "station_master_name": "Fifth Street",
+        "basis": "same_name"
+      },
+      "Eighth Street": {
+        "station_master_name": "Brickell City Centre",
+        "basis": "renamed_station_same_location"
+      },
+      "Tenth Street": {
+        "station_master_name": "Tenth Street Promenade",
+        "basis": "same_name_extended"
+      },
+      "Brickell": {
+        "station_master_name": "Brickell",
+        "basis": "same_name"
+      },
+      "Financial District": {
+        "station_master_name": "Financial District",
+        "basis": "same_name"
+      }
+    },
+    "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+    "aggregation": "arithmetic mean of the monthly average-weekday values over the window; shares from the sum of station means"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "method_summary": "DTPW monthly Ridership Technical Reports parsed (pypdf text) into per-station average weekday/Saturday/Sunday boardings and monthly totals over ten months; mapped to the 21 stations by an explicit crosswalk; observed reference only",
+  "contract": "V2_站点输入包字段契约.md §8 (ridership_baseline)",
+  "publish_policy": "content-addressed immutable package dir ridership_reference/pkg-<id>; readers resolve ridership_reference_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_ridership_reference.json",
+      "sha256": "446fd107c53df2e57839d03bb310f3f984c3525aab0fbaa586632b6f9f9c9049"
+    },
+    {
+      "file": "ridership_reference_validation.json",
+      "sha256": "bc9e5cbef18a91071efee25097f0832ee4914d683841524a23741cce4a7f0963"
+    }
+  ],
+  "package_id": "pkg-5d8a337e0686",
+  "package_dir": "ridership_reference/pkg-5d8a337e0686"
+}

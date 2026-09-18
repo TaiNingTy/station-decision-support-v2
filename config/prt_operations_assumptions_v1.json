@@ -1,0 +1,18 @@
+{
+  "schema_version": "miami-prt-operations-assumptions/1.0",
+  "set_on": "2026-09-17",
+  "provenance_class": "assumption",
+  "data_nature": "assumption",
+  "acquisition_status": "assumed",
+  "purpose": "generic PRT operating assumptions so the configuration chain (person trips -> vehicle trips -> berths -> module -> footprint) can run end to end for the demonstration; every value is replaceable by an observed or specified value and is tagged as an assumption in every output",
+  "public_repository_note": "generic values only; no supplier-specific operating data",
+  "assumptions": {
+    "C01_average_party_size_pax_per_vehicle_trip": {"value": 1.3, "unit": "persons per vehicle trip", "statement": "average occupancy of a PRT vehicle trip in the commute peak; commuters mostly travel alone", "reference": "vehicle occupancy for commuting is typically 1.1-1.5; the maximum capacity (6) is never used as the load"},
+    "C02_berth_cycle_s": {"value": 45, "unit": "seconds", "statement": "one berth cycle = vehicle entry, alighting, boarding, exit", "reference": "order of magnitude for offline PRT berths; not measured"},
+    "C03_berth_utilization_max": {"value": 0.8, "unit": "ratio", "statement": "design margin: a berth is sized for at most 80 % of its theoretical cycle throughput"},
+    "C04_within_hour_peaking_factor": {"value": 1.25, "unit": "ratio", "statement": "peak-15-minute flow x 4 divided by the hourly flow; applied to berth sizing ONLY, never to the demand chain (it is not a second peak-hour share)"},
+    "C05_min_guideway_headway_s": {"value": 3.0, "unit": "seconds", "statement": "minimum operating headway between vehicles on the guideway; lane throughput = 3600 / headway"},
+    "C06_site_footprint_available": {"value": true, "statement": "the selected module's footprint is assumed to be constructible at every station; the per-station constructible space has NOT been acquired, so this assumption stands in for it"},
+    "C07_no_separate_staging_berths": {"value": true, "statement": "the drawings show no staging berths; empty vehicles are assumed to be supplied from the guideway as needed"}
+  }
+}

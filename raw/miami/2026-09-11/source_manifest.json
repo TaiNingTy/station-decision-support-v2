@@ -1,0 +1,32 @@
+[
+  {
+    "file": "google_transit.zip",
+    "bytes": 8419295,
+    "sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5",
+    "source_url": "https://www.miamidade.gov/transit/googletransit/current/google_transit.zip",
+    "downloaded_on": "2026-09-11",
+    "archived_locally_on": "2026-09-14",
+    "redistribution_terms_status": "not_yet_recorded",
+    "scope": "complete county GTFS feed"
+  },
+  {
+    "file": "miami21_zoning_sample.json",
+    "bytes": 3596,
+    "sha256": "5e0c9e6958c7f457a61236219f46980d3a8d092539c49eaccc9159b17e66d58a",
+    "source_url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer/0/query",
+    "downloaded_on": "2026-09-11",
+    "archived_locally_on": "2026-09-14",
+    "redistribution_terms_status": "not_yet_recorded",
+    "scope": "metadata or two-feature sample; not full zoning coverage"
+  },
+  {
+    "file": "miami21_zoning_service.json",
+    "bytes": 3109,
+    "sha256": "e97fe9e760097f75255ed0ae45a67117b95ffc02505e51dc509dc3e517b49f68",
+    "source_url": "https://services1.arcgis.com/CvuPhqcTQpZPT9qY/arcgis/rest/services/M21_Zoning/FeatureServer",
+    "downloaded_on": "2026-09-11",
+    "archived_locally_on": "2026-09-14",
+    "redistribution_terms_status": "not_yet_recorded",
+    "scope": "metadata or two-feature sample; not full zoning coverage"
+  }
+]

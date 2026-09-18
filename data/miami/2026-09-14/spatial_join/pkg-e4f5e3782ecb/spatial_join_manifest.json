@@ -1,0 +1,121 @@
+{
+  "stage": "spatial_join",
+  "schema_version": "miami-spatial-join-manifest/2.0",
+  "built_on": "2026-09-14",
+  "build_status": "COMPLETED",
+  "geometry_validation_status": "PASS",
+  "ready_for_downstream": true,
+  "script": {
+    "path": "scripts/build_miami_station_zoning_profile.py",
+    "sha256": "d98e88effafc4b7157c2f7c014d84874f666dc8a6b4d11c468ee90bf355cbcde"
+  },
+  "config_sha256": "ecfc00408d13e70259b76f11804bd584d3e4de9fac7d19a347f3e49c66c15f36",
+  "config": {
+    "radii_ft": [
+      660,
+      1320,
+      2640
+    ],
+    "radii_m_derived": [
+      201.168,
+      402.336,
+      804.672
+    ],
+    "band_ids": [
+      "b1",
+      "b2",
+      "b3"
+    ],
+    "band_labels": [
+      "0-1/8 mi",
+      "1/8-1/4 mi",
+      "1/4-1/2 mi"
+    ],
+    "foot_definition": "international_foot_0.3048m_exact (NIST revised factors, effective 2023)",
+    "length_unit_internal": "m",
+    "area_unit_internal": "m2",
+    "display_units_miami": {
+      "length": "ft / mi",
+      "area": "sq ft / acres / sq mi",
+      "acre_m2": 4046.856422,
+      "sqft_per_m2": 10.76391,
+      "sqmi_m2": 2589988.110336
+    },
+    "display_precision_note": "display values are rounded (ft 0.1, sq ft 1, acres 0.01); internal values keep 6 decimals for reproducibility only — that is numeric precision, not measurement accuracy",
+    "catchment_semantics": "Euclidean distance bands from the GTFS station reference point; NOT walk catchments; no travel-time meaning",
+    "band_area_ratio_note": "band areas scale 1:3:12 — distance weighting is a separate calibrated parameter, not implied by area",
+    "quad_segs": 64,
+    "area_tolerance_m2": 1e-06,
+    "aggregation": "original M21_ZONE and Transect_D only; union within code; cross-code overlap reported as excess and as conflict-union; no use mapping; no exclusion",
+    "coverage_ratio_semantics": "coverage_ratio_by_station_nonexclusive = clipped area within a station's half-mile disc / polygon area; overlapping discs make these sum above 1; they are NOT allocation weights and must not be normalised into choice probabilities"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "reported_accuracy_ft": 13.12,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "reported_accuracy is the accuracy PROJ reports for the datum operation it selected in THIS environment; it is not the precision of GTFS reference points, of zoning boundaries, or of the model as a whole. Re-verify if the environment, projection or grid availability changes."
+  },
+  "upstream": {
+    "stage": "station_master",
+    "manifest": "build_manifest.json",
+    "manifest_sha256": "ee1760017b797c4f20a3afe1ef27921648e347b116f7478e52b8c56b20f315be",
+    "station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+    "study_window_sha256": "b9ec497124aeb49d46352856718aaa35cf17801298f03afc3c92b0f0ff905231",
+    "zoning_raw_sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2"
+  },
+  "consumed_inputs_note": "station_master_sha256 / study_window_sha256 / zoning_raw_sha256 are the ONLY inputs this stage reads; scripts/miami_readiness.py compares each with the current file to decide FRESH vs STALE (R1)",
+  "method_summary": "imperial bands 1/8-1/4-1/2 mi; clip-to-band; union-based coverage; per original code; no use mapping; no exclusion",
+  "publish_policy": "content-addressed immutable package dir spatial_join/pkg-<id> (id = sha256 of this manifest without the package fields); readers resolve spatial_join_current.json (switched by one atomic os.replace) and verify the whole package (R3). Previous packages are kept as the archive (update-build + archive, F2).",
+  "outputs": [
+    {
+      "file": "station_zoning_profile.json",
+      "sha256": "3cc44e6a594c92a27ab0d46ee6817ca894baece5dc91915f16349f713f515480"
+    },
+    {
+      "file": "station_catchments.geojson",
+      "sha256": "743b3eacc3bc2cdc83a4c97d3cd7121746580c221cf588e577740829d571d89b"
+    },
+    {
+      "file": "station_overlap.json",
+      "sha256": "972868c4aacc5200a7a9ad46242c2ce7eb53e7714333c978f19b200880ca89a7"
+    },
+    {
+      "file": "network_half_mile_union.geojson",
+      "sha256": "81e25ec7ed3d08629583b59d49f637f265b4d614eef24c5a258152074608fa23"
+    },
+    {
+      "file": "station_zoning_evidence.json",
+      "sha256": "0147e8432c58f058a7b8d2dde5142a57d1d65186eee5e3fc6872c96ec9a616ce"
+    },
+    {
+      "file": "station_point_zoning_match.json",
+      "sha256": "00f3bf21af50bf5677ba94f3fb32d6fae5e5326fe0f55e4e7ca3ce6f10b53bf5"
+    },
+    {
+      "file": "spatial_join_validation.json",
+      "sha256": "3ea93cc5ee70955750d3a8ba2324163b59086296459b5b4658cb66fd0d951862"
+    },
+    {
+      "file": "geometry_quality_report.json",
+      "sha256": "d746319266a0040ec69a8630c9c263c11cb9da23fadc87da662970d8fc6c4141"
+    }
+  ],
+  "package_id": "pkg-e4f5e3782ecb",
+  "package_dir": "spatial_join/pkg-e4f5e3782ecb"
+}

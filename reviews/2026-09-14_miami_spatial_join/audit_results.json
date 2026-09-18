@@ -1,0 +1,251 @@
+{
+  "baseline_run": {
+    "exit_code": 0,
+    "stdout": "status=PASS stations=21 polygons=235 band_profiles=63 min_margin_m=431.039046 repairs=2 unassigned=89 multi_station=112\n",
+    "stderr": "",
+    "changed_files": []
+  },
+  "script_revision": {
+    "exit_code": 0,
+    "stdout": "status=PASS stations=21 polygons=235 band_profiles=63 min_margin_m=431.039046 repairs=2 unassigned=89 multi_station=112\n",
+    "stderr": "",
+    "manifest_script_sha_matches_executed_file": false
+  },
+  "failure_publication": {
+    "exit_code": 1,
+    "stdout": "status=FAIL stations=21 polygons=235 band_profiles=63 min_margin_m=431.039046 repairs=2 unassigned=89 multi_station=112\n",
+    "stderr": "",
+    "changed_files": [
+      "gis_data_readiness.json",
+      "spatial_join_validation.json",
+      "build_manifest.json"
+    ],
+    "validation": "FAIL",
+    "readiness": "DONE",
+    "manifest_published_failed_validation": true
+  },
+  "input_tamper": {
+    "exit_code": 1,
+    "stdout": "HALT: station_master.geojson hash e5e2492a43ab42ca56a4da5e7cbd9de0320d62330b6a30131bba324dc6fe1f8c != manifest 50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4\n",
+    "stderr": "",
+    "changed_files_after_run": []
+  },
+  "upstream_rebuild": {
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY\",\n  \"input_stop_records\": 43,\n  \"physical_station_entities\": 21,\n  \"mapped_stop_records\": 43,\n  \"unmapped_stop_records\": 0,\n  \"duplicate_assignments\": 0,\n  \"source_name_anomaly_stop_ids\": [\n    \"832\"\n  ],\n  \"service_patterns\": 6,\n  \"zoning_polygons\": 235,\n  \"official_agency_confirmation\": false,\n  \"engineering_validation\": \"NOT_PERFORMED\",\n  \"ai_run\": \"NOT_PERFORMED\"\n}\n",
+    "stderr": "",
+    "spatial_join_build_metadata_present": false,
+    "spatial_outputs_still_listed": true,
+    "spatial_script_source_hash_present": false,
+    "readiness": "NOT_RUN"
+  },
+  "independent_recomputation": {
+    "max_area_error_m2": 4.996254574507475e-07,
+    "max_display_area_error_sqft": 4.6892091631889343e-07,
+    "max_share_error": 4.936238232611245e-07,
+    "bad_fid_counts": [],
+    "reference_point_zoning_matches": [
+      {
+        "station_id": "MIA-MM-01",
+        "zoning_fids_covering_reference_point": [
+          102
+        ]
+      },
+      {
+        "station_id": "MIA-MM-02",
+        "zoning_fids_covering_reference_point": [
+          120
+        ]
+      },
+      {
+        "station_id": "MIA-MM-03",
+        "zoning_fids_covering_reference_point": [
+          97
+        ]
+      },
+      {
+        "station_id": "MIA-MM-04",
+        "zoning_fids_covering_reference_point": [
+          58
+        ]
+      },
+      {
+        "station_id": "MIA-MM-05",
+        "zoning_fids_covering_reference_point": [
+          58
+        ]
+      },
+      {
+        "station_id": "MIA-MM-06",
+        "zoning_fids_covering_reference_point": []
+      },
+      {
+        "station_id": "MIA-MM-07",
+        "zoning_fids_covering_reference_point": [
+          98
+        ]
+      },
+      {
+        "station_id": "MIA-MM-08",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-09",
+        "zoning_fids_covering_reference_point": [
+          951
+        ]
+      },
+      {
+        "station_id": "MIA-MM-10",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-11",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-12",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-13",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-14",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-15",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-16",
+        "zoning_fids_covering_reference_point": [
+          997
+        ]
+      },
+      {
+        "station_id": "MIA-MM-17",
+        "zoning_fids_covering_reference_point": [
+          987
+        ]
+      },
+      {
+        "station_id": "MIA-MM-18",
+        "zoning_fids_covering_reference_point": [
+          987
+        ]
+      },
+      {
+        "station_id": "MIA-MM-19",
+        "zoning_fids_covering_reference_point": [
+          985
+        ]
+      },
+      {
+        "station_id": "MIA-MM-20",
+        "zoning_fids_covering_reference_point": []
+      },
+      {
+        "station_id": "MIA-MM-21",
+        "zoning_fids_covering_reference_point": [
+          985
+        ]
+      }
+    ],
+    "ten_smallest_fragments": [
+      {
+        "station_id": "MIA-MM-09",
+        "band": "1/4-1/2 mi",
+        "fid": 78,
+        "area_sqft": 9.42956390881201
+      },
+      {
+        "station_id": "MIA-MM-13",
+        "band": "1/8-1/4 mi",
+        "fid": 88,
+        "area_sqft": 17.042101309016733
+      },
+      {
+        "station_id": "MIA-MM-01",
+        "band": "0-1/8 mi",
+        "fid": 862,
+        "area_sqft": 25.524771985543488
+      },
+      {
+        "station_id": "MIA-MM-07",
+        "band": "1/4-1/2 mi",
+        "fid": 120,
+        "area_sqft": 97.00528326735527
+      },
+      {
+        "station_id": "MIA-MM-04",
+        "band": "1/4-1/2 mi",
+        "fid": 828,
+        "area_sqft": 128.22929213124144
+      },
+      {
+        "station_id": "MIA-MM-07",
+        "band": "1/4-1/2 mi",
+        "fid": 105,
+        "area_sqft": 150.5665299202904
+      },
+      {
+        "station_id": "MIA-MM-04",
+        "band": "1/8-1/4 mi",
+        "fid": 715,
+        "area_sqft": 184.80428617881606
+      },
+      {
+        "station_id": "MIA-MM-17",
+        "band": "1/4-1/2 mi",
+        "fid": 119,
+        "area_sqft": 201.60272632724306
+      },
+      {
+        "station_id": "MIA-MM-06",
+        "band": "1/4-1/2 mi",
+        "fid": 1093,
+        "area_sqft": 268.61107656922513
+      },
+      {
+        "station_id": "MIA-MM-16",
+        "band": "1/4-1/2 mi",
+        "fid": 682,
+        "area_sqft": 283.5446596691823
+      }
+    ]
+  },
+  "network_overlap": {
+    "sum_station_disc_area_sqmi": 16.49170556739688,
+    "network_union_area_sqmi": 3.569660380442934,
+    "sum_divided_by_union": 4.619964873339168,
+    "naive_sum_minus_all_pair_intersections_sqmi": -33.38846960816322,
+    "interpretation": "pairwise overlap areas cannot alone be subtracted to obtain network union because triple and higher overlap exists"
+  },
+  "original_files_unchanged": true,
+  "method_notes": {
+    "baseline": "Unmodified source script run with /opt/anaconda3/bin/python3.13 against copied inputs and output directory.",
+    "failure_publication": "In the isolated copy only, forced val.status to FAIL immediately before publication, to test the failure branch. This does not assert that the current real-data validation failed.",
+    "script_revision": "Added a harmless comment to the isolated script, then reran it and compared the recorded script digest.",
+    "input_tamper": "Changed one station reference coordinate without updating its recorded hash; checked that processing halted without further writes.",
+    "upstream_rebuild": "Ran build_miami_station_master.py in the copied workspace using its resolved absolute path; no source data changes.",
+    "independent_recomputation": "Separate implementation of the declared projection, 64-segment-per-quadrant buffers, ring intersections, unions, unique-FID counts and unit conversions; same Shapely/PROJ dependency versions. Not an independent survey or GIS engine.",
+    "additional_read_only_checks": "All 235 repaired/projected zoning geometries valid. FID 182 and 983 projected area diagnostics changed only at floating-point scale. Current physical cross-code conflict-area differences are at rounding scale; the formula can overcount if three or more codes cover the same area."
+  }
+}

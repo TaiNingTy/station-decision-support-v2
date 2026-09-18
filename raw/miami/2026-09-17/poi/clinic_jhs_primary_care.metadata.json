@@ -1,0 +1,263 @@
+{
+ "currentVersion": 11.1,
+ "cimVersion": "3.1.0",
+ "id": 43,
+ "name": "Jackson Health System - Primary Care Centers (JHS - PCC) @ JacksonPrimaryCareCenter",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPoint",
+ "sourceSpatialReference": {
+  "wkid": 102658,
+  "latestWkid": 2236,
+  "xyTolerance": 0.00204800000190735,
+  "zTolerance": 2,
+  "mTolerance": 2,
+  "falseX": -1.77912999990048E7,
+  "falseY": -4.16453999999997E7,
+  "xyUnits": 3906.2499963620203,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 35,
+  "name": "Health and Human Services"
+ },
+ "subLayers": [],
+ "minScale": 0,
+ "maxScale": 0,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriPMS",
+    "url": "09e94cb9f7816551efb2e72bdff615d9",
+    "imageData": "iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABG0lEQVQ4jcWSPUrEUBDHf/NMxEYbixUWsVCSwsLGA3gBvcJWe4DoVtqkEhTUg2wl2ArBxgMoKOsXiBfYToibkRfMLgvRvI1ff3jw5zHzm5k3z+MH5f0aLIhoGsV3TU4F7+GE+/LODHEGm64wAzfLEe0COAZTWBRouMIEXn3lrbyz8oxdA5fWZsopMPdZaCVMM65uj0msD3ZI/2ebhRQOm7PsWZ/EDIr73jONjVXkpU9oDNe4wETRJB497FBdBkk3H3dYoBKGsBBGrFubTnP3eEDf+mCbNVH8TFkScYVBSw0ta6bS/N+dfRQ5V2G+hPMlrJa8qgCBrbDDivWqzHwLhtBWrdGZwMWEoz9lMvrIY4m9I/YhP7X0twuYRO8600ZpOduKEwAAAABJRU5ErkJggg==",
+    "contentType": "image/png",
+    "width": 14,
+    "height": 14,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [
+   {
+    "labelExpression": "[PROVIDER]",
+    "labelPlacement": "esriServerPointLabelPlacementAboveRight",
+    "deconflictionStrategy": "dynamic",
+    "removeDuplicates": "none",
+    "stackLabel": false,
+    "useCodedValues": true,
+    "maxScale": 0,
+    "minScale": 0,
+    "name": "Default",
+    "priority": 51,
+    "symbol": {
+     "type": "esriTS",
+     "color": [
+      76,
+      115,
+      0,
+      255
+     ],
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "verticalAlignment": "bottom",
+     "horizontalAlignment": "center",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "kerning": true,
+     "haloColor": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "haloSize": 1,
+     "font": {
+      "family": "Verdana",
+      "size": 8,
+      "style": "normal",
+      "weight": "bold",
+      "decoration": "none"
+     }
+    }
+   }
+  ]
+ },
+ "defaultVisibility": false,
+ "extent": {
+  "xmin": 872078.3433688283,
+  "ymin": 471586.4108088091,
+  "xmax": 941672.5624416433,
+  "ymax": 581276.7973429635,
+  "spatialReference": {
+   "wkid": 102658,
+   "latestWkid": 2236,
+   "xyTolerance": 3.70209105830001E-4,
+   "zTolerance": 1.9999999999999998E-5,
+   "mTolerance": 0.001,
+   "falseX": -17791300,
+   "falseY": -41645400,
+   "xyUnits": 1.372494229425764E8,
+   "falseZ": 0,
+   "zUnits": 400000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+ "displayField": "PROVIDER",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "SHAPE",
+   "domain": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "length": 38,
+   "domain": null
+  },
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "PROVIDER",
+   "type": "esriFieldTypeString",
+   "alias": "PROVIDER",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "ADDRESS",
+   "type": "esriFieldTypeString",
+   "alias": "ADDRESS",
+   "length": 30,
+   "domain": null
+  },
+  {
+   "name": "CITY",
+   "type": "esriFieldTypeString",
+   "alias": "CITY",
+   "length": 25,
+   "domain": null
+  },
+  {
+   "name": "ZIPCODE",
+   "type": "esriFieldTypeInteger",
+   "alias": "ZIPCODE",
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "SHAPE"
+ },
+ "indexes": [
+  {
+   "name": "R2979_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "UUID_2979",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "S2684_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 1000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasMetadata": false,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true
+}

@@ -1,0 +1,60 @@
+{
+  "purpose": "offline cartography only; no change to analysis packages",
+  "sources": [
+    {
+      "path": "docs/data/demo_data.json",
+      "sha256": "157b10b06425c04af0fb8c35bb43142ecc1bf381002596e5aee146dc1e52bf9f"
+    },
+    {
+      "path": "data/miami/2026-09-14/demography/pkg-64aa5fc6dcb8/block_land_geometry.json",
+      "sha256": "9bb4460cebe6b08b3f461ec69fa2437caa02929f176052263ed85257e30b0e66"
+    },
+    {
+      "path": "raw/miami/2026-09-17/osm/walk_network_overpass.json",
+      "sha256": "592d45437fd1f8834dfe62b0d71ca489216c6626a0a267bb344b5ed6bcf66add"
+    },
+    {
+      "path": "raw/miami/2026-09-15/tiger/tl_2024_12086_areawater.zip",
+      "sha256": "1384cb633dd305e7212c0e6485361473d23f3963138982bea15758ed31edee0a"
+    },
+    {
+      "path": "raw/miami/2026-09-11/google_transit.zip",
+      "sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5"
+    }
+  ],
+  "output": {
+    "path": "docs/data/miami_basemap.js",
+    "sha256": "75ae6ccb07790a5408483e0e57c55dcd825ffef4531b4459b1f1649bd2f3c151",
+    "bytes": 500427
+  },
+  "script_sha256": "eea2b855dd5fd78ce0fc8d5132b412854deecf95e5100689fcf4abc1e0cebe8a",
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "counts": {
+    "census_blocks": 703,
+    "road_path_ways": 9955,
+    "parks": 38,
+    "gtfs_shapes": 6,
+    "stations": 21
+  },
+  "simplification_m": {
+    "polygons": 1.5,
+    "roads": 2,
+    "gtfs_shapes": 1
+  },
+  "geometry_scope": "station study window in EPSG:26917; display only",
+  "notes": [
+    "Gray polygons show census street blocks, not individual buildings.",
+    "Paths are cartographic context, not a validated walk network.",
+    "Routes follow GTFS shapes, not surveyed guideway geometry."
+  ]
+}

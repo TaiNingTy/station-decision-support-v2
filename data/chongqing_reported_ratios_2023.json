@@ -1,0 +1,23 @@
+{
+  "status": "reported_in_planning_document",
+  "observation_period": "2023-05",
+  "source_file": "2024重庆高新区常规公交体系提升规划（2023-2025年）汇报版127页.pdf (local copy; not redistributed in this repository)",
+  "pdf_page": 15,
+  "extraction_method": "manual transcription verified against rendered page, 2026-09-11",
+  "original_od_or_population_microdata_obtained": false,
+  "geometries_available": false,
+  "use": "case-study evidence and metric-definition regression fixture; not a default for Melbourne or Meta",
+  "metrics": {
+    "source_zhizhu_ratio": {"source_label": "职住比", "source_formula": "就业人口/长驻人口", "unit": "ratio"},
+    "source_jiuye_ratio": {"source_label": "就业比", "source_formula": "岗位人口/就业人口", "unit": "ratio"}
+  },
+  "definition_caveat": "Source terminology must be retained. The report's demand workflow includes staff and students in 岗位人口. Do not automatically equate it to workplace jobs or force either ratio into a global jobs-housing field.",
+  "records": [
+    {"area": "大学城", "source_zhizhu_ratio": 0.49, "source_jiuye_ratio": 0.98},
+    {"area": "西永", "source_zhizhu_ratio": 0.55, "source_jiuye_ratio": 1.08},
+    {"area": "曾家", "source_zhizhu_ratio": 0.53, "source_jiuye_ratio": 0.99},
+    {"area": "含谷", "source_zhizhu_ratio": 0.50, "source_jiuye_ratio": 1.09},
+    {"area": "金凤", "source_zhizhu_ratio": 0.57, "source_jiuye_ratio": 1.03},
+    {"area": "其他区域（白市驿、巴福、石板）", "source_zhizhu_ratio": 0.54, "source_jiuye_ratio": 1.11}
+  ]
+}

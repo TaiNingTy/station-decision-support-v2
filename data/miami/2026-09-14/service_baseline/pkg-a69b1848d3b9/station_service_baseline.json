@@ -1,0 +1,4198 @@
+{
+  "schema_version": "miami-station-service-baseline/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "4343a8d3a111821bc98e76332a8b1a7a15427600a6010510773f3a1c90f149e4",
+  "provenance_class": "derived",
+  "data_nature": "administrative_record",
+  "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+  "is_operated_service": false,
+  "is_capacity": false,
+  "is_ridership": false,
+  "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+  "gtfs_archive_sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5",
+  "config": {
+    "periods": {
+      "early": [
+        5,
+        7
+      ],
+      "am_peak": [
+        7,
+        9
+      ],
+      "midday": [
+        9,
+        16
+      ],
+      "pm_peak": [
+        16,
+        19
+      ],
+      "evening": [
+        19,
+        24
+      ]
+    },
+    "weekday_rule": "calendar service with all Monday-Friday flags, most trips",
+    "routes_rule": "route_long_name contains METROMOVER",
+    "headway_definition": "60 × hours in period ÷ scheduled departures at the station's stops in the period (per route and all routes)"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "stations": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "gtfs_stop_ids_observed": [
+        "795",
+        "831"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:32",
+      "last_departure": "22:10",
+      "by_hour": {
+        "5": 9,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 33,
+          "departures_per_hour": 16.5,
+          "implied_headway_min_all_routes": 3.64,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "gtfs_stop_ids_observed": [
+        "796"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:33",
+      "last_departure": "22:09",
+      "by_hour": {
+        "5": 10,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 2
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 34,
+          "departures_per_hour": 17.0,
+          "implied_headway_min_all_routes": 3.53,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 74,
+          "departures_per_hour": 14.8,
+          "implied_headway_min_all_routes": 4.05,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "gtfs_stop_ids_observed": [
+        "797",
+        "829"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:34",
+      "last_departure": "22:08",
+      "by_hour": {
+        "5": 10,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 2
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 34,
+          "departures_per_hour": 17.0,
+          "implied_headway_min_all_routes": 3.53,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 74,
+          "departures_per_hour": 14.8,
+          "implied_headway_min_all_routes": 4.05,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "gtfs_stop_ids_observed": [
+        "798",
+        "828"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:35",
+      "last_departure": "22:07",
+      "by_hour": {
+        "5": 9,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 33,
+          "departures_per_hour": 16.5,
+          "implied_headway_min_all_routes": 3.64,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "gtfs_stop_ids_observed": [
+        "799",
+        "827"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:36",
+      "last_departure": "22:06",
+      "by_hour": {
+        "5": 9,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 33,
+          "departures_per_hour": 16.5,
+          "implied_headway_min_all_routes": 3.64,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "gtfs_stop_ids_observed": [
+        "800",
+        "826"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 396,
+      "first_departure": "05:37",
+      "last_departure": "22:05",
+      "by_hour": {
+        "5": 9,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 33,
+          "departures_per_hour": 16.5,
+          "implied_headway_min_all_routes": 3.64,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "gtfs_stop_ids_observed": [
+        "811",
+        "838"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 794,
+      "first_departure": "05:32",
+      "last_departure": "22:10",
+      "by_hour": {
+        "5": 21,
+        "6": 48,
+        "7": 48,
+        "8": 48,
+        "9": 48,
+        "10": 48,
+        "11": 48,
+        "12": 48,
+        "13": 48,
+        "14": 48,
+        "15": 48,
+        "16": 48,
+        "17": 48,
+        "18": 48,
+        "19": 48,
+        "20": 48,
+        "21": 48,
+        "22": 5
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 12,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 1
+        },
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 4
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 69,
+          "departures_per_hour": 34.5,
+          "implied_headway_min_all_routes": 1.74,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 36,
+              "departures_per_hour": 18.0,
+              "implied_headway_min": 3.33
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 96,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 336,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 149,
+          "departures_per_hour": 29.8,
+          "implied_headway_min_all_routes": 2.01,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 73,
+              "departures_per_hour": 14.6,
+              "implied_headway_min": 4.11
+            },
+            "MMO": {
+              "scheduled_departures": 76,
+              "departures_per_hour": 15.2,
+              "implied_headway_min": 3.95
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "gtfs_stop_ids_observed": [
+        "812",
+        "837"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 794,
+      "first_departure": "05:31",
+      "last_departure": "22:11",
+      "by_hour": {
+        "5": 21,
+        "6": 48,
+        "7": 48,
+        "8": 48,
+        "9": 48,
+        "10": 48,
+        "11": 48,
+        "12": 48,
+        "13": 48,
+        "14": 48,
+        "15": 48,
+        "16": 48,
+        "17": 48,
+        "18": 48,
+        "19": 48,
+        "20": 48,
+        "21": 48,
+        "22": 5
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 12,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 1
+        },
+        "MMO": {
+          "5": 9,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 4
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 69,
+          "departures_per_hour": 34.5,
+          "implied_headway_min_all_routes": 1.74,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 36,
+              "departures_per_hour": 18.0,
+              "implied_headway_min": 3.33
+            },
+            "MMO": {
+              "scheduled_departures": 33,
+              "departures_per_hour": 16.5,
+              "implied_headway_min": 3.64
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 96,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 336,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 149,
+          "departures_per_hour": 29.8,
+          "implied_headway_min_all_routes": 2.01,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 73,
+              "departures_per_hour": 14.6,
+              "implied_headway_min": 4.11
+            },
+            "MMO": {
+              "scheduled_departures": 76,
+              "departures_per_hour": 15.2,
+              "implied_headway_min": 3.95
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "gtfs_stop_ids_observed": [
+        "813"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 1588,
+      "first_departure": "05:30",
+      "last_departure": "22:12",
+      "by_hour": {
+        "5": 42,
+        "6": 96,
+        "7": 96,
+        "8": 96,
+        "9": 96,
+        "10": 96,
+        "11": 96,
+        "12": 96,
+        "13": 96,
+        "14": 96,
+        "15": 96,
+        "16": 96,
+        "17": 96,
+        "18": 96,
+        "19": 96,
+        "20": 96,
+        "21": 96,
+        "22": 10
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 22,
+          "6": 48,
+          "7": 48,
+          "8": 48,
+          "9": 48,
+          "10": 48,
+          "11": 48,
+          "12": 48,
+          "13": 48,
+          "14": 48,
+          "15": 48,
+          "16": 48,
+          "17": 48,
+          "18": 48,
+          "19": 48,
+          "20": 48,
+          "21": 48,
+          "22": 4
+        },
+        "MMO": {
+          "5": 20,
+          "6": 48,
+          "7": 48,
+          "8": 48,
+          "9": 48,
+          "10": 48,
+          "11": 48,
+          "12": 48,
+          "13": 48,
+          "14": 48,
+          "15": 48,
+          "16": 48,
+          "17": 48,
+          "18": 48,
+          "19": 48,
+          "20": 48,
+          "21": 48,
+          "22": 6
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 138,
+          "departures_per_hour": 69.0,
+          "implied_headway_min_all_routes": 0.87,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 70,
+              "departures_per_hour": 35.0,
+              "implied_headway_min": 1.71
+            },
+            "MMO": {
+              "scheduled_departures": 68,
+              "departures_per_hour": 34.0,
+              "implied_headway_min": 1.76
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 192,
+          "departures_per_hour": 96.0,
+          "implied_headway_min_all_routes": 0.62,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 96,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 96,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 672,
+          "departures_per_hour": 96.0,
+          "implied_headway_min_all_routes": 0.62,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 336,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 336,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 288,
+          "departures_per_hour": 96.0,
+          "implied_headway_min_all_routes": 0.62,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 144,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 144,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 298,
+          "departures_per_hour": 59.6,
+          "implied_headway_min_all_routes": 1.01,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 148,
+              "departures_per_hour": 29.6,
+              "implied_headway_min": 2.03
+            },
+            "MMO": {
+              "scheduled_departures": 150,
+              "departures_per_hour": 30.0,
+              "implied_headway_min": 2.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "gtfs_stop_ids_observed": [
+        "810",
+        "825",
+        "839"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 794,
+      "first_departure": "05:33",
+      "last_departure": "22:09",
+      "by_hour": {
+        "5": 21,
+        "6": 48,
+        "7": 48,
+        "8": 48,
+        "9": 48,
+        "10": 48,
+        "11": 48,
+        "12": 48,
+        "13": 48,
+        "14": 48,
+        "15": 48,
+        "16": 48,
+        "17": 48,
+        "18": 48,
+        "19": 48,
+        "20": 48,
+        "21": 48,
+        "22": 5
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        },
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 69,
+          "departures_per_hour": 34.5,
+          "implied_headway_min_all_routes": 1.74,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 96,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 336,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 149,
+          "departures_per_hour": 29.8,
+          "implied_headway_min_all_routes": 2.01,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "gtfs_stop_ids_observed": [
+        "809",
+        "824",
+        "840"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 794,
+      "first_departure": "05:35",
+      "last_departure": "22:08",
+      "by_hour": {
+        "5": 20,
+        "6": 48,
+        "7": 48,
+        "8": 48,
+        "9": 48,
+        "10": 48,
+        "11": 48,
+        "12": 48,
+        "13": 48,
+        "14": 48,
+        "15": 48,
+        "16": 48,
+        "17": 48,
+        "18": 48,
+        "19": 48,
+        "20": 48,
+        "21": 48,
+        "22": 6
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        },
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 68,
+          "departures_per_hour": 34.0,
+          "implied_headway_min_all_routes": 1.76,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 96,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 336,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 150,
+          "departures_per_hour": 30.0,
+          "implied_headway_min_all_routes": 2.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "gtfs_stop_ids_observed": [
+        "808",
+        "823",
+        "832",
+        "841"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 1191,
+      "first_departure": "05:30",
+      "last_departure": "22:07",
+      "by_hour": {
+        "5": 32,
+        "6": 72,
+        "7": 72,
+        "8": 72,
+        "9": 72,
+        "10": 72,
+        "11": 72,
+        "12": 72,
+        "13": 72,
+        "14": 72,
+        "15": 72,
+        "16": 72,
+        "17": 72,
+        "18": 72,
+        "19": 72,
+        "20": 72,
+        "21": 72,
+        "22": 7
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 22,
+          "6": 48,
+          "7": 48,
+          "8": 48,
+          "9": 48,
+          "10": 48,
+          "11": 48,
+          "12": 48,
+          "13": 48,
+          "14": 48,
+          "15": 48,
+          "16": 48,
+          "17": 48,
+          "18": 48,
+          "19": 48,
+          "20": 48,
+          "21": 48,
+          "22": 4
+        },
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 104,
+          "departures_per_hour": 52.0,
+          "implied_headway_min_all_routes": 1.15,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 70,
+              "departures_per_hour": 35.0,
+              "implied_headway_min": 1.71
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 72.0,
+          "implied_headway_min_all_routes": 0.83,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 96,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 504,
+          "departures_per_hour": 72.0,
+          "implied_headway_min_all_routes": 0.83,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 336,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 216,
+          "departures_per_hour": 72.0,
+          "implied_headway_min_all_routes": 0.83,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 144,
+              "departures_per_hour": 48.0,
+              "implied_headway_min": 1.25
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 223,
+          "departures_per_hour": 44.6,
+          "implied_headway_min_all_routes": 1.35,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 148,
+              "departures_per_hour": 29.6,
+              "implied_headway_min": 2.03
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "gtfs_stop_ids_observed": [
+        "807",
+        "822",
+        "833"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 794,
+      "first_departure": "05:31",
+      "last_departure": "22:06",
+      "by_hour": {
+        "5": 22,
+        "6": 48,
+        "7": 48,
+        "8": 48,
+        "9": 48,
+        "10": 48,
+        "11": 48,
+        "12": 48,
+        "13": 48,
+        "14": 48,
+        "15": 48,
+        "16": 48,
+        "17": 48,
+        "18": 48,
+        "19": 48,
+        "20": 48,
+        "21": 48,
+        "22": 4
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 12,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 1
+        },
+        "MMO": {
+          "5": 10,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 70,
+          "departures_per_hour": 35.0,
+          "implied_headway_min_all_routes": 1.71,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 36,
+              "departures_per_hour": 18.0,
+              "implied_headway_min": 3.33
+            },
+            "MMO": {
+              "scheduled_departures": 34,
+              "departures_per_hour": 17.0,
+              "implied_headway_min": 3.53
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 96,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 336,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 144,
+          "departures_per_hour": 48.0,
+          "implied_headway_min_all_routes": 1.25,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 148,
+          "departures_per_hour": 29.6,
+          "implied_headway_min_all_routes": 2.03,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 73,
+              "departures_per_hour": 14.6,
+              "implied_headway_min": 4.11
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "gtfs_stop_ids_observed": [
+        "834"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 397,
+      "first_departure": "05:33",
+      "last_departure": "22:03",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 2
+      },
+      "by_route_hour": {
+        "MMI": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        },
+        "MMO": {}
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            },
+            "MMO": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            },
+            "MMO": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 74,
+          "departures_per_hour": 14.8,
+          "implied_headway_min_all_routes": 4.05,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            },
+            "MMO": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "gtfs_stop_ids_observed": [
+        "815"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 397,
+      "first_departure": "05:32",
+      "last_departure": "22:02",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 2
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 74,
+          "departures_per_hour": 14.8,
+          "implied_headway_min_all_routes": 4.05,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "gtfs_stop_ids_observed": [
+        "806",
+        "816"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:33",
+      "last_departure": "22:05",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "gtfs_stop_ids_observed": [
+        "805",
+        "817"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:34",
+      "last_departure": "22:04",
+      "by_hour": {
+        "5": 12,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 2
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 12,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 2
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 36,
+          "departures_per_hour": 18.0,
+          "implied_headway_min_all_routes": 3.33,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 36,
+              "departures_per_hour": 18.0,
+              "implied_headway_min": 3.33
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 74,
+          "departures_per_hour": 14.8,
+          "implied_headway_min_all_routes": 4.05,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 74,
+              "departures_per_hour": 14.8,
+              "implied_headway_min": 4.05
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "gtfs_stop_ids_observed": [
+        "804",
+        "818"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:33",
+      "last_departure": "22:05",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "gtfs_stop_ids_observed": [
+        "803",
+        "819"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:32",
+      "last_departure": "22:06",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "gtfs_stop_ids_observed": [
+        "802",
+        "820"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:31",
+      "last_departure": "22:07",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "gtfs_stop_ids_observed": [
+        "801",
+        "821"
+      ],
+      "provenance_class": "derived",
+      "data_nature": "administrative_record",
+      "source": "GTFS static feed (Miami-Dade Transit), Metromover routes",
+      "is_operated_service": false,
+      "is_capacity": false,
+      "is_ridership": false,
+      "note": "scheduled departures aggregated from stop_times through the stop-to-station crosswalk; the timetable is not evidence of operated service, vehicle capacity or passenger demand",
+      "day_type": {
+        "service_id": "11",
+        "days": [
+          "monday",
+          "tuesday",
+          "wednesday",
+          "thursday",
+          "friday"
+        ],
+        "valid_from": "20231113",
+        "valid_to": "20261231",
+        "calendar_exceptions": 0
+      },
+      "scheduled_departures_weekday_total": 398,
+      "first_departure": "05:30",
+      "last_departure": "22:08",
+      "by_hour": {
+        "5": 11,
+        "6": 24,
+        "7": 24,
+        "8": 24,
+        "9": 24,
+        "10": 24,
+        "11": 24,
+        "12": 24,
+        "13": 24,
+        "14": 24,
+        "15": 24,
+        "16": 24,
+        "17": 24,
+        "18": 24,
+        "19": 24,
+        "20": 24,
+        "21": 24,
+        "22": 3
+      },
+      "by_route_hour": {
+        "MMI": {},
+        "MMO": {
+          "5": 11,
+          "6": 24,
+          "7": 24,
+          "8": 24,
+          "9": 24,
+          "10": 24,
+          "11": 24,
+          "12": 24,
+          "13": 24,
+          "14": 24,
+          "15": 24,
+          "16": 24,
+          "17": 24,
+          "18": 24,
+          "19": 24,
+          "20": 24,
+          "21": 24,
+          "22": 3
+        }
+      },
+      "periods": {
+        "early": {
+          "hours": [
+            5,
+            7
+          ],
+          "scheduled_departures": 35,
+          "departures_per_hour": 17.5,
+          "implied_headway_min_all_routes": 3.43,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 35,
+              "departures_per_hour": 17.5,
+              "implied_headway_min": 3.43
+            }
+          },
+          "value_status": "value"
+        },
+        "am_peak": {
+          "hours": [
+            7,
+            9
+          ],
+          "scheduled_departures": 48,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 48,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "midday": {
+          "hours": [
+            9,
+            16
+          ],
+          "scheduled_departures": 168,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 168,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "pm_peak": {
+          "hours": [
+            16,
+            19
+          ],
+          "scheduled_departures": 72,
+          "departures_per_hour": 24.0,
+          "implied_headway_min_all_routes": 2.5,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 72,
+              "departures_per_hour": 24.0,
+              "implied_headway_min": 2.5
+            }
+          },
+          "value_status": "value"
+        },
+        "evening": {
+          "hours": [
+            19,
+            24
+          ],
+          "scheduled_departures": 75,
+          "departures_per_hour": 15.0,
+          "implied_headway_min_all_routes": 4.0,
+          "by_route": {
+            "MMI": {
+              "scheduled_departures": 0,
+              "departures_per_hour": 0.0,
+              "implied_headway_min": null
+            },
+            "MMO": {
+              "scheduled_departures": 75,
+              "departures_per_hour": 15.0,
+              "implied_headway_min": 4.0
+            }
+          },
+          "value_status": "value"
+        }
+      },
+      "routes": {
+        "MMI": "METROMOVER INNER LOOP",
+        "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+      },
+      "direction_note": "loop routes; the feed does not state platform/direction per stop — headways are per route as scheduled at the station's stops"
+    }
+  ]
+}

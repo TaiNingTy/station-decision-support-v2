@@ -1,0 +1,80 @@
+{
+  "schema_version": "proposal-2.0",
+  "status": "integration_proposal_not_installed_in_app",
+  "production_region": null,
+  "analysis_area_geojson": null,
+  "analysis_year": null,
+  "service_population": null,
+  "missing_value_policy": "null_with_reason_never_zero_or_synthetic_fallback",
+  "B1_zoning": {
+    "separate_fields": ["jurisdiction", "source_zone_code", "source_zone_label", "zone_effective_date", "observed_land_use", "development_status", "normalized_land_use", "mapping_version", "mapping_confidence", "mapping_reason"],
+    "normalized_classes": ["residential", "commercial_retail", "office", "mixed_use", "industrial_unspecified", "industrial_manufacturing", "logistics_warehouse", "education", "healthcare", "open_space", "transport_facility", "transport_right_of_way", "other", "unknown"],
+    "blanket_demand_exclusion_classes": [],
+    "separate_decisions": ["person_trip_in_scope", "site_buildability", "boarding_accessibility", "freight_movement", "through_movement"],
+    "legacy_crosswalk": {
+      "residential": "residential", "commercial": "commercial_retail", "office": "office", "mixed": "mixed_use", "industrial": "industrial_unspecified", "highway": "transport_right_of_way", "interchange": "unknown"
+    },
+    "crosswalk_note": "Legacy labels are provisional display mappings, not legal zoning determinations. Interchange requires clarification: road junction vs passenger transfer facility. Industrial jobs remain eligible for demand analysis when in service scope."
+  },
+  "B2_demographics": {
+    "resident_population": null,
+    "resident_employed_people": null,
+    "workplace_jobs": null,
+    "median_household_income": null,
+    "household_income_threshold_share": null,
+    "jobs_to_employed_residents_ratio": null,
+    "commute_departure_peak_share": null,
+    "required_metric_metadata": ["value", "unit", "geography_id", "geography_type", "boundary_version", "source_year", "source_url", "retrieved_at", "population_basis", "method", "status", "missing_reason"],
+    "income_metadata": ["currency", "period", "price_year", "person_or_household", "threshold_operator", "threshold_value", "denominator"],
+    "ratio_definition": "workplace jobs / employed residents within the same boundary and reference period; source concepts must be compatible",
+    "income_role": "aggregate affordability / distributional analysis; not a gate for access to service",
+    "aggregation_policy": "sum compatible counts; recalculate ratios from components; never average medians to produce an aggregate median"
+  },
+  "B3_accessibility": {
+    "profile": "neighbourhood_access",
+    "required_categories": ["school", "clinic", "grocery", "park"],
+    "categories_status": "user_product_profile_not_universal_planning_standard",
+    "additional_categories": ["childcare", "pharmacy", "public_transport", "employment"],
+    "walk_time_budget_minutes": 15,
+    "routing_method": "pedestrian_network_to_verified_entrance",
+    "walk_speed_mps": {"value": 1.2, "status": "scenario_assumption", "sensitivity_values": [0.8, 1.2, 1.3333333333]},
+    "legacy_1200m": "display/reference only; not an isochrone or guaranteed accessible coverage",
+    "include_costs": ["walking", "crossing_wait", "vertical_access", "entrance_access"],
+    "poi_checks": ["canonical_poi_id", "source_id", "parent_site_id", "category", "public_access", "opening_hours", "operating_status", "entrance_geometry", "last_verified_at"],
+    "unknown_path_status": "unknown_not_unreachable",
+    "coverage_aggregation": "union reachable origins across stations before counting population"
+  },
+  "B4_network": {
+    "separate_fields": ["network_mode", "functional_class", "structure", "freight_role", "access_control", "pedestrian_access", "crossing_type", "curb_access", "speed_limit", "clearance", "source_date"],
+    "network_modes": ["road", "pedestrian", "rail", "tram", "ferry"],
+    "structures": ["at_grade", "bridge", "elevated", "tunnel", "unknown"],
+    "curb_access_states": ["permitted", "prohibited", "conditional", "unknown"],
+    "legacy_non_target_frontage": "replace with verified entrance/path/boarding feasibility; do not erase adjacent population or employment",
+    "unknown_restriction": "requires_review"
+  },
+  "B5_demand": {
+    "outputs": ["activity_presence", "all_person_trip_od", "addressable_service_trip_od", "predicted_boardings", "observed_boardings"],
+    "grid_rate_unit": "person_trips/hour/cell",
+    "cell_area_m2": null,
+    "spatial_crs": null,
+    "grid_definition": null,
+    "timezone": null,
+    "time_window": null,
+    "day_type": null,
+    "source_resolution": null,
+    "required_fields": ["origin_id", "destination_id", "period", "timezone", "trip_purpose", "unit", "value", "source_resolution", "status", "method", "source_url", "sample_size", "coverage", "uncertainty"],
+    "no_raw_od_fallback": "show separately labelled opportunity index or an explicitly modelled estimate; leave observed demand unavailable",
+    "allocation_rule": "forecast = compatible OD person trips × addressable fraction × calibrated service-choice probability; preserve units and avoid applying the same adjustment twice",
+    "synthetic_defaults_in_production": false,
+    "case_study_heatmaps_as_raw_counts": false,
+    "gtfs_schedule_as_ridership": false
+  },
+  "B6_hubs": {
+    "potential_hubs": [],
+    "served_hubs": [],
+    "hub_types": ["airport_terminal", "rail_station", "metro_interchange", "bus_terminal", "tram_interchange", "ferry_terminal", "park_and_ride", "employment_campus"],
+    "required_fields": ["hub_id", "hub_type", "name", "parent_hub_id", "entrance_geometry", "operational_status", "source_id", "source_url", "valid_from", "last_verified_at"],
+    "served_evidence": ["selected_service_id", "stop_or_entrance_id", "service_date", "service_window", "verified_transfer_path", "transfer_time_minutes", "feasibility_status"],
+    "served_definition": "Selected service reaches a usable stop/entrance with a feasible transfer during the specified service window; proximity alone is insufficient"
+  }
+}

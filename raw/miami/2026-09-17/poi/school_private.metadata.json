@@ -1,0 +1,783 @@
+{
+ "currentVersion": 11.1,
+ "cimVersion": "3.1.0",
+ "id": 24,
+ "name": "Private Schools @ PrivateSchool",
+ "type": "Feature Layer",
+ "description": "",
+ "geometryType": "esriGeometryPoint",
+ "sourceSpatialReference": {
+  "wkid": 102658,
+  "latestWkid": 2236,
+  "xyTolerance": 0.00204800000190735,
+  "zTolerance": 1.9999999999999998E-5,
+  "mTolerance": 1.9999999999999998E-5,
+  "falseX": -1.77912999990048E7,
+  "falseY": -4.16453999999997E7,
+  "xyUnits": 3906.2499963620203,
+  "falseZ": 0,
+  "zUnits": 1,
+  "falseM": 0,
+  "mUnits": 1
+ },
+ "copyrightText": "",
+ "parentLayer": {
+  "id": 21,
+  "name": "Education"
+ },
+ "subLayers": [],
+ "minScale": 100000,
+ "maxScale": 0,
+ "referenceScale": 0.0,
+ "drawingInfo": {
+  "renderer": {
+   "type": "simple",
+   "symbol": {
+    "type": "esriPMS",
+    "url": "368aa8aab3fcfebdd945c8b4efee97fb",
+    "imageData": "iVBORw0KGgoAAAANSUhEUgAAAA8AAAAXCAYAAADUUxW8AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAA/UlEQVQ4jWNhoACwDELNauF7GPjl2xlOd+0lXfO3l+YMbDy7GRQ8bzMI62YwnO3aT7xmNt6/DC5zGBk+3FFjON2+h0HR6zaDgG4aw/nOQ4Q1w4CACgOD61wmhguT1BlOt+9jMCn1YzjTvY04zQ+2MzCcn/iLgUNoD4N+RiLDsYZXhG3+/oaFYb37LwYO4f0MEsbxDCfbXhLvZ0bGLwwSJvrYNBHWzMT+E5/GwZrC6KdZzvUxAwuXIJz/6yMHg5L/Fzj/96d3DI/3y2HXzMbDweCzjhvNcAR/tf0vGjmbIs0/3jEy7E37i1Plv9//cGt+clCE4clBMm0mA1CkGQCrQkoS6B1pTAAAAABJRU5ErkJggg==",
+    "contentType": "image/png",
+    "width": 11,
+    "height": 17,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0
+   }
+  },
+  "scaleSymbols": true,
+  "transparency": 0,
+  "labelingInfo": [
+   {
+    "labelExpression": "[Name]",
+    "labelPlacement": "esriServerPointLabelPlacementBelowRight",
+    "deconflictionStrategy": "dynamic",
+    "removeDuplicates": "none",
+    "stackLabel": false,
+    "useCodedValues": true,
+    "maxScale": 0,
+    "minScale": 40000,
+    "name": "Default",
+    "priority": 75,
+    "symbol": {
+     "type": "esriTS",
+     "color": [
+      0,
+      77,
+      168,
+      255
+     ],
+     "backgroundColor": null,
+     "borderLineColor": null,
+     "borderLineSize": null,
+     "verticalAlignment": "bottom",
+     "horizontalAlignment": "left",
+     "rightToLeft": false,
+     "angle": 0,
+     "xoffset": 0,
+     "yoffset": 0,
+     "kerning": true,
+     "haloColor": [
+      255,
+      255,
+      255,
+      255
+     ],
+     "haloSize": 1,
+     "font": {
+      "family": "Verdana",
+      "size": 8,
+      "style": "normal",
+      "weight": "bold",
+      "decoration": "none"
+     }
+    }
+   }
+  ]
+ },
+ "defaultVisibility": false,
+ "extent": {
+  "xmin": 720965.3120600954,
+  "ymin": 403892.8957377672,
+  "xmax": 944556.5908603296,
+  "ymax": 596256.3124929145,
+  "spatialReference": {
+   "wkid": 102658,
+   "latestWkid": 2236,
+   "xyTolerance": 3.70209105830001E-4,
+   "zTolerance": 1.9999999999999998E-5,
+   "mTolerance": 0.001,
+   "falseX": -17791300,
+   "falseY": -41645400,
+   "xyUnits": 1.372494229425764E8,
+   "falseZ": 0,
+   "zUnits": 400000,
+   "falseM": -100000,
+   "mUnits": 10000
+  }
+ },
+ "hasAttachments": false,
+ "htmlPopupType": "esriServerHTMLPopupTypeNone",
+ "displayField": "NAME",
+ "typeIdField": null,
+ "subtypeFieldName": null,
+ "subtypeField": null,
+ "defaultSubtypeCode": null,
+ "fields": [
+  {
+   "name": "OBJECTID",
+   "type": "esriFieldTypeOID",
+   "alias": "OBJECTID",
+   "domain": null
+  },
+  {
+   "name": "NAME",
+   "type": "esriFieldTypeString",
+   "alias": "Name",
+   "length": 75,
+   "domain": null
+  },
+  {
+   "name": "ADDRESS",
+   "type": "esriFieldTypeString",
+   "alias": "Address",
+   "length": 50,
+   "domain": null
+  },
+  {
+   "name": "UNIT",
+   "type": "esriFieldTypeString",
+   "alias": "Unit",
+   "length": 30,
+   "domain": null
+  },
+  {
+   "name": "CITY",
+   "type": "esriFieldTypeString",
+   "alias": "City",
+   "length": 25,
+   "domain": {
+    "type": "codedValue",
+    "name": "MunicipalityNamePC",
+    "description": "Municipality Name Proper Case",
+    "codedValues": [
+     {
+      "name": "Aventura",
+      "code": "Aventura"
+     },
+     {
+      "name": "Bal Harbour",
+      "code": "Bal Harbour"
+     },
+     {
+      "name": "Bay Harbor Islands",
+      "code": "Bay Harbor Islands"
+     },
+     {
+      "name": "Biscayne Park",
+      "code": "Biscayne Park"
+     },
+     {
+      "name": "Coral Gables",
+      "code": "Coral Gables"
+     },
+     {
+      "name": "Doral",
+      "code": "Doral"
+     },
+     {
+      "name": "El Portal",
+      "code": "El Portal"
+     },
+     {
+      "name": "Florida City",
+      "code": "Florida City"
+     },
+     {
+      "name": "Golden Beach",
+      "code": "Golden Beach"
+     },
+     {
+      "name": "Hialeah",
+      "code": "Hialeah"
+     },
+     {
+      "name": "Hialeah Gardens",
+      "code": "Hialeah Gardens"
+     },
+     {
+      "name": "Homestead",
+      "code": "Homestead"
+     },
+     {
+      "name": "Indian Creek Village",
+      "code": "Indian Creek Village"
+     },
+     {
+      "name": "Key Biscayne",
+      "code": "Key Biscayne"
+     },
+     {
+      "name": "Medley",
+      "code": "Medley"
+     },
+     {
+      "name": "Miami",
+      "code": "Miami"
+     },
+     {
+      "name": "Miami Gardens",
+      "code": "Miami Gardens"
+     },
+     {
+      "name": "Miami Lakes",
+      "code": "Miami Lakes"
+     },
+     {
+      "name": "Miami Shores",
+      "code": "Miami Shores"
+     },
+     {
+      "name": "Miami Springs",
+      "code": "Miami Springs"
+     },
+     {
+      "name": "North Bay Village",
+      "code": "North Bay Village"
+     },
+     {
+      "name": "North Miami",
+      "code": "North Miami"
+     },
+     {
+      "name": "North Miami Beach",
+      "code": "North Miami Beach"
+     },
+     {
+      "name": "Opa-Locka",
+      "code": "Opa-Locka"
+     },
+     {
+      "name": "Palmetto Bay",
+      "code": "Palmetto Bay"
+     },
+     {
+      "name": "Pinecrest",
+      "code": "Pinecrest"
+     },
+     {
+      "name": "South Miami",
+      "code": "South Miami"
+     },
+     {
+      "name": "Sunny Isles Beach",
+      "code": "Sunny Isles Beach"
+     },
+     {
+      "name": "Surfside",
+      "code": "Surfside"
+     },
+     {
+      "name": "Sweetwater",
+      "code": "Sweetwater"
+     },
+     {
+      "name": "Virginia Gardens",
+      "code": "Virginia Gardens"
+     },
+     {
+      "name": "West Miami",
+      "code": "West Miami"
+     },
+     {
+      "name": "Miami-Dade",
+      "code": "Miami-Dade"
+     },
+     {
+      "name": "Miami Beach",
+      "code": "Miami Beach"
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDuplicate"
+   }
+  },
+  {
+   "name": "ZIPCODE",
+   "type": "esriFieldTypeInteger",
+   "alias": "Zip Code",
+   "domain": {
+    "type": "codedValue",
+    "name": "ZIPCode",
+    "description": "ZIPCode",
+    "codedValues": [
+     {
+      "name": "33010",
+      "code": 33010
+     },
+     {
+      "name": "33012",
+      "code": 33012
+     },
+     {
+      "name": "33013",
+      "code": 33013
+     },
+     {
+      "name": "33014",
+      "code": 33014
+     },
+     {
+      "name": "33015",
+      "code": 33015
+     },
+     {
+      "name": "33016",
+      "code": 33016
+     },
+     {
+      "name": "33018",
+      "code": 33018
+     },
+     {
+      "name": "33030",
+      "code": 33030
+     },
+     {
+      "name": "33031",
+      "code": 33031
+     },
+     {
+      "name": "33032",
+      "code": 33032
+     },
+     {
+      "name": "33033",
+      "code": 33033
+     },
+     {
+      "name": "33034",
+      "code": 33034
+     },
+     {
+      "name": "33035",
+      "code": 33035
+     },
+     {
+      "name": "33039",
+      "code": 33039
+     },
+     {
+      "name": "33054",
+      "code": 33054
+     },
+     {
+      "name": "33055",
+      "code": 33055
+     },
+     {
+      "name": "33056",
+      "code": 33056
+     },
+     {
+      "name": "33109",
+      "code": 33109
+     },
+     {
+      "name": "33122",
+      "code": 33122
+     },
+     {
+      "name": "33125",
+      "code": 33125
+     },
+     {
+      "name": "33126",
+      "code": 33126
+     },
+     {
+      "name": "33127",
+      "code": 33127
+     },
+     {
+      "name": "33128",
+      "code": 33128
+     },
+     {
+      "name": "33129",
+      "code": 33129
+     },
+     {
+      "name": "33130",
+      "code": 33130
+     },
+     {
+      "name": "33131",
+      "code": 33131
+     },
+     {
+      "name": "33132",
+      "code": 33132
+     },
+     {
+      "name": "33133",
+      "code": 33133
+     },
+     {
+      "name": "33134",
+      "code": 33134
+     },
+     {
+      "name": "33135",
+      "code": 33135
+     },
+     {
+      "name": "33136",
+      "code": 33136
+     },
+     {
+      "name": "33137",
+      "code": 33137
+     },
+     {
+      "name": "33138",
+      "code": 33138
+     },
+     {
+      "name": "33139",
+      "code": 33139
+     },
+     {
+      "name": "33140",
+      "code": 33140
+     },
+     {
+      "name": "33141",
+      "code": 33141
+     },
+     {
+      "name": "33142",
+      "code": 33142
+     },
+     {
+      "name": "33143",
+      "code": 33143
+     },
+     {
+      "name": "33144",
+      "code": 33144
+     },
+     {
+      "name": "33145",
+      "code": 33145
+     },
+     {
+      "name": "33146",
+      "code": 33146
+     },
+     {
+      "name": "33147",
+      "code": 33147
+     },
+     {
+      "name": "33149",
+      "code": 33149
+     },
+     {
+      "name": "33150",
+      "code": 33150
+     },
+     {
+      "name": "33154",
+      "code": 33154
+     },
+     {
+      "name": "33155",
+      "code": 33155
+     },
+     {
+      "name": "33156",
+      "code": 33156
+     },
+     {
+      "name": "33157",
+      "code": 33157
+     },
+     {
+      "name": "33158",
+      "code": 33158
+     },
+     {
+      "name": "33160",
+      "code": 33160
+     },
+     {
+      "name": "33161",
+      "code": 33161
+     },
+     {
+      "name": "33162",
+      "code": 33162
+     },
+     {
+      "name": "33165",
+      "code": 33165
+     },
+     {
+      "name": "33166",
+      "code": 33166
+     },
+     {
+      "name": "33167",
+      "code": 33167
+     },
+     {
+      "name": "33168",
+      "code": 33168
+     },
+     {
+      "name": "33169",
+      "code": 33169
+     },
+     {
+      "name": "33170",
+      "code": 33170
+     },
+     {
+      "name": "33172",
+      "code": 33172
+     },
+     {
+      "name": "33173",
+      "code": 33173
+     },
+     {
+      "name": "33174",
+      "code": 33174
+     },
+     {
+      "name": "33175",
+      "code": 33175
+     },
+     {
+      "name": "33176",
+      "code": 33176
+     },
+     {
+      "name": "33177",
+      "code": 33177
+     },
+     {
+      "name": "33178",
+      "code": 33178
+     },
+     {
+      "name": "33179",
+      "code": 33179
+     },
+     {
+      "name": "33180",
+      "code": 33180
+     },
+     {
+      "name": "33181",
+      "code": 33181
+     },
+     {
+      "name": "33182",
+      "code": 33182
+     },
+     {
+      "name": "33183",
+      "code": 33183
+     },
+     {
+      "name": "33184",
+      "code": 33184
+     },
+     {
+      "name": "33185",
+      "code": 33185
+     },
+     {
+      "name": "33186",
+      "code": 33186
+     },
+     {
+      "name": "33187",
+      "code": 33187
+     },
+     {
+      "name": "33189",
+      "code": 33189
+     },
+     {
+      "name": "33190",
+      "code": 33190
+     },
+     {
+      "name": "33192",
+      "code": 33192
+     },
+     {
+      "name": "33193",
+      "code": 33193
+     },
+     {
+      "name": "33194",
+      "code": 33194
+     },
+     {
+      "name": "33196",
+      "code": 33196
+     }
+    ],
+    "mergePolicy": "esriMPTDefaultValue",
+    "splitPolicy": "esriSPTDefaultValue"
+   }
+  },
+  {
+   "name": "PHONE",
+   "type": "esriFieldTypeString",
+   "alias": "Phone",
+   "length": 15,
+   "domain": null
+  },
+  {
+   "name": "GRDLEVEL",
+   "type": "esriFieldTypeString",
+   "alias": "Grade Level",
+   "length": 28,
+   "domain": null
+  },
+  {
+   "name": "ENROLLMENT",
+   "type": "esriFieldTypeInteger",
+   "alias": "ENROLLMENT",
+   "domain": null
+  },
+  {
+   "name": "Shape",
+   "type": "esriFieldTypeGeometry",
+   "alias": "Shape",
+   "domain": null
+  },
+  {
+   "name": "STATUS",
+   "type": "esriFieldTypeString",
+   "alias": "STATUS",
+   "length": 10,
+   "domain": null
+  },
+  {
+   "name": "WEBSITE",
+   "type": "esriFieldTypeString",
+   "alias": "WEBSITE",
+   "length": 100,
+   "domain": null
+  },
+  {
+   "name": "GlobalID",
+   "type": "esriFieldTypeGlobalID",
+   "alias": "GlobalID",
+   "length": 38,
+   "domain": null
+  },
+  {
+   "name": "EMAIL",
+   "type": "esriFieldTypeString",
+   "alias": "EMAIL",
+   "length": 80,
+   "domain": null
+  }
+ ],
+ "geometryField": {
+  "name": "Shape",
+  "type": "esriFieldTypeGeometry",
+  "alias": "Shape"
+ },
+ "indexes": [
+  {
+   "name": "R13092_pk",
+   "fields": "OBJECTID",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  },
+  {
+   "name": "UUID_13092",
+   "fields": "GlobalID",
+   "isAscending": true,
+   "isUnique": false,
+   "description": ""
+  },
+  {
+   "name": "S10451_idx",
+   "fields": "Shape",
+   "isAscending": true,
+   "isUnique": true,
+   "description": ""
+  }
+ ],
+ "subtypes": [],
+ "relationships": [],
+ "canModifyLayer": true,
+ "canScaleSymbols": false,
+ "hasLabels": true,
+ "capabilities": "Map,Query,Data",
+ "maxRecordCount": 1000,
+ "supportsStatistics": true,
+ "supportsExceedsLimitStatistics": true,
+ "supportsAdvancedQueries": true,
+ "supportedQueryFormats": "JSON, geoJSON, PBF",
+ "isDataVersioned": false,
+ "ownershipBasedAccessControlForFeatures": {"allowOthersToQuery": true},
+ "useStandardizedQueries": true,
+ "supportedSpatialRelationships": [
+  "esriSpatialRelIntersects",
+  "esriSpatialRelContains",
+  "esriSpatialRelCrosses",
+  "esriSpatialRelEnvelopeIntersects",
+  "esriSpatialRelIndexIntersects",
+  "esriSpatialRelOverlaps",
+  "esriSpatialRelTouches",
+  "esriSpatialRelWithin",
+  "esriSpatialRelRelation"
+ ],
+ "advancedQueryCapabilities": {
+  "useStandardizedQueries": true,
+  "supportsStatistics": true,
+  "supportsPercentileStatistics": true,
+  "supportsHavingClause": true,
+  "supportsOrderBy": true,
+  "supportsDistinct": true,
+  "supportsCountDistinct": true,
+  "supportsPagination": true,
+  "supportsLod": false,
+  "supportsQueryWithLodSR": false,
+  "supportsTrueCurve": true,
+  "supportsQueryWithDatumTransformation": true,
+  "supportsReturningQueryExtent": true,
+  "supportsQueryWithDistance": true,
+  "supportsSqlExpression": true,
+  "supportsTimeRelation": true,
+  "supportsSqlFormat": false,
+  "supportsQueryAnalytic": true
+ },
+ "supportsDatumTransformation": true,
+ "advancedQueryAnalyticCapabilities": {
+  "supportsLinearRegression": true,
+  "supportsAsync": false,
+  "supportsPercentileAnalytic": true
+ },
+ "dateFieldsTimeReference": null,
+ "preferredTimeReference": null,
+ "datesInUnknownTimezone": false,
+ "hasMetadata": false,
+ "isDataArchived": false,
+ "archivingInfo": {
+  "supportsQueryWithHistoricMoment": false,
+  "startArchivingMoment": -1
+ },
+ "supportsCoordinatesQuantization": true,
+ "supportsDynamicLegends": true
+}

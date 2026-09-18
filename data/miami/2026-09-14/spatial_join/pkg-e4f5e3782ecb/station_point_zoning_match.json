@@ -1,0 +1,260 @@
+{
+  "schema_version": "miami-station-point-zoning-match/1.0",
+  "built_on": "2026-09-14",
+  "config_sha256": "ecfc00408d13e70259b76f11804bd584d3e4de9fac7d19a347f3e49c66c15f36",
+  "upstream": {
+    "stage": "station_master",
+    "manifest": "build_manifest.json",
+    "manifest_sha256": "ee1760017b797c4f20a3afe1ef27921648e347b116f7478e52b8c56b20f315be",
+    "station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+    "study_window_sha256": "b9ec497124aeb49d46352856718aaa35cf17801298f03afc3c92b0f0ff905231",
+    "zoning_raw_sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2"
+  },
+  "note": "A reference point not covered by any zoning polygon (e.g. in right-of-way) does not invalidate the band profile and does not imply the station is unlawful or without demand; no nearest-neighbour fill is applied.",
+  "stations": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "matched": true,
+      "matched_FIDs": [
+        102
+      ],
+      "matched_M21_ZONE": [
+        "T6-24A-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "matched": true,
+      "matched_FIDs": [
+        120
+      ],
+      "matched_M21_ZONE": [
+        "T6-36B-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "matched": true,
+      "matched_FIDs": [
+        97
+      ],
+      "matched_M21_ZONE": [
+        "CS"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "matched": true,
+      "matched_FIDs": [
+        58
+      ],
+      "matched_M21_ZONE": [
+        "T6-60A-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "matched": true,
+      "matched_FIDs": [
+        58
+      ],
+      "matched_M21_ZONE": [
+        "T6-60A-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "matched": false,
+      "matched_FIDs": [],
+      "matched_M21_ZONE": [],
+      "status": "NOT_COVERED_BY_ANY_SOURCE_POLYGON"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "matched": true,
+      "matched_FIDs": [
+        98
+      ],
+      "matched_M21_ZONE": [
+        "CI"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "matched": true,
+      "matched_FIDs": [
+        951
+      ],
+      "matched_M21_ZONE": [
+        "CI"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "matched": true,
+      "matched_FIDs": [
+        997
+      ],
+      "matched_M21_ZONE": [
+        "T6-80-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "matched": true,
+      "matched_FIDs": [
+        987
+      ],
+      "matched_M21_ZONE": [
+        "T6-48B-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "matched": true,
+      "matched_FIDs": [
+        987
+      ],
+      "matched_M21_ZONE": [
+        "T6-48B-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "matched": true,
+      "matched_FIDs": [
+        985
+      ],
+      "matched_M21_ZONE": [
+        "T6-48A-O"
+      ],
+      "status": "MATCHED"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "matched": false,
+      "matched_FIDs": [],
+      "matched_M21_ZONE": [],
+      "status": "NOT_COVERED_BY_ANY_SOURCE_POLYGON"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "matched": true,
+      "matched_FIDs": [
+        985
+      ],
+      "matched_M21_ZONE": [
+        "T6-48A-O"
+      ],
+      "status": "MATCHED"
+    }
+  ]
+}

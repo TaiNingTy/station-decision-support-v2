@@ -1,0 +1,16 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SOURCE_NAME_ANOMALY",
+  "input_stop_records": 43,
+  "physical_station_entities": 21,
+  "mapped_stop_records": 43,
+  "unmapped_stop_records": 0,
+  "duplicate_assignments": 0,
+  "source_name_anomaly_stop_ids": [
+    "832"
+  ],
+  "service_patterns": 6,
+  "zoning_polygons": 235,
+  "official_agency_confirmation": false,
+  "engineering_validation": "NOT_PERFORMED",
+  "ai_run": "NOT_PERFORMED"
+}

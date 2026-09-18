@@ -1,0 +1,4 @@
+LEHD Origin-Destination Employment Statistics (LODES)
+FL (Florida)
+Data Vintage: 20251202_1657
+Release Format Version 8.4

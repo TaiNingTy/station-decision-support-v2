@@ -1,0 +1,39 @@
+{
+  "stage": "input_package",
+  "built_on": "2026-09-15",
+  "reason": "validation failed",
+  "current_package_untouched": true,
+  "current_pointer_untouched": true,
+  "validation": {
+    "build_status": "FAILED",
+    "validation_status": "FAIL",
+    "ready_for_downstream": false,
+    "stations": 21,
+    "station_ids_consistent_across_layers": true,
+    "band_ring_areas_agree_across_layers": {
+      "max_deviation_m2": 0.0,
+      "pass": true
+    },
+    "land_areas_agree_demography_vs_jobs": {
+      "max_deviation_m2": 0.0,
+      "pass": true
+    },
+    "every_value_carries_value_status": false,
+    "pins_equal_current_pointers_at_build": true,
+    "required_layers_ready": true,
+    "optional_layers_present": {
+      "poi": false,
+      "walk_model": false
+    },
+    "config_inputs_acquired": {
+      "ridership_baseline": "acquired",
+      "service_baseline": "derived",
+      "hub_transfer_inflow": "not_acquired",
+      "road_guideway_roles": "not_acquired",
+      "platform_constructible_space": "assumed",
+      "vehicle_parameters": "assumed",
+      "platform_module_specification": "acquired"
+    },
+    "scope_statement": "PASS means the assembly is structurally consistent with its pinned layers. It is not a validation of the layers' numbers, not ridership, not a configuration result; the configuration inputs are not acquired."
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "build_status": "COMPLETED",
+  "geometry_validation_status": "PASS",
+  "ready_for_downstream": true,
+  "input_hash_checks": {
+    "station_master.geojson": true,
+    "study_window.geojson": true,
+    "zoning_study_window.geojson": true
+  },
+  "dependency_lock_ok": true,
+  "stations": 21,
+  "zoning_polygons": 235,
+  "profiles_bands": 63,
+  "all_projected_geometries_valid": true,
+  "window_margin_all_bands_inside": true,
+  "min_margin_m": 431.039046,
+  "min_margin_ft": 1414.17,
+  "band_non_overlap_and_additivity_pass": true,
+  "every_station_has_polygons_in_half_mile": true,
+  "clipped_never_exceeds_band": true,
+  "polygon_reconciliation": {
+    "hit_by_at_least_one_station": 146,
+    "unassigned_in_window": 89,
+    "multi_station": 112,
+    "total": 235,
+    "reconciles": true
+  },
+  "invalid_geometries_repaired": 2,
+  "evidence_rows": 1553,
+  "scope_statement": "PASS means the geometry and input-integrity checks listed here passed. It is not acceptance of the whole V2 input package, not agency confirmation, not a walk-catchment result and not an engineering validation.",
+  "window_statement": "All analysis bands lie within the queried study window; no truncation detected. This does not certify that every zoning polygon within the bands is complete or accurate, nor that uncovered area is water.",
+  "not_performed": [
+    "walk catchment",
+    "use-code mapping",
+    "demand allocation",
+    "berth or platform sizing",
+    "agency confirmation"
+  ]
+}

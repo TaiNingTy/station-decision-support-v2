@@ -1,0 +1,176 @@
+{
+  "stage": "poi",
+  "schema_version": "miami-poi-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "poi_source_manifest",
+      "path": "raw/miami/2026-09-17/poi/poi_source_manifest.json",
+      "sha256": "b23fe1df0e185ae74906ffa97be482e76180c39d04614ae6f0389a33b27be304"
+    },
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "name": "school_public.geojson",
+      "path": "raw/miami/2026-09-17/poi/school_public.geojson.json",
+      "sha256": "cc2dd5a78de3e61d47f3c57d7abfce0676ad5ef59b28a90c8117c622e1de9c9f"
+    },
+    {
+      "name": "school_charter.geojson",
+      "path": "raw/miami/2026-09-17/poi/school_charter.geojson.json",
+      "sha256": "7532687d1260ba394ecfdfae211fbf6dfd8f03b7251fc1da41bb470eb7efdd6c"
+    },
+    {
+      "name": "school_private.geojson",
+      "path": "raw/miami/2026-09-17/poi/school_private.geojson.json",
+      "sha256": "7939efb58946e24f8cf4135792a4b4198df3415355f098e5a4f0f06720a55b11"
+    },
+    {
+      "name": "park_city.geojson",
+      "path": "raw/miami/2026-09-17/poi/park_city.geojson.json",
+      "sha256": "143ef5aa0c3a9e66654747ddda3f4e9b798a09284ac4787d034db61983c04e49"
+    },
+    {
+      "name": "park_county.geojson",
+      "path": "raw/miami/2026-09-17/poi/park_county.geojson.json",
+      "sha256": "c158969752355af134004cc5de4471ec28f5c1a6a08be4fe36ae0fc6c7077d51"
+    },
+    {
+      "name": "clinic_fqhc.geojson",
+      "path": "raw/miami/2026-09-17/poi/clinic_fqhc.geojson.json",
+      "sha256": "0eb0c828230ec5f8455ac70a8815b10886d941f130158572a5fc5849b01ef48e"
+    },
+    {
+      "name": "clinic_free_standing.geojson",
+      "path": "raw/miami/2026-09-17/poi/clinic_free_standing.geojson.json",
+      "sha256": "faea5092af989e846976d9159c59110fec0d2cd990da5ae5d6ed28a0e047d3e6"
+    },
+    {
+      "name": "clinic_jhs_primary_care.geojson",
+      "path": "raw/miami/2026-09-17/poi/clinic_jhs_primary_care.geojson.json",
+      "sha256": "8b22f614f50c0c83e1ac07a03a41b3a89ee6f22c19efbd5dc252e4b99d25dd7c"
+    },
+    {
+      "name": "clinic_mental_health.geojson",
+      "path": "raw/miami/2026-09-17/poi/clinic_mental_health.geojson.json",
+      "sha256": "ed778c73ea51338d6576fb5992b189f2b94d9f3d5e199f46c1af520d6b0b3e6c"
+    },
+    {
+      "name": "clinic_school_based.geojson",
+      "path": "raw/miami/2026-09-17/poi/clinic_school_based.geojson.json",
+      "sha256": "ce1f8892d9356458f55899f8d1ce1336295ba36070c38090c07e74d635f01e00"
+    },
+    {
+      "name": "grocery_snap_all_types.geojson",
+      "path": "raw/miami/2026-09-17/poi/grocery_snap_all_types.geojson.json",
+      "sha256": "e0976389d08276131c22e27be8d51c7723df37c850da74402319174fc795c9e3"
+    },
+    {
+      "name": "osm_grocery_crosscheck.response",
+      "path": "raw/miami/2026-09-17/poi/osm_grocery_overpass.json",
+      "sha256": "fe4215789d1d3bfe2b24b13f853d275e1a530ec82b58c72a5a8f7c4d1516f222"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "demography",
+      "package_id": "pkg-64aa5fc6dcb8",
+      "manifest_sha256": "fde1c6c3489e26729d4bd0e0cc18c45425123d10cb760b995da337b0ce05d557"
+    }
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_poi.py",
+      "sha256": "8337411becc84b582b95948ceecd811994e28e10d8e26dbebd6a2757ca0b7dbd"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "bfbb57caa87bcd34d17baf068d7a17e63007ff28361654eb6a19cb85e0e1ff99"
+    }
+  ],
+  "config_sha256": "6ccf190666501a7c03ed1ce9e229445f56cced78ac2dccaef34eaa6d57fa5b8a",
+  "config": {
+    "categories": [
+      "school",
+      "clinic",
+      "grocery",
+      "park"
+    ],
+    "rules": {
+      "school": "county public schools with ENROLLMNT > 0 (School Board offices, garage, telecom complex, adult/technical college and zero-enrollment program sites excluded; virtual schools with enrollment stay because the source does not flag them) + charter + private",
+      "park": "City of Miami Park_Boundary_Base_Layer polygons + county park boundaries not overlapping a city polygon by more than 50 %",
+      "clinic": "county health-facility layers (FQHC, free-standing, JHS primary care, mental health, school-based); duplicates within 50 m with matching names dropped",
+      "grocery": "USDA SNAP retailers with Store_Type in ['Grocery Store', 'Super Store', 'Supermarket']; OSM cross-check only"
+    },
+    "distance": {
+      "type": "straight_line",
+      "origin": "GTFS reference point",
+      "unit_display": "ft / mi",
+      "search_extent": "study window"
+    },
+    "bands": {
+      "radii_ft": [
+        660,
+        1320,
+        2640
+      ],
+      "source": "demography package analysis_targets_26917.json"
+    },
+    "duplicate_distance_m": 50.0
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "PROJ-reported accuracy of the datum operation selected in THIS environment; not the precision of the source geometries or of the model"
+  },
+  "method_summary": "county/city/USDA facility layers categorised by recorded rules, counted per station band (points inside, park polygons intersecting) and nearest by straight line inside the study window; OSM as a grocery cross-check",
+  "contract": "V2_站点输入包字段契约.md §5; rules doc 规则 6",
+  "publish_policy": "content-addressed immutable package dir poi/pkg-<id>; readers resolve poi_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_poi_profile.json",
+      "sha256": "9aee0799f3162fe8288f3fdec5376bb892fa26f999ff4b1f323349ff856e77ba"
+    },
+    {
+      "file": "poi_features.json",
+      "sha256": "3e4996789b8a5de199489a8383bd0714031930e64ca864dd02752238c6cf7998"
+    },
+    {
+      "file": "poi_evidence.json",
+      "sha256": "c3ffa0c83b5e8ab7e2565c4c18d51689abcea4c1870dc43e39a398b36b86163c"
+    },
+    {
+      "file": "poi_validation.json",
+      "sha256": "2fa2e90f17e0e543bd803329925ef856d757dab39fbff4f6821fbe6715d3e76d"
+    }
+  ],
+  "package_id": "pkg-5db3cca81602",
+  "package_dir": "poi/pkg-5db3cca81602"
+}

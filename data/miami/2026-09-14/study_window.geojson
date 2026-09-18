@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "role": "data_extraction_window",
+        "definition": "Analyst-selected rectangle surrounding the station reference points",
+        "is_walk_catchment": false,
+        "is_approved_project_boundary": false,
+        "crs": "EPSG:4326"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -80.209,
+              25.749
+            ],
+            [
+              -80.175,
+              25.749
+            ],
+            [
+              -80.175,
+              25.801
+            ],
+            [
+              -80.209,
+              25.801
+            ],
+            [
+              -80.209,
+              25.749
+            ]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+{
+  "records": [
+    {
+      "route_id": "14456",
+      "shape_id": "123745",
+      "gtfs_stop_sequence": [
+        "795",
+        "796",
+        "797",
+        "798",
+        "799",
+        "800",
+        "811",
+        "812",
+        "813"
+      ],
+      "station_sequence": [
+        "MIA-MM-01",
+        "MIA-MM-02",
+        "MIA-MM-03",
+        "MIA-MM-04",
+        "MIA-MM-05",
+        "MIA-MM-06",
+        "MIA-MM-07",
+        "MIA-MM-08",
+        "MIA-MM-09"
+      ],
+      "trip_records_all_calendar_patterns": 596,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "School Board",
+        "Adrienne Arsht Center",
+        "Museum Park",
+        "Eleventh Street",
+        "Miami Worldcenter",
+        "Freedom Tower",
+        "College North",
+        "Wilkie D. Ferguson, Jr.",
+        "Government Center"
+      ]
+    },
+    {
+      "route_id": "14456",
+      "shape_id": "123746",
+      "gtfs_stop_sequence": [
+        "801",
+        "802",
+        "803",
+        "804",
+        "805",
+        "806",
+        "807",
+        "808",
+        "809",
+        "810",
+        "811",
+        "812",
+        "813"
+      ],
+      "station_sequence": [
+        "MIA-MM-21",
+        "MIA-MM-20",
+        "MIA-MM-19",
+        "MIA-MM-18",
+        "MIA-MM-17",
+        "MIA-MM-16",
+        "MIA-MM-13",
+        "MIA-MM-12",
+        "MIA-MM-11",
+        "MIA-MM-10",
+        "MIA-MM-07",
+        "MIA-MM-08",
+        "MIA-MM-09"
+      ],
+      "trip_records_all_calendar_patterns": 597,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "Financial District",
+        "Brickell",
+        "Tenth Street Promenade",
+        "Brickell City Centre",
+        "Fifth Street",
+        "Riverwalk",
+        "Knight Center",
+        "Bayfront Park",
+        "First Street",
+        "College Bayside",
+        "College North",
+        "Wilkie D. Ferguson, Jr.",
+        "Government Center"
+      ]
+    },
+    {
+      "route_id": "14456",
+      "shape_id": "123747",
+      "gtfs_stop_sequence": [
+        "813",
+        "815",
+        "822",
+        "823",
+        "824",
+        "825",
+        "826",
+        "827",
+        "828",
+        "829",
+        "796",
+        "831"
+      ],
+      "station_sequence": [
+        "MIA-MM-09",
+        "MIA-MM-15",
+        "MIA-MM-13",
+        "MIA-MM-12",
+        "MIA-MM-11",
+        "MIA-MM-10",
+        "MIA-MM-06",
+        "MIA-MM-05",
+        "MIA-MM-04",
+        "MIA-MM-03",
+        "MIA-MM-02",
+        "MIA-MM-01"
+      ],
+      "trip_records_all_calendar_patterns": 596,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "Government Center",
+        "Third Street",
+        "Knight Center",
+        "Bayfront Park",
+        "First Street",
+        "College Bayside",
+        "Freedom Tower",
+        "Miami Worldcenter",
+        "Eleventh Street",
+        "Museum Park",
+        "Adrienne Arsht Center",
+        "School Board"
+      ]
+    },
+    {
+      "route_id": "14456",
+      "shape_id": "123748",
+      "gtfs_stop_sequence": [
+        "813",
+        "815",
+        "816",
+        "817",
+        "818",
+        "819",
+        "820",
+        "821"
+      ],
+      "station_sequence": [
+        "MIA-MM-09",
+        "MIA-MM-15",
+        "MIA-MM-16",
+        "MIA-MM-17",
+        "MIA-MM-18",
+        "MIA-MM-19",
+        "MIA-MM-20",
+        "MIA-MM-21"
+      ],
+      "trip_records_all_calendar_patterns": 595,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "Government Center",
+        "Third Street",
+        "Riverwalk",
+        "Fifth Street",
+        "Brickell City Centre",
+        "Tenth Street Promenade",
+        "Brickell",
+        "Financial District"
+      ]
+    },
+    {
+      "route_id": "14457",
+      "shape_id": "123750",
+      "gtfs_stop_sequence": [
+        "832",
+        "833",
+        "834",
+        "813"
+      ],
+      "station_sequence": [
+        "MIA-MM-12",
+        "MIA-MM-13",
+        "MIA-MM-14",
+        "MIA-MM-09"
+      ],
+      "trip_records_all_calendar_patterns": 940,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "Bayfront Park",
+        "Knight Center",
+        "Miami Avenue",
+        "Government Center"
+      ]
+    },
+    {
+      "route_id": "14457",
+      "shape_id": "123751",
+      "gtfs_stop_sequence": [
+        "813",
+        "837",
+        "838",
+        "839",
+        "840",
+        "841"
+      ],
+      "station_sequence": [
+        "MIA-MM-09",
+        "MIA-MM-08",
+        "MIA-MM-07",
+        "MIA-MM-10",
+        "MIA-MM-11",
+        "MIA-MM-12"
+      ],
+      "trip_records_all_calendar_patterns": 937,
+      "interpretation": "scheduled_sequence_not_demand_or_surveyed_guideway",
+      "station_name_sequence": [
+        "Government Center",
+        "Wilkie D. Ferguson, Jr.",
+        "College North",
+        "College Bayside",
+        "First Street",
+        "Bayfront Park"
+      ]
+    }
+  ]
+}

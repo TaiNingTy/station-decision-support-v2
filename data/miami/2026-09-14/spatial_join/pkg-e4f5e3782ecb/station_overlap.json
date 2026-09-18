@@ -1,0 +1,5805 @@
+{
+  "schema_version": "miami-station-overlap/1.1",
+  "built_on": "2026-09-14",
+  "config_sha256": "ecfc00408d13e70259b76f11804bd584d3e4de9fac7d19a347f3e49c66c15f36",
+  "upstream": {
+    "stage": "station_master",
+    "manifest": "build_manifest.json",
+    "manifest_sha256": "ee1760017b797c4f20a3afe1ef27921648e347b116f7478e52b8c56b20f315be",
+    "station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+    "study_window_sha256": "b9ec497124aeb49d46352856718aaa35cf17801298f03afc3c92b0f0ff905231",
+    "zoning_raw_sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2"
+  },
+  "network": {
+    "network_half_mile_union_area_m2": 9245377.943285,
+    "sum_of_21_station_discs_m2": 42713321.33872,
+    "area_duplication_ratio": 4.619965,
+    "display": {
+      "union": {
+        "sq_ft": 99516420,
+        "acres": 2284.58,
+        "sq_mi": 3.57
+      },
+      "sum_of_discs": {
+        "sq_ft": 459762364,
+        "acres": 10554.69,
+        "sq_mi": 16.492
+      }
+    },
+    "note": "the network union is computed directly as a geometric union; it cannot be derived from the sum of discs minus pairwise intersections because three or more discs overlap (inclusion-exclusion truncated at pairs goes negative on this data)"
+  },
+  "half_mile_disc_pairwise_intersections": [
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-02",
+      "intersection_area_m2": 1217842.175806,
+      "display": {
+        "sq_ft": 13108744,
+        "acres": 300.94,
+        "sq_mi": 0.47
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-03",
+      "intersection_area_m2": 1020358.164293,
+      "display": {
+        "sq_ft": 10983044,
+        "acres": 252.14,
+        "sq_mi": 0.394
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-04",
+      "intersection_area_m2": 1162668.157149,
+      "display": {
+        "sq_ft": 12514856,
+        "acres": 287.3,
+        "sq_mi": 0.449
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-05",
+      "intersection_area_m2": 795754.312299,
+      "display": {
+        "sq_ft": 8565428,
+        "acres": 196.64,
+        "sq_mi": 0.307
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-06",
+      "intersection_area_m2": 520580.0758,
+      "display": {
+        "sq_ft": 5603477,
+        "acres": 128.64,
+        "sq_mi": 0.201
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 342222.590299,
+      "display": {
+        "sq_ft": 3683653,
+        "acres": 84.57,
+        "sq_mi": 0.132
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 311505.923207,
+      "display": {
+        "sq_ft": 3353022,
+        "acres": 76.97,
+        "sq_mi": 0.12
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 28839.179687,
+      "display": {
+        "sq_ft": 310422,
+        "acres": 7.13,
+        "sq_mi": 0.011
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 157958.825564,
+      "display": {
+        "sq_ft": 1700255,
+        "acres": 39.03,
+        "sq_mi": 0.061
+      }
+    },
+    {
+      "station_a": "MIA-MM-01",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 18282.558363,
+      "display": {
+        "sq_ft": 196792,
+        "acres": 4.52,
+        "sq_mi": 0.007
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-03",
+      "intersection_area_m2": 1409612.312021,
+      "display": {
+        "sq_ft": 15172941,
+        "acres": 348.32,
+        "sq_mi": 0.544
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-04",
+      "intersection_area_m2": 1120728.137502,
+      "display": {
+        "sq_ft": 12063417,
+        "acres": 276.94,
+        "sq_mi": 0.433
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-05",
+      "intersection_area_m2": 777735.26207,
+      "display": {
+        "sq_ft": 8371473,
+        "acres": 192.18,
+        "sq_mi": 0.3
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-06",
+      "intersection_area_m2": 510170.249336,
+      "display": {
+        "sq_ft": 5491427,
+        "acres": 126.07,
+        "sq_mi": 0.197
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 262952.137551,
+      "display": {
+        "sq_ft": 2830393,
+        "acres": 64.98,
+        "sq_mi": 0.102
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 120601.46008,
+      "display": {
+        "sq_ft": 1298143,
+        "acres": 29.8,
+        "sq_mi": 0.047
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 172931.842085,
+      "display": {
+        "sq_ft": 1861423,
+        "acres": 42.73,
+        "sq_mi": 0.067
+      }
+    },
+    {
+      "station_a": "MIA-MM-02",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 25562.261015,
+      "display": {
+        "sq_ft": 275150,
+        "acres": 6.32,
+        "sq_mi": 0.01
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-04",
+      "intersection_area_m2": 1539531.296829,
+      "display": {
+        "sq_ft": 16571377,
+        "acres": 380.43,
+        "sq_mi": 0.594
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-05",
+      "intersection_area_m2": 1291472.600505,
+      "display": {
+        "sq_ft": 13901295,
+        "acres": 319.13,
+        "sq_mi": 0.499
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-06",
+      "intersection_area_m2": 1015517.618591,
+      "display": {
+        "sq_ft": 10930941,
+        "acres": 250.94,
+        "sq_mi": 0.392
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 693129.051439,
+      "display": {
+        "sq_ft": 7460779,
+        "acres": 171.28,
+        "sq_mi": 0.268
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 434867.137709,
+      "display": {
+        "sq_ft": 4680871,
+        "acres": 107.46,
+        "sq_mi": 0.168
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 127035.87405,
+      "display": {
+        "sq_ft": 1367403,
+        "acres": 31.39,
+        "sq_mi": 0.049
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 606959.410379,
+      "display": {
+        "sq_ft": 6533257,
+        "acres": 149.98,
+        "sq_mi": 0.234
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 361551.412588,
+      "display": {
+        "sq_ft": 3891707,
+        "acres": 89.34,
+        "sq_mi": 0.14
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 95951.608631,
+      "display": {
+        "sq_ft": 1032815,
+        "acres": 23.71,
+        "sq_mi": 0.037
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 2209.93729,
+      "display": {
+        "sq_ft": 23788,
+        "acres": 0.55,
+        "sq_mi": 0.001
+      }
+    },
+    {
+      "station_a": "MIA-MM-03",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 43632.358198,
+      "display": {
+        "sq_ft": 469655,
+        "acres": 10.78,
+        "sq_mi": 0.017
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-05",
+      "intersection_area_m2": 1609287.435143,
+      "display": {
+        "sq_ft": 17322226,
+        "acres": 397.66,
+        "sq_mi": 0.621
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-06",
+      "intersection_area_m2": 1274391.28093,
+      "display": {
+        "sq_ft": 13717434,
+        "acres": 314.91,
+        "sq_mi": 0.492
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 986979.686803,
+      "display": {
+        "sq_ft": 10623761,
+        "acres": 243.89,
+        "sq_mi": 0.381
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 786758.649563,
+      "display": {
+        "sq_ft": 8468600,
+        "acres": 194.41,
+        "sq_mi": 0.304
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 378705.817167,
+      "display": {
+        "sq_ft": 4076355,
+        "acres": 93.58,
+        "sq_mi": 0.146
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 786095.342271,
+      "display": {
+        "sq_ft": 8461460,
+        "acres": 194.25,
+        "sq_mi": 0.304
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 514432.969411,
+      "display": {
+        "sq_ft": 5537310,
+        "acres": 127.12,
+        "sq_mi": 0.199
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 155102.646259,
+      "display": {
+        "sq_ft": 1669511,
+        "acres": 38.33,
+        "sq_mi": 0.06
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 81205.166383,
+      "display": {
+        "sq_ft": 874085,
+        "acres": 20.07,
+        "sq_mi": 0.031
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 198412.420323,
+      "display": {
+        "sq_ft": 2135694,
+        "acres": 49.03,
+        "sq_mi": 0.077
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 76194.037149,
+      "display": {
+        "sq_ft": 820146,
+        "acres": 18.83,
+        "sq_mi": 0.029
+      }
+    },
+    {
+      "station_a": "MIA-MM-04",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 21549.44257,
+      "display": {
+        "sq_ft": 231956,
+        "acres": 5.32,
+        "sq_mi": 0.008
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-06",
+      "intersection_area_m2": 1690438.136813,
+      "display": {
+        "sq_ft": 18195725,
+        "acres": 417.72,
+        "sq_mi": 0.653
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 1367532.224702,
+      "display": {
+        "sq_ft": 14719994,
+        "acres": 337.92,
+        "sq_mi": 0.528
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 1059214.150681,
+      "display": {
+        "sq_ft": 11401286,
+        "acres": 261.74,
+        "sq_mi": 0.409
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 646914.390466,
+      "display": {
+        "sq_ft": 6963329,
+        "acres": 159.86,
+        "sq_mi": 0.25
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 1171440.287454,
+      "display": {
+        "sq_ft": 12609278,
+        "acres": 289.47,
+        "sq_mi": 0.452
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 869718.175352,
+      "display": {
+        "sq_ft": 9361569,
+        "acres": 214.91,
+        "sq_mi": 0.336
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 424546.096819,
+      "display": {
+        "sq_ft": 4569776,
+        "acres": 104.91,
+        "sq_mi": 0.164
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 325356.306056,
+      "display": {
+        "sq_ft": 3502106,
+        "acres": 80.4,
+        "sq_mi": 0.126
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 475193.126999,
+      "display": {
+        "sq_ft": 5114936,
+        "acres": 117.42,
+        "sq_mi": 0.183
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 308802.468962,
+      "display": {
+        "sq_ft": 3323922,
+        "acres": 76.31,
+        "sq_mi": 0.119
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 219100.16847,
+      "display": {
+        "sq_ft": 2358375,
+        "acres": 54.14,
+        "sq_mi": 0.085
+      }
+    },
+    {
+      "station_a": "MIA-MM-05",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 53060.324591,
+      "display": {
+        "sq_ft": 571137,
+        "acres": 13.11,
+        "sq_mi": 0.02
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-07",
+      "intersection_area_m2": 1656957.902578,
+      "display": {
+        "sq_ft": 17835346,
+        "acres": 409.44,
+        "sq_mi": 0.64
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 1218692.3498,
+      "display": {
+        "sq_ft": 13117895,
+        "acres": 301.15,
+        "sq_mi": 0.471
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 859844.284439,
+      "display": {
+        "sq_ft": 9255287,
+        "acres": 212.47,
+        "sq_mi": 0.332
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 1499927.237531,
+      "display": {
+        "sq_ft": 16145082,
+        "acres": 370.64,
+        "sq_mi": 0.579
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 1183948.216443,
+      "display": {
+        "sq_ft": 12743913,
+        "acres": 292.56,
+        "sq_mi": 0.457
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 683381.125441,
+      "display": {
+        "sq_ft": 7355853,
+        "acres": 168.87,
+        "sq_mi": 0.264
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 580396.196958,
+      "display": {
+        "sq_ft": 6247333,
+        "acres": 143.42,
+        "sq_mi": 0.224
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 735512.935428,
+      "display": {
+        "sq_ft": 7916995,
+        "acres": 181.75,
+        "sq_mi": 0.284
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 549729.74465,
+      "display": {
+        "sq_ft": 5917242,
+        "acres": 135.84,
+        "sq_mi": 0.212
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 448901.504444,
+      "display": {
+        "sq_ft": 4831936,
+        "acres": 110.93,
+        "sq_mi": 0.173
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 227301.366392,
+      "display": {
+        "sq_ft": 2446652,
+        "acres": 56.17,
+        "sq_mi": 0.088
+      }
+    },
+    {
+      "station_a": "MIA-MM-06",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 31419.669314,
+      "display": {
+        "sq_ft": 338199,
+        "acres": 7.76,
+        "sq_mi": 0.012
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-08",
+      "intersection_area_m2": 1511826.587721,
+      "display": {
+        "sq_ft": 16273166,
+        "acres": 373.58,
+        "sq_mi": 0.584
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 1203045.442183,
+      "display": {
+        "sq_ft": 12949473,
+        "acres": 297.28,
+        "sq_mi": 0.464
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 1611818.284811,
+      "display": {
+        "sq_ft": 17349468,
+        "acres": 398.29,
+        "sq_mi": 0.622
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 1366813.852226,
+      "display": {
+        "sq_ft": 14712262,
+        "acres": 337.75,
+        "sq_mi": 0.528
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 797851.893254,
+      "display": {
+        "sq_ft": 8588006,
+        "acres": 197.15,
+        "sq_mi": 0.308
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 822452.059504,
+      "display": {
+        "sq_ft": 8852800,
+        "acres": 203.23,
+        "sq_mi": 0.318
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1045017.250437,
+      "display": {
+        "sq_ft": 11248472,
+        "acres": 258.23,
+        "sq_mi": 0.403
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 833173.13273,
+      "display": {
+        "sq_ft": 8968201,
+        "acres": 205.88,
+        "sq_mi": 0.322
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 700811.461464,
+      "display": {
+        "sq_ft": 7543472,
+        "acres": 173.17,
+        "sq_mi": 0.271
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 435716.565375,
+      "display": {
+        "sq_ft": 4690014,
+        "acres": 107.67,
+        "sq_mi": 0.168
+      }
+    },
+    {
+      "station_a": "MIA-MM-07",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 168942.476197,
+      "display": {
+        "sq_ft": 1818482,
+        "acres": 41.75,
+        "sq_mi": 0.065
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-09",
+      "intersection_area_m2": 1498143.29949,
+      "display": {
+        "sq_ft": 16125880,
+        "acres": 370.2,
+        "sq_mi": 0.578
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 1149953.581492,
+      "display": {
+        "sq_ft": 12377997,
+        "acres": 284.16,
+        "sq_mi": 0.444
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 1019612.899472,
+      "display": {
+        "sq_ft": 10975022,
+        "acres": 251.95,
+        "sq_mi": 0.394
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 506125.164272,
+      "display": {
+        "sq_ft": 5447886,
+        "acres": 125.07,
+        "sq_mi": 0.195
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 710498.529992,
+      "display": {
+        "sq_ft": 7647743,
+        "acres": 175.57,
+        "sq_mi": 0.274
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1052491.030357,
+      "display": {
+        "sq_ft": 11328919,
+        "acres": 260.08,
+        "sq_mi": 0.406
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 837915.13102,
+      "display": {
+        "sq_ft": 9019243,
+        "acres": 207.05,
+        "sq_mi": 0.324
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 659799.887018,
+      "display": {
+        "sq_ft": 7102027,
+        "acres": 163.04,
+        "sq_mi": 0.255
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 398419.698827,
+      "display": {
+        "sq_ft": 4288554,
+        "acres": 98.45,
+        "sq_mi": 0.154
+      }
+    },
+    {
+      "station_a": "MIA-MM-08",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 145508.017554,
+      "display": {
+        "sq_ft": 1566235,
+        "acres": 35.96,
+        "sq_mi": 0.056
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-10",
+      "intersection_area_m2": 1019897.990037,
+      "display": {
+        "sq_ft": 10978091,
+        "acres": 252.02,
+        "sq_mi": 0.394
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 1052135.829198,
+      "display": {
+        "sq_ft": 11325096,
+        "acres": 259.99,
+        "sq_mi": 0.406
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 623839.657777,
+      "display": {
+        "sq_ft": 6714954,
+        "acres": 154.15,
+        "sq_mi": 0.241
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 1020207.41947,
+      "display": {
+        "sq_ft": 10981421,
+        "acres": 252.1,
+        "sq_mi": 0.394
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1440639.293041,
+      "display": {
+        "sq_ft": 15506912,
+        "acres": 355.99,
+        "sq_mi": 0.556
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 1245461.232214,
+      "display": {
+        "sq_ft": 13406033,
+        "acres": 307.76,
+        "sq_mi": 0.481
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1031662.184069,
+      "display": {
+        "sq_ft": 11104719,
+        "acres": 254.93,
+        "sq_mi": 0.398
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 751697.755104,
+      "display": {
+        "sq_ft": 8091207,
+        "acres": 185.75,
+        "sq_mi": 0.29
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 447963.882616,
+      "display": {
+        "sq_ft": 4821843,
+        "acres": 110.69,
+        "sq_mi": 0.173
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 146071.386043,
+      "display": {
+        "sq_ft": 1572299,
+        "acres": 36.1,
+        "sq_mi": 0.056
+      }
+    },
+    {
+      "station_a": "MIA-MM-09",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 65135.172478,
+      "display": {
+        "sq_ft": 701109,
+        "acres": 16.1,
+        "sq_mi": 0.025
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-11",
+      "intersection_area_m2": 1703561.114918,
+      "display": {
+        "sq_ft": 18336979,
+        "acres": 420.96,
+        "sq_mi": 0.658
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 1150402.880726,
+      "display": {
+        "sq_ft": 12382834,
+        "acres": 284.27,
+        "sq_mi": 0.444
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 1016951.911845,
+      "display": {
+        "sq_ft": 10946379,
+        "acres": 251.29,
+        "sq_mi": 0.393
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1102740.849984,
+      "display": {
+        "sq_ft": 11869804,
+        "acres": 272.49,
+        "sq_mi": 0.426
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 924678.797746,
+      "display": {
+        "sq_ft": 9953160,
+        "acres": 228.49,
+        "sq_mi": 0.357
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 843129.790531,
+      "display": {
+        "sq_ft": 9075374,
+        "acres": 208.34,
+        "sq_mi": 0.326
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 584675.929072,
+      "display": {
+        "sq_ft": 6293399,
+        "acres": 144.48,
+        "sq_mi": 0.226
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 295508.421809,
+      "display": {
+        "sq_ft": 3180826,
+        "acres": 73.02,
+        "sq_mi": 0.114
+      }
+    },
+    {
+      "station_a": "MIA-MM-10",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 28575.683625,
+      "display": {
+        "sq_ft": 307586,
+        "acres": 7.06,
+        "sq_mi": 0.011
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-12",
+      "intersection_area_m2": 1419187.639636,
+      "display": {
+        "sq_ft": 15276009,
+        "acres": 350.69,
+        "sq_mi": 0.548
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 1312823.71589,
+      "display": {
+        "sq_ft": 14131117,
+        "acres": 324.41,
+        "sq_mi": 0.507
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1311676.760482,
+      "display": {
+        "sq_ft": 14118771,
+        "acres": 324.12,
+        "sq_mi": 0.506
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 1166118.031344,
+      "display": {
+        "sq_ft": 12551990,
+        "acres": 288.15,
+        "sq_mi": 0.45
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1114180.56508,
+      "display": {
+        "sq_ft": 11992940,
+        "acres": 275.32,
+        "sq_mi": 0.43
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 850378.012018,
+      "display": {
+        "sq_ft": 9153393,
+        "acres": 210.13,
+        "sq_mi": 0.328
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 529044.91904,
+      "display": {
+        "sq_ft": 5694592,
+        "acres": 130.73,
+        "sq_mi": 0.204
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 176329.824265,
+      "display": {
+        "sq_ft": 1897998,
+        "acres": 43.57,
+        "sq_mi": 0.068
+      }
+    },
+    {
+      "station_a": "MIA-MM-11",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 19340.216006,
+      "display": {
+        "sq_ft": 208176,
+        "acres": 4.78,
+        "sq_mi": 0.007
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-13",
+      "intersection_area_m2": 1352041.206109,
+      "display": {
+        "sq_ft": 14553250,
+        "acres": 334.1,
+        "sq_mi": 0.522
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1048928.903943,
+      "display": {
+        "sq_ft": 11290577,
+        "acres": 259.2,
+        "sq_mi": 0.405
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 1044377.077851,
+      "display": {
+        "sq_ft": 11241581,
+        "acres": 258.07,
+        "sq_mi": 0.403
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1133447.470151,
+      "display": {
+        "sq_ft": 12200327,
+        "acres": 280.08,
+        "sq_mi": 0.438
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 1004506.051686,
+      "display": {
+        "sq_ft": 10812413,
+        "acres": 248.22,
+        "sq_mi": 0.388
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 747135.541761,
+      "display": {
+        "sq_ft": 8042100,
+        "acres": 184.62,
+        "sq_mi": 0.288
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 373138.344536,
+      "display": {
+        "sq_ft": 4016428,
+        "acres": 92.2,
+        "sq_mi": 0.144
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 109626.730497,
+      "display": {
+        "sq_ft": 1180012,
+        "acres": 27.09,
+        "sq_mi": 0.042
+      }
+    },
+    {
+      "station_a": "MIA-MM-12",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 34428.128515,
+      "display": {
+        "sq_ft": 370581,
+        "acres": 8.51,
+        "sq_mi": 0.013
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-14",
+      "intersection_area_m2": 1588347.096583,
+      "display": {
+        "sq_ft": 17096826,
+        "acres": 392.49,
+        "sq_mi": 0.613
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 1689937.55862,
+      "display": {
+        "sq_ft": 18190336,
+        "acres": 417.59,
+        "sq_mi": 0.652
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1794791.74989,
+      "display": {
+        "sq_ft": 19318978,
+        "acres": 443.5,
+        "sq_mi": 0.693
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 1535801.926409,
+      "display": {
+        "sq_ft": 16531234,
+        "acres": 379.5,
+        "sq_mi": 0.593
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 1157011.795523,
+      "display": {
+        "sq_ft": 12453971,
+        "acres": 285.9,
+        "sq_mi": 0.447
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 695560.368646,
+      "display": {
+        "sq_ft": 7486949,
+        "acres": 171.88,
+        "sq_mi": 0.269
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 424128.726524,
+      "display": {
+        "sq_ft": 4565284,
+        "acres": 104.8,
+        "sq_mi": 0.164
+      }
+    },
+    {
+      "station_a": "MIA-MM-13",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 218168.052798,
+      "display": {
+        "sq_ft": 2348341,
+        "acres": 53.91,
+        "sq_mi": 0.084
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-15",
+      "intersection_area_m2": 1790403.374641,
+      "display": {
+        "sq_ft": 19271742,
+        "acres": 442.42,
+        "sq_mi": 0.691
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1587630.929297,
+      "display": {
+        "sq_ft": 17089117,
+        "acres": 392.31,
+        "sq_mi": 0.613
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 1262744.30142,
+      "display": {
+        "sq_ft": 13592067,
+        "acres": 312.03,
+        "sq_mi": 0.488
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 893744.117571,
+      "display": {
+        "sq_ft": 9620182,
+        "acres": 220.85,
+        "sq_mi": 0.345
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 481442.415799,
+      "display": {
+        "sq_ft": 5182203,
+        "acres": 118.97,
+        "sq_mi": 0.186
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 301042.622947,
+      "display": {
+        "sq_ft": 3240396,
+        "acres": 74.39,
+        "sq_mi": 0.116
+      }
+    },
+    {
+      "station_a": "MIA-MM-14",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 80128.991688,
+      "display": {
+        "sq_ft": 862501,
+        "acres": 19.8,
+        "sq_mi": 0.031
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-16",
+      "intersection_area_m2": 1802814.424425,
+      "display": {
+        "sq_ft": 19405333,
+        "acres": 445.49,
+        "sq_mi": 0.696
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 1489483.141185,
+      "display": {
+        "sq_ft": 16032663,
+        "acres": 368.06,
+        "sq_mi": 0.575
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 1112865.850824,
+      "display": {
+        "sq_ft": 11978788,
+        "acres": 275.0,
+        "sq_mi": 0.43
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 675890.991656,
+      "display": {
+        "sq_ft": 7275230,
+        "acres": 167.02,
+        "sq_mi": 0.261
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 471554.823781,
+      "display": {
+        "sq_ft": 5075774,
+        "acres": 116.52,
+        "sq_mi": 0.182
+      }
+    },
+    {
+      "station_a": "MIA-MM-15",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 208270.386141,
+      "display": {
+        "sq_ft": 2241804,
+        "acres": 51.46,
+        "sq_mi": 0.08
+      }
+    },
+    {
+      "station_a": "MIA-MM-16",
+      "station_b": "MIA-MM-17",
+      "intersection_area_m2": 1695111.700704,
+      "display": {
+        "sq_ft": 18246030,
+        "acres": 418.87,
+        "sq_mi": 0.654
+      }
+    },
+    {
+      "station_a": "MIA-MM-16",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 1299094.752521,
+      "display": {
+        "sq_ft": 13983340,
+        "acres": 321.01,
+        "sq_mi": 0.502
+      }
+    },
+    {
+      "station_a": "MIA-MM-16",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 831025.86486,
+      "display": {
+        "sq_ft": 8945088,
+        "acres": 205.35,
+        "sq_mi": 0.321
+      }
+    },
+    {
+      "station_a": "MIA-MM-16",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 576564.296008,
+      "display": {
+        "sq_ft": 6206086,
+        "acres": 142.47,
+        "sq_mi": 0.223
+      }
+    },
+    {
+      "station_a": "MIA-MM-16",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 320241.858571,
+      "display": {
+        "sq_ft": 3447055,
+        "acres": 79.13,
+        "sq_mi": 0.124
+      }
+    },
+    {
+      "station_a": "MIA-MM-17",
+      "station_b": "MIA-MM-18",
+      "intersection_area_m2": 1629306.792155,
+      "display": {
+        "sq_ft": 17537712,
+        "acres": 402.61,
+        "sq_mi": 0.629
+      }
+    },
+    {
+      "station_a": "MIA-MM-17",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 1134583.674622,
+      "display": {
+        "sq_ft": 12212557,
+        "acres": 280.36,
+        "sq_mi": 0.438
+      }
+    },
+    {
+      "station_a": "MIA-MM-17",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 828644.312558,
+      "display": {
+        "sq_ft": 8919453,
+        "acres": 204.76,
+        "sq_mi": 0.32
+      }
+    },
+    {
+      "station_a": "MIA-MM-17",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 567206.82656,
+      "display": {
+        "sq_ft": 6105363,
+        "acres": 140.16,
+        "sq_mi": 0.219
+      }
+    },
+    {
+      "station_a": "MIA-MM-18",
+      "station_b": "MIA-MM-19",
+      "intersection_area_m2": 1520677.323164,
+      "display": {
+        "sq_ft": 16368434,
+        "acres": 375.77,
+        "sq_mi": 0.587
+      }
+    },
+    {
+      "station_a": "MIA-MM-18",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 1145413.506093,
+      "display": {
+        "sq_ft": 12329128,
+        "acres": 283.04,
+        "sq_mi": 0.442
+      }
+    },
+    {
+      "station_a": "MIA-MM-18",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 908501.230059,
+      "display": {
+        "sq_ft": 9779026,
+        "acres": 224.5,
+        "sq_mi": 0.351
+      }
+    },
+    {
+      "station_a": "MIA-MM-19",
+      "station_b": "MIA-MM-20",
+      "intersection_area_m2": 1538986.74304,
+      "display": {
+        "sq_ft": 16565515,
+        "acres": 380.29,
+        "sq_mi": 0.594
+      }
+    },
+    {
+      "station_a": "MIA-MM-19",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 1390941.924521,
+      "display": {
+        "sq_ft": 14971974,
+        "acres": 343.71,
+        "sq_mi": 0.537
+      }
+    },
+    {
+      "station_a": "MIA-MM-20",
+      "station_b": "MIA-MM-21",
+      "intersection_area_m2": 1478806.412772,
+      "display": {
+        "sq_ft": 15917740,
+        "acres": 365.42,
+        "sq_mi": 0.571
+      }
+    }
+  ],
+  "per_polygon_coverage": [
+    {
+      "FID": 29,
+      "M21_ZONE": "T6-80-O",
+      "polygon_area_m2": 51752.913085,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 33284.122159,
+        "MIA-MM-02": 35806.883928,
+        "MIA-MM-03": 51752.913085,
+        "MIA-MM-04": 51752.913085,
+        "MIA-MM-05": 51752.913085,
+        "MIA-MM-06": 51752.913085,
+        "MIA-MM-07": 51752.913085,
+        "MIA-MM-08": 36598.322785,
+        "MIA-MM-09": 28.498304,
+        "MIA-MM-10": 42294.208078,
+        "MIA-MM-11": 21874.838761
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.643135,
+        "MIA-MM-02": 0.691882,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 0.707174,
+        "MIA-MM-09": 0.000551,
+        "MIA-MM-10": 0.817233,
+        "MIA-MM-11": 0.422678
+      },
+      "sum_of_coverage_ratios": 8.282653,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 39,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 63009.9504,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 40440.332484,
+        "MIA-MM-04": 13577.442323,
+        "MIA-MM-05": 1844.247553,
+        "MIA-MM-07": 1702.421572,
+        "MIA-MM-08": 30871.079637,
+        "MIA-MM-09": 285.157328
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.641809,
+        "MIA-MM-04": 0.215481,
+        "MIA-MM-05": 0.029269,
+        "MIA-MM-07": 0.027018,
+        "MIA-MM-08": 0.48994,
+        "MIA-MM-09": 0.004526
+      },
+      "sum_of_coverage_ratios": 1.408042,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 52,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 110454.689645,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 30039.695438,
+        "MIA-MM-02": 13170.679419
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.271964,
+        "MIA-MM-02": 0.119241
+      },
+      "sum_of_coverage_ratios": 0.391205,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 53,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 123815.324552,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 9389.505704
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.075835
+      },
+      "sum_of_coverage_ratios": 0.075835,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 54,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 22638.380915,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 11318.369986
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.499964
+      },
+      "sum_of_coverage_ratios": 0.499964,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 55,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 55900.405529,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 56,
+      "M21_ZONE": "T6-36A-O",
+      "polygon_area_m2": 421914.105707,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 4938.134349,
+        "MIA-MM-02": 14527.994634
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.011704,
+        "MIA-MM-02": 0.034434
+      },
+      "sum_of_coverage_ratios": 0.046138,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 57,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 23951.299287,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 58,
+      "M21_ZONE": "T6-60A-O",
+      "polygon_area_m2": 313834.928709,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 214957.779801,
+        "MIA-MM-02": 90792.443017,
+        "MIA-MM-03": 266838.690044,
+        "MIA-MM-04": 313834.928709,
+        "MIA-MM-05": 313834.928709,
+        "MIA-MM-06": 310343.98032,
+        "MIA-MM-07": 299864.118026,
+        "MIA-MM-08": 301333.602284,
+        "MIA-MM-09": 112435.979163,
+        "MIA-MM-10": 202690.457083,
+        "MIA-MM-11": 94990.6407,
+        "MIA-MM-14": 3898.853519
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.684939,
+        "MIA-MM-02": 0.2893,
+        "MIA-MM-03": 0.850252,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 0.988876,
+        "MIA-MM-07": 0.955484,
+        "MIA-MM-08": 0.960166,
+        "MIA-MM-09": 0.358265,
+        "MIA-MM-10": 0.645851,
+        "MIA-MM-11": 0.302677,
+        "MIA-MM-14": 0.012423
+      },
+      "sum_of_coverage_ratios": 8.048232,
+      "is_allocation_weight": false,
+      "station_hits": 12
+    },
+    {
+      "FID": 59,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 25871.657541,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 60,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 11165.764825,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 11165.764825
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 61,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 8506.352651,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 8081.454185
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.950049
+      },
+      "sum_of_coverage_ratios": 0.950049,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 62,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 14674.02031,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 14674.02031
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 63,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 46815.930832,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 46815.930832,
+        "MIA-MM-02": 3354.802261,
+        "MIA-MM-04": 28152.620317,
+        "MIA-MM-05": 382.335759
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.071659,
+        "MIA-MM-04": 0.601347,
+        "MIA-MM-05": 0.008167
+      },
+      "sum_of_coverage_ratios": 1.681173,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 64,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 41310.751177,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 41310.751177,
+        "MIA-MM-02": 34670.679215,
+        "MIA-MM-03": 13453.409908,
+        "MIA-MM-04": 41310.751177,
+        "MIA-MM-05": 15054.471331
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.839265,
+        "MIA-MM-03": 0.325664,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 0.36442
+      },
+      "sum_of_coverage_ratios": 3.529349,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 65,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 6382.829681,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 6382.829681
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 66,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 9161.558694,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 7171.404729,
+        "MIA-MM-02": 9161.558694,
+        "MIA-MM-03": 9161.558694
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.782771,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0
+      },
+      "sum_of_coverage_ratios": 2.782771,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 67,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 15442.162281,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 8466.907118
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.548298
+      },
+      "sum_of_coverage_ratios": 0.548298,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 70,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 127057.12168,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 71,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 2130.38102,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 73,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 41234.83789,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 6421.143732
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.155721
+      },
+      "sum_of_coverage_ratios": 0.155721,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 74,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 35599.41296,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 75,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 36847.225192,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 76,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 12480.129189,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 77,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 16160.54934,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 78,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 94375.874836,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 2974.255767,
+        "MIA-MM-09": 0.876035
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.031515,
+        "MIA-MM-09": 9e-06
+      },
+      "sum_of_coverage_ratios": 0.031524,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 79,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 50466.929089,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 37543.995957,
+        "MIA-MM-09": 34246.500516
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.743933,
+        "MIA-MM-09": 0.678593
+      },
+      "sum_of_coverage_ratios": 1.422526,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 80,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 40264.705673,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 37549.8896,
+        "MIA-MM-09": 40264.705673,
+        "MIA-MM-14": 9555.900048,
+        "MIA-MM-15": 665.894633
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.932576,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 0.237327,
+        "MIA-MM-15": 0.016538
+      },
+      "sum_of_coverage_ratios": 2.186441,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 81,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 37497.637504,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 36798.271475,
+        "MIA-MM-09": 37497.637504,
+        "MIA-MM-14": 34166.208297,
+        "MIA-MM-15": 23633.294717,
+        "MIA-MM-16": 399.250734
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.981349,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 0.911156,
+        "MIA-MM-15": 0.630261,
+        "MIA-MM-16": 0.010647
+      },
+      "sum_of_coverage_ratios": 3.533414,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 82,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 35084.164044,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-07": 22686.457624,
+        "MIA-MM-08": 35084.164044,
+        "MIA-MM-09": 35084.164044,
+        "MIA-MM-10": 12382.133505,
+        "MIA-MM-11": 23391.178076,
+        "MIA-MM-13": 35084.164044,
+        "MIA-MM-14": 35084.164044,
+        "MIA-MM-15": 35084.164044,
+        "MIA-MM-16": 35084.164044,
+        "MIA-MM-17": 34268.054608,
+        "MIA-MM-18": 3585.62957
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-07": 0.64663,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 0.352927,
+        "MIA-MM-11": 0.666716,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 0.976739,
+        "MIA-MM-18": 0.102201
+      },
+      "sum_of_coverage_ratios": 8.745212,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 83,
+      "M21_ZONE": "T6-8-R",
+      "polygon_area_m2": 50730.60826,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 48478.90463,
+        "MIA-MM-20": 48075.47105,
+        "MIA-MM-21": 50730.60826
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.955614,
+        "MIA-MM-20": 0.947662,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 2.903277,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 84,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 9662.11118,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-17": 1210.657313,
+        "MIA-MM-18": 9662.11118,
+        "MIA-MM-19": 9662.11118,
+        "MIA-MM-20": 9662.11118,
+        "MIA-MM-21": 9662.11118
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-17": 0.125299,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 4.125299,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 85,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 10308.814393,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-17": 7792.832523,
+        "MIA-MM-18": 10308.814393,
+        "MIA-MM-19": 10308.814393,
+        "MIA-MM-20": 10308.814393,
+        "MIA-MM-21": 10308.814393
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-17": 0.755939,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 4.755939,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 86,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 4042.562236,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-17": 448.925782,
+        "MIA-MM-18": 4042.562236,
+        "MIA-MM-19": 4042.562236,
+        "MIA-MM-20": 4042.562236,
+        "MIA-MM-21": 4042.562236
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-17": 0.11105,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 4.11105,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 87,
+      "M21_ZONE": "T6-36A-O",
+      "polygon_area_m2": 182553.784798,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-11": 7438.526596,
+        "MIA-MM-12": 140479.504405,
+        "MIA-MM-13": 78610.716832,
+        "MIA-MM-14": 2673.207573,
+        "MIA-MM-15": 15969.971503,
+        "MIA-MM-16": 55201.31113,
+        "MIA-MM-17": 99672.62032,
+        "MIA-MM-18": 129105.082837,
+        "MIA-MM-19": 62801.223763
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-11": 0.040747,
+        "MIA-MM-12": 0.769524,
+        "MIA-MM-13": 0.430617,
+        "MIA-MM-14": 0.014643,
+        "MIA-MM-15": 0.087481,
+        "MIA-MM-16": 0.302384,
+        "MIA-MM-17": 0.54599,
+        "MIA-MM-18": 0.707217,
+        "MIA-MM-19": 0.344015
+      },
+      "sum_of_coverage_ratios": 3.242618,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 88,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 9396.497901,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-12": 9396.497901,
+        "MIA-MM-13": 9396.497901,
+        "MIA-MM-14": 8372.945221,
+        "MIA-MM-15": 9396.497901,
+        "MIA-MM-16": 9396.497901,
+        "MIA-MM-17": 9396.497901,
+        "MIA-MM-18": 9396.497901,
+        "MIA-MM-19": 9396.497901,
+        "MIA-MM-20": 726.120015
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-12": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 0.891071,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 0.077276
+      },
+      "sum_of_coverage_ratios": 7.968346,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 89,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 27916.993683,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-18": 11056.166105,
+        "MIA-MM-19": 27916.993683,
+        "MIA-MM-20": 27916.993683,
+        "MIA-MM-21": 27916.993683
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-18": 0.396037,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 3.396037,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 90,
+      "M21_ZONE": "T6-24A-O",
+      "polygon_area_m2": 231202.640851,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-13": 17925.904075,
+        "MIA-MM-14": 12276.016898,
+        "MIA-MM-15": 65388.356085,
+        "MIA-MM-16": 78038.852198,
+        "MIA-MM-17": 144236.203758,
+        "MIA-MM-18": 212172.242736,
+        "MIA-MM-19": 225187.793435,
+        "MIA-MM-20": 231202.640851,
+        "MIA-MM-21": 177206.631256
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-13": 0.077533,
+        "MIA-MM-14": 0.053096,
+        "MIA-MM-15": 0.282818,
+        "MIA-MM-16": 0.337534,
+        "MIA-MM-17": 0.623852,
+        "MIA-MM-18": 0.91769,
+        "MIA-MM-19": 0.973985,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 0.766456
+      },
+      "sum_of_coverage_ratios": 5.032964,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 91,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 9568.156616,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 1912.378922,
+        "MIA-MM-14": 6737.047078,
+        "MIA-MM-15": 9568.156616,
+        "MIA-MM-16": 9536.367763,
+        "MIA-MM-17": 9568.156616,
+        "MIA-MM-18": 9568.156616,
+        "MIA-MM-20": 5379.186106
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.199869,
+        "MIA-MM-14": 0.704111,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.996678,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-20": 0.562197
+      },
+      "sum_of_coverage_ratios": 5.462855,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 92,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 58149.299138,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 1551.618307,
+        "MIA-MM-13": 39023.231864,
+        "MIA-MM-14": 51796.470613,
+        "MIA-MM-15": 58149.299138,
+        "MIA-MM-16": 58149.299138,
+        "MIA-MM-17": 58149.299138,
+        "MIA-MM-18": 58149.299138,
+        "MIA-MM-19": 53632.925525,
+        "MIA-MM-20": 57945.202842
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.026683,
+        "MIA-MM-13": 0.671087,
+        "MIA-MM-14": 0.89075,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 0.922331,
+        "MIA-MM-20": 0.99649
+      },
+      "sum_of_coverage_ratios": 7.507341,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 93,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 60629.398347,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 2078.00453,
+        "MIA-MM-09": 60629.398347,
+        "MIA-MM-10": 2147.851759,
+        "MIA-MM-11": 40271.560679,
+        "MIA-MM-12": 29700.674257,
+        "MIA-MM-13": 60629.398347,
+        "MIA-MM-14": 60629.398347,
+        "MIA-MM-15": 60629.398347,
+        "MIA-MM-16": 60629.398347,
+        "MIA-MM-17": 60629.398347,
+        "MIA-MM-18": 60629.398347,
+        "MIA-MM-19": 46006.681649,
+        "MIA-MM-20": 19169.182773
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.034274,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 0.035426,
+        "MIA-MM-11": 0.664225,
+        "MIA-MM-12": 0.489872,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 0.758818,
+        "MIA-MM-20": 0.31617
+      },
+      "sum_of_coverage_ratios": 9.298785,
+      "is_allocation_weight": false,
+      "station_hits": 13
+    },
+    {
+      "FID": 94,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 4855.61765,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 4855.61765,
+        "MIA-MM-10": 2590.705358,
+        "MIA-MM-11": 4855.61765,
+        "MIA-MM-12": 4855.61765,
+        "MIA-MM-13": 4855.61765,
+        "MIA-MM-14": 4855.61765,
+        "MIA-MM-15": 4855.61765,
+        "MIA-MM-16": 4855.61765,
+        "MIA-MM-17": 4855.61765,
+        "MIA-MM-18": 4855.61765,
+        "MIA-MM-19": 4855.61765
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 0.533548,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0
+      },
+      "sum_of_coverage_ratios": 10.533548,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 95,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 130792.323071,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-05": 28674.609869,
+        "MIA-MM-06": 87852.007952,
+        "MIA-MM-07": 97631.255804,
+        "MIA-MM-08": 5961.634621,
+        "MIA-MM-10": 130792.323071,
+        "MIA-MM-11": 130792.323071,
+        "MIA-MM-12": 130792.323071,
+        "MIA-MM-13": 126334.085047,
+        "MIA-MM-14": 88053.741265,
+        "MIA-MM-15": 62738.216691,
+        "MIA-MM-16": 76283.936154,
+        "MIA-MM-17": 29068.749182
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-05": 0.219238,
+        "MIA-MM-06": 0.671691,
+        "MIA-MM-07": 0.74646,
+        "MIA-MM-08": 0.045581,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 1.0,
+        "MIA-MM-13": 0.965914,
+        "MIA-MM-14": 0.673233,
+        "MIA-MM-15": 0.479678,
+        "MIA-MM-16": 0.583245,
+        "MIA-MM-17": 0.222251
+      },
+      "sum_of_coverage_ratios": 7.607291,
+      "is_allocation_weight": false,
+      "station_hits": 12
+    },
+    {
+      "FID": 96,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 166198.355376,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-03": 63156.004551,
+        "MIA-MM-04": 57040.983199,
+        "MIA-MM-05": 144288.032769,
+        "MIA-MM-06": 166198.355376,
+        "MIA-MM-07": 144713.612863,
+        "MIA-MM-08": 33091.924894,
+        "MIA-MM-10": 166198.355376,
+        "MIA-MM-11": 165694.926847,
+        "MIA-MM-12": 158356.409872,
+        "MIA-MM-13": 17862.701981,
+        "MIA-MM-14": 13331.81829
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-03": 0.380004,
+        "MIA-MM-04": 0.34321,
+        "MIA-MM-05": 0.868168,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 0.870728,
+        "MIA-MM-08": 0.199111,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 0.996971,
+        "MIA-MM-12": 0.952816,
+        "MIA-MM-13": 0.107478,
+        "MIA-MM-14": 0.080216
+      },
+      "sum_of_coverage_ratios": 6.798702,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 97,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 247429.24464,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 78402.645564,
+        "MIA-MM-02": 147049.583777,
+        "MIA-MM-03": 246386.705196,
+        "MIA-MM-04": 244241.07956,
+        "MIA-MM-05": 246775.21065,
+        "MIA-MM-06": 246347.551777,
+        "MIA-MM-07": 177382.469652,
+        "MIA-MM-08": 43326.246851,
+        "MIA-MM-10": 166670.613106,
+        "MIA-MM-11": 98377.08481,
+        "MIA-MM-12": 10277.936656
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.316869,
+        "MIA-MM-02": 0.59431,
+        "MIA-MM-03": 0.995787,
+        "MIA-MM-04": 0.987115,
+        "MIA-MM-05": 0.997357,
+        "MIA-MM-06": 0.995628,
+        "MIA-MM-07": 0.716902,
+        "MIA-MM-08": 0.175106,
+        "MIA-MM-10": 0.673609,
+        "MIA-MM-11": 0.397597,
+        "MIA-MM-12": 0.041539
+      },
+      "sum_of_coverage_ratios": 6.891817,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 98,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 55073.433466,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-03": 547.444315,
+        "MIA-MM-04": 30143.992049,
+        "MIA-MM-05": 55073.433466,
+        "MIA-MM-06": 55073.433466,
+        "MIA-MM-07": 55073.433466,
+        "MIA-MM-08": 55073.433466,
+        "MIA-MM-09": 55073.433466,
+        "MIA-MM-10": 55073.433466,
+        "MIA-MM-11": 55073.433466,
+        "MIA-MM-12": 53291.982151,
+        "MIA-MM-13": 54992.838693,
+        "MIA-MM-14": 55073.433466,
+        "MIA-MM-15": 51850.664713,
+        "MIA-MM-16": 38686.382722
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-03": 0.00994,
+        "MIA-MM-04": 0.547342,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 0.967653,
+        "MIA-MM-13": 0.998537,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 0.941482,
+        "MIA-MM-16": 0.702451
+      },
+      "sum_of_coverage_ratios": 12.167405,
+      "is_allocation_weight": false,
+      "station_hits": 14
+    },
+    {
+      "FID": 100,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 59462.109733,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 19327.356812
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.325037
+      },
+      "sum_of_coverage_ratios": 0.325037,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 101,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 19579.851923,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 987.049832
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.050412
+      },
+      "sum_of_coverage_ratios": 0.050412,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 102,
+      "M21_ZONE": "T6-24A-O",
+      "polygon_area_m2": 231766.193072,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 231766.193072,
+        "MIA-MM-02": 231766.193072,
+        "MIA-MM-03": 183528.733415,
+        "MIA-MM-04": 184159.269264,
+        "MIA-MM-05": 110132.391466,
+        "MIA-MM-06": 58530.10062,
+        "MIA-MM-07": 2956.499436
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.79187,
+        "MIA-MM-04": 0.794591,
+        "MIA-MM-05": 0.475187,
+        "MIA-MM-06": 0.252539,
+        "MIA-MM-07": 0.012756
+      },
+      "sum_of_coverage_ratios": 4.326944,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 103,
+      "M21_ZONE": "D2",
+      "polygon_area_m2": 47770.072072,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 47770.072072,
+        "MIA-MM-02": 999.200402
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.020917
+      },
+      "sum_of_coverage_ratios": 1.020917,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 104,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 13271.98315,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 13209.118388
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.995263
+      },
+      "sum_of_coverage_ratios": 0.995263,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 105,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 1738.037753,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 1738.037753,
+        "MIA-MM-04": 1738.037753,
+        "MIA-MM-05": 1738.037753,
+        "MIA-MM-07": 13.988088,
+        "MIA-MM-08": 1738.037753
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-07": 0.008048,
+        "MIA-MM-08": 1.0
+      },
+      "sum_of_coverage_ratios": 4.008048,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 106,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 36087.749533,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 11179.23456,
+        "MIA-MM-04": 19192.100164,
+        "MIA-MM-05": 21346.614017,
+        "MIA-MM-06": 5125.291841,
+        "MIA-MM-07": 19686.762788,
+        "MIA-MM-08": 36087.749533,
+        "MIA-MM-09": 18434.918781
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.309779,
+        "MIA-MM-04": 0.531818,
+        "MIA-MM-05": 0.59152,
+        "MIA-MM-06": 0.142023,
+        "MIA-MM-07": 0.545525,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 0.510836
+      },
+      "sum_of_coverage_ratios": 3.6315,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 107,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 20691.731703,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 20026.956346,
+        "MIA-MM-08": 165.785957
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.967872,
+        "MIA-MM-08": 0.008012
+      },
+      "sum_of_coverage_ratios": 0.975885,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 108,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 10451.698184,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 10451.698184,
+        "MIA-MM-04": 10451.698184,
+        "MIA-MM-05": 10451.698184,
+        "MIA-MM-06": 6524.128149,
+        "MIA-MM-07": 6136.938162,
+        "MIA-MM-08": 10451.698184
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 0.624217,
+        "MIA-MM-07": 0.587171,
+        "MIA-MM-08": 1.0
+      },
+      "sum_of_coverage_ratios": 5.211388,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 109,
+      "M21_ZONE": "T6-24A-O",
+      "polygon_area_m2": 74957.915904,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 11298.114872,
+        "MIA-MM-04": 62622.352999,
+        "MIA-MM-05": 74957.915904,
+        "MIA-MM-06": 74360.417092,
+        "MIA-MM-07": 74957.915904,
+        "MIA-MM-08": 74957.915904,
+        "MIA-MM-09": 62614.385424,
+        "MIA-MM-10": 18977.75032,
+        "MIA-MM-11": 420.70334,
+        "MIA-MM-14": 2818.962724
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.150726,
+        "MIA-MM-04": 0.835433,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 0.992029,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 0.835327,
+        "MIA-MM-10": 0.253179,
+        "MIA-MM-11": 0.005613,
+        "MIA-MM-14": 0.037607
+      },
+      "sum_of_coverage_ratios": 6.109914,
+      "is_allocation_weight": false,
+      "station_hits": 10
+    },
+    {
+      "FID": 110,
+      "M21_ZONE": "T6-60A-O",
+      "polygon_area_m2": 56938.404003,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-03": 11198.474953,
+        "MIA-MM-04": 54294.415593,
+        "MIA-MM-05": 56938.404003,
+        "MIA-MM-06": 56938.404003,
+        "MIA-MM-07": 56938.404003,
+        "MIA-MM-08": 56938.404003,
+        "MIA-MM-09": 56938.404003,
+        "MIA-MM-10": 56938.404003,
+        "MIA-MM-11": 52465.646802,
+        "MIA-MM-14": 49616.880114,
+        "MIA-MM-15": 5487.510635
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-03": 0.196677,
+        "MIA-MM-04": 0.953564,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 0.921446,
+        "MIA-MM-14": 0.871413,
+        "MIA-MM-15": 0.096376
+      },
+      "sum_of_coverage_ratios": 9.039476,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 111,
+      "M21_ZONE": "T6-80-O",
+      "polygon_area_m2": 5212.074278,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-03": 5212.074278,
+        "MIA-MM-04": 5212.074278,
+        "MIA-MM-05": 5212.074278,
+        "MIA-MM-06": 5212.074278,
+        "MIA-MM-07": 5212.074278,
+        "MIA-MM-08": 5212.074278,
+        "MIA-MM-09": 1278.253038,
+        "MIA-MM-10": 5212.074278,
+        "MIA-MM-11": 5212.074278
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 0.245248,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0
+      },
+      "sum_of_coverage_ratios": 8.245248,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 113,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 20669.666414,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 20669.666414,
+        "MIA-MM-09": 20669.666414
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 114,
+      "M21_ZONE": "T6-36B-L",
+      "polygon_area_m2": 53365.543791,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 26056.714029,
+        "MIA-MM-02": 53365.543791,
+        "MIA-MM-03": 2321.235654
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.488269,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.043497
+      },
+      "sum_of_coverage_ratios": 1.531765,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 115,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 100915.638276,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 92876.442093,
+        "MIA-MM-02": 100915.638276,
+        "MIA-MM-03": 19413.422992
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.920337,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.192373
+      },
+      "sum_of_coverage_ratios": 2.11271,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 116,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 2184799.654973,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-12": 8074.293327
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-12": 0.003696
+      },
+      "sum_of_coverage_ratios": 0.003696,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 117,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 5950.681126,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 118,
+      "M21_ZONE": "T6-36A-O",
+      "polygon_area_m2": 30673.378532,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 119,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 10284.24357,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-11": 10284.24357,
+        "MIA-MM-12": 10284.24357,
+        "MIA-MM-13": 10284.24357,
+        "MIA-MM-14": 10284.24357,
+        "MIA-MM-15": 10284.24357,
+        "MIA-MM-16": 10284.24357,
+        "MIA-MM-17": 10284.24357,
+        "MIA-MM-18": 10284.24357,
+        "MIA-MM-19": 10284.24357
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0
+      },
+      "sum_of_coverage_ratios": 9.0,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 120,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 401591.865882,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 371058.952404,
+        "MIA-MM-02": 401591.865882,
+        "MIA-MM-03": 401335.749692,
+        "MIA-MM-04": 319157.807889,
+        "MIA-MM-05": 170947.927501,
+        "MIA-MM-06": 46608.053657,
+        "MIA-MM-07": 9.012086
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.92397,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.999362,
+        "MIA-MM-04": 0.794732,
+        "MIA-MM-05": 0.425676,
+        "MIA-MM-06": 0.116058,
+        "MIA-MM-07": 2.2e-05
+      },
+      "sum_of_coverage_ratios": 4.259821,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 163,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 52110.593332,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 5784.040855
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.110995
+      },
+      "sum_of_coverage_ratios": 0.110995,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 175,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 10020.910447,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 10020.910447
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 176,
+      "M21_ZONE": "T3-O",
+      "polygon_area_m2": 163053.039242,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 130481.469672,
+        "MIA-MM-04": 1721.673032
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.800239,
+        "MIA-MM-04": 0.010559
+      },
+      "sum_of_coverage_ratios": 0.810798,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 177,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 17935.323892,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 17935.323892,
+        "MIA-MM-04": 7058.962993
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-04": 0.393579
+      },
+      "sum_of_coverage_ratios": 1.393579,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 178,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 54142.839114,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 180,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 28416.413982,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 181,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 100364.202071,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 182,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 139743.917371,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 20499.993718,
+        "MIA-MM-09": 294.828418
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.146697,
+        "MIA-MM-09": 0.00211
+      },
+      "sum_of_coverage_ratios": 0.148807,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 183,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 8901.003979,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 184,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 2503.882543,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 191,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 72954.894663,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 192,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 11945.118837,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 207,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 6782.401745,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 5328.225027,
+        "MIA-MM-20": 6782.401745,
+        "MIA-MM-21": 4571.308165
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.785596,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 0.673995
+      },
+      "sum_of_coverage_ratios": 2.459591,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 208,
+      "M21_ZONE": "T4-O",
+      "polygon_area_m2": 5843.165596,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 2363.828174,
+        "MIA-MM-20": 5843.165596,
+        "MIA-MM-21": 4917.993287
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.404546,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 0.841666
+      },
+      "sum_of_coverage_ratios": 2.246212,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 209,
+      "M21_ZONE": "T3-O",
+      "polygon_area_m2": 445385.883488,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 210,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 372038.22213,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 35856.448372,
+        "MIA-MM-21": 12272.131775
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.096378,
+        "MIA-MM-21": 0.032986
+      },
+      "sum_of_coverage_ratios": 0.129365,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 212,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 26682.328392,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 224,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 18725.196183,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 225,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 6814.798907,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 226,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 7617.817389,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 227,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 17331.777583,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 228,
+      "M21_ZONE": "T1",
+      "polygon_area_m2": 90574.336927,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 229,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 190662.459697,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 255,
+      "M21_ZONE": "T1",
+      "polygon_area_m2": 10533.107614,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 259,
+      "M21_ZONE": "D3",
+      "polygon_area_m2": 14629.711859,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 699.364843,
+        "MIA-MM-09": 14629.711859,
+        "MIA-MM-13": 1067.733179,
+        "MIA-MM-14": 14629.711859,
+        "MIA-MM-15": 14629.711859,
+        "MIA-MM-16": 14188.353395,
+        "MIA-MM-17": 5710.08352
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.047804,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-13": 0.072984,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.969831,
+        "MIA-MM-17": 0.390307
+      },
+      "sum_of_coverage_ratios": 4.480927,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 260,
+      "M21_ZONE": "T6-36A-O",
+      "polygon_area_m2": 11197.022297,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-05": 10395.890556,
+        "MIA-MM-06": 11197.022297,
+        "MIA-MM-07": 11197.022297,
+        "MIA-MM-08": 11197.022297,
+        "MIA-MM-09": 11197.022297,
+        "MIA-MM-10": 9146.093785,
+        "MIA-MM-11": 689.080612,
+        "MIA-MM-14": 10371.738713
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-05": 0.928451,
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 0.816833,
+        "MIA-MM-11": 0.061541,
+        "MIA-MM-14": 0.926294
+      },
+      "sum_of_coverage_ratios": 6.73312,
+      "is_allocation_weight": false,
+      "station_hits": 8
+    },
+    {
+      "FID": 287,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 41997.158385,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 288,
+      "M21_ZONE": "D2",
+      "polygon_area_m2": 406571.900063,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 289,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 80249.947952,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 290,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 10022.822435,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 353,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 52068.667271,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 366,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 41867.667764,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 452,
+      "M21_ZONE": "D3",
+      "polygon_area_m2": 11642.405004,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 10333.397561,
+        "MIA-MM-13": 9468.391779,
+        "MIA-MM-14": 11642.405004,
+        "MIA-MM-15": 11642.405004,
+        "MIA-MM-16": 11642.405004,
+        "MIA-MM-17": 11642.405004,
+        "MIA-MM-18": 11642.405004,
+        "MIA-MM-19": 3174.325945,
+        "MIA-MM-20": 4692.680134
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.887566,
+        "MIA-MM-13": 0.813268,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 0.272652,
+        "MIA-MM-20": 0.403068
+      },
+      "sum_of_coverage_ratios": 7.376553,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 504,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 6231.06147,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 6231.06147,
+        "MIA-MM-09": 6231.06147
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 507,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 1278.483953,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 1278.483953,
+        "MIA-MM-09": 1278.483953
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 508,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 455.343219,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 455.343219,
+        "MIA-MM-09": 455.343219
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 547,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 13846.343681,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 553,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 37765.75084,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 570,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 51635.449739,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 572,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 6289.469816,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 574,
+      "M21_ZONE": "T4-L",
+      "polygon_area_m2": 12846.365706,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 578,
+      "M21_ZONE": "T4-L",
+      "polygon_area_m2": 74590.066985,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 4851.531888
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.065043
+      },
+      "sum_of_coverage_ratios": 0.065043,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 597,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 21028.970605,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 21028.970605,
+        "MIA-MM-13": 21028.970605,
+        "MIA-MM-14": 21028.970605,
+        "MIA-MM-15": 21028.970605,
+        "MIA-MM-16": 21028.970605,
+        "MIA-MM-17": 21028.970605,
+        "MIA-MM-18": 21025.516471,
+        "MIA-MM-19": 3046.534739,
+        "MIA-MM-20": 3539.318882
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 0.999836,
+        "MIA-MM-19": 0.144873,
+        "MIA-MM-20": 0.168307
+      },
+      "sum_of_coverage_ratios": 7.313016,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 601,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 7562.314874,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 619,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 23826.267399,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 23826.267399,
+        "MIA-MM-02": 22201.812766
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.931821
+      },
+      "sum_of_coverage_ratios": 1.931821,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 621,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 47978.30297,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 47978.30297,
+        "MIA-MM-02": 42018.958666
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.875791
+      },
+      "sum_of_coverage_ratios": 1.875791,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 625,
+      "M21_ZONE": "CI-HD",
+      "polygon_area_m2": 1185210.753858,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 633,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 1637.231529,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 636,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 3685.510887,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 638,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 3207.282117,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 3092.459289
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.964199
+      },
+      "sum_of_coverage_ratios": 0.964199,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 652,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 3461.216393,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 3461.216393,
+        "MIA-MM-02": 3461.216393,
+        "MIA-MM-03": 3461.216393,
+        "MIA-MM-04": 3461.216393
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0
+      },
+      "sum_of_coverage_ratios": 4.0,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 664,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 3411.611586,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 677,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 4637.543349,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 4637.543349,
+        "MIA-MM-02": 4637.543349,
+        "MIA-MM-04": 4637.543349
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-04": 1.0
+      },
+      "sum_of_coverage_ratios": 3.0,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 680,
+      "M21_ZONE": "T6-36A-L",
+      "polygon_area_m2": 465639.540282,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-02": 10802.944475
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-02": 0.0232
+      },
+      "sum_of_coverage_ratios": 0.0232,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 682,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 3122.468109,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 3122.468109,
+        "MIA-MM-14": 3122.468109,
+        "MIA-MM-15": 3122.468109,
+        "MIA-MM-16": 26.342161
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.008436
+      },
+      "sum_of_coverage_ratios": 3.008436,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 683,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 8698.709949,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 8698.709949,
+        "MIA-MM-14": 4655.771094,
+        "MIA-MM-15": 4463.706743
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 0.535225,
+        "MIA-MM-15": 0.513146
+      },
+      "sum_of_coverage_ratios": 2.048371,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 684,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 130079.422042,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 686,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 51168.39125,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 4654.579854,
+        "MIA-MM-02": 51168.39125,
+        "MIA-MM-03": 8232.452252
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.090966,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.160889
+      },
+      "sum_of_coverage_ratios": 1.251855,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 689,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 7726.525784,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 7726.525784,
+        "MIA-MM-02": 7726.525784
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 691,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 12657.950155,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 12657.950155,
+        "MIA-MM-02": 12629.793786
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.997776
+      },
+      "sum_of_coverage_ratios": 1.997776,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 693,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 4043.320657,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 696,
+      "M21_ZONE": "T4-L",
+      "polygon_area_m2": 18125.945304,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 698,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 76222.199026,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 53718.579068,
+        "MIA-MM-20": 76222.199026,
+        "MIA-MM-21": 76222.199026
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.704763,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 2.704763,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 701,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 600.682868,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 715,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 2689.385805,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 2689.385805,
+        "MIA-MM-02": 2689.385805,
+        "MIA-MM-03": 2689.385805,
+        "MIA-MM-04": 2689.385805,
+        "MIA-MM-05": 2689.385805
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0
+      },
+      "sum_of_coverage_ratios": 5.0,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 735,
+      "M21_ZONE": "D3",
+      "polygon_area_m2": 74505.129845,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 2301.855512,
+        "MIA-MM-09": 27068.179989,
+        "MIA-MM-14": 423.896291
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.030895,
+        "MIA-MM-09": 0.363306,
+        "MIA-MM-14": 0.005689
+      },
+      "sum_of_coverage_ratios": 0.399891,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 739,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 1103.776537,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 744,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 2015.141819,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 745,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 8601.38354,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 746,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 4112.747785,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 747,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 5911.535839,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 749,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 16181.5043,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 751,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 18026.420723,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 753,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 27904.090991,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 27506.936771,
+        "MIA-MM-14": 27438.626873,
+        "MIA-MM-15": 27904.090991,
+        "MIA-MM-16": 19500.338457,
+        "MIA-MM-17": 6870.059114
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.985767,
+        "MIA-MM-14": 0.983319,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.698834,
+        "MIA-MM-17": 0.246203
+      },
+      "sum_of_coverage_ratios": 3.914123,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 755,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 5664.657067,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 5664.657067,
+        "MIA-MM-14": 5664.657067,
+        "MIA-MM-15": 5664.657067,
+        "MIA-MM-16": 1566.508259
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.276541
+      },
+      "sum_of_coverage_ratios": 3.276541,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 757,
+      "M21_ZONE": "T1",
+      "polygon_area_m2": 38822.144058,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 38789.686302,
+        "MIA-MM-20": 38822.144058,
+        "MIA-MM-21": 38822.144058
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.999164,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 2.999164,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 758,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 147972.440839,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 4253.588217,
+        "MIA-MM-20": 56530.566148,
+        "MIA-MM-21": 72.26395
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.028746,
+        "MIA-MM-20": 0.382034,
+        "MIA-MM-21": 0.000488
+      },
+      "sum_of_coverage_ratios": 0.411269,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 768,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 79632.372651,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 14604.751848
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.183402
+      },
+      "sum_of_coverage_ratios": 0.183402,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 769,
+      "M21_ZONE": "T6-8-R",
+      "polygon_area_m2": 68804.486163,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 787,
+      "M21_ZONE": "T3-O",
+      "polygon_area_m2": 50327.248671,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 23935.194312,
+        "MIA-MM-21": 2953.878239
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.475591,
+        "MIA-MM-21": 0.058693
+      },
+      "sum_of_coverage_ratios": 0.534285,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 788,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 5722.153049,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 5722.153049
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 789,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 11285.455306,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 790,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 268481.497821,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 796,
+      "M21_ZONE": "T4-L",
+      "polygon_area_m2": 7561.272634,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 797,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 294264.247717,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 798,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 369692.8468,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 807.216904,
+        "MIA-MM-09": 45536.907614,
+        "MIA-MM-14": 9430.718375,
+        "MIA-MM-15": 6056.356889
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.002183,
+        "MIA-MM-09": 0.123175,
+        "MIA-MM-14": 0.02551,
+        "MIA-MM-15": 0.016382
+      },
+      "sum_of_coverage_ratios": 0.16725,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 808,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 60201.552758,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 809,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 311643.456849,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 32640.131861,
+        "MIA-MM-14": 5514.636939,
+        "MIA-MM-15": 19419.577213,
+        "MIA-MM-16": 487.05315,
+        "MIA-MM-17": 94.136105,
+        "MIA-MM-20": 866.01931
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.104735,
+        "MIA-MM-14": 0.017695,
+        "MIA-MM-15": 0.062313,
+        "MIA-MM-16": 0.001563,
+        "MIA-MM-17": 0.000302,
+        "MIA-MM-20": 0.002779
+      },
+      "sum_of_coverage_ratios": 0.189388,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 810,
+      "M21_ZONE": "T6-24A-R",
+      "polygon_area_m2": 331977.318562,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 24784.181836,
+        "MIA-MM-20": 78448.723262,
+        "MIA-MM-21": 141289.419368
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.074656,
+        "MIA-MM-20": 0.236307,
+        "MIA-MM-21": 0.4256
+      },
+      "sum_of_coverage_ratios": 0.736563,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 822,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 3908.627153,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 491.094382,
+        "MIA-MM-09": 3908.627153
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.125644,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 1.125644,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 824,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 39798.679717,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 19949.03786,
+        "MIA-MM-09": 3598.741614
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.501249,
+        "MIA-MM-09": 0.090424
+      },
+      "sum_of_coverage_ratios": 0.591672,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 825,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 9668.85106,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 9668.85106,
+        "MIA-MM-09": 9214.845039
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 0.953044
+      },
+      "sum_of_coverage_ratios": 1.953044,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 826,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 11120.323189,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 11120.323189,
+        "MIA-MM-09": 11120.323189
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 2.0,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 827,
+      "M21_ZONE": "T6-8-L",
+      "polygon_area_m2": 67748.808796,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 53682.725563,
+        "MIA-MM-09": 58917.838367,
+        "MIA-MM-14": 2801.28789
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.792379,
+        "MIA-MM-09": 0.869651,
+        "MIA-MM-14": 0.041348
+      },
+      "sum_of_coverage_ratios": 1.703378,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 828,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 36099.503716,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-04": 11.912891,
+        "MIA-MM-05": 9812.414648,
+        "MIA-MM-06": 13147.229554,
+        "MIA-MM-07": 35804.119889,
+        "MIA-MM-08": 36099.503716,
+        "MIA-MM-09": 36099.503716
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-04": 0.00033,
+        "MIA-MM-05": 0.271816,
+        "MIA-MM-06": 0.364194,
+        "MIA-MM-07": 0.991818,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0
+      },
+      "sum_of_coverage_ratios": 3.628157,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 829,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 26201.788135,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 26201.788135,
+        "MIA-MM-04": 26201.788135,
+        "MIA-MM-05": 25479.98056,
+        "MIA-MM-06": 10783.988454,
+        "MIA-MM-07": 8236.225587,
+        "MIA-MM-08": 17310.530547
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 0.972452,
+        "MIA-MM-06": 0.411575,
+        "MIA-MM-07": 0.314338,
+        "MIA-MM-08": 0.660662
+      },
+      "sum_of_coverage_ratios": 4.359027,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 836,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 8878.17942,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 8878.17942
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 837,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 30196.218515,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 30196.218515,
+        "MIA-MM-04": 29847.859841,
+        "MIA-MM-05": 10530.201897,
+        "MIA-MM-08": 11131.212204
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-04": 0.988464,
+        "MIA-MM-05": 0.348726,
+        "MIA-MM-08": 0.368629
+      },
+      "sum_of_coverage_ratios": 2.705819,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 838,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 22848.385317,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 14475.109065,
+        "MIA-MM-09": 22848.385317,
+        "MIA-MM-11": 5769.039463,
+        "MIA-MM-13": 22848.385317,
+        "MIA-MM-14": 22848.385317,
+        "MIA-MM-15": 22848.385317,
+        "MIA-MM-16": 22848.385317,
+        "MIA-MM-17": 22848.385317,
+        "MIA-MM-18": 18714.705514
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.633529,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-11": 0.252492,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 0.819082
+      },
+      "sum_of_coverage_ratios": 7.705103,
+      "is_allocation_weight": false,
+      "station_hits": 9
+    },
+    {
+      "FID": 839,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 13847.991228,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 13763.642244
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.993909
+      },
+      "sum_of_coverage_ratios": 0.993909,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 844,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 3982.870615,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 3982.870615
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 859,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 3775.939341,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 2589.381544,
+        "MIA-MM-09": 3775.939341,
+        "MIA-MM-13": 762.26333,
+        "MIA-MM-14": 3775.939341,
+        "MIA-MM-15": 3775.939341,
+        "MIA-MM-16": 3775.939341,
+        "MIA-MM-17": 782.235459
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 0.685758,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-13": 0.201874,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 0.207163
+      },
+      "sum_of_coverage_ratios": 5.094795,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 860,
+      "M21_ZONE": "T6-36A-O",
+      "polygon_area_m2": 5496.824386,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-08": 5496.824386,
+        "MIA-MM-09": 5496.824386,
+        "MIA-MM-14": 5496.824386,
+        "MIA-MM-15": 5496.824386,
+        "MIA-MM-16": 3308.229146
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 0.601844
+      },
+      "sum_of_coverage_ratios": 4.601844,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 861,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 2290.82004,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 2290.82004,
+        "MIA-MM-02": 1026.993475
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.448308
+      },
+      "sum_of_coverage_ratios": 1.448308,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 862,
+      "M21_ZONE": "D2",
+      "polygon_area_m2": 16613.860913,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 16613.860913,
+        "MIA-MM-02": 16613.860913,
+        "MIA-MM-04": 4569.707051
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-04": 0.275054
+      },
+      "sum_of_coverage_ratios": 2.275054,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 864,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 27821.810295,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 876,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 277860.121989,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 24104.173126,
+        "MIA-MM-20": 96151.306165,
+        "MIA-MM-21": 109250.869563
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.086749,
+        "MIA-MM-20": 0.346042,
+        "MIA-MM-21": 0.393187
+      },
+      "sum_of_coverage_ratios": 0.825978,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 877,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 54212.579178,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 469.036326,
+        "MIA-MM-21": 9189.326004
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.008652,
+        "MIA-MM-21": 0.169505
+      },
+      "sum_of_coverage_ratios": 0.178157,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 878,
+      "M21_ZONE": "T5-R",
+      "polygon_area_m2": 26380.266699,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 12930.519652,
+        "MIA-MM-20": 26380.266699,
+        "MIA-MM-21": 26380.266699
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.490159,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 2.490159,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 879,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 4212.529815,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 3766.277553,
+        "MIA-MM-21": 4212.529815
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.894065,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 1.894065,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 884,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 10439.719913,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 891,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 3135696.534191,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 19476.801905
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.006211
+      },
+      "sum_of_coverage_ratios": 0.006211,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 892,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 302374.195378,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-19": 668.116393,
+        "MIA-MM-20": 40339.708534,
+        "MIA-MM-21": 17236.195327
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-19": 0.00221,
+        "MIA-MM-20": 0.13341,
+        "MIA-MM-21": 0.057003
+      },
+      "sum_of_coverage_ratios": 0.192622,
+      "is_allocation_weight": false,
+      "station_hits": 3
+    },
+    {
+      "FID": 894,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 37617.080549,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 22856.88026
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.60762
+      },
+      "sum_of_coverage_ratios": 0.60762,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 895,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 7605.329909,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 6653.402468
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.874834
+      },
+      "sum_of_coverage_ratios": 0.874834,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 907,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 17917.294155,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 10531.514612
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.587785
+      },
+      "sum_of_coverage_ratios": 0.587785,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 908,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 8889.714025,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 909,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 2805.713719,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 921,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 54177.467664,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 54172.057966,
+        "MIA-MM-11": 1823.730895,
+        "MIA-MM-13": 54177.467664,
+        "MIA-MM-14": 54177.467664,
+        "MIA-MM-15": 54177.467664,
+        "MIA-MM-16": 54177.467664,
+        "MIA-MM-17": 54177.467664,
+        "MIA-MM-18": 54177.467664,
+        "MIA-MM-19": 29333.075506,
+        "MIA-MM-20": 20902.428438
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.9999,
+        "MIA-MM-11": 0.033662,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 0.541426,
+        "MIA-MM-20": 0.385814
+      },
+      "sum_of_coverage_ratios": 7.960802,
+      "is_allocation_weight": false,
+      "station_hits": 10
+    },
+    {
+      "FID": 922,
+      "M21_ZONE": "T6-36B-O",
+      "polygon_area_m2": 7951.678643,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 7951.678643,
+        "MIA-MM-13": 7951.678643,
+        "MIA-MM-14": 7951.678643,
+        "MIA-MM-15": 7951.678643,
+        "MIA-MM-16": 7951.678643,
+        "MIA-MM-17": 7951.678643,
+        "MIA-MM-18": 7520.506869
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 0.945776
+      },
+      "sum_of_coverage_ratios": 6.945776,
+      "is_allocation_weight": false,
+      "station_hits": 7
+    },
+    {
+      "FID": 951,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 211364.904235,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-04": 615.625979,
+        "MIA-MM-05": 21732.030881,
+        "MIA-MM-06": 74177.059922,
+        "MIA-MM-07": 207015.351005,
+        "MIA-MM-08": 211364.904235,
+        "MIA-MM-09": 211364.904235,
+        "MIA-MM-10": 107734.88183,
+        "MIA-MM-11": 106621.681137,
+        "MIA-MM-12": 4895.75314,
+        "MIA-MM-13": 90331.34942,
+        "MIA-MM-14": 195615.363658,
+        "MIA-MM-15": 157230.814588,
+        "MIA-MM-16": 99770.529169,
+        "MIA-MM-17": 35194.470127
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-04": 0.002913,
+        "MIA-MM-05": 0.102818,
+        "MIA-MM-06": 0.350943,
+        "MIA-MM-07": 0.979422,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 0.50971,
+        "MIA-MM-11": 0.504444,
+        "MIA-MM-12": 0.023163,
+        "MIA-MM-13": 0.427372,
+        "MIA-MM-14": 0.925486,
+        "MIA-MM-15": 0.743883,
+        "MIA-MM-16": 0.47203,
+        "MIA-MM-17": 0.16651
+      },
+      "sum_of_coverage_ratios": 7.208693,
+      "is_allocation_weight": false,
+      "station_hits": 14
+    },
+    {
+      "FID": 968,
+      "M21_ZONE": "T4-R",
+      "polygon_area_m2": 101273.065369,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 969,
+      "M21_ZONE": "T6-48B-O",
+      "polygon_area_m2": 2084.452086,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-13": 613.962669,
+        "MIA-MM-15": 139.093226,
+        "MIA-MM-16": 2084.452086,
+        "MIA-MM-17": 2084.452086,
+        "MIA-MM-18": 2084.452086,
+        "MIA-MM-19": 2084.452086,
+        "MIA-MM-20": 2084.452086,
+        "MIA-MM-21": 2084.452086
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-13": 0.294544,
+        "MIA-MM-15": 0.066729,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 6.361273,
+      "is_allocation_weight": false,
+      "station_hits": 8
+    },
+    {
+      "FID": 975,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 486.027274,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-07": 486.027274,
+        "MIA-MM-08": 486.027274,
+        "MIA-MM-09": 486.027274,
+        "MIA-MM-10": 486.027274,
+        "MIA-MM-11": 486.027274,
+        "MIA-MM-12": 486.027274,
+        "MIA-MM-13": 486.027274,
+        "MIA-MM-14": 486.027274,
+        "MIA-MM-15": 486.027274,
+        "MIA-MM-16": 486.027274,
+        "MIA-MM-17": 486.027274,
+        "MIA-MM-18": 134.663031
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 0.277069
+      },
+      "sum_of_coverage_ratios": 11.277069,
+      "is_allocation_weight": false,
+      "station_hits": 12
+    },
+    {
+      "FID": 976,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 123081.170368,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 977,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 9617.574637,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 983,
+      "M21_ZONE": "T3-R",
+      "polygon_area_m2": 2946753.307982,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-20": 50599.119984,
+        "MIA-MM-21": 541.242122
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-20": 0.017171,
+        "MIA-MM-21": 0.000184
+      },
+      "sum_of_coverage_ratios": 0.017355,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 985,
+      "M21_ZONE": "T6-48A-O",
+      "polygon_area_m2": 468864.726858,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-11": 27018.12733,
+        "MIA-MM-12": 88187.583555,
+        "MIA-MM-13": 152240.731614,
+        "MIA-MM-14": 58665.305618,
+        "MIA-MM-15": 119182.54068,
+        "MIA-MM-16": 180537.169038,
+        "MIA-MM-17": 277464.024313,
+        "MIA-MM-18": 397348.659963,
+        "MIA-MM-19": 468864.726858,
+        "MIA-MM-20": 423093.011389,
+        "MIA-MM-21": 402308.991022
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-11": 0.057625,
+        "MIA-MM-12": 0.188087,
+        "MIA-MM-13": 0.324701,
+        "MIA-MM-14": 0.125122,
+        "MIA-MM-15": 0.254194,
+        "MIA-MM-16": 0.385052,
+        "MIA-MM-17": 0.591778,
+        "MIA-MM-18": 0.84747,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 0.902378,
+        "MIA-MM-21": 0.858049
+      },
+      "sum_of_coverage_ratios": 5.534455,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 986,
+      "M21_ZONE": "T6-48B-O",
+      "polygon_area_m2": 7005.679076,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-12": 4000.814923,
+        "MIA-MM-13": 7005.679076,
+        "MIA-MM-14": 4831.192803,
+        "MIA-MM-15": 7005.679076,
+        "MIA-MM-16": 7005.679076,
+        "MIA-MM-17": 7005.679076,
+        "MIA-MM-18": 7005.679076,
+        "MIA-MM-19": 7005.679076,
+        "MIA-MM-20": 7005.679076,
+        "MIA-MM-21": 7005.679076
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-12": 0.571082,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 0.689611,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0,
+        "MIA-MM-18": 1.0,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 1.0,
+        "MIA-MM-21": 1.0
+      },
+      "sum_of_coverage_ratios": 9.260693,
+      "is_allocation_weight": false,
+      "station_hits": 10
+    },
+    {
+      "FID": 987,
+      "M21_ZONE": "T6-48B-O",
+      "polygon_area_m2": 350283.44817,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-09": 21479.140258,
+        "MIA-MM-11": 37602.050473,
+        "MIA-MM-12": 79861.721573,
+        "MIA-MM-13": 210217.792491,
+        "MIA-MM-14": 170304.885097,
+        "MIA-MM-15": 217138.045028,
+        "MIA-MM-16": 241664.276672,
+        "MIA-MM-17": 286487.620896,
+        "MIA-MM-18": 328568.972097,
+        "MIA-MM-19": 350283.44817,
+        "MIA-MM-20": 328487.187769,
+        "MIA-MM-21": 241675.893966
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-09": 0.061319,
+        "MIA-MM-11": 0.107347,
+        "MIA-MM-12": 0.227992,
+        "MIA-MM-13": 0.600136,
+        "MIA-MM-14": 0.486192,
+        "MIA-MM-15": 0.619892,
+        "MIA-MM-16": 0.689911,
+        "MIA-MM-17": 0.817874,
+        "MIA-MM-18": 0.938009,
+        "MIA-MM-19": 1.0,
+        "MIA-MM-20": 0.937775,
+        "MIA-MM-21": 0.689944
+      },
+      "sum_of_coverage_ratios": 7.176391,
+      "is_allocation_weight": false,
+      "station_hits": 12
+    },
+    {
+      "FID": 996,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 7434.156639,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 997,
+      "M21_ZONE": "T6-80-O",
+      "polygon_area_m2": 759662.699097,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-03": 41400.867598,
+        "MIA-MM-04": 113992.635743,
+        "MIA-MM-05": 300406.391946,
+        "MIA-MM-06": 465236.816662,
+        "MIA-MM-07": 604141.668682,
+        "MIA-MM-08": 513952.155077,
+        "MIA-MM-09": 608314.18978,
+        "MIA-MM-10": 734248.075763,
+        "MIA-MM-11": 759662.699097,
+        "MIA-MM-12": 637379.569411,
+        "MIA-MM-13": 682141.848182,
+        "MIA-MM-14": 736895.101178,
+        "MIA-MM-15": 681570.142249,
+        "MIA-MM-16": 630431.935218,
+        "MIA-MM-17": 503580.071406,
+        "MIA-MM-18": 286437.818797,
+        "MIA-MM-19": 49610.184522,
+        "MIA-MM-20": 62.645795
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-03": 0.054499,
+        "MIA-MM-04": 0.150057,
+        "MIA-MM-05": 0.395447,
+        "MIA-MM-06": 0.612426,
+        "MIA-MM-07": 0.795276,
+        "MIA-MM-08": 0.676553,
+        "MIA-MM-09": 0.800769,
+        "MIA-MM-10": 0.966545,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-12": 0.83903,
+        "MIA-MM-13": 0.897954,
+        "MIA-MM-14": 0.970029,
+        "MIA-MM-15": 0.897201,
+        "MIA-MM-16": 0.829884,
+        "MIA-MM-17": 0.6629,
+        "MIA-MM-18": 0.377059,
+        "MIA-MM-19": 0.065306,
+        "MIA-MM-20": 8.2e-05
+      },
+      "sum_of_coverage_ratios": 10.991016,
+      "is_allocation_weight": false,
+      "station_hits": 18
+    },
+    {
+      "FID": 998,
+      "M21_ZONE": "T6-80-O",
+      "polygon_area_m2": 7259.814923,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-05": 198.729451,
+        "MIA-MM-06": 7192.165607,
+        "MIA-MM-07": 7259.814923,
+        "MIA-MM-08": 7259.814923,
+        "MIA-MM-09": 7259.814923,
+        "MIA-MM-10": 7259.814923,
+        "MIA-MM-11": 7259.814923,
+        "MIA-MM-13": 7259.814923,
+        "MIA-MM-14": 7259.814923,
+        "MIA-MM-15": 7259.814923,
+        "MIA-MM-16": 7259.814923,
+        "MIA-MM-17": 2420.856338
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-05": 0.027374,
+        "MIA-MM-06": 0.990682,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 0.33346
+      },
+      "sum_of_coverage_ratios": 10.351515,
+      "is_allocation_weight": false,
+      "station_hits": 12
+    },
+    {
+      "FID": 1046,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 52596.462659,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1047,
+      "M21_ZONE": "D2",
+      "polygon_area_m2": 6848.121481,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1048,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 126924.124675,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1049,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 37377.146956,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1054,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 159811.42623,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 1809.012112
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.01132
+      },
+      "sum_of_coverage_ratios": 0.01132,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1055,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 136508.558936,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 26729.341957
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 0.195807
+      },
+      "sum_of_coverage_ratios": 0.195807,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1056,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 253258.493497,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1061,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 21745.550921,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1062,
+      "M21_ZONE": "CS",
+      "polygon_area_m2": 58441.989236,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1068,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 5896.442427,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1069,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 4056.141746,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1070,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 1396.651315,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1071,
+      "M21_ZONE": "T5-L",
+      "polygon_area_m2": 14143.290315,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 14143.290315
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1072,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 5925.462193,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 5925.462193
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1073,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 3694.805261,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 3694.805261
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1074,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 1688.844145,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 1688.844145
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1077,
+      "M21_ZONE": "T6-8A-O",
+      "polygon_area_m2": 3116.567771,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1078,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 1771.04898,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1079,
+      "M21_ZONE": "T6-12-O",
+      "polygon_area_m2": 41049.875684,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1080,
+      "M21_ZONE": "D1",
+      "polygon_area_m2": 822.486206,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1081,
+      "M21_ZONE": "T6-8A-O",
+      "polygon_area_m2": 7860.866431,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1082,
+      "M21_ZONE": "T6-8B-O",
+      "polygon_area_m2": 19403.765298,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1083,
+      "M21_ZONE": "T6-8A-O",
+      "polygon_area_m2": 41800.606646,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1084,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 3338.187771,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1085,
+      "M21_ZONE": "T5-O",
+      "polygon_area_m2": 5461.055673,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1090,
+      "M21_ZONE": "T6-24A-R",
+      "polygon_area_m2": 8452.915573,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-21": 1797.419331
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-21": 0.212639
+      },
+      "sum_of_coverage_ratios": 0.212639,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1093,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 7953.202879,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 7953.202879,
+        "MIA-MM-02": 7953.202879,
+        "MIA-MM-03": 7953.202879,
+        "MIA-MM-04": 7953.202879,
+        "MIA-MM-05": 7953.202879,
+        "MIA-MM-06": 24.954786
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 1.0,
+        "MIA-MM-06": 0.003138
+      },
+      "sum_of_coverage_ratios": 5.003138,
+      "is_allocation_weight": false,
+      "station_hits": 6
+    },
+    {
+      "FID": 1095,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 4521.222559,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 4521.222559,
+        "MIA-MM-02": 4521.222559,
+        "MIA-MM-03": 4521.222559,
+        "MIA-MM-04": 4521.222559
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0
+      },
+      "sum_of_coverage_ratios": 4.0,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 1096,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 6056.784462,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 6056.784462,
+        "MIA-MM-02": 1581.467402
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 0.261107
+      },
+      "sum_of_coverage_ratios": 1.261107,
+      "is_allocation_weight": false,
+      "station_hits": 2
+    },
+    {
+      "FID": 1101,
+      "M21_ZONE": "CI",
+      "polygon_area_m2": 1247.586463,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 1247.586463
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0
+      },
+      "sum_of_coverage_ratios": 1.0,
+      "is_allocation_weight": false,
+      "station_hits": 1
+    },
+    {
+      "FID": 1102,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 6585.14888,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 6585.14888,
+        "MIA-MM-02": 6585.14888,
+        "MIA-MM-03": 6585.14888,
+        "MIA-MM-04": 6585.14888,
+        "MIA-MM-05": 4284.645656
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 0.650653
+      },
+      "sum_of_coverage_ratios": 4.650653,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    },
+    {
+      "FID": 1103,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 13158.299411,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 13158.299411,
+        "MIA-MM-02": 13158.299411,
+        "MIA-MM-03": 7920.847164,
+        "MIA-MM-04": 12984.967444
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 0.601966,
+        "MIA-MM-04": 0.986827
+      },
+      "sum_of_coverage_ratios": 3.588793,
+      "is_allocation_weight": false,
+      "station_hits": 4
+    },
+    {
+      "FID": 1113,
+      "M21_ZONE": "T6-8-O",
+      "polygon_area_m2": 4211.953219,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1114,
+      "M21_ZONE": "T3-O",
+      "polygon_area_m2": 6069.814496,
+      "clipped_area_by_station_m2": {},
+      "coverage_ratio_by_station_nonexclusive": {},
+      "sum_of_coverage_ratios": 0.0,
+      "is_allocation_weight": false,
+      "station_hits": 0
+    },
+    {
+      "FID": 1117,
+      "M21_ZONE": "T6-80-O",
+      "polygon_area_m2": 2069.165638,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-06": 2069.165638,
+        "MIA-MM-07": 2069.165638,
+        "MIA-MM-08": 2069.165638,
+        "MIA-MM-09": 2069.165638,
+        "MIA-MM-10": 2069.165638,
+        "MIA-MM-11": 2069.165638,
+        "MIA-MM-13": 2069.165638,
+        "MIA-MM-14": 2069.165638,
+        "MIA-MM-15": 2069.165638,
+        "MIA-MM-16": 2069.165638,
+        "MIA-MM-17": 2069.165638
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-06": 1.0,
+        "MIA-MM-07": 1.0,
+        "MIA-MM-08": 1.0,
+        "MIA-MM-09": 1.0,
+        "MIA-MM-10": 1.0,
+        "MIA-MM-11": 1.0,
+        "MIA-MM-13": 1.0,
+        "MIA-MM-14": 1.0,
+        "MIA-MM-15": 1.0,
+        "MIA-MM-16": 1.0,
+        "MIA-MM-17": 1.0
+      },
+      "sum_of_coverage_ratios": 11.0,
+      "is_allocation_weight": false,
+      "station_hits": 11
+    },
+    {
+      "FID": 1118,
+      "M21_ZONE": "T6-24B-O",
+      "polygon_area_m2": 7068.718936,
+      "clipped_area_by_station_m2": {
+        "MIA-MM-01": 7068.718936,
+        "MIA-MM-02": 7068.718936,
+        "MIA-MM-03": 7068.718936,
+        "MIA-MM-04": 7068.718936,
+        "MIA-MM-05": 7030.813235
+      },
+      "coverage_ratio_by_station_nonexclusive": {
+        "MIA-MM-01": 1.0,
+        "MIA-MM-02": 1.0,
+        "MIA-MM-03": 1.0,
+        "MIA-MM-04": 1.0,
+        "MIA-MM-05": 0.994638
+      },
+      "sum_of_coverage_ratios": 4.994638,
+      "is_allocation_weight": false,
+      "station_hits": 5
+    }
+  ],
+  "unassigned_polygon_fids": [
+    55,
+    57,
+    59,
+    70,
+    71,
+    74,
+    75,
+    76,
+    77,
+    117,
+    118,
+    178,
+    180,
+    181,
+    183,
+    184,
+    191,
+    192,
+    209,
+    212,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    255,
+    287,
+    288,
+    289,
+    290,
+    353,
+    366,
+    547,
+    553,
+    570,
+    572,
+    574,
+    601,
+    625,
+    633,
+    636,
+    664,
+    684,
+    693,
+    696,
+    701,
+    739,
+    744,
+    745,
+    746,
+    747,
+    749,
+    751,
+    769,
+    789,
+    790,
+    796,
+    797,
+    808,
+    864,
+    884,
+    908,
+    909,
+    968,
+    976,
+    977,
+    996,
+    1046,
+    1047,
+    1048,
+    1049,
+    1056,
+    1061,
+    1062,
+    1068,
+    1069,
+    1070,
+    1077,
+    1078,
+    1079,
+    1080,
+    1081,
+    1082,
+    1083,
+    1084,
+    1085,
+    1113,
+    1114
+  ],
+  "multi_station_polygon_fids": [
+    29,
+    39,
+    52,
+    56,
+    58,
+    63,
+    64,
+    66,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    102,
+    103,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    113,
+    114,
+    115,
+    119,
+    120,
+    176,
+    177,
+    182,
+    207,
+    208,
+    210,
+    259,
+    260,
+    452,
+    504,
+    507,
+    508,
+    597,
+    619,
+    621,
+    652,
+    677,
+    682,
+    683,
+    686,
+    689,
+    691,
+    698,
+    715,
+    735,
+    753,
+    755,
+    757,
+    758,
+    787,
+    798,
+    809,
+    810,
+    822,
+    824,
+    825,
+    826,
+    827,
+    828,
+    829,
+    837,
+    838,
+    859,
+    860,
+    861,
+    862,
+    876,
+    877,
+    878,
+    879,
+    892,
+    921,
+    922,
+    951,
+    969,
+    975,
+    983,
+    985,
+    986,
+    987,
+    997,
+    998,
+    1093,
+    1095,
+    1096,
+    1102,
+    1103,
+    1117,
+    1118
+  ],
+  "note": "Overlap measured as actual intersecting geometry. Coverage ratios are non-exclusive and are NOT allocation weights; demand allocation needs its own rules (unallocated share, transfer roles, competition)."
+}

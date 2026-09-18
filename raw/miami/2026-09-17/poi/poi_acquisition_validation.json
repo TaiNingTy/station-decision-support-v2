@@ -1,0 +1,448 @@
+{
+  "status": "PASS",
+  "failed_checks": [],
+  "checked_on": "2026-09-17",
+  "layers": {
+    "school_public": {
+      "ids": 20,
+      "features": 20,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "school_charter": {
+      "ids": 7,
+      "features": 7,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "school_private": {
+      "ids": 18,
+      "features": 18,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "park_city": {
+      "ids": 35,
+      "features": 35,
+      "geometry_type": "esriGeometryPolygon",
+      "object_id_field": "FID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "MultiPolygon",
+        "Polygon"
+      ]
+    },
+    "park_county": {
+      "ids": 3,
+      "features": 3,
+      "geometry_type": "esriGeometryPolygon",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Polygon"
+      ]
+    },
+    "clinic_fqhc": {
+      "ids": 1,
+      "features": 1,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "clinic_free_standing": {
+      "ids": 5,
+      "features": 5,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "clinic_jhs_primary_care": {
+      "ids": 2,
+      "features": 2,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "clinic_mental_health": {
+      "ids": 0,
+      "features": 0,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": []
+    },
+    "clinic_school_based": {
+      "ids": 2,
+      "features": 2,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "OBJECTID",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "grocery_snap_all_types": {
+      "ids": 45,
+      "features": 45,
+      "geometry_type": "esriGeometryPoint",
+      "object_id_field": "ObjectId",
+      "exceeded_transfer_limit": false,
+      "geometry_types_in_file": [
+        "Point"
+      ]
+    },
+    "osm_grocery_crosscheck": {
+      "elements": 11,
+      "osm_base": "2026-06-01T08:52:28Z"
+    }
+  },
+  "checks": {
+    "school_public_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_public_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_public_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_public_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 20,
+        "features": 20
+      }
+    },
+    "school_public_no_transfer_limit": {
+      "pass": true
+    },
+    "school_public_all_features_have_geometry": {
+      "pass": true
+    },
+    "school_public_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "school_charter_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_charter_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_charter_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_charter_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 7,
+        "features": 7
+      }
+    },
+    "school_charter_no_transfer_limit": {
+      "pass": true
+    },
+    "school_charter_all_features_have_geometry": {
+      "pass": true
+    },
+    "school_charter_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "school_private_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_private_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_private_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "school_private_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 18,
+        "features": 18
+      }
+    },
+    "school_private_no_transfer_limit": {
+      "pass": true
+    },
+    "school_private_all_features_have_geometry": {
+      "pass": true
+    },
+    "school_private_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "park_city_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_city_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_city_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_city_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 35,
+        "features": 35
+      }
+    },
+    "park_city_no_transfer_limit": {
+      "pass": true
+    },
+    "park_city_all_features_have_geometry": {
+      "pass": true
+    },
+    "park_city_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "park_county_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_county_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_county_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "park_county_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 3,
+        "features": 3
+      }
+    },
+    "park_county_no_transfer_limit": {
+      "pass": true
+    },
+    "park_county_all_features_have_geometry": {
+      "pass": true
+    },
+    "park_county_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "clinic_fqhc_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_fqhc_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_fqhc_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_fqhc_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 1,
+        "features": 1
+      }
+    },
+    "clinic_fqhc_no_transfer_limit": {
+      "pass": true
+    },
+    "clinic_fqhc_all_features_have_geometry": {
+      "pass": true
+    },
+    "clinic_fqhc_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "clinic_free_standing_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_free_standing_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_free_standing_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_free_standing_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 5,
+        "features": 5
+      }
+    },
+    "clinic_free_standing_no_transfer_limit": {
+      "pass": true
+    },
+    "clinic_free_standing_all_features_have_geometry": {
+      "pass": true
+    },
+    "clinic_free_standing_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "clinic_jhs_primary_care_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_jhs_primary_care_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_jhs_primary_care_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_jhs_primary_care_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 2,
+        "features": 2
+      }
+    },
+    "clinic_jhs_primary_care_no_transfer_limit": {
+      "pass": true
+    },
+    "clinic_jhs_primary_care_all_features_have_geometry": {
+      "pass": true
+    },
+    "clinic_jhs_primary_care_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "clinic_mental_health_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_mental_health_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_mental_health_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_mental_health_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 0,
+        "features": 0
+      }
+    },
+    "clinic_mental_health_no_transfer_limit": {
+      "pass": true
+    },
+    "clinic_mental_health_all_features_have_geometry": {
+      "pass": true
+    },
+    "clinic_mental_health_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "clinic_school_based_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_school_based_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_school_based_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "clinic_school_based_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 2,
+        "features": 2
+      }
+    },
+    "clinic_school_based_no_transfer_limit": {
+      "pass": true
+    },
+    "clinic_school_based_all_features_have_geometry": {
+      "pass": true
+    },
+    "clinic_school_based_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "grocery_snap_all_types_metadata_present_and_sha256_matches": {
+      "pass": true
+    },
+    "grocery_snap_all_types_ids_present_and_sha256_matches": {
+      "pass": true
+    },
+    "grocery_snap_all_types_geojson_present_and_sha256_matches": {
+      "pass": true
+    },
+    "grocery_snap_all_types_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 45,
+        "features": 45
+      }
+    },
+    "grocery_snap_all_types_no_transfer_limit": {
+      "pass": true
+    },
+    "grocery_snap_all_types_all_features_have_geometry": {
+      "pass": true
+    },
+    "grocery_snap_all_types_ids_match": {
+      "pass": true,
+      "detail": {
+        "only_ids": [],
+        "only_features": []
+      }
+    },
+    "osm_grocery_crosscheck_response_present_and_sha256_matches": {
+      "pass": true
+    },
+    "osm_crosscheck_has_timestamp": {
+      "pass": true
+    }
+  },
+  "scope": "acquisition integrity only: counts, ids, transfer limits, geometry presence; category definitions are applied in the POI stage"
+}

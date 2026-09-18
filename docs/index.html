@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Station Decision Support</title>
+<meta name="description" content="An AI product manager's case study: a grounded, auditable AI workflow for configuring personal rapid transit stations, demonstrated on real public data for Miami's 21 Metromover stations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F4F7;--surface:#FFFFFF;--surface-2:#E9EDF2;--ink:#111827;--muted:#4B5563;--line:#D5DAE1;--line-strong:#AEB6C2;
+  --accent:#0B7285;--accent-ink:#FFFFFF;--accent-soft:#D9F0F3;--obs:#2B8A3E;--der:#3B5BDB;--asm:#B7791F;--na:#868E96;--warn-bg:#FFF4E5;
+  --panel:#0F1B2D;--panel-ink:#E6EDF6;--panel-muted:#9FB0C6;--map-water:#DCE7F0;--map-land:#F7F9FB;--map-park:#BFE3C4;--map-loop:#0B7285;
+  --display:"Archivo","IBM Plex Sans",system-ui,sans-serif;--body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --radius:6px;--maxw:1140px;--gutter:clamp(16px,4vw,40px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1116;--surface:#161B22;--surface-2:#1E252E;--ink:#E6EAF0;--muted:#A3ADBB;--line:#2A313C;--line-strong:#3D4652;
+  --accent:#3BC4CF;--accent-ink:#06282C;--accent-soft:#12363B;--obs:#63C27A;--der:#8AA6FF;--asm:#E4B45C;--na:#8B949E;--warn-bg:#3A2D12;
+  --panel:#0A1220;--panel-ink:#E6EDF6;--panel-muted:#93A4BA;--map-water:#0F1A26;--map-land:#161B22;--map-park:#1F4A2B;--map-loop:#3BC4CF;}}
+:root[data-theme="dark"]{
+  --bg:#0E1116;--surface:#161B22;--surface-2:#1E252E;--ink:#E6EAF0;--muted:#A3ADBB;--line:#2A313C;--line-strong:#3D4652;
+  --accent:#3BC4CF;--accent-ink:#06282C;--accent-soft:#12363B;--obs:#63C27A;--der:#8AA6FF;--asm:#E4B45C;--na:#8B949E;--warn-bg:#3A2D12;
+  --panel:#0A1220;--panel-ink:#E6EDF6;--panel-muted:#93A4BA;--map-water:#0F1A26;--map-land:#161B22;--map-park:#1F4A2B;--map-loop:#3BC4CF;}
+*{box-sizing:border-box}
+html{color-scheme:light dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}a:hover{text-decoration-thickness:2px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(30px,4.4vw,52px);font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(24px,2.8vw,34px);font-weight:700}
+h3{font-size:19px;font-weight:700}
+h4{font-size:15px;font-weight:700}
+p{margin:0}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
+.prose{max-width:70ch}
+.prose p+p{margin-top:.9em}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono)}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.num{font-variant-numeric:tabular-nums}
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:54px;flex-wrap:wrap;padding-block:6px}
+.brand{font-family:var(--display);font-weight:700;font-size:15px;color:var(--ink);text-decoration:none}
+.nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;flex-wrap:wrap}
+.nav li a{font-size:14px;color:var(--muted);text-decoration:none}
+.nav li a:hover{color:var(--accent)}
+/* hero */
+.hero{padding-block:clamp(36px,7vw,84px) clamp(28px,5vw,56px)}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);max-width:64ch;margin-top:18px;color:var(--muted)}
+.hero h1{margin-top:12px;max-width:22ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:32px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.fact .big{font-family:var(--display);font-size:28px;font-weight:800;letter-spacing:-.01em;line-height:1.1}
+.fact .what{font-size:13.5px;color:var(--muted);margin-top:6px}
+.role{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tag{font-family:var(--mono);font-size:12px;border:1px solid var(--line-strong);border-radius:999px;padding:4px 10px;color:var(--muted)}
+/* sections */
+section{padding-block:clamp(36px,6vw,72px);border-top:1px solid var(--line)}
+.sec-head{display:grid;gap:8px;margin-bottom:26px}
+.sec-head p{max-width:70ch;color:var(--muted)}
+/* STAR */
+.star{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.star article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 20px 22px;display:grid;grid-template-rows:auto auto 1fr;gap:10px}
+.star .letter{font-family:var(--display);font-weight:800;font-size:38px;line-height:1;color:var(--accent)}
+.star ul{margin:0;padding-left:18px;display:grid;gap:8px}
+.star li{font-size:15px}
+.star p{font-size:15px}
+/* capabilities */
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
+.cap{border-top:2px solid var(--accent);padding-top:12px;display:grid;gap:6px}
+.cap p{font-size:15px}
+.cap .ev{font-size:13.5px;color:var(--muted)}
+blockquote{margin:28px 0 0;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 var(--radius) var(--radius) 0;max-width:80ch}
+blockquote p{font-size:17px;font-style:italic}
+blockquote footer{margin-top:8px;font-size:13.5px;color:var(--muted);font-style:normal}
+/* demo */
+.demo-controls{display:flex;flex-wrap:wrap;gap:14px 22px;align-items:end;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:16px}
+.ctrl{display:grid;gap:5px}
+.ctrl label{font-size:12.5px;color:var(--muted);letter-spacing:.02em}
+select,.seg button{font:inherit;font-size:14px;color:var(--ink);background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);padding:7px 10px}
+select{min-width:240px}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:var(--radius);overflow:hidden}
+.seg button{border:0;border-right:1px solid var(--line-strong);cursor:pointer;background:var(--surface)}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink)}
+.seg button:focus-visible,select:focus-visible,.chip:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-left:auto}
+.legend span::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.legend .o::before{background:var(--obs)}.legend .d::before{background:var(--der)}.legend .a::before{background:var(--asm)}.legend .n::before{background:var(--na)}
+.demo-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:18px;align-items:start}
+@media (max-width:900px){.demo-grid{grid-template-columns:1fr}}
+.map-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px)}
+@media (max-width:900px){.map-card{position:static}}
+.map-card svg{width:100%;height:auto;display:block;background:var(--map-water);border-radius:4px}
+.map-note{font-size:12.5px;color:var(--muted);margin-top:8px}
+.map-station{cursor:pointer}
+.map-station circle{fill:var(--surface);stroke:var(--ink);stroke-width:1.2}
+.map-station.sel circle{fill:var(--accent);stroke:var(--accent-ink);stroke-width:1.5}
+.map-station text{font-family:var(--body);font-size:9px;fill:var(--ink);pointer-events:none}
+.band-ring{fill:none;stroke:var(--accent);stroke-width:.9;stroke-dasharray:3 2}
+.band-fill{fill:var(--accent);fill-opacity:.09}
+.union{fill:var(--map-land);stroke:var(--line-strong);stroke-width:.6}
+.park{fill:var(--map-park);stroke:none}
+.loop{fill:none;stroke:var(--map-loop);stroke-width:1.4;stroke-opacity:.75;stroke-linejoin:round}
+.poi{fill:var(--asm);fill-opacity:.55}
+.steps{display:grid;gap:14px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px 18px}
+.step header{display:flex;gap:12px;align-items:baseline;margin-bottom:10px}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.step h3{font-size:17px}
+.step .why{font-size:14px;color:var(--muted);margin-bottom:12px;max-width:70ch}
+.kv{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px 18px;margin:0}
+.kv div{display:flex;justify-content:space-between;gap:10px;align-items:baseline;border-bottom:1px dotted var(--line);padding-block:5px;font-size:14px}
+.kv dt{color:var(--muted);margin:0}
+.kv dd{margin:0;text-align:right;overflow-wrap:anywhere;min-width:0}
+.chip{font:inherit;font-family:var(--mono);font-size:13.5px;background:transparent;border:0;border-bottom:1.5px solid transparent;color:var(--ink);padding:0 0 1px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:normal;text-align:right;max-width:100%}
+.chip:hover{border-bottom-color:currentColor}
+.chip .dot{width:8px;height:8px;border-radius:50%;background:var(--na);flex:none}
+.chip.obs .dot{background:var(--obs)}.chip.der .dot{background:var(--der)}.chip.asm .dot{background:var(--asm)}.chip.na .dot{background:var(--na)}
+.chip .unc{font-size:11.5px;color:var(--muted)}
+.bars{display:grid;gap:6px;margin-top:6px}
+.bar{display:grid;grid-template-columns:150px 1fr 56px;gap:10px;align-items:center;font-size:13px}
+.bar .track{height:8px;background:var(--surface-2);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent)}
+.bar .v{font-family:var(--mono);text-align:right}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:600;color:var(--muted);font-size:12.5px;letter-spacing:.02em}
+td.num,th.num{text-align:right}
+.tbl{overflow-x:auto}
+.status{display:inline-block;font-family:var(--mono);font-size:11.5px;padding:2px 8px;border-radius:999px;border:1px solid var(--line-strong);color:var(--muted)}
+.status.ok{color:var(--obs);border-color:var(--obs)}.status.warn{color:var(--asm);border-color:var(--asm)}.status.no{color:var(--na);border-color:var(--na)}
+.callout{background:var(--warn-bg);border:1px solid var(--asm);border-radius:var(--radius);padding:10px 14px;font-size:14px;margin-top:12px}
+.chain{width:100%}
+.chain td:first-child{width:24px;color:var(--muted);font-family:var(--mono)}
+.flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.flag{border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;display:grid;gap:4px}
+.flag b{font-family:var(--mono);font-size:12.5px;font-weight:500;color:var(--muted)}
+/* ledger */
+.ledger td:nth-child(2){white-space:nowrap}
+/* panel (dark) */
+.panel{background:var(--panel);color:var(--panel-ink);border-top:0}
+.panel .muted,.panel .eyebrow{color:var(--panel-muted)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px 28px;counter-reset:rule}
+.rule{display:grid;grid-template-columns:auto 1fr;gap:12px;font-size:15px}
+.rule::before{counter-increment:rule;content:counter(rule,decimal-leading-zero);font-family:var(--mono);color:var(--accent);font-size:13px;padding-top:3px}
+/* popover */
+.pop{position:fixed;z-index:50;max-width:min(420px,calc(100vw - 32px));background:var(--surface);color:var(--ink);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:0 12px 32px rgba(0,0,0,.18);padding:14px 16px;font-size:13.5px;display:grid;gap:8px}
+.pop[hidden]{display:none}
+.pop h4{font-size:14px}
+.pop .row{display:grid;grid-template-columns:96px 1fr;gap:8px}
+.pop .row span:first-child{color:var(--muted)}
+.pop .close{position:absolute;top:6px;right:8px;border:0;background:transparent;font-size:18px;cursor:pointer;color:var(--muted)}
+.pop .cls{display:inline-block;font-family:var(--mono);font-size:12px;padding:1px 8px;border-radius:999px;border:1px solid currentColor}
+.pop .cls.obs{color:var(--obs)}.pop .cls.der{color:var(--der)}.pop .cls.asm{color:var(--asm)}.pop .cls.na{color:var(--na)}
+footer.site{padding-block:32px 48px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+footer.site ul{margin:8px 0 0;padding-left:18px}
+@media (prefers-reduced-motion: no-preference){.seg button,.chip,.map-station circle{transition:background-color .15s,color .15s,border-color .15s}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Page sections"><div class="wrap">
+  <a class="brand" href="#top">Station Decision Support</a>
+  <ul><li><a href="#story">Story</a></li><li><a href="#bring">What I bring</a></li><li><a href="#demo">Demo</a></li><li><a href="#ledger">Ledger</a></li><li><a href="#rules">Rules</a></li><li><a href="#sources">Sources</a></li><li><a href="https://github.com/TaiNingTy/AI-Station-Configuration-Decision-Support-System" rel="noopener">GitHub ↗</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+  <p class="eyebrow">AI product manager · portfolio case · public demonstration on open data</p>
+  <h1>Turning transit-planning judgment into an AI workflow that shows its evidence</h1>
+  <p class="lead">I led an AI decision-support product for configuring stations of a personal rapid transit (PRT) system. This page tells that story in STAR form, walks through what the product does on real public data for Miami's 21 Metromover stations, and is explicit about what is observed, what is derived, what is assumed, and what is not done.</p>
+  <div class="role"><span class="tag">role · AI product manager, end to end</span><span class="tag">V1.1 · agent pipeline + deterministic gate</span><span class="tag">V2 · data foundation with provenance</span><span class="tag">units · imperial display, metric compute</span></div>
+  <div class="facts" id="facts"></div>
+</div></header>
+
+<section id="story"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">The story</p><h2>Situation, task, action, result</h2><p>What actually happened, what I owned, and what can be verified. Claims about the real project are kept to what I did; the public demonstration extends the method on open data and is labelled as such.</p></div>
+  <div class="star">
+    <article><div class="letter">S</div><h3>Situation</h3><p>At a PRT company, station-configuration knowledge lived with a few senior designers and in documents written for three teams (operations, engineering, urban design), each with its own standards. Proposals iterated slowly and quality depended on who was available. On a corridor study I worked on, raw activity heat had to be screened for service relevance, demand was dispersed, and the site's depth was constrained, which pushed the answer toward a smaller main station with distributed feeder stops that planning, engineering, operations and leadership all had to review.</p></article>
+    <article><div class="letter">T</div><h3>Task</h3><p>Own the product: turn that expertise into a grounded, auditable AI workflow that drafts a station configuration, cites its basis, and knows which decisions must stay human. Then, for V2, prove the approach on real public data with traceable provenance instead of synthetic site briefs, so that every number an interviewer clicks can be followed back to its source.</p></article>
+    <article><div class="letter">A</div><h3>Action</h3><ul>
+      <li>Designed a fixed three-agent pipeline (requirement analysis → knowledge-grounded rule evaluation → configuration and delivery document) with a human-review handoff, choosing controllability and error localization over autonomy.</li>
+      <li>Diagnosed a retrieval hallucination (fluent citations of national standards that were not in the knowledge base) and fixed it: forced retrieval on every turn, knowledge-base-only citation, and an explicit "not covered by knowledge base" answer.</li>
+      <li>Moved hard engineering constraints out of the model into a deterministic code gate. A 27 m platform curve is BLOCKED and the generator never runs (0 tokens); 35 m passes and it runs.</li>
+      <li>For V2, rebuilt the data foundation on public sources for all 21 stations: station entities reconciled from 43 GTFS stops, zoning bands, ACS demography with margins of error, LODES jobs and job-to-home links, the GTFS timetable, published boardings and facilities, each value tagged observed / derived / assumption with an evidence id.</li>
+      <li>Wrote the demand-to-berth chain under PRT semantics (person trips → vehicle trips → berth cycles → platform module) with every parameter's provenance, and readiness flags that separate "complete" from "all observed".</li>
+      <li>Built a regression harness that rebuilds the whole pipeline in isolated copies and injects faults: corrupt packages, changed inputs, an optional layer that appears later, a publish that fails halfway.</li>
+    </ul></article>
+    <article><div class="letter">R</div><h3>Result</h3><p id="result-text">A reproducible pipeline for 21 stations whose rebuilds are byte-identical; a scenario chain that reports its own scale against observed boardings instead of pretending to be a forecast; PRT sizing per station for three scenarios; and an automated check suite that runs before anything is called done.</p><p class="small muted" style="margin-top:10px">Deliberately not claimed: no calibration against counts, no validated walk catchment, no engineering design, and the V2 AI interpretation has not been run yet. The readiness view below says exactly that.</p></article>
+  </div>
+</div></section>
+
+<section id="bring"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">What I bring</p><h2>Six habits this project shows</h2><p>Each one is tied to something you can inspect in the demo or the repository, not to a slogan.</p></div>
+  <div class="caps">
+    <div class="cap"><h3>Framing the AI / human boundary</h3><p>Hard where safety demands, soft where reasoning helps. Engineering constraints run as code; the model explains verdicts and prepares decisions that stay with people (feasibility, budget, final configuration).</p><p class="ev">Evidence: the V1.1 gate (0 tokens on a Critical FAIL) and the human-review handoff at the top of every delivery document.</p></div>
+    <div class="cap"><h3>Knowledge and rule governance</h3><p>Knowledge-base-only citation, versioned rules, and "not covered" as a first-class answer. For a retrieval product the metric is not "can it answer" but "will it admit when it doesn't know".</p><p class="ev">Evidence: the documented hallucination diagnosis and fix; the AI usage rules carried inside every station input package.</p></div>
+    <div class="cap"><h3>Data semantics discipline</h3><p>A five-year survey estimate is not current population; a job-to-home link is not a trip; a timetable is not ridership; a median is never averaged; an observed count is a reference, not a calibration target.</p><p class="ev">Evidence: every value in the demo carries a provenance class, period and uncertainty; the rules are written down before the code.</p></div>
+    <div class="cap"><h3>Evaluation mindset</h3><p>Nothing is called verified until it has run. Runnable gate evals, a fault-injection harness for the data pipeline, and byte-identical rebuilds as the definition of "reproducible".</p><p class="ev" id="cap-harness">Evidence: the regression results linked at the bottom of this page.</p></div>
+    <div class="cap"><h3>Cross-functional alignment</h3><p>Decision ownership is explicit: which numbers the owner must confirm (berth counts read from drawings, three renamed stations), which are assumptions (site space, vehicle occupancy), and who signs off engineering feasibility.</p><p class="ev">Evidence: the "assumption-backed" list in the readiness flags and the confirm-with-owner markers in the packages.</p></div>
+    <div class="cap"><h3>Honesty over polish</h3><p>Status labels on this page are exported from the pipeline's readiness file, not typed by hand. Where a layer is missing, the page says NOT RUN instead of hiding the row.</p><p class="ev">Evidence: the ledger below, and the readiness step in the demo.</p></div>
+  </div>
+  <blockquote><p>"I separate the need for a trip, the likelihood of choosing our service, and the policy governing access. Land use helps me interpret activity patterns, while income can inform affordability and price-sensitivity scenarios. Neither should automatically eliminate passenger demand. I translate those distinctions into explicit model assumptions, service requirements, and decision ownership, then make the trade-offs visible to planning, engineering, operations, and leadership."</p><footer>How I think about demand, in one paragraph. The V2 rules cancelled two earlier defaults ("high income = willingness to pay" and "industrial zoning = no customers") for exactly this reason.</footer></blockquote>
+</div></section>
+
+<section id="demo"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Demo · Miami Metromover, 21 stations</p><h2>How the system thinks, one station at a time</h2><p>Pick a station. Each step shows the real numbers the pipeline produced for it. Click any number to see where it comes from. Nothing here is computed live: the page reads a dataset exported from the versioned packages listed under Sources, so it works offline and cannot drift from the audited results.</p></div>
+  <div class="demo-controls">
+    <div class="ctrl"><label for="station">Station</label><select id="station"></select></div>
+    <div class="ctrl"><label id="band-label">Band (step 2)</label><div class="seg" role="group" aria-labelledby="band-label" id="band-seg"></div></div>
+    <div class="ctrl"><label id="scen-label">Scenario (steps 4–5)</label><div class="seg" role="group" aria-labelledby="scen-label" id="scen-seg"></div></div>
+    <div class="legend"><span class="o">observed</span><span class="d">derived</span><span class="a">assumption</span><span class="n">not acquired / not run</span></div>
+  </div>
+  <div class="demo-grid">
+    <div class="map-card"><svg id="map" viewBox="0 0 100 100" role="img" aria-label="Schematic map of the 21 Metromover stations, the guideway loops, the network half-mile union and the selected station's bands"></svg><p class="map-note">Schematic, not a basemap: loops are drawn station to station from the GTFS service sequences; the grey shape is the union of 21 half-mile discs (3.57 sq mi); green shapes are park boundaries; small amber dots are the listed facilities. Dashed rings are the selected station's ⅛, ¼ and ½ mile bands around its GTFS reference point, which is not an entrance.</p></div>
+    <div class="steps" id="steps"></div>
+  </div>
+</div></section>
+
+<section id="ledger"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">The ledger</p><h2>Observed, derived, assumed, not done</h2><p>One row per input the configuration depends on. Statuses come from the pipeline's readiness file at export time.</p></div>
+  <div class="tbl"><table class="ledger" id="ledger-table"><thead><tr><th>Input</th><th>Status</th><th>What it is</th><th>What it is not</th></tr></thead><tbody></tbody></table></div>
+</div></section>
+
+<section id="rules" class="panel"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Working rules</p><h2>Rules I wrote down before writing code</h2><p class="muted">They are the reason the demo can be honest under questioning.</p></div>
+  <div class="rules">
+    <div class="rule"><p>A five-year period estimate is reported with its period, vintage and 90 % margin of error, never as "current population".</p></div>
+    <div class="rule"><p>Job counts and job-to-home links describe where people live and work; they are never called trips or ridership.</p></div>
+    <div class="rule"><p>Per-station bands overlap. Station profiles are non-exclusive; the network total is computed once on the union geometry.</p></div>
+    <div class="rule"><p>Medians are never averaged. Income brackets are aggregated and interpolated, and the open top bracket reports only a lower bound.</p></div>
+    <div class="rule"><p>A density or accessibility map is not a persons-per-hour heat map. Peak boardings need time of day, purpose, mode choice, adoption and allocation, each tagged.</p></div>
+    <div class="rule"><p>Observed boardings are a reference for scale and shape, never a calibration target, until origin-destination and hourly data exist.</p></div>
+    <div class="rule"><p>PRT sizing uses average party size, not vehicle capacity, and a within-hour peaking factor that applies to berths only, never back to demand.</p></div>
+    <div class="rule"><p>Precomputed does not mean no AI. The AI layer runs in preparation, keeps its run records, and cites evidence ids; the page never fakes a live call.</p></div>
+  </div>
+</div></section>
+
+<section id="sources"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Sources and reproducibility</p><h2>Where the numbers come from</h2></div>
+  <div class="tbl"><table id="packages"><thead><tr><th>Layer</th><th>Source</th><th>Package id</th></tr></thead><tbody></tbody></table></div>
+  <p class="small muted" style="margin-top:14px" id="attribution"></p>
+  <p class="small muted" style="margin-top:10px">Rebuild: <span class="mono">python3 scripts/build_all_miami.py</span> · regression: <span class="mono">python3 scripts/test_miami_pipeline_regression.py</span> · export for this page: <span class="mono">python3 scripts/export_web_demo_data.py</span>. Company name intentionally absent: the method is public, the employer's data is not.</p>
+</div></section>
+
+<footer class="site"><div class="wrap"><p id="foot"></p></div></footer>
+
+<div class="pop" id="pop" hidden role="dialog" aria-modal="false" aria-labelledby="pop-title"><button class="close" id="pop-close" aria-label="Close">×</button><h4 id="pop-title"></h4><div id="pop-body"></div></div>
+
+<script src="data/demo_data.js"></script>
+<script>
+(function(){
+  const D = window.DEMO_DATA; if(!D){ document.getElementById('steps').innerHTML = '<p class="callout">The dataset file data/demo_data.js did not load. Serve this folder over HTTP or open it from the repository.</p>'; return; }
+  const $ = (s,el=document)=>el.querySelector(s); const esc = s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const fmt = (v,d=0)=> (v==null||isNaN(v)) ? '—' : Number(v).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
+  const pct = v => v==null ? '—' : (v*100).toFixed(1)+' %';
+  const CLS = {observed:'obs',derived:'der',assumption:'asm',na:'na'};
+  const state = {station: D.stations[11]?.id || D.stations[0].id, band:'cum', scen:'medium'};
+  const byId = Object.fromEntries(D.stations.map(s=>[s.id,s]));
+  const P = D.provenance;
+  // ---------- provenance chips ----------
+  const reg = []; // registry of popover payloads
+  function chip(value, cls, payload, unc){
+    const i = reg.push(payload)-1;
+    return `<button class="chip ${cls}" data-i="${i}" type="button">${esc(value)}${unc?`<span class="unc">${esc(unc)}</span>`:''}<span class="dot" aria-hidden="true"></span></button>`;
+  }
+  function envChip(e, layer, label, opts={}){
+    if(!e || e.v==null) return chip('not acquired','na',{title:label, rows:[['status', e?.status||'missing'], ['layer', layer]]});
+    const cls = opts.cls || ((P[layer]?.provenance_class||'').startsWith('observed') ? 'obs' : 'der');
+    const unc = e.moe!=null ? `± ${opts.pct? (e.moe*100).toFixed(1)+' pt' : fmt(e.moe)}` : '';
+    const val = opts.pct ? pct(e.raw ?? e.v) : (opts.fmt ? opts.fmt(e.v) : fmt(e.v, opts.d||0));
+    const rows = [['provenance', P[layer].provenance_class], ['nature', P[layer].data_nature], ['source', P[layer].source]];
+    if(P[layer].period_note) rows.push(['period', P[layer].period_note]);
+    if(P[layer].weighting) rows.push(['weighting', P[layer].weighting]);
+    if(e.moe!=null) rows.push(['uncertainty', `${opts.pct ? (e.moe*100).toFixed(1)+' percentage points' : fmt(e.moe)} at 90 % confidence; coefficient of variation ${e.cv!=null? e.cv.toFixed(3):'—'} → reliability ${e.rel||'—'}. ${P[layer].uncertainty||''}`]);
+    if(e.status && e.status!=='value') rows.push(['status', e.status]);
+    rows.push(['semantics', P[layer].semantics||'']); rows.push(['package', P[layer].package]); if(P[layer].evidence) rows.push(['evidence', P[layer].evidence]);
+    if(opts.note) rows.push(['note', opts.note]);
+    return chip(val, opts.cls||cls, {title:label, rows, cls: opts.cls||cls}, unc);
+  }
+  function plain(value, layer, label, cls, extraRows=[], unit){
+    const rows = [['provenance', P[layer]?.provenance_class||cls], ['nature', P[layer]?.data_nature||''], ['source', P[layer]?.source||''], ['semantics', P[layer]?.semantics||''], ['package', P[layer]?.package||'']].concat(extraRows);
+    return chip(value, cls, {title:label, rows, cls});
+  }
+  function asm(value, id, label, statement, extra=[]){
+    return chip(value, 'asm', {title:label, cls:'asm', rows:[['provenance','assumption'],['parameter', id],['statement', statement]].concat(extra)});
+  }
+  // ---------- popover ----------
+  const pop = $('#pop');
+  document.addEventListener('click', ev=>{
+    const b = ev.target.closest('.chip');
+    if(b){ const p = reg[+b.dataset.i]; showPop(p, b); ev.stopPropagation(); return; }
+    if(!ev.target.closest('#pop')) pop.hidden = true;
+  });
+  $('#pop-close').addEventListener('click', ()=>{ pop.hidden = true; });
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') pop.hidden = true; });
+  function showPop(p, anchor){
+    $('#pop-title').innerHTML = `${esc(p.title)} ${p.cls?`<span class="cls ${p.cls}">${esc({obs:'observed',der:'derived',asm:'assumption',na:'not acquired'}[p.cls])}</span>`:''}`;
+    $('#pop-body').innerHTML = p.rows.filter(r=>r[1]!=null && r[1]!=='').map(r=>`<div class="row"><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('');
+    pop.hidden = false;
+    const r = anchor.getBoundingClientRect(); const pw = Math.min(420, window.innerWidth-32);
+    let left = Math.min(Math.max(16, r.left), window.innerWidth - pw - 16); let top = r.bottom + 8;
+    pop.style.left = left+'px'; pop.style.top = top+'px';
+    const ph = pop.getBoundingClientRect().height; if(top + ph > window.innerHeight - 8) pop.style.top = Math.max(8, r.top - ph - 8)+'px';
+  }
+  // ---------- facts strip ----------
+  const H = D.harness;
+  $('#facts').innerHTML = [
+    ['21', 'stations reconciled from 43 GTFS stop records; one entity per physical station'],
+    [String(Object.keys(D.packages).length), 'versioned data packages, each with its own manifest, hashes and validation'],
+    [H ? `${H.checks}` : '—', H ? `automated checks in ${H.scenarios} fault-injection scenarios (${H.passed?'all passing':'not all passing'} at export)` : 'regression results not exported'],
+    ['0 tokens', 'spent by the generator when the V1.1 rule gate blocks an infeasible plan (27 m curve)']
+  ].map(f=>`<div class="fact"><div class="big num">${esc(f[0])}</div><div class="what">${esc(f[1])}</div></div>`).join('');
+  if(H) $('#cap-harness').textContent = `Evidence: ${H.scenarios} scenarios and ${H.checks} checks in the regression results (${H.results_file}), run ${H.run_at}.`;
+  const cfgN = D.network.config_network, tot = D.network.scenario_totals;
+  $('#result-text').innerHTML = `A reproducible pipeline for 21 stations whose rebuilds are byte-identical; a scenario chain whose AM-peak totals (${fmt(tot.low.prt_am_peak_hour_trips)} / ${fmt(tot.medium.prt_am_peak_hour_trips)} / ${fmt(tot.high.prt_am_peak_hour_trips)} person trips for low / medium / high) are reported against observed boardings instead of being sold as a forecast; PRT sizing for every station in three scenarios (${cfgN.low.berths_required_total} / ${cfgN.medium.berths_required_total} / ${cfgN.high.berths_required_total} berths network-wide); and an automated check suite that runs before anything is called done.`;
+  // ---------- controls ----------
+  const sel = $('#station'); sel.innerHTML = D.stations.map(s=>`<option value="${s.id}">${esc(s.name)} · ${s.id.replace('MIA-MM-','#')}</option>`).join(''); sel.value = state.station;
+  sel.addEventListener('change', ()=>{ state.station = sel.value; render(); });
+  const bandKeys = ['b1','b2','b3','cum'];
+  $('#band-seg').innerHTML = bandKeys.map((k,i)=>`<button type="button" data-k="${k}" aria-pressed="${k===state.band}">${esc(D.bands.labels[i])}</button>`).join('');
+  $('#scen-seg').innerHTML = ['low','medium','high'].map(k=>`<button type="button" data-k="${k}" aria-pressed="${k===state.scen}">${k}</button>`).join('');
+  document.querySelectorAll('.seg').forEach(seg=>seg.addEventListener('click', e=>{ const b=e.target.closest('button'); if(!b) return; const key = seg.id==='band-seg'?'band':'scen'; state[key]=b.dataset.k; seg.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed', x===b)); render(); }));
+  // ---------- map ----------
+  const W = D.geometry.window.coordinates[0]; const lons = W.map(c=>c[0]), lats = W.map(c=>c[1]);
+  const west=Math.min(...lons), east=Math.max(...lons), south=Math.min(...lats), north=Math.max(...lats); const lat0=(south+north)/2; const kx=Math.cos(lat0*Math.PI/180);
+  const MW = 100, MH = MW*((north-south)/((east-west)*kx)); $('#map').setAttribute('viewBox', `0 0 ${MW} ${MH.toFixed(2)}`);
+  const X = lon => (lon-west)/(east-west)*MW, Y = lat => (north-lat)/(north-south)*MH; const mPerDegLat = 111320; const rY = m => m/mPerDegLat/(north-south)*MH;
+  const ring = poly => poly.map(c=>`${X(c[0]).toFixed(2)},${Y(c[1]).toFixed(2)}`).join(' ');
+  const polys = g => g.type==='Polygon' ? [g.coordinates] : g.coordinates;
+  function drawMap(){
+    const sSel = byId[state.station]; let out = '';
+    out += polys(D.geometry.network_union).map(p=>`<path class="union" d="${p.map(r=>'M'+ring(r)+'Z').join('')}" fill-rule="evenodd"/>`).join('');
+    out += D.geometry.parks.map(pk=>polys(pk.geometry).map(p=>`<path class="park" d="${p.map(r=>'M'+ring(r)+'Z').join('')}" fill-rule="evenodd"><title>${esc(pk.name)}</title></path>`).join('')).join('');
+    const pairs = new Set();
+    D.geometry.loops.forEach(l=>{ for(let i=0;i<l.station_sequence.length-1;i++){ const a=byId[l.station_sequence[i]], b=byId[l.station_sequence[i+1]]; if(!a||!b) continue; const key=[a.id,b.id].sort().join('|'); if(pairs.has(key)) continue; pairs.add(key); out += `<line class="loop" x1="${X(a.lon).toFixed(2)}" y1="${Y(a.lat).toFixed(2)}" x2="${X(b.lon).toFixed(2)}" y2="${Y(b.lat).toFixed(2)}"/>`; } });
+    out += D.geometry.pois.map(p=>`<circle class="poi" cx="${X(p.lon).toFixed(2)}" cy="${Y(p.lat).toFixed(2)}" r="0.55"><title>${esc(p.cat)}: ${esc(p.name)}</title></circle>`).join('');
+    const rads = D.bands.radii_ft.map(ft=>ft*0.3048);
+    // the viewBox is scaled so that one metre has the same length on both axes, so the bands are true circles
+    out += `<circle class="band-fill" cx="${X(sSel.lon).toFixed(2)}" cy="${Y(sSel.lat).toFixed(2)}" r="${rY(rads[2]).toFixed(2)}"/>`;
+    rads.forEach(r=>{ out += `<circle class="band-ring" cx="${X(sSel.lon).toFixed(2)}" cy="${Y(sSel.lat).toFixed(2)}" r="${rY(r).toFixed(2)}"/>`; });
+    out += D.stations.map(s=>`<g class="map-station${s.id===state.station?' sel':''}" data-id="${s.id}"><circle cx="${X(s.lon).toFixed(2)}" cy="${Y(s.lat).toFixed(2)}" r="${s.id===state.station?1.9:1.3}"><title>${esc(s.name)}</title></circle>${s.id===state.station?`<text x="${(X(s.lon)+(X(s.lon)>MW*0.6?-2.6:2.6)).toFixed(2)}" y="${(Y(s.lat)-2).toFixed(2)}" text-anchor="${X(s.lon)>MW*0.6?'end':'start'}">${esc(s.name)}</text>`:''}</g>`).join('');
+    $('#map').innerHTML = out;
+  }
+  $('#map').addEventListener('click', e=>{ const g=e.target.closest('.map-station'); if(!g) return; state.station=g.dataset.id; sel.value=state.station; render(); });
+  // ---------- steps ----------
+  function stepBands(s){
+    const b = s.bands[state.band]; const d=b.demography, j=b.jobs, z=b.zoning;
+    const zbars = z.by_transect.slice(0,5).map(t=>`<div class="bar"><span>${esc(t[0])}</span><div class="track"><div class="fill" style="width:${Math.min(100,t[1]*100).toFixed(1)}%"></div></div><span class="v">${(t[1]*100).toFixed(1)} %</span></div>`).join('');
+    const mi = d.median_income;
+    return `<p class="why">${esc(b.label)} band around the reference point: ${fmt(b.ring_acres)} acres of ring, ${fmt(b.land_acres)} acres of land after erasing water. Three Euclidean bands are the analysis unit; a network walk catchment is a separate, optional layer (not built).</p>
+      <h4>Zoning (Miami 21 transects), share of band area</h4>
+      <div class="bars">${zbars}</div>
+      <dl class="kv" style="margin-top:8px"><div><dt>zoned share of band</dt><dd>${plain(pct(z.zoned_share),'zoning','Zoned share of band','obs',[['polygons', z.polygon_count],['uncovered', pct(z.uncovered_share)+' — right-of-way, water or layer gaps; cause not determined']])}</dd></div></dl>
+      <h4 style="margin-top:14px">Residents (ACS 2020–2024, apportioned by land share)</h4>
+      <dl class="kv">
+        <div><dt>population</dt><dd>${envChip(d.population,'demography','Population (D01)')}</dd></div>
+        <div><dt>households</dt><dd>${envChip(d.households,'demography','Households (D02)')}</dd></div>
+        <div><dt>workers 16+</dt><dd>${envChip(d.workers,'demography','Workers 16 and over (D06)')}</dd></div>
+        <div><dt>zero-vehicle households</dt><dd>${envChip(d.zero_vehicle_share,'demography','Zero-vehicle household share (R03)',{pct:true,cls:'der'})}</dd></div>
+        <div><dt>transit commute share</dt><dd>${envChip(d.transit_commute_share,'demography','Public-transportation commute share (R01)',{pct:true,cls:'der',note:'reference only; not part of the ridership chain'})}</dd></div>
+        <div><dt>work-from-home share</dt><dd>${envChip(d.wfh_share,'demography','Worked-from-home share (R02)',{pct:true,cls:'der'})}</dd></div>
+        <div><dt>households under $35k</dt><dd>${envChip(d.low_income_share,'demography','Household income below $35,000 (R04)',{pct:true,cls:'der',note:'a project convention, not an official low-income definition; never a demand or eligibility threshold'})}</dd></div>
+        <div><dt>age 65+</dt><dd>${envChip(d.age_65_share,'demography','Population 65 and over share (R07)',{pct:true,cls:'der'})}</dd></div>
+        <div><dt>median household income</dt><dd>${mi.v!=null ? chip('$'+fmt(mi.v)+(mi.open_ended?'+':''),'der',{title:'Median household income estimate (R08)',cls:'der',rows:[['provenance','derived'],['method','share-weighted B19001 brackets, linear interpolation within the bracket holding the 50th-percentile household; medians are never averaged'],['sensitivity range', mi.range? `$${fmt(mi.range[0])} – ${mi.range[1]!=null?'$'+fmt(mi.range[1]):'open'} (the bracket containing the median, not a confidence interval)`:'—'],['block groups without a published median', mi.bg_without_median],['package', P.demography.package]]}) : chip('not available','na',{title:'Median household income',rows:[['status',mi.status]]})}</dd></div>
+        <div><dt>density</dt><dd>${plain(fmt(d.density_per_sq_mi)+' / sq mi','demography','Population density (R09)','der',[['denominator','land area, water erased'],['note','a density map is not a persons-per-hour map']])}</dd></div>
+      </dl>
+      <h4 style="margin-top:14px">Jobs (LODES 8, 2023)</h4>
+      <dl class="kv">
+        <div><dt>all jobs located here</dt><dd>${envChip(j.jobs_all,'jobs','All jobs by workplace, C000 JT00 (J01)')}</dd></div>
+        <div><dt>primary jobs located here</dt><dd>${envChip(j.jobs_primary,'jobs','Primary jobs by workplace, C000 JT01')}</dd></div>
+        <div><dt>resident workers (primary)</dt><dd>${envChip(j.resident_workers_primary,'jobs','Primary jobs held by residents, RAC C000 JT01 (≈ resident workers)')}</dd></div>
+        <div><dt>jobs ÷ resident workers</dt><dd>${plain(j.jobs_housing_ratio.v!=null? fmt(j.jobs_housing_ratio.v,2):'—','jobs','Jobs-to-resident-workers ratio (J09)','der',[['definition','WAC C000 JT01 ÷ RAC C000 JT01, same year and job type'],['note','explains activity and direction; never a source of hourly trips']])}</dd></div>
+        <div><dt>jobs per acre</dt><dd>${plain(fmt(j.jobs_per_acre,1),'jobs','Jobs per acre of land (J08)','der')}</dd></div>
+      </dl>
+      <h4 style="margin-top:14px">Facilities listed by the sources</h4>
+      <dl class="kv">${['school','clinic','grocery','park'].map(c=>`<div><dt>${c}s in band</dt><dd>${plain(String(b.poi?b.poi[c]:'—'),'poi',`${c[0].toUpperCase()+c.slice(1)} facilities in band`,'obs',[['counting', c==='park'?'park polygons intersecting the band':'points inside the band'],['absence','not found in these sources, not confirmed absent']])}</dd></div>`).join('')}
+      ${['school','clinic','grocery','park'].map(c=>{const n=s.poi_nearest[c]; return `<div><dt>nearest ${c}</dt><dd>${n.value_status==='value'? plain(`${fmt(n.distance_ft)} ft`,'poi',`Nearest ${c}: ${n.name}`,'obs',[['facility', n.name],['distance','straight line from the GTFS reference point; not a walking distance'],['within ½ mile', n.within_half_mile?'yes':'no']]) : chip('not found in window','na',{title:`Nearest ${c}`,rows:[['status',n.value_status]]})}</dd></div>`;}).join('')}</dl>`;
+  }
+  function stepStation(s){
+    return `<p class="why">Station entities come from reconciling GTFS stop records with the official station list and service sequences. The geometry is a reference point for analysis, not an entrance or a platform centroid.</p>
+      <dl class="kv">
+        <div><dt>entity id</dt><dd><span class="mono">${esc(s.id)}</span></dd></div>
+        <div><dt>GTFS stop ids</dt><dd>${plain((s.gtfs_stop_ids||[]).join(', '),'service','GTFS stop ids mapped to this station','obs',[['mapping', s.mapping_status||'per crosswalk'],['note','43 stop records → 21 stations; one anomalous label preserved rather than hidden']])}</dd></div>
+        <div><dt>loops served</dt><dd>${esc((s.loops||[]).join(', ')||'—')}</dd></div>
+        <div><dt>geometry role</dt><dd class="small muted">${esc((s.geometry_role||'').replace(/_/g,' '))}</dd></div>
+        <div><dt>zoning at the point</dt><dd>${plain(s.point_zoning.zones? s.point_zoning.zones.join(', ') : s.point_zoning.status,'zoning','Zoning polygon containing the reference point','obs',[['status', s.point_zoning.status],['note','a point in right-of-way or a layer gap does not invalidate the band profile']])}</dd></div>
+        <div><dt>existing asset</dt><dd class="small">${esc(s.existing?.existing_asset||'')} → ${esc(s.existing?.study_role||'')}</dd></div>
+        <div><dt>role classification</dt><dd><span class="status no">${esc(s.role||'NOT_CLASSIFIED')}</span></dd></div>
+      </dl>
+      <p class="small muted" style="margin-top:10px">Role classification (origin / destination / facility to convert / obstacle / candidate site) is an analysis-layer output of V2 and is deliberately not decided by the data layer.</p>`;
+  }
+  function stepService(s){
+    const v=s.service, o=s.observed, sys=D.network.observed_system_avg_weekday_boardings;
+    return `<p class="why">Two very different facts sit side by side: what the timetable schedules, and what the published counts observed. Neither is demand for a new system.</p>
+      <dl class="kv">
+        <div><dt>AM-peak departures / hour</dt><dd>${plain(fmt(v.am_peak_departures_per_hour,1),'service','Scheduled departures per hour, 7–9 a.m.','der',[['scheduled in period', v.am_peak_scheduled_departures],['note','a schedule reference, not operated service, not capacity']])}</dd></div>
+        <div><dt>implied AM-peak headway</dt><dd>${plain(fmt(v.am_peak_headway_min,1)+' min','service','Implied headway, all routes','der',[['definition','60 × hours ÷ scheduled departures at the station']])}</dd></div>
+        <div><dt>weekday scheduled departures</dt><dd>${plain(fmt(v.weekday_scheduled_departures),'service','Scheduled departures per weekday','der',[['service span', `${v.first_departure} – ${v.last_departure}`],['GTFS service id', v.service_id]])}</dd></div>
+        <div><dt>observed avg weekday boardings</dt><dd>${plain(fmt(o.avg_weekday_boardings_10mo_mean),'observed','Average weekday boardings, 10-month mean','obs',[['window','2025-10 to 2026-07'],['range of monthly values', `${fmt(o.min_max[0])} – ${fmt(o.min_max[1])}`],['latest month', `${o.latest_month}: ${fmt(o.latest)}`],['report station name', o.report_station_name + (o.mapping_basis!=='same_name'?` (${o.mapping_basis}; owner confirmation pending)`:'')]])}</dd></div>
+        <div><dt>share of system boardings</dt><dd>${plain(pct(o.share_of_system),'observed','Share of system average weekday boardings','der',[['system 10-month mean', fmt(sys.avg_weekday_boardings_10_month_mean)]])}</dd></div>
+      </dl>
+      ${o.mapping_confirmed_by_owner===false && o.mapping_basis!=='same_name' ? `<div class="callout">This station was renamed; the report row is matched by location and flagged for owner confirmation.</div>`:''}`;
+  }
+  function stepScenario(s){
+    const k=state.scen, ch=D.scenario_chain[k], sp=D.scenario_parameters, st=s.scenarios[k], or=D.observed_reference;
+    const params = Object.fromEntries((sp.observed_or_derived_shared_by_all_scenarios||[]).map(p=>[p.id.slice(0,3), p]));
+    const A = ch.assumption_values;
+    const chainRows = ch.chain.map(c=>`<tr><td>${c.step}</td><td>${esc(c.name)}${c.formula?`<div class="small muted mono">${esc(c.formula)}</div>`:''}</td><td class="num">${plain(fmt(c.value,c.step===1?1:0),'scenarios',`Chain step ${c.step}: ${c.name}`,'der',[['formula', c.formula||'coverage-weighted count from the jobs package'],['parameters', (c.parameters||[c.parameter]||[]).join(', ')],['upper bound', c.whole_block_upper_bound? `${fmt(c.whole_block_upper_bound)} if every touched block counted in full`:null]])}</td></tr>`).join('');
+    const pr = id => params[id] ? chip(params[id].value<1? pct(params[id].value): fmt(params[id].value,1), 'der', {title: params[id].id, cls:'der', rows:[['provenance', params[id].provenance_class],['nature', params[id].data_nature],['source', params[id].source],['note', params[id].note||''],['window', params[id].window||null]]}) : '—';
+    const scale = or?.scale?.[k], shape = or?.station_share_shape?.[k];
+    return `<p class="why">A transparent chain from job-to-home links to peak-hour person trips. Every multiplier is either derived from the census layers or an explicit demonstration assumption; the chain excludes regional inflow and hub transfers, so it is a lower-bound order of magnitude, not a forecast.</p>
+      <div class="tbl"><table class="chain"><thead><tr><th>#</th><th>network step (AM direction)</th><th class="num">${k}</th></tr></thead><tbody>${chainRows}</tbody></table></div>
+      <h4 style="margin-top:14px">Parameters</h4>
+      <dl class="kv">
+        <div><dt>P02 work-from-home share</dt><dd>${pr('P02')}</dd></div>
+        <div><dt>P05 peak-hour share (8–9 a.m.)</dt><dd>${pr('P05')}</dd></div>
+        <div><dt>A01 attendance rate</dt><dd>${asm(String(A.A01_attendance_rate),'A01','Attendance rate','share of commuters who travel on a given weekday; demonstration assumption')}</dd></div>
+        <div><dt>A02 non-commute trips per commute trip</dt><dd>${asm(String(A.A02_non_commute_trips_per_commute_trip),'A02','Non-commute trips per commute trip','demonstration assumption; varies by scenario')}</dd></div>
+        <div><dt>A03 PRT adoption share</dt><dd>${asm(pct(A.A03_prt_adoption_share_of_all_mode_trips),'A03','PRT adoption share of all-mode trips','demonstration assumption; the low value is kept at or below the observed transit commute share so it cannot outrun today\'s behaviour',[['observed transit share (network)', pct(D.network.transit_commute_share_dedup?.raw)]])}</dd></div>
+      </dl>
+      <h4 style="margin-top:14px">This station, ${k} scenario</h4>
+      <dl class="kv">
+        <div><dt>AM-peak boardings</dt><dd>${plain(fmt(st.boardings,1),'scenarios','AM-peak-hour boardings (allocation)','der',[['rule','per-link split across candidate stations by land share (A04); conservation checked'],['share of network AM boardings', pct(st.share_of_network_am_boardings)]])}</dd></div>
+        <div><dt>AM-peak alightings</dt><dd>${plain(fmt(st.alightings,1),'scenarios','AM-peak-hour alightings (allocation)','der',[['PM','mirrors AM by assumption A05']])}</dd></div>
+        <div><dt>network AM-peak trips</dt><dd>${plain(fmt(ch.totals.prt_am_peak_hour_trips),'scenarios','Network AM-peak-hour PRT person trips','der',[['weekday, both directions', fmt(ch.totals.prt_weekday_trips_both_directions)]])}</dd></div>
+      </dl>
+      ${scale?`<div class="callout"><b>Reference, not calibration.</b> The ${k} scenario's weekday trips are ${pct(scale.ratio_scenario_over_observed)} of the observed system boardings (${fmt(scale.observed_system_avg_weekday_boardings)} per weekday), because only links inside the network count. Station-share shape: Spearman rank correlation ${shape? shape.spearman_rank_correlation_station_shares.toFixed(2):'—'}; the largest gap is Government Center, where observed transfers from Metrorail are excluded by design.</div>`:''}`;
+  }
+  function stepConfig(s){
+    const k=state.scen, c=s.config[k], cp=D.config_parameters, ops=cp.operations_assumptions||{}, mods=(cp.platform_modules?.modules||[]); const mod = mods.find(m=>m.module_id===c.module)||{}; const net=D.network.config_network[k];
+    const opChip = (id,label)=>{const o=ops[id]; return o? asm(o.value+(o.unit?` ${o.unit}`:''), id, label, o.statement, [['reference', o.reference||'']]) : '—';};
+    return `<p class="why">Sizing under PRT semantics: person trips become vehicle trips at the average party size, vehicle trips become berth cycles, berth cycles become berths and a platform module from the owner's drawings. Vehicle capacity is never used as the load.</p>
+      <dl class="kv">
+        <div><dt>vehicle departures / hour</dt><dd>${plain(fmt(c.vehicle_departures,1),'config','Vehicle departures in the AM peak hour','der',[['formula','boardings ÷ C01 average party size']])}</dd></div>
+        <div><dt>vehicle arrivals / hour</dt><dd>${plain(fmt(c.vehicle_arrivals,1),'config','Vehicle arrivals in the AM peak hour','der',[['formula','alightings ÷ C01']])}</dd></div>
+        <div><dt>empty vehicles needed in</dt><dd>${plain(fmt(c.empty_vehicles_in,1),'config','Empty vehicles required per hour','der',[['rule','departures above arrivals are fed by empty vehicles from the guideway; no staging berths are drawn (C07)'],['empty vehicles leaving', fmt(c.empty_vehicles_out,1)]])}</dd></div>
+        <div><dt>berth cycles / hour</dt><dd>${plain(fmt(c.berth_cycles,1),'config','Berth cycles per hour','der',[['rule','max(arrivals, departures); one cycle = entry, alighting, boarding, exit']])}</dd></div>
+        <div><dt>design cycles (within-hour peak)</dt><dd>${plain(fmt(c.design_cycles,1),'config','Design cycles with within-hour peaking','der',[['formula','cycles × C04; C04 applies to berths only, never back to demand']])}</dd></div>
+        <div><dt>usable cycles per berth-hour</dt><dd>${plain(fmt(c.usable_cycles_per_berth_hour,1),'config','Usable cycles per berth per hour','der',[['formula','3600 ÷ C02 × C03']])}</dd></div>
+        <div><dt><b>berths required</b></dt><dd>${plain(String(c.berths),'config','Berths required','der',[['formula','ceil(design cycles ÷ usable cycles per berth-hour)'],['PM','mirrors AM (A05): identical requirement']])}</dd></div>
+        <div><dt>platform module</dt><dd>${chip(c.module.replace(/_/g,' '),'obs',{title:'Platform module from owner drawings',cls:'obs',rows:[['provenance','observed (design specification)'],['berths provided', c.berths_provided],['dimensions', `${mod.width_ft_in||''} × ${mod.length_ft_in||''}`],['modules needed', c.modules_needed],['note','berth counts were read from the drawings and are flagged for owner confirmation']]})}</dd></div>
+        <div><dt>footprint</dt><dd>${plain(fmt(c.footprint_ft2)+' sq ft','config','Platform footprint as drawn','obs',[['module', c.module],['fits a single module', c.fits_single_module?'yes':'no']])}</dd></div>
+        <div><dt>site space</dt><dd>${asm('assumed sufficient','C06','Site footprint available','per-station constructible space has not been acquired; every station is assumed able to take the selected module',[['readiness','listed as assumption-backed']])}</dd></div>
+      </dl>
+      <h4 style="margin-top:14px">Operating parameters (assumptions C01–C05)</h4>
+      <dl class="kv">
+        <div><dt>C01 party size</dt><dd>${opChip('C01_average_party_size_pax_per_vehicle_trip','Average party size per vehicle trip')}</dd></div>
+        <div><dt>C02 berth cycle</dt><dd>${opChip('C02_berth_cycle_s','Berth cycle time')}</dd></div>
+        <div><dt>C03 berth utilization</dt><dd>${opChip('C03_berth_utilization_max','Maximum berth utilization')}</dd></div>
+        <div><dt>C04 within-hour peaking</dt><dd>${opChip('C04_within_hour_peaking_factor','Within-hour peaking factor')}</dd></div>
+        <div><dt>C05 minimum headway</dt><dd>${opChip('C05_min_guideway_headway_s','Minimum guideway headway')}</dd></div>
+      </dl>
+      <h4 style="margin-top:14px">Network, ${k} scenario</h4>
+      <dl class="kv">
+        <div><dt>berths, all stations</dt><dd>${plain(String(net.berths_required_total),'config','Berths required, network total','der')}</dd></div>
+        <div><dt>vehicle trips / hour</dt><dd>${plain(fmt(net.vehicle_trips_am_peak_hour),'config','Network vehicle trips in the AM peak hour','der')}</dd></div>
+        <div><dt>trips ÷ lane throughput</dt><dd>${plain(pct(net.network_vehicle_trips_over_lane_throughput),'config','Network vehicle trips over one lane\'s throughput at minimum headway','der',[['lane throughput', fmt(net.guideway_lane_throughput_vehicles_per_hour_at_min_headway)+' vehicles per hour'],['note', net.headway_note]])}</dd></div>
+      </dl>
+      <p class="small muted" style="margin-top:10px">${esc(D.config_meta.purpose)}</p>`;
+  }
+  function stepReadiness(s){
+    const f=D.readiness.flags, st=D.readiness.stages;
+    const flag = (name,val,good)=>`<div class="flag"><b>${esc(name)}</b><span class="status ${val===true?'ok':(val===false?(good===false?'warn':'no'):'')}">${esc(String(val))}</span></div>`;
+    return `<p class="why">The readiness view is written by one script from the packages themselves. It separates "the AI layer may interpret this station" from "every configuration input is observed", and it names what is assumption-backed.</p>
+      <div class="flags">
+        ${flag('ready_for_ai_interpretation', f.ready_for_ai_interpretation)}
+        ${flag('config_inputs_complete', f.config_inputs_complete)}
+        ${flag('config_inputs_all_observed', f.config_inputs_all_observed, false)}
+        <div class="flag"><b>ai_missing_optional</b><span class="small">${esc((f.ai_missing_optional||[]).join(', ')||'none')}</span></div>
+        <div class="flag"><b>assumption-backed inputs</b><span class="small">${esc((f.config_assumption_backed_inputs||[]).join(', ')||'none')}</span></div>
+        <div class="flag"><b>AI interpretation for this station</b><span class="status no">${esc(s.ai_analysis_status||'NOT_RUN')}</span></div>
+      </div>
+      <h4 style="margin-top:14px">Pipeline stages at export</h4>
+      <p class="small" style="margin-top:6px">${Object.entries(st).map(([k,v])=>`<span class="status ${v==='DONE'?'ok':(v==='NOT_RUN'?'no':'warn')}" style="margin:2px 4px 2px 0">${esc(k)} · ${esc(v)}</span>`).join('')}</p>
+      <h4 style="margin-top:14px">What the AI layer is allowed to do here</h4>
+      <p class="small" style="margin-top:6px">Site facts must cite an evidence id from the layer evidence files; normative judgements must cite a rule id and knowledge-base version; option comparisons must cite calculation ids. Forbidden: treating density as persons per hour, using coverage shares as allocation weights, averaging medians, reading job links as trips, inferring willingness to pay from income, excluding zoning codes wholesale.</p>
+      <div class="callout">The V2 AI run has not happened yet, so this page shows no AI output for Miami. The V1.1 repository holds the real agent traces and the rule-gate proof; wiring the same agents onto these packages is the next step, and it will be labelled as a batch run with its own records, never as a live call.</div>`;
+  }
+  function render(){
+    const s = byId[state.station]; reg.length = 0; pop.hidden = true;
+    drawMap();
+    const steps = [
+      ['Station entity', stepStation(s)], ['Half-mile bands: zoning, residents, jobs, facilities', stepBands(s)], ['Timetable and observed boardings', stepService(s)],
+      ['Scenario chain: from job links to peak-hour trips', stepScenario(s)], ['PRT configuration: berths, module, footprint', stepConfig(s)], ['Readiness and the AI layer', stepReadiness(s)]];
+    $('#steps').innerHTML = steps.map((st,i)=>`<article class="step"><header><span class="n">STEP ${i+1} / 6</span><h3>${esc(st[0])}</h3></header>${st[1]}</article>`).join('');
+  }
+  // ---------- ledger ----------
+  const L = D.readiness.layers, F = D.readiness.flags;
+  const rows = [
+    ['Station entities (43 GTFS stops → 21)', 'DONE', 'ok', 'reconciled with the official station list and service sequences; one anomalous label preserved', 'agency-confirmed ids; entrances; platform geometry'],
+    ['Statutory zoning bands', L.zoning||'—', 'ok', 'Miami 21 zones and transects joined to three bands per station, original codes kept', 'land use, population, demand; no zone is excluded'],
+    ['Residents (ACS 2020–2024)', L.demography||'—', 'ok', 'block-group period estimates apportioned by land share, with 90 % margins of error', 'current population; the apportionment error is not in the MOE'],
+    ['Jobs and job-to-home links (LODES 2023)', L.jobs_and_commute||'—', 'ok', 'block-level job counts and origin-destination links with candidate stations', 'trips, ridership, out-of-state residents'],
+    ['Timetable (GTFS)', L.service_baseline||'—', 'ok', 'scheduled weekday departures per station and period', 'operated service, capacity, ridership'],
+    ['Observed boardings (DTPW reports)', 'DONE', 'ok', 'published average weekday boardings per station, 10 months', 'origin-destination, alightings, hourly counts, calibration target'],
+    ['Facilities (schools, clinics, grocery, parks)', L.pois||'—', 'ok', 'county, city and USDA listings counted per band with straight-line distances', 'a service-level score; walking distance; confirmed absence'],
+    ['Network walk model (OSM)', L.walk_network||'NOT_RUN', 'no', 'optional layer: 5/10/15-minute reached network at an assumed speed', 'built yet: the raw network is fetched and the script exists, the build is paused'],
+    ['Scenario results', 'assumption-backed', 'warn', 'low / medium / high chain with tagged parameters, conservation-checked', 'a forecast; regional inflow and hub transfers are excluded'],
+    ['Platform modules', 'acquired (design specification)', 'ok', 'two modules from the owner\'s drawings; imperial as drawn, metric kept', 'confirmed berth counts (read from drawings, flagged)'],
+    ['Constructible site space', 'assumed (C06)', 'warn', 'every station assumed able to take the selected module', 'surveyed or structural information'],
+    ['Vehicle operating parameters', 'assumed (C01–C05)', 'warn', 'generic PRT order-of-magnitude values', 'the supplier\'s operating data'],
+    ['AI interpretation (V2)', 'NOT_RUN', 'no', 'designed: evidence-cited site facts, rule-cited judgements, calculation-cited comparisons', 'run on these packages yet'],
+    ['Engineering validation', 'NOT_PERFORMED', 'no', '—', 'performed by anyone; nothing here is a design']
+  ];
+  $('#ledger-table tbody').innerHTML = rows.map(r=>`<tr><td>${esc(r[0])}</td><td><span class="status ${r[2]}">${esc(r[1])}</span></td><td>${esc(r[3])}</td><td>${esc(r[4])}</td></tr>`).join('');
+  // ---------- packages / footer ----------
+  const names = {spatial_join:['Zoning bands','City of Miami Miami 21 zoning (CC-BY-4.0)'], demography:['Residents','ACS 2020–2024 5-year, TIGER/Line 2024 + 2020 blocks'], jobs:['Jobs and links','LEHD LODES 8, Florida 2023'], service_baseline:['Timetable','Miami-Dade Transit GTFS'], ridership_reference:['Observed boardings','Miami-Dade DTPW Ridership Technical Reports'], poi:['Facilities','Miami-Dade County GIS, City of Miami, USDA SNAP; OSM cross-check'], input_package:['Station input packages','assembled from the layers above'], scenarios:['Scenario chain','derived from the packages + assumptions A01–A07'], config:['PRT configuration','owner drawings + assumptions C01–C07']};
+  $('#packages tbody').innerHTML = Object.entries(D.packages).map(([k,v])=>`<tr><td>${esc(names[k]?.[0]||k)}</td><td>${esc(names[k]?.[1]||'')}</td><td class="mono">${esc(v)}</td></tr>`).join('');
+  $('#attribution').textContent = 'Attribution: ' + D.attribution.join(' · ') + '.';
+  $('#foot').textContent = `Dataset exported ${D.generated_on} from the packages above (readiness snapshot ${D.readiness.snapshot_date||D.generated_on}). ${D.units}. Statuses and numbers on this page are copied from the pipeline, not typed; if the pipeline changes, this page is regenerated.`;
+  render();
+})();
+</script>
+</body>
+</html>

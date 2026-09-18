@@ -1,0 +1,82 @@
+{
+  "example_only": true,
+  "production_region_confirmed": false,
+  "note": "West Melbourne locality is not the whole western Melbourne corridor. ABS applies small random adjustments.",
+  "observations": [
+    {
+      "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22757",
+      "source_year": 2021,
+      "geography_id": "SAL22757",
+      "geography_type": "Suburbs and Localities",
+      "geography_name": "West Melbourne",
+      "retrieved_on": "2026-09-11",
+      "spatial_scope": "entire published SAL, not a station catchment",
+      "method": "extracted from published ABS table",
+      "status": "published_census_statistic",
+      "metric": "resident_population",
+      "value": 8025,
+      "unit": "persons",
+      "population_basis": "place of usual residence"
+    },
+    {
+      "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22757",
+      "source_year": 2021,
+      "geography_id": "SAL22757",
+      "geography_type": "Suburbs and Localities",
+      "geography_name": "West Melbourne",
+      "retrieved_on": "2026-09-11",
+      "spatial_scope": "entire published SAL, not a station catchment",
+      "method": "extracted from published ABS table",
+      "status": "published_census_statistic",
+      "metric": "median_weekly_household_income",
+      "value": 1788,
+      "unit": "AUD/household/week",
+      "population_basis": "households under ABS income definition",
+      "price_basis": "2021 nominal AUD"
+    },
+    {
+      "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22757",
+      "source_year": 2021,
+      "geography_id": "SAL22757",
+      "geography_type": "Suburbs and Localities",
+      "geography_name": "West Melbourne",
+      "retrieved_on": "2026-09-11",
+      "spatial_scope": "entire published SAL, not a station catchment",
+      "method": "weekly median multiplied by 52",
+      "status": "derived",
+      "metric": "annual_equivalent_of_weekly_household_median",
+      "value": 92976,
+      "unit": "AUD/household/year",
+      "note": "Not an independently observed annual-income median; no inflation or FX adjustment"
+    },
+    {
+      "source_url": "https://www.abs.gov.au/census/find-census-data/quickstats/2021/SAL22757",
+      "source_year": 2021,
+      "geography_id": "SAL22757",
+      "geography_type": "Suburbs and Localities",
+      "geography_name": "West Melbourne",
+      "retrieved_on": "2026-09-11",
+      "spatial_scope": "entire published SAL, not a station catchment",
+      "method": "extracted from published ABS table",
+      "status": "published_census_statistic",
+      "metric": "household_income_above_threshold_share",
+      "value": 0.237,
+      "unit": "fraction",
+      "threshold": {
+        "operator": ">",
+        "value": 3000,
+        "currency": "AUD",
+        "period": "week",
+        "basis": "household"
+      },
+      "denominator": "occupied private dwellings, excluding visitor-only and other non-classifiable households, and partial/all income not stated",
+      "population_basis": "place of enumeration",
+      "note": "Not a share of persons, nor a Meta employee eligibility measure"
+    }
+  ],
+  "unavailable": {
+    "jobs_to_employed_residents_ratio": null,
+    "commute_peak_share": null,
+    "reason": "Not supplied by these extracted ABS rows"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "failed_checks": [],
+  "checked_on": "2026-09-17",
+  "summary": {
+    "ways": 17612,
+    "nodes": 66669,
+    "osm_base": "2026-05-31T22:37:44Z",
+    "highway_tags": {
+      "footway": 9257,
+      "service": 4132,
+      "residential": 1222,
+      "secondary": 724,
+      "primary": 654,
+      "tertiary": 487,
+      "cycleway": 199,
+      "unclassified": 197,
+      "motorway": 172,
+      "motorway_link": 170,
+      "construction": 116,
+      "steps": 86,
+      "primary_link": 65,
+      "pedestrian": 33,
+      "secondary_link": 30,
+      "tertiary_link": 27,
+      "trunk": 22,
+      "path": 10,
+      "trunk_link": 9
+    },
+    "foot_tags": {
+      "null": 17226,
+      "designated": 170,
+      "no": 130,
+      "yes": 83,
+      "private": 3
+    },
+    "access_tags": {
+      "null": 16319,
+      "private": 1060,
+      "customers": 117,
+      "permissive": 60,
+      "no": 49,
+      "destination": 7
+    },
+    "way_node_references_missing": 0,
+    "fetch_bbox_wgs84": [
+      -80.219,
+      25.739,
+      -80.165,
+      25.811
+    ]
+  },
+  "checks": {
+    "response_present_and_sha256_matches": {
+      "pass": true
+    },
+    "osm_base_timestamp_present": {
+      "pass": true
+    },
+    "query_matches_study_bbox_plus_margin": {
+      "pass": true
+    },
+    "at_least_5000_ways": {
+      "pass": true,
+      "detail": 17612
+    },
+    "at_least_20000_nodes": {
+      "pass": true,
+      "detail": 66669
+    },
+    "every_way_has_highway_tag": {
+      "pass": true
+    },
+    "every_way_node_reference_resolves": {
+      "pass": true,
+      "detail": 0
+    },
+    "every_node_has_coordinates": {
+      "pass": true
+    }
+  },
+  "scope": "acquisition integrity only: hash, query, counts, referential integrity; the walkability rule is applied and recorded in the walk-model stage"
+}
