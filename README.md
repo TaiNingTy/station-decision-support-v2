@@ -7,7 +7,8 @@ and decision-support workflow for a personal rapid transit (PRT) system, demonst
 of Miami's Metromover. Every number the page shows is copied from a versioned, validated data package and carries its
 provenance (observed / derived / assumption), its period and its uncertainty.
 
-- **Live page** (GitHub Pages, served from [`docs/`](docs/)): `https://<github-user>.github.io/<this-repository>/`
+- **Live page** (GitHub Pages, served from [`docs/`](docs/)): https://tainingty.github.io/station-decision-support-v2/ · walkthrough variant: https://tainingty.github.io/station-decision-support-v2/presentation.html
+- **Repository**: https://github.com/TaiNingTy/station-decision-support-v2
 - **V1.1 agent pipeline and rule gate** (separate, frozen repository): https://github.com/TaiNingTy/AI-Station-Configuration-Decision-Support-System
 - This repository never modifies V1.1 and does not depend on it; the page links to it as evidence.
 
