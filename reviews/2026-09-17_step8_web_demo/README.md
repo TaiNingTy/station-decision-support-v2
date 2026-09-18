@@ -27,7 +27,7 @@
 - 本目录初始化为独立 git 仓库（分支 `main`），与 V1.1 仓库和本地目录互不依赖、互不修改。
 - 公开前清理：46 个被指针替换的旧包（326 MB）移到仓库外 `../archive/superseded_packages_2026-09-18/`（附 `MOVED.json`，可移回），`data/` 由 352 MB 降到 41 MB；三份写有公司名的研究底稿、重庆报告的两张页面截图、`.secrets/`、虚拟环境进入 `.gitignore`；一个早期数据文件里的本机绝对路径改为文件名；全树扫描无公司名、无密钥、无邮箱。原根目录 README 改名为 `NOTES_数据接入底稿_2026-09-14.md`，新写面向公开的双语 README。
 - 移动旧包后重跑回归：[regression_results.json](regression_results.json) 26 场景 / 272 项全部通过；`readiness --check` 各阶段状态不变。
-- 待业主完成：在 GitHub Desktop 中添加本地仓库并公开发布，仓库 Settings → Pages 选 `main` / `/docs`。
+- 业主已发布公开仓库 https://github.com/TaiNingTy/station-decision-support-v2 。"Deploy from a branch" 方式的 Pages 构建始终没有触发（12 分钟无任何构建记录、接口报站点未创建），改为工作流部署：`.github/workflows/pages.yml`（只检出 `docs/`，上传为 Pages 产物后部署）。首次运行失败：`GITHUB_TOKEN` 无权创建站点（"Resource not accessible by integration"），需业主在 Settings → Pages 把 Source 手动选为 "GitHub Actions" 后重跑；重跑后站点上线：https://tainingty.github.io/station-decision-support-v2/ 与 `presentation.html`、两个数据文件均返回 200。
 
 ## 未做
 
