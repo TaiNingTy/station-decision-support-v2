@@ -219,7 +219,26 @@
 
 **规则层**（阶段 `rules`，`scripts/build_miami_rules.py`，规则包 [`config/rules_v2.json`](../../../config/rules_v2.json) 版本 rules-v2.0）：13 条规则按站、按情景评估已发布的输入包、情景包与配置包，每条结果带可引用的 `rule_result_id`（如 `MIA-MM-09|-|RC-12`、`NET|high|RC-05`）。规则分四类：算术恒等式（守恒、泊位公式复算）、项目约定（单模块容量、轨道网络比值 0.8 / 1.0、低档采用率不高于观测公交分担率、空车不平衡）、数据质量（人口估计可靠性、改名站对应）、范围限制（可建设空间假设、枢纽流入排除、欧氏环带）。当前 325 条结果：无 critical；全网高情景轨道比值 0.93 为 warning；21 站都带"可建设空间为假设"的 warning；三个改名站、Government Center 的枢纽流入各按规则标出。**规则包是本研究的约定与恒等式，不是法规、行业标准或供应商规格。**
 
-**AI 解读准备**（`scripts/build_miami_ai_kit.py`，套件 ai-kit-v2.0）：知识库 `kb/v2/`（四份英文文档，kb-v2.0：数据语义、情景与 PRT 配置方法、解读指引、未决事项与责任归属）、智能体提示词 `kb/v2/AGENT_PROMPT_v2.md`（prompt-v2.0）、每站摘要 `ai/miami/briefs/`（83 条带 `fact_id` 的事实 + 全部规则结果 + 未取得项与禁止事项）、输出规范 `config/ai_output_schema_v2.json`、校验脚本 `scripts/check_miami_ai_output.py`（引用的每个 fact_id / rule_result_id / KB 章节都核对存在，必引 RC-03 与 RC-07，禁止措辞与摘要外数字给软提示）。操作说明见 [`ai/README.md`](../../../ai/README.md)。**尚无任何模型输出**；就绪视图与网页的 AI 状态仍为 NOT_RUN。
+**AI 解读准备**（`scripts/build_miami_ai_kit.py`，套件 ai-kit-v2.1）：知识库 `kb/v2/`（四份英文文档，kb-v2.1：数据语义、情景与 PRT 配置方法、解读指引、未决事项与责任归属）、智能体提示词 `kb/v2/AGENT_PROMPT_v2.md`（prompt-v2.1）、每站摘要 `ai/miami/briefs/`（83 条带 `fact_id` 的事实 + 全部规则结果 + 未取得项与禁止事项）、输出规范 `config/ai_output_schema_v2.json`、校验脚本 `scripts/check_miami_ai_output.py`（引用的每个 fact_id / rule_result_id / KB 章节都核对存在，必引 RC-03 与 RC-07，禁止措辞与摘要外数字给软提示）。操作说明见 [`ai/README.md`](../../../ai/README.md)。**尚无任何模型输出**；就绪视图与网页的 AI 状态仍为 NOT_RUN。
+
+## GIS 要素层与读取智能体的输入（V2 第 11 步，2026-09-20 追加）
+
+业主明确：**让 AI 智能体去读 GIS 数据**是 V2 的核心；热力图用公开数据推算、标明是代理；热力图与 zoning 结合着读，只作辅助证据。原则因此从"代码读取、AI 解释"改为"**AI 读取与判读，代码核验，人决定**"。
+
+**采集**（`scripts/fetch_miami_gis_objects.py` → `raw/miami/2026-09-20/gis_objects/`）：县 GIS 的地块多边形 5,835 个、现状用地多边形 3,410 个、铁路 206 段、Metrorail 线；2020 年普查街区人口 31,622 行（全县合计 2,701,767，与官方总数一致）。按对象 id 分块取数并核对条数。**隐私规则**：含业主姓名与邮寄地址的房产记录层不取；地块层只请求地块编号、用地代码与描述、面积、建成年份等字段，不请求坐落地址与法律描述。道路沿用已归档的 OSM，zoning 沿用 9 月 14 日的采集。
+
+**阶段 `gis_objects`**（`scripts/build_miami_gis_objects.py`，配置 [`config/gis_objects_v1.json`](../../../config/gis_objects_v1.json)）：代码只做裁剪、量测、连接与计数，给每个要素一个可引用的 id：道路分组 `.RDnn`、铁路 `.RLnn`、既有导轨 `.GW01`、zoning 多边形 `.ZN<FID>`、现状用地类别 `.LU<code>`、地块 `.PCnnn`、热度栅格 `.HC<行>_<列>`、街区组 `.BG<geoid>`，以及代码算好的汇总数字 `.Gnnn`。21 站共 8,982 个对象。zoning 裁剪面积与空间连接包逐区对比，偏差为零。
+
+- **热度代理**：500 ft 栅格；每格 = （2020 年普查居民 + 2023 年 LODES 岗位）÷ 格内陆地英亩，按街区陆地份额分摊；全网 453 格，前五分之一为"热格"（74 个）。每格同时记录所在 zoning 类别、现状用地、最高道路等级、是否有铁路，供"热度与 zoning 结合着读"。**不是实测热度，不是客流，不是人/小时**；数值按街区均摊，公园、广场所在的格子会继承街区密度，已写入配置、图片说明和知识库。居民来自 2020 年普查，与人口层的 ACS 2020–2024 估计来源和年份不同，从不相加。
+- **一个被编码成检查的语义陷阱**：县"铁路"图层没有任何属性，窗口内 25.75 mi 中约 41% 其实是 Metromover 导轨、27% 是 Metrorail，只有 8.31 mi 是其他铁路。阶段按几何（20 m）把它拆成三部分，顺序是先划出导轨、再划出 Metrorail、余下为其他铁路；约 2.0 mi 的轨道同时靠近两条线，按这个顺序归入导轨（只看与 Metrorail 的距离时是 8.94 mi，拆分后记为 6.92 mi，两个数字口径不同）。读取核验节点规定"既有导轨是待转换设施，读成障碍即拒绝"。
+- **地块分组**依据图层自带的用地描述文字，未列入的前缀归入 other 并报告（当前为零）；市中心有 8 个地块的税务分类是"蔬菜耕地"，原样保留，留给读取智能体指出。
+- **角色提示**（`object_role_hints.json`，规则 GH-01 至 GH-08）不进入智能体输入，只用于事后统计智能体与简单规则的一致率、把分歧排给人审。
+
+**导出**（`scripts/export_miami_gis_agent_inputs.py`）：每站 `g1_input.json`（道路、铁路与导轨、zoning、现状用地、地块）、`g2_input.json`（热度格值、街区组、zoning）、`heat.png`（热度代理图，图内写明是代理）与 `brief.coze.json`，写入 `ai/miami/gis/<站>/` 并镜像到 `docs/gis/<站>/`，供 Coze 工作流的 HTTP 节点按站点编号拉取。图片重复生成字节一致。
+
+**知识库**升到 kb-v2.1，新增 `KB_V2_05`（GIS 读取指引：角色、道路、铁路与导轨、zoning、用地与地块、热度代理、热度与 zoning 联读、服务相关性筛查、图片的用途）与 `KB_V2_06`（图层图例，由 `scripts/build_miami_kb_legends.py` 从图层自身生成）。图例只写图层带的内容与已核实的定义：Miami 21 官方术语表核实了容积率（FLR）的定义；强度字母 R / L / O、FLR 字母 A / B 和高度数字的单位，图层没有定义、本研究未核实，图例如实写明，智能体只能当标签用。
+
+**Coze 设计**（`coze/v2/`）：新增读取智能体 G1、G2 与两个代码节点 `gis_gate.js`、`gis_verify.js`；评测 `node coze/v2/evals/run.js` 共 32 项全部通过。**尚无任何模型运行。**
 
 ## 文件与复算
 
@@ -233,7 +252,7 @@
 
 从数据基础目录执行 `python3 scripts/build_miami_station_master.py`，使用 Python 标准库即可重新生成站点主表。脚本会在 GTFS 快照哈希变化、重复归属、未覆盖记录、组内坐标冲突、832 的已核对序列改变或 GIS 查询不完整时停止；不会靠模糊名称匹配静默合并新记录。
 
-**复算全流程请用统一入口**：`python3 scripts/build_all_miami.py`（按 站点主表 → 空间连接 → 人口层 → 就业层 → 服务基线 → 实测客流参照 → POI 层 → 输入包 → 情景 → 配置 → readiness 校验 顺序执行，用同一解释器，任一阶段失败即停止；人口与就业层需要 `raw/miami/2026-09-15/` 已按 `scripts/fetch_miami_v2_raw.py` 取得并校验）。**回归测试**：`python3 scripts/test_miami_pipeline_regression.py --out <结果.json>`（只在临时副本中运行，26 个场景 / 272 项检查，本目录只读；最新结果在 `reviews/2026-09-17_step7b_poi/`）。空间连接阶段要求解释器已安装 `requirements-gis.lock.txt` 锁定版本的 shapely / pyproj（已发布结果来自 Python 3.13.9 + shapely 2.1.2 / GEOS 3.13.1 / pyproj 3.8.0 / PROJ 9.8.1，解释器路径记录在 `spatial_join_manifest.json → environment`）；系统默认 `python3` 若无这些库或版本不符，脚本会停止并提示，而不是在未锁定环境下静默产出。
+**复算全流程请用统一入口**：`python3 scripts/build_all_miami.py`（按 站点主表 → 空间连接 → 人口层 → 就业层 → 服务基线 → 实测客流参照 → POI 层 → 输入包 → 情景 → 配置 → readiness 校验 顺序执行，用同一解释器，任一阶段失败即停止；人口与就业层需要 `raw/miami/2026-09-15/` 已按 `scripts/fetch_miami_v2_raw.py` 取得并校验）。**回归测试**：`python3 scripts/test_miami_pipeline_regression.py --out <结果.json>`（只在临时副本中运行，28 个场景 / 302 项检查，本目录只读；最新结果在 `reviews/2026-09-20_step11_gis_reading_agents/`）。空间连接阶段要求解释器已安装 `requirements-gis.lock.txt` 锁定版本的 shapely / pyproj（已发布结果来自 Python 3.13.9 + shapely 2.1.2 / GEOS 3.13.1 / pyproj 3.8.0 / PROJ 9.8.1，解释器路径记录在 `spatial_join_manifest.json → environment`）；系统默认 `python3` 若无这些库或版本不符，脚本会停止并提示，而不是在未锁定环境下静默产出。
 
 本次检查支持数据一致性与可复算性，不是运营方批准、完整 GTFS 合规认证、客流校准、平台尺寸校验或结构安全验证。
 

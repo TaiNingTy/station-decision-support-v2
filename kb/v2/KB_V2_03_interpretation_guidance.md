@@ -1,6 +1,6 @@
 # KB_V2_03 · Interpretation guidance for a station brief
 
-Knowledge base document 03 of 04 · version kb-v2.0 · issued 2026-09-18 · cite as `KB_V2_03 §IG-xx (kb-v2.0)`
+Knowledge base document 03 of 06 · version kb-v2.1 · issued 2026-09-18 · cite as `KB_V2_03 §IG-xx (kb-v2.1)`
 
 This document tells the interpretation layer what it may conclude from a station brief, how to phrase it, and what it must hand to people. It is guidance, not a threshold set; the thresholds are in the rule pack.
 

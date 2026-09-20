@@ -1,6 +1,6 @@
 # KB_V2_01 · Data semantics of the station input package
 
-Knowledge base document 01 of 04 · version kb-v2.0 · issued 2026-09-18 · applies to the Miami demonstration (21 Metromover stations) · cite as `KB_V2_01 §DS-xx (kb-v2.0)`
+Knowledge base document 01 of 06 · version kb-v2.1 · issued 2026-09-18 · applies to the Miami demonstration (21 Metromover stations) · cite as `KB_V2_01 §DS-xx (kb-v2.1)`
 
 This document tells the interpretation layer what each layer of the station input package means and, above all, what it does not mean. It restates the project's data-semantics rules; it introduces no threshold and no external standard.
 
@@ -50,4 +50,4 @@ Per-station bands overlap. Station profiles are non-exclusive; the network total
 
 ## DS-12 What is not in the package
 
-Not acquired: origin-destination and hourly ridership, station entrances and vertical circulation, constructible platform space, supplier vehicle operating data, road and guideway roles, a validated walk catchment. Each is listed with its status; "not acquired" is never read as zero.
+Not acquired: origin-destination and hourly ridership, station entrances and vertical circulation, constructible platform space, supplier vehicle operating data, a validated walk catchment, a measured activity or ridership heat map. Roads, rail, the guideway, land use and parcels are available as features for the reading agents (KB_V2_05); their roles are read by the agents and confirmed by people, not recorded as facts. Each is listed with its status; "not acquired" is never read as zero.

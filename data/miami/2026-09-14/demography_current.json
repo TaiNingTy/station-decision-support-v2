@@ -1,11 +1,11 @@
 {
   "stage": "demography",
   "schema_version": "miami-package-pointer/1.0",
-  "package_id": "pkg-cfd8a52fe1de",
-  "package_dir": "demography/pkg-cfd8a52fe1de",
-  "manifest": "demography/pkg-cfd8a52fe1de/manifest.json",
-  "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8",
+  "package_id": "pkg-2c67f7b67b8d",
+  "package_dir": "demography/pkg-2c67f7b67b8d",
+  "manifest": "demography/pkg-2c67f7b67b8d/manifest.json",
+  "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68",
   "built_on": "2026-09-15",
-  "previous_package_dir": "demography/pkg-64aa5fc6dcb8",
+  "previous_package_dir": "demography/pkg-cfd8a52fe1de",
   "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
 }

@@ -7,12 +7,12 @@
 **V1 counterpart:** Agent 1 · Requirement Analysis. V1 parsed a free-text site brief and assigned a grade (S/A/B/C) from a peak-flow number the user typed. V2 receives structured, sourced facts, assigns no grade, and proposes a role that a person must confirm.
 
 ## Input (from the code node `brief-gate`)
-`station_id`, `station_name`, `facts_table` (one row per `fact_id`), `rules_table`, `caveats`
+`station_id`, `station_name`, `facts_table` (one row per `fact_id`), `rules_table`, `caveats` + `evidence_digest` (from `gis-verify`; auxiliary, may be empty or a rejection notice)
 
 ## Output — `site_json`
 ```json
 {
-  "site_reading": [{ "statement": "English sentence", "fact_ids": ["MIA-MM-12.F009"] }],
+  "site_reading": [{ "statement": "English sentence", "fact_ids": ["MIA-MM-12.F009"], "object_ids": ["MIA-MM-12.ZN997"] }],
   "role_proposal": {
     "role": "origin_dominant | destination_dominant | mixed | hub_connection_dependent | insufficient_evidence",
     "basis_fact_ids": ["..."], "rule_result_ids": [], "evidence_level": "high | medium | low",
@@ -29,6 +29,8 @@
 任务：
 1. 写 3–8 条站点解读（statement 用英文），依次覆盖：周边是谁在住、谁在这里工作、分区说明什么又不说明什么、现有时刻表与实测上车量、设施清单。每条至少引用一个 fact_id。
 2. 提出一个站点角色假设 role_proposal。
+
+空间证据（可能为空）：上游 G1 / G2 两个读取智能体的判读摘要 evidence_digest。它是辅助证据：可以用来支持、限定或质疑你的解读，可以在 statement 里用 object_ids 引用其中的要素 id，但热度与 zoning 不能单独决定站点角色，也不能替代事实表。摘要写明被拒绝或不可用时，照常只用事实表，并在 rationale 里说明没有空间证据。
 
 硬性要求：
 1. fact_id 必须逐字取自事实表；拿不准就不要写这条。

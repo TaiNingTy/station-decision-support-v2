@@ -10,12 +10,13 @@
 
 | 路径 | 内容 |
 |---|---|
-| `kb/v2/KB_V2_01…04.md` | 知识库四份（英文）：数据语义、情景与 PRT 配置方法、解读指引、未决事项与责任归属。版本 `kb-v2.0`，哈希在 `kb/v2/manifest.json` |
-| `kb/v2/AGENT_PROMPT_v2.md` | 智能体系统提示词（英文），版本 `prompt-v2.0` |
+| `kb/v2/KB_V2_01…06.md` | 知识库六份（英文）：数据语义、情景与 PRT 配置方法、解读指引、未决事项与责任归属、GIS 读取指引、图层图例（由 `scripts/build_miami_kb_legends.py` 从图层自身生成）。版本 `kb-v2.1`，哈希在 `kb/v2/manifest.json` |
+| `ai/miami/gis/<站>/` | 两个读取智能体的输入：`g1_input.json`（道路、铁路与导轨、zoning、现状用地、地块）、`g2_input.json`（热度代理格值、街区组、zoning）、`heat.png`（热度代理图）、`brief.coze.json`；同时镜像到 `docs/gis/` 供 Coze 的 HTTP 节点拉取。由 `scripts/export_miami_gis_agent_inputs.py` 生成 |
+| `kb/v2/AGENT_PROMPT_v2.md` | 智能体系统提示词（英文），版本 `prompt-v2.1` |
 | `config/rules_v2.json` → 阶段 `rules` | 规则包 `rules-v2.0`：13 条算术恒等式 / 项目约定 / 数据质量 / 范围限制，逐站逐情景给出可引用的 `rule_result_id` |
 | `config/ai_output_schema_v2.json` | 模型输出的唯一合法格式 |
 | `ai/miami/briefs/<站>.md` / `.json` | 每站输入摘要（约 70 条事实 + 全部规则结果）；`.md` 用于粘贴，`.json` 供校验 |
-| `ai/miami/kit_manifest.json` | 套件版本 `ai-kit-v2.0`、所用数据包 ID、各文件哈希 |
+| `ai/miami/kit_manifest.json` | 套件版本 `ai-kit-v2.1`、所用数据包 ID、各文件哈希 |
 | `scripts/check_miami_ai_output.py` | 输出校验：格式、版本、每个引用的 fact_id / rule_result_id / KB 章节是否存在、必引规则、禁止措辞与未出现在摘要中的数字（软提示） |
 | `ai/miami/runs/<站>/<日期时间>.json` | 模型输出落地位置（目前为空） |
 

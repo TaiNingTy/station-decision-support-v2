@@ -1,11 +1,11 @@
 {
   "stage": "service_baseline",
   "schema_version": "miami-package-pointer/1.0",
-  "package_id": "pkg-4c24a50788c9",
-  "package_dir": "service_baseline/pkg-4c24a50788c9",
-  "manifest": "service_baseline/pkg-4c24a50788c9/manifest.json",
-  "manifest_sha256": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3",
+  "package_id": "pkg-edab88a3322a",
+  "package_dir": "service_baseline/pkg-edab88a3322a",
+  "manifest": "service_baseline/pkg-edab88a3322a/manifest.json",
+  "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77",
   "built_on": "2026-09-15",
-  "previous_package_dir": "service_baseline/pkg-a69b1848d3b9",
+  "previous_package_dir": "service_baseline/pkg-4c24a50788c9",
   "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
 }

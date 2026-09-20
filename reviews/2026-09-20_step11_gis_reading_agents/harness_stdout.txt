@@ -1,0 +1,33 @@
+interpreter: /opt/anaconda3/bin/python3
+copies under: /private/var/folders/yb/td4_x31x0kg3kxcx3l_fs2zr0000gn/T/miami-regression-9rjntkz2
+PASS  baseline_full_rebuild        19.7s  
+PASS  unchanged_rerun              19.7s  
+PASS  station_change                2.5s  
+PASS  window_change                 2.5s  
+PASS  zoning_change                 2.5s  
+PASS  publish_failure_rename        1.4s  
+PASS  publish_failure_pointer       2.1s  
+PASS  validation_failure            1.4s  
+PASS  lock_mismatch                 0.8s  
+PASS  corrupt_package_detected      1.6s  
+PASS  readiness_single_writer       0.1s  
+PASS  readiness_flags_baseline      0.3s  
+PASS  future_layers_fixtures        1.0s  
+PASS  assumption_backed_inputs      0.3s  
+PASS  stale_propagation             0.8s  
+PASS  raw_change_station_master     2.5s  
+PASS  code_change_informational    20.5s  
+PASS  demography_jobs_layers        0.0s  
+PASS  raw_change_layers_stale       0.9s  
+PASS  input_package_build           0.0s  
+PASS  service_baseline_and_scenarios    0.0s  
+PASS  optional_layer_added_marks_input_package_stale    1.1s  
+PASS  corrupt_optional_layer_isolated    0.8s  
+PASS  config_stage                  0.0s  
+PASS  rules_stage                   0.0s  
+PASS  gis_objects_stage             0.0s  
+PASS  ridership_reference_stage     0.0s  
+PASS  poi_stage                     0.0s  
+results -> reviews/2026-09-20_step11_gis_reading_agents/regression_results.json
+ALL PASS
+exit=0

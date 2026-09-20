@@ -1,0 +1,11 @@
+{
+  "stage": "gis_objects",
+  "schema_version": "miami-package-pointer/1.0",
+  "package_id": "pkg-2f956f9534ba",
+  "package_dir": "gis_objects/pkg-2f956f9534ba",
+  "manifest": "gis_objects/pkg-2f956f9534ba/manifest.json",
+  "manifest_sha256": "19f63cbd013d6cbb86328b306244745c1fa2671e715377be2144a640e6b33f6e",
+  "built_on": "2026-09-15",
+  "previous_package_dir": "gis_objects/pkg-5d652c64ca80",
+  "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+}

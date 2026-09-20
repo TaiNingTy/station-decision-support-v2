@@ -1,6 +1,6 @@
 # KB_V2_04 · Open items, assumptions and decision ownership
 
-Knowledge base document 04 of 04 · version kb-v2.0 · issued 2026-09-18 · cite as `KB_V2_04 §OI-xx (kb-v2.0)`
+Knowledge base document 04 of 06 · version kb-v2.1 · issued 2026-09-18 · cite as `KB_V2_04 §OI-xx (kb-v2.1)`
 
 This document lists what the Miami demonstration has not acquired or has assumed, and who decides. The interpretation layer uses it to phrase questions for people; it never resolves an open item on its own.
 

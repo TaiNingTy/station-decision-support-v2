@@ -3,23 +3,23 @@
   "station_id": "MIA-MM-10",
   "name": "College Bayside",
   "generated_on": "2026-09-18",
-  "kit_version": "ai-kit-v2.0",
-  "kb_version": "kb-v2.0",
-  "prompt_version": "prompt-v2.0",
+  "kit_version": "ai-kit-v2.1",
+  "kb_version": "kb-v2.1",
+  "prompt_version": "prompt-v2.1",
   "rule_pack_version": "rules-v2.0",
   "packages": {
     "spatial_join": "pkg-e4f5e3782ecb",
-    "demography": "pkg-cfd8a52fe1de",
-    "jobs": "pkg-ed5912a9790d",
-    "service_baseline": "pkg-4c24a50788c9",
-    "ridership_reference": "pkg-e46a5fb5511c",
-    "poi": "pkg-57ffb187de23",
-    "input_package": "pkg-3cab1da11f1b",
-    "scenarios": "pkg-fdba95e9ca3e",
-    "config": "pkg-771469dc885b",
-    "rules": "pkg-c5b8f121b33d"
+    "demography": "pkg-2c67f7b67b8d",
+    "jobs": "pkg-a5c6ab93a85e",
+    "service_baseline": "pkg-edab88a3322a",
+    "ridership_reference": "pkg-418a92cfd604",
+    "poi": "pkg-6af566c7afe1",
+    "input_package": "pkg-9ab1651cc10b",
+    "scenarios": "pkg-0d1753c58558",
+    "config": "pkg-b49a8047475b",
+    "rules": "pkg-771635da2111"
   },
-  "instructions_for_the_model": "Use only these facts and the knowledge base kb-v2.0. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.",
+  "instructions_for_the_model": "Use only these facts and the knowledge base kb-v2.1. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.",
   "facts": [
     {
       "fact_id": "MIA-MM-10.F001",
@@ -35,7 +35,7 @@
         "package": "input_package",
         "file": "stations/<station>.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-3cab1da11f1b"
+        "package_id": "pkg-9ab1651cc10b"
       }
     },
     {
@@ -48,7 +48,7 @@
         "package": "input_package",
         "file": "stations/<station>.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-3cab1da11f1b"
+        "package_id": "pkg-9ab1651cc10b"
       }
     },
     {
@@ -61,7 +61,7 @@
         "package": "input_package",
         "file": "stations/<station>.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-3cab1da11f1b"
+        "package_id": "pkg-9ab1651cc10b"
       },
       "semantics": "transfer inflow from these connections is excluded from the scenarios"
     },
@@ -90,7 +90,7 @@
         "package": "input_package",
         "file": "stations/<station>.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-3cab1da11f1b"
+        "package_id": "pkg-9ab1651cc10b"
       }
     },
     {
@@ -162,7 +162,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "period": "2020-2024",
       "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
@@ -182,7 +182,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "period": "2020-2024",
       "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
@@ -202,7 +202,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "period": "2020-2024",
       "semantics": "period estimate apportioned by land share; not current population (KB_V2_01 §DS-04)"
@@ -222,7 +222,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "moe_unit": "percentage points"
     },
@@ -241,7 +241,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "moe_unit": "percentage points"
     },
@@ -260,7 +260,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "moe_unit": "percentage points"
     },
@@ -279,7 +279,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "moe_unit": "percentage points"
     },
@@ -298,7 +298,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "moe_unit": "percentage points"
     },
@@ -319,7 +319,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       }
     },
     {
@@ -333,7 +333,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       },
       "semantics": "never persons per hour (KB_V2_01 §DS-09)"
     },
@@ -348,7 +348,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       },
       "semantics": "jobs, not trips (KB_V2_01 §DS-05)"
     },
@@ -363,7 +363,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -377,7 +377,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -390,7 +390,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       },
       "semantics": "explains activity and direction; never hourly flows"
     },
@@ -405,7 +405,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -423,7 +423,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       }
     },
     {
@@ -437,7 +437,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -452,7 +452,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
     },
@@ -470,7 +470,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "straight line from the reference point; not a walking distance"
     },
@@ -486,7 +486,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
     },
@@ -504,7 +504,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "straight line from the reference point; not a walking distance"
     },
@@ -520,7 +520,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
     },
@@ -538,7 +538,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "straight line from the reference point; not a walking distance"
     },
@@ -554,7 +554,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "listings; absence = not found in sources (KB_V2_01 §DS-08)"
     },
@@ -572,7 +572,7 @@
         "package": "poi",
         "file": "poi_evidence.json",
         "evidence_id_pattern": "<station>|<band>|<poi_id>",
-        "package_id": "pkg-57ffb187de23"
+        "package_id": "pkg-6af566c7afe1"
       },
       "semantics": "straight line from the reference point; not a walking distance"
     },
@@ -587,7 +587,7 @@
         "package": "service_baseline",
         "file": "station_service_baseline.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-4c24a50788c9"
+        "package_id": "pkg-edab88a3322a"
       },
       "semantics": "scheduled, not operated; not capacity; not ridership (KB_V2_01 §DS-06)"
     },
@@ -602,7 +602,7 @@
         "package": "service_baseline",
         "file": "station_service_baseline.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-4c24a50788c9"
+        "package_id": "pkg-edab88a3322a"
       }
     },
     {
@@ -619,7 +619,7 @@
         "package": "service_baseline",
         "file": "station_service_baseline.json",
         "evidence_id_pattern": "station record",
-        "package_id": "pkg-4c24a50788c9"
+        "package_id": "pkg-edab88a3322a"
       }
     },
     {
@@ -633,7 +633,7 @@
         "package": "ridership_reference",
         "file": "station_ridership_reference.json",
         "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
-        "package_id": "pkg-e46a5fb5511c"
+        "package_id": "pkg-418a92cfd604"
       },
       "semantics": "entries of the current system; not trips, not OD, not hourly, not demand for a new system; reference, never calibration (KB_V2_01 §DS-07)"
     },
@@ -647,7 +647,7 @@
         "package": "ridership_reference",
         "file": "station_ridership_reference.json",
         "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
-        "package_id": "pkg-e46a5fb5511c"
+        "package_id": "pkg-418a92cfd604"
       }
     },
     {
@@ -664,7 +664,7 @@
         "package": "ridership_reference",
         "file": "station_ridership_reference.json",
         "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
-        "package_id": "pkg-e46a5fb5511c"
+        "package_id": "pkg-418a92cfd604"
       }
     },
     {
@@ -678,7 +678,7 @@
         "package": "ridership_reference",
         "file": "station_ridership_reference.json",
         "evidence_id_pattern": "station record + monthly PDFs listed in evidence_source",
-        "package_id": "pkg-e46a5fb5511c"
+        "package_id": "pkg-418a92cfd604"
       }
     },
     {
@@ -692,7 +692,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       },
       "semantics": "Σ S000 × (share of the end block's land inside the station's half-mile disc); NON-exclusive across stations, not an allocation, not trips; station-to-station allocation with conservation checks is an analysis-layer task"
     },
@@ -707,7 +707,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -721,7 +721,7 @@
         "package": "demography",
         "file": "demography_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BG<block group>",
-        "package_id": "pkg-cfd8a52fe1de"
+        "package_id": "pkg-2c67f7b67b8d"
       }
     },
     {
@@ -735,7 +735,7 @@
         "package": "jobs",
         "file": "jobs_evidence.json",
         "evidence_id_pattern": "<station>|<band>|BLK<block>",
-        "package_id": "pkg-ed5912a9790d"
+        "package_id": "pkg-a5c6ab93a85e"
       }
     },
     {
@@ -766,7 +766,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
     },
@@ -781,7 +781,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
     },
@@ -796,7 +796,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -810,7 +810,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -823,7 +823,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -840,7 +840,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -857,7 +857,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "no staging berths drawn (C07)"
     },
@@ -876,7 +876,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "KB_V2_02 §CM-04"
     },
@@ -895,7 +895,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
     },
@@ -909,7 +909,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
     },
@@ -923,7 +923,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
     },
@@ -941,7 +941,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
     },
@@ -956,7 +956,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
     },
@@ -971,7 +971,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -985,7 +985,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -998,7 +998,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -1015,7 +1015,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1032,7 +1032,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "no staging berths drawn (C07)"
     },
@@ -1051,7 +1051,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "KB_V2_02 §CM-04"
     },
@@ -1070,7 +1070,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
     },
@@ -1084,7 +1084,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
     },
@@ -1098,7 +1098,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
     },
@@ -1116,7 +1116,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "demonstration assumptions (KB_V2_02 §CM-02)"
     },
@@ -1131,7 +1131,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       },
       "semantics": "uncalibrated; internal links only; not a forecast (KB_V2_02 §CM-01)"
     },
@@ -1146,7 +1146,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -1160,7 +1160,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -1173,7 +1173,7 @@
         "package": "scenarios",
         "file": "scenario_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.per_station[<station>]",
-        "package_id": "pkg-fdba95e9ca3e"
+        "package_id": "pkg-0d1753c58558"
       }
     },
     {
@@ -1190,7 +1190,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1207,7 +1207,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "no staging berths drawn (C07)"
     },
@@ -1226,7 +1226,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "KB_V2_02 §CM-04"
     },
@@ -1245,7 +1245,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "module from owner drawings (design specification); berth counts await confirmation (KB_V2_04 §OI-02)"
     },
@@ -1259,7 +1259,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "C06: constructible space not acquired (KB_V2_04 §OI-01)"
     },
@@ -1273,7 +1273,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       },
       "semantics": "network-level ratio only (KB_V2_02 §CM-06)"
     },
@@ -1288,7 +1288,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1302,7 +1302,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1316,7 +1316,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1330,7 +1330,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     },
     {
@@ -1344,7 +1344,7 @@
         "package": "config",
         "file": "station_config_results.json",
         "evidence_id_pattern": "scenarios.<scenario>.stations[<station>]",
-        "package_id": "pkg-771469dc885b"
+        "package_id": "pkg-b49a8047475b"
       }
     }
   ],

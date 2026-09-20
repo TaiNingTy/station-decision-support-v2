@@ -1,6 +1,6 @@
 # KB_V2_02 · Scenario chain and PRT configuration method
 
-Knowledge base document 02 of 04 · version kb-v2.0 · issued 2026-09-18 · cite as `KB_V2_02 §CM-xx (kb-v2.0)`
+Knowledge base document 02 of 06 · version kb-v2.1 · issued 2026-09-18 · cite as `KB_V2_02 §CM-xx (kb-v2.1)`
 
 This document explains how the scenario and configuration numbers in a station brief were produced, so that the interpretation layer can explain them faithfully. The numbers themselves live in the brief with fact ids; the thresholds live in the rule pack (rules-v2.0). Nothing here replaces either.
 

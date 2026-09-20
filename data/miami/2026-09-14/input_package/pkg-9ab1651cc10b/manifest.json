@@ -1,0 +1,268 @@
+{
+  "stage": "input_package",
+  "schema_version": "miami-input-package-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "name": "platform_modules",
+      "path": "config/station_platform_modules_v1.json",
+      "sha256": "94590dedbe295a4a77b042846fd96001cc1c8f3a0ac56cc656315cd499e2e355"
+    },
+    {
+      "name": "operations_assumptions",
+      "path": "config/prt_operations_assumptions_v1.json",
+      "sha256": "00c42d550bb4571251cadf8ef4bc20f0f2d367f07aebf741ed16d51a875bf287"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "spatial_join",
+      "package_id": "pkg-e4f5e3782ecb",
+      "package_dir": "spatial_join/pkg-e4f5e3782ecb",
+      "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
+    },
+    {
+      "stage": "demography",
+      "package_id": "pkg-2c67f7b67b8d",
+      "package_dir": "demography/pkg-2c67f7b67b8d",
+      "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
+    },
+    {
+      "stage": "jobs",
+      "package_id": "pkg-a5c6ab93a85e",
+      "package_dir": "jobs/pkg-a5c6ab93a85e",
+      "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
+    },
+    {
+      "stage": "service_baseline",
+      "package_id": "pkg-edab88a3322a",
+      "package_dir": "service_baseline/pkg-edab88a3322a",
+      "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77"
+    },
+    {
+      "stage": "ridership_reference",
+      "package_id": "pkg-418a92cfd604",
+      "package_dir": "ridership_reference/pkg-418a92cfd604",
+      "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89"
+    },
+    {
+      "stage": "poi",
+      "package_id": "pkg-6af566c7afe1",
+      "package_dir": "poi/pkg-6af566c7afe1",
+      "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6"
+    }
+  ],
+  "optional_layers_absent_at_build": [
+    "walk_model"
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_input_package.py",
+      "sha256": "043051823dbbbe53eae63f80126b5884a4da662c380d1cca9c6cfd74e7a58001"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "cbc69d3fd88f961371a316bfd432aaee5bff2afd38373c7c97b524842ed15003"
+    }
+  ],
+  "config_sha256": "b0b0d0fb24ffd1cc4b6e314f0e8cdbc56e110bc31a088c3715571e91b12b20e8",
+  "config": {
+    "required_layers": [
+      "spatial_join",
+      "demography",
+      "jobs"
+    ],
+    "optional_layers": [
+      "poi",
+      "walk_model"
+    ],
+    "config_input_layers": [
+      "service_baseline"
+    ],
+    "bands": [
+      "b1",
+      "b2",
+      "b3",
+      "cum"
+    ],
+    "config_inputs": {
+      "ridership_baseline": "acquired",
+      "service_baseline": "derived",
+      "hub_transfer_inflow": "not_acquired",
+      "road_guideway_roles": "not_acquired",
+      "platform_constructible_space": "assumed",
+      "vehicle_parameters": "assumed",
+      "platform_module_specification": "acquired"
+    },
+    "data_nature_by_layer": {
+      "spatial_join": "administrative_record",
+      "demography": "survey_estimate",
+      "jobs": "administrative_modeled"
+    },
+    "assembly_rule": "copy the producing layer's value envelopes verbatim; recompute nothing; add evidence_source and pins",
+    "contract": "V2_站点输入包字段契约.md §2, §8, §10, §11"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "config_inputs": {
+    "service_baseline": {
+      "acquisition_status": "derived",
+      "value_status": "value",
+      "provenance_class": "derived",
+      "source_package": "pkg-edab88a3322a"
+    },
+    "platform_constructible_space": {
+      "acquisition_status": "assumed",
+      "value_status": "value",
+      "provenance_class": "assumption",
+      "source_file": "config/prt_operations_assumptions_v1.json"
+    },
+    "vehicle_parameters": {
+      "acquisition_status": "assumed",
+      "value_status": "value",
+      "provenance_class": "assumption",
+      "source_file": "config/prt_operations_assumptions_v1.json"
+    }
+  },
+  "config_input_extras": {
+    "platform_module_specification": {
+      "acquisition_status": "acquired",
+      "value_status": "value",
+      "provenance_class": "observed",
+      "data_nature": "design_specification",
+      "source_file": "config/station_platform_modules_v1.json"
+    },
+    "ridership_baseline": {
+      "acquisition_status": "acquired",
+      "value_status": "value",
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source_package": "pkg-418a92cfd604",
+      "scope": "station-level average weekday boardings, reference only"
+    }
+  },
+  "method_summary": "assembles station_master + spatial_join + demography + jobs into per-station input packages with verbatim value envelopes, evidence pointers, pinned layer versions and Miami-specific input placeholders; recomputes nothing",
+  "contract": "V2_站点输入包字段契约.md §2, §8, §10, §11",
+  "publish_policy": "content-addressed immutable package dir input_package/pkg-<id>; readers resolve input_package_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_input_package.json",
+      "sha256": "4246a029adf2d2e39b357a7b0eb2f0a137e3c4902c473c38a7dbc88472141d53"
+    },
+    {
+      "file": "input_package_index.json",
+      "sha256": "4dd04778b8b64a429f0785df5e81b527811806129a627f219807d72a9b1c9927"
+    },
+    {
+      "file": "input_package_validation.json",
+      "sha256": "5f4c19488e199709a01461c1f59b8ca15df5518355b3bee3a028f5811d91a64e"
+    },
+    {
+      "file": "stations/MIA-MM-01.json",
+      "sha256": "6f1978e0c5e7317e838d5d120da046805c17e5ced6e76f2f4eb2a7842e89d909"
+    },
+    {
+      "file": "stations/MIA-MM-02.json",
+      "sha256": "7d29c05c6118fdd986da9794a6bf6917c70d796a46b68833936c90bec11b9703"
+    },
+    {
+      "file": "stations/MIA-MM-03.json",
+      "sha256": "bd145abb48b44e69d3ec8ce76ae1aa2c1c371a17aa290e722a5b6c990bebac89"
+    },
+    {
+      "file": "stations/MIA-MM-04.json",
+      "sha256": "e79df51abef428a722eb23786a7269f1ba7e0dab2d274cdd91e4cc1566a7e4e3"
+    },
+    {
+      "file": "stations/MIA-MM-05.json",
+      "sha256": "fdb635fd0850540df69ce0df91200e2fe11471d2d60fc914902ee97856b3efb9"
+    },
+    {
+      "file": "stations/MIA-MM-06.json",
+      "sha256": "7b15525e7116cc7f05fcd33a7cadec8a989d33e283972005523a43cb670c839d"
+    },
+    {
+      "file": "stations/MIA-MM-07.json",
+      "sha256": "b733532090c19b582537de32aa71ce929f08a0daf86529117829ce770eeb1af6"
+    },
+    {
+      "file": "stations/MIA-MM-08.json",
+      "sha256": "9da3bc09db4b7f32271eba8dc7f804d8980412c4b23ea84852c1e7cbfac9946a"
+    },
+    {
+      "file": "stations/MIA-MM-09.json",
+      "sha256": "a9f9fd3153596e6788cb42f6a736d26a95e04c794ad93117079f73003bc2eca3"
+    },
+    {
+      "file": "stations/MIA-MM-10.json",
+      "sha256": "0f962d307e19e1bff7667db9bd985445fc4cceb7735fc8890dc4be7d8527bdf9"
+    },
+    {
+      "file": "stations/MIA-MM-11.json",
+      "sha256": "5263077c34a58c0362ccc9b980abf38f84c95d443d770abbd8e753cfa69c027e"
+    },
+    {
+      "file": "stations/MIA-MM-12.json",
+      "sha256": "228eff3a17b43d19125413dad0a038b6452784670381acc8ddf56a1c1bdc140a"
+    },
+    {
+      "file": "stations/MIA-MM-13.json",
+      "sha256": "fda3f8bceaa8f6ec64feb707e2c3e0d827daff617c5782d41816f327eb16d129"
+    },
+    {
+      "file": "stations/MIA-MM-14.json",
+      "sha256": "37f18f33c89255e133bfecea3701be35be95056e3a8e37267e3cba34bf35de5b"
+    },
+    {
+      "file": "stations/MIA-MM-15.json",
+      "sha256": "611b9b6267363d03cbc832cb56c2a0d21032955fde4b24c0c07bb7592c1859d3"
+    },
+    {
+      "file": "stations/MIA-MM-16.json",
+      "sha256": "ccae123b3666f6c76c6a36942cdfbef8585b2e7c653694dff1762f2f2ac787fc"
+    },
+    {
+      "file": "stations/MIA-MM-17.json",
+      "sha256": "cad90961c66ede062e4e9f1b8ff9fb0fe4b356b9f6872f46696e5c3a0a3abe65"
+    },
+    {
+      "file": "stations/MIA-MM-18.json",
+      "sha256": "dec4b38ab997bfead9cd6b216343e948c1226ff5e09251175917cfe6394fe238"
+    },
+    {
+      "file": "stations/MIA-MM-19.json",
+      "sha256": "f947d440fa04ce0f34fbc619d0a26cf2785997008cfb54d556a93123c161cf25"
+    },
+    {
+      "file": "stations/MIA-MM-20.json",
+      "sha256": "7e69bf3e1de7285a5aa27056b7fbcd7bde3b950daa906ecd2cef9fb08b4aa9ba"
+    },
+    {
+      "file": "stations/MIA-MM-21.json",
+      "sha256": "df822927e1d057e60a1c8e45f28aeae6cd5dd30b6144991fb6e76f65ba15d170"
+    }
+  ],
+  "package_id": "pkg-9ab1651cc10b",
+  "package_dir": "input_package/pkg-9ab1651cc10b"
+}

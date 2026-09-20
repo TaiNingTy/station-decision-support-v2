@@ -34,6 +34,8 @@
    - risks：这个情景下结果可能不成立的原因。
 2. questions_for_owner：配置被采用之前必须由人回答的问题，每条写明 why_it_matters，并在 related_ids 里给出相关的 fact_id、rule_result_id 或知识库章节。
 
+空间证据（可能为空）：如果 evidence_digest 里有 candidate_site，把"可建设空间"的问题落到具体要素上（在 related_ids 里写该地块的 object_id），并保留它的全部前提；障碍类要素可作为风险写入。空间证据是辅助证据，不改变任何计算结果。
+
 硬性要求：
 1. 不写事实表里没有的数字；不得把车辆最大载客当作载客量；C04 只用于泊位，不得乘回需求。
 2. 不得把结果称为设计（design）、预测（forecast）或容量证明（proof）；可建设空间是假设，每个情景都要带这个前提。

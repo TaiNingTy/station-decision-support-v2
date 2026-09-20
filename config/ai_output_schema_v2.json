@@ -18,13 +18,15 @@
     "questions_for_owner": {"type": "array", "min_items": 1, "items": {"question": "string", "why_it_matters": "string", "related_ids": "array of fact ids, rule result ids or kb refs (may be empty)"}},
     "not_covered_by_knowledge_base": {"type": "array of strings (may be empty)"},
     "rule_explanations": {"optional": true, "type": "array", "items": {"rule_result_id": "must exist in the rules package", "explanation": "string", "kb_refs": "array (may be empty)"}, "written_by": "Agent 2 of the Coze V2 workflow"},
+    "spatial_evidence": {"optional": true, "type": "object", "fields": {"status": {"enum": ["verified_ids_only", "rejected", "not_available"]}, "auxiliary_only": {"const": true}, "gis_objects_package": "must equal the current gis_objects package id", "g1": "the GIS reader's object_readings, patterns, candidate_sites, data_anomalies, not_determinable (object ids and .Gnnn fact ids must exist)", "g2": "the heat and residents reader's readings; auxiliary_only must be true"}, "written_by": "gis-verify; heat and zoning are read together and are auxiliary evidence; the checker also reports how often G1 agrees with the rule-based role hints"},
     "workflow": {"optional": true, "type": "object", "fields": {"name": "station_decision_v2", "input_gate": {"const": "PASS"}, "output_gate": {"const": "VALID"}, "output_gate_problems": "integer", "soft_warnings": "integer"}, "written_by": "the output gate code node; an output whose gates did not both pass is never saved as a run"},
     "run_record": {"type": "object", "fields": {"platform": "string", "execution_mode": {"enum": ["coze_ui_manual", "coze_api", "example_not_a_model_output"]}, "workflow_or_bot": "string", "model": "string", "run_id": "string or null; only a platform-returned id, never invented", "run_at_utc": "string (ISO 8601) or empty", "operator": "string", "retrieval_hits": "array of {kb_doc, section} as reported by the platform (may be empty)", "review": {"status": {"enum": ["unreviewed", "reviewed_ok", "reviewed_with_edits", "rejected"]}, "reviewer": "string", "notes": "string"}}}
   },
   "citation_rules": {
     "fact_id": "^MIA-MM-[0-9]{2}\\.F[0-9]{3}$ and must exist in the station's brief",
     "rule_result_id": "^(MIA-MM-[0-9]{2}|NET)\\|(low|medium|high|-)\\|RC-[0-9]{2}$ and must exist in the rules package",
-    "kb_ref": "^KB_V2_0[1-4] §(DS|CM|IG|OI)-[0-9]{2}$ and must exist in the knowledge base documents"
+    "kb_ref": "^KB_V2_0[1-6] §(DS|CM|IG|OI|GR|LG)-[0-9]{2}$ and must exist in the knowledge base documents",
+    "object_id": "<station>.RDnn | .RLnn | .GW01 | .ZN<FID> | .LU<code> | .PCnnn | .HC<row>_<col> | .BG<geoid>, and .Gnnn for code-computed summary facts; must exist in the current gis_objects package"
   },
   "publication_rule": "an output is exported to the web page only when the checker passes and run_record.review.status is reviewed_ok or reviewed_with_edits; example outputs (execution_mode example_not_a_model_output) are never exported"
 }

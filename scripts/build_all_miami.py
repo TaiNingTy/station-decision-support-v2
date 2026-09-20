@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Unified, ORDERED rebuild of the Miami data foundation.
 
-    station_master -> spatial_join -> demography -> jobs -> service_baseline -> ridership_reference -> poi -> input_package -> scenarios -> config -> rules -> readiness --check
+    station_master -> spatial_join -> demography -> jobs -> service_baseline -> ridership_reference -> poi -> input_package -> scenarios -> config -> rules -> gis_objects -> readiness --check
     (walk_model is written but paused; see the STAGES comment)
 
 Runs every stage with the SAME interpreter that launched this script and stops at the first failure.
@@ -30,6 +30,7 @@ STAGES = [("station_master", ["scripts/build_miami_station_master.py"]),
           ("scenarios", ["scripts/build_miami_scenarios.py"]),        # V2 step 5b: low/medium/high peak-hour chain with provenance tags
           ("config", ["scripts/build_miami_config.py"]),              # V2 step 6: PRT berths / modules / footprint per station per scenario
           ("rules", ["scripts/build_miami_rules.py"]),                # V2 step 9a: versioned rule pack evaluated over the packages (citable rule_result_id)
+          ("gis_objects", ["scripts/build_miami_gis_objects.py"]),    # V2 step 11: feature-level GIS objects + heat proxy for the reading agents (needs raw/miami/2026-09-20/gis_objects)
           ("readiness_check", ["scripts/miami_readiness.py", "--check"])]
 skip = {a[len("--skip-"):] for a in sys.argv[1:] if a.startswith("--skip-")}
 

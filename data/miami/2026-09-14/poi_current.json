@@ -1,11 +1,11 @@
 {
   "stage": "poi",
   "schema_version": "miami-package-pointer/1.0",
-  "package_id": "pkg-57ffb187de23",
-  "package_dir": "poi/pkg-57ffb187de23",
-  "manifest": "poi/pkg-57ffb187de23/manifest.json",
-  "manifest_sha256": "ed364ebed5c650fcb4b955d27fefdf0219155a0d425bc80339bd3fd89ec90484",
+  "package_id": "pkg-6af566c7afe1",
+  "package_dir": "poi/pkg-6af566c7afe1",
+  "manifest": "poi/pkg-6af566c7afe1/manifest.json",
+  "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6",
   "built_on": "2026-09-15",
-  "previous_package_dir": "poi/pkg-5db3cca81602",
+  "previous_package_dir": "poi/pkg-57ffb187de23",
   "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
 }

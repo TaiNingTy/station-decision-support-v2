@@ -1,6 +1,6 @@
-# Station brief · Wilkie D. Ferguson, Jr. (MIA-MM-08) · kit ai-kit-v2.0 · KB kb-v2.0 · rules rules-v2.0
+# Station brief · Wilkie D. Ferguson, Jr. (MIA-MM-08) · kit ai-kit-v2.1 · KB kb-v2.1 · rules rules-v2.0
 
-Use only these facts and the knowledge base kb-v2.0. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.
+Use only these facts and the knowledge base kb-v2.1. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.
 
 ## Facts (cite by fact_id)
 

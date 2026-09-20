@@ -1,0 +1,53 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "stations": 21,
+  "object_ids_unique": true,
+  "objects_total": 8964,
+  "every_station_has_roads_zoning_parcels_heat_blockgroups": true,
+  "zoning_clip_matches_spatial_join_package": {
+    "max_deviation_share_of_disc": 1e-06,
+    "pass": true
+  },
+  "parcels_carry_no_owner_or_address_fields": true,
+  "blocks_without_2020_count": 0,
+  "heat_grid": {
+    "cells": 453,
+    "cells_with_density": 369,
+    "hot_cells": 74,
+    "cell_size_ft": 500,
+    "residents_in_grid": 82824,
+    "jobs_in_grid": 181824,
+    "residents_upper_bound_blocks_touching_union": 85018
+  },
+  "heat_grid_residents_not_above_touching_blocks": true,
+  "every_cell_value_non_negative": true,
+  "dor_prefixes_not_in_config": {
+    "ENCLOSED THEATER/AUDITORIUM": 2,
+    "TOURIST ATTRACTION/EXHIBIT": 8,
+    "NIGHTCLUB LOUNGE OR BAR": 7,
+    "VEG CROPLANDS MIXED/ROTATED": 8,
+    "LITERARY - EXEMPT": 1,
+    "BENEVOLENT - EXEMPT": 5,
+    "UNIVERSITY OR COLLEGE": 2,
+    "DRIVE-IN RESTAURANT": 4,
+    "COMMON AREAS": 6,
+    "PARKING LOT/COMMERCIAL CONDO": 1,
+    "AIRPORT/TERMINAL OR MARINA": 5,
+    "FOOD PROCESSING": 4,
+    "CHARITABLE - EXEMPT": 7,
+    "REPAIR SHOP/NON AUTOMOTIVE": 4,
+    "MISCELLANEOUS - RESIDENTIAL": 2,
+    "ENCLOSED RECEATIONAL ARENA": 4,
+    "HOSPITAL - GOVERNMENTAL": 2,
+    "CONTAINER NURSERY ABOVE-GR": 1,
+    "CROPLAND - SOIL CLASS III": 1,
+    "LEASEHOLD INTEREST: LEASEHOLD INTEREST": 1,
+    "RIVER LAKE OR SUBMERGED LAND": 1,
+    "RETIREMENT HOME": 1
+  },
+  "role_hints": 2721,
+  "role_hints_shown_to_agents": false,
+  "scope_statement": "PASS means the layers were clipped, joined and counted consistently and the privacy rule holds. The heat grid is a proxy built from public counts, not a measurement. Object roles are read by the agents and confirmed by people; the hints here are only an evaluation aid."
+}

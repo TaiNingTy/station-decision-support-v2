@@ -1,0 +1,85 @@
+{
+  "stage": "rules",
+  "schema_version": "miami-rules-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "rule_pack",
+      "path": "config/rules_v2.json",
+      "sha256": "4b6e9eeb439c14647bed6f8e1559bc94a0c647f64cbdd2d29daf1e24eb22f37d"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "input_package",
+      "package_id": "pkg-9ab1651cc10b",
+      "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40"
+    },
+    {
+      "stage": "scenarios",
+      "package_id": "pkg-0d1753c58558",
+      "manifest_sha256": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b"
+    },
+    {
+      "stage": "config",
+      "package_id": "pkg-b49a8047475b",
+      "manifest_sha256": "c5be2fdbaf9c4e8cb4cb21907c0cd1f5ae797617e10f97cbf66ebeb6c6ed2220"
+    }
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_rules.py",
+      "sha256": "617543cab3ab35bc64febee5fb088d3a75ec062d7dea401a0b6d1f8756cd58c5"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "cbc69d3fd88f961371a316bfd432aaee5bff2afd38373c7c97b524842ed15003"
+    }
+  ],
+  "config_sha256": "4b6e9eeb439c14647bed6f8e1559bc94a0c647f64cbdd2d29daf1e24eb22f37d",
+  "config": {
+    "rule_pack_id": "miami-rules-v2",
+    "version": "rules-v2.0",
+    "rules": [
+      "RC-01",
+      "RC-02",
+      "RC-03",
+      "RC-04",
+      "RC-05",
+      "RC-06",
+      "RC-07",
+      "RC-08",
+      "RC-09",
+      "RC-10",
+      "RC-11",
+      "RC-12",
+      "RC-13"
+    ]
+  },
+  "method_summary": "versioned rule pack evaluated over the input-package, scenarios and config packages; one citable result per (subject, scenario, rule); critical results are reported and never hidden",
+  "contract": "architecture note §1 (versioned rules); rules doc 规则 5, 7",
+  "publish_policy": "content-addressed immutable package dir rules/pkg-<id>; readers resolve rules_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "rule_results.json",
+      "sha256": "6a65e20542f58b81b08f45177c57b6b767e71215d93d2991d1560c868e262e88"
+    },
+    {
+      "file": "rule_pack.json",
+      "sha256": "14c7ef4826e062b7326dd05767b9dd35365f5f4e6affb563b939ed820d656db6"
+    },
+    {
+      "file": "rules_validation.json",
+      "sha256": "1d1e2a79481db9629b86f7dcd760bcb2f114bef70e9c180845458ffe96a66611"
+    }
+  ],
+  "package_id": "pkg-771635da2111",
+  "package_dir": "rules/pkg-771635da2111"
+}

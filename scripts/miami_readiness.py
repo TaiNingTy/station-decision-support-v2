@@ -58,6 +58,7 @@ STAGES = [
     {"stage": "scenarios", "kind": "package", "pointer": "scenarios_current.json", "manifest_name": "manifest.json"},
     {"stage": "config", "kind": "package", "pointer": "config_current.json", "manifest_name": "manifest.json"},   # step 6: PRT berths/modules per scenario
     {"stage": "rules", "kind": "package", "pointer": "rules_current.json", "manifest_name": "manifest.json"},     # step 9a: versioned rule results (citable rule_result_id) for the AI layer
+    {"stage": "gis_objects", "kind": "package", "pointer": "gis_objects_current.json", "manifest_name": "manifest.json"},   # step 11: feature-level GIS tables + heat proxy for the reading agents
 ]
 CONFIG_INPUT_FIELDS = ["platform_constructible_space", "vehicle_parameters", "service_baseline"]
 # Compatibility mapping for the spatial_join manifest schema 2.0 (`upstream` block) -> ROOT-relative files.
@@ -238,6 +239,8 @@ def derive_layers(stages, inv, ip_cfg):
                           "meaning": "berths, platform module and footprint per station per scenario under PRT semantics; assumption-backed, not a design"},
         "rules": {"status": st("rules"), "stage": "rules", "package_dir": pk("rules"),
                   "meaning": "deterministic results of the versioned rule pack (arithmetic identities, project conventions, data-quality and scope flags) with citable ids; not legal or agency standards"},
+        "gis_objects": {"status": st("gis_objects"), "stage": "gis_objects", "package_dir": pk("gis_objects"),
+                        "meaning": "feature-level roads, rail, guideway, zoning, land use, parcels and an activity-density heat PROXY with citable object ids for the reading agents; auxiliary evidence, decides nothing"},
         "engineering": {"platform_constructible_space": cfg.get("platform_constructible_space", {}).get("acquisition_status", "not_acquired"),
                         "vehicle_parameters": cfg.get("vehicle_parameters", {}).get("acquisition_status", "not_approved"),
                         "source": "input_package manifest config_inputs"},

@@ -6,6 +6,7 @@
 //
 // Input  params.station_brief String (the same compact brief the input gate read)
 //        params.site_json, params.review_json, params.config_json  String (raw outputs of LLM1 / LLM2 / LLM3)
+//        params.spatial_evidence_json String, params.evidence_object_ids Array<String>, params.gis_status String  (optional; from gis-gate / gis-verify)
 // Output output_status "VALID" | "INVALID", allow_output Boolean, problems Array<String>, soft_warnings Array<String>,
 //        final_json String
 // Paste the whole file into the Coze Code node (JavaScript). Runnable in Node for local evals.
@@ -42,6 +43,8 @@ function assemble(params) {
   const FACTS = new Set(brief.facts.map((f) => f.fact_id));
   const RULES = new Set([...(brief.rule_results.station || []), ...(brief.rule_results.network || [])].map((r) => r.rule_result_id));
   const KB = new Set(brief.kb_sections || []);
+  const OBJ = new Set(Array.isArray(params.evidence_object_ids) ? params.evidence_object_ids : []);
+  let evidence = null; try { evidence = params.spatial_evidence_json ? (typeof params.spatial_evidence_json === "string" ? JSON.parse(params.spatial_evidence_json) : params.spatial_evidence_json) : null; } catch (e) { evidence = null; }
   const briefNumbers = new Set(); collectNumbers(brief.facts.map((f) => f.value), briefNumbers);
 
   const site = parseLoose(params.site_json, "LLM1 site reading", problems) || {};
@@ -66,6 +69,7 @@ function assemble(params) {
       const w = `${where}[${i}]`; if (!st || typeof st !== "object") { problems.push(`${w}: not an object`); return; }
       text(st.statement, w);
       const f = idList(st.fact_ids, FACTS, "fact id", w), r = idList(st.rule_result_ids, RULES, "rule result id", w), k = idList(st.kb_refs, KB, "KB reference", w);
+      idList(st.object_ids, OBJ, "spatial object id", w);   // optional: objects of the verified spatial evidence (auxiliary)
       if (needFact && !f.length) problems.push(`${w}: a site statement needs at least one fact id`);
       if (!needFact && !(f.length || r.length || k.length)) problems.push(`${w}: needs a fact id, a rule result id or a KB reference`);
     });
@@ -109,7 +113,8 @@ function assemble(params) {
     site_reading: site.site_reading || [], data_gaps_and_reliability: review.data_gaps_and_reliability || [], role_proposal: site.role_proposal || {},
     configuration_reading: config.configuration_reading || {}, questions_for_owner: config.questions_for_owner || [],
     not_covered_by_knowledge_base: review.not_covered_by_knowledge_base || [], rule_explanations: review.rule_explanations || [],
-    workflow: { name: "station_decision_v2", design: "coze/v2/DESIGN.md", input_gate: "PASS", output_gate: status, output_gate_problems: problems.length, soft_warnings: soft.length },
+    spatial_evidence: evidence || { status: "not_available", auxiliary_only: true, reason: params.gis_status ? `gis-gate: ${params.gis_status}` : "the GIS reading agents were not run" },
+    workflow: { name: "station_decision_v2", design: "coze/v2/DESIGN.md", input_gate: "PASS", gis_gate: params.gis_status || "not_run", gis_verify: evidence ? evidence.status : "not_run", output_gate: status, output_gate_problems: problems.length, soft_warnings: soft.length },
     run_record: { platform: "coze", execution_mode: "coze_ui_manual", workflow_or_bot: "station_decision_v2", model: "", run_id: null, run_at_utc: "", operator: "", retrieval_hits: [],
       review: { status: "unreviewed", reviewer: "", notes: "" } },
   };

@@ -1,0 +1,375 @@
+{
+  "stage": "gis_objects",
+  "schema_version": "miami-gis-objects-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "gis_objects_config",
+      "path": "config/gis_objects_v1.json",
+      "sha256": "796539030ef7f7c87f79188805b7f8aad4ccb74b44cdbe26dd3533ed205d2c85"
+    },
+    {
+      "name": "gis_objects_source_manifest",
+      "path": "raw/miami/2026-09-20/gis_objects/gis_objects_source_manifest.json",
+      "sha256": "51f98364437b082e62fb6cbbad1ec42e566895fa3c7c096b99255db6b752f320"
+    },
+    {
+      "name": "osm_extract",
+      "path": "raw/miami/2026-09-17/osm/walk_network_overpass.json",
+      "sha256": "592d45437fd1f8834dfe62b0d71ca489216c6626a0a267bb344b5ed6bcf66add"
+    },
+    {
+      "name": "zoning_raw",
+      "path": "raw/miami/2026-09-14/zoning_study_window.geojson",
+      "sha256": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2"
+    },
+    {
+      "name": "gtfs_archive",
+      "path": "raw/miami/2026-09-11/google_transit.zip",
+      "sha256": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5"
+    },
+    {
+      "name": "station_master",
+      "path": "data/miami/2026-09-14/station_master.geojson",
+      "sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
+    },
+    {
+      "name": "service_patterns",
+      "path": "data/miami/2026-09-14/service_patterns.json",
+      "sha256": "61feeb2f2370da67e6b442359c6cd3df7a8129ef5c856fe2408784367e2348ed"
+    },
+    {
+      "name": "census_2020_pl_blocks.response",
+      "path": "raw/miami/2026-09-20/gis_objects/dec_pl_2020_blocks_12086.json",
+      "sha256": "b5e5cb3031f7ba9b95753858e0a418e7cce414715fdeba2f555142c078cdfa89"
+    },
+    {
+      "name": "land_use.geojson",
+      "path": "raw/miami/2026-09-20/gis_objects/land_use.geojson.json",
+      "sha256": "c8c7995ade7c43e0192694fbcc646d4981a412913b4480725929c150cd190fdd"
+    },
+    {
+      "name": "metrorail_line.geojson",
+      "path": "raw/miami/2026-09-20/gis_objects/metrorail_line.geojson.json",
+      "sha256": "b63fab58aa66229db313d5b4dac9c0dc943980c493c9b2b333c85dd7a4d9f4fa"
+    },
+    {
+      "name": "parcels.geojson",
+      "path": "raw/miami/2026-09-20/gis_objects/parcels.geojson.json",
+      "sha256": "0a02c17c31d143081ab2c298a370929c3ade7601fbfd77ca7677ea29ca5625e7"
+    },
+    {
+      "name": "railroads.geojson",
+      "path": "raw/miami/2026-09-20/gis_objects/railroads.geojson.json",
+      "sha256": "9d34653228f16a2ebc086374238d876c230ba720984ff186fc7ff397d242ae25"
+    },
+    {
+      "name": "trirail.geojson",
+      "path": "raw/miami/2026-09-20/gis_objects/trirail.geojson.json",
+      "sha256": "6d18edfe75b3149104038dcbca4d0096bbcb923f0f9fa4b49f4815344e75bb90"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "demography",
+      "package_id": "pkg-2c67f7b67b8d",
+      "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
+    },
+    {
+      "stage": "jobs",
+      "package_id": "pkg-a5c6ab93a85e",
+      "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
+    },
+    {
+      "stage": "spatial_join",
+      "package_id": "pkg-e4f5e3782ecb",
+      "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
+    }
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_gis_objects.py",
+      "sha256": "71aad50e174bc0db34ad25a1385c5b830ca3f207adf3ba9970c71f7ccaaff666"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "cbc69d3fd88f961371a316bfd432aaee5bff2afd38373c7c97b524842ed15003"
+    }
+  ],
+  "config_sha256": "796539030ef7f7c87f79188805b7f8aad4ccb74b44cdbe26dd3533ed205d2c85",
+  "config": {
+    "config_id": "miami-gis-objects-v1",
+    "version": "gis-objects-v1.0",
+    "issued_on": "2026-09-20",
+    "principle": "Feature-level GIS tables for the reading agents. The agents read and interpret the features; code only clips, measures, joins and counts. The activity-density heat proxy and zoning are read together and are auxiliary evidence: neither decides demand, a station role or a configuration.",
+    "heat_proxy": {
+      "cell_size_ft": 500,
+      "metric": "activity density = (2020 Census residents + 2023 LODES jobs located in the cell) per acre of land in the cell",
+      "is_measured_ridership_heat": false,
+      "is_persons_per_hour": false,
+      "label": "PROXY built from public counts; not a measured activity or ridership heat map",
+      "residents_source": "2020 Census P.L. 94-171 block counts (P1_001N), carry disclosure-avoidance noise; a different source and year than the ACS 2020-2024 estimates of the demography layer and never mixed with them",
+      "jobs_source": "LEHD LODES 8 Florida 2023 WAC C000 JT00 by block (jobs package)",
+      "apportionment": "block value x (block land inside the cell / block land), water erased; the same land-share convention as the other layers",
+      "min_land_acres_for_density": 0.1,
+      "hot_definition": "network top quintile of activity density among cells with land",
+      "known_limitation": "block values are spread evenly over the block's land; a park, plaza or parking structure inside a block inherits the block's density, so a hot cell must be read together with its zoning and land use before it is interpreted"
+    },
+    "roads": {
+      "source": "OpenStreetMap highway ways (archived extract)",
+      "object_classes": [
+        "motorway",
+        "motorway_link",
+        "trunk",
+        "trunk_link",
+        "primary",
+        "primary_link",
+        "secondary",
+        "secondary_link",
+        "tertiary",
+        "tertiary_link",
+        "residential",
+        "unclassified",
+        "living_street",
+        "pedestrian",
+        "busway"
+      ],
+      "summary_only_classes": [
+        "footway",
+        "path",
+        "steps",
+        "cycleway",
+        "service",
+        "corridor",
+        "track",
+        "construction",
+        "proposed"
+      ],
+      "class_rank": {
+        "motorway": 1,
+        "motorway_link": 2,
+        "trunk": 3,
+        "trunk_link": 4,
+        "primary": 5,
+        "primary_link": 6,
+        "secondary": 7,
+        "secondary_link": 8,
+        "tertiary": 9,
+        "tertiary_link": 10,
+        "busway": 11,
+        "unclassified": 12,
+        "residential": 13,
+        "living_street": 14,
+        "pedestrian": 15
+      },
+      "grouping": "ways grouped by (name or ref, highway class) inside the half-mile disc; minor classes (rank >= 12) listed only when at least 330 ft lie inside the disc",
+      "minor_min_length_ft": 330,
+      "max_rows": 70
+    },
+    "zoning": {
+      "min_clipped_area_m2": 100
+    },
+    "parcels": {
+      "privacy": "no owner, mailing, site-address or legal-description field is requested or stored",
+      "table_rule": "a parcel is listed individually when it lies in the inner band (within 660 ft), or its land-use group is one of listed_groups, or its lot is at least 20,000 sq ft; all other parcels appear only in the per-group summary; rows are ordered by distance and capped at max_rows",
+      "large_lot_sqft": 20000,
+      "max_rows": 150,
+      "module_footprint_sqft": 3908,
+      "groups_by_dor_desc_prefix": {
+        "vacant": [
+          "VACANT LAND - COMMERCIAL",
+          "VACANT LAND - INDUSTRIAL",
+          "VACANT RESIDENTIAL",
+          "VACANT LAND - INSTITUTIONAL",
+          "VACANT GOVERNMENTAL"
+        ],
+        "parking": [
+          "PARKING LOT/MOBILE HOME PARK",
+          "PARKING LOT/COMMERCIAL CONDO"
+        ],
+        "governmental": [
+          "MUNICIPAL",
+          "COUNTY",
+          "STATE",
+          "FEDERAL",
+          "BOARD OF PUBLIC INSTRUCTION",
+          "MILITARY",
+          "COLLEGE",
+          "HOSPITAL",
+          "FOREST, PARK, RECREATIONAL AREA",
+          "HOSPITAL - GOVERNMENTAL"
+        ],
+        "institutional": [
+          "RELIGIOUS - EXEMPT",
+          "EDUCATIONAL/SCIENTIFIC - EX",
+          "PRIVATE SCHOOL",
+          "PRIVATELY OWNED HOSPITALS",
+          "HOME FOR THE AGED",
+          "CLUB OR HALL - PRIVATE",
+          "CULTURAL - LITERARY",
+          "MORTUARY, CEMETERY",
+          "LITERARY - EXEMPT",
+          "BENEVOLENT - EXEMPT",
+          "CHARITABLE - EXEMPT",
+          "UNIVERSITY OR COLLEGE"
+        ],
+        "utility_or_rail": [
+          "UTILITY",
+          "CENTRALLY ASSESSED",
+          "RIGHT-OF-WAY"
+        ],
+        "common_area": [
+          "PVT PARK -REC AREA -ROADWAY",
+          "LEASEHOLD INTEREST",
+          "COMMON AREAS",
+          "LEASEHOLD INTEREST: LEASEHOLD INTEREST"
+        ],
+        "reference_folio": [
+          "REFERENCE FOLIO"
+        ],
+        "residential": [
+          "RESIDENTIAL - SINGLE FAMILY",
+          "MULTIFAMILY 2-9 UNITS",
+          "MULTIFAMILY 10 UNITS PLUS",
+          "RESIDENTIAL - TOTAL VALUE",
+          "CONDOMINIUM",
+          "COOPERATIVE",
+          "MOBILE HOME",
+          "MISCELLANEOUS - RESIDENTIAL",
+          "RETIREMENT HOME"
+        ],
+        "mixed_use": [
+          "MIXED USE-STORE/RESIDENTIAL"
+        ],
+        "commercial": [
+          "STORE",
+          "OFFICE BUILDING - MULTISTORY",
+          "OFFICE BUILDING - ONE STORY",
+          "PROFESSIONAL SERVICE BLDG",
+          "RESTAURANT OR CAFETERIA",
+          "HOTEL OR MOTEL",
+          "AUTOMOTIVE OR MARINE",
+          "WHOLESALE OUTLET",
+          "FINANCIAL INSTITUTION",
+          "SERVICE STATION",
+          "SUPERMARKET",
+          "DEPARTMENT STORE",
+          "COMMUNITY SHOPPING CENTER",
+          "REGIONAL SHOPPING CENTER",
+          "NIGHTCLUB, LOUNGE, OR BAR",
+          "ENTERTAINMENT",
+          "TOURIST ATTRACTION",
+          "AIRPORT, MARINA",
+          "ENCLOSED THEATER/AUDITORIUM",
+          "TOURIST ATTRACTION/EXHIBIT",
+          "NIGHTCLUB LOUNGE OR BAR",
+          "DRIVE-IN RESTAURANT",
+          "AIRPORT/TERMINAL OR MARINA",
+          "REPAIR SHOP/NON AUTOMOTIVE",
+          "ENCLOSED RECEATIONAL ARENA"
+        ],
+        "industrial": [
+          "LIGHT MANUFACTURING",
+          "HEAVY INDUSTRIAL",
+          "WAREHOUSE TERMINAL OR STG",
+          "OPEN STORAGE",
+          "MINERAL PROCESSING",
+          "LUMBER YARD",
+          "PACKING PLANT",
+          "FOOD PROCESSING"
+        ],
+        "agricultural_classification": [
+          "VEG CROPLANDS MIXED/ROTATED",
+          "CONTAINER NURSERY ABOVE-GR",
+          "CROPLAND - SOIL CLASS III"
+        ],
+        "water_or_submerged": [
+          "RIVER LAKE OR SUBMERGED LAND"
+        ]
+      },
+      "grouping_note": "groups are defined on the description strings carried by the county layer itself (the text before ' : ' in DOR_DESC); a prefix that is not listed falls into 'other' and is reported; 'agricultural_classification' is a tax classification that appears on a few downtown parcels and is kept as the source gives it",
+      "listed_groups": [
+        "vacant",
+        "parking",
+        "governmental",
+        "institutional",
+        "utility_or_rail",
+        "common_area",
+        "agricultural_classification",
+        "water_or_submerged"
+      ]
+    },
+    "role_hints": {
+      "shown_to_agents": false,
+      "purpose": "an independent, rule-based reading used only to measure how often the agents agree with simple rules and to queue disagreements for human review; hints never override an agent and never decide anything",
+      "rules": {
+        "GH-01": "road of class motorway / trunk (or their links): obstacle candidate",
+        "GH-02": "railroad trackage or the Metrorail line: obstacle candidate (and, for Metrorail, a transfer connection context)",
+        "GH-03": "existing Metromover guideway: facility to convert",
+        "GH-04": "parcel in the vacant or parking group with a lot at least as large as the smallest platform module footprint: candidate site candidate",
+        "GH-05": "parcel in the governmental group: public-owner context",
+        "GH-06": "heat cell in the network top quintile whose activity is mostly jobs (>= 70 %): destination context; mostly residents (>= 70 %): origin context",
+        "GH-07": "heat cell in the network top quintile touching a motorway / trunk road or rail, or dominated by an industrial, utility or transport land-use class: possible non-passenger or through activity - screen, never delete",
+        "GH-08": "land-use class of water: obstacle context"
+      }
+    },
+    "rail": {
+      "source": "Miami-Dade County Railroads layer (no attributes) + MetroRail Line layer + GTFS Metromover shapes",
+      "split_buffer_m": 20,
+      "split_rule": "the county Railroads layer draws the Metromover guideway and the Metrorail line as rail without any attribute; trackage within 20 m of the GTFS Metromover shapes is reported as the existing guideway (facility to convert), trackage within 20 m of the Metrorail line as Metrorail, and only the remainder as other railroad trackage",
+      "why": "read as it comes, about three quarters of the 'railroad' length in the study window would be the transit lines themselves"
+    }
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "transform": {
+    "source_crs": "EPSG:4326",
+    "target_crs": "EPSG:26917",
+    "always_xy": true,
+    "operation": "Inverse of NAD83 to WGS 84 (1) + UTM zone 17N (with axis order normalized for visualization)",
+    "reported_accuracy_m": 4.0,
+    "pipeline": "proj=pipeline step proj=unitconvert xy_in=deg xy_out=rad step proj=utm zone=17 ellps=GRS80",
+    "grid_used": false,
+    "network_enabled": false,
+    "accuracy_note": "PROJ-reported accuracy of the datum operation selected in THIS environment; not the precision of the source geometries or of the model"
+  },
+  "method_summary": "OSM roads, county rail, GTFS guideway shapes, Miami 21 zoning, county land use and parcels clipped to each half-mile disc with citable object ids; an activity-density heat proxy (2020 block residents + 2023 block jobs per acre, 500 ft cells) with zoning, land use and road context per cell; role hints kept apart for evaluation",
+  "contract": "coze/v2/DESIGN.md (reading agents G1, G2); rules doc 规则 4, 6",
+  "publish_policy": "content-addressed immutable package dir gis_objects/pkg-<id>",
+  "outputs": [
+    {
+      "file": "station_gis_objects.json",
+      "sha256": "5c3f9828816dc3f820166bc1a1de4e108bd4bfa9153735e90b837d4ae43dbcee"
+    },
+    {
+      "file": "heat_grid.json",
+      "sha256": "f834479da73e2f90fb49b04aef8a951b56f01eed22eb6eef1964f5b06310ce2e"
+    },
+    {
+      "file": "object_role_hints.json",
+      "sha256": "9e284c50c34f200619f591a9cb42afbd15480340c37635fd5e170d7ef341163b"
+    },
+    {
+      "file": "gis_objects_validation.json",
+      "sha256": "e0f27c2e51d871d1aad92a53cc1ad70c160675c79d48079941c8e4fa7c052451"
+    }
+  ],
+  "package_id": "pkg-2f956f9534ba",
+  "package_dir": "gis_objects/pkg-2f956f9534ba"
+}

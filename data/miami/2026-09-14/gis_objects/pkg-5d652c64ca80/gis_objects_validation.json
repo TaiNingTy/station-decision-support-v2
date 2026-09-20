@@ -1,0 +1,35 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "stations": 21,
+  "object_ids_unique": true,
+  "objects_total": 8982,
+  "every_station_has_roads_zoning_parcels_heat_blockgroups": true,
+  "zoning_clip_matches_spatial_join_package": {
+    "max_deviation_share_of_disc": 1e-06,
+    "pass": true
+  },
+  "parcels_carry_no_owner_or_address_fields": true,
+  "blocks_without_2020_count": 0,
+  "heat_grid": {
+    "cells": 453,
+    "cells_with_density": 369,
+    "hot_cells": 74,
+    "cell_size_ft": 500,
+    "residents_in_grid": 82824,
+    "jobs_in_grid": 181824,
+    "residents_upper_bound_blocks_touching_union": 85018
+  },
+  "heat_grid_residents_not_above_touching_blocks": true,
+  "every_cell_value_non_negative": true,
+  "dor_prefixes_not_in_config": {},
+  "county_rail_layer_split_mi": {
+    "on_metromover_guideway": 10.52,
+    "on_metrorail": 6.921,
+    "other_railroad": 8.31
+  },
+  "role_hints": 2619,
+  "role_hints_shown_to_agents": false,
+  "scope_statement": "PASS means the layers were clipped, joined and counted consistently and the privacy rule holds. The heat grid is a proxy built from public counts, not a measurement. Object roles are read by the agents and confirmed by people; the hints here are only an evaluation aid."
+}

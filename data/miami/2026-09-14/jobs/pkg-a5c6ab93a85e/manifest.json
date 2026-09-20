@@ -1,0 +1,205 @@
+{
+  "stage": "jobs",
+  "schema_version": "miami-jobs-manifest/1.0",
+  "built_on": "2026-09-15",
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "consumed_inputs": [
+    {
+      "name": "raw_source_manifest",
+      "path": "raw/miami/2026-09-15/source_manifest.json",
+      "sha256": "c9479cae1b5b885350d26d113b9677ac46f780008b7a7f77d1d3b0404f2d3237"
+    },
+    {
+      "name": "od_aux_JT00",
+      "path": "raw/miami/2026-09-15/lodes/fl_od_aux_JT00_2023.csv.gz",
+      "sha256": "4c1e9bd4081d6f923cea845512f30e0ba56ba01b8d5f7db24b93928f06363c55"
+    },
+    {
+      "name": "od_aux_JT01",
+      "path": "raw/miami/2026-09-15/lodes/fl_od_aux_JT01_2023.csv.gz",
+      "sha256": "3e46cfb6f127dc786772d94d26a6f56bef754eb28bec1b184cebe7cb197c9cbf"
+    },
+    {
+      "name": "od_main_JT00",
+      "path": "raw/miami/2026-09-15/lodes/fl_od_main_JT00_2023.csv.gz",
+      "sha256": "cad279a7fdd24629855d903759bd83aec4d08654c108a8edb2b291d0e59498ed"
+    },
+    {
+      "name": "od_main_JT01",
+      "path": "raw/miami/2026-09-15/lodes/fl_od_main_JT01_2023.csv.gz",
+      "sha256": "1bac401be519b38cd225fbf37705453c6ed68e9ea7440dfeda7a71e34daf8e3d"
+    },
+    {
+      "name": "rac_JT00",
+      "path": "raw/miami/2026-09-15/lodes/fl_rac_S000_JT00_2023.csv.gz",
+      "sha256": "9305d0c5941fb81834ec84f298e7b97dcf2b0c32bce82622574ea07428aabc83"
+    },
+    {
+      "name": "rac_JT01",
+      "path": "raw/miami/2026-09-15/lodes/fl_rac_S000_JT01_2023.csv.gz",
+      "sha256": "10da4153a1554c17c0a384996b1e2186c5d79c12d9c59725753ce4b4afa6cbea"
+    },
+    {
+      "name": "wac_JT00",
+      "path": "raw/miami/2026-09-15/lodes/fl_wac_S000_JT00_2023.csv.gz",
+      "sha256": "0ff003288940977f71e8cd04a077e819fc16e916171151f6b58042207cc6c0fe"
+    },
+    {
+      "name": "wac_JT01",
+      "path": "raw/miami/2026-09-15/lodes/fl_wac_S000_JT01_2023.csv.gz",
+      "sha256": "37886535fd1bdb6b9e6ad2aafabc6749dc7914dfb6b5fe2535033439ca840877"
+    }
+  ],
+  "consumed_packages": [
+    {
+      "stage": "demography",
+      "package_id": "pkg-2c67f7b67b8d",
+      "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
+    }
+  ],
+  "code": [
+    {
+      "path": "scripts/build_miami_jobs.py",
+      "sha256": "93466cab6ba6b158c862d0360aaf7916408b1df9173b1edebd2bda34212fde2c"
+    },
+    {
+      "path": "scripts/miami_v2_common.py",
+      "sha256": "fb600d403fb2bde3480c3d5bfc91b6f47535903b22ff9f517c09cd64dfa76b62"
+    },
+    {
+      "path": "scripts/miami_readiness.py",
+      "sha256": "cbc69d3fd88f961371a316bfd432aaee5bff2afd38373c7c97b524842ed15003"
+    }
+  ],
+  "config_sha256": "adefdff5478a7297dec1c7ba9ea1a3d63383bbb64ed17b8c53b27b8055a723a4",
+  "config": {
+    "lodes": {
+      "version": 8,
+      "state": "fl",
+      "year": 2023,
+      "segment": "S000",
+      "job_types": [
+        "JT00",
+        "JT01"
+      ],
+      "columns_kept": [
+        "C000",
+        "CA01",
+        "CA02",
+        "CA03",
+        "CE01",
+        "CE02",
+        "CE03",
+        "CNS01",
+        "CNS02",
+        "CNS03",
+        "CNS04",
+        "CNS05",
+        "CNS06",
+        "CNS07",
+        "CNS08",
+        "CNS09",
+        "CNS10",
+        "CNS11",
+        "CNS12",
+        "CNS13",
+        "CNS14",
+        "CNS15",
+        "CNS16",
+        "CNS17",
+        "CNS18",
+        "CNS19",
+        "CNS20"
+      ],
+      "sectors": {
+        "CNS01": "11 Agriculture, Forestry, Fishing and Hunting",
+        "CNS02": "21 Mining, Quarrying, and Oil and Gas Extraction",
+        "CNS03": "22 Utilities",
+        "CNS04": "23 Construction",
+        "CNS05": "31-33 Manufacturing",
+        "CNS06": "42 Wholesale Trade",
+        "CNS07": "44-45 Retail Trade",
+        "CNS08": "48-49 Transportation and Warehousing",
+        "CNS09": "51 Information",
+        "CNS10": "52 Finance and Insurance",
+        "CNS11": "53 Real Estate and Rental and Leasing",
+        "CNS12": "54 Professional, Scientific, and Technical Services",
+        "CNS13": "55 Management of Companies and Enterprises",
+        "CNS14": "56 Administrative and Support and Waste Management and Remediation Services",
+        "CNS15": "61 Educational Services",
+        "CNS16": "62 Health Care and Social Assistance",
+        "CNS17": "71 Arts, Entertainment, and Recreation",
+        "CNS18": "72 Accommodation and Food Services",
+        "CNS19": "81 Other Services (except Public Administration)",
+        "CNS20": "92 Public Administration"
+      },
+      "earnings": {
+        "CE01": "earnings $1,250/month or less",
+        "CE02": "earnings $1,251 to $3,333/month",
+        "CE03": "earnings greater than $3,333/month"
+      },
+      "ages": {
+        "CA01": "workers age 29 or younger",
+        "CA02": "workers age 30 to 54",
+        "CA03": "workers age 55 or older"
+      }
+    },
+    "geometry_source": "demography package block_land_geometry.json + analysis_targets_26917.json (EPSG:26917, metres)",
+    "scope_rule": "blocks of the demography scope (tract-complete); candidate blocks = land touches any station's half-mile disc",
+    "link_categories": {
+      "both_in": "residence and workplace both in candidate blocks",
+      "home_in_work_elsewhere_in_state": "residence in a candidate block, workplace elsewhere in Florida (main file)",
+      "work_in_home_elsewhere_in_state": "workplace in a candidate block, residence elsewhere in Florida (main file)",
+      "work_in_home_out_of_state": "workplace in a candidate block, residence outside Florida (aux file)"
+    },
+    "coverage_gap": "Florida residents working out of state are in other states' aux files and are not covered",
+    "ratios": {
+      "J09": "WAC C000 JT01 / RAC C000 JT01, same year and job type",
+      "J10": "WAC C000 JT01 / ACS D03 housing units (mixed period)"
+    }
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "method_summary": "LODES 8 (2023) WAC/RAC block counts apportioned to imperial station bands by land share on the demography package's water-erased geometry; block-level OD subset with candidate stations; network dedup on the union; no station-to-station matrix",
+  "contract": "V2_站点输入包字段契约.md §4, §6, §7",
+  "publish_policy": "content-addressed immutable package dir jobs/pkg-<id>; readers resolve jobs_current.json and verify the whole package",
+  "outputs": [
+    {
+      "file": "station_jobs_profile.json",
+      "sha256": "3d4994cee19f96f0cc3b2e853c3a43abda73758794d54c6e7e5a5f746fc85dc0"
+    },
+    {
+      "file": "jobs_evidence.json",
+      "sha256": "c2e3d29e980280658795eb8e4280162de133ebed78e45722ed1fd9144d03dfd0"
+    },
+    {
+      "file": "block_values.json",
+      "sha256": "0d3c37489769dd9f7b6541ab3e9eceb7416db8876b330422d660261e2239e082"
+    },
+    {
+      "file": "od_links_subset.csv.gz",
+      "sha256": "58345507257d37b046903306536ab30d04f1fcc18fe92ae606bd73c5a74c1b5c"
+    },
+    {
+      "file": "od_summary.json",
+      "sha256": "406ec6fe598d0f0a9320c7c9fb59aadfb4aa263532809ee636963d6de7ab3cab"
+    },
+    {
+      "file": "jobs_validation.json",
+      "sha256": "9cc4ff1bcda734e7515597d205dbbfd44fef3126babb48a89fa788f81a595d62"
+    }
+  ],
+  "package_id": "pkg-a5c6ab93a85e",
+  "package_dir": "jobs/pkg-a5c6ab93a85e"
+}

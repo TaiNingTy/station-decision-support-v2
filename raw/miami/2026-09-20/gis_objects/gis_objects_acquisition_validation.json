@@ -1,0 +1,275 @@
+{
+  "status": "PASS",
+  "failed_checks": [],
+  "checked_on": "2026-09-20",
+  "layers": {
+    "parcels": {
+      "ids": 5835,
+      "features": 5835,
+      "geometry_types": {
+        "Polygon": 5830,
+        "MultiPolygon": 5
+      },
+      "dor_codes": {
+        "0101 RESIDENTIAL - SINGLE FAMILY : 1 UNIT": 1107,
+        "1081 VACANT LAND - COMMERCIAL : VACANT LAND": 771,
+        "0803 MULTIFAMILY 2-9 UNITS : MULTIFAMILY 3 OR MORE UNITS": 484,
+        "0303 MULTIFAMILY 10 UNITS PLUS : MULTIFAMILY 3 OR MORE UNITS": 322,
+        "0000 REFERENCE FOLIO": 321,
+        "8080 VACANT GOVERNMENTAL : VACANT LAND - GOVERNMENTAL": 264,
+        "1066 VACANT LAND - COMMERCIAL : EXTRA FEA OTHER THAN PARKING": 256,
+        "0802 MULTIFAMILY 2-9 UNITS : 2 LIVING UNITS": 241,
+        "1111 STORE : RETAIL OUTLET": 225,
+        "0410 RESIDENTIAL - TOTAL VALUE : TOWNHOUSE": 156,
+        "2865 PARKING LOT/MOBILE HOME PARK : PARKING LOT": 150,
+        "1813 OFFICE BUILDING - MULTISTORY : OFFICE BUILDING": 122,
+        "4837 WAREHOUSE TERMINAL OR STG : WAREHOUSE OR STORAGE": 119,
+        "4081 VACANT LAND - INDUSTRIAL : VACANT LAND": 101,
+        "0081 VACANT RESIDENTIAL : VACANT LAND": 100,
+        "4132 LIGHT MANUFACTURING : LIGHT MFG & FOOD PROCESSING": 81,
+        "1117 STORE : COMMERCIAL - TOTAL VALUE": 58,
+        "1209 MIXED USE-STORE/RESIDENTIAL : MIXED USE - RESIDENTIAL": 57,
+        "2719 AUTOMOTIVE OR MARINE : AUTOMOTIVE OR MARINE": 53,
+        "9751 PVT PARK -REC AREA -ROADWAY : COMMON AREA": 49,
+        "2111 RESTAURANT OR CAFETERIA : RETAIL OUTLET": 47,
+        "8940 MUNICIPAL : MUNICIPAL": 40,
+        "3921 HOTEL OR MOTEL : HOTEL": 38,
+        "1229 MIXED USE-STORE/RESIDENTIAL : MIXED USE - COMMERCIAL": 37,
+        "8647 COUNTY : DADE COUNTY": 31,
+        "7144 RELIGIOUS - EXEMPT : RELIGIOUS": 31,
+        "8099 VACANT GOVERNMENTAL : STATE": 30,
+        "8066 VACANT GOVERNMENTAL : EXTRA FEA OTHER THAN PARKING": 29,
+        "4066 VACANT LAND - INDUSTRIAL : EXTRA FEA OTHER THAN PARKING": 27,
+        "0066 VACANT RESIDENTIAL : EXTRA FEA OTHER THAN PARKING": 27,
+        "8603 COUNTY : MULTIFAMILY 3 OR MORE UNITS": 25,
+        "8047 VACANT GOVERNMENTAL : DADE COUNTY": 24,
+        "1913 PROFESSIONAL SERVICE BLDG : OFFICE BUILDING": 24,
+        "9862 CENTRALLY ASSESSED : RAILROAD ASSESSMENT": 20,
+        "1713 OFFICE BUILDING - ONE STORY : OFFICE BUILDING": 20,
+        "8348 BOARD OF PUBLIC INSTRUCTION : BOARD OF PUBLIC INSTRUCTION": 20,
+        "9163 UTILITY : UTILITY": 17,
+        "None None": 16,
+        "8040 VACANT GOVERNMENTAL : MUNICIPAL": 15,
+        "7241 EDUCATIONAL/SCIENTIFIC - EX : EDUCATIONAL - PRIVATE": 13
+      },
+      "without_folio": 11,
+      "without_dor_code": 16
+    },
+    "land_use": {
+      "ids": 3410,
+      "features": 3410,
+      "geometry_types": {
+        "Polygon": 3252,
+        "MultiPolygon": 158
+      },
+      "descriptions": {
+        "Vacant, Non-Protected, Privately-Owned.": 370,
+        "Multi-Family, Low-Density (Under 25 DU/Gross Acre).": 348,
+        "Sales and Services (Wholesale facilities, Spot commercial, strip commercial, neighborhood shopping centers/plazas). Excludes office facilities.": 281,
+        "Single-Family, Med.-Density (2-5 DU/Gross Acre).": 263,
+        "Multi-Family, High Density (Over 25 DU/Gross Acre).": 201,
+        "Two-Family (Duplexes).": 183,
+        "Industrial Intensive, heavy-light manufacturing, and warehousing-storage type of use": 147,
+        "Highways and Expressways right-of-way and associated open and landscaped areas excluding paved expressways and ramps.": 143,
+        "Office Building.": 121,
+        "Streets and Roads, except Expressways and Private Drives.": 117,
+        "Single-Family, High Density (Over 5 DU/Gross Acre, other than Townhouses, Duplexes and Mobile Homes).": 112,
+        "Street right-of-way and entrance features both public and private, and utility easements. ": 104,
+        "Private Recreational Facilities Associated with private Residential Developments, except marinas/yacht basins, includes landscape and open spaces associated to residential, commercial and office developments. ": 102,
+        "Parking - Public and Private Garages and Lots.": 92,
+        "Railroads - Terminals, Trackage, and Yards.": 76,
+        "Vacant Government owned or controlled.": 71,
+        "Residential predominantly (condominium/ rental apartments with lower floors Office and/or Retail.  High density > 15 dwelling units per ac, multi-story buildings  (Generally more than 5 stories).": 63,
+        "Municipal Operated Parks": 60,
+        "Governmental/Public Administration (Other than Military or Penal).": 59,
+        "Houses of Worship and Religious, and associated uses (parking, retreat houses, residencies, childcare, etc.).": 51,
+        "TRANSIENT-RESIDENTIAL (HOTEL-MOTEL)": 45,
+        "Major Approved Projects.": 37,
+        "Marina complexes (docks, piers, moorings, ramps, boat lifts and hoists, boat maintenance and repair, boat storage, fueling operations) for recreational craft located within Parks and Preserves and other small craft harbor complexes used primarily for recr": 34,
+        "Paved Highways, Expressways and Ramps.": 25,
+        "Coastal Water (Bay only) within the Biscayne Bay Urban Aquatic Preserve (Excluding Ocean Waters).": 22,
+        "Private Schools, Including Playgrounds (K-12, Vocational Ed., Day Care and Child Nurseries).": 20,
+        "Rivers and Canals.(Water)": 20,
+        "Office and/or Business and other services (ground level) / Residential (upper levels). Low-density < 15 dwellings per acre or 4 floors. ": 17,
+        "Colleges and Universities, Including Research Centers, Public and Private.": 17,
+        "Electric Power (Generator and Substation, and Service Yards).": 16,
+        "Townhouses.": 15,
+        "Hospitals, clinics, medical offices and/or dental facilities": 15,
+        "Marine commercial (includes private commercial [non-recreational] marinas and repair yards on public or private land).": 13,
+        "Public Schools, Including Playgrounds (K-12, Vocational Ed., Day Care and Child Nurseries).": 13,
+        "Private Drives.": 13,
+        "Residential MF-- government-owned or government subsidized multi-family residential or elderly housing ": 12,
+        "Industrial Extensive": 12,
+        "Cultural (auditoriums, convention centers, exhibition centers, museums, art galleries, libraries).": 12,
+        "Residential SF--government-owned or government subsidized multi-family residential or elderly housing ": 9,
+        "Nursing homes, Assisted living facilities, and Adult congregate living quarters": 9
+      }
+    },
+    "railroads": {
+      "ids": 206,
+      "features": 206,
+      "geometry_types": {
+        "LineString": 206
+      }
+    },
+    "metrorail_line": {
+      "ids": 1,
+      "features": 1,
+      "geometry_types": {
+        "MultiLineString": 1
+      }
+    },
+    "trirail": {
+      "ids": 0,
+      "features": 0,
+      "geometry_types": {}
+    },
+    "census_2020_pl_blocks": {
+      "rows": 31622,
+      "header": [
+        "P1_001N",
+        "H1_001N",
+        "H1_002N",
+        "state",
+        "county",
+        "tract",
+        "block"
+      ],
+      "population_total": 2701767
+    }
+  },
+  "checks": {
+    "parcels_metadata_sha256_matches": {
+      "pass": true
+    },
+    "parcels_ids_sha256_matches": {
+      "pass": true
+    },
+    "parcels_geojson_sha256_matches": {
+      "pass": true
+    },
+    "parcels_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 5835,
+        "features": 5835
+      }
+    },
+    "parcels_all_features_have_geometry": {
+      "pass": true
+    },
+    "parcels_missing_attributes_below_1_percent": {
+      "pass": true,
+      "detail": {
+        "without_folio": 11,
+        "without_dor_code": 16
+      }
+    },
+    "parcels_carry_no_owner_or_address_fields": {
+      "pass": true
+    },
+    "land_use_metadata_sha256_matches": {
+      "pass": true
+    },
+    "land_use_ids_sha256_matches": {
+      "pass": true
+    },
+    "land_use_geojson_sha256_matches": {
+      "pass": true
+    },
+    "land_use_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 3410,
+        "features": 3410
+      }
+    },
+    "land_use_all_features_have_geometry": {
+      "pass": true
+    },
+    "railroads_metadata_sha256_matches": {
+      "pass": true
+    },
+    "railroads_ids_sha256_matches": {
+      "pass": true
+    },
+    "railroads_geojson_sha256_matches": {
+      "pass": true
+    },
+    "railroads_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 206,
+        "features": 206
+      }
+    },
+    "railroads_all_features_have_geometry": {
+      "pass": true
+    },
+    "metrorail_line_metadata_sha256_matches": {
+      "pass": true
+    },
+    "metrorail_line_ids_sha256_matches": {
+      "pass": true
+    },
+    "metrorail_line_geojson_sha256_matches": {
+      "pass": true
+    },
+    "metrorail_line_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 1,
+        "features": 1
+      }
+    },
+    "metrorail_line_all_features_have_geometry": {
+      "pass": true
+    },
+    "trirail_metadata_sha256_matches": {
+      "pass": true
+    },
+    "trirail_ids_sha256_matches": {
+      "pass": true
+    },
+    "trirail_geojson_sha256_matches": {
+      "pass": true
+    },
+    "trirail_feature_count_equals_id_count": {
+      "pass": true,
+      "detail": {
+        "ids": 0,
+        "features": 0
+      }
+    },
+    "trirail_all_features_have_geometry": {
+      "pass": true
+    },
+    "pl_downloaded": {
+      "pass": true,
+      "detail": "downloaded"
+    },
+    "pl_sha256_matches": {
+      "pass": true
+    },
+    "pl_header_as_expected": {
+      "pass": true,
+      "detail": [
+        "P1_001N",
+        "H1_001N",
+        "H1_002N",
+        "state",
+        "county",
+        "tract",
+        "block"
+      ]
+    },
+    "pl_at_least_30000_blocks": {
+      "pass": true,
+      "detail": 31622
+    },
+    "pl_no_key_in_manifest": {
+      "pass": true
+    }
+  },
+  "scope": "acquisition integrity and the privacy rule only; object roles are read by the agents and checked by code in the gis_objects stage"
+}

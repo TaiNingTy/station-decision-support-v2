@@ -1,0 +1,209 @@
+{
+  "schema_version": "miami-input-package-index/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "b0b0d0fb24ffd1cc4b6e314f0e8cdbc56e110bc31a088c3715571e91b12b20e8",
+  "component_versions": {
+    "station_master_sha256": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+    "packages": [
+      {
+        "stage": "spatial_join",
+        "package_id": "pkg-e4f5e3782ecb",
+        "package_dir": "spatial_join/pkg-e4f5e3782ecb",
+        "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
+      },
+      {
+        "stage": "demography",
+        "package_id": "pkg-2c67f7b67b8d",
+        "package_dir": "demography/pkg-2c67f7b67b8d",
+        "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
+      },
+      {
+        "stage": "jobs",
+        "package_id": "pkg-a5c6ab93a85e",
+        "package_dir": "jobs/pkg-a5c6ab93a85e",
+        "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
+      },
+      {
+        "stage": "service_baseline",
+        "package_id": "pkg-edab88a3322a",
+        "package_dir": "service_baseline/pkg-edab88a3322a",
+        "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77"
+      },
+      {
+        "stage": "ridership_reference",
+        "package_id": "pkg-418a92cfd604",
+        "package_dir": "ridership_reference/pkg-418a92cfd604",
+        "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89"
+      },
+      {
+        "stage": "poi",
+        "package_id": "pkg-6af566c7afe1",
+        "package_dir": "poi/pkg-6af566c7afe1",
+        "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6"
+      }
+    ],
+    "policy": "pinned at build time; scripts/miami_readiness.py marks this package STALE when any pinned layer republishes"
+  },
+  "stations": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "file": "stations/MIA-MM-01.json",
+      "lon": -80.193145,
+      "lat": 25.789376
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "file": "stations/MIA-MM-02.json",
+      "lon": -80.187998,
+      "lat": 25.789456
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "file": "stations/MIA-MM-03.json",
+      "lon": -80.187934,
+      "lat": 25.785918
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "file": "stations/MIA-MM-04.json",
+      "lon": -80.19079,
+      "lat": 25.784866
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "file": "stations/MIA-MM-05.json",
+      "lon": -80.190643,
+      "lat": 25.782476
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "file": "stations/MIA-MM-06.json",
+      "lon": -80.190567,
+      "lat": 25.780544
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "file": "stations/MIA-MM-07.json",
+      "lon": -80.192085,
+      "lat": 25.778926
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "file": "stations/MIA-MM-08.json",
+      "lon": -80.195341,
+      "lat": 25.778815
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "file": "stations/MIA-MM-09.json",
+      "lon": -80.196093,
+      "lat": 25.775864
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "file": "stations/MIA-MM-10.json",
+      "lon": -80.189915,
+      "lat": 25.777584
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "file": "stations/MIA-MM-11.json",
+      "lon": -80.189849,
+      "lat": 25.775726
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "file": "stations/MIA-MM-12.json",
+      "lon": -80.187323,
+      "lat": 25.773099
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "file": "stations/MIA-MM-13.json",
+      "lon": -80.191377,
+      "lat": 25.771865
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "file": "stations/MIA-MM-14.json",
+      "lon": -80.193582,
+      "lat": 25.773391
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "file": "stations/MIA-MM-15.json",
+      "lon": -80.193508,
+      "lat": 25.772024
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "file": "stations/MIA-MM-16.json",
+      "lon": -80.192558,
+      "lat": 25.771051
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "file": "stations/MIA-MM-17.json",
+      "lon": -80.192248,
+      "lat": 25.769165
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "file": "stations/MIA-MM-18.json",
+      "lon": -80.192121,
+      "lat": 25.766888
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "file": "stations/MIA-MM-19.json",
+      "lon": -80.19256,
+      "lat": 25.764016
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "file": "stations/MIA-MM-20.json",
+      "lon": -80.195261,
+      "lat": 25.762664
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "file": "stations/MIA-MM-21.json",
+      "lon": -80.192881,
+      "lat": 25.760381
+    }
+  ],
+  "network_file": "station_input_package.json#network",
+  "config_inputs": {
+    "ridership_baseline": "not_acquired",
+    "service_baseline": "derivable_from_gtfs",
+    "hub_transfer_inflow": "not_acquired",
+    "road_guideway_roles": "not_acquired",
+    "platform_constructible_space": "not_acquired",
+    "vehicle_parameters": "not_approved"
+  },
+  "optional_layers": {
+    "poi": true,
+    "walk_model": false
+  }
+}

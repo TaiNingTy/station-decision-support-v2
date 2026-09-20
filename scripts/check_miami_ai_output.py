@@ -21,7 +21,10 @@ KIT = load(ROOT / "ai/miami/kit_manifest.json"); KB = load(ROOT / "kb/v2/manifes
 rules_dir = DATA / load(DATA / "rules_current.json")["package_dir"]; RULES = load(rules_dir / "rule_results.json")
 RULE_IDS = {r["rule_result_id"] for b in RULES["stations"] for r in b["results"]} | {r["rule_result_id"] for r in RULES["network"]["results"]}
 KB_REFS = {f"{d['doc_id']} §{s}" for d in KB["documents"] for s in d["sections"]}
-FACT_RE, RULE_RE, KB_RE = re.compile(r"^MIA-MM-\d{2}\.F\d{3}$"), re.compile(r"^(MIA-MM-\d{2}|NET)\|(low|medium|high|-)\|RC-\d{2}$"), re.compile(r"^KB_V2_0[1-4] §(DS|CM|IG|OI)-\d{2}$")
+GIS_PTR = load(DATA / "gis_objects_current.json") if (DATA / "gis_objects_current.json").exists() else None
+GIS_DIR = (DATA / GIS_PTR["package_dir"]) if GIS_PTR else None
+DECISIVE_HINTS = {"obstacle": "obstacle", "facility_to_convert": "facility_to_convert", "candidate_site": "candidate_site"}
+FACT_RE, RULE_RE, KB_RE = re.compile(r"^MIA-MM-\d{2}\.F\d{3}$"), re.compile(r"^(MIA-MM-\d{2}|NET)\|(low|medium|high|-)\|RC-\d{2}$"), re.compile(r"^KB_V2_0[1-6] §(DS|CM|IG|OI|GR|LG)-\d{2}$")
 ROLES = {"origin_dominant", "destination_dominant", "mixed", "hub_connection_dependent", "insufficient_evidence"}
 SOFT = [(r"willingness to pay", "income read as willingness to pay (KB_V2_01 §DS-10)"), (r"\bforecast", "scenario called a forecast (KB_V2_02 §CM-08)"), (r"(?<!un)calibrat", "calibration claimed or proposed (KB_V2_01 §DS-07)"),
         (r"(persons|people|passengers)\s*(per|/)\s*hour", "a per-hour flow stated; verify it comes from the scenario facts, not from density (§DS-09)"),
@@ -100,6 +103,31 @@ def check(path):
         ids_ok((x.get("kb_refs", []) if isinstance(x, dict) else []), "kb", f"rule_explanations[{i}]")
     wf = o.get("workflow")   # optional block written by the output gate of the Coze V2 workflow
     if wf is not None: H(isinstance(wf, dict) and wf.get("input_gate") == "PASS" and wf.get("output_gate") == "VALID", "workflow block present but the gates did not both pass; such an output must not be saved as a run")
+    agreement = None; se = o.get("spatial_evidence")   # optional block written by gis-verify of the Coze V2 workflow; auxiliary evidence
+    if isinstance(se, dict) and se.get("status") == "verified_ids_only":
+        H(se.get("auxiliary_only") is True, "spatial_evidence.auxiliary_only must be true"); H(GIS_DIR is not None, "no gis_objects package to check the spatial evidence against")
+        if GIS_DIR is not None:
+            H(se.get("gis_objects_package") == GIS_PTR["package_id"], f"spatial evidence was read from gis_objects {se.get('gis_objects_package')}, current is {GIS_PTR['package_id']}")
+            blk = next((b for b in load(GIS_DIR / "station_gis_objects.json")["stations"] if b["station_id"] == pid), None); H(blk is not None, f"no gis objects for {pid}")
+            obj = {x["object_id"]: k for k, v in (blk or {"objects": {}})["objects"].items() if k != "parcel_groups_all_parcels" for x in v}; gfacts = {f["fact_id"] for f in (blk or {"summary_facts": []})["summary_facts"]}
+            g1, g2 = se.get("g1") or {}, se.get("g2") or {}; H(g2.get("auxiliary_only") is True, "spatial_evidence.g2.auxiliary_only must be true")
+            readings = g1.get("object_readings", []) if isinstance(g1.get("object_readings"), list) else []
+            for i, r in enumerate(readings): H(isinstance(r, dict) and r.get("object_id") in obj, f"spatial_evidence.g1.object_readings[{i}]: unknown object id {r.get('object_id') if isinstance(r, dict) else r}")
+            for name, lst in (("g1.patterns", g1.get("patterns", [])), ("g2.heat_reading", g2.get("heat_reading", [])), ("g2.heat_zoning_joint_reading", g2.get("heat_zoning_joint_reading", [])), ("g2.service_relevance_screening", g2.get("service_relevance_screening", [])), ("g2.residents_reading", g2.get("residents_reading", []))):
+                for i, x in enumerate(lst if isinstance(lst, list) else []):
+                    for oid in (x.get("object_ids") or []): H(oid in obj, f"spatial_evidence.{name}[{i}]: unknown object id {oid}")
+                    for fid in (x.get("fact_ids") or []): H(fid in gfacts, f"spatial_evidence.{name}[{i}]: unknown fact id {fid}")
+                    for pat, msg in SOFT:
+                        if re.search(pat, str(x.get("statement", "")), flags=re.I): soft.append(f"spatial_evidence.{name}[{i}]: {msg}")
+            hints = defaultdict(set)
+            for h in load(GIS_DIR / "object_role_hints.json")["hints"]:
+                if h["station_id"] == pid and h["role_hint"] in DECISIVE_HINTS: hints[h["object_id"]].add(DECISIVE_HINTS[h["role_hint"]])
+            read = {r["object_id"]: r.get("role") for r in readings if isinstance(r, dict)}; compared = [oid for oid in read if oid in hints]
+            disagree = [{"object_id": oid, "agent_role": read[oid], "rule_hint": sorted(hints[oid])} for oid in compared if read[oid] not in hints[oid]]
+            agreement = {"purpose": "a signal for the reviewer, not a target: simple rules and the agent may both be wrong", "objects_read_that_have_a_decisive_hint": len(compared), "agree": len(compared) - len(disagree),
+                         "agreement_rate": (round((len(compared) - len(disagree)) / len(compared), 3) if compared else None), "disagreements_for_human_review": disagree,
+                         "hinted_obstacle_or_facility_objects_left_unread": sorted(oid for oid, hs in hints.items() if oid not in read and hs & {"obstacle", "facility_to_convert"})[:20]}
+    elif isinstance(se, dict): soft.append(f"spatial evidence not used: status {se.get('status')}")
     rr = o["run_record"]; H(isinstance(rr, dict) and rr.get("execution_mode") in ("coze_ui_manual", "coze_api", "example_not_a_model_output"), "run_record.execution_mode invalid")
     rv = rr.get("review", {}) if isinstance(rr, dict) else {}; H(rv.get("status") in ("unreviewed", "reviewed_ok", "reviewed_with_edits", "rejected"), "run_record.review.status invalid")
     H(rr.get("run_id") is None or isinstance(rr.get("run_id"), str), "run_record.run_id must be null or a string")
@@ -109,7 +137,7 @@ def check(path):
     cited = set(sum([blk.get("rule_result_ids", []) for blk in cr.values()], []) + sum([st.get("rule_result_ids", []) for st in o["data_gaps_and_reliability"]], [])) if isinstance(cr, dict) else set()
     for c in crit: H(c in cited, f"critical rule result {c} is not acknowledged")
     return {"file": str(path), "station_id": pid, "verdict": "PASS" if not hard else "FAIL", "publishable": publishable, "execution_mode": rr.get("execution_mode"), "review_status": rv.get("status"),
-            "hard_failures": hard, "warnings": soft, "counts": {"site_statements": len(o["site_reading"]), "gaps": len(o["data_gaps_and_reliability"]), "questions": len(q) if isinstance(q, list) else 0},
+            "hard_failures": hard, "warnings": soft, "spatial_evidence_agreement": agreement, "counts": {"site_statements": len(o["site_reading"]), "gaps": len(o["data_gaps_and_reliability"]), "questions": len(q) if isinstance(q, list) else 0},
             "checked_against": {"kit_version": KIT["kit_version"], "kb_version": KB["kb_version"], "rule_pack_version": RULES["rule_pack_version"], "rules_package": load(DATA / "rules_current.json")["package_id"]}}
 
 

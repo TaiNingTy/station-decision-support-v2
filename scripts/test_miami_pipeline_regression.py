@@ -90,7 +90,7 @@ def save(p, o, indent=2): Path(p).write_text(json.dumps(o, ensure_ascii=False, i
 def sha_obj(o): return hashlib.sha256(json.dumps(o, sort_keys=True, ensure_ascii=False).encode()).hexdigest()
 
 CFG = ["platform_constructible_space", "vehicle_parameters", "service_baseline"]
-STAGE_ORDER = ["station_master", "spatial_join", "demography", "jobs", "service_baseline", "ridership_reference", "poi", "walk_model", "input_package", "scenarios", "config", "rules"]
+STAGE_ORDER = ["station_master", "spatial_join", "demography", "jobs", "service_baseline", "ridership_reference", "poi", "walk_model", "input_package", "scenarios", "config", "rules", "gis_objects"]
 FOUR = CFG + ["scenario_results"]
 TWO = ["platform_constructible_space", "vehicle_parameters"]   # missing before step 6; now assumed (see THREE)
 THREE = ["platform_constructible_space", "vehicle_parameters", "scenario_results"]   # assumption-backed config inputs since step 6
@@ -341,7 +341,7 @@ def main():
                                                    and r["layers"]["pois"]["status"] == "DONE" and r["layers"]["walk_network"]["status"] == "NOT_RUN",
                   "upstream_inventory_nested_and_verified": r["upstream_inventory"]["verified_against_build_manifest"] is True and "status" not in r["upstream_inventory"],
                   "station_master_DONE": st["station_master"] == "DONE", "spatial_join_DONE": st["spatial_join"] == "DONE",
-                  "built_stages_DONE": all(st[s] == "DONE" for s in ("demography", "jobs", "service_baseline", "input_package", "scenarios", "config", "rules")),
+                  "built_stages_DONE": all(st[s] == "DONE" for s in ("demography", "jobs", "service_baseline", "input_package", "scenarios", "config", "rules", "gis_objects")),
                   "unbuilt_layers_NOT_RUN": all(st[s] == "NOT_RUN" for s in ("walk_model",)), "poi_DONE": st["poi"] == "DONE",
                   "ai_flag_true": fl["ready_for_ai_interpretation"] is True,
                   "ai_required_not_done_empty": fl["ai_required_not_done"] == [],
@@ -607,6 +607,27 @@ def main():
         if ident is not None: checks["byte_identical_to_published_package"] = ident
         return checks, {"network": res["network"]["summary"], "stations_overall": v["summary"]["stations_overall"]}
     record("rules_stage", s_rules)
+
+    # ---------------- step 11 (2026-09-20): feature-level GIS objects + heat proxy for the reading agents ----------------
+    def s_gis_objects():
+        c = baseline; rd = c.readiness(); st = {k: v["status"] for k, v in rd["stages"].items()}
+        d = c.data / load(c.data / "gis_objects_current.json")["package_dir"]; v = load(d / "gis_objects_validation.json"); G = load(d / "station_gis_objects.json"); H = load(d / "object_role_hints.json"); m = load(d / "manifest.json")
+        b12 = next(b for b in G["stations"] if b["station_id"] == "MIA-MM-12"); o = b12["objects"]
+        parcel_keys = {k.lower() for b in G["stations"] for p in b["objects"]["parcels"] for k in p}
+        checks = {"gis_objects_DONE": st["gis_objects"] == "DONE", "validation_PASS": v["validation_status"] == "PASS", "every_station_present": len(G["stations"]) == 21,
+                  "object_ids_unique": v["object_ids_unique"] is True, "zoning_clip_matches_spatial_join": v["zoning_clip_matches_spatial_join_package"]["pass"] is True,
+                  "no_owner_or_address_fields": not any(w in k for k in parcel_keys for w in ("owner", "mailing", "addr", "legal")),
+                  "heat_is_labelled_proxy": G["heat_proxy"]["is_measured_ridership_heat"] is False and G["heat_proxy"]["is_persons_per_hour"] is False and "PROXY" in G["heat_proxy"]["label"],
+                  "every_block_has_a_2020_count": v["blocks_without_2020_count"] == 0,
+                  "county_rail_layer_split_three_ways": all(v["county_rail_layer_split_mi"][k] > 0 for k in ("on_metromover_guideway", "on_metrorail", "other_railroad")),
+                  "bayfront_park_guideway_is_facility_not_railroad": o["guideway"][0]["length_inside_disc_ft"] > 5000 and all(r["kind"] != "railroad" for r in o["rail"]),
+                  "hints_hidden_from_agents": H["shown_to_agents"] is False and v["role_hints_shown_to_agents"] is False,
+                  "heat_and_zoning_joint_fact_present": any("heat and zoning read together" in f["label"] for f in b12["summary_facts"]),
+                  "consumes_three_packages": sorted(p["stage"] for p in m["consumed_packages"]) == ["demography", "jobs", "spatial_join"], "layers_gis_objects_DONE": rd["layers"]["gis_objects"]["status"] == "DONE"}
+        ident = package_identical(c, "gis_objects")
+        if ident is not None: checks["byte_identical_to_published_package"] = ident
+        return checks, {"objects_total": v["objects_total"], "heat_grid": v["heat_grid"], "rail_split_mi": v["county_rail_layer_split_mi"]}
+    record("gis_objects_stage", s_gis_objects)
 
     # ---------------- step 7a (2026-09-17): observed ridership reference ----------------
     def s_ridership_reference():

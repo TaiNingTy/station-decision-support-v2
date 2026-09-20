@@ -1,0 +1,223 @@
+{
+  "config_id": "miami-gis-objects-v1",
+  "version": "gis-objects-v1.0",
+  "issued_on": "2026-09-20",
+  "principle": "Feature-level GIS tables for the reading agents. The agents read and interpret the features; code only clips, measures, joins and counts. The activity-density heat proxy and zoning are read together and are auxiliary evidence: neither decides demand, a station role or a configuration.",
+  "heat_proxy": {
+    "cell_size_ft": 500,
+    "metric": "activity density = (2020 Census residents + 2023 LODES jobs located in the cell) per acre of land in the cell",
+    "is_measured_ridership_heat": false,
+    "is_persons_per_hour": false,
+    "label": "PROXY built from public counts; not a measured activity or ridership heat map",
+    "residents_source": "2020 Census P.L. 94-171 block counts (P1_001N), carry disclosure-avoidance noise; a different source and year than the ACS 2020-2024 estimates of the demography layer and never mixed with them",
+    "jobs_source": "LEHD LODES 8 Florida 2023 WAC C000 JT00 by block (jobs package)",
+    "apportionment": "block value x (block land inside the cell / block land), water erased; the same land-share convention as the other layers",
+    "min_land_acres_for_density": 0.1,
+    "hot_definition": "network top quintile of activity density among cells with land",
+    "known_limitation": "block values are spread evenly over the block's land; a park, plaza or parking structure inside a block inherits the block's density, so a hot cell must be read together with its zoning and land use before it is interpreted"
+  },
+  "roads": {
+    "source": "OpenStreetMap highway ways (archived extract)",
+    "object_classes": [
+      "motorway",
+      "motorway_link",
+      "trunk",
+      "trunk_link",
+      "primary",
+      "primary_link",
+      "secondary",
+      "secondary_link",
+      "tertiary",
+      "tertiary_link",
+      "residential",
+      "unclassified",
+      "living_street",
+      "pedestrian",
+      "busway"
+    ],
+    "summary_only_classes": [
+      "footway",
+      "path",
+      "steps",
+      "cycleway",
+      "service",
+      "corridor",
+      "track",
+      "construction",
+      "proposed"
+    ],
+    "class_rank": {
+      "motorway": 1,
+      "motorway_link": 2,
+      "trunk": 3,
+      "trunk_link": 4,
+      "primary": 5,
+      "primary_link": 6,
+      "secondary": 7,
+      "secondary_link": 8,
+      "tertiary": 9,
+      "tertiary_link": 10,
+      "busway": 11,
+      "unclassified": 12,
+      "residential": 13,
+      "living_street": 14,
+      "pedestrian": 15
+    },
+    "grouping": "ways grouped by (name or ref, highway class) inside the half-mile disc; minor classes (rank >= 12) listed only when at least 330 ft lie inside the disc",
+    "minor_min_length_ft": 330,
+    "max_rows": 70
+  },
+  "zoning": {
+    "min_clipped_area_m2": 100
+  },
+  "parcels": {
+    "privacy": "no owner, mailing, site-address or legal-description field is requested or stored",
+    "table_rule": "a parcel is listed individually when it lies in the inner band (within 660 ft), or its land-use group is one of listed_groups, or its lot is at least 20,000 sq ft; all other parcels appear only in the per-group summary; rows are ordered by distance and capped at max_rows",
+    "large_lot_sqft": 20000,
+    "max_rows": 150,
+    "module_footprint_sqft": 3908,
+    "groups_by_dor_desc_prefix": {
+      "vacant": [
+        "VACANT LAND - COMMERCIAL",
+        "VACANT LAND - INDUSTRIAL",
+        "VACANT RESIDENTIAL",
+        "VACANT LAND - INSTITUTIONAL",
+        "VACANT GOVERNMENTAL"
+      ],
+      "parking": [
+        "PARKING LOT/MOBILE HOME PARK",
+        "PARKING LOT/COMMERCIAL CONDO"
+      ],
+      "governmental": [
+        "MUNICIPAL",
+        "COUNTY",
+        "STATE",
+        "FEDERAL",
+        "BOARD OF PUBLIC INSTRUCTION",
+        "MILITARY",
+        "COLLEGE",
+        "HOSPITAL",
+        "FOREST, PARK, RECREATIONAL AREA",
+        "HOSPITAL - GOVERNMENTAL"
+      ],
+      "institutional": [
+        "RELIGIOUS - EXEMPT",
+        "EDUCATIONAL/SCIENTIFIC - EX",
+        "PRIVATE SCHOOL",
+        "PRIVATELY OWNED HOSPITALS",
+        "HOME FOR THE AGED",
+        "CLUB OR HALL - PRIVATE",
+        "CULTURAL - LITERARY",
+        "MORTUARY, CEMETERY",
+        "LITERARY - EXEMPT",
+        "BENEVOLENT - EXEMPT",
+        "CHARITABLE - EXEMPT",
+        "UNIVERSITY OR COLLEGE"
+      ],
+      "utility_or_rail": [
+        "UTILITY",
+        "CENTRALLY ASSESSED",
+        "RIGHT-OF-WAY"
+      ],
+      "common_area": [
+        "PVT PARK -REC AREA -ROADWAY",
+        "LEASEHOLD INTEREST",
+        "COMMON AREAS",
+        "LEASEHOLD INTEREST: LEASEHOLD INTEREST"
+      ],
+      "reference_folio": [
+        "REFERENCE FOLIO"
+      ],
+      "residential": [
+        "RESIDENTIAL - SINGLE FAMILY",
+        "MULTIFAMILY 2-9 UNITS",
+        "MULTIFAMILY 10 UNITS PLUS",
+        "RESIDENTIAL - TOTAL VALUE",
+        "CONDOMINIUM",
+        "COOPERATIVE",
+        "MOBILE HOME",
+        "MISCELLANEOUS - RESIDENTIAL",
+        "RETIREMENT HOME"
+      ],
+      "mixed_use": [
+        "MIXED USE-STORE/RESIDENTIAL"
+      ],
+      "commercial": [
+        "STORE",
+        "OFFICE BUILDING - MULTISTORY",
+        "OFFICE BUILDING - ONE STORY",
+        "PROFESSIONAL SERVICE BLDG",
+        "RESTAURANT OR CAFETERIA",
+        "HOTEL OR MOTEL",
+        "AUTOMOTIVE OR MARINE",
+        "WHOLESALE OUTLET",
+        "FINANCIAL INSTITUTION",
+        "SERVICE STATION",
+        "SUPERMARKET",
+        "DEPARTMENT STORE",
+        "COMMUNITY SHOPPING CENTER",
+        "REGIONAL SHOPPING CENTER",
+        "NIGHTCLUB, LOUNGE, OR BAR",
+        "ENTERTAINMENT",
+        "TOURIST ATTRACTION",
+        "AIRPORT, MARINA",
+        "ENCLOSED THEATER/AUDITORIUM",
+        "TOURIST ATTRACTION/EXHIBIT",
+        "NIGHTCLUB LOUNGE OR BAR",
+        "DRIVE-IN RESTAURANT",
+        "AIRPORT/TERMINAL OR MARINA",
+        "REPAIR SHOP/NON AUTOMOTIVE",
+        "ENCLOSED RECEATIONAL ARENA"
+      ],
+      "industrial": [
+        "LIGHT MANUFACTURING",
+        "HEAVY INDUSTRIAL",
+        "WAREHOUSE TERMINAL OR STG",
+        "OPEN STORAGE",
+        "MINERAL PROCESSING",
+        "LUMBER YARD",
+        "PACKING PLANT",
+        "FOOD PROCESSING"
+      ],
+      "agricultural_classification": [
+        "VEG CROPLANDS MIXED/ROTATED",
+        "CONTAINER NURSERY ABOVE-GR",
+        "CROPLAND - SOIL CLASS III"
+      ],
+      "water_or_submerged": [
+        "RIVER LAKE OR SUBMERGED LAND"
+      ]
+    },
+    "grouping_note": "groups are defined on the description strings carried by the county layer itself (the text before ' : ' in DOR_DESC); a prefix that is not listed falls into 'other' and is reported; 'agricultural_classification' is a tax classification that appears on a few downtown parcels and is kept as the source gives it",
+    "listed_groups": [
+      "vacant",
+      "parking",
+      "governmental",
+      "institutional",
+      "utility_or_rail",
+      "common_area",
+      "agricultural_classification",
+      "water_or_submerged"
+    ]
+  },
+  "role_hints": {
+    "shown_to_agents": false,
+    "purpose": "an independent, rule-based reading used only to measure how often the agents agree with simple rules and to queue disagreements for human review; hints never override an agent and never decide anything",
+    "rules": {
+      "GH-01": "road of class motorway / trunk (or their links): obstacle candidate",
+      "GH-02": "railroad trackage or the Metrorail line: obstacle candidate (and, for Metrorail, a transfer connection context)",
+      "GH-03": "existing Metromover guideway: facility to convert",
+      "GH-04": "parcel in the vacant or parking group with a lot at least as large as the smallest platform module footprint: candidate site candidate",
+      "GH-05": "parcel in the governmental group: public-owner context",
+      "GH-06": "heat cell in the network top quintile whose activity is mostly jobs (>= 70 %): destination context; mostly residents (>= 70 %): origin context",
+      "GH-07": "heat cell in the network top quintile touching a motorway / trunk road or rail, or dominated by an industrial, utility or transport land-use class: possible non-passenger or through activity - screen, never delete",
+      "GH-08": "land-use class of water: obstacle context"
+    }
+  },
+  "rail": {
+    "source": "Miami-Dade County Railroads layer (no attributes) + MetroRail Line layer + GTFS Metromover shapes",
+    "split_buffer_m": 20,
+    "split_rule": "the county Railroads layer draws the Metromover guideway and the Metrorail line as rail without any attribute; trackage within 20 m of the GTFS Metromover shapes is reported as the existing guideway (facility to convert), trackage within 20 m of the Metrorail line as Metrorail, and only the remainder as other railroad trackage",
+    "why": "read as it comes, about three quarters of the 'railroad' length in the study window would be the transit lines themselves"
+  }
+}

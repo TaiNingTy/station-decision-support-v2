@@ -1,0 +1,2634 @@
+{
+  "schema_version": "miami-station-ridership-reference/1.0",
+  "built_on": "2026-09-15",
+  "config_sha256": "b68ec5b185dcbd83773c0f99814c951f28698a7f7dd2f1e40583f8659ccea94f",
+  "provenance_class": "observed",
+  "data_nature": "measured",
+  "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+  "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+  "is_trips": false,
+  "is_od": false,
+  "is_alightings": false,
+  "is_peak_hour": false,
+  "is_demand_for_new_service": false,
+  "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+  "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+  "config": {
+    "window": [
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01",
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07"
+    ],
+    "crosswalk": {
+      "School Board": {
+        "station_master_name": "School Board",
+        "basis": "same_name"
+      },
+      "Omni": {
+        "station_master_name": "Adrienne Arsht Center",
+        "basis": "renamed_station_same_location"
+      },
+      "Museum Park": {
+        "station_master_name": "Museum Park",
+        "basis": "same_name"
+      },
+      "Eleventh Street": {
+        "station_master_name": "Eleventh Street",
+        "basis": "same_name"
+      },
+      "Park West": {
+        "station_master_name": "Miami Worldcenter",
+        "basis": "renamed_station_same_location"
+      },
+      "Freedom Tower": {
+        "station_master_name": "Freedom Tower",
+        "basis": "same_name"
+      },
+      "College North": {
+        "station_master_name": "College North",
+        "basis": "same_name"
+      },
+      "Wilkie D. Ferguson": {
+        "station_master_name": "Wilkie D. Ferguson, Jr.",
+        "basis": "same_name_punctuation"
+      },
+      "Government Center": {
+        "station_master_name": "Government Center",
+        "basis": "same_name"
+      },
+      "College/Bayside": {
+        "station_master_name": "College Bayside",
+        "basis": "same_name_punctuation"
+      },
+      "First Street": {
+        "station_master_name": "First Street",
+        "basis": "same_name"
+      },
+      "Bayfront Park": {
+        "station_master_name": "Bayfront Park",
+        "basis": "same_name"
+      },
+      "Knight Center": {
+        "station_master_name": "Knight Center",
+        "basis": "same_name"
+      },
+      "Miami Avenue": {
+        "station_master_name": "Miami Avenue",
+        "basis": "same_name"
+      },
+      "Third Street": {
+        "station_master_name": "Third Street",
+        "basis": "same_name"
+      },
+      "Riverwalk": {
+        "station_master_name": "Riverwalk",
+        "basis": "same_name"
+      },
+      "Fifth Street": {
+        "station_master_name": "Fifth Street",
+        "basis": "same_name"
+      },
+      "Eighth Street": {
+        "station_master_name": "Brickell City Centre",
+        "basis": "renamed_station_same_location"
+      },
+      "Tenth Street": {
+        "station_master_name": "Tenth Street Promenade",
+        "basis": "same_name_extended"
+      },
+      "Brickell": {
+        "station_master_name": "Brickell",
+        "basis": "same_name"
+      },
+      "Financial District": {
+        "station_master_name": "Financial District",
+        "basis": "same_name"
+      }
+    },
+    "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+    "aggregation": "arithmetic mean of the monthly average-weekday values over the window; shares from the sum of station means"
+  },
+  "environment": {
+    "interpreter": "/opt/anaconda3/bin/python3",
+    "python": "3.13.9",
+    "shapely": "2.1.2",
+    "pyproj": "3.8.0",
+    "geos": "3.13.1",
+    "proj": "9.8.1",
+    "pyshp": "3.1.6",
+    "lock_file": "requirements-gis.lock.txt",
+    "lock_sha256": "5a025e8f9fa586f5d82536be9048a16a261a7294e7cfa219476b32bdeacaf604"
+  },
+  "system": {
+    "avg_weekday_boardings_10_month_mean": 25401.8,
+    "avg_weekday_boardings_by_month": {
+      "2025-10": 25156,
+      "2025-11": 25476,
+      "2025-12": 26086,
+      "2026-01": 25214,
+      "2026-02": 25514,
+      "2026-03": 24503,
+      "2026-04": 24909,
+      "2026-05": 22683,
+      "2026-06": 29881,
+      "2026-07": 24596
+    },
+    "sum_of_station_means": 25401.9,
+    "total_monthly_boardings_by_month": {
+      "2025-10": 707884,
+      "2025-11": 688539,
+      "2025-12": 759396,
+      "2026-01": 733060,
+      "2026-02": 651347,
+      "2026-03": 721935,
+      "2026-04": 687279,
+      "2026-05": 613954,
+      "2026-06": 892260,
+      "2026-07": 736422
+    },
+    "avg_saturday_boardings_10_month_mean": 19859.6,
+    "avg_sunday_boardings_10_month_mean": 18943.5,
+    "window": {
+      "from": "2025-10",
+      "to": "2026-07",
+      "months": 10
+    },
+    "provenance_class": "observed",
+    "data_nature": "measured",
+    "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+    "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+    "is_trips": false,
+    "is_od": false,
+    "is_alightings": false,
+    "is_peak_hour": false,
+    "is_demand_for_new_service": false,
+    "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+    "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)"
+  },
+  "stations": [
+    {
+      "station_id": "MIA-MM-01",
+      "name": "School Board",
+      "report_station_name": "School Board",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1064.1,
+      "avg_weekday_boardings_min_max": [
+        904,
+        1199
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 904
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.041891,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1112,
+          "avg_saturday": 749,
+          "avg_sunday": 785,
+          "total_monthly": 31715
+        },
+        "2025-11": {
+          "avg_weekday": 1152,
+          "avg_saturday": 850,
+          "avg_sunday": 833,
+          "total_monthly": 31467
+        },
+        "2025-12": {
+          "avg_weekday": 1199,
+          "avg_saturday": 894,
+          "avg_sunday": 880,
+          "total_monthly": 34675
+        },
+        "2026-01": {
+          "avg_weekday": 1130,
+          "avg_saturday": 729,
+          "avg_sunday": 917,
+          "total_monthly": 32166
+        },
+        "2026-02": {
+          "avg_weekday": 1078,
+          "avg_saturday": 703,
+          "avg_sunday": 807,
+          "total_monthly": 27598
+        },
+        "2026-03": {
+          "avg_weekday": 1094,
+          "avg_saturday": 815,
+          "avg_sunday": 814,
+          "total_monthly": 31395
+        },
+        "2026-04": {
+          "avg_weekday": 1020,
+          "avg_saturday": 737,
+          "avg_sunday": 751,
+          "total_monthly": 28379
+        },
+        "2026-05": {
+          "avg_weekday": 912,
+          "avg_saturday": 458,
+          "avg_sunday": 663,
+          "total_monthly": 24767
+        },
+        "2026-06": {
+          "avg_weekday": 1040,
+          "avg_saturday": 1034,
+          "avg_sunday": 769,
+          "total_monthly": 30081
+        },
+        "2026-07": {
+          "avg_weekday": 904,
+          "avg_saturday": 876,
+          "avg_sunday": 761,
+          "total_monthly": 27343
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "name": "Adrienne Arsht Center",
+      "report_station_name": "Omni",
+      "mapping_basis": "renamed_station_same_location",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1581.2,
+      "avg_weekday_boardings_min_max": [
+        1371,
+        1774
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1371
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.062247,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1438,
+          "avg_saturday": 1047,
+          "avg_sunday": 1017,
+          "total_monthly": 41331
+        },
+        "2025-11": {
+          "avg_weekday": 1514,
+          "avg_saturday": 1163,
+          "avg_sunday": 1104,
+          "total_monthly": 41613
+        },
+        "2025-12": {
+          "avg_weekday": 1703,
+          "avg_saturday": 1758,
+          "avg_sunday": 1553,
+          "total_monthly": 52412
+        },
+        "2026-01": {
+          "avg_weekday": 1537,
+          "avg_saturday": 1188,
+          "avg_sunday": 1535,
+          "total_monthly": 45900
+        },
+        "2026-02": {
+          "avg_weekday": 1749,
+          "avg_saturday": 1285,
+          "avg_sunday": 1303,
+          "total_monthly": 45327
+        },
+        "2026-03": {
+          "avg_weekday": 1774,
+          "avg_saturday": 1715,
+          "avg_sunday": 1469,
+          "total_monthly": 53231
+        },
+        "2026-04": {
+          "avg_weekday": 1653,
+          "avg_saturday": 1228,
+          "avg_sunday": 1213,
+          "total_monthly": 46119
+        },
+        "2026-05": {
+          "avg_weekday": 1432,
+          "avg_saturday": 720,
+          "avg_sunday": 917,
+          "total_monthly": 38259
+        },
+        "2026-06": {
+          "avg_weekday": 1641,
+          "avg_saturday": 1575,
+          "avg_sunday": 1294,
+          "total_monthly": 47577
+        },
+        "2026-07": {
+          "avg_weekday": 1371,
+          "avg_saturday": 1296,
+          "avg_sunday": 1147,
+          "total_monthly": 41305
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "name": "Museum Park",
+      "report_station_name": "Museum Park",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 297.2,
+      "avg_weekday_boardings_min_max": [
+        244,
+        353
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 323
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.0117,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 353,
+          "avg_saturday": 421,
+          "avg_sunday": 360,
+          "total_monthly": 11244
+        },
+        "2025-11": {
+          "avg_weekday": 265,
+          "avg_saturday": 318,
+          "avg_sunday": 307,
+          "total_monthly": 8430
+        },
+        "2025-12": {
+          "avg_weekday": 329,
+          "avg_saturday": 410,
+          "avg_sunday": 353,
+          "total_monthly": 10609
+        },
+        "2026-01": {
+          "avg_weekday": 294,
+          "avg_saturday": 460,
+          "avg_sunday": 363,
+          "total_monthly": 10223
+        },
+        "2026-02": {
+          "avg_weekday": 257,
+          "avg_saturday": 299,
+          "avg_sunday": 320,
+          "total_monthly": 7618
+        },
+        "2026-03": {
+          "avg_weekday": 304,
+          "avg_saturday": 330,
+          "avg_sunday": 310,
+          "total_monthly": 9562
+        },
+        "2026-04": {
+          "avg_weekday": 300,
+          "avg_saturday": 359,
+          "avg_sunday": 284,
+          "total_monthly": 9158
+        },
+        "2026-05": {
+          "avg_weekday": 244,
+          "avg_saturday": 199,
+          "avg_sunday": 316,
+          "total_monthly": 7693
+        },
+        "2026-06": {
+          "avg_weekday": 303,
+          "avg_saturday": 381,
+          "avg_sunday": 346,
+          "total_monthly": 9577
+        },
+        "2026-07": {
+          "avg_weekday": 323,
+          "avg_saturday": 431,
+          "avg_sunday": 331,
+          "total_monthly": 10480
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "name": "Eleventh Street",
+      "report_station_name": "Eleventh Street",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 372.3,
+      "avg_weekday_boardings_min_max": [
+        291,
+        426
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 291
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.014656,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 366,
+          "avg_saturday": 249,
+          "avg_sunday": 257,
+          "total_monthly": 10442
+        },
+        "2025-11": {
+          "avg_weekday": 371,
+          "avg_saturday": 257,
+          "avg_sunday": 279,
+          "total_monthly": 10099
+        },
+        "2025-12": {
+          "avg_weekday": 400,
+          "avg_saturday": 338,
+          "avg_sunday": 296,
+          "total_monthly": 11730
+        },
+        "2026-01": {
+          "avg_weekday": 390,
+          "avg_saturday": 287,
+          "avg_sunday": 333,
+          "total_monthly": 11345
+        },
+        "2026-02": {
+          "avg_weekday": 426,
+          "avg_saturday": 294,
+          "avg_sunday": 292,
+          "total_monthly": 10859
+        },
+        "2026-03": {
+          "avg_weekday": 399,
+          "avg_saturday": 389,
+          "avg_sunday": 289,
+          "total_monthly": 11783
+        },
+        "2026-04": {
+          "avg_weekday": 408,
+          "avg_saturday": 265,
+          "avg_sunday": 256,
+          "total_monthly": 11062
+        },
+        "2026-05": {
+          "avg_weekday": 337,
+          "avg_saturday": 158,
+          "avg_sunday": 238,
+          "total_monthly": 9046
+        },
+        "2026-06": {
+          "avg_weekday": 335,
+          "avg_saturday": 313,
+          "avg_sunday": 246,
+          "total_monthly": 9610
+        },
+        "2026-07": {
+          "avg_weekday": 291,
+          "avg_saturday": 265,
+          "avg_sunday": 229,
+          "total_monthly": 8682
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "name": "Miami Worldcenter",
+      "report_station_name": "Park West",
+      "mapping_basis": "renamed_station_same_location",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 492.9,
+      "avg_weekday_boardings_min_max": [
+        418,
+        561
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 495
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.019404,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 429,
+          "avg_saturday": 381,
+          "avg_sunday": 398,
+          "total_monthly": 12979
+        },
+        "2025-11": {
+          "avg_weekday": 498,
+          "avg_saturday": 428,
+          "avg_sunday": 381,
+          "total_monthly": 14002
+        },
+        "2025-12": {
+          "avg_weekday": 513,
+          "avg_saturday": 550,
+          "avg_sunday": 498,
+          "total_monthly": 15999
+        },
+        "2026-01": {
+          "avg_weekday": 515,
+          "avg_saturday": 572,
+          "avg_sunday": 511,
+          "total_monthly": 16229
+        },
+        "2026-02": {
+          "avg_weekday": 519,
+          "avg_saturday": 462,
+          "avg_sunday": 471,
+          "total_monthly": 14110
+        },
+        "2026-03": {
+          "avg_weekday": 561,
+          "avg_saturday": 603,
+          "avg_sunday": 458,
+          "total_monthly": 17045
+        },
+        "2026-04": {
+          "avg_weekday": 484,
+          "avg_saturday": 485,
+          "avg_sunday": 487,
+          "total_monthly": 14536
+        },
+        "2026-05": {
+          "avg_weekday": 418,
+          "avg_saturday": 271,
+          "avg_sunday": 368,
+          "total_monthly": 11978
+        },
+        "2026-06": {
+          "avg_weekday": 497,
+          "avg_saturday": 532,
+          "avg_sunday": 460,
+          "total_monthly": 14894
+        },
+        "2026-07": {
+          "avg_weekday": 495,
+          "avg_saturday": 497,
+          "avg_sunday": 394,
+          "total_monthly": 14956
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "name": "Freedom Tower",
+      "report_station_name": "Freedom Tower",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 767.2,
+      "avg_weekday_boardings_min_max": [
+        604,
+        968
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 712
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.030202,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 727,
+          "avg_saturday": 638,
+          "avg_sunday": 715,
+          "total_monthly": 22144
+        },
+        "2025-11": {
+          "avg_weekday": 784,
+          "avg_saturday": 620,
+          "avg_sunday": 627,
+          "total_monthly": 21923
+        },
+        "2025-12": {
+          "avg_weekday": 808,
+          "avg_saturday": 868,
+          "avg_sunday": 742,
+          "total_monthly": 25015
+        },
+        "2026-01": {
+          "avg_weekday": 808,
+          "avg_saturday": 851,
+          "avg_sunday": 935,
+          "total_monthly": 25778
+        },
+        "2026-02": {
+          "avg_weekday": 780,
+          "avg_saturday": 748,
+          "avg_sunday": 890,
+          "total_monthly": 22148
+        },
+        "2026-03": {
+          "avg_weekday": 968,
+          "avg_saturday": 992,
+          "avg_sunday": 851,
+          "total_monthly": 29517
+        },
+        "2026-04": {
+          "avg_weekday": 733,
+          "avg_saturday": 752,
+          "avg_sunday": 734,
+          "total_monthly": 22073
+        },
+        "2026-05": {
+          "avg_weekday": 604,
+          "avg_saturday": 377,
+          "avg_sunday": 554,
+          "total_monthly": 17341
+        },
+        "2026-06": {
+          "avg_weekday": 748,
+          "avg_saturday": 879,
+          "avg_sunday": 900,
+          "total_monthly": 23561
+        },
+        "2026-07": {
+          "avg_weekday": 712,
+          "avg_saturday": 762,
+          "avg_sunday": 741,
+          "total_monthly": 22397
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "name": "College North",
+      "report_station_name": "College North",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1063.2,
+      "avg_weekday_boardings_min_max": [
+        968,
+        1124
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1015
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.041855,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 997,
+          "avg_saturday": 514,
+          "avg_sunday": 532,
+          "total_monthly": 27115
+        },
+        "2025-11": {
+          "avg_weekday": 1124,
+          "avg_saturday": 796,
+          "avg_sunday": 719,
+          "total_monthly": 30053
+        },
+        "2025-12": {
+          "avg_weekday": 1031,
+          "avg_saturday": 634,
+          "avg_sunday": 652,
+          "total_monthly": 28855
+        },
+        "2026-01": {
+          "avg_weekday": 1119,
+          "avg_saturday": 577,
+          "avg_sunday": 792,
+          "total_monthly": 30673
+        },
+        "2026-02": {
+          "avg_weekday": 1119,
+          "avg_saturday": 606,
+          "avg_sunday": 744,
+          "total_monthly": 27772
+        },
+        "2026-03": {
+          "avg_weekday": 1077,
+          "avg_saturday": 723,
+          "avg_sunday": 709,
+          "total_monthly": 30135
+        },
+        "2026-04": {
+          "avg_weekday": 1088,
+          "avg_saturday": 463,
+          "avg_sunday": 758,
+          "total_monthly": 28820
+        },
+        "2026-05": {
+          "avg_weekday": 968,
+          "avg_saturday": 494,
+          "avg_sunday": 661,
+          "total_monthly": 26106
+        },
+        "2026-06": {
+          "avg_weekday": 1094,
+          "avg_saturday": 953,
+          "avg_sunday": 822,
+          "total_monthly": 31157
+        },
+        "2026-07": {
+          "avg_weekday": 1015,
+          "avg_saturday": 766,
+          "avg_sunday": 836,
+          "total_monthly": 29745
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "name": "Wilkie D. Ferguson, Jr.",
+      "report_station_name": "Wilkie D. Ferguson",
+      "mapping_basis": "same_name_punctuation",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1576.9,
+      "avg_weekday_boardings_min_max": [
+        1432,
+        1897
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1547
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.062078,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1571,
+          "avg_saturday": 826,
+          "avg_sunday": 777,
+          "total_monthly": 42553
+        },
+        "2025-11": {
+          "avg_weekday": 1616,
+          "avg_saturday": 1022,
+          "avg_sunday": 944,
+          "total_monthly": 42143
+        },
+        "2025-12": {
+          "avg_weekday": 1573,
+          "avg_saturday": 1073,
+          "avg_sunday": 979,
+          "total_monthly": 44378
+        },
+        "2026-01": {
+          "avg_weekday": 1557,
+          "avg_saturday": 934,
+          "avg_sunday": 1066,
+          "total_monthly": 43192
+        },
+        "2026-02": {
+          "avg_weekday": 1596,
+          "avg_saturday": 903,
+          "avg_sunday": 982,
+          "total_monthly": 39456
+        },
+        "2026-03": {
+          "avg_weekday": 1432,
+          "avg_saturday": 952,
+          "avg_sunday": 934,
+          "total_monthly": 39974
+        },
+        "2026-04": {
+          "avg_weekday": 1516,
+          "avg_saturday": 867,
+          "avg_sunday": 916,
+          "total_monthly": 40485
+        },
+        "2026-05": {
+          "avg_weekday": 1464,
+          "avg_saturday": 739,
+          "avg_sunday": 873,
+          "total_monthly": 38802
+        },
+        "2026-06": {
+          "avg_weekday": 1897,
+          "avg_saturday": 1909,
+          "avg_sunday": 1311,
+          "total_monthly": 54614
+        },
+        "2026-07": {
+          "avg_weekday": 1547,
+          "avg_saturday": 1218,
+          "avg_sunday": 1111,
+          "total_monthly": 44905
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "name": "Government Center",
+      "report_station_name": "Government Center",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 5161.9,
+      "avg_weekday_boardings_min_max": [
+        4483,
+        6331
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 4728
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.203209,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 5487,
+          "avg_saturday": 2853,
+          "avg_sunday": 2711,
+          "total_monthly": 148465
+        },
+        "2025-11": {
+          "avg_weekday": 5296,
+          "avg_saturday": 3197,
+          "avg_sunday": 2971,
+          "total_monthly": 136767
+        },
+        "2025-12": {
+          "avg_weekday": 5201,
+          "avg_saturday": 3520,
+          "avg_sunday": 2963,
+          "total_monthly": 145561
+        },
+        "2026-01": {
+          "avg_weekday": 5176,
+          "avg_saturday": 2989,
+          "avg_sunday": 4022,
+          "total_monthly": 144898
+        },
+        "2026-02": {
+          "avg_weekday": 5367,
+          "avg_saturday": 2801,
+          "avg_sunday": 3034,
+          "total_monthly": 130686
+        },
+        "2026-03": {
+          "avg_weekday": 4483,
+          "avg_saturday": 4016,
+          "avg_sunday": 3366,
+          "total_monthly": 131508
+        },
+        "2026-04": {
+          "avg_weekday": 4942,
+          "avg_saturday": 2788,
+          "avg_sunday": 2682,
+          "total_monthly": 130610
+        },
+        "2026-05": {
+          "avg_weekday": 4608,
+          "avg_saturday": 1866,
+          "avg_sunday": 2362,
+          "total_monthly": 117905
+        },
+        "2026-06": {
+          "avg_weekday": 6331,
+          "avg_saturday": 7798,
+          "avg_sunday": 4612,
+          "total_monthly": 188912
+        },
+        "2026-07": {
+          "avg_weekday": 4728,
+          "avg_saturday": 3842,
+          "avg_sunday": 3223,
+          "total_monthly": 136994
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "name": "College Bayside",
+      "report_station_name": "College/Bayside",
+      "mapping_basis": "same_name_punctuation",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1517.3,
+      "avg_weekday_boardings_min_max": [
+        1324,
+        1692
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1490
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.059732,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1609,
+          "avg_saturday": 1250,
+          "avg_sunday": 1140,
+          "total_monthly": 46563
+        },
+        "2025-11": {
+          "avg_weekday": 1607,
+          "avg_saturday": 1438,
+          "avg_sunday": 1295,
+          "total_monthly": 45793
+        },
+        "2025-12": {
+          "avg_weekday": 1568,
+          "avg_saturday": 1343,
+          "avg_sunday": 1284,
+          "total_monthly": 46565
+        },
+        "2026-01": {
+          "avg_weekday": 1521,
+          "avg_saturday": 1159,
+          "avg_sunday": 1318,
+          "total_monthly": 44533
+        },
+        "2026-02": {
+          "avg_weekday": 1528,
+          "avg_saturday": 1162,
+          "avg_sunday": 1198,
+          "total_monthly": 40000
+        },
+        "2026-03": {
+          "avg_weekday": 1324,
+          "avg_saturday": 1366,
+          "avg_sunday": 1265,
+          "total_monthly": 40920
+        },
+        "2026-04": {
+          "avg_weekday": 1499,
+          "avg_saturday": 1188,
+          "avg_sunday": 1264,
+          "total_monthly": 42788
+        },
+        "2026-05": {
+          "avg_weekday": 1335,
+          "avg_saturday": 884,
+          "avg_sunday": 1082,
+          "total_monthly": 37874
+        },
+        "2026-06": {
+          "avg_weekday": 1692,
+          "avg_saturday": 2169,
+          "avg_sunday": 1589,
+          "total_monthly": 52261
+        },
+        "2026-07": {
+          "avg_weekday": 1490,
+          "avg_saturday": 1627,
+          "avg_sunday": 1548,
+          "total_monthly": 46961
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "name": "First Street",
+      "report_station_name": "First Street",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1252.9,
+      "avg_weekday_boardings_min_max": [
+        1148,
+        1465
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1260
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.049323,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1248,
+          "avg_saturday": 963,
+          "avg_sunday": 903,
+          "total_monthly": 36157
+        },
+        "2025-11": {
+          "avg_weekday": 1223,
+          "avg_saturday": 966,
+          "avg_sunday": 1034,
+          "total_monthly": 34450
+        },
+        "2025-12": {
+          "avg_weekday": 1321,
+          "avg_saturday": 1054,
+          "avg_sunday": 1021,
+          "total_monthly": 38685
+        },
+        "2026-01": {
+          "avg_weekday": 1236,
+          "avg_saturday": 838,
+          "avg_sunday": 1329,
+          "total_monthly": 36694
+        },
+        "2026-02": {
+          "avg_weekday": 1247,
+          "avg_saturday": 852,
+          "avg_sunday": 965,
+          "total_monthly": 32213
+        },
+        "2026-03": {
+          "avg_weekday": 1167,
+          "avg_saturday": 1296,
+          "avg_sunday": 1297,
+          "total_monthly": 37333
+        },
+        "2026-04": {
+          "avg_weekday": 1214,
+          "avg_saturday": 959,
+          "avg_sunday": 976,
+          "total_monthly": 34440
+        },
+        "2026-05": {
+          "avg_weekday": 1148,
+          "avg_saturday": 740,
+          "avg_sunday": 902,
+          "total_monthly": 32310
+        },
+        "2026-06": {
+          "avg_weekday": 1465,
+          "avg_saturday": 1892,
+          "avg_sunday": 1455,
+          "total_monthly": 45615
+        },
+        "2026-07": {
+          "avg_weekday": 1260,
+          "avg_saturday": 1204,
+          "avg_sunday": 1206,
+          "total_monthly": 38627
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "name": "Bayfront Park",
+      "report_station_name": "Bayfront Park",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 2386.6,
+      "avg_weekday_boardings_min_max": [
+        1953,
+        3944
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 2153
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.093954,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 2243,
+          "avg_saturday": 1524,
+          "avg_sunday": 1409,
+          "total_monthly": 63314
+        },
+        "2025-11": {
+          "avg_weekday": 2276,
+          "avg_saturday": 1696,
+          "avg_sunday": 1535,
+          "total_monthly": 61674
+        },
+        "2025-12": {
+          "avg_weekday": 2450,
+          "avg_saturday": 1918,
+          "avg_sunday": 1876,
+          "total_monthly": 71528
+        },
+        "2026-01": {
+          "avg_weekday": 2197,
+          "avg_saturday": 1597,
+          "avg_sunday": 2732,
+          "total_monthly": 67250
+        },
+        "2026-02": {
+          "avg_weekday": 2205,
+          "avg_saturday": 1568,
+          "avg_sunday": 1709,
+          "total_monthly": 57197
+        },
+        "2026-03": {
+          "avg_weekday": 2154,
+          "avg_saturday": 2463,
+          "avg_sunday": 1994,
+          "total_monthly": 67217
+        },
+        "2026-04": {
+          "avg_weekday": 2291,
+          "avg_saturday": 1582,
+          "avg_sunday": 1542,
+          "total_monthly": 62896
+        },
+        "2026-05": {
+          "avg_weekday": 1953,
+          "avg_saturday": 1193,
+          "avg_sunday": 1363,
+          "total_monthly": 53790
+        },
+        "2026-06": {
+          "avg_weekday": 3944,
+          "avg_saturday": 5897,
+          "avg_sunday": 4062,
+          "total_monthly": 126604
+        },
+        "2026-07": {
+          "avg_weekday": 2153,
+          "avg_saturday": 2713,
+          "avg_sunday": 2497,
+          "total_monthly": 70359
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "name": "Knight Center",
+      "report_station_name": "Knight Center",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 552.2,
+      "avg_weekday_boardings_min_max": [
+        456,
+        649
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 570
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.021739,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 554,
+          "avg_saturday": 260,
+          "avg_sunday": 258,
+          "total_monthly": 14802
+        },
+        "2025-11": {
+          "avg_weekday": 518,
+          "avg_saturday": 265,
+          "avg_sunday": 224,
+          "total_monthly": 12810
+        },
+        "2025-12": {
+          "avg_weekday": 572,
+          "avg_saturday": 278,
+          "avg_sunday": 257,
+          "total_monthly": 15303
+        },
+        "2026-01": {
+          "avg_weekday": 521,
+          "avg_saturday": 254,
+          "avg_sunday": 265,
+          "total_monthly": 13781
+        },
+        "2026-02": {
+          "avg_weekday": 571,
+          "avg_saturday": 275,
+          "avg_sunday": 261,
+          "total_monthly": 13564
+        },
+        "2026-03": {
+          "avg_weekday": 456,
+          "avg_saturday": 258,
+          "avg_sunday": 247,
+          "total_monthly": 12287
+        },
+        "2026-04": {
+          "avg_weekday": 561,
+          "avg_saturday": 244,
+          "avg_sunday": 279,
+          "total_monthly": 14432
+        },
+        "2026-05": {
+          "avg_weekday": 550,
+          "avg_saturday": 184,
+          "avg_sunday": 269,
+          "total_monthly": 13822
+        },
+        "2026-06": {
+          "avg_weekday": 649,
+          "avg_saturday": 498,
+          "avg_sunday": 362,
+          "total_monthly": 17715
+        },
+        "2026-07": {
+          "avg_weekday": 570,
+          "avg_saturday": 352,
+          "avg_sunday": 277,
+          "total_monthly": 15632
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "name": "Miami Avenue",
+      "report_station_name": "Miami Avenue",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 307.7,
+      "avg_weekday_boardings_min_max": [
+        121,
+        362
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 241
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.012113,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 345,
+          "avg_saturday": 243,
+          "avg_sunday": 215,
+          "total_monthly": 9769
+        },
+        "2025-11": {
+          "avg_weekday": 354,
+          "avg_saturday": 230,
+          "avg_sunday": 232,
+          "total_monthly": 9395
+        },
+        "2025-12": {
+          "avg_weekday": 351,
+          "avg_saturday": 284,
+          "avg_sunday": 282,
+          "total_monthly": 10329
+        },
+        "2026-01": {
+          "avg_weekday": 316,
+          "avg_saturday": 295,
+          "avg_sunday": 558,
+          "total_monthly": 10660
+        },
+        "2026-02": {
+          "avg_weekday": 335,
+          "avg_saturday": 213,
+          "avg_sunday": 250,
+          "total_monthly": 8553
+        },
+        "2026-03": {
+          "avg_weekday": 121,
+          "avg_saturday": 154,
+          "avg_sunday": 107,
+          "total_monthly": 3820
+        },
+        "2026-04": {
+          "avg_weekday": 329,
+          "avg_saturday": 269,
+          "avg_sunday": 205,
+          "total_monthly": 9125
+        },
+        "2026-05": {
+          "avg_weekday": 323,
+          "avg_saturday": 252,
+          "avg_sunday": 209,
+          "total_monthly": 9085
+        },
+        "2026-06": {
+          "avg_weekday": 362,
+          "avg_saturday": 413,
+          "avg_sunday": 240,
+          "total_monthly": 10573
+        },
+        "2026-07": {
+          "avg_weekday": 241,
+          "avg_saturday": 223,
+          "avg_sunday": 194,
+          "total_monthly": 7218
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "name": "Third Street",
+      "report_station_name": "Third Street",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 478.4,
+      "avg_weekday_boardings_min_max": [
+        435,
+        512
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 484
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.018833,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 461,
+          "avg_saturday": 348,
+          "avg_sunday": 359,
+          "total_monthly": 13426
+        },
+        "2025-11": {
+          "avg_weekday": 512,
+          "avg_saturday": 357,
+          "avg_sunday": 322,
+          "total_monthly": 13632
+        },
+        "2025-12": {
+          "avg_weekday": 486,
+          "avg_saturday": 362,
+          "avg_sunday": 351,
+          "total_monthly": 14022
+        },
+        "2026-01": {
+          "avg_weekday": 506,
+          "avg_saturday": 364,
+          "avg_sunday": 341,
+          "total_monthly": 14323
+        },
+        "2026-02": {
+          "avg_weekday": 497,
+          "avg_saturday": 345,
+          "avg_sunday": 375,
+          "total_monthly": 12812
+        },
+        "2026-03": {
+          "avg_weekday": 470,
+          "avg_saturday": 409,
+          "avg_sunday": 368,
+          "total_monthly": 13814
+        },
+        "2026-04": {
+          "avg_weekday": 448,
+          "avg_saturday": 301,
+          "avg_sunday": 307,
+          "total_monthly": 12285
+        },
+        "2026-05": {
+          "avg_weekday": 435,
+          "avg_saturday": 239,
+          "avg_sunday": 240,
+          "total_monthly": 11536
+        },
+        "2026-06": {
+          "avg_weekday": 485,
+          "avg_saturday": 471,
+          "avg_sunday": 278,
+          "total_monthly": 13660
+        },
+        "2026-07": {
+          "avg_weekday": 484,
+          "avg_saturday": 400,
+          "avg_sunday": 327,
+          "total_monthly": 14049
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "name": "Riverwalk",
+      "report_station_name": "Riverwalk",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 592.1,
+      "avg_weekday_boardings_min_max": [
+        497,
+        773
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 620
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.023309,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 497,
+          "avg_saturday": 307,
+          "avg_sunday": 350,
+          "total_monthly": 14069
+        },
+        "2025-11": {
+          "avg_weekday": 540,
+          "avg_saturday": 393,
+          "avg_sunday": 402,
+          "total_monthly": 14778
+        },
+        "2025-12": {
+          "avg_weekday": 602,
+          "avg_saturday": 466,
+          "avg_sunday": 461,
+          "total_monthly": 17546
+        },
+        "2026-01": {
+          "avg_weekday": 649,
+          "avg_saturday": 460,
+          "avg_sunday": 545,
+          "total_monthly": 18748
+        },
+        "2026-02": {
+          "avg_weekday": 588,
+          "avg_saturday": 391,
+          "avg_sunday": 426,
+          "total_monthly": 15030
+        },
+        "2026-03": {
+          "avg_weekday": 773,
+          "avg_saturday": 408,
+          "avg_sunday": 500,
+          "total_monthly": 21128
+        },
+        "2026-04": {
+          "avg_weekday": 557,
+          "avg_saturday": 409,
+          "avg_sunday": 451,
+          "total_monthly": 15691
+        },
+        "2026-05": {
+          "avg_weekday": 520,
+          "avg_saturday": 298,
+          "avg_sunday": 341,
+          "total_monthly": 14104
+        },
+        "2026-06": {
+          "avg_weekday": 575,
+          "avg_saturday": 535,
+          "avg_sunday": 462,
+          "total_monthly": 16644
+        },
+        "2026-07": {
+          "avg_weekday": 620,
+          "avg_saturday": 460,
+          "avg_sunday": 430,
+          "total_monthly": 17815
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "name": "Fifth Street",
+      "report_station_name": "Fifth Street",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 527.5,
+      "avg_weekday_boardings_min_max": [
+        484,
+        591
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 559
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.020766,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 521,
+          "avg_saturday": 320,
+          "avg_sunday": 352,
+          "total_monthly": 14666
+        },
+        "2025-11": {
+          "avg_weekday": 526,
+          "avg_saturday": 378,
+          "avg_sunday": 300,
+          "total_monthly": 13916
+        },
+        "2025-12": {
+          "avg_weekday": 514,
+          "avg_saturday": 378,
+          "avg_sunday": 354,
+          "total_monthly": 14746
+        },
+        "2026-01": {
+          "avg_weekday": 529,
+          "avg_saturday": 351,
+          "avg_sunday": 406,
+          "total_monthly": 15029
+        },
+        "2026-02": {
+          "avg_weekday": 514,
+          "avg_saturday": 335,
+          "avg_sunday": 355,
+          "total_monthly": 13037
+        },
+        "2026-03": {
+          "avg_weekday": 523,
+          "avg_saturday": 381,
+          "avg_sunday": 358,
+          "total_monthly": 14821
+        },
+        "2026-04": {
+          "avg_weekday": 514,
+          "avg_saturday": 312,
+          "avg_sunday": 367,
+          "total_monthly": 14025
+        },
+        "2026-05": {
+          "avg_weekday": 484,
+          "avg_saturday": 263,
+          "avg_sunday": 290,
+          "total_monthly": 12921
+        },
+        "2026-06": {
+          "avg_weekday": 591,
+          "avg_saturday": 530,
+          "avg_sunday": 453,
+          "total_monthly": 16929
+        },
+        "2026-07": {
+          "avg_weekday": 559,
+          "avg_saturday": 430,
+          "avg_sunday": 352,
+          "total_monthly": 15980
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "name": "Brickell City Centre",
+      "report_station_name": "Eighth Street",
+      "mapping_basis": "renamed_station_same_location",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1783.2,
+      "avg_weekday_boardings_min_max": [
+        1570,
+        2073
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 2021
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.070199,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1675,
+          "avg_saturday": 1497,
+          "avg_sunday": 1381,
+          "total_monthly": 50034
+        },
+        "2025-11": {
+          "avg_weekday": 1741,
+          "avg_saturday": 1652,
+          "avg_sunday": 1451,
+          "total_monthly": 50331
+        },
+        "2025-12": {
+          "avg_weekday": 1847,
+          "avg_saturday": 1877,
+          "avg_sunday": 1743,
+          "total_monthly": 56972
+        },
+        "2026-01": {
+          "avg_weekday": 1750,
+          "avg_saturday": 1528,
+          "avg_sunday": 1485,
+          "total_monthly": 52084
+        },
+        "2026-02": {
+          "avg_weekday": 1570,
+          "avg_saturday": 1402,
+          "avg_sunday": 1372,
+          "total_monthly": 42498
+        },
+        "2026-03": {
+          "avg_weekday": 1645,
+          "avg_saturday": 1464,
+          "avg_sunday": 1414,
+          "total_monthly": 49110
+        },
+        "2026-04": {
+          "avg_weekday": 1815,
+          "avg_saturday": 1712,
+          "avg_sunday": 1513,
+          "total_monthly": 52824
+        },
+        "2026-05": {
+          "avg_weekday": 1695,
+          "avg_saturday": 1345,
+          "avg_sunday": 1497,
+          "total_monthly": 49811
+        },
+        "2026-06": {
+          "avg_weekday": 2073,
+          "avg_saturday": 2527,
+          "avg_sunday": 1985,
+          "total_monthly": 63652
+        },
+        "2026-07": {
+          "avg_weekday": 2021,
+          "avg_saturday": 2269,
+          "avg_sunday": 1797,
+          "total_monthly": 62744
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "name": "Tenth Street Promenade",
+      "report_station_name": "Tenth Street",
+      "mapping_basis": "same_name_extended",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 886.4,
+      "avg_weekday_boardings_min_max": [
+        814,
+        978
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 883
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.034895,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 844,
+          "avg_saturday": 551,
+          "avg_sunday": 532,
+          "total_monthly": 23742
+        },
+        "2025-11": {
+          "avg_weekday": 873,
+          "avg_saturday": 631,
+          "avg_sunday": 584,
+          "total_monthly": 23536
+        },
+        "2025-12": {
+          "avg_weekday": 928,
+          "avg_saturday": 740,
+          "avg_sunday": 688,
+          "total_monthly": 27049
+        },
+        "2026-01": {
+          "avg_weekday": 880,
+          "avg_saturday": 646,
+          "avg_sunday": 805,
+          "total_monthly": 25810
+        },
+        "2026-02": {
+          "avg_weekday": 875,
+          "avg_saturday": 592,
+          "avg_sunday": 666,
+          "total_monthly": 22530
+        },
+        "2026-03": {
+          "avg_weekday": 916,
+          "avg_saturday": 687,
+          "avg_sunday": 662,
+          "total_monthly": 26218
+        },
+        "2026-04": {
+          "avg_weekday": 873,
+          "avg_saturday": 619,
+          "avg_sunday": 642,
+          "total_monthly": 24249
+        },
+        "2026-05": {
+          "avg_weekday": 814,
+          "avg_saturday": 437,
+          "avg_sunday": 535,
+          "total_monthly": 21958
+        },
+        "2026-06": {
+          "avg_weekday": 978,
+          "avg_saturday": 955,
+          "avg_sunday": 748,
+          "total_monthly": 28317
+        },
+        "2026-07": {
+          "avg_weekday": 883,
+          "avg_saturday": 724,
+          "avg_sunday": 636,
+          "total_monthly": 25737
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "name": "Brickell",
+      "report_station_name": "Brickell",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 1773.9,
+      "avg_weekday_boardings_min_max": [
+        1621,
+        1939
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1679
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.069833,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 1757,
+          "avg_saturday": 1009,
+          "avg_sunday": 1059,
+          "total_monthly": 48671
+        },
+        "2025-11": {
+          "avg_weekday": 1743,
+          "avg_saturday": 1261,
+          "avg_sunday": 1227,
+          "total_monthly": 47302
+        },
+        "2025-12": {
+          "avg_weekday": 1852,
+          "avg_saturday": 1351,
+          "avg_sunday": 1275,
+          "total_monthly": 53094
+        },
+        "2026-01": {
+          "avg_weekday": 1755,
+          "avg_saturday": 1209,
+          "avg_sunday": 1443,
+          "total_monthly": 50430
+        },
+        "2026-02": {
+          "avg_weekday": 1831,
+          "avg_saturday": 1197,
+          "avg_sunday": 1334,
+          "total_monthly": 46740
+        },
+        "2026-03": {
+          "avg_weekday": 1835,
+          "avg_saturday": 1442,
+          "avg_sunday": 1341,
+          "total_monthly": 52837
+        },
+        "2026-04": {
+          "avg_weekday": 1727,
+          "avg_saturday": 1229,
+          "avg_sunday": 1317,
+          "total_monthly": 48185
+        },
+        "2026-05": {
+          "avg_weekday": 1621,
+          "avg_saturday": 804,
+          "avg_sunday": 1025,
+          "total_monthly": 43185
+        },
+        "2026-06": {
+          "avg_weekday": 1939,
+          "avg_saturday": 2052,
+          "avg_sunday": 1425,
+          "total_monthly": 56568
+        },
+        "2026-07": {
+          "avg_weekday": 1679,
+          "avg_saturday": 1582,
+          "avg_sunday": 1244,
+          "total_monthly": 49916
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "name": "Financial District",
+      "report_station_name": "Financial District",
+      "mapping_basis": "same_name",
+      "mapping_confirmed_by_owner": false,
+      "provenance_class": "observed",
+      "data_nature": "measured",
+      "source": "Miami-Dade DTPW monthly Ridership Technical Reports (published boardings)",
+      "unit": "boardings (entries) per average day of the stated day type; monthly totals are all days",
+      "is_trips": false,
+      "is_od": false,
+      "is_alightings": false,
+      "is_peak_hour": false,
+      "is_demand_for_new_service": false,
+      "counting_note": "as published by DTPW; the reports state that average ridership is computed only for days and stations with nontrivial reported data; the counting method is not described in the table",
+      "role": "observed REFERENCE for scale and station-share shape; NOT a calibration target and NOT the demand of the scenarios (which cover internal links only)",
+      "avg_weekday_boardings_10_month_mean": 966.8,
+      "avg_weekday_boardings_min_max": [
+        818,
+        1248
+      ],
+      "avg_weekday_boardings_latest": {
+        "month": "2026-07",
+        "value": 1248
+      },
+      "share_of_system_avg_weekday_10_month_mean": 0.03806,
+      "monthly_series": {
+        "2025-10": {
+          "avg_weekday": 922,
+          "avg_saturday": 463,
+          "avg_sunday": 404,
+          "total_monthly": 24683
+        },
+        "2025-11": {
+          "avg_weekday": 942,
+          "avg_saturday": 593,
+          "avg_sunday": 523,
+          "total_monthly": 24425
+        },
+        "2025-12": {
+          "avg_weekday": 838,
+          "avg_saturday": 623,
+          "avg_sunday": 642,
+          "total_monthly": 24323
+        },
+        "2026-01": {
+          "avg_weekday": 827,
+          "avg_saturday": 511,
+          "avg_sunday": 639,
+          "total_monthly": 23314
+        },
+        "2026-02": {
+          "avg_weekday": 863,
+          "avg_saturday": 541,
+          "avg_sunday": 546,
+          "total_monthly": 21599
+        },
+        "2026-03": {
+          "avg_weekday": 1028,
+          "avg_saturday": 689,
+          "avg_sunday": 582,
+          "total_monthly": 28280
+        },
+        "2026-04": {
+          "avg_weekday": 938,
+          "avg_saturday": 582,
+          "avg_sunday": 536,
+          "total_monthly": 25097
+        },
+        "2026-05": {
+          "avg_weekday": 818,
+          "avg_saturday": 435,
+          "avg_sunday": 462,
+          "total_monthly": 21661
+        },
+        "2026-06": {
+          "avg_weekday": 1244,
+          "avg_saturday": 910,
+          "avg_sunday": 683,
+          "total_monthly": 33739
+        },
+        "2026-07": {
+          "avg_weekday": 1248,
+          "avg_saturday": 782,
+          "avg_sunday": 689,
+          "total_monthly": 34577
+        }
+      },
+      "evidence_source": {
+        "files": [
+          "dtpw_rtr/2025-10-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-11-monthly-ridership-report.pdf",
+          "dtpw_rtr/2025-12-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-01-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-02-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-03-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-04-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-05-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-06-monthly-ridership-report.pdf",
+          "dtpw_rtr/2026-07-monthly-ridership-report.pdf"
+        ],
+        "table": "METROMOVER MONTHLY AND AVERAGE DAILY BOARDINGS BY STATION",
+        "pages_by_month": {
+          "2025-10": 24,
+          "2025-11": 24,
+          "2025-12": 24,
+          "2026-01": 24,
+          "2026-02": 24,
+          "2026-03": 24,
+          "2026-04": 24,
+          "2026-05": 24,
+          "2026-06": 24,
+          "2026-07": 24
+        }
+      }
+    }
+  ]
+}

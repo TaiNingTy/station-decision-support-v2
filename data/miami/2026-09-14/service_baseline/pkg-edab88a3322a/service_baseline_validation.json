@@ -1,0 +1,23 @@
+{
+  "build_status": "COMPLETED",
+  "validation_status": "PASS",
+  "ready_for_downstream": true,
+  "stations": 21,
+  "metromover_routes": {
+    "MMI": "METROMOVER INNER LOOP",
+    "MMO": "METROMOVER OMNI/BRICKELL OUTER LOOP"
+  },
+  "weekday_service": {
+    "service_id": "11",
+    "trips": 1588,
+    "calendar_exceptions": 0
+  },
+  "stop_times_rows_metromover": 34419,
+  "stop_times_rows_weekday": 12307,
+  "all_weekday_stops_mapped_to_stations": true,
+  "unmapped_stop_ids": [],
+  "departures_reconcile_with_stop_times": true,
+  "every_station_has_am_peak_departures": true,
+  "every_station_served_by_both_routes_in_am_peak": false,
+  "scope_statement": "PASS means the timetable aggregation reconciles with the feed. Scheduled departures are not operated service, capacity or ridership."
+}

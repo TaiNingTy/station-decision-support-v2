@@ -34,101 +34,112 @@
       "demography": {
         "stage": "demography",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-cfd8a52fe1de",
-        "package_dir": "demography/pkg-cfd8a52fe1de",
-        "manifest": "demography/pkg-cfd8a52fe1de/manifest.json",
-        "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8",
+        "package_id": "pkg-2c67f7b67b8d",
+        "package_dir": "demography/pkg-2c67f7b67b8d",
+        "manifest": "demography/pkg-2c67f7b67b8d/manifest.json",
+        "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68",
         "built_on": "2026-09-15",
-        "previous_package_dir": "demography/pkg-64aa5fc6dcb8",
+        "previous_package_dir": "demography/pkg-cfd8a52fe1de",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "jobs": {
         "stage": "jobs",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-ed5912a9790d",
-        "package_dir": "jobs/pkg-ed5912a9790d",
-        "manifest": "jobs/pkg-ed5912a9790d/manifest.json",
-        "manifest_sha256": "5b44be23c0e47c89ff5122e02afa893bba9d6771ece0e7e682e237798633ac01",
+        "package_id": "pkg-a5c6ab93a85e",
+        "package_dir": "jobs/pkg-a5c6ab93a85e",
+        "manifest": "jobs/pkg-a5c6ab93a85e/manifest.json",
+        "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d",
         "built_on": "2026-09-15",
-        "previous_package_dir": "jobs/pkg-7fa6f53356c6",
+        "previous_package_dir": "jobs/pkg-ed5912a9790d",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "service_baseline": {
         "stage": "service_baseline",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-4c24a50788c9",
-        "package_dir": "service_baseline/pkg-4c24a50788c9",
-        "manifest": "service_baseline/pkg-4c24a50788c9/manifest.json",
-        "manifest_sha256": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3",
+        "package_id": "pkg-edab88a3322a",
+        "package_dir": "service_baseline/pkg-edab88a3322a",
+        "manifest": "service_baseline/pkg-edab88a3322a/manifest.json",
+        "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77",
         "built_on": "2026-09-15",
-        "previous_package_dir": "service_baseline/pkg-a69b1848d3b9",
+        "previous_package_dir": "service_baseline/pkg-4c24a50788c9",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "ridership_reference": {
         "stage": "ridership_reference",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-e46a5fb5511c",
-        "package_dir": "ridership_reference/pkg-e46a5fb5511c",
-        "manifest": "ridership_reference/pkg-e46a5fb5511c/manifest.json",
-        "manifest_sha256": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c",
+        "package_id": "pkg-418a92cfd604",
+        "package_dir": "ridership_reference/pkg-418a92cfd604",
+        "manifest": "ridership_reference/pkg-418a92cfd604/manifest.json",
+        "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89",
         "built_on": "2026-09-15",
-        "previous_package_dir": "ridership_reference/pkg-5d8a337e0686",
+        "previous_package_dir": "ridership_reference/pkg-e46a5fb5511c",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "poi": {
         "stage": "poi",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-57ffb187de23",
-        "package_dir": "poi/pkg-57ffb187de23",
-        "manifest": "poi/pkg-57ffb187de23/manifest.json",
-        "manifest_sha256": "ed364ebed5c650fcb4b955d27fefdf0219155a0d425bc80339bd3fd89ec90484",
+        "package_id": "pkg-6af566c7afe1",
+        "package_dir": "poi/pkg-6af566c7afe1",
+        "manifest": "poi/pkg-6af566c7afe1/manifest.json",
+        "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6",
         "built_on": "2026-09-15",
-        "previous_package_dir": "poi/pkg-5db3cca81602",
+        "previous_package_dir": "poi/pkg-57ffb187de23",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "walk_model": null,
       "input_package": {
         "stage": "input_package",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-3cab1da11f1b",
-        "package_dir": "input_package/pkg-3cab1da11f1b",
-        "manifest": "input_package/pkg-3cab1da11f1b/manifest.json",
-        "manifest_sha256": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c",
+        "package_id": "pkg-9ab1651cc10b",
+        "package_dir": "input_package/pkg-9ab1651cc10b",
+        "manifest": "input_package/pkg-9ab1651cc10b/manifest.json",
+        "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40",
         "built_on": "2026-09-15",
-        "previous_package_dir": "input_package/pkg-432b88d981f8",
+        "previous_package_dir": "input_package/pkg-3cab1da11f1b",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "scenarios": {
         "stage": "scenarios",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-fdba95e9ca3e",
-        "package_dir": "scenarios/pkg-fdba95e9ca3e",
-        "manifest": "scenarios/pkg-fdba95e9ca3e/manifest.json",
-        "manifest_sha256": "c807419eb5dd02dba24a27dcc83fa251785899e5d72ae8348d3615d6fcc838af",
+        "package_id": "pkg-0d1753c58558",
+        "package_dir": "scenarios/pkg-0d1753c58558",
+        "manifest": "scenarios/pkg-0d1753c58558/manifest.json",
+        "manifest_sha256": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b",
         "built_on": "2026-09-15",
-        "previous_package_dir": "scenarios/pkg-9477e269cda4",
+        "previous_package_dir": "scenarios/pkg-fdba95e9ca3e",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "config": {
         "stage": "config",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-771469dc885b",
-        "package_dir": "config/pkg-771469dc885b",
-        "manifest": "config/pkg-771469dc885b/manifest.json",
-        "manifest_sha256": "61a7055e5875a34f20f6f6caf9f692c4e2bee0f96c6fb89bba070b28b404fd1a",
+        "package_id": "pkg-b49a8047475b",
+        "package_dir": "config/pkg-b49a8047475b",
+        "manifest": "config/pkg-b49a8047475b/manifest.json",
+        "manifest_sha256": "c5be2fdbaf9c4e8cb4cb21907c0cd1f5ae797617e10f97cbf66ebeb6c6ed2220",
         "built_on": "2026-09-15",
-        "previous_package_dir": "config/pkg-db271b99bf6e",
+        "previous_package_dir": "config/pkg-771469dc885b",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       },
       "rules": {
         "stage": "rules",
         "schema_version": "miami-package-pointer/1.0",
-        "package_id": "pkg-c5b8f121b33d",
-        "package_dir": "rules/pkg-c5b8f121b33d",
-        "manifest": "rules/pkg-c5b8f121b33d/manifest.json",
-        "manifest_sha256": "723b1e3223417fae534ee4cb2fb9f499e14b3629409842f4560bc4f8d42870d9",
+        "package_id": "pkg-771635da2111",
+        "package_dir": "rules/pkg-771635da2111",
+        "manifest": "rules/pkg-771635da2111/manifest.json",
+        "manifest_sha256": "e2fc89db89484ea93b5db10876e463c6f669199ab5e59d04d22bb1353b2893da",
         "built_on": "2026-09-15",
-        "previous_package_dir": "rules/pkg-5aeabc052cdc",
+        "previous_package_dir": "rules/pkg-c5b8f121b33d",
+        "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
+      },
+      "gis_objects": {
+        "stage": "gis_objects",
+        "schema_version": "miami-package-pointer/1.0",
+        "package_id": "pkg-2f956f9534ba",
+        "package_dir": "gis_objects/pkg-2f956f9534ba",
+        "manifest": "gis_objects/pkg-2f956f9534ba/manifest.json",
+        "manifest_sha256": "19f63cbd013d6cbb86328b306244745c1fa2671e715377be2144a640e6b33f6e",
+        "built_on": "2026-09-15",
+        "previous_package_dir": "gis_objects/pkg-5d652c64ca80",
         "policy": "the only mutable file of this stage; switched with a single atomic os.replace after the whole package was written and verified; readers must resolve this pointer and verify the package (scripts/miami_readiness.py)"
       }
     },
@@ -136,16 +147,17 @@
     "stage_manifests_sha256": {
       "station_master": "ee1760017b797c4f20a3afe1ef27921648e347b116f7478e52b8c56b20f315be",
       "spatial_join": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913",
-      "demography": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8",
-      "jobs": "5b44be23c0e47c89ff5122e02afa893bba9d6771ece0e7e682e237798633ac01",
-      "service_baseline": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3",
-      "ridership_reference": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c",
-      "poi": "ed364ebed5c650fcb4b955d27fefdf0219155a0d425bc80339bd3fd89ec90484",
+      "demography": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68",
+      "jobs": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d",
+      "service_baseline": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77",
+      "ridership_reference": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89",
+      "poi": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6",
       "walk_model": null,
-      "input_package": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c",
-      "scenarios": "c807419eb5dd02dba24a27dcc83fa251785899e5d72ae8348d3615d6fcc838af",
-      "config": "61a7055e5875a34f20f6f6caf9f692c4e2bee0f96c6fb89bba070b28b404fd1a",
-      "rules": "723b1e3223417fae534ee4cb2fb9f499e14b3629409842f4560bc4f8d42870d9"
+      "input_package": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40",
+      "scenarios": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b",
+      "config": "c5be2fdbaf9c4e8cb4cb21907c0cd1f5ae797617e10f97cbf66ebeb6c6ed2220",
+      "rules": "e2fc89db89484ea93b5db10876e463c6f669199ab5e59d04d22bb1353b2893da",
+      "gis_objects": "19f63cbd013d6cbb86328b306244745c1fa2671e715377be2144a640e6b33f6e"
     }
   },
   "freshness_rule": "a package stage is DONE only if its whole package verifies, every consumed input file still has the recorded sha256, every consumed package is still the current package of its stage, and every consumed stage is DONE; a manifest_only stage is DONE only if its outputs verify and its recorded data inputs are unchanged",
@@ -197,9 +209,9 @@
     "demography": {
       "status": "DONE",
       "pointer": "demography_current.json",
-      "package_dir": "demography/pkg-cfd8a52fe1de",
-      "package_id": "pkg-cfd8a52fe1de",
-      "stage_manifest": "demography/pkg-cfd8a52fe1de/manifest.json",
+      "package_dir": "demography/pkg-2c67f7b67b8d",
+      "package_id": "pkg-2c67f7b67b8d",
+      "stage_manifest": "demography/pkg-2c67f7b67b8d/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -246,7 +258,7 @@
           "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
         }
       ],
-      "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8",
+      "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68",
       "code_matches_current": true,
       "method": "ACS 2020-2024 block-group estimates apportioned to imperial station bands by land-area share (water erased); RSS MOE excluding interpolation; ratios via Census approximation; medians from brackets; network dedup on the union",
       "kind": "package",
@@ -255,9 +267,9 @@
     "jobs": {
       "status": "DONE",
       "pointer": "jobs_current.json",
-      "package_dir": "jobs/pkg-ed5912a9790d",
-      "package_id": "pkg-ed5912a9790d",
-      "stage_manifest": "jobs/pkg-ed5912a9790d/manifest.json",
+      "package_dir": "jobs/pkg-a5c6ab93a85e",
+      "package_id": "pkg-a5c6ab93a85e",
+      "stage_manifest": "jobs/pkg-a5c6ab93a85e/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -282,11 +294,11 @@
       "consumed_packages_recorded": [
         {
           "stage": "demography",
-          "package_id": "pkg-cfd8a52fe1de",
-          "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8"
+          "package_id": "pkg-2c67f7b67b8d",
+          "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
         }
       ],
-      "manifest_sha256": "5b44be23c0e47c89ff5122e02afa893bba9d6771ece0e7e682e237798633ac01",
+      "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d",
       "code_matches_current": true,
       "method": "LODES 8 (2023) WAC/RAC block counts apportioned to imperial station bands by land share on the demography package's water-erased geometry; block-level OD subset with candidate stations; network dedup on the union; no station-to-station matrix",
       "kind": "package",
@@ -295,9 +307,9 @@
     "service_baseline": {
       "status": "DONE",
       "pointer": "service_baseline_current.json",
-      "package_dir": "service_baseline/pkg-4c24a50788c9",
-      "package_id": "pkg-4c24a50788c9",
-      "stage_manifest": "service_baseline/pkg-4c24a50788c9/manifest.json",
+      "package_dir": "service_baseline/pkg-edab88a3322a",
+      "package_id": "pkg-edab88a3322a",
+      "stage_manifest": "service_baseline/pkg-edab88a3322a/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -315,7 +327,7 @@
         "station_master": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4"
       },
       "consumed_packages_recorded": [],
-      "manifest_sha256": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3",
+      "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77",
       "code_matches_current": true,
       "method": "GTFS weekday stop_times aggregated per station (via the stop-to-station crosswalk) into departures by hour/route and period headways",
       "kind": "package",
@@ -324,9 +336,9 @@
     "ridership_reference": {
       "status": "DONE",
       "pointer": "ridership_reference_current.json",
-      "package_dir": "ridership_reference/pkg-e46a5fb5511c",
-      "package_id": "pkg-e46a5fb5511c",
-      "stage_manifest": "ridership_reference/pkg-e46a5fb5511c/manifest.json",
+      "package_dir": "ridership_reference/pkg-418a92cfd604",
+      "package_id": "pkg-418a92cfd604",
+      "stage_manifest": "ridership_reference/pkg-418a92cfd604/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -352,7 +364,7 @@
         "dtpw_rtr/2026-07-monthly-ridership-report.pdf": "063e949934ae9343a887cf582b89f2ab99384b07389faef087de488ea64b4cc6"
       },
       "consumed_packages_recorded": [],
-      "manifest_sha256": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c",
+      "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89",
       "code_matches_current": true,
       "method": "DTPW monthly Ridership Technical Reports parsed (pypdf text) into per-station average weekday/Saturday/Sunday boardings and monthly totals over ten months; mapped to the 21 stations by an explicit crosswalk; observed reference only",
       "kind": "package",
@@ -361,9 +373,9 @@
     "poi": {
       "status": "DONE",
       "pointer": "poi_current.json",
-      "package_dir": "poi/pkg-57ffb187de23",
-      "package_id": "pkg-57ffb187de23",
-      "stage_manifest": "poi/pkg-57ffb187de23/manifest.json",
+      "package_dir": "poi/pkg-6af566c7afe1",
+      "package_id": "pkg-6af566c7afe1",
+      "stage_manifest": "poi/pkg-6af566c7afe1/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -393,11 +405,11 @@
       "consumed_packages_recorded": [
         {
           "stage": "demography",
-          "package_id": "pkg-cfd8a52fe1de",
-          "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8"
+          "package_id": "pkg-2c67f7b67b8d",
+          "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
         }
       ],
-      "manifest_sha256": "ed364ebed5c650fcb4b955d27fefdf0219155a0d425bc80339bd3fd89ec90484",
+      "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6",
       "code_matches_current": true,
       "method": "county/city/USDA facility layers categorised by recorded rules, counted per station band (points inside, park polygons intersecting) and nearest by straight line inside the study window; OSM as a grocery cross-check",
       "kind": "package",
@@ -413,9 +425,9 @@
     "input_package": {
       "status": "DONE",
       "pointer": "input_package_current.json",
-      "package_dir": "input_package/pkg-3cab1da11f1b",
-      "package_id": "pkg-3cab1da11f1b",
-      "stage_manifest": "input_package/pkg-3cab1da11f1b/manifest.json",
+      "package_dir": "input_package/pkg-9ab1651cc10b",
+      "package_id": "pkg-9ab1651cc10b",
+      "stage_manifest": "input_package/pkg-9ab1651cc10b/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -442,36 +454,36 @@
         },
         {
           "stage": "demography",
-          "package_id": "pkg-cfd8a52fe1de",
-          "package_dir": "demography/pkg-cfd8a52fe1de",
-          "manifest_sha256": "1d3a124338dc4a0ff820844e2e83ace0cde79d094a050e0b6b7b392bc9214ef8"
+          "package_id": "pkg-2c67f7b67b8d",
+          "package_dir": "demography/pkg-2c67f7b67b8d",
+          "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
         },
         {
           "stage": "jobs",
-          "package_id": "pkg-ed5912a9790d",
-          "package_dir": "jobs/pkg-ed5912a9790d",
-          "manifest_sha256": "5b44be23c0e47c89ff5122e02afa893bba9d6771ece0e7e682e237798633ac01"
+          "package_id": "pkg-a5c6ab93a85e",
+          "package_dir": "jobs/pkg-a5c6ab93a85e",
+          "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
         },
         {
           "stage": "service_baseline",
-          "package_id": "pkg-4c24a50788c9",
-          "package_dir": "service_baseline/pkg-4c24a50788c9",
-          "manifest_sha256": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3"
+          "package_id": "pkg-edab88a3322a",
+          "package_dir": "service_baseline/pkg-edab88a3322a",
+          "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77"
         },
         {
           "stage": "ridership_reference",
-          "package_id": "pkg-e46a5fb5511c",
-          "package_dir": "ridership_reference/pkg-e46a5fb5511c",
-          "manifest_sha256": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c"
+          "package_id": "pkg-418a92cfd604",
+          "package_dir": "ridership_reference/pkg-418a92cfd604",
+          "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89"
         },
         {
           "stage": "poi",
-          "package_id": "pkg-57ffb187de23",
-          "package_dir": "poi/pkg-57ffb187de23",
-          "manifest_sha256": "ed364ebed5c650fcb4b955d27fefdf0219155a0d425bc80339bd3fd89ec90484"
+          "package_id": "pkg-6af566c7afe1",
+          "package_dir": "poi/pkg-6af566c7afe1",
+          "manifest_sha256": "8dfe5e584e741d9b66ace462cdfe42cbd0fe99829386558ffd3c4e80d321f9c6"
         }
       ],
-      "manifest_sha256": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c",
+      "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40",
       "code_matches_current": true,
       "method": "assembles station_master + spatial_join + demography + jobs into per-station input packages with verbatim value envelopes, evidence pointers, pinned layer versions and Miami-specific input placeholders; recomputes nothing",
       "config_inputs": {
@@ -479,7 +491,7 @@
           "acquisition_status": "derived",
           "value_status": "value",
           "provenance_class": "derived",
-          "source_package": "pkg-4c24a50788c9"
+          "source_package": "pkg-edab88a3322a"
         },
         "platform_constructible_space": {
           "acquisition_status": "assumed",
@@ -500,9 +512,9 @@
     "scenarios": {
       "status": "DONE",
       "pointer": "scenarios_current.json",
-      "package_dir": "scenarios/pkg-fdba95e9ca3e",
-      "package_id": "pkg-fdba95e9ca3e",
-      "stage_manifest": "scenarios/pkg-fdba95e9ca3e/manifest.json",
+      "package_dir": "scenarios/pkg-0d1753c58558",
+      "package_id": "pkg-0d1753c58558",
+      "stage_manifest": "scenarios/pkg-0d1753c58558/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -517,30 +529,30 @@
       "consumed_packages_recorded": [
         {
           "stage": "input_package",
-          "package_id": "pkg-3cab1da11f1b",
-          "package_dir": "input_package/pkg-3cab1da11f1b",
-          "manifest_sha256": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c"
+          "package_id": "pkg-9ab1651cc10b",
+          "package_dir": "input_package/pkg-9ab1651cc10b",
+          "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40"
         },
         {
           "stage": "jobs",
-          "package_id": "pkg-ed5912a9790d",
-          "package_dir": "jobs/pkg-ed5912a9790d",
-          "manifest_sha256": "5b44be23c0e47c89ff5122e02afa893bba9d6771ece0e7e682e237798633ac01"
+          "package_id": "pkg-a5c6ab93a85e",
+          "package_dir": "jobs/pkg-a5c6ab93a85e",
+          "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
         },
         {
           "stage": "service_baseline",
-          "package_id": "pkg-4c24a50788c9",
-          "package_dir": "service_baseline/pkg-4c24a50788c9",
-          "manifest_sha256": "00cb7e2384ee3334786abb5928719ee1207cdaa7f9708c9cfef9f6d72edf0db3"
+          "package_id": "pkg-edab88a3322a",
+          "package_dir": "service_baseline/pkg-edab88a3322a",
+          "manifest_sha256": "85201375ac655cb3d5dde391fe0377e87098d318003f7952ed3841f3d359cd77"
         },
         {
           "stage": "ridership_reference",
-          "package_id": "pkg-e46a5fb5511c",
-          "package_dir": "ridership_reference/pkg-e46a5fb5511c",
-          "manifest_sha256": "db4be28f9ee584ee81dabe7e7e4d1bb924bd1f6fe90d63caa96cdb8f4638e09c"
+          "package_id": "pkg-418a92cfd604",
+          "package_dir": "ridership_reference/pkg-418a92cfd604",
+          "manifest_sha256": "9dcd427d54053e59f3ed5f67dc6e808a9a8be2e0dc01218cce786691e1096f89"
         }
       ],
-      "manifest_sha256": "c807419eb5dd02dba24a27dcc83fa251785899e5d72ae8348d3615d6fcc838af",
+      "manifest_sha256": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b",
       "code_matches_current": true,
       "method": "internal LODES job links -> weekday commute trips (ACS WFH share, attendance assumption) -> all-purpose trips (assumption) -> peak hour (single ACS-derived share) -> PRT adoption (assumption, low bounded by observed transit share) -> station allocation with conservation; PM mirror",
       "assumption_parameter_ids": [
@@ -558,9 +570,9 @@
     "config": {
       "status": "DONE",
       "pointer": "config_current.json",
-      "package_dir": "config/pkg-771469dc885b",
-      "package_id": "pkg-771469dc885b",
-      "stage_manifest": "config/pkg-771469dc885b/manifest.json",
+      "package_dir": "config/pkg-b49a8047475b",
+      "package_id": "pkg-b49a8047475b",
+      "stage_manifest": "config/pkg-b49a8047475b/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -578,18 +590,18 @@
       "consumed_packages_recorded": [
         {
           "stage": "scenarios",
-          "package_id": "pkg-fdba95e9ca3e",
-          "package_dir": "scenarios/pkg-fdba95e9ca3e",
-          "manifest_sha256": "c807419eb5dd02dba24a27dcc83fa251785899e5d72ae8348d3615d6fcc838af"
+          "package_id": "pkg-0d1753c58558",
+          "package_dir": "scenarios/pkg-0d1753c58558",
+          "manifest_sha256": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b"
         },
         {
           "stage": "input_package",
-          "package_id": "pkg-3cab1da11f1b",
-          "package_dir": "input_package/pkg-3cab1da11f1b",
-          "manifest_sha256": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c"
+          "package_id": "pkg-9ab1651cc10b",
+          "package_dir": "input_package/pkg-9ab1651cc10b",
+          "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40"
         }
       ],
-      "manifest_sha256": "61a7055e5875a34f20f6f6caf9f692c4e2bee0f96c6fb89bba070b28b404fd1a",
+      "manifest_sha256": "c5be2fdbaf9c4e8cb4cb21907c0cd1f5ae797617e10f97cbf66ebeb6c6ed2220",
       "code_matches_current": true,
       "method": "PRT configuration: scenario person trips -> vehicle trips (party size) -> berth cycles with within-hour peaking and utilization -> berths -> owner-drawn platform module -> footprint; empty-vehicle balance; network headway ratio; site fit assumed",
       "assumption_parameter_ids": [
@@ -607,9 +619,9 @@
     "rules": {
       "status": "DONE",
       "pointer": "rules_current.json",
-      "package_dir": "rules/pkg-c5b8f121b33d",
-      "package_id": "pkg-c5b8f121b33d",
-      "stage_manifest": "rules/pkg-c5b8f121b33d/manifest.json",
+      "package_dir": "rules/pkg-771635da2111",
+      "package_id": "pkg-771635da2111",
+      "stage_manifest": "rules/pkg-771635da2111/manifest.json",
       "built_on": "2026-09-15",
       "build_status": "COMPLETED",
       "geometry_validation_status": null,
@@ -626,23 +638,77 @@
       "consumed_packages_recorded": [
         {
           "stage": "input_package",
-          "package_id": "pkg-3cab1da11f1b",
-          "manifest_sha256": "d26b91e83a28577e7a03db48bde158ba195aa63c8e79d767bc3c395d4f01688c"
+          "package_id": "pkg-9ab1651cc10b",
+          "manifest_sha256": "50ffe21f590c364584a6283dd7bdea296ec8b5dd5ee938218acdba01c5e4db40"
         },
         {
           "stage": "scenarios",
-          "package_id": "pkg-fdba95e9ca3e",
-          "manifest_sha256": "c807419eb5dd02dba24a27dcc83fa251785899e5d72ae8348d3615d6fcc838af"
+          "package_id": "pkg-0d1753c58558",
+          "manifest_sha256": "846b9624250a90ab60b65028470ebd70bde633ad56f5fc98c0e0810dc388391b"
         },
         {
           "stage": "config",
-          "package_id": "pkg-771469dc885b",
-          "manifest_sha256": "61a7055e5875a34f20f6f6caf9f692c4e2bee0f96c6fb89bba070b28b404fd1a"
+          "package_id": "pkg-b49a8047475b",
+          "manifest_sha256": "c5be2fdbaf9c4e8cb4cb21907c0cd1f5ae797617e10f97cbf66ebeb6c6ed2220"
         }
       ],
-      "manifest_sha256": "723b1e3223417fae534ee4cb2fb9f499e14b3629409842f4560bc4f8d42870d9",
+      "manifest_sha256": "e2fc89db89484ea93b5db10876e463c6f669199ab5e59d04d22bb1353b2893da",
       "code_matches_current": true,
       "method": "versioned rule pack evaluated over the input-package, scenarios and config packages; one citable result per (subject, scenario, rule); critical results are reported and never hidden",
+      "kind": "package",
+      "role_for_ai": "not_required"
+    },
+    "gis_objects": {
+      "status": "DONE",
+      "pointer": "gis_objects_current.json",
+      "package_dir": "gis_objects/pkg-2f956f9534ba",
+      "package_id": "pkg-2f956f9534ba",
+      "stage_manifest": "gis_objects/pkg-2f956f9534ba/manifest.json",
+      "built_on": "2026-09-15",
+      "build_status": "COMPLETED",
+      "geometry_validation_status": null,
+      "ready_for_downstream": true,
+      "freshness": "FRESH",
+      "consumed_inputs_changed": [],
+      "consumed_packages_changed": [],
+      "consumed_stages_not_done": [],
+      "optional_layers_now_available": [],
+      "optional_layers_absent_at_build": [],
+      "consumed_inputs_recorded_sha256": {
+        "gis_objects_config": "796539030ef7f7c87f79188805b7f8aad4ccb74b44cdbe26dd3533ed205d2c85",
+        "gis_objects_source_manifest": "51f98364437b082e62fb6cbbad1ec42e566895fa3c7c096b99255db6b752f320",
+        "osm_extract": "592d45437fd1f8834dfe62b0d71ca489216c6626a0a267bb344b5ed6bcf66add",
+        "zoning_raw": "f8569d030bee2eb30af233c2586260012b8d4c100209904fcd2e7316644283b2",
+        "gtfs_archive": "785460181e910e47af9172ccb9da0b10aa61ba9d55539fd6b69d0ad181758ef5",
+        "station_master": "50db7b67707a5022915e00eaa48d32be8d57b7f73df067dba6fccb46bf92eed4",
+        "service_patterns": "61feeb2f2370da67e6b442359c6cd3df7a8129ef5c856fe2408784367e2348ed",
+        "census_2020_pl_blocks.response": "b5e5cb3031f7ba9b95753858e0a418e7cce414715fdeba2f555142c078cdfa89",
+        "land_use.geojson": "c8c7995ade7c43e0192694fbcc646d4981a412913b4480725929c150cd190fdd",
+        "metrorail_line.geojson": "b63fab58aa66229db313d5b4dac9c0dc943980c493c9b2b333c85dd7a4d9f4fa",
+        "parcels.geojson": "0a02c17c31d143081ab2c298a370929c3ade7601fbfd77ca7677ea29ca5625e7",
+        "railroads.geojson": "9d34653228f16a2ebc086374238d876c230ba720984ff186fc7ff397d242ae25",
+        "trirail.geojson": "6d18edfe75b3149104038dcbca4d0096bbcb923f0f9fa4b49f4815344e75bb90"
+      },
+      "consumed_packages_recorded": [
+        {
+          "stage": "demography",
+          "package_id": "pkg-2c67f7b67b8d",
+          "manifest_sha256": "cb584c19f7d95e22c94b9b6d1e269ebab9b565ccab4f812f6358f4d21a6e8d68"
+        },
+        {
+          "stage": "jobs",
+          "package_id": "pkg-a5c6ab93a85e",
+          "manifest_sha256": "34b1ae536d909c64f3d4995e1badfd4fb61c92d3c988a7bb51a344ff50d1330d"
+        },
+        {
+          "stage": "spatial_join",
+          "package_id": "pkg-e4f5e3782ecb",
+          "manifest_sha256": "0f52947171a253a53ad0d9fb9e1fc9a00d95478efd5c4392c33111a9a5da8913"
+        }
+      ],
+      "manifest_sha256": "19f63cbd013d6cbb86328b306244745c1fa2671e715377be2144a640e6b33f6e",
+      "code_matches_current": true,
+      "method": "OSM roads, county rail, GTFS guideway shapes, Miami 21 zoning, county land use and parcels clipped to each half-mile disc with citable object ids; an activity-density heat proxy (2020 block residents + 2023 block jobs per acre, 500 ft cells) with zoning, land use and road context per cell; role hints kept apart for evaluation",
       "kind": "package",
       "role_for_ai": "not_required"
     }
@@ -685,25 +751,25 @@
     "demography": {
       "status": "DONE",
       "stage": "demography",
-      "package_dir": "demography/pkg-cfd8a52fe1de",
+      "package_dir": "demography/pkg-2c67f7b67b8d",
       "meaning": "ACS 2020-2024 block-group period estimates apportioned to the bands; not current population"
     },
     "jobs_and_commute": {
       "status": "DONE",
       "stage": "jobs",
-      "package_dir": "jobs/pkg-ed5912a9790d",
+      "package_dir": "jobs/pkg-a5c6ab93a85e",
       "meaning": "LODES 8 (2023) job counts and block-level OD links; not trips, not ridership"
     },
     "service_baseline": {
       "status": "DONE",
       "stage": "service_baseline",
-      "package_dir": "service_baseline/pkg-4c24a50788c9",
+      "package_dir": "service_baseline/pkg-edab88a3322a",
       "meaning": "GTFS weekday timetable per station; scheduled, not operated"
     },
     "pois": {
       "status": "DONE",
       "stage": "poi",
-      "package_dir": "poi/pkg-57ffb187de23",
+      "package_dir": "poi/pkg-6af566c7afe1",
       "optional_for_ai": true
     },
     "walk_network": {
@@ -716,28 +782,34 @@
     "input_package": {
       "status": "DONE",
       "stage": "input_package",
-      "package_dir": "input_package/pkg-3cab1da11f1b"
+      "package_dir": "input_package/pkg-9ab1651cc10b"
     },
     "demand": {
       "observed_ridership_status": "ACQUIRED_station_level_daily_boardings",
       "observed_ridership_stage": "ridership_reference",
-      "observed_ridership_package_dir": "ridership_reference/pkg-e46a5fb5511c",
+      "observed_ridership_package_dir": "ridership_reference/pkg-418a92cfd604",
       "scenario_model_status": "DONE",
       "stage": "scenarios",
-      "package_dir": "scenarios/pkg-fdba95e9ca3e",
+      "package_dir": "scenarios/pkg-0d1753c58558",
       "meaning": "observed = DTPW published boardings of the current Metromover (reference only, not calibration); scenarios = low/medium/high uncalibrated model outputs for internal links; GTFS counts are not ridership"
     },
     "configuration": {
       "status": "DONE",
       "stage": "config",
-      "package_dir": "config/pkg-771469dc885b",
+      "package_dir": "config/pkg-b49a8047475b",
       "meaning": "berths, platform module and footprint per station per scenario under PRT semantics; assumption-backed, not a design"
     },
     "rules": {
       "status": "DONE",
       "stage": "rules",
-      "package_dir": "rules/pkg-c5b8f121b33d",
+      "package_dir": "rules/pkg-771635da2111",
       "meaning": "deterministic results of the versioned rule pack (arithmetic identities, project conventions, data-quality and scope flags) with citable ids; not legal or agency standards"
+    },
+    "gis_objects": {
+      "status": "DONE",
+      "stage": "gis_objects",
+      "package_dir": "gis_objects/pkg-2f956f9534ba",
+      "meaning": "feature-level roads, rail, guideway, zoning, land use, parcels and an activity-density heat PROXY with citable object ids for the reading agents; auxiliary evidence, decides nothing"
     },
     "engineering": {
       "platform_constructible_space": "assumed",

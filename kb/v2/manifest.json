@@ -1,6 +1,6 @@
 {
-  "kb_version": "kb-v2.0",
-  "issued_on": "2026-09-18",
+  "kb_version": "kb-v2.1",
+  "issued_on": "2026-09-20",
   "language": "en",
   "documents": [
     {
@@ -21,7 +21,7 @@
         "DS-11",
         "DS-12"
       ],
-      "sha256": "84993ca857ee66d58329d7cd655726baf09a7f29d5b36f5066b49910c4616bed"
+      "sha256": "1ccbb5bf62f7b739a9c7b9152fd910c0a40d7c3f068862161ceffbd8340acb8e"
     },
     {
       "file": "KB_V2_02_prt_configuration_method.md",
@@ -38,7 +38,7 @@
         "CM-08",
         "CM-09"
       ],
-      "sha256": "db120e7b281a083cae746e80d263da71bf2edf187ec569c432f9533ec897258a"
+      "sha256": "fdbb1a6cc252cd09a60300f6048929a18fc171a717021275a4a519616b1a57eb"
     },
     {
       "file": "KB_V2_03_interpretation_guidance.md",
@@ -56,7 +56,7 @@
         "IG-09",
         "IG-10"
       ],
-      "sha256": "f2029e1e87516e78584a0360d593dc5f13b11a90d21e0033a65cf7d02fc61766"
+      "sha256": "5c6c0f882b6915e68ad63b4c76dafca0d3f46f3b1ade6f1d5fa672deada7a780"
     },
     {
       "file": "KB_V2_04_open_items_and_ownership.md",
@@ -74,22 +74,57 @@
         "OI-09",
         "OI-10"
       ],
-      "sha256": "e7ea0b013406320a5cb835179aa89df56bc04b86fb9752b09ad8079beb08d11d"
+      "sha256": "cd3692eb195714cbc4872aff5668d85aab0be3cb4636c3ee409daf7e94d57b63"
+    },
+    {
+      "file": "KB_V2_05_gis_reading_guidance.md",
+      "doc_id": "KB_V2_05",
+      "title": "KB_V2_05 · How the reading agents read GIS features",
+      "sections": [
+        "GR-01",
+        "GR-02",
+        "GR-03",
+        "GR-04",
+        "GR-05",
+        "GR-06",
+        "GR-07",
+        "GR-08",
+        "GR-09",
+        "GR-10",
+        "GR-11"
+      ],
+      "sha256": "319cbe0df3e8be9242639e595c7ebc5627c332d8e102f59e71933e1466c961c7"
+    },
+    {
+      "file": "KB_V2_06_layer_legends.md",
+      "doc_id": "KB_V2_06",
+      "title": "KB_V2_06 · Legends of the GIS layers",
+      "sections": [
+        "LG-01",
+        "LG-02",
+        "LG-03",
+        "LG-04",
+        "LG-05",
+        "LG-06",
+        "LG-07",
+        "LG-08"
+      ],
+      "sha256": "48bd235a56abb625c382bc76ccff30656364f7893718460f39ac9b50cc02d31a"
     }
   ],
   "agent_prompt": {
     "file": "AGENT_PROMPT_v2.md",
-    "version": "prompt-v2.0",
-    "sha256": "2abad393cd2b94c7ed7077c0c30bf9d8498e57d847125cb5dd539839cc4cc951"
+    "version": "prompt-v2.1",
+    "sha256": "b0210c0a5e8f7d2cac7eef3822a0ba567548db745063633d92cbdf81394444fb"
   },
   "output_schema": {
     "file": "config/ai_output_schema_v2.json",
-    "sha256": "fb63af6b5056aabf8351a1b1042095d1bc19201f38b1d95fe6a9bfcb0b53d44f"
+    "sha256": "0489ecba19e53ed157f3edcd447b22852d9221046812e5d7420ce67895a59cc8"
   },
   "rule_pack": {
     "file": "config/rules_v2.json",
     "version": "rules-v2.0",
     "sha256": "4b6e9eeb439c14647bed6f8e1559bc94a0c647f64cbdd2d29daf1e24eb22f37d"
   },
-  "usage": "upload the four KB documents as the knowledge base of a NEW Coze bot/workflow (never the V1.1 one); paste the agent prompt as the system prompt; the model cites 'KB_V2_0n §XX-nn (kb-v2.0)'; retrieval must be auto-called and citation restricted to these documents"
+  "usage": "upload the six KB documents as the knowledge base of a NEW Coze bot/workflow (never the V1.1 one); paste the agent prompt as the system prompt; the model cites 'KB_V2_0n §XX-nn (kb-v2.1)'; retrieval must be auto-called and citation restricted to these documents"
 }

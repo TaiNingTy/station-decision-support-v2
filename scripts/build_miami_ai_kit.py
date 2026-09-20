@@ -14,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from miami_v2_common import *   # noqa: E402,F401,F403
 
-KIT_VERSION, KB_VERSION, PROMPT_VERSION = "ai-kit-v2.0", "kb-v2.0", "prompt-v2.0"
+KIT_VERSION, KB_VERSION, PROMPT_VERSION = "ai-kit-v2.1", "kb-v2.1", "prompt-v2.1"
 KB_DIR, OUT = ROOT / "kb/v2", ROOT / "ai/miami"
 PROMPT, SCHEMA = KB_DIR / "AGENT_PROMPT_v2.md", ROOT / "config/ai_output_schema_v2.json"
 SCEN = ["low", "medium", "high"]
@@ -34,15 +34,15 @@ for stage, mname in (("spatial_join", "spatial_join_manifest.json"), ("demograph
 
 # ---------------- knowledge base manifest ----------------
 kb_docs = sorted(KB_DIR.glob("KB_V2_*.md"))
-def sections(p): return re.findall(r"^## ((?:DS|CM|IG|OI)-\d{2})", p.read_text(encoding="utf-8"), flags=re.M)
-kb_manifest = {"kb_version": KB_VERSION, "issued_on": "2026-09-18", "language": "en",
+def sections(p): return re.findall(r"^## ((?:DS|CM|IG|OI|GR|LG)-\d{2})", p.read_text(encoding="utf-8"), flags=re.M)
+kb_manifest = {"kb_version": KB_VERSION, "issued_on": "2026-09-20", "language": "en",
                "documents": [{"file": p.name, "doc_id": p.name.split("_")[0] + "_" + p.name.split("_")[1] + "_" + p.name.split("_")[2], "title": p.read_text(encoding="utf-8").splitlines()[0].lstrip("# ").strip(),
                               "sections": sections(p), "sha256": sha_file(p)} for p in kb_docs],
                "agent_prompt": {"file": PROMPT.name, "version": PROMPT_VERSION, "sha256": sha_file(PROMPT)},
                "output_schema": {"file": "config/ai_output_schema_v2.json", "sha256": sha_file(SCHEMA)},
                "rule_pack": {"file": "config/rules_v2.json", "version": load(ROOT / "config/rules_v2.json")["version"], "sha256": sha_file(ROOT / "config/rules_v2.json")},
-               "usage": "upload the four KB documents as the knowledge base of a NEW Coze bot/workflow (never the V1.1 one); paste the agent prompt as the system prompt; "
-                        "the model cites 'KB_V2_0n §XX-nn (kb-v2.0)'; retrieval must be auto-called and citation restricted to these documents"}
+               "usage": "upload the six KB documents as the knowledge base of a NEW Coze bot/workflow (never the V1.1 one); paste the agent prompt as the system prompt; "
+                        "the model cites 'KB_V2_0n §XX-nn (kb-v2.1)'; retrieval must be auto-called and citation restricted to these documents"}
 dump(KB_DIR / "manifest.json", kb_manifest)
 
 # ---------------- packages ----------------
@@ -159,7 +159,7 @@ def build(pid):
     rb_ = rules_by[pid]
     return {"brief_id": pid, "station_id": pid, "name": s["name"], "generated_on": "2026-09-18", "kit_version": KIT_VERSION, "kb_version": KB_VERSION, "prompt_version": PROMPT_VERSION,
             "rule_pack_version": rules["rule_pack_version"], "packages": ids,
-            "instructions_for_the_model": "Use only these facts and the knowledge base kb-v2.0. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. "
+            "instructions_for_the_model": "Use only these facts and the knowledge base kb-v2.1. Cite fact ids for site facts, rule result ids for normative statements, KB sections for guidance. "
                                           "Do not write numbers that are not here. Answer as the JSON object of config/ai_output_schema_v2.json.",
             "facts": B.facts,
             "rule_results": {"station": [{k: r[k] for k in ("rule_result_id", "rule_id", "rule_name", "scenario", "status", "basis", "message")} for r in rb_["results"]],

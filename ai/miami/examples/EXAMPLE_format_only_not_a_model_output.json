@@ -3,10 +3,10 @@
   "schema_version": "miami-ai-output/1.0",
   "station_id": "MIA-MM-12",
   "brief_id": "MIA-MM-12",
-  "kit_version": "ai-kit-v2.0",
-  "kb_version": "kb-v2.0",
+  "kit_version": "ai-kit-v2.1",
+  "kb_version": "kb-v2.1",
   "rule_pack_version": "rules-v2.0",
-  "prompt_version": "prompt-v2.0",
+  "prompt_version": "prompt-v2.1",
   "site_reading": [
     {"statement": "The half-mile disc holds an estimated 15,975 residents (high reliability) and 55,031 jobs, a jobs-to-resident-workers ratio of 6.5: a workplace-dominated core.", "fact_ids": ["MIA-MM-12.F009", "MIA-MM-12.F019", "MIA-MM-12.F022"]},
     {"statement": "Zoning inside the disc is mostly Urban Core transect with civic space and civic institution zones; the reference point itself lies in T6-80-O. Zoning is permission, not activity.", "fact_ids": ["MIA-MM-12.F008", "MIA-MM-12.F004"]},

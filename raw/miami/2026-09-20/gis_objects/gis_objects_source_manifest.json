@@ -1,0 +1,209 @@
+{
+  "retrieved_on": "2026-09-20",
+  "acquisition_stage": "miami_gis_objects",
+  "study_bbox_wgs84": [
+    -80.209,
+    25.749,
+    -80.175,
+    25.801
+  ],
+  "roads_source": "raw/miami/2026-09-17/osm/walk_network_overpass.json (OpenStreetMap, already archived)",
+  "zoning_source": "raw/miami/2026-09-14/zoning_study_window.geojson (already archived)",
+  "not_fetched_on_purpose": [
+    "MD_Emaps layer 70 Property Records @ PaGIS (owner names and mailing addresses)",
+    "parcel site address and legal description"
+  ],
+  "fetch_script": {
+    "path": "scripts/fetch_miami_gis_objects.py",
+    "sha256": "4bbcaa5520633b3f01a61d6836564c564654d3d564142d0d1c2a0ba3ccb849f5"
+  },
+  "sources": [
+    {
+      "layer_id": "parcels",
+      "publisher": "Miami-Dade County (MD_Emaps: Parcels @ PaParcel)",
+      "out_fields": "OBJECTID,FOLIO,CONDO_FLAG,MUNICIPALITY_CODE,DOR_CODE_CUR,DOR_DESC,LOT_SIZE,YEAR_BUILT",
+      "privacy_note": "site address, legal description and every owner field intentionally not requested; the property-record layer (owner names) is not fetched",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/72",
+      "terms": "Miami-Dade County public GIS service",
+      "study_bbox_wgs84": [
+        -80.209,
+        25.749,
+        -80.175,
+        25.801
+      ],
+      "object_ids": 5835,
+      "features": 5835,
+      "files": {
+        "metadata": {
+          "file": "gis_objects/parcels.metadata.json",
+          "bytes": 8817,
+          "sha256": "edffe40bf64f3b2a8e679860ec598227a10f978ce5ae41b8d916e3643e369d84"
+        },
+        "ids": {
+          "file": "gis_objects/parcels.ids.json",
+          "bytes": 61454,
+          "sha256": "9800e4bbec704a9f31b5a55d791d270202594b2affd90c51a05183ee820a321e"
+        },
+        "geojson": {
+          "file": "gis_objects/parcels.geojson.json",
+          "bytes": 4341311,
+          "sha256": "0a02c17c31d143081ab2c298a370929c3ade7601fbfd77ca7677ea29ca5625e7"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:14Z"
+    },
+    {
+      "layer_id": "land_use",
+      "publisher": "Miami-Dade County (MD_Emaps: Land Use @ LUMALanduse)",
+      "out_fields": "OBJECTID,LU,DESCR",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/13",
+      "terms": "Miami-Dade County public GIS service",
+      "study_bbox_wgs84": [
+        -80.209,
+        25.749,
+        -80.175,
+        25.801
+      ],
+      "object_ids": 3410,
+      "features": 3410,
+      "files": {
+        "metadata": {
+          "file": "gis_objects/land_use.metadata.json",
+          "bytes": 72896,
+          "sha256": "18523e7b64a45b67eba8715b2a77d4216b88e9c4c9c1f2bc51295c9447436f2b"
+        },
+        "ids": {
+          "file": "gis_objects/land_use.ids.json",
+          "bytes": 38348,
+          "sha256": "43d15a65098ff975f2c74ee03cf70e8d5c48446cf06a9d48a4dcc60ea9a1e077"
+        },
+        "geojson": {
+          "file": "gis_objects/land_use.geojson.json",
+          "bytes": 6668332,
+          "sha256": "c8c7995ade7c43e0192694fbcc646d4981a412913b4480725929c150cd190fdd"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:41Z"
+    },
+    {
+      "layer_id": "railroads",
+      "publisher": "Miami-Dade County (MD_Emaps: Railroads)",
+      "out_fields": "OBJECTID",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/105",
+      "terms": "Miami-Dade County public GIS service",
+      "study_bbox_wgs84": [
+        -80.209,
+        25.749,
+        -80.175,
+        25.801
+      ],
+      "object_ids": 206,
+      "features": 206,
+      "files": {
+        "metadata": {
+          "file": "gis_objects/railroads.metadata.json",
+          "bytes": 4970,
+          "sha256": "bdecf034f332c2e26780e94e7ebf9ec9d09fd88da4d707da6fe6bf380de2cc53"
+        },
+        "ids": {
+          "file": "gis_objects/railroads.ids.json",
+          "bytes": 2017,
+          "sha256": "92f989cfb553023910e0a1debbbf60fb47f371e4edfce65b5f12dcd617110ea3"
+        },
+        "geojson": {
+          "file": "gis_objects/railroads.geojson.json",
+          "bytes": 155556,
+          "sha256": "9d34653228f16a2ebc086374238d876c230ba720984ff186fc7ff397d242ae25"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:45Z"
+    },
+    {
+      "layer_id": "metrorail_line",
+      "publisher": "Miami-Dade County (MD_Emaps: MetroRail Line)",
+      "out_fields": "OBJECTID,ROUTE,R_TYPE",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/98",
+      "terms": "Miami-Dade County public GIS service",
+      "study_bbox_wgs84": [
+        -80.209,
+        25.749,
+        -80.175,
+        25.801
+      ],
+      "object_ids": 1,
+      "features": 1,
+      "files": {
+        "metadata": {
+          "file": "gis_objects/metrorail_line.metadata.json",
+          "bytes": 5244,
+          "sha256": "04e535713436c5c53103bd4d1ba2243517955c2ef07f401091e858e42e5bf5d5"
+        },
+        "ids": {
+          "file": "gis_objects/metrorail_line.ids.json",
+          "bytes": 66,
+          "sha256": "5cfb53c5ff45c2ec67bc20a9c0a588f9cdfd0be2f8d83b40a414007cccbb1968"
+        },
+        "geojson": {
+          "file": "gis_objects/metrorail_line.geojson.json",
+          "bytes": 13448,
+          "sha256": "b63fab58aa66229db313d5b4dac9c0dc943980c493c9b2b333c85dd7a4d9f4fa"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:49Z"
+    },
+    {
+      "layer_id": "trirail",
+      "publisher": "Miami-Dade County (MD_Emaps: Tri-rail System)",
+      "out_fields": "*",
+      "service_url": "https://gisweb.miamidade.gov/arcgis/rest/services/MD_Emaps/MapServer/106",
+      "terms": "Miami-Dade County public GIS service",
+      "study_bbox_wgs84": [
+        -80.209,
+        25.749,
+        -80.175,
+        25.801
+      ],
+      "object_ids": 0,
+      "features": 0,
+      "files": {
+        "metadata": {
+          "file": "gis_objects/trirail.metadata.json",
+          "bytes": 5104,
+          "sha256": "d8830e0b7cda854a55d5e3fba09d30946fdb0e5774959a6b135311d7bfe4ba4a"
+        },
+        "ids": {
+          "file": "gis_objects/trirail.ids.json",
+          "bytes": 57,
+          "sha256": "beee99a39584bd5c29a0ecc2c5937f83196df46de1aacb194441956b17cd9299"
+        },
+        "geojson": {
+          "file": "gis_objects/trirail.geojson.json",
+          "bytes": 43,
+          "sha256": "6d18edfe75b3149104038dcbca4d0096bbcb923f0f9fa4b49f4815344e75bb90"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:51Z"
+    },
+    {
+      "layer_id": "census_2020_pl_blocks",
+      "publisher": "U.S. Census Bureau, 2020 Census Redistricting Data (P.L. 94-171), blocks of Miami-Dade County",
+      "url": "https://api.census.gov/data/2020/dec/pl?get=P1_001N,H1_001N,H1_002N&for=block:*&in=state:12%20county:086%20tract:*",
+      "api_key_used": true,
+      "variables": {
+        "P1_001N": "total population",
+        "H1_001N": "housing units",
+        "H1_002N": "occupied housing units"
+      },
+      "note": "2020 Census counts carry disclosure-avoidance noise at block level; used only to shape the activity-density proxy, never as current population",
+      "files": {
+        "response": {
+          "file": "gis_objects/dec_pl_2020_blocks_12086.json",
+          "bytes": 1405916,
+          "sha256": "b5e5cb3031f7ba9b95753858e0a418e7cce414715fdeba2f555142c078cdfa89"
+        }
+      },
+      "retrieved_at_utc": "2026-09-20T09:31:55Z",
+      "status": "downloaded"
+    }
+  ]
+}

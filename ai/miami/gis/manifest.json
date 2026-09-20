@@ -1,0 +1,602 @@
+{
+  "schema_version": "miami-gis-agent-inputs/1.0",
+  "generated_on": "2026-09-20",
+  "gis_objects_package": "pkg-2f956f9534ba",
+  "gis_config_version": "gis-objects-v1.0",
+  "kit_version": "ai-kit-v2.1",
+  "public_base": "https://tainingty.github.io/station-decision-support-v2/gis",
+  "note": "mirrored under docs/gis/ so the Coze HTTP node can fetch the inputs after the repository is pushed; the images are the heat PROXY, labelled as such inside the picture",
+  "environment": {
+    "matplotlib": "3.10.6"
+  },
+  "files": [
+    {
+      "station_id": "MIA-MM-01",
+      "file": "ai/miami/gis/MIA-MM-01/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-01/g1_input.json",
+      "bytes": 102164,
+      "sha256": "a9875581d4b394d16055d2fd36aae551cf276d20e793ddffca46beb6099dcee2"
+    },
+    {
+      "station_id": "MIA-MM-01",
+      "file": "ai/miami/gis/MIA-MM-01/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-01/g2_input.json",
+      "bytes": 90049,
+      "sha256": "b7e8e52b53f37715447cb2aa04568e1ddd1bca60a216176a76f7f1134a332cf1"
+    },
+    {
+      "station_id": "MIA-MM-01",
+      "file": "ai/miami/gis/MIA-MM-01/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-01/heat.png",
+      "bytes": 302805,
+      "sha256": "56451e75ec3bd4be5e2a0c419024d6c87dc65e78b72089f4dde9553fe4eb6029"
+    },
+    {
+      "station_id": "MIA-MM-01",
+      "file": "ai/miami/gis/MIA-MM-01/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-01/brief.coze.json",
+      "bytes": 29275,
+      "sha256": "f413896125e3e13834cca50fdc9ca93999e72b109cc4181bf510509c8a2eb0ef"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "file": "ai/miami/gis/MIA-MM-02/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-02/g1_input.json",
+      "bytes": 86107,
+      "sha256": "687945893c84d73a5c723e091f489c2c83f3dee33d44586a5287fe75fba55402"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "file": "ai/miami/gis/MIA-MM-02/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-02/g2_input.json",
+      "bytes": 76974,
+      "sha256": "0cd459057603e04590f6f932b550890cad9eefbc41220e5bb687892a169db395"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "file": "ai/miami/gis/MIA-MM-02/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-02/heat.png",
+      "bytes": 237357,
+      "sha256": "0a4a6f84b8c5715476c3e95179abc7cf6ea1c2d482fdaa4a4ad405220af516ab"
+    },
+    {
+      "station_id": "MIA-MM-02",
+      "file": "ai/miami/gis/MIA-MM-02/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-02/brief.coze.json",
+      "bytes": 29088,
+      "sha256": "6f5e6747d7277a2358a888f6242066be56e43ca4c7cd409cbb81a403cbc47379"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "file": "ai/miami/gis/MIA-MM-03/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-03/g1_input.json",
+      "bytes": 84545,
+      "sha256": "1c8194f88798c2a07b1982e0eada317e58c79b915381bdc7c7e119f11c004e69"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "file": "ai/miami/gis/MIA-MM-03/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-03/g2_input.json",
+      "bytes": 77149,
+      "sha256": "3d36a2315a71c4482ec950e59ed24131ea90fa282e143ddb46a6e8d15b7c1a51"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "file": "ai/miami/gis/MIA-MM-03/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-03/heat.png",
+      "bytes": 263161,
+      "sha256": "8f6e395b4b7454de7d98b3ccfddbf9b3866ee091f245bfa9d8d4fb88396947b7"
+    },
+    {
+      "station_id": "MIA-MM-03",
+      "file": "ai/miami/gis/MIA-MM-03/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-03/brief.coze.json",
+      "bytes": 29056,
+      "sha256": "43c922f8520e2958080ab7dd8aaa35f69d183ba7a7eddeffaf46c9217f267a25"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "file": "ai/miami/gis/MIA-MM-04/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-04/g1_input.json",
+      "bytes": 90765,
+      "sha256": "2811db93bab31c8b8a6ef6a222af3c8ec7589d52c814626f63e410e93de6c662"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "file": "ai/miami/gis/MIA-MM-04/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-04/g2_input.json",
+      "bytes": 79648,
+      "sha256": "ad99f32f4e010c833f9e4640a1c89c5f95ee5681ca73487fca2f52231aeeea11"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "file": "ai/miami/gis/MIA-MM-04/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-04/heat.png",
+      "bytes": 288553,
+      "sha256": "9e6865e2f2ae72a6cd7c4efb3421a7078b5f89848762245f37dba8e8c1d060b4"
+    },
+    {
+      "station_id": "MIA-MM-04",
+      "file": "ai/miami/gis/MIA-MM-04/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-04/brief.coze.json",
+      "bytes": 29077,
+      "sha256": "fe5b01a2b3c493483b9805e7e163a12695ab23f187706c3d7ef211877ad4ebd8"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "file": "ai/miami/gis/MIA-MM-05/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-05/g1_input.json",
+      "bytes": 89944,
+      "sha256": "11511a807cd2633419287dc1d6dbf8e850965c358cf0246318673b5d108f527f"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "file": "ai/miami/gis/MIA-MM-05/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-05/g2_input.json",
+      "bytes": 79896,
+      "sha256": "0a3604d38dba39d8225a7f154ac020bfa0c315e2572e74c7fb54837c3a436f95"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "file": "ai/miami/gis/MIA-MM-05/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-05/heat.png",
+      "bytes": 292294,
+      "sha256": "c8a87908334fb4ab1bc41fc01b5020fcd4aebfdb1f2ab79d2f344c021a7a4960"
+    },
+    {
+      "station_id": "MIA-MM-05",
+      "file": "ai/miami/gis/MIA-MM-05/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-05/brief.coze.json",
+      "bytes": 29108,
+      "sha256": "92dbcd1f6b69c0e434eef9414c2960dbdbc71f857821dcc5ce453b01cab56e4f"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "file": "ai/miami/gis/MIA-MM-06/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-06/g1_input.json",
+      "bytes": 85420,
+      "sha256": "93ec6fe6c5414e1dd074c346dbe1c32713647a0548d18ab31fb1efe31226d79e"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "file": "ai/miami/gis/MIA-MM-06/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-06/g2_input.json",
+      "bytes": 77374,
+      "sha256": "8df852d088f4cbd48d490f3a9de16e830fa83c5aa8f7457fe4903998c89c12b0"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "file": "ai/miami/gis/MIA-MM-06/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-06/heat.png",
+      "bytes": 305581,
+      "sha256": "ed539a62683159774246cbe989bc22f2092588f5c34d739721e1d25e14ccca7c"
+    },
+    {
+      "station_id": "MIA-MM-06",
+      "file": "ai/miami/gis/MIA-MM-06/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-06/brief.coze.json",
+      "bytes": 29075,
+      "sha256": "0caf255899859dc4190335b42f89bad8686a32e65dac69938a5dc1b290e8c2ad"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "file": "ai/miami/gis/MIA-MM-07/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-07/g1_input.json",
+      "bytes": 89422,
+      "sha256": "2b4dc6b22960211a6945ee655529bbf3e5361d13d1cdbee7ef88764e19064048"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "file": "ai/miami/gis/MIA-MM-07/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-07/g2_input.json",
+      "bytes": 77486,
+      "sha256": "75193969d3f5733a72ac6823e5d1288257ce1199e773579610dc9d25f528a997"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "file": "ai/miami/gis/MIA-MM-07/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-07/heat.png",
+      "bytes": 340910,
+      "sha256": "1fbade681cd91f6151bbc688093f5a403ad21a7f054ca61e69b83895bc2d0371"
+    },
+    {
+      "station_id": "MIA-MM-07",
+      "file": "ai/miami/gis/MIA-MM-07/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-07/brief.coze.json",
+      "bytes": 29076,
+      "sha256": "501a5eb138341e41bcfc98c2a37392eb93e09d4b82795fad58e0c84f5d1ec936"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "file": "ai/miami/gis/MIA-MM-08/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-08/g1_input.json",
+      "bytes": 98546,
+      "sha256": "2191ed3a1d3dee13724553d34a79e8f316e3fe23ad5e8d38194ec9a517112e13"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "file": "ai/miami/gis/MIA-MM-08/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-08/g2_input.json",
+      "bytes": 86561,
+      "sha256": "b2bf7b5035464f45421f95675ef2cb52c838d48ec009c20ec3c8b5233dd55bd4"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "file": "ai/miami/gis/MIA-MM-08/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-08/heat.png",
+      "bytes": 377744,
+      "sha256": "313f0236c807c7f9b19beed30210321e73e664cee2cacd253c5252fdbcd3ea3b"
+    },
+    {
+      "station_id": "MIA-MM-08",
+      "file": "ai/miami/gis/MIA-MM-08/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-08/brief.coze.json",
+      "bytes": 29166,
+      "sha256": "ffa7695d5ea62a9a72308e2118b5c57a15e493f2457d77cce96b19749643a3f4"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "file": "ai/miami/gis/MIA-MM-09/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-09/g1_input.json",
+      "bytes": 99481,
+      "sha256": "05f421106ee1990740f62212bcf4522ad4a8aefadff33e420395baefb5b266e5"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "file": "ai/miami/gis/MIA-MM-09/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-09/g2_input.json",
+      "bytes": 85888,
+      "sha256": "e476dea5d1e80fb7244c00e5eabc85fa0e85ef4c8a78ed8784fb210f72232438"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "file": "ai/miami/gis/MIA-MM-09/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-09/heat.png",
+      "bytes": 345743,
+      "sha256": "1afb2a2e00100c7b3e10400c9be38ee067f16c847ba7286a00b85a12256d1e2d"
+    },
+    {
+      "station_id": "MIA-MM-09",
+      "file": "ai/miami/gis/MIA-MM-09/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-09/brief.coze.json",
+      "bytes": 29253,
+      "sha256": "1806a75898e235c61969cfa407edbf385d00ba5b890f0a3d650ad696054609f6"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "file": "ai/miami/gis/MIA-MM-10/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-10/g1_input.json",
+      "bytes": 87563,
+      "sha256": "b12197185253584fdea08e0ea7424b35694a1ac3d6cf4b8b497ca712bfc7d9f9"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "file": "ai/miami/gis/MIA-MM-10/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-10/g2_input.json",
+      "bytes": 76579,
+      "sha256": "b978de3f9de4b05e964757c71a7629ad2d249080758a0a857c022ea2e5f8218a"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "file": "ai/miami/gis/MIA-MM-10/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-10/heat.png",
+      "bytes": 283386,
+      "sha256": "bfe6224115460c61c06c9122b7f51fc91c0bef0734d153c80e535e1bed53ffb5"
+    },
+    {
+      "station_id": "MIA-MM-10",
+      "file": "ai/miami/gis/MIA-MM-10/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-10/brief.coze.json",
+      "bytes": 29090,
+      "sha256": "c2221cb57104d743725e4c11e769b10f7cf16dff5ab1c016c30e860d88fa222e"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "file": "ai/miami/gis/MIA-MM-11/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-11/g1_input.json",
+      "bytes": 88699,
+      "sha256": "e1ce81796312b47b4d1c9bec679cc23fd685c463c778ea17a4a31d2db132e61c"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "file": "ai/miami/gis/MIA-MM-11/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-11/g2_input.json",
+      "bytes": 77097,
+      "sha256": "baa573f9bbc68d4b3c3f56f33d7b02ca8499bab7e8b2d63ca14ca4ee4642b924"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "file": "ai/miami/gis/MIA-MM-11/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-11/heat.png",
+      "bytes": 277656,
+      "sha256": "73767a5ce083446f2b38ba8532a4107ba42aa0d4c03163fbb2b345f1f14ebbb0"
+    },
+    {
+      "station_id": "MIA-MM-11",
+      "file": "ai/miami/gis/MIA-MM-11/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-11/brief.coze.json",
+      "bytes": 29061,
+      "sha256": "f7fcbe50b3b15f92d1a0961b166bd29c8f7844d449d73580c0a3c6d4ce03a7b9"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "file": "ai/miami/gis/MIA-MM-12/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-12/g1_input.json",
+      "bytes": 81851,
+      "sha256": "9170e8d96aa9fd8158b6775625947c3f193e5bccbe8a6dc3507b50b74fb922a5"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "file": "ai/miami/gis/MIA-MM-12/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-12/g2_input.json",
+      "bytes": 77093,
+      "sha256": "f4abfe6038cb0bc045eb571ffcf9641b35982dffc52b3cf6dc9944cc713a58e8"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "file": "ai/miami/gis/MIA-MM-12/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-12/heat.png",
+      "bytes": 261548,
+      "sha256": "3fd428a15db18af104f2ea559de5f34b689dc8fd8b6aadafa64dee9f509d5f01"
+    },
+    {
+      "station_id": "MIA-MM-12",
+      "file": "ai/miami/gis/MIA-MM-12/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-12/brief.coze.json",
+      "bytes": 29200,
+      "sha256": "a876fa9a060dcca7e50fc0722522166e7b3bf7f8461b9f2f25b9b046b843b452"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "file": "ai/miami/gis/MIA-MM-13/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-13/g1_input.json",
+      "bytes": 90882,
+      "sha256": "da6234da7925d8b19864d893a571bb4b51c358b190b8acc5393810e3d9d1ecf5"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "file": "ai/miami/gis/MIA-MM-13/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-13/g2_input.json",
+      "bytes": 80437,
+      "sha256": "cc0f407e02fff30b8a2dca557c4b2cdf23335f85e87f290ba478a56ed976afde"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "file": "ai/miami/gis/MIA-MM-13/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-13/heat.png",
+      "bytes": 307272,
+      "sha256": "a36c8d3680b33d42e7cb4f04eab28c8229ba6eae4b46ab9f035ad269905750fc"
+    },
+    {
+      "station_id": "MIA-MM-13",
+      "file": "ai/miami/gis/MIA-MM-13/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-13/brief.coze.json",
+      "bytes": 29047,
+      "sha256": "eb3b7b6d9f88dd982323b0568953c9a88885b6c69552f68f18faca1f29466ce1"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "file": "ai/miami/gis/MIA-MM-14/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-14/g1_input.json",
+      "bytes": 95633,
+      "sha256": "8b01c545f1fd70e70f37db3e058b8963a0e9075c59832951b5ef9b4654b5c865"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "file": "ai/miami/gis/MIA-MM-14/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-14/g2_input.json",
+      "bytes": 85778,
+      "sha256": "8b63c6296b4bad9bf609317e7c4ea190f713820c80f32d6b2c3d069d794fbaaf"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "file": "ai/miami/gis/MIA-MM-14/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-14/heat.png",
+      "bytes": 336683,
+      "sha256": "3e5f47c74d6d39a063761365776582894596cbd7fae67cc95b263d9d796cfb15"
+    },
+    {
+      "station_id": "MIA-MM-14",
+      "file": "ai/miami/gis/MIA-MM-14/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-14/brief.coze.json",
+      "bytes": 29031,
+      "sha256": "71db34079ad185b1bd186c58ddd6998588da3a8b322c020a64d32e27abf2f6cb"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "file": "ai/miami/gis/MIA-MM-15/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-15/g1_input.json",
+      "bytes": 94769,
+      "sha256": "0659284d3ac6772067d9dcd96735b8dd771cff8922ca2cec512dc4e21260b5f2"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "file": "ai/miami/gis/MIA-MM-15/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-15/g2_input.json",
+      "bytes": 85450,
+      "sha256": "969f52a2d992be4f834f4b8c5340e8e5052ab5e5d2f9ff463facff99a9f01b72"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "file": "ai/miami/gis/MIA-MM-15/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-15/heat.png",
+      "bytes": 327483,
+      "sha256": "922e71c9d01eb7377345af4ad63f3d894f11ec081a58aa01f2333655d90f7786"
+    },
+    {
+      "station_id": "MIA-MM-15",
+      "file": "ai/miami/gis/MIA-MM-15/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-15/brief.coze.json",
+      "bytes": 29028,
+      "sha256": "91b0c4fde9e0a6db17847e6eb675a059168446cc0aad9a582191523b49fb1c8d"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "file": "ai/miami/gis/MIA-MM-16/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-16/g1_input.json",
+      "bytes": 92535,
+      "sha256": "769949cb830eacf3ee89723e61964bc4840390929f5ab13e9ec677dafeafeabb"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "file": "ai/miami/gis/MIA-MM-16/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-16/g2_input.json",
+      "bytes": 85753,
+      "sha256": "e8679eda295d9292ecb9159d25db2abe1be606338b0e7213cfca49c167dea60b"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "file": "ai/miami/gis/MIA-MM-16/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-16/heat.png",
+      "bytes": 316479,
+      "sha256": "bceb792218ae3af886bc186bc366eda667a01b01a91062ffee3a5fcd8189ee44"
+    },
+    {
+      "station_id": "MIA-MM-16",
+      "file": "ai/miami/gis/MIA-MM-16/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-16/brief.coze.json",
+      "bytes": 29023,
+      "sha256": "938671266b85982d409830f692df8fc2ebf5c815ac230d7262e4e73c96ca06f6"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "file": "ai/miami/gis/MIA-MM-17/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-17/g1_input.json",
+      "bytes": 91574,
+      "sha256": "c5dfbe73869a6ee2f5b706ef01dfec29e4925639bed41282931153bdfbe95427"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "file": "ai/miami/gis/MIA-MM-17/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-17/g2_input.json",
+      "bytes": 86298,
+      "sha256": "3c9426a19670c308433169171c6f3f60eace4fd2da45e9354941e194fee086dd"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "file": "ai/miami/gis/MIA-MM-17/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-17/heat.png",
+      "bytes": 313763,
+      "sha256": "8ba0cacf2804ecd9e383a39b68bcb8e92370bd2e0af42366b377e25e789356ff"
+    },
+    {
+      "station_id": "MIA-MM-17",
+      "file": "ai/miami/gis/MIA-MM-17/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-17/brief.coze.json",
+      "bytes": 29206,
+      "sha256": "75760e24dbb3098f48d5380455e4dcf719c4cf6f735add2393a6c37779f87724"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "file": "ai/miami/gis/MIA-MM-18/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-18/g1_input.json",
+      "bytes": 90807,
+      "sha256": "d854a547a7e17b6082da23c5800ea79ebc164bad46bda45472fdff25e9b239ae"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "file": "ai/miami/gis/MIA-MM-18/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-18/g2_input.json",
+      "bytes": 85496,
+      "sha256": "0a33874a0ecc657d4886f37840d7bfcd109126397a9ceb745e7ec0e6447a9838"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "file": "ai/miami/gis/MIA-MM-18/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-18/heat.png",
+      "bytes": 310690,
+      "sha256": "acf780da4e697d2908150f6597b5464127237506744e98fff4a9c9d4d01414a6"
+    },
+    {
+      "station_id": "MIA-MM-18",
+      "file": "ai/miami/gis/MIA-MM-18/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-18/brief.coze.json",
+      "bytes": 29129,
+      "sha256": "5c56a9806fe389cb7fe7335d7888ce59de60b82af2c6aeedb7413df058d68325"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "file": "ai/miami/gis/MIA-MM-19/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-19/g1_input.json",
+      "bytes": 88706,
+      "sha256": "e107f07f625e0793d8bc6aea1f22f0ad66584e4e5f40a3fb3e0afb96ca77bc0d"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "file": "ai/miami/gis/MIA-MM-19/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-19/g2_input.json",
+      "bytes": 86611,
+      "sha256": "6c876bf1143e4be9e8e1f6862d2c4a5f6fd6e53d46ba6adc666d7b130a13ec3e"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "file": "ai/miami/gis/MIA-MM-19/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-19/heat.png",
+      "bytes": 294532,
+      "sha256": "7272ee23400d4ae9b56143f03212956fe8c1995b91b99e5be26aab8f73b94d20"
+    },
+    {
+      "station_id": "MIA-MM-19",
+      "file": "ai/miami/gis/MIA-MM-19/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-19/brief.coze.json",
+      "bytes": 29230,
+      "sha256": "a131e16db035205295d8812e8573567d8854812ac84d54711487b47b85353678"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "file": "ai/miami/gis/MIA-MM-20/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-20/g1_input.json",
+      "bytes": 91770,
+      "sha256": "334b439f2d9dd8cda20f1e115dad91eb7a2c59acb4f3e66896ebf5692e115aeb"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "file": "ai/miami/gis/MIA-MM-20/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-20/g2_input.json",
+      "bytes": 87871,
+      "sha256": "210513acbba54cdfe73540e570e8a26002d9f334e2dbf3d112f2c4566aa7bf43"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "file": "ai/miami/gis/MIA-MM-20/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-20/heat.png",
+      "bytes": 297641,
+      "sha256": "d6e8141b53537babf4251764d4eb243cd4ee38e28629cd8d392656120d79d84e"
+    },
+    {
+      "station_id": "MIA-MM-20",
+      "file": "ai/miami/gis/MIA-MM-20/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-20/brief.coze.json",
+      "bytes": 29141,
+      "sha256": "6e614cfb822a179fcc5da9c49c36e3914104c9521ea2c30ac42034f8491511d2"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "file": "ai/miami/gis/MIA-MM-21/g1_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-21/g1_input.json",
+      "bytes": 82574,
+      "sha256": "3f65e40bc1eedfba1e998f10441fcaeb6169accfb779dac0f8eba4c352a7511e"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "file": "ai/miami/gis/MIA-MM-21/g2_input.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-21/g2_input.json",
+      "bytes": 81651,
+      "sha256": "ebe79a991e7e84f782cc1d23546365cefe44fb56c1a9922e26b929de00836715"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "file": "ai/miami/gis/MIA-MM-21/heat.png",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-21/heat.png",
+      "bytes": 271388,
+      "sha256": "2d19b132853c6752ef5b5abab479beb01612398c065d3a245074198767e1757e"
+    },
+    {
+      "station_id": "MIA-MM-21",
+      "file": "ai/miami/gis/MIA-MM-21/brief.coze.json",
+      "public_url": "https://tainingty.github.io/station-decision-support-v2/gis/MIA-MM-21/brief.coze.json",
+      "bytes": 29198,
+      "sha256": "b0d33a7bac52317c256f726bed8a718da9dcc1bffbe7e814c9d6509b5b004bfa"
+    }
+  ]
+}
