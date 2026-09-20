@@ -84,7 +84,7 @@
   },
   "output_schema": {
     "file": "config/ai_output_schema_v2.json",
-    "sha256": "552cb6a15356ebadade86f110a83b7148043ac7a0b23d4909383e5ef2d8ee0a8"
+    "sha256": "fb63af6b5056aabf8351a1b1042095d1bc19201f38b1d95fe6a9bfcb0b53d44f"
   },
   "rule_pack": {
     "file": "config/rules_v2.json",

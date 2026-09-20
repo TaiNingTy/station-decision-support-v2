@@ -187,10 +187,15 @@ def render_md(b):
 
 
 (OUT / "briefs").mkdir(parents=True, exist_ok=True)
+KB_SECTIONS = [f"{d['doc_id']} §{s}" for d in kb_manifest["documents"] for s in d["sections"]]
 briefs = []
 for pid in station_ids:
     b = build(pid); dump(OUT / "briefs" / f"{pid}.json", b); (OUT / "briefs" / f"{pid}.md").write_text(render_md(b), encoding="utf-8")
-    briefs.append({"station_id": pid, "name": b["name"], "facts": len(b["facts"]), "json": f"ai/miami/briefs/{pid}.json", "md": f"ai/miami/briefs/{pid}.md", "sha256_json": sha_file(OUT / "briefs" / f"{pid}.json")})
+    # compact variant = the Start-node input of the Coze workflow coze/v2 (no per-fact source pointers; the KB section list lets the output gate validate KB references)
+    compact = {**{k: v for k, v in b.items() if k not in ("facts", "packages")}, "facts": [{k: v for k, v in f.items() if k != "source"} for f in b["facts"]], "kb_sections": KB_SECTIONS}
+    (OUT / "briefs" / f"{pid}.coze.json").write_text(json.dumps(compact, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    briefs.append({"station_id": pid, "name": b["name"], "facts": len(b["facts"]), "json": f"ai/miami/briefs/{pid}.json", "md": f"ai/miami/briefs/{pid}.md", "coze_json": f"ai/miami/briefs/{pid}.coze.json",
+                   "sha256_json": sha_file(OUT / "briefs" / f"{pid}.json"), "sha256_coze_json": sha_file(OUT / "briefs" / f"{pid}.coze.json")})
 kit = {"kit_version": KIT_VERSION, "generated_on": "2026-09-18", "kb_version": KB_VERSION, "prompt_version": PROMPT_VERSION, "rule_pack_version": rules["rule_pack_version"],
        "packages": ids, "kb_manifest_sha256": sha_file(KB_DIR / "manifest.json"), "agent_prompt_sha256": sha_file(PROMPT), "output_schema_sha256": sha_file(SCHEMA),
        "briefs": briefs, "runs_dir": "ai/miami/runs/<station_id>/<YYYYMMDD-HHMM>.json", "checker": "scripts/check_miami_ai_output.py",

@@ -1,0 +1,57 @@
+{
+  "site_reading": [
+    {
+      "statement": "The half-mile disc holds an estimated 15,975 residents (high reliability) and 55,031 jobs, a jobs-to-resident-workers ratio of 6.5: a workplace-dominated core.",
+      "fact_ids": [
+        "MIA-MM-12.F009",
+        "MIA-MM-12.F019",
+        "MIA-MM-12.F022",
+        "MIA-MM-12.F999"
+      ]
+    },
+    {
+      "statement": "Zoning inside the disc is mostly Urban Core transect with civic space and civic institution zones; the reference point itself lies in T6-80-O. Zoning is permission, not activity.",
+      "fact_ids": [
+        "MIA-MM-12.F008",
+        "MIA-MM-12.F004"
+      ]
+    },
+    {
+      "statement": "Among residents, 17.5 percent of households have no vehicle and the public-transportation commute share is 5.0 percent (reference only).",
+      "fact_ids": [
+        "MIA-MM-12.F012",
+        "MIA-MM-12.F013"
+      ]
+    },
+    {
+      "statement": "The current Metromover schedules 72.0 departures per hour in the AM peak at this station and observed an average of 2386.6 weekday boardings over ten months, 9.4 percent of the system.",
+      "fact_ids": [
+        "MIA-MM-12.F034",
+        "MIA-MM-12.F037",
+        "MIA-MM-12.F038"
+      ]
+    },
+    {
+      "statement": "Listed facilities inside the disc include parks (the nearest park, Bayfront Park, at 126.2 ft straight-line) and grocery stores; no clinic is listed within half a mile.",
+      "fact_ids": [
+        "MIA-MM-12.F032",
+        "MIA-MM-12.F033",
+        "MIA-MM-12.F028"
+      ]
+    }
+  ],
+  "role_proposal": {
+    "role": "destination_dominant",
+    "basis_fact_ids": [
+      "MIA-MM-12.F022",
+      "MIA-MM-12.F042",
+      "MIA-MM-12.F041",
+      "MIA-MM-12.F059",
+      "MIA-MM-12.F060"
+    ],
+    "rule_result_ids": [],
+    "evidence_level": "medium",
+    "requires_human_confirmation": true,
+    "rationale": "Jobs far exceed resident workers, workplace-side link potential exceeds home-side potential, and AM-peak alightings exceed boardings in every scenario. The evidence level is medium because the scenarios exclude visitors and non-work trips that a waterfront park and civic core attract."
+  }
+}

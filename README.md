@@ -33,6 +33,7 @@ supplier operating data or company name appears here: the method is public, the 
 | `raw/miami/…/` | the acquired sources with URLs, hashes and retrieval times (TIGER/Line, ACS, LODES, GTFS, DTPW reports, county / city / USDA layers, OpenStreetMap) |
 | `config/` | station registry, platform modules (from owner drawings, imperial as drawn), generic PRT operating assumptions, the rule pack `rules_v2.json`, the AI output schema |
 | `kb/v2/` | the V2 knowledge base (four documents, kb-v2.0) and the agent prompt the AI layer is allowed to cite; `manifest.json` carries their hashes |
+| `coze/v2/` | the design of the V2 Coze workflow `station_decision_v2` (three agents, an input gate and an output gate as code nodes, a Chinese build playbook, runnable evals `node coze/v2/evals/run.js`); the V1 Bot and the V1.1 workflow are left untouched |
 | `ai/` | the AI interpretation kit: one brief per station with citable fact ids (`ai/miami/briefs/`), the kit manifest, a hand-written format example, and the run folder (empty until real runs exist); `ai/README.md` explains the Coze procedure (Chinese) |
 | `reviews/` | one folder per build step: what was checked, what failed, regression results |
 | `V2_站点输入包字段契约.md`, `V2_数据语义与客流转换规则.md` | the field contract and the data-semantics rules written before the code |

@@ -95,6 +95,11 @@ def check(path):
     for i, x in enumerate(q if isinstance(q, list) else []):
         H(isinstance(x, dict) and x.get("question") and x.get("why_it_matters"), f"questions_for_owner[{i}] incomplete"); ids_ok(x.get("related_ids", []), "any", f"questions_for_owner[{i}]")
     H(isinstance(o["not_covered_by_knowledge_base"], list), "not_covered_by_knowledge_base must be a list")
+    for i, x in enumerate(o.get("rule_explanations", []) or []):   # optional block written by Agent 2 of the Coze V2 workflow
+        H(isinstance(x, dict) and x.get("rule_result_id") in RULE_IDS, f"rule_explanations[{i}]: unknown rule result id {x.get('rule_result_id') if isinstance(x, dict) else x}")
+        ids_ok((x.get("kb_refs", []) if isinstance(x, dict) else []), "kb", f"rule_explanations[{i}]")
+    wf = o.get("workflow")   # optional block written by the output gate of the Coze V2 workflow
+    if wf is not None: H(isinstance(wf, dict) and wf.get("input_gate") == "PASS" and wf.get("output_gate") == "VALID", "workflow block present but the gates did not both pass; such an output must not be saved as a run")
     rr = o["run_record"]; H(isinstance(rr, dict) and rr.get("execution_mode") in ("coze_ui_manual", "coze_api", "example_not_a_model_output"), "run_record.execution_mode invalid")
     rv = rr.get("review", {}) if isinstance(rr, dict) else {}; H(rv.get("status") in ("unreviewed", "reviewed_ok", "reviewed_with_edits", "rejected"), "run_record.review.status invalid")
     H(rr.get("run_id") is None or isinstance(rr.get("run_id"), str), "run_record.run_id must be null or a string")

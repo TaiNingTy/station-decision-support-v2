@@ -19,7 +19,13 @@
 | `scripts/check_miami_ai_output.py` | 输出校验：格式、版本、每个引用的 fact_id / rule_result_id / KB 章节是否存在、必引规则、禁止措辞与未出现在摘要中的数字（软提示） |
 | `ai/miami/runs/<站>/<日期时间>.json` | 模型输出落地位置（目前为空） |
 
-## 在 Coze 上怎么跑（手动方式）
+## 在 Coze 上怎么跑
+
+**主路径：新建 V2 工作流 `station_decision_v2`**（保留 V1 的骨架：三个智能体 + 代码闸门 + 条件分支 + 知识库，另加输出闸门）。设计见 [`coze/v2/DESIGN.md`](../coze/v2/DESIGN.md)，逐步搭建见 [`coze/v2/BUILD_PLAYBOOK.zh.md`](../coze/v2/BUILD_PLAYBOOK.zh.md)，三个智能体的提示词在 `coze/v2/agents/`，两个代码节点在 `coze/v2/nodes/`（本地评测 `node coze/v2/evals/run.js`，15/15）。工作流的输入是 `ai/miami/briefs/<站>.coze.json`。V1 的 Bot 与 V1.1 的工作流不做任何改动。
+
+**备用路径：单智能体手动方式**（下面这一节）。只在想快速试一站、还没搭好工作流时用；它没有代码闸门，只有事后的 Python 校验。
+
+## 备用：单智能体手动方式
 
 1. **新建**一个 Bot 或工作流，不要改动 V1.1 的那个。
 2. 新建知识库，上传 `kb/v2/` 下的四份 `KB_V2_*.md`；检索设为每轮自动调用、混合检索、低匹配阈值（同 V1.1 修复后的设置）。
